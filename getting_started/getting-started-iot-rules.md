@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-01"
+lastupdated: "2017-06-05"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-06-01"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guide 2: Using {{site.data.keyword.iot_short_notm}} rules and basic analytics
+# Guide 2: Using basic real-time rules and actions
 Perform the following tasks to configure a set of basic rules and actions that are based on the conveyor belt simulation.
 {:shortdesc}
 
