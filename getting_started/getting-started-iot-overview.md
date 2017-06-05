@@ -14,7 +14,7 @@ lastupdated: "2017-06-05"
 {:tip: .tip}
 
 
-# Getting started with {{site.data.keyword.iot_short_notm}}
+# Getting started guides for {{site.data.keyword.iot_short_notm}}
 {: #getting-started}
 
 The getting started guides are designed to guide you through the basics of developing a ready-for-production end-to-end IoT prototype system with {{site.data.keyword.iot_short_notm}} and are written for developers that are new to working with {{site.data.keyword.iot_short_notm}}.
