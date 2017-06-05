@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-01"
+lastupdated: "2017-06-05"
 
 ---
 
@@ -253,7 +253,7 @@ As the motor is running, the program publishes events of event type `sensorData`
 
 4. Continue with [Step 5- See raw data in {{site.data.keyword.iot_short_notm}}](#see_live_data).
 
-## Step 5 - See raw data in {{site.data.keyword.iot_short_notm}}
+## Step 3 - See raw data in {{site.data.keyword.iot_short_notm}}
 {: #see_live_data}
 1. Verify that the device is registered with {{site.data.keyword.iot_short_notm}}.
  1. Login to your {{site.data.keyword.Bluemix_notm}} dashboard at: https://bluemix.net
@@ -298,7 +298,7 @@ Message example B:
   ```
 
 
-## Step 6 - Visualize live data in the {{site.data.keyword.iot_short_notm}}
+## Step 4 - Visualize live data in {{site.data.keyword.iot_short_notm}}
 {: #add_card}
 To create a dashboard card to see live conveyor belt data:
 1. On the same Device Centric Analytics board, click **Add New Card**, and then select **Line Chart**.

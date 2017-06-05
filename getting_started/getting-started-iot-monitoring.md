@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-01"
+lastupdated: "2017-06-05"
 
 ---
 
@@ -165,18 +165,22 @@ The default URL is similar to:
 {: #widget-library}
 ### Detailed steps
 
-
-1. Clone this repository  
+1. Clone the *Widget Library Monitoring* sample app GitHub repository.  
+Use your favorit git tool to clone the following repository:  
+https://github.ibm.com:wiotp-toolingdevx/lesson3b
+In Git shell, use the following command:
 ```
 git clone git@github.ibm.com:wiotp-toolingdevx/lesson3b.git
 ```
-2. Install dependencies
+2. Install the application dependencies  
+The application needs a number of dependent
+Navigate to the root of the repository and run the following command:
 ```
-cd lesson3b
 npm install
 ```
-3. Build the user interface  
- 1. Adding gauge for r.p.m
+3. Construct the user interface  
+
+ 1. Add an RPM gauge
     1. Open the public/index.html template
     2. Find the place holder for rpm gauge in the line no:17
     3. Added dev element with an unique id as given below
