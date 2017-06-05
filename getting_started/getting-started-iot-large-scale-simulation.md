@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-01"
+lastupdated: "2017-06-05"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-06-01"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guide 4: Multi-device simulation
+# Guide 4: Simulating a large number of devices
 In the first guide you set up a basic device simulator to manually simulate one or more conveyor belts. In this guide we expand on this simulation by adding large numbers of self running simulators to your environment to let you test drive the basic analytics and monitoring from the previous guides in a more realistic, multi device environment.
 {:shortdesc}
 

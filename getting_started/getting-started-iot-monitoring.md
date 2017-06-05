@@ -13,7 +13,7 @@ lastupdated: "2017-06-05"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guide 3: Monitoring
+# Guide 3: Monitoring your device data
 Now that you have connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices and the real-time data they are sending.
 {:shortdesc}
 
@@ -181,9 +181,9 @@ npm install
 3. Construct the user interface  
 
  1. Add an RPM gauge
-    1. Open the public/index.html template
-    2. Find the place holder for rpm gauge in the line no:17
-    3. Added dev element with an unique id as given below
+    1. Open the following template for editing: `public/index.html`  
+    2. Locate the rpm gauge placeholder: `<!--- place holder for rpm gauge  -->`
+    3. Add the following dev element with an unique id as given below:
  ```html
  <div id="rpmgauge" ></div>
  ```  
