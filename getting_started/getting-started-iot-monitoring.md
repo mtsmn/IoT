@@ -173,21 +173,35 @@ In Git shell, use the following command:
 git clone git@github.ibm.com:wiotp-toolingdevx/lesson3b.git
 ```
 2. Install the application dependencies  
-The application needs a number of dependent
-Navigate to the root of the repository and run the following command:
+Navigate to the root of the `lesson3b` repository and run the following command:
 ```
 npm install
 ```
 3. Construct the user interface  
-
- 1. Add an RPM gauge
+To build the application user interface you must add the widgets as javascript code in the application index.html file for each user interface component.  
+For each widget, the following javascript CreateGauge parameters are:  
+```javascript
+WIoTPWidget.CreateGauge("name","event name", "orgID", "deviceID", "property" , widget settings)
+```
+<ul>
+<li>name - The name of the widget as it will appear in the application.
+<li>event name - The device event name that includes the property to display.
+<li>orgID - The ID or your {{site.data.keyword.iot_short_notm}} organization.
+<li>deviceID - The ID of the device that supplies the data to display.
+<li>property - The device message payload property to display.
+<li>widget settings -  Additional settings for the widget, see example.
+</ul>
+For details on each widget type, see the examples that follow.
+ 1. Add an RPM gauge.  
+This gauge displays the conveyor belt rpm as a gauge with a min of 0 and a max of 5 rpm.
     1. Open the following template for editing: `public/index.html`  
     2. Locate the rpm gauge placeholder: `<!--- place holder for rpm gauge  -->`
     3. Add the following dev element with an unique id as given below:
  ```html
  <div id="rpmgauge" ></div>
  ```  
-    4. Update the javascript to create the widget
+    4. Update the javascript CreateGauge to create the widget
+Example:  
  ```javascript
  WIoTPWidget.CreateGauge("rpmgauge","sensorData", "iotp-for-conveyor", "belt1", "rpm" ,{
             label: {
@@ -201,13 +215,15 @@ npm install
          units: 'rpm'
        },['#FF0000', '#F97600', '#F6C600', '#60B044']);
  ```
- 2. Adding gauge for Accelerometer
+ 2. Add an acceleration gauge.
+This gauge displays the accelerometer reading as a gauge with readings between -1 and 1.
     1. Find the place holder for accelerometer gauge in the line no:26
     2. Added dev element with an unique id as given below
  ```html
  <div id="aygauge" ></div>
  ```  
     3. Update the javascript to creat the widget
+Example:   
  ```javascript
  WIoTPWidget.CreateGauge("aygauge","sensorData", "iotp-for-conveyor", "belt1", "ay" ,{
       label: {
@@ -221,19 +237,21 @@ npm install
    units: 'g'//,
  },['#FF0000', '#F97600', '#F6C600', '#60B044']);
  ```
- 3. Adding gauge for motor speed chart
+ 3. Add a motor speed chart.  
+This gauge displays the motor speed as a line diagram.
     1. Find the place holder for motor speed chart in the line no: 35
     2. Added dev element with an unique id as given below
  ```html
  <div id="speedchart" ></div>
  ```  
-    3. Update the javascript to creat the widget
+    3. Update the javascript to create the widget  
+Example:  
  ```javascript
  WIoTPWidget.CreateGauge("speedchart ","sensorData", "iotp-for-conveyor", "belt1",
  ["rpm", "ay"], [["line","rpm"],["line","ay"]],['#2ca02c','#d62728']);
  ```
-4. Deploying it to bluemix  
- 1. Update the Watson IoT platform service name that you have created in the previous lesson in the manifest.yml  
+4. Deploy the application to {{site.data.keyword.Bluemix_notm}}  
+ 1. Update the {{site.data.keyword.iot_short_notm}} service name that you have created in the previous lesson in the manifest.yml  
 <pre><code>
 declared-services:
   < your iot platform service name >:  </br>
@@ -248,7 +266,8 @@ applications:  </br>
   services:  </br>
   \- < your iot platform service name >  </br>
 </pre></code>
- 2. Run the following command to push the application into bluemix
+ 2. Run the following command to push the application into bluemix  
+Give your application a unique name.
 ```
 cf push <appname>
 ```
