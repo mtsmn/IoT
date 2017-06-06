@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-05"
+lastupdated: "2017-06-06"
 
 ---
 
@@ -30,7 +30,7 @@ As part of this guide you will:
 
 ## Prerequisites
 {: #prereqs}  
-Complete [Guide 1: Getting started with {{site.data.keyword.iot_short_notm}} and a simulated conveyor belt](getting-started-iot-conveyor.html).
+Complete [Guide 1: Connecting a conveyor belt device](getting-started-iot-conveyor.html).
 
 or...
 
@@ -147,9 +147,9 @@ The message body might look something like this:
 
 ## Whats next
 {: #whats_next}
-- [Guide 3: monitoring your devices](getting-started-iot-monitoring.html)  
+- [Guide 3: Monitoring your device data](getting-started-iot-monitoring.html)  
 Now that you have connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices and the real-time data they are sending.
-- [Guide 4: Simulating lots of devices](getting-started-iot-large-scale-simulation.html)  
+- [Guide 4: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
 The conveyor belt sample app in path A lets you manually simulate one or a few conveyor belt devices. This guide lets you set up a simulated environment with a large number of devices.
 - [Connect other IoT devices to {{site.data.keyword.iot_short_notm}}](../../services/IoT/iotplatform_task.html)
 - [Learn more about {{site.data.keyword.iot_short_notm}}](../../services/IoT/iotplatform_overview.html)
