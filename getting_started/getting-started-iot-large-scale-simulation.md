@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-05"
+lastupdated: "2017-06-06"
 
 ---
 
@@ -61,7 +61,7 @@ Follow the steps below to create and deploy your app manually.
 1. Clone the *Lesson4* sample app GitHub repository.  
 Use your favorit git tool to clone the following repository:  
 https://github.ibm.com/wiotp-toolingdevx/lesson4  
-In git, use the following command:
+In Git Shell, use the following command:
 ```bash
 $ git clone https://github.ibm.com/wiotp-toolingdevx/lesson4
 ```
@@ -70,7 +70,7 @@ What to edit:
  - To use an existing {{site.data.keyword.iot_short_notm}} service, update all instances of `lesson4-simulate-iotf-service` to reflect that service name. For example, if you are using the {{site.data.keyword.iot_short_notm}} service from guide 1 use: `iotp-for-conveyor`    
  - Set the device name and host.   
 In the applications section, change the `name` and `host` entries to something unique, such as `YOUR_NAME-lesson4-simulate`.   
-**Tip:** The ROUTES URL that you use to access the app is created from the `host` entry, for example: `https://YOUR_NAME-lesson4-simulate.mybluemix.net`.  
+**Tip:** The ROUTES URL that you use to access the app is created from the `host` entry, for example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net`.  
 <pre><code>
 declared-services:
     lesson4-simulate-cloudantNoSQLDB:
@@ -92,10 +92,11 @@ applications:  </br>
   &#45; lesson4-simulate-iotf-service
 </code></pre>  
 1. From the command line, set your API endpoint by running the cf api command.   
-Replace the `<API-endpoint>` value with the API endpoint for your region.
+Replace the `API-ENDPOINT` value with the API endpoint for your region.
    ```
-cf api <API-endpoint>
+cf api API-ENDPOINT
    ```
+For example: `cf api https://api.ng.bluemix.net`  
 <table>
 <tr>
 <th>Region</th>
@@ -168,7 +169,7 @@ To register multiple devices:
 3. From the menu, select **Apps** then **Dashboard**.
 4. Under Cloud Foundry Apps, click the **ROUTE** URL of the application that you just deployed.  
 The ROUTE_URL is built from the `host` entry that you used in the manifest.yml file: `HOST.mybluemix.net`  
-For example: `https://YOUR_NAME-lesson4-simulate.mybluemix.net`.  
+For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net`.  
 The Node-RED interface opens.
 5. Click **Go to your Node-RED flow editor**.
 6. In the flow editor, select the **Device Type and Instance** tab.
@@ -183,7 +184,7 @@ The device names are displayed.
 To register multiple devices:  
 
 1. Make an HTTP POST request to the following URL: `ROUTE_URL/rest/devices`  
-For example: `https://YOUR_NAME-lesson4-simulate.mybluemix.net/rest/devices`  
+For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/devices`  
  - Use basic authentication with the API Key and Authentication Token that were created for your app.
  - Set 'Content-Type' and 'Accept' to be 'application/json'  
  - Use the following JSON payload:  
@@ -223,7 +224,7 @@ To send device events:
 To send device events:
 
 1. Make an HTTP POST request to the following URL: `ROUTE_URL/rest/runtest`  
-For example: `https://YOUR_NAME-lesson4-simulate.mybluemix.net/rest/runtest`  
+For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/runtest`  
  - Use basic authentication with the API Key and Authentication Token that were created for your app.
  - Set 'Content-Type' and 'Accept' to be 'application/json'  
  - Use the following JSON payload:   
@@ -263,7 +264,7 @@ To delete devices:
 ### Rest API  
 
 1. Make an HTTP POST request to the following URL: `ROUTE_URL/rest/deleteDevices`  
-For example: `https://YOUR_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevices`
+For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevices`
  - Use basic authentication with the API Key and Authentication Token that were created for your app.
  - Set 'Content-Type' and 'Accept' to be 'application/json'  
  - Use the following JSON payload:      
@@ -280,9 +281,9 @@ For example: `https://YOUR_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevice
 
 ## What's next?
 {: @whats_next}
-- [Guide 2: Using {{site.data.keyword.iot_short_notm}} rules and actions](getting-started-iot-rules.html)  
+- [Guide 2: Using basic real-time rules and actions](getting-started-iot-rules.html)  
 Now that you have successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.
-- [Guide 3: monitoring your devices](getting-started-iot-monitoring.html)  
+- [Guide 3: Monitoring your device data](getting-started-iot-monitoring.html)  
 Now that you have connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices.
 - [Learn more about {{site.data.keyword.iot_short_notm}}](../../services/IoT/iotplatform_overview.html){:new_window}
 - [Learn more about {{site.data.keyword.iot_short_notm}} APIs](../../services/IoT/reference/api.html){:new_window}

@@ -58,6 +58,7 @@ Replace the `API-ENDPOINT` value with the API endpoint for your region.
    ```
 cf api API-ENDPOINT
    ```
+For example: `cf api https://api.ng.bluemix.net`
 <table>
 <tr>
 <th>Region</th>
@@ -336,11 +337,11 @@ For technical details, see:
 - Path B: Modify the Raspberry Pi setup to suit your needs.  
 For technical details, see:
  - [https://github.ibm.com/wiotp-toolingdevx/lesson1b/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/lesson1b/blob/master/README.md){: new_window}
-- [Guide 2: Using {{site.data.keyword.iot_short_notm}} rules and actions](getting-started-iot-rules.html)  
+- [Guide 2: Using basic real-time rules and actions](getting-started-iot-rules.html)  
 Now that you have successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.
-- [Guide 3: monitoring your devices](getting-started-iot-monitoring.html)  
+- [Guide 3: Monitoring your device data](getting-started-iot-monitoring.html)  
 Now that you have connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices.
-- [Guide 4: Simulating lots of devices](getting-started-iot-large-scale-simulation.html)  
+- [Guide 4: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
 The conveyor belt sample app in path A lets you manually simulate one or a few conveyor belt devices. This guide lets you set up a simulated environment with a large number of devices.
 - [Learn more about {{site.data.keyword.iot_short_notm}}](../../services/IoT/iotplatform_overview.html)
 - [Learn more about {{site.data.keyword.iot_short_notm}} APIs](../../services/IoT/reference/api.html)
