@@ -35,30 +35,28 @@ As part of this guide you will:
 - Connect the simulated conveyor belt device to {{site.data.keyword.iot_short_notm}}.
 - Monitor and visualize device data using the {{site.data.keyword.iot_short_notm}} dashboards.
 
+To get started with {{site.data.keyword.iot_short_notm}} using a different IoT device, see the [Getting started tutorial](/docs/services/IoT/getting-started.html).
+{: tip}
+
 ## Prerequisites
 {: #prereqs}
 
 You will need the following accounts and tools:
 * [{{site.data.keyword.Bluemix_notm}} account ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/registration/){: new_window}
 * [Cloud Foundry Command Line Interface (cf CLI) ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
-Use the cf CLI to deploy and manage your {{site.data.keyword.Bluemix_notm}} applications.
+Use the cf CLI to deploy apps and services to {{site.data.keyword.Bluemix_notm}}. For more information, see the [Cloud Foundry CLI documentation![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/){: new_window}
 * [Git ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
 * Optional: A mobile phone on which you run the *Conveyor belt* sample web application to send accelerometer data.
 
-To get started with {{site.data.keyword.iot_short_notm}} using a different IoT device, see [Getting started with {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/index.html).
-{: tip}
-
 ## Step 1 - Deploy {{site.data.keyword.iot_short_notm}}  
 {: #deploy_watson_iot_platform_service}
-
-Use the cf CLI to deploy services to {{site.data.keyword.Bluemix_notm}}.
-
-For more information, see the [Cloud Foundry CLI documentation![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/){: new_window}
-
+{{site.data.keyword.iot_short_notm}} is the foundational component of these guides provides powerful application access to IoT devices and data to help you rapidly compose analytics applications, visualization dashboards, and mobile IoT apps.
+The steps that follow will deploy an instance of the {{site.data.keyword.iot_short_notm}} service with the name `iotp-for-conveyor` in your {{site.data.keyword.Bluemix_notm}} environment. If you already have a service instance running you can use that one with the guides instead, and skip this first step. Just make sure that you use the correct service name and {{site.data.keyword.Bluemix_notm}} space as you proceed through the guides.
+{: tip}
 1. From the command line, set your API endpoint by running the cf api command.   
-Replace the `<API-endpoint>` value with the API endpoint for your region.
+Replace the `API-ENDPOINT` value with the API endpoint for your region.
    ```
-cf api <API-endpoint>
+cf api API-ENDPOINT
    ```
 <table>
 <tr>
@@ -83,7 +81,7 @@ cf api <API-endpoint>
 cf login
   ```
 If prompted, select the organization and space where you want to deploy {{site.data.keyword.iot_short_notm}} and the sample app.
-3. Deploy the {{site.data.keyword.iot_short_notm}} to {{site.data.keyword.Bluemix_notm}} calling it `iotp-for-conveyor`.
+3. Deploy the {{site.data.keyword.iot_short_notm}} to {{site.data.keyword.Bluemix_notm}} with the following service name: `iotp-for-conveyor`.
    ```
 cf create-service iotf-service iotf-service-free iotp-for-conveyor
   ```
@@ -99,7 +97,6 @@ The sample app is built using the Node.js client libraries at: [https://github.c
 
 ![Conveyor belt app](images/app_conveyor_belt.png "Conveyor belt app")
 
-
 1. Use your favorit git tool to clone the following repository:  
 https://github.ibm.com/wiotp-toolingdevx/lesson1a  
 In Git shell, use the following command:
@@ -108,14 +105,14 @@ git clone https://github.ibm.com/wiotp-toolingdevx/lesson1a
   ```
 2. On the command line, change the directory to the directory in which the sample app is located.
   ```bash
-cd IBM-IoTP-ConveyorBelt
+cd lesson1a
   ```
-3. From the *IBM-IoTP-ConveyorBelt* directory, push your app to {{site.data.keyword.Bluemix_notm}} and give it a new name; that is, replace *YOUR_APP_NAME* in the following command. Use the `--no-start` option because you will start the app in the next stage after it is bound to {{site.data.keyword.iot_short_notm}}.  
+3. From the *lesson1a* directory, push your app to {{site.data.keyword.Bluemix_notm}} and give it a new name; that is, replace *YOUR_APP_NAME* in the following command. Use the `--no-start` option because you will start the app in the next stage after it is bound to {{site.data.keyword.iot_short_notm}}.  
 **Note:** Deploying your application can take a few minutes.
    ```bash
 cf push YOUR_APP_NAME --no-start
   ```  
-1. From within the *IBM-IoTP-ConveyorBelt* directory, bind your app to your instance of the {{site.data.keyword.iot_short_notm}} by using the names that you provided for each.  
+1. From within the *lesson1a* directory, bind your app to your instance of the {{site.data.keyword.iot_short_notm}} by using the names that you provided for each.  
   ```bash
 cf bind-service YOUR_APP_NAME iotp-for-conveyor
   ```
@@ -142,7 +139,7 @@ start command:     ./vendor/initial_startup.rb
      state     since                  cpu    memory         disk            details
 #0   running   2017-05-09T13:35:08Z   0.0%   19.6M of 64M   66.2M of 256M
   ```
-3.  View your app at the `routes` URL: `YOUR_APP_NAM.mybluemix.net`  
+3.  View your app at the `routes` URL: `https://YOUR_APP_NAME.mybluemix.net`  
 To see both the app deployment status and the app URL you can run the following command:
   ```bash
 cf apps
@@ -189,12 +186,12 @@ $ sudo apt-get install git
 1. Open the terminal or SSH to your Raspberry pi.
 2. Use your favorit git tool to clone the following repository to your Raspberry Pi:  
 https://github.ibm.com/wiotp-toolingdevx/lesson1a/
-In git, use the following command:
+In Git shell, use the following command:
 ```bash
 $ git clone https://github.ibm.com/wiotp-toolingdevx/lesson1a/
-$ cd device-lesson1
 ```
-3. Install the dependencies  
+2. Navigate to the root of the cloned repository.
+3. Install the dependencies.  
 ```bash
 $ pip install ibmiotf
 ```
@@ -224,14 +221,14 @@ For more information about registering devices, see [Connecting devices](../iotp
      * Authentication Method
      * Authentication Token
      You'll need Organization ID, Device Type, Device ID, and Authentication Token configure your device to connect to {{site.data.keyword.iot_short_notm}}.
-4. Update the  device-lesson1/device.conf file with your device credentials.
+4. Update the `device-lesson1/device.conf` file with the device credentials.
 ```
 [device]
-org = your organization ID
-type =  your device type
-id =  your device ID  
+org = YOUR_ORGANIZATION_ID
+type =  YOUR_DEVICE_TYPE
+id =  YOUR_DEVICE_ID  
 auth-method = token
-auth-token =  your authentication token
+auth-token =  YOUR_AUTHENTICATION_TOKEN
 ```
 5. Run the deviceClient program.  
 When you run the program, your Raspberry Pi starts the motor, runs it for 1 minute and them stops it.  
