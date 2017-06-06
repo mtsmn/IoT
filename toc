@@ -30,14 +30,15 @@ Internet of Things Platform
 
     {: .navgroup id="reference"}
     reference/api.md
-    
+
     {: .topicgroup}
     Sample apps
         [OpenFridge](https://github.com/IBM/openfridge)
-        [App 1A](https://github.ibm.com/wiotp-toolingdevx/lesson1a)
-        [App 1B](https://github.ibm.com/wiotp-toolingdevx/lesson1b)
-        [App 3B](https://github.ibm.com/wiotp-toolingdevx/lesson3b)
-        [App 4](https://github.ibm.com/wiotp-toolingdevx/lesson4)
+        [Simulated conveyor belt](https://github.ibm.com/wiotp-toolingdevx/lesson1a)
+        [Raspberry PI based conveyor belt](https://github.ibm.com/wiotp-toolingdevx/lesson1b)
+        [Node.js based device monitoring](https://github.ibm.com/wiotp-toolingdevx/lesson3a)
+        [Widget library based device monitoring](https://github.ibm.com/wiotp-toolingdevx/lesson3b)
+        [Multiple-device simulator](https://github.ibm.com/wiotp-toolingdevx/lesson4)
 
     {: .topicgroup}
     Watson IoT Platform security
@@ -120,19 +121,12 @@ Internet of Things Platform
         getting_started/quickstart/index.md
 
     {: .topicgroup}
-    Getting started step-by-step
+    Getting started guides
         getting_started/getting-started-iot-overview.md
         getting_started/getting-started-iot-conveyor.md
         getting_started/getting-started-iot-rules.md
         getting_started/getting-started-iot-monitoring.md
         getting_started/getting-started-iot-large-scale-simulation.md
-        getting_started/getting-started-iot-historical-data.md
-        getting_started/getting-started-iot-advanced-analytics.md
-        getting_started/getting-started-iot-cognitive.md
-        getting_started/getting-started-iot-advanced-security.md
-        getting_started/getting-started-iot-devops.md
-        getting_started/getting-started-iot-device-management.md
-        getting_started/getting-started-iot-blockchain.md
 
     {: .topicgroup}
     Developing for Watson IoT Platform
