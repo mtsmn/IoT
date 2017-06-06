@@ -140,22 +140,19 @@ start command:     ./vendor/initial_startup.rb
      state     since                  cpu    memory         disk            details
 #0   running   2017-05-09T13:35:08Z   0.0%   19.6M of 64M   66.2M of 256M
   ```
-3.  View your app at the `routes` URL: `https://YOUR_APP_NAME.mybluemix.net`  
 To see both the app deployment status and the app URL you can run the following command:
   ```bash
 cf apps
   ```
 Troubleshoot errors in the deployment process by using the `cf logs YOUR_APP_NAME --recent` command.
 {: tip}
-1. Open the URL to see your app by using the following format:
-```
-https://YOUR_APP_NAME.mybluemix.net
-```
+1. In a browser, access the app.  
+Open the following URL: `https://YOUR_APP_NAME.mybluemix.net`    
 For example: `https://conveyorbelt.mybluemix.net/`.
 2. Enter a device ID and token for your device.  
 The default values are `belt1` and `test123pass`.
 The sample app automatically registers a device of type `iot-conveyor-belt` with the device ID and token that you provided. For more information about registering devices, see [Connecting devices](../iotplatform_task.html#iotplatform_subtask1).
-4. Continue with [Step 5- See raw data in {{site.data.keyword.iot_short_notm}}](#see_live_data).
+4. Continue with [Step 3 - See raw data in {{site.data.keyword.iot_short_notm}}](#see_live_data).
 
 ## Step 2B - Build a Raspberry Pi-powered conveyor belt
 {: #raspberry}
@@ -249,7 +246,7 @@ As the motor is running, the program publishes events of event type `sensorData`
 }
 ```
 
-4. Continue with [Step 5- See raw data in {{site.data.keyword.iot_short_notm}}](#see_live_data).
+4. Continue with [Step 3 - See raw data in {{site.data.keyword.iot_short_notm}}](#see_live_data).
 
 ## Step 3 - See raw data in {{site.data.keyword.iot_short_notm}}
 {: #see_live_data}
@@ -267,7 +264,7 @@ For example: `https://*iot-org-id*.internetofthings.ibmcloud.com`.
 The device name is displayed in the Device Properties card.
 4. Send sensor data to platform.   
 The device sends data to {{site.data.keyword.iot_short_notm}} when sensor readings change. You can simulate this by stopping, starting or changing the speed of the conveyor belt.   
-**Path A:** If you are running the app on a mobile device, shaking it can trigger accelerometer data for the conveyor belt.
+**Path A:** If you are accessing the app on a mobile browser, try shaking your smart phone to trigger accelerometer data for the conveyor belt.
 {: tip}
 3. Verify that updated device data points that correspond to the published message are displayed in the Device Properties card.  
 Message example A:
@@ -325,7 +322,7 @@ If you use your phone to connect to the sample app you can shake the phone to se
     - Type: Float
     - Unit: gs
  5. Click **Next**.
- 6. Path A only: Shake your phone to see the live data in your new card.
+ 6. Path A only: Shake your phone to see the live accelerometer data in your new card.
 For more information about creating boards and cards, see [Visualizing real-time data by using boards and cards](../data_visualization.html#boards_and_cards).
 
 ## What's next
