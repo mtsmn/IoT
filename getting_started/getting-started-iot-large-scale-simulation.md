@@ -285,5 +285,5 @@ For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDe
 Now that you have successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.
 - [Guide 3: Monitoring your device data](getting-started-iot-monitoring.html)  
 Now that you have connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices.
-- [Learn more about {{site.data.keyword.iot_short_notm}}](../../services/IoT/iotplatform_overview.html){:new_window}
-- [Learn more about {{site.data.keyword.iot_short_notm}} APIs](../../services/IoT/reference/api.html){:new_window}
+- [Learn more about {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
+- [Learn more about {{site.data.keyword.iot_short_notm}} APIs](/docs/services/IoT/reference/api.html){:new_window}

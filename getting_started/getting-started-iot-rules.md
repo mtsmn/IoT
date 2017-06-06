@@ -55,7 +55,7 @@ Have one or more devices connected that meet the following requirements:
 ## Step 1 - Create a message schema for the sample app
 {: #create_schema}
 
-To use the properties that are sent by your device as triggers for your rules you must first map these properties to a messaging schema in {{site.data.keyword.Bluemix_notm}}. For more information, see [Create device type schemas](../im_schemas.html#iotrtinsights_task).
+To use the properties that are sent by your device as triggers for your rules you must first map these properties to a messaging schema in {{site.data.keyword.Bluemix_notm}}. For more information, see [Create device type schemas](/docs/services/IoT/im_schemas.html#iotrtinsights_task).
 1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Devices** and select **Manage Schemas**.
 2. Click **Add Schema**.
 3. Select the **iot-conveyor-belt** device type and click **Next**.
@@ -72,7 +72,7 @@ The schema has been created, and the rpm data type is set to float.
 
 ## Step 2 - Create a simple rule for the rpm property
 {: #create_rule}  
-The {{site.data.keyword.Bluemix_notm}} rule engine compares property datapoints sent by your device to static threshold values set in the rule, and triggers the rule when the rule conditions are met. For more information about rules, see [Cloud Analytics](../cloud_analytics.html#rules).
+The {{site.data.keyword.Bluemix_notm}} rule engine compares property datapoints sent by your device to static threshold values set in the rule, and triggers the rule when the rule conditions are met. For more information about rules, see [Cloud Analytics](/docs/services/IoT/cloud_analytics.html#rules).
 To create a rule that triggers when the conveyor belt rpm value is less than 0.5:
 1. Change the rpm property type to Float.  
 When we create a rule we want to compare the numerical rpm value with a threshold. To do that, the property must be recognized as a float or integer.
@@ -112,9 +112,9 @@ The device sends data to {{site.data.keyword.iot_short_notm}} when sensor readin
 To see more information about the alert, see the device details in the Associated Devices, Device Info, and Device Properties cards.  
 {: tip}
 
-## Step 4 - Create an action to take when the `RPM rule` is triggered
+## Step 4 - Create an action to take when the RPM rule is triggered
 {: #create_action}
-In addition to displaying an alert in the {{site.data.keyword.iot_short_notm}} dashboard you can create actions to be taken when a rule is triggered. For example sending an email to the operator to take a look at the conveyor belt if the rpm gets too low. For more information, see [Cloud Analytics](../cloud_analytics.html#shared).
+In addition to displaying an alert in the {{site.data.keyword.iot_short_notm}} dashboard you can create actions to be taken when a rule is triggered. For example sending an email to the operator to take a look at the conveyor belt if the rpm gets too low. For more information, see [Cloud Analytics](/docs/services/IoT/cloud_analytics.html#shared).
 To create an email action:
 1. In the {{site.data.keyword.iot_short}} dashboard, go to **Rules**.
 2. Click the **RPM rule**.
@@ -151,6 +151,6 @@ The message body might look something like this:
 Now that you have connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices and the real-time data they are sending.
 - [Guide 4: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
 The conveyor belt sample app in path A lets you manually simulate one or a few conveyor belt devices. This guide lets you set up a simulated environment with a large number of devices.
-- [Connect other IoT devices to {{site.data.keyword.iot_short_notm}}](../../services/IoT/iotplatform_task.html)
-- [Learn more about {{site.data.keyword.iot_short_notm}}](../../services/IoT/iotplatform_overview.html)
-- [Learn more about {{site.data.keyword.iot_short_notm}} APIs](../../services/IoT/reference/api.html)
+- [Connect other IoT devices to {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_task.html)
+- [Learn more about {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html)
+- [Learn more about {{site.data.keyword.iot_short_notm}} APIs](/docs/services/IoT/reference/api.html)
