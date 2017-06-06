@@ -8,6 +8,14 @@ Internet of Things Platform
     getting-started.md
 
     {: .topicgroup}
+    Getting started guides
+        getting_started/getting-started-iot-overview.md
+        getting_started/getting-started-iot-conveyor.md
+        getting_started/getting-started-iot-rules.md
+        getting_started/getting-started-iot-monitoring.md
+        getting_started/getting-started-iot-large-scale-simulation.md
+
+    {: .topicgroup}
     About
         iotplatform_overview.md
         feature_overview.md
