@@ -169,11 +169,11 @@ The default URL is similar to:
 
 {: #widget-library}
 ### Detailed steps
-
+The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the GitHub README.
 1. Clone the *Widget Library Monitoring* sample app GitHub repository.  
 Use your favorit git tool to clone the following repository:  
 https://github.ibm.com:wiotp-toolingdevx/lesson3b
-In Git shell, use the following command:
+In Git Shell, use the following command:
 ```
 git clone https://github.ibm.com/wiotp-toolingdevx/lesson3a
 ```
@@ -184,24 +184,22 @@ npm install
 ```
 3. Construct the user interface  
 To build the application user interface you must add the widgets as javascript code in the application index.html file for each user interface component.  
-For each widget, the following javascript CreateGauge parameters are:  
-```javascript
-WIoTPWidget.CreateGauge("name","event name", "orgID", "deviceID", "property" , widget settings)
-```
+For each widget the javascript parameters are:  
+`WIoTPWidget.CreateGauge("name","event name", "orgID", "deviceID", "property" , WIDGET_SETTINGS)`
 <ul>
 <li>name - The name of the widget as it will appear in the application.
 <li>event name - The device event name that includes the property to display.
 <li>orgID - The ID or your {{site.data.keyword.iot_short_notm}} organization.
 <li>deviceID - The ID of the device that supplies the data to display.
 <li>property - The device message payload property to display.
-<li>widget settings -  Additional settings for the widget, see example.
+<li>WIDGET_SETTINGS -  Additional settings for the widget, see examples.
 </ul>
 For details on each widget type, see the examples that follow.
  1. Add an RPM gauge.  
 This gauge displays the conveyor belt rpm as a gauge with a min of 0 and a max of 5 rpm.
     1. Open the following template for editing: `public/index.html`  
     2. Locate the rpm gauge placeholder: `<!--- place holder for rpm gauge  -->`
-    3. Add the following dev element with an unique id as given below:
+    3. Add the following div element with an unique id as given below:
  ```html
  <div id="rpmgauge" ></div>
  ```  
@@ -222,8 +220,8 @@ Example:
  ```
  2. Add an acceleration gauge.
 This gauge displays the accelerometer reading as a gauge with readings between -1 and 1.
-    1. Find the place holder for accelerometer gauge in the line no:26
-    2. Added dev element with an unique id as given below
+    1. Locate the accelerometer gauge placeholder: `<!--- place holder for accelerometer gauge  -->`
+    2. Add the following div element with an unique id as given below:
  ```html
  <div id="aygauge" ></div>
  ```  
@@ -244,8 +242,8 @@ Example:
  ```
  3. Add a motor speed chart.  
 This gauge displays the motor speed as a line diagram.
-    1. Find the place holder for motor speed chart in the line no: 35
-    2. Added dev element with an unique id as given below
+    1. Locate the motor speed gauge placeholder: `<!--- place holder for motor speed gauge  -->`
+    2. Add the following div element with an unique id as given below:
  ```html
  <div id="speedchart" ></div>
  ```  
@@ -256,10 +254,11 @@ Example:
  ["rpm", "ay"], [["line","rpm"],["line","ay"]],['#2ca02c','#d62728']);
  ```
 4. Deploy the application to {{site.data.keyword.Bluemix_notm}}  
- 1. Update the {{site.data.keyword.iot_short_notm}} service name that you have created in the previous lesson in the manifest.yml  
+ 1. Update the manifest.yml with your {{site.data.keyword.iot_short_notm}} service name.  
+For example, if you deployed a {{site.data.keyword.iot_short_notm}} service as part of [Guide 1: Connecting a conveyor belt device](getting-started-iot-monitoring.html) then YOUR_PLATFORM_NAME is `iotp-for-conveyor`.
 <pre><code>
 declared-services:
-  < your iot platform service name >:  </br>
+  YOUR_IOT_PLATFORM_NAME:  </br>
     label: iotf-service  </br>
     plan: iotf-service-free  </br>
 applications:  </br>
@@ -269,12 +268,12 @@ applications:  </br>
   domain: mybluemix.net  </br>
   disk_quota: 1024M  </br>
   services:  </br>
-  \- < your iot platform service name >  </br>
+  \- YOUR_IOT_PLATFORM_NAME  </br>
 </pre></code>
  2. Run the following command to push the application into bluemix  
 Give your application a unique name.
 ```
-cf push your_application_name
+cf push YOUR_APP_NAME
 ```
 **Note:**  Above steps will work when widget library is publicly available. You can run the application locally by following steps
  3. Add application credentials under config folder with the following json
@@ -291,7 +290,7 @@ config/default.json
 From the {{site.data.keyword.Bluemix_notm}} apps dashboard click **Visit App URL** to open the web application.  
 Access and manage the application URL by clicking **Routes**.   
 The default URL is similar to:  
-`https://SOMETHING.mybluemix.net`
+`https://YOUR_APP_NAME.mybluemix.net`
 
 ## Step 2 - View your connected devices
 {: #view_devices}
@@ -305,12 +304,12 @@ With the web console up and running you can now view your connected conveyor bel
 {: @whats_next}
 - Path A: Modify the monitoring app to suit your needs.  
 For technical details, see:
- - [https://github.com/theiliad/IBM-IoTP-Monitoring-Control/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/theiliad/IBM-IoTP-Monitoring-Control/blob/master/README.md){: new_window}
+ - [https://github.ibm.com/wiotp-toolingdevx/lesson3a/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/lesson3a/blob/master/README.md){: new_window}
  - [Node.js clienmt libraries ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - Path B: Modify the widget library app to suit your needs.  
 For technical details, see:
  - [https://github.ibm.com/wiotp-toolingdevx/lesson3b/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/lesson3b/blob/master/README.md){: new_window}
-- [Guide 4: Simulating lots of devices](getting-started-iot-large-scale-simulation.html)  
+- [Guide 4: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
 Expand on the basic simulation by adding large numbers of self running simulators to your environment. This will let you test drive the basic analytics and monitoring from the previous guides in a more realistic, multi-device environment.
 - [Learn more about {{site.data.keyword.iot_short_notm}}](../../services/IoT/iotplatform_overview.html){:new_window}
 - [Learn more about {{site.data.keyword.iot_short_notm}} APIs](../../services/IoT/reference/api.html){:new_window}
