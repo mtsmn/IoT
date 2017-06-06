@@ -186,12 +186,12 @@ $ sudo apt-get install git
 
 1. Open the terminal or SSH to your Raspberry pi.
 2. Use your favorit git tool to clone the following repository to your Raspberry Pi:  
-https://github.ibm.com/wiotp-toolingdevx/lesson1a/
-In Git shell, use the following command:
+https://github.ibm.com/wiotp-toolingdevx/lesson1b/
+In Git Shell, use the following command:
 ```bash
-$ git clone https://github.ibm.com/wiotp-toolingdevx/lesson1a/
+$ git clone https://github.ibm.com/wiotp-toolingdevx/lesson1b/
 ```
-2. Navigate to the root of the cloned repository.
+2. Navigate to the `lesson1a` root of the cloned repository.
 3. Install the dependencies.  
 ```bash
 $ pip install ibmiotf
