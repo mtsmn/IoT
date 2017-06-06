@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-05"
+lastupdated: "2017-06-06"
 
 ---
 
@@ -69,22 +69,56 @@ As part of this step you will:
 - Use the web application to monitor your connected conveyor belt devices.  
 
 ### Detailed steps
-
+The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the GitHub README.
 1. Clone the Node.js *Plant Floor Monitoring* sample app GitHub repository.  
 Use your favorit git tool to clone the following repository:  
-https://github.com/theiliad/IBM-IoTP-Monitoring-Control
-2. Log into your {{site.data.keyword.Bluemix_notm}} account using the cloudfoundry CLI.  
+https://github.ibm.com/wiotp-toolingdevx/lesson3a  
+In Git shell, use the following command:
+  ```bash
+git clone https://github.ibm.com/wiotp-toolingdevx/lesson3a
+  ```
+2. Create an API Key and Authentication Token combination for your app.  
+You will need these when you configure the app to connect to your organization. For more information about registering devices, see [Connecting applications](../platform_authorization.html).  
+Set the application permissions to the lowest level it requires: Visualization Application. If you add more features to the application, you'll need to elevate it to a higher role.
+{: tip}
+ 1. Open the {{site.data.keyword.iot_short_notm}} dashboard.
+ 2. Select **Apps**.
+ 3. Click **Generate API Key**
+ 4. Copy the API Key and Authentication Token values that are listed.
+ 5. Select **Operations Application** as the API role.
+ 6. Add a comment so that you can easily identify this API Key and Authentication Token combination.
+ 7. Click **Generate**.
+3. Configure your app to connect to {{site.data.keyword.Bluemix_notm}}.
+Navigate to the root of the `lesson3b` repository and create a `basicConfig.json` file with the following content.
+  ```
+{
+  "org": "your orgID",
+  "apiKey": "your API key",
+  "apiToken": "your Authentication Token"
+}
+  ```
+Replace the parameter values with the corresponding values for your {{site.data.keyword.Bluemix_notm}} organization: orgID, API Key, and Authentication Token that you just created.  
+For example:
+```
+ {   
+  "org": "3v5whr",    
+  "apiKey": "a-3v5whr-jhkmsghlqv",  
+  "apiToken": "-q0MkPN2cNYB6+?ISk"  
+}
+```
+4. Log into your {{site.data.keyword.Bluemix_notm}} account using the cloudfoundry CLI.  
 For more information, see the [Cloud Foundry CLI documentation ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/){: new_window}  
 From the command line, enter the following command:  
   ```
 cf login
   ```
 If prompted, select the organization and space where you want to deploy the monitoring sample app.
-3. If necessary, set your API endpoint by running the cf api command.   
-Replace the `<API-endpoint>` value with the API endpoint for your region.
+5. If necessary, set your API endpoint by running the cf api command.   
+Replace the `API-ENDPOINT` value with the API endpoint for your region.
   ```
-cf api <API-endpoint>
+cf api API-ENDPOINT
   ```
+For example: `cf api https://api.ng.bluemix.net`
 <table>
 <tr>
 <th>Region</th>
@@ -103,11 +137,13 @@ cf api <API-endpoint>
 <td>https://api.au-syd.bluemix.net</td>
 </tr>
 </table>
-3. Change the directory to the directory in which the sample app is located.  
+6. Change the directory to the directory in which the sample app is located.  
   ```
-cd IBM-IoTP-Monitoring-Control
+cd lesson3a
   ```
-4. Run `npm run push` to build the project and push to your organization.  
+7. Run `npm install -g @angular/cli` to install the Angular CLI.
+8. Run `npm install`
+9. Run `npm run push` to build the project and push to your organization.  
 Your sample web application is deployed on {{site.data.keyword.Bluemix_notm}}.  
 When deployment completes, a message displays to indicate that your app is running.   
 For example:  
@@ -122,43 +158,11 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack
      state     since                    cpu    memory     disk        details
 #0   running   2017-05-16 03:03:05 PM   0.0%   0 of 64M   0 of 256M
   ```
-1. Create an API Key and Authentication Token combination for your app.  
-You will need these when you configure the app to connect to your organization. For more information about registering devices, see [Connecting applications](../platform_authorization.html).
- 1. Open the {{site.data.keyword.iot_short_notm}} dashboard.
- 2. Select **Apps**.
- 3. Click **Generate API Key**
- 4. Copy the API Key and Authentication Token values that are listed.
- 5. Select **Operations Application** as the API role.
- 6. Add a comment so that you can easily identify this API Key and Authentication Token combination.
- 7. Click **Generate**.
-3. Configure your app to connect to {{site.data.keyword.Bluemix_notm}}.
- 1. Log in to {{site.data.keyword.Bluemix_notm}} at:  
- [https://bluemix.net ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net){: new_window}.
- 2. Select the account and space where you deployed the monitoring sample app.
- 3. From the menu, select **Apps** then **Dashboard**.
- 4. Click the **IoTMonitoringControl** Cloud Foundry App name.
- 4. Select **Runtime**.
- 5. Select **Environment variables**.
- 6. Scroll down to the **User defined** section.
- 7. Click **Add** to add a new item.
- 8. For *Name* enter `basicConfig`  
- 9. For *Value* enter:
-  ```
-{
-  "org": "your orgID",
-  "apiKey": "your API key",
-  "apiToken": "your Authentication Token"
-}
-  ```
-Replace the parameter values with the corresponding values for your {{site.data.keyword.Bluemix_notm}} organization: orgID, API Key, and Authentication Token that you just created.  
-For more information about environment variables, see [Adding user-defined environment variables ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/manageapps/depapps.html#ud_env){: new_window} in the {{site.data.keyword.Bluemix_notm}} docs.
- 10. Click **Save** to complete the creation of the user defined environment variable.
-The app is now connected to {{site.data.keyword.Bluemix_notm}}.
-3. Open the web app.  
+10. Open the web app.  
 From the {{site.data.keyword.Bluemix_notm}} apps dashboard click **Visit App URL** to open the web application.  
 Access and manage the application URL by clicking **Routes**.   
 The default URL is similar to:  
-`https://iotmonitoringcontrol-{randomstring-eng}.mybluemix.net`
+`https://iotmonitoringcontrol-RANDOM-STRING-ENG.mybluemix.net`
 
 ## Step 1B - Create a monitoring user interface using the widget library
 
@@ -170,7 +174,7 @@ Use your favorit git tool to clone the following repository:
 https://github.ibm.com:wiotp-toolingdevx/lesson3b
 In Git shell, use the following command:
 ```
-git clone git@github.ibm.com:wiotp-toolingdevx/lesson3b.git
+git clone https://github.ibm.com/wiotp-toolingdevx/lesson3a
 ```
 2. Install the application dependencies  
 Navigate to the root of the `lesson3b` repository and run the following command:
@@ -269,7 +273,7 @@ applications:  </br>
  2. Run the following command to push the application into bluemix  
 Give your application a unique name.
 ```
-cf push <appname>
+cf push your_application_name
 ```
 **Note:**  Above steps will work when widget library is publicly available. You can run the application locally by following steps
  3. Add application credentials under config folder with the following json

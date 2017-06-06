@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-05"
+lastupdated: "2017-06-06"
 
 ---
 
@@ -102,7 +102,7 @@ The sample app is built using the Node.js client libraries at: [https://github.c
 
 1. Use your favorit git tool to clone the following repository:  
 https://github.ibm.com/wiotp-toolingdevx/lesson1a  
-In git, use the following command:
+In Git shell, use the following command:
   ```bash
 git clone https://github.ibm.com/wiotp-toolingdevx/lesson1a
   ```
