@@ -80,13 +80,12 @@ git clone https://github.ibm.com/wiotp-toolingdevx/lesson3a
   ```
 2. Create an API Key and Authentication Token combination for your app.  
 You will need these when you configure the app to connect to your organization. For more information about registering devices, see [Connecting applications](../platform_authorization.html).  
-Set the application permissions to the lowest level it requires: Visualization Application. If you add more features to the application, you'll need to elevate it to a higher role.
-{: tip}
  1. Open the {{site.data.keyword.iot_short_notm}} dashboard.
  2. Select **Apps**.
  3. Click **Generate API Key**
  4. Copy the API Key and Authentication Token values that are listed.
- 5. Select **Operations Application** as the API role.
+ 5. Select **Visualization Application** as the API role.  
+**Tip:** If you add more features to the application, you'll need to elevate it to a higher role.
  6. Add a comment so that you can easily identify this API Key and Authentication Token combination.
  7. Click **Generate**.
 3. Configure your app to connect to {{site.data.keyword.Bluemix_notm}}.
