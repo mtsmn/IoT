@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-06"
+lastupdated: "2017-06-07"
 
 ---
 
@@ -59,10 +59,10 @@ Follow the steps below to create and deploy your app manually.
 
 1. Clone the *Lesson4* sample app GitHub repository.  
 Use your favorite git tool to clone the following repository:  
-https://github.ibm.com/wiotp-toolingdevx/lesson4  
+https://github.com/ibm-watson-iot/iot-guide-conveyor-multi-simulator  
 In Git Shell, use the following command:
 ```bash
-$ git clone https://github.ibm.com/wiotp-toolingdevx/lesson4
+$ git clone https://github.com/ibm-watson-iot/iot-guide-conveyor-multi-simulator
 ```
 3. Configure the application for your environment by editing the manifest.yml file.  
 What to edit:

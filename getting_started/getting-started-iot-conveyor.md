@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-06"
+lastupdated: "2017-06-07"
 
 ---
 
@@ -102,21 +102,21 @@ The sample app is built using the Node.js client libraries at: [https://github.c
 ![Conveyor belt app](images/app_conveyor_belt.png "Conveyor belt app")
 
 1. Use your favorite git tool to clone the following repository:  
-https://github.ibm.com/wiotp-toolingdevx/lesson1a  
+https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator  
 In Git shell, use the following command:
   ```bash
-git clone https://github.ibm.com/wiotp-toolingdevx/lesson1a
+git clone https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator
   ```
 2. On the command line, change the directory to the directory in which the sample app is located.
   ```bash
 cd lesson1a
   ```
-3. From the *lesson1a* directory, push your app to {{site.data.keyword.Bluemix_notm}} and give it a new name by replacing *YOUR_APP_NAME* in the cf push command. Use the `--no-start` option because you will start the app in the next stage after it is bound to {{site.data.keyword.iot_short_notm}}.  
+3. From the *ot-guide-conveyor-simulator* directory, push your app to {{site.data.keyword.Bluemix_notm}} and give it a new name by replacing *YOUR_APP_NAME* in the cf push command. Use the `--no-start` option because you will start the app in the next stage after it is bound to {{site.data.keyword.iot_short_notm}}.  
 **Note:** Deploying your application can take a few minutes.
    ```bash
 cf push YOUR_APP_NAME --no-start
   ```  
-1. In the *lesson1a* directory, bind your app to your instance of the {{site.data.keyword.iot_short_notm}} by using the names that you provided for each.  
+1. In the *ot-guide-conveyor-simulator* directory, bind your app to your instance of the {{site.data.keyword.iot_short_notm}} by using the names that you provided for each.  
   ```bash
 cf bind-service YOUR_APP_NAME iotp-for-conveyor
   ```
@@ -186,12 +186,12 @@ $ sudo apt-get install git
 
 1. Open the terminal or SSH to your Raspberry Pi.
 2. Use your favorit git tool to clone the following repository to your Raspberry Pi:  
-https://github.ibm.com/wiotp-toolingdevx/lesson1b/
+https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi
 In Git Shell, use the following command:
 ```bash
-$ git clone https://github.ibm.com/wiotp-toolingdevx/lesson1b/
+$ git clone https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi
 ```
-2. Navigate to the `lesson1a` root of the cloned repository.
+2. Navigate to the *iot-guide-conveyor-rasp-pi* root of the cloned repository.
 3. Install the dependencies.  
 ```bash
 $ pip install ibmiotf

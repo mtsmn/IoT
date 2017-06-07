@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-06"
+lastupdated: "2017-06-07"
 
 ---
 
@@ -73,10 +73,10 @@ As part of this step, you will:
 The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the README file in GitHub.
 1. Clone the Node.js *Plant Floor Monitoring* sample app GitHub repository.  
 Use your favorite git tool to clone the following repository:  
-https://github.ibm.com/wiotp-toolingdevx/lesson3a  
+https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-angular   
 In Git shell, use the following command:
   ```bash
-git clone https://github.ibm.com/wiotp-toolingdevx/lesson3a
+git clone https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-angular
   ```
 2. Create an API key and authentication token combination for your app.  
 You will need these when you configure the app to connect to your organization. For more information about registering devices, see [Connecting applications](/docs/services/IoT/platform_authorization.html).  
@@ -89,7 +89,7 @@ You will need these when you configure the app to connect to your organization. 
  6. Add a comment so that you can easily identify this API key and authentication token combination.
  7. Click **Generate**.
 3. Configure your app to connect to {{site.data.keyword.Bluemix_notm}}.
-Navigate to the root of the `lesson3b` repository and create a `basicConfig.json` file that contains the following content:
+Navigate to the root of the *iot-guide-conveyor-ui-angular* repository and create a `basicConfig.json` file that contains the following content:
   ```
 {
   "org": "your orgID",
@@ -139,7 +139,7 @@ Example: `cf api https://api.ng.bluemix.net`
 </table>
 6. Change the directory to the directory in which the sample app is located.  
   ```
-cd lesson3a
+cd iot-guide-conveyor-ui-angular
   ```
 7. Run `npm install -g @angular/cli` to install the Angular CLI.
 8. Run `npm install`.
@@ -171,13 +171,13 @@ The default URL is similar to:
 The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the README file in GitHub.
 1. Clone the *Widget Library Monitoring* sample app GitHub repository.  
 Use your favorite git tool to clone the following repository:  
-https://github.ibm.com:wiotp-toolingdevx/lesson3b
+https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-html
 In Git Shell, use the following command:
 ```
-git clone https://github.ibm.com/wiotp-toolingdevx/lesson3a
+git clone https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-html
 ```
 2. Install the application dependencies.  
-Navigate to the root of the `lesson3b` repository and run the following command:
+Navigate to the root of the *iot-guide-conveyor-ui-html* repository and run the following command:
 ```
 npm install
 ```
