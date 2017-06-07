@@ -110,8 +110,8 @@ For example: `cf api https://api.ng.bluemix.net`
 <td>https://api.eu-gb.bluemix.net</td>
 </tr>
 <tr>
-<td>Sydney</td>
-<td>https://api.au-syd.bluemix.net</td>
+<td>Germany</td>
+<td>https://api.eu-de.bluemix.net</td>
 </tr>
 </table>
 2. Log into your {{site.data.keyword.Bluemix_notm}} account.
