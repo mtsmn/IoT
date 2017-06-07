@@ -14,6 +14,7 @@ lastupdated: "2017-06-06"
 {:tip: .tip}
 
 
+
 # Guide 1: Connecting a conveyor belt device  
 Create a basic conveyor belt with an IoT device that sends monitoring data to {{site.data.keyword.iot_short_notm}} on {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
