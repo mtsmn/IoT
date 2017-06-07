@@ -14,19 +14,19 @@ lastupdated: "2017-06-06"
 {:tip: .tip}
 
 # Guide 3: Monitoring your device data
-With one or more devices connected it is time to start monitoring device data in real time.
+Now that you have one or more devices connected, it is time to start monitoring device data in real time.
 {:shortdesc}
 
 ## Overview and goal
 {: #overview}  
 
-In this guide you will deploy a monitoring application on {{site.data.keyword.Bluemix_notm}} to view data from your devices.
+In this guide, you will deploy a monitoring application on {{site.data.keyword.Bluemix_notm}} to view data from your devices.
 
-As in guide 1 you can follow one or both of two paths:
+As in guide 1, you can follow one or both of the following paths:
 - Path A: [Step 1A - Deploy and connect the monitoring web application](#deploy_app)  
-By following path A you will deploy a ready-made app that monitors the conveyor belt devices that you are running in your organization.
+By following path, A you will deploy a ready-made app that monitors the conveyor belt devices that you are running in your organization.
 - Path B: [Step 1B - Create a monitoring user interface using the widget library](#widget-library)
-This slightly more complex path introduces the widget library and leads you through some basic user interface creation.
+The slightly more complex path B introduces the widget library and leads you through some basic user interface creation.
 
 ## Prerequisites
 {: #prereqs}  
@@ -52,7 +52,7 @@ You must also have a connected device of device type `iot-conveyor-belt` that se
 }
 ```
 For more information about device events and messaging format, see [Publishing events](/docs/services/IoT/devices/mqtt.html#publishing_events).  
-If you have completed [Guide 1: Getting started with {{site.data.keyword.iot_short_notm}} and a simulated conveyor belt](getting-started-iot-conveyor.html) you are all set.  
+If you completed [Guide 1: Getting started with {{site.data.keyword.iot_short_notm}} and a simulated conveyor belt](getting-started-iot-conveyor.html), you are all set.  
 {: tip}
 
 ## Step 1A - Deploy and connect the monitoring web application
@@ -64,32 +64,32 @@ The sample app is built using the Node.js client libraries at: [https://github.c
 
 ![Monitor app](images/app_monitor.png "Monitor app")
 
-As part of this step you will:
-- Deploy a GitHub-sourced sample monitoring web application using Cloud Foundry.
-- Configure the sample app to connect to {{site.data.keyword.iot_short_notm}} using an API key and Authentication Token.
+As part of this step, you will:
+- Deploy a GitHub-sourced sample monitoring web application by using Cloud Foundry.
+- Configure the sample app to connect to {{site.data.keyword.iot_short_notm}} by using an API key and authentication token.
 - Use the web application to monitor your connected conveyor belt devices.  
 
 ### Detailed steps
-The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the GitHub README.
+The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the README file in GitHub.
 1. Clone the Node.js *Plant Floor Monitoring* sample app GitHub repository.  
-Use your favorit git tool to clone the following repository:  
+Use your favorite git tool to clone the following repository:  
 https://github.ibm.com/wiotp-toolingdevx/lesson3a  
 In Git shell, use the following command:
   ```bash
 git clone https://github.ibm.com/wiotp-toolingdevx/lesson3a
   ```
-2. Create an API Key and Authentication Token combination for your app.  
+2. Create an API key and authentication token combination for your app.  
 You will need these when you configure the app to connect to your organization. For more information about registering devices, see [Connecting applications](/docs/services/IoT/platform_authorization.html).  
  1. Open the {{site.data.keyword.iot_short_notm}} dashboard.
  2. Select **Apps**.
  3. Click **Generate API Key**
- 4. Copy the API Key and Authentication Token values that are listed.
+ 4. Copy the API key and authentication token values that are listed.
  5. Select **Visualization Application** as the API role.  
 **Tip:** If you add more features to the application, you'll need to elevate it to a higher role.
- 6. Add a comment so that you can easily identify this API Key and Authentication Token combination.
+ 6. Add a comment so that you can easily identify this API key and authentication token combination.
  7. Click **Generate**.
 3. Configure your app to connect to {{site.data.keyword.Bluemix_notm}}.
-Navigate to the root of the `lesson3b` repository and create a `basicConfig.json` file with the following content.
+Navigate to the root of the `lesson3b` repository and create a `basicConfig.json` file that contains the following content:
   ```
 {
   "org": "your orgID",
@@ -97,8 +97,8 @@ Navigate to the root of the `lesson3b` repository and create a `basicConfig.json
   "apiToken": "your Authentication Token"
 }
   ```
-Replace the parameter values with the corresponding values for your {{site.data.keyword.Bluemix_notm}} organization: orgID, API Key, and Authentication Token that you just created.  
-For example:
+Replace the parameter values with the corresponding values for your {{site.data.keyword.Bluemix_notm}} organization: orgID, API key, and authentication token that you just created.  
+Example:
 ```
  {   
   "org": "3v5whr",    
@@ -106,7 +106,7 @@ For example:
   "apiToken": "-q0MkPN2cNYB6+?ISk"  
 }
 ```
-4. Log into your {{site.data.keyword.Bluemix_notm}} account using the cloudfoundry CLI.  
+4. Log into your {{site.data.keyword.Bluemix_notm}} account by using the cloudfoundry CLI.  
 For more information, see the [Cloud Foundry CLI documentation ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/){: new_window}  
 From the command line, enter the following command:  
   ```
@@ -118,7 +118,7 @@ Replace the `API-ENDPOINT` value with the API endpoint for your region.
   ```
 cf api API-ENDPOINT
   ```
-For example: `cf api https://api.ng.bluemix.net`
+Example: `cf api https://api.ng.bluemix.net`
 <table>
 <tr>
 <th>Region</th>
@@ -142,11 +142,11 @@ For example: `cf api https://api.ng.bluemix.net`
 cd lesson3a
   ```
 7. Run `npm install -g @angular/cli` to install the Angular CLI.
-8. Run `npm install`
+8. Run `npm install`.
 9. Run `npm run push` to build the project and push to your organization.  
 Your sample web application is deployed on {{site.data.keyword.Bluemix_notm}}.  
-When deployment completes, a message displays to indicate that your app is running.   
-For example:  
+When deployment is completed, a message is displayed to indicate that your app is running.   
+Example:  
   ```
 requested state: started
 instances: 1/1
@@ -159,51 +159,51 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack
 #0   running   2017-05-16 03:03:05 PM   0.0%   0 of 64M   0 of 256M
   ```
 10. Open the web app.  
-From the {{site.data.keyword.Bluemix_notm}} apps dashboard click **Visit App URL** to open the web application.  
+From the {{site.data.keyword.Bluemix_notm}} apps dashboard, click **Visit App URL** to open the web application.  
 Access and manage the application URL by clicking **Routes**.   
 The default URL is similar to:  
 `https://iotmonitoringcontrol-RANDOM-STRING-ENG.mybluemix.net`
 
-## Step 1B - Create a monitoring user interface using the widget library
+## Step 1B - Create a monitoring user interface by using the widget library
 
 {: #widget-library}
 ### Detailed steps
-The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the GitHub README.
+The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the README file in GitHub.
 1. Clone the *Widget Library Monitoring* sample app GitHub repository.  
-Use your favorit git tool to clone the following repository:  
+Use your favorite git tool to clone the following repository:  
 https://github.ibm.com:wiotp-toolingdevx/lesson3b
 In Git Shell, use the following command:
 ```
 git clone https://github.ibm.com/wiotp-toolingdevx/lesson3a
 ```
-2. Install the application dependencies  
+2. Install the application dependencies.  
 Navigate to the root of the `lesson3b` repository and run the following command:
 ```
 npm install
 ```
-3. Construct the user interface  
-To build the application user interface you must add the widgets as javascript code in the application index.html file for each user interface component.  
-For each widget the javascript parameters are:  
+3. Construct the user interface.  
+To build the application user interface, you must add the widgets as JavaScript code in the application index.html file for each user interface component.  
+Each widget uses the following JavaScript parameters:  
 `WIoTPWidget.CreateGauge("name","event name", "orgID", "deviceID", "property" , ADDITIONAL_WIDGET_SETTINGS)`
 <ul>
-<li>name - The name of the widget as it will appear in the application.
+<li>name - The name of the widget, which appears in the application.
 <li>event name - The device event name that includes the property to display.
-<li>orgID - The ID or your {{site.data.keyword.iot_short_notm}} organization.
+<li>orgID - The ID of your {{site.data.keyword.iot_short_notm}} organization.
 <li>deviceID - The ID of the device that supplies the data to display.
 <li>property - The device message payload property to display.
 <li>ADDITIONAL_WIDGET_SETTINGS -  One or more additional parameters for the widget, see examples.
 </ul>
 For details on each widget type, see the examples that follow and the documentation in the [IoT Widgets GitHub repository ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/iot-widgets){: new_page}.
  1. Add an RPM gauge.  
-This gauge displays the conveyor belt rpm as a gauge with a min of 0 and a max of 5 rpm.
+This gauge displays the conveyor belt rpm as a gauge that has a minimum of 0 and a maximum of 5 rpm.
     1. Open the following template for editing: `public/index.html`  
     2. Locate the rpm gauge placeholder: `<!--- place holder for rpm gauge  -->`
-    3. Add the following div element with an unique id as given below:
+    3. Add the following div element with a unique id as shown:
  ```html
  <div id="rpmgauge" ></div>
  ```  
-    3. Locate the javascript placeholder: `/// Add your scripts here`
-    4. Add the rpm javascript code.  
+    3. Locate the JavaScript placeholder: `/// Add your scripts here`
+    4. Add the rpm JavaScript code.  
 Example:  
  ```javascript
  WIoTPWidget.CreateGauge("rpmgauge","sensorData", "iotp-for-conveyor", "belt1", "rpm" ,{
@@ -219,14 +219,14 @@ Example:
        },['#FF0000', '#F97600', '#F6C600', '#60B044']);
  ```
  2. Add an acceleration gauge.  
-This gauge displays the accelerometer reading as a gauge with readings between -1 and 1.
+This gauge displays the accelerometer reading as a gauge that has readings between -1 and 1.
     1. Locate the accelerometer gauge placeholder: `<!--- place holder for accelerometer gauge  -->`
-    2. Add the following div element with an unique id as given below:
+    2. Add the following div element with an unique id as shown:
  ```html
  <div id="aygauge" ></div>
  ```  
     3. Locate the javascript placeholder: `/// Add your scripts here`
-    4. Add the accelerometer javascript code.  
+    4. Add the accelerometer JavaScript code.  
 Example:   
  ```javascript
  WIoTPWidget.CreateGauge("aygauge","sensorData", "iotp-for-conveyor", "belt1", "ay" ,{
@@ -244,19 +244,19 @@ Example:
  3. Add a motor speed chart.  
 This chart displays the motor speed as a line diagram.
     1. Locate the motor speed gauge placeholder: `<!--- place holder for motor speed gauge  -->`
-    2. Add the following div element with an unique id as given below:
+    2. Add the following div element with an unique id as shown:
  ```html
  <div id="speedchart" ></div>
  ```  
-    3. Locate the javascript placeholder: `/// Add your scripts here`
-    4. Add the speedchart javascript code.  
+    3. Locate the JavaScript placeholder: `/// Add your scripts here`
+    4. Add the speedchart JavaScript code.  
 Example:  
  ```javascript
  WIoTPWidget.CreateGauge("speedchart ","sensorData", "iotp-for-conveyor", "belt1",
  ["rpm", "ay"], [["line","rpm"],["line","ay"]],['#2ca02c','#d62728']);
  ```
 4. Deploy the application to {{site.data.keyword.Bluemix_notm}}  
- 1. Update the manifest.yml with your {{site.data.keyword.iot_short_notm}} service name.  
+ 1. Update the manifest.yml file with your {{site.data.keyword.iot_short_notm}} service name.  
 For example, if you deployed a {{site.data.keyword.iot_short_notm}} service as part of [Guide 1: Connecting a conveyor belt device](getting-started-iot-monitoring.html) then YOUR_PLATFORM_NAME is `iotp-for-conveyor`.
 <pre><code>
 declared-services:
@@ -272,13 +272,13 @@ applications:  </br>
   services:  </br>
   \- YOUR_IOT_PLATFORM_NAME  </br>
 </pre></code>
- 2. Run the following command to push the application into bluemix  
+ 2. Run the cf push command to push the application into {{site.data.keyword.Bluemix_notm}}:  
 Give your application a unique name.
 ```
 cf push YOUR_APP_NAME
 ```
-5. Open the widget library based web app.  
-From the {{site.data.keyword.Bluemix_notm}} apps dashboard click **Visit App URL** to open the web application.  
+5. Open the widget-library-based web app.  
+From the {{site.data.keyword.Bluemix_notm}} apps dashboard, click **Visit App URL** to open the web application.  
 Access and manage the application URL by clicking **Routes**.   
 The default URL is similar to:  
 `https://YOUR_APP_NAME.mybluemix.net`
@@ -286,14 +286,14 @@ The default URL is similar to:
 ## Step 2 - View your connected devices
 {: #view_devices}
 
-With the web console up and running you can now view your connected conveyor belt devices.
+Now that the web console is up and running, you can view your connected conveyor belt devices.
 1. From the web console **Devices** section, verify that your conveyor belts are listed and that the correct RPM and Running state is displayed.
-2. Change the RPM value for your conveyor belt device and verify that the value updates as expected on the monitoring app.
+2. Change the RPM value for your conveyor belt device and verify that the value are updated as expected on the monitoring app.
 
 
 ## What's next?
 {: @whats_next}  
-Continue with the next guide, or jump to another topic that interests you:
+Continue with the next guide or jump to another topic that interests you:
 - Path A: Modify the monitoring app to suit your needs.  
 For technical details, see:
  - [https://github.ibm.com/wiotp-toolingdevx/lesson3a/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/lesson3a/blob/master/README.md){: new_window}
@@ -302,6 +302,6 @@ For technical details, see:
 For technical details, see:
  - [https://github.ibm.com/wiotp-toolingdevx/lesson3b/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/lesson3b/blob/master/README.md){: new_window}
 - [Guide 4: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
-Expand on the basic simulation by adding large numbers of self running simulators to your environment. This will let you test drive the basic analytics and monitoring from the previous guides in a more realistic, multi-device environment.
+Expand on the basic simulation by adding large numbers of self-running simulators to your environment. This expansion will let you test drive the basic analytics and monitoring from the previous guides in a more realistic, multi-device environment.
 - [Learn more about {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [Learn more about {{site.data.keyword.iot_short_notm}} APIs](/docs/services/IoT/reference/api.html){:new_window}

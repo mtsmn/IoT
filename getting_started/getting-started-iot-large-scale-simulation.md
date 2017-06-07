@@ -14,24 +14,24 @@ lastupdated: "2017-06-06"
 {:tip: .tip}
 
 # Guide 4: Simulating a large number of devices
-In the first guide you set up a basic device simulator to manually simulate one or more conveyor belts. In this guide we expand on this simulation by adding large numbers of self running simulators to your environment to test analytics and monitoring in a more realistic, multi device environment.
+In the first guide, you set up a basic device simulator to manually simulate one or more conveyor belts. In this guide, we expand on this simulation by adding large numbers of self-running simulators to your environment to test analytics and monitoring in a more realistic, multi-device environment.
 {:shortdesc}
 
-**Important:** The application requires 512 MB of memory, which is more than is allocated by default and which also exceeds the amount available to free trial accounts (Bluemix Trial Account and Standard Account). Subscription and Pay-As-You-Go account holders can increase the allocated memory to 512 MB.  Free trial account holders need to upgrade to a Subscription or Pay-As-You-Go account. For more information about {{site.data.keyword.Bluemix_notm}} account types, see [Account types](/docs/pricing/index.html#pricing).
+**Important:** The application requires 512 MB of memory, which is more than is allocated by default and which also exceeds the amount that is available to free trial accounts, including the Bluemix Trial Account and Standard Account. Subscription and Pay-As-You-Go account holders can increase the allocated memory to 512 MB. Free trial account holders need to upgrade to a Subscription or Pay-As-You-Go account. For more information about {{site.data.keyword.Bluemix_notm}} account types, see [Account types](/docs/pricing/index.html#pricing).
 
 ## Overview and goal
 {: #overview}
 
-In this guide you will set up a {{site.data.keyword.Bluemix_notm}} application to simulate multiple conveyor belt devices using a  [Node-RED ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://nodered.org){: new_window} "back end".
+In this guide, you will set up a {{site.data.keyword.Bluemix_notm}} application to simulate multiple conveyor belt devices using a  [Node-RED ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://nodered.org){: new_window} "back end".
 
 The application contains three flows that:   
-1. Creates multiple devices.   
-2. Simulates concurrent event publishing.
-3. Deletes the devices.   
+1. Create multiple devices.   
+2. Simulate concurrent event publishing.
+3. Delete the devices.   
 
  ![Monitor app](images/multi_device.png "Monitor app")
 
-As part of this guide you will:
+As part of this guide, you will:
 - Use Cloud Foundry to deploy a Node-RED based and webhook enabled device simulator application.
 - Use API calls to create and register devices, publish device events, and delete devices.
 
@@ -49,7 +49,7 @@ You will need the following accounts and tools:
 Use the cf CLI to deploy and manage your {{site.data.keyword.Bluemix_notm}} applications.
 * [Git ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
 
-For any of the ReST calls in the steps that follow, you can either use cURL or the ReST client add-on plugin available in Mozilla.  
+For any of the ReST calls in the steps that follow, you can either use cURL or the ReST client add-on plugin that is available in Mozilla.  
 {: tip}
 
 ## Step 1 - Deploy the application to {{site.data.keyword.Bluemix_notm}}
@@ -58,7 +58,7 @@ For any of the ReST calls in the steps that follow, you can either use cURL or t
 Follow the steps below to create and deploy your app manually.   
 
 1. Clone the *Lesson4* sample app GitHub repository.  
-Use your favorit git tool to clone the following repository:  
+Use your favorite git tool to clone the following repository:  
 https://github.ibm.com/wiotp-toolingdevx/lesson4  
 In Git Shell, use the following command:
 ```bash
@@ -66,9 +66,9 @@ $ git clone https://github.ibm.com/wiotp-toolingdevx/lesson4
 ```
 3. Configure the application for your environment by editing the manifest.yml file.  
 What to edit:
- - To use an existing {{site.data.keyword.iot_short_notm}} service, update all instances of `lesson4-simulate-iotf-service` to reflect that service name. For example, if you are using the {{site.data.keyword.iot_short_notm}} service from guide 1 use: `iotp-for-conveyor`    
+ - To use an existing {{site.data.keyword.iot_short_notm}} service, update all instances of `lesson4-simulate-iotf-service` to reflect that service name. For example, if you are using the {{site.data.keyword.iot_short_notm}} service from guide 1, use `iotp-for-conveyor` for the service name.    
  - Set the device name and host.   
-In the applications section, change the `name` and `host` entries to something unique, such as `YOUR_NAME-lesson4-simulate`.   
+In the applications section, change the `name` and `host` entries to something that is unique, such as `YOUR_NAME-lesson4-simulate`.   
 **Tip:** The ROUTES URL that you use to access the app is created from the `host` entry, for example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net`.  
 <pre><code>
 declared-services:
@@ -95,7 +95,7 @@ Replace the `API-ENDPOINT` value with the API endpoint for your region.
    ```
 cf api API-ENDPOINT
    ```
-For example: `cf api https://api.ng.bluemix.net`  
+Example: `cf api https://api.ng.bluemix.net`  
 <table>
 <tr>
 <th>Region</th>
@@ -119,16 +119,16 @@ For example: `cf api https://api.ng.bluemix.net`
 cf login
   ```
 If prompted, select the organization and space where you want to deploy {{site.data.keyword.iot_short_notm}} and the sample app.
-6. Create the required services in Bluemix   
+6. Create the required services in {{site.data.keyword.Bluemix_notm}}.   
  1. Use the following command to create the cloudantNoSQLDB Lite service:
 <pre><code>$ cf create-service cloudantNoSQLDB Lite lesson4-simulate-cloudantNoSQLDB</code></pre>    
  2. Use the following command to create the {{site.data.keyword.iot_short_notm}} service.
 <pre><code>$ cf create-service iotf-service iotf-service-free lesson4-simulate-iotf-service </code></pre>   
-**Important:** If you are using an existing {{site.data.keyword.iot_short_notm}} service, and you updated the manifest.yml file accordingl, make sure that you use the existing service name. For example, from guide 1:  `iotp-for-conveyor` instead of `lesson4-simulate-iotf-service` in the cf call.
-7. Run `cf push` to build the project and push to your organization.  
+**Important:** If you are using an existing {{site.data.keyword.iot_short_notm}} service, and you updated the manifest.yml file accordingly, make sure that you use the existing service name. For example, from guide 1, use  `iotp-for-conveyor` instead of `lesson4-simulate-iotf-service` in the cf call.
+7. Run the `cf push` command to build the project and push to your organization.  
 Your sample application is deployed on {{site.data.keyword.Bluemix_notm}}.  
-When deployment completes, a message displays to indicate that your app is running.   
-For example:  
+When deployment is completed, a message is displayed to indicate that your app is running.   
+Example:  
   ```
 requested state: started
 instances: 1/1
@@ -147,12 +147,12 @@ details
  1. Log in to {{site.data.keyword.Bluemix_notm}} at:  
  [https://bluemix.net ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net){: new_window}.
  2. Select the account and space where you deployed the app.
- 3. From the menu, select **Apps** then **Dashboard**.
+ 3. From the menu, select **Apps** and then select **Dashboard**.
  4. Under Cloud Foundry Apps, click the name of the application that you just deployed.
  4. Select **Connections**.
- 5. Locate the iotf-service that you are using with your app and click **View credentials**  
- 6. In the service credentials page, locate `apiKey` and `apiToken`.   
-The API Key and Authentication Token are used as credentials when you use the app API to create and run your simulated devices.
+ 5. Locate the iotf-service that you are using with your app and click **View credentials**.  
+ 6. On the service credentials page, locate `apiKey` and `apiToken`.   
+The API key and authentication token are used as credentials when you use the app API to create and run your simulated devices.
 
 
 ## Step 2 - Create and connect devices
@@ -165,10 +165,10 @@ To register multiple devices:
 1. Log in to {{site.data.keyword.Bluemix_notm}} at:  
 [https://bluemix.net ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net){: new_window}.
 2. Select the account and space where you deployed the app.
-3. From the menu, select **Apps** then **Dashboard**.
+3. From the menu, select **Apps** and then select **Dashboard**.
 4. Under Cloud Foundry Apps, click the **ROUTE** URL of the application that you just deployed.  
 The ROUTE_URL is built from the `host` entry that you used in the manifest.yml file: `HOST.mybluemix.net`  
-For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net`.  
+Example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net`.  
 The Node-RED interface opens.
 5. Click **Go to your Node-RED flow editor**.
 6. In the flow editor, select the **Device Type and Instance** tab.
@@ -183,9 +183,9 @@ The device names are displayed.
 To register multiple devices:  
 
 1. Make an HTTP POST request to the following URL: `ROUTE_URL/rest/devices`  
-For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/devices`  
- - Use basic authentication with the API Key and Authentication Token that were created for your app. USe `apiKey` and `apiToken` that you located as part of step 3.
- - Set 'Content-Type' and 'Accept' to be 'application/json'  
+Example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/devices`  
+ - Use basic authentication with the API key and authentication token that were created for your app. Use the values for `apiKey` and `apiToken` that you located in step 3
+ - Set 'Content-Type' and 'Accept' to 'application/json'  
  - Use the following JSON payload:  
 <pre><code>{  </br>
 "numberDevices":5, </br>
@@ -197,9 +197,9 @@ For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/devices`
 </code></pre>  
   Where:  
     - numberDevices is the number of devices to create and register.
-    - Optional: typeId is the device type that the devices will be registered as. If typeId is not provided, it defaults to "iotp-for-conveyor". **Tip:** You can enter any device type name, but the other guides in the series expect devices of device type `iotp-for-conveyor`. If you use a different device type you must modify the settings in the following guides accordingly.
+    - Optional: typeId is the device type that the devices will be registered as. If typeId is not provided, it defaults to "iotp-for-conveyor". **Tip:** You can enter any device type name, but the other guides in the series expect devices of device type `iotp-for-conveyor`. If you use a different device type, you must modify the settings in the guides accordingly.
     - Optional: authToken is the authorization token the devices will register with.
-    - Optional: If chunkSize is not provided, it defaults to 500. The 'chunksize' has to be less than and a factor of numberDevices.
+    - Optional: If chunkSize is not provided, it is set to 500 by default. The 'chunksize' must be less than and a factor of numberDevices.
     - deviceName is the pattern for the deviceID for the created devices. Each deviceID instance is appended with a number ranging from 01 to numberDevices.
 2. Verify that your devices are registered.
  1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
@@ -210,12 +210,12 @@ The device names are displayed.
 ## Step 3 - Simulate device events
 {: #step3}
 
-With the simulated devices registered with {{site.data.keyword.iot_short_notm}} you can now run the simulator to start sending device events.
+Because the simulated devices are registered with {{site.data.keyword.iot_short_notm}}, you can now run the simulator to start sending device events.
 
 ### Node-RED  
 To send device events:  
 1. In the Node-RED flow editor, select the **Simulate multiple devices** tab.
-7. To simulate five devices, click the inject node labeled **Simulate 5 devices**.
+7. To simulate five devices, click the inject node that is labeled **Simulate 5 devices**.
 8. Verify that your devices are sending data.
  1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
  3. Select the **Device Centric Analytics** board.
@@ -227,9 +227,9 @@ To send device events:
 To send device events:
 
 1. Make an HTTP POST request to the following URL: `ROUTE_URL/rest/runtest`  
-For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/runtest`  
- - Use basic authentication with the API Key and Authentication Token that were created for your app. USe `apiKey` and `apiToken` that you located as part of step 3.
- - Set 'Content-Type' and 'Accept' to be 'application/json'  
+Example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/runtest`  
+ - Use basic authentication with the API key and authentication token that were created for your app. Use the values for `apiKey` and `apiToken` that you located in step 3
+ - Set 'Content-Type' and 'Accept' to 'application/json'  
  - Use the following JSON payload:   
 <pre><code>{  </br>
 "numberDevices":5,  </br>
@@ -241,7 +241,7 @@ For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/runtest`
 Where:
     - numberDevices is the number of devices that you want to simulate data for.
     - numberEvents is the number of events that each simulated device sends.
-    - timeInterval is the spacing of the events, in milliseconds.
+    - timeInterval is the spacing of the events in milliseconds.
     - deviceType is the device type that you created simulated devices for.
     - deviceName is the pattern for the deviceID for the created devices. Each deviceID instance is appended with a number ranging from 01 to numberDevices.
 8. Verify that your devices are sending data.
@@ -256,7 +256,7 @@ Where:
 ### Node-RED  
 To delete devices:  
 1. In the Node-RED flow editor, select the **Device Type and Instance** tab.
-2. To delete five devices, click the inject node labeled **Delete 5 devices**.
+2. To delete five devices, click the inject node that is labeled **Delete 5 devices**.
 3. Verify that your devices are deleted.
  1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
  3. Select the **Device Centric Analytics** board.
@@ -267,9 +267,9 @@ To delete devices:
 ### Rest API  
 
 1. Make an HTTP POST request to the following URL: `ROUTE_URL/rest/deleteDevices`  
-For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevices`
- - Use basic authentication with the API Key and Authentication Token that were created for your app. USe `apiKey` and `apiToken` that you located as part of step 3.
- - Set 'Content-Type' and 'Accept' to be 'application/json'  
+Example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevices`
+ - Use basic authentication with the API key and authentication token that were created for your app. Use the values for `apiKey` and `apiToken` that you located in step 3
+ - Set 'Content-Type' and 'Accept' to  'application/json'  
  - Use the following JSON payload:      
 <pre><code>{      
 "numberDevices":5,   
@@ -286,8 +286,8 @@ For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDe
 {: @whats_next}  
 Jump to another topic that interests you:
 - [Guide 2: Using basic real-time rules and actions](getting-started-iot-rules.html)  
-Now that you have successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.
+Now that you successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.
 - [Guide 3: Monitoring your device data](getting-started-iot-monitoring.html)  
-Now that you have connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices.
+Now that you connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices.
 - [Learn more about {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [Learn more about {{site.data.keyword.iot_short_notm}} APIs](/docs/services/IoT/reference/api.html){:new_window}
