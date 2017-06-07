@@ -73,8 +73,8 @@ For example: `cf api https://api.ng.bluemix.net`
 <td>https://api.eu-gb.bluemix.net</td>
 </tr>
 <tr>
-<td>Sydney</td>
-<td>https://api.au-syd.bluemix.net</td>
+<td>Germany</td>
+<td>https://api.eu-de.bluemix.net</td>
 </tr>
 </table>
 2. Log into your {{site.data.keyword.Bluemix_notm}} account.
@@ -82,10 +82,12 @@ For example: `cf api https://api.ng.bluemix.net`
 cf login
   ```
 If prompted, select the organization and space where you want to deploy {{site.data.keyword.iot_short_notm}} and the sample app.
-3. Deploy the {{site.data.keyword.iot_short_notm}} to {{site.data.keyword.Bluemix_notm}} with the following service name: `iotp-for-conveyor`.
+3. Deploy the {{site.data.keyword.iot_short_notm}} service to {{site.data.keyword.Bluemix_notm}}.  
    ```
-cf create-service iotf-service iotf-service-free iotp-for-conveyor
+cf create-service iotf-service iotf-service-free YOUR_IOT_PLATFORM_NAME
   ```
+For YOUR_IOT_PLATFORM_NAME use *iotp-for-conveyor*.  
+Example: `cf create-service iotf-service iotf-service-free iotp-for-conveyor`
 3. Create your sample conveyor belt device.  
  - Path A: [Step 2A - Use the simulator sample app from GitHub](#deploy_app).  
  - Path B: [Step 2B - Build a physical conveyor belt with a Raspberry Pi and an electric motor](#raspberry).  
@@ -117,7 +119,7 @@ cf push YOUR_APP_NAME --no-start
   ```bash
 cf bind-service YOUR_APP_NAME iotp-for-conveyor
   ```
-For more information about binding applications, see [Connecting applications](../platform_authorization.html#bluemix-binding).
+For more information about binding applications, see [Connecting applications](/docs/services/IoT/platform_authorization.html#bluemix-binding).
 2. Start your application for the binding to take effect.
   ```bash
 cf start YOUR_APP_NAME
@@ -151,7 +153,7 @@ Open the following URL: `https://YOUR_APP_NAME.mybluemix.net`
 For example: `https://conveyorbelt.mybluemix.net/`.
 2. Enter a device ID and token for your device.  
 The default values are `belt1` and `test123pass`.
-The sample app automatically registers a device of type `iot-conveyor-belt` with the device ID and token that you provided. For more information about registering devices, see [Connecting devices](../iotplatform_task.html#iotplatform_subtask1).
+The sample app automatically registers a device of type `iot-conveyor-belt` with the device ID and token that you provided. For more information about registering devices, see [Connecting devices](/docs/services/IoT/iotplatform_task.html#iotplatform_subtask1).
 4. Continue with [Step 3 - See raw data in {{site.data.keyword.iot_short_notm}}](#see_live_data).
 
 ## Step 2B - Build a Raspberry Pi-powered conveyor belt
@@ -194,13 +196,13 @@ $ git clone https://github.ibm.com/wiotp-toolingdevx/lesson1b/
 $ pip install ibmiotf
 ```
 4. Register the device with {{site.data.keyword.iot_short_notm}}.  
-For more information about registering devices, see [Connecting devices](../iotplatform_task.html#iotplatform_subtask1).
+For more information about registering devices, see [Connecting devices](/docs/services/IoT/iotplatform_task.html#iotplatform_subtask1).
  1. In the {{site.data.keyword.Bluemix_notm}} console, click **Launch** on the {{site.data.keyword.iot_short_notm}} service details page.
      The {{site.data.keyword.iot_short_notm}} web console opens in a new browser tab at the following URL:
      ```
      https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
      ```
-     Where *org_id* is the ID of [your {{site.data.keyword.iot_short_notm}} organization](iotplatform_overview.html#organizations){: new_window}.
+     Where *org_id* is the ID of [your {{site.data.keyword.iot_short_notm}} organization](/docs/services/IoT/iotplatform_overview.html#organizations){: new_window}.
  2. In the Overview dashboard, from the menu pane, select **Devices** and then click **Add Device**.
  3. Create a device type for the device that you are adding.
      1. Click **Create device type**.
@@ -300,7 +302,7 @@ To create a dashboard card to see live conveyor belt data:
 2. For Card source data, click **Cards**.   
 A list of card names is displayed.
 3. Select **Devices I Care About**, then click **Next**.
-4. Click **Connect new data set**, and enter the following values:
+4. Click **Connect new data set**, and enter the following values for the data set parameters:
   - Event: sensorData
   - Property: d.rpm
   - Name: Belt RPM
@@ -323,10 +325,11 @@ If you use your phone to connect to the sample app you can shake the phone to se
     - Unit: gs
  5. Click **Next**.
  6. Path A only: Shake your phone to see the live accelerometer data in your new card.
-For more information about creating boards and cards, see [Visualizing real-time data by using boards and cards](../data_visualization.html#boards_and_cards).
+For more information about creating boards and cards, see [Visualizing real-time data by using boards and cards](/docs/services/IoT/data_visualization.html#boards_and_cards).
 
 ## What's next
-{: @whats_next}
+{: @whats_next}  
+Continue with the next guide, or jump to another topic that interests you:
 - Path A: Modify the conveyor belt app to suit your needs.  
 For technical details, see:
  - [https://github.ibm.com/wiotp-toolingdevx/lesson1a/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/lesson1a/blob/master/README.md){: new_window}
@@ -340,5 +343,5 @@ Now that you have successfully set up your conveyor belt, connected it to {{site
 Now that you have connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices.
 - [Guide 4: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
 The conveyor belt sample app in path A lets you manually simulate one or a few conveyor belt devices. This guide lets you set up a simulated environment with a large number of devices.
-- [Learn more about {{site.data.keyword.iot_short_notm}}](../../services/IoT/iotplatform_overview.html)
-- [Learn more about {{site.data.keyword.iot_short_notm}} APIs](../../services/IoT/reference/api.html)
+- [Learn more about {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html)
+- [Learn more about {{site.data.keyword.iot_short_notm}} APIs](/docs/services/IoT/reference/api.html)

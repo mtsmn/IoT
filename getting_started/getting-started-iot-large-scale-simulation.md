@@ -14,11 +14,10 @@ lastupdated: "2017-06-06"
 {:tip: .tip}
 
 # Guide 4: Simulating a large number of devices
-In the first guide you set up a basic device simulator to manually simulate one or more conveyor belts. In this guide we expand on this simulation by adding large numbers of self running simulators to your environment to let you test drive the basic analytics and monitoring from the previous guides in a more realistic, multi device environment.
+In the first guide you set up a basic device simulator to manually simulate one or more conveyor belts. In this guide we expand on this simulation by adding large numbers of self running simulators to your environment to test analytics and monitoring in a more realistic, multi device environment.
 {:shortdesc}
 
 **Important:** The application requires 512 MB of memory, which is more than is allocated by default and which also exceeds the amount available to free trial accounts (Bluemix Trial Account and Standard Account). Subscription and Pay-As-You-Go account holders can increase the allocated memory to 512 MB.  Free trial account holders need to upgrade to a Subscription or Pay-As-You-Go account. For more information about {{site.data.keyword.Bluemix_notm}} account types, see [Account types](/docs/pricing/index.html#pricing).
-
 
 ## Overview and goal
 {: #overview}
@@ -33,7 +32,7 @@ The application contains three flows that:
  ![Monitor app](images/multi_device.png "Monitor app")
 
 As part of this guide you will:
-- Use cf to deploy a Node-RED based and webhook enabled device simulator application.
+- Use Cloud Foundry to deploy a Node-RED based and webhook enabled device simulator application.
 - Use API calls to create and register devices, publish device events, and delete devices.
 
 **Important:** Simulating large numbers of devices that concurrently send device data to {{site.data.keyword.iot_short_notm}} might use up a large amount of data. You can use the {{site.data.keyword.iot_short_notm}} *Usage* dashboard to monitor how much data your devices and applications are using. The metrics are refreshed on a 2-hourly interval.
@@ -45,7 +44,7 @@ You will need the following accounts and tools:
 * [{{site.data.keyword.Bluemix_notm}} account](https://console.ng.bluemix.net/registration/) with    
  - More than 512 MB RAM   
  - More than 1 GB disk quota  
- - More than 2 services available   
+ - One to two services available   
 * [Cloud Foundry Command Line Interface (cf CLI) ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
 Use the cf CLI to deploy and manage your {{site.data.keyword.Bluemix_notm}} applications.
 * [Git ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
@@ -111,8 +110,8 @@ For example: `cf api https://api.ng.bluemix.net`
 <td>https://api.eu-gb.bluemix.net</td>
 </tr>
 <tr>
-<td>Sydney</td>
-<td>https://api.au-syd.bluemix.net</td>
+<td>Germany</td>
+<td>https://api.eu-de.bluemix.net</td>
 </tr>
 </table>
 2. Log into your {{site.data.keyword.Bluemix_notm}} account.
@@ -151,7 +150,7 @@ details
  3. From the menu, select **Apps** then **Dashboard**.
  4. Under Cloud Foundry Apps, click the name of the application that you just deployed.
  4. Select **Connections**.
- 5. Locate the iotf-service that you are using with your app, and click **View credentials**  
+ 5. Locate the iotf-service that you are using with your app and click **View credentials**  
  6. In the service credentials page, locate `apiKey` and `apiToken`.   
 The API Key and Authentication Token are used as credentials when you use the app API to create and run your simulated devices.
 
@@ -185,7 +184,7 @@ To register multiple devices:
 
 1. Make an HTTP POST request to the following URL: `ROUTE_URL/rest/devices`  
 For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/devices`  
- - Use basic authentication with the API Key and Authentication Token that were created for your app.
+ - Use basic authentication with the API Key and Authentication Token that were created for your app. USe `apiKey` and `apiToken` that you located as part of step 3.
  - Set 'Content-Type' and 'Accept' to be 'application/json'  
  - Use the following JSON payload:  
 <pre><code>{  </br>
@@ -198,11 +197,15 @@ For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/devices`
 </code></pre>  
   Where:  
     - numberDevices is the number of devices to create and register.
-    - Optional: typeId is the device type that the devices will be registered as. If typeId is not provided, it defaults to "devices". **Tip:** You can enter any device type name, but the other guides in the series expect devices of device type `iotp-for-conveyor`. If you use a different device type you must modify the settings in the following guides accordingly.
+    - Optional: typeId is the device type that the devices will be registered as. If typeId is not provided, it defaults to "iotp-for-conveyor". **Tip:** You can enter any device type name, but the other guides in the series expect devices of device type `iotp-for-conveyor`. If you use a different device type you must modify the settings in the following guides accordingly.
     - Optional: authToken is the authorization token the devices will register with.
-    - Optional: chunkSize is  ... If 'chunkSize' is not provided, it defaults to 500. The 'chunksize' has to be less than and should be a factor of numberDevices.
-    - deviceName is the name pattern for the devices. All the devices are created with a name starting from the value given against deviceName (in this case, its 'belt') and appended with a number.
-2. Verify the return...
+    - Optional: If chunkSize is not provided, it defaults to 500. The 'chunksize' has to be less than and a factor of numberDevices.
+    - deviceName is the pattern for the deviceID for the created devices. Each deviceID instance is appended with a number ranging from 01 to numberDevices.
+2. Verify that your devices are registered.
+ 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
+ 3. Select the **Device Centric Analytics** board.
+ 4. Locate the **Devices I Care About** card.  
+The device names are displayed.
 
 ## Step 3 - Simulate device events
 {: #step3}
@@ -225,14 +228,14 @@ To send device events:
 
 1. Make an HTTP POST request to the following URL: `ROUTE_URL/rest/runtest`  
 For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/runtest`  
- - Use basic authentication with the API Key and Authentication Token that were created for your app.
+ - Use basic authentication with the API Key and Authentication Token that were created for your app. USe `apiKey` and `apiToken` that you located as part of step 3.
  - Set 'Content-Type' and 'Accept' to be 'application/json'  
  - Use the following JSON payload:   
 <pre><code>{  </br>
 "numberDevices":5,  </br>
 "numberEvents":10,  </br>
 "timeInterval":1000,  </br>
-"deviceType":"motorController",  </br>
+"deviceType":"iotp-for-conveyor",  </br>
 "deviceName":"belt"  </br>
 }</code></pre>
 Where:
@@ -240,7 +243,7 @@ Where:
     - numberEvents is the number of events that each simulated device sends.
     - timeInterval is the spacing of the events, in milliseconds.
     - deviceType is the device type that you created simulated devices for.
-    - deviceName is ...
+    - deviceName is the pattern for the deviceID for the created devices. Each deviceID instance is appended with a number ranging from 01 to numberDevices.
 8. Verify that your devices are sending data.
  1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
  3. Select the **Device Centric Analytics** board.
@@ -253,8 +256,8 @@ Where:
 ### Node-RED  
 To delete devices:  
 1. In the Node-RED flow editor, select the **Device Type and Instance** tab.
-7. To delete five devices, click the inject node labeled **Delete 5 devices**.
-8. Verify that your devices are deleted.
+2. To delete five devices, click the inject node labeled **Delete 5 devices**.
+3. Verify that your devices are deleted.
  1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
  3. Select the **Device Centric Analytics** board.
  4. Locate the **Devices I Care About** card.  
@@ -265,14 +268,14 @@ To delete devices:
 
 1. Make an HTTP POST request to the following URL: `ROUTE_URL/rest/deleteDevices`  
 For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevices`
- - Use basic authentication with the API Key and Authentication Token that were created for your app.
+ - Use basic authentication with the API Key and Authentication Token that were created for your app. USe `apiKey` and `apiToken` that you located as part of step 3.
  - Set 'Content-Type' and 'Accept' to be 'application/json'  
  - Use the following JSON payload:      
 <pre><code>{      
 "numberDevices":5,   
-"deviceType":"motorController"  
+"deviceType":"iotp-for-conveyor"  
 }</code></pre>
-8. Verify that your devices are deleted.
+2. Verify that your devices are deleted.
  1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
  3. Select the **Device Centric Analytics** board.
  4. Locate the **Devices I Care About** card.  
@@ -280,10 +283,11 @@ For example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDe
 
 
 ## What's next?
-{: @whats_next}
+{: @whats_next}  
+Jump to another topic that interests you:
 - [Guide 2: Using basic real-time rules and actions](getting-started-iot-rules.html)  
 Now that you have successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.
 - [Guide 3: Monitoring your device data](getting-started-iot-monitoring.html)  
 Now that you have connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices.
-- [Learn more about {{site.data.keyword.iot_short_notm}}](../../services/IoT/iotplatform_overview.html){:new_window}
-- [Learn more about {{site.data.keyword.iot_short_notm}} APIs](../../services/IoT/reference/api.html){:new_window}
+- [Learn more about {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
+- [Learn more about {{site.data.keyword.iot_short_notm}} APIs](/docs/services/IoT/reference/api.html){:new_window}
