@@ -78,15 +78,15 @@ In Git shell, use the following command:
   ```bash
 git clone https://github.ibm.com/wiotp-toolingdevx/lesson3a
   ```
-2. Create an API Key and authentication token combination for your app.  
+2. Create an API key and authentication token combination for your app.  
 You will need these when you configure the app to connect to your organization. For more information about registering devices, see [Connecting applications](/docs/services/IoT/platform_authorization.html).  
  1. Open the {{site.data.keyword.iot_short_notm}} dashboard.
  2. Select **Apps**.
  3. Click **Generate API Key**
- 4. Copy the API Key and authentication token values that are listed.
+ 4. Copy the API key and authentication token values that are listed.
  5. Select **Visualization Application** as the API role.  
 **Tip:** If you add more features to the application, you'll need to elevate it to a higher role.
- 6. Add a comment so that you can easily identify this API Key and authentication token combination.
+ 6. Add a comment so that you can easily identify this API key and authentication token combination.
  7. Click **Generate**.
 3. Configure your app to connect to {{site.data.keyword.Bluemix_notm}}.
 Navigate to the root of the `lesson3b` repository and create a `basicConfig.json` file that contains the following content:
@@ -97,7 +97,7 @@ Navigate to the root of the `lesson3b` repository and create a `basicConfig.json
   "apiToken": "your Authentication Token"
 }
   ```
-Replace the parameter values with the corresponding values for your {{site.data.keyword.Bluemix_notm}} organization: orgID, API Key, and authentication token that you just created.  
+Replace the parameter values with the corresponding values for your {{site.data.keyword.Bluemix_notm}} organization: orgID, API key, and authentication token that you just created.  
 Example:
 ```
  {   
