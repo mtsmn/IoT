@@ -14,7 +14,7 @@ lastupdated: "2017-06-06"
 {:tip: .tip}
 
 # Guide 3: Monitoring your device data
-Now that you have connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices and the real-time data they are sending.
+With one or more devices connected it is time to start monitoring device data in real time.
 {:shortdesc}
 
 ## Overview and goal
@@ -277,17 +277,6 @@ Give your application a unique name.
 ```
 cf push YOUR_APP_NAME
 ```
-**Note:**  Above steps will work when widget library is publicly available. You can run the application locally by following steps
- 3. Add application credentials under config folder with the following json
-``` javascript
-config/default.json
-{
-  "api-key" : "Your app key",
-  "auth-token" : "your auth-token"
-}
-```
- 4. Start the application  
- `npm run start`
 5. Open the widget library based web app.  
 From the {{site.data.keyword.Bluemix_notm}} apps dashboard click **Visit App URL** to open the web application.  
 Access and manage the application URL by clicking **Routes**.   
@@ -303,7 +292,8 @@ With the web console up and running you can now view your connected conveyor bel
 
 
 ## What's next?
-{: @whats_next}
+{: @whats_next}  
+Continue with the next guide, or jump to another topic that interests you:
 - Path A: Modify the monitoring app to suit your needs.  
 For technical details, see:
  - [https://github.ibm.com/wiotp-toolingdevx/lesson3a/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/lesson3a/blob/master/README.md){: new_window}

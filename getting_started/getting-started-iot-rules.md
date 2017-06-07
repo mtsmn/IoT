@@ -14,7 +14,7 @@ lastupdated: "2017-06-06"
 {:tip: .tip}
 
 # Guide 2: Using basic real-time rules and actions
-Perform the following tasks to configure a set of basic rules and actions that are based on the conveyor belt simulation.
+Configure a set of basic rules and actions for some real-time analytics of your conveyor belt IoT data.
 {:shortdesc}
 
 ## Overview and goal
@@ -92,7 +92,7 @@ When we create a rule we want to compare the numerical rpm value with a threshol
  6. Add a rule condition.
     6. Click the **New condition** tile to add a condition for the rule.
     7. Select the **rpm** property.
-    8. Select the greater than or equal operator (`<`).
+    8. Select the lesser than operator (`<`).
     9. Enter `0.5` for value and click **OK**.
     10. Click **Save**, then click **Close**.
  11. Click **Close**.  
@@ -146,7 +146,8 @@ The message body might look something like this:
 > This is an automatically generated email. Do not reply. For questions regarding this alert, contact your system administrator.
 
 ## Whats next
-{: #whats_next}
+{: #whats_next}  
+Continue with the next guide, or jump to another topic that interests you:
 - [Guide 3: Monitoring your device data](getting-started-iot-monitoring.html)  
 Now that you have connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices and the real-time data they are sending.
 - [Guide 4: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  

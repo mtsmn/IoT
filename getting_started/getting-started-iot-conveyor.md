@@ -302,7 +302,7 @@ To create a dashboard card to see live conveyor belt data:
 2. For Card source data, click **Cards**.   
 A list of card names is displayed.
 3. Select **Devices I Care About**, then click **Next**.
-4. Click **Connect new data set**, and enter the following values:
+4. Click **Connect new data set**, and enter the following values for the data set parameters:
   - Event: sensorData
   - Property: d.rpm
   - Name: Belt RPM
@@ -328,7 +328,8 @@ If you use your phone to connect to the sample app you can shake the phone to se
 For more information about creating boards and cards, see [Visualizing real-time data by using boards and cards](/docs/services/IoT/data_visualization.html#boards_and_cards).
 
 ## What's next
-{: @whats_next}
+{: @whats_next}  
+Continue with the next guide, or jump to another topic that interests you:
 - Path A: Modify the conveyor belt app to suit your needs.  
 For technical details, see:
  - [https://github.ibm.com/wiotp-toolingdevx/lesson1a/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/lesson1a/blob/master/README.md){: new_window}
