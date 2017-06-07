@@ -8,14 +8,6 @@ Internet of Things Platform
     getting-started.md
 
     {: .topicgroup}
-    Getting started guides
-        getting_started/getting-started-iot-overview.md
-        getting_started/getting-started-iot-conveyor.md
-        getting_started/getting-started-iot-rules.md
-        getting_started/getting-started-iot-monitoring.md
-        getting_started/getting-started-iot-large-scale-simulation.md
-
-    {: .topicgroup}
     About
         iotplatform_overview.md
         feature_overview.md
@@ -42,11 +34,11 @@ Internet of Things Platform
     {: .topicgroup}
     Sample apps
         [OpenFridge](https://github.com/IBM/openfridge)
-        [Simulated conveyor belt](https://github.ibm.com/wiotp-toolingdevx/lesson1a)
-        [Raspberry PI based conveyor belt](https://github.ibm.com/wiotp-toolingdevx/lesson1b)
-        [Node.js based device monitoring](https://github.ibm.com/wiotp-toolingdevx/lesson3a)
-        [Widget library based device monitoring](https://github.ibm.com/wiotp-toolingdevx/lesson3b)
-        [Multiple-device simulator](https://github.ibm.com/wiotp-toolingdevx/lesson4)
+        [Simulated conveyor belt](https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator)
+        [Raspberry PI based conveyor belt](https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi)
+        [Node.js based device monitoring](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-angular)
+        [Widget library based device monitoring](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-html)
+        [Multiple-device simulator](https://github.com/ibm-watson-iot/iot-guide-conveyor-multi-simulator)
 
     {: .topicgroup}
     Watson IoT Platform security
