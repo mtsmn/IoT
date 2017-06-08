@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-07"
+lastupdated: "2017-06-08"
 
 ---
 
@@ -73,10 +73,10 @@ Example: `cf api https://api.ng.bluemix.net`
 <td>United Kingdom</td>
 <td>https://api.eu-gb.bluemix.net</td>
 </tr>
-<tr>
-<td>Germany</td>
-<td>https://api.eu-de.bluemix.net</td>
-</tr>
+ <!--<tr>
+ <td>Germany</td>
+ <td>https://api.eu-de.bluemix.net</td>
+ </tr>-->
 </table>
 2. Log into your {{site.data.keyword.Bluemix_notm}} account.
   ```
@@ -200,9 +200,9 @@ For more information about registering devices, see [Connecting devices](/docs/s
  1. In the {{site.data.keyword.Bluemix_notm}} console, click **Launch** on the {{site.data.keyword.iot_short_notm}} service details page.
      The {{site.data.keyword.iot_short_notm}} web console opens in a new browser tab at the following URL:
      ```
-     https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+     https://ORG_ID.internetofthings.ibmcloud.com/dashboard/#/overview
      ```
-     Where *org_id* is the ID of [your {{site.data.keyword.iot_short_notm}} organization](/docs/services/IoT/iotplatform_overview.html#organizations){: new_window}.
+     Where ORG_ID is the ID of [your {{site.data.keyword.iot_short_notm}} organization](/docs/services/IoT/iotplatform_overview.html#organizations){: new_window}.
  2. In the Overview dashboard, from the menu pane, select **Devices** and then click **Add Device**.
  3. Create a device type for the device that you are adding.
      1. Click **Create device type**.

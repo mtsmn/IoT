@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-07"
+lastupdated: "2017-06-08"
 
 ---
 
@@ -109,10 +109,10 @@ Example: `cf api https://api.ng.bluemix.net`
 <td>United Kingdom</td>
 <td>https://api.eu-gb.bluemix.net</td>
 </tr>
-<tr>
-<td>Germany</td>
-<td>https://api.eu-de.bluemix.net</td>
-</tr>
+ <!--<tr>
+ <td>Germany</td>
+ <td>https://api.eu-de.bluemix.net</td>
+ </tr>-->
 </table>
 2. Log into your {{site.data.keyword.Bluemix_notm}} account.
   ```

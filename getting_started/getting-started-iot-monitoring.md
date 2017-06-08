@@ -132,10 +132,10 @@ Example: `cf api https://api.ng.bluemix.net`
 <td>United Kingdom</td>
 <td>https://api.eu-gb.bluemix.net</td>
 </tr>
-<tr>
+<!--<tr>
 <td>Germany</td>
 <td>https://api.eu-de.bluemix.net</td>
-</tr>
+</tr>-->
 </table>
 6. Change the directory to the directory in which the sample app is located.  
   ```
@@ -282,6 +282,41 @@ applications:  </br>
   services:  </br>
   \- YOUR_IOT_PLATFORM_NAME  </br>
 </pre></code>
+ 2. Log into your {{site.data.keyword.Bluemix_notm}} account by using the cloudfoundry CLI.  
+ For more information, see the [Cloud Foundry CLI documentation ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/){: new_window}  
+ From the command line, enter the following command:  
+   ```
+ cf login
+   ```
+ If prompted, select the organization and space where you want to deploy the monitoring sample app.
+ 5. If necessary, set your API endpoint by running the cf api command.   
+ Replace the `API-ENDPOINT` value with the API endpoint for your region.
+   ```
+ cf api API-ENDPOINT
+   ```
+ Example: `cf api https://api.ng.bluemix.net`
+ <table>
+ <tr>
+ <th>Region</th>
+ <th>API Endpoint</th>
+ </tr>
+ <tr>
+ <td>US South</td>
+ <td>https://api.ng.bluemix.net</td>
+ </tr>
+ <tr>
+ <td>United Kingdom</td>
+ <td>https://api.eu-gb.bluemix.net</td>
+ </tr>
+ <!--<tr>
+ <td>Germany</td>
+ <td>https://api.eu-de.bluemix.net</td>
+ </tr>-->
+ </table>
+ 6. Change the directory to the directory in which the sample app is located.  
+   ```
+ cd iot-guide-conveyor-ui-html
+   ```
  2. Run the cf push command to push the application into {{site.data.keyword.Bluemix_notm}}:  
 Give your application a unique name.
 ```
