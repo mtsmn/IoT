@@ -220,7 +220,7 @@ For more information about registering devices, see [Connecting devices](/docs/s
 2. Navigate to the *iot-guide-conveyor-rasp-pi* root of the cloned repository.
 3. Install dependencies and provide the device information.
 Run the *setup.sh* file and enter the details that you copied from the device infomration page when prompted.
-```bash
+```bash  
 ./setup.sh
 ```  
 Where:
