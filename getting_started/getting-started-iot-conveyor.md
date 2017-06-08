@@ -185,16 +185,11 @@ $ sudo apt-get install git
 ### Detailed steps
 
 1. Open the terminal or SSH to your Raspberry Pi.
-2. Use your favorit git tool to clone the following repository to your Raspberry Pi:  
+2. Use your favorite git tool to clone the following repository to your Raspberry Pi:  
 https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi
 In Git Shell, use the following command:
 ```bash
 $ git clone https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi
-```
-2. Navigate to the *iot-guide-conveyor-rasp-pi* root of the cloned repository.
-3. Install the dependencies.  
-```bash
-$ pip install ibmiotf
 ```
 4. Register the device with {{site.data.keyword.iot_short_notm}}.  
 For more information about registering devices, see [Connecting devices](/docs/services/IoT/iotplatform_task.html#iotplatform_subtask1).
@@ -222,15 +217,17 @@ For more information about registering devices, see [Connecting devices](/docs/s
      * Authentication Method
      * Authentication Token
      You'll need the values for the Organization ID, Device Type, Device ID, and Authentication Token to configure your device to connect to {{site.data.keyword.iot_short_notm}}.
-4. Update the `device-lesson1/device.conf` file with the device credentials.
-```
-[device]
-org = YOUR_ORGANIZATION_ID
-type =  YOUR_DEVICE_TYPE
-id =  YOUR_DEVICE_ID  
-auth-method = token
-auth-token =  YOUR_AUTHENTICATION_TOKEN
-```
+2. Navigate to the *iot-guide-conveyor-rasp-pi* root of the cloned repository.
+3. Install dependencies and provide the device information.
+Run the *setup.sh* file and enter the details that you copied from the device infomration page when prompted.
+```bash
+./setup.sh
+```  
+Where:
+ - org ID = Organization ID
+ - device type =  Device Type
+ - device id =  Device ID  
+ - device token =  Authentication Token
 5. Run the deviceClient program.  
 When you run the program, your Raspberry Pi starts the motor, runs it for one minute and then stops it.  
 ```bash
