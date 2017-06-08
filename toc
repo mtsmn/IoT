@@ -68,6 +68,14 @@ Internet of Things Platform
     index.md
 
     {: .topicgroup}
+    Getting started guides
+        getting_started/getting-started-iot-overview.md
+        getting_started/getting-started-iot-conveyor.md
+        getting_started/getting-started-iot-rules.md
+        getting_started/getting-started-iot-monitoring.md
+        getting_started/getting-started-iot-large-scale-simulation.md
+
+    {: .topicgroup}
     Connecting to Watson IoT Platform
         iotplatform_task.md
         gateways/dashboard.md
@@ -119,14 +127,6 @@ Internet of Things Platform
         nodereddevice_sample.md
         visualizingdata_sample.md
         getting_started/quickstart/index.md
-
-    {: .topicgroup}
-    Getting started guides
-        getting_started/getting-started-iot-overview.md
-        getting_started/getting-started-iot-conveyor.md
-        getting_started/getting-started-iot-rules.md
-        getting_started/getting-started-iot-monitoring.md
-        getting_started/getting-started-iot-large-scale-simulation.md
 
     {: .topicgroup}
     Developing for Watson IoT Platform

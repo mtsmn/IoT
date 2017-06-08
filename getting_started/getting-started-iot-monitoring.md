@@ -193,7 +193,7 @@ Each widget uses the following JavaScript parameters:
 <li>property - The device message payload property to display.
 <li>ADDITIONAL_WIDGET_SETTINGS -  One or more additional parameters for the widget, see examples.
 </ul>
-For details on each widget type, see the examples that follow and the documentation in the [IoT Widgets GitHub repository ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/iot-widgets){: new_page}.
+For details on each widget type, see the examples that follow and the documentation in the [IoT Widgets GitHub repository ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-widgets){: new_page}.
  1. Add an RPM gauge.  
 This gauge displays the conveyor belt rpm as a gauge that has a minimum of 0 and a maximum of 5 rpm.
     1. Open the following template for editing: `public/index.html`  
@@ -296,11 +296,11 @@ Now that the web console is up and running, you can view your connected conveyor
 Continue with the next guide or jump to another topic that interests you:
 - Path A: Modify the monitoring app to suit your needs.  
 For technical details, see:
- - [https://github.ibm.com/wiotp-toolingdevx/lesson3a/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/lesson3a/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-angular/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-angular/blob/master/README.md){: new_window}
  - [Node.js clienmt libraries ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - Path B: Modify the widget library app to suit your needs.  
 For technical details, see:
- - [https://github.ibm.com/wiotp-toolingdevx/lesson3b/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/lesson3b/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-html/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-html/blob/master/README.md){: new_window}
 - [Guide 4: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
 Expand on the basic simulation by adding large numbers of self-running simulators to your environment. This expansion will let you test drive the basic analytics and monitoring from the previous guides in a more realistic, multi-device environment.
 - [Learn more about {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
