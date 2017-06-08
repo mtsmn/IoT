@@ -46,7 +46,8 @@ You will need the following accounts and tools:
 * [{{site.data.keyword.Bluemix_notm}} account ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/registration/){: new_window}
 * [Cloud Foundry Command Line Interface (cf CLI) ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
 Use the cf CLI to deploy apps and services to {{site.data.keyword.Bluemix_notm}}. For more information, see the [Cloud Foundry CLI documentation![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/){: new_window}
-* [Git ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
+* Optional: [Git ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}  
+If you choose to use Git to download the code samples you must also have a [GitHub.com account ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com){: new_window}. You can also download the code as a compressed file without a GitHub.com account.
 * Optional: A mobile phone on which to run the *Conveyor belt* sample web application to send accelerometer data.
 
 ## Step 1 - Deploy {{site.data.keyword.iot_short_notm}}  
