@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-07"
+lastupdated: "2017-06-08"
 
 ---
 
@@ -62,7 +62,7 @@ The Plant Floor Monitoring sample app lists all iot-conveyor-belt type devices t
 
 The sample app is built using the Node.js client libraries at: [https://github.com/ibm-watson-iot/iot-nodejs ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 
-![Monitor app](images/app_monitor.png "Monitor app")
+![Node.js based monitoring app](images/app_monitor.png "Node.js based monitoring app")
 
 As part of this step, you will:
 - Deploy a GitHub-sourced sample monitoring web application by using Cloud Foundry.
@@ -165,8 +165,18 @@ The default URL is similar to:
 `https://iotmonitoringcontrol-RANDOM-STRING-ENG.mybluemix.net`
 
 ## Step 1B - Create a monitoring user interface by using the widget library
-
 {: #widget-library}
+
+The widget library based sample app includes a motor speed gauge, an accelerometer data gauge, and a motor speed diagram that displays the data for a single iot-conveyor-belt type devices that is connected to your {{site.data.keyword.iot_short_notm}} organization. You can use the sample code to build a full front end application for your {{site.data.keyword.iot_short_notm}} connected devices.
+
+![Widget library based monitoring app](images/app_monitor_b.png "Widget library based monitoring app")
+
+As part of this step, you will:
+- Deploy a GitHub-sourced sample web application by using Cloud Foundry.
+- Configure the sample app to connect to {{site.data.keyword.iot_short_notm}} by using an API key and authentication token.
+- Configure three user interface widgets to display device data as gauges and graphs.
+- Use the web application to monitor your connected conveyor belt device.  
+
 ### Detailed steps
 The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the README file in GitHub.
 1. Clone the *Widget Library Monitoring* sample app GitHub repository.  
@@ -188,7 +198,7 @@ Each widget uses the following JavaScript parameters:
 <ul>
 <li>name - The name of the widget, which appears in the application.
 <li>event name - The device event name that includes the property to display.
-<li>orgID - The ID of your {{site.data.keyword.iot_short_notm}} organization.
+<li>orgID - The ID of [your {{site.data.keyword.iot_short_notm}} organization](/docs/services/IoT/iotplatform_overview.html#organizations){: new_window}.
 <li>deviceID - The ID of the device that supplies the data to display.
 <li>property - The device message payload property to display.
 <li>ADDITIONAL_WIDGET_SETTINGS -  One or more additional parameters for the widget, see examples.
