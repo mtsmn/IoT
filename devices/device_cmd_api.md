@@ -1,8 +1,8 @@
---
+---
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-05-23"
+lastupdated: "2017-06-08"
 
 ---
 
@@ -86,7 +86,7 @@ Use one of the following URLs to submit a ``POST`` request from a device that is
 
 To receive a command from {{site.data.keyword.iot_short_notm}}, use the following API:
 
-<pre class="pre"><code class="hljs">/device/types/{deviceType}/devices/{deviceId}/commands/{command}/request</var></code></pre>
+<pre class="pre"><code class="hljs">/device/types/{deviceType}/devices/{deviceId}/commands/{command}/request</code></pre>
 
 You can optionally include the parameter *waitTimeSecs* in the body of the HTTP request to specify an integer that represents the maximum number of seconds to wait for a command:
 <pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>
