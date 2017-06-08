@@ -109,9 +109,9 @@ git clone https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator
   ```
 2. On the command line, change the directory to the directory in which the sample app is located.
   ```bash
-cd lesson1a
+cd iot-guide-conveyor-simulator
   ```
-3. From the *ot-guide-conveyor-simulator* directory, push your app to {{site.data.keyword.Bluemix_notm}} and give it a new name by replacing *YOUR_APP_NAME* in the cf push command. Use the `--no-start` option because you will start the app in the next stage after it is bound to {{site.data.keyword.iot_short_notm}}.  
+3. From the *iot-guide-conveyor-simulator* directory, push your app to {{site.data.keyword.Bluemix_notm}} and give it a new name by replacing *YOUR_APP_NAME* in the cf push command. Use the `--no-start` option because you will start the app in the next stage after it is bound to {{site.data.keyword.iot_short_notm}}.  
 **Note:** Deploying your application can take a few minutes.
    ```bash
 cf push YOUR_APP_NAME --no-start
@@ -153,7 +153,6 @@ Troubleshoot errors in the deployment process by using the `cf logs YOUR_APP_NAM
 Open the following URL: `https://YOUR_APP_NAME.mybluemix.net`    
 Example: `https://conveyorbelt.mybluemix.net/`.
 2. Enter a device ID and token for your device.  
-The default values are `belt1` and `test123pass`.
 The sample app automatically registers a device of type `iot-conveyor-belt` with the device ID and token that you provided. For more information about registering devices, see [Connecting devices](/docs/services/IoT/iotplatform_task.html#iotplatform_subtask1).
 4. Continue with [Step 3 - See raw data in {{site.data.keyword.iot_short_notm}}](#see_live_data).
 
