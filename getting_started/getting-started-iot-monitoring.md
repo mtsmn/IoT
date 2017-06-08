@@ -36,7 +36,9 @@ Before you begin, make sure that the following requirements are fulfilled.
 - [Node.js ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://nodejs.org){: new_window} version 6.x or higher.
 - Path A: [Angular CLI ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/angular/angular-cli){: new_window} version 1.x or higher.  
 - [Cloud Foundry CLI ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
-Use the cf CLI to deploy apps and services to {{site.data.keyword.Bluemix_notm}}. For more information, see the [Cloud Foundry CLI documentation![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/){: new_window}
+Use the cf CLI to deploy apps and services to {{site.data.keyword.Bluemix_notm}}. For more information, see the [Cloud Foundry CLI documentation![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/){: new_window}  
+- Optional: [Git ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}  
+If you choose to use Git to download the code samples you must also have a [GitHub.com account ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com){: new_window}. You can also download the code as a compressed file without a GitHub.com account.
 
 ### Other requirements
 You must also have a connected device of device type `iot-conveyor-belt` that sends events with event name `sensorData` and with a message payload that includes the following properties:

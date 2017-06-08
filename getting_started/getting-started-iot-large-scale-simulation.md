@@ -47,7 +47,8 @@ You will need the following accounts and tools:
  - One to two services available   
 * [Cloud Foundry Command Line Interface (cf CLI) ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
 Use the cf CLI to deploy and manage your {{site.data.keyword.Bluemix_notm}} applications.
-* [Git ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
+* Optional: [Git ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}  
+If you choose to use Git to download the code samples you must also have a [GitHub.com account ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com){: new_window}. You can also download the code as a compressed file without a GitHub.com account.
 
 For any of the ReST calls in the steps that follow, you can either use cURL or the ReST client add-on plugin that is available in Mozilla.  
 {: tip}

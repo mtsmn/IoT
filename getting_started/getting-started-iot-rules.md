@@ -30,15 +30,7 @@ As part of this guide, you will:
 
 ## Prerequisites
 {: #prereqs}  
-Complete [Guide 1: Connecting a conveyor belt device](getting-started-iot-conveyor.html).
-
-or...
-
-Have one or more devices connected that meet the following requirements:
-- Device type: iot-conveyor-belt
-- Device messaging:
- - Event name: sensorData
- - Message payload that is similar to the following message:  
+You must have a connected device of device type `iot-conveyor-belt` that sends events with event name `sensorData` and with a message payload that includes the following properties:
 ```
 {
 	"d": {
@@ -50,7 +42,9 @@ Have one or more devices connected that meet the following requirements:
 		}
 }
 ```
-{: pre}
+For more information about device events and messaging format, see [Publishing events](/docs/services/IoT/devices/mqtt.html#publishing_events).  
+If you completed [Guide 1: Getting started with {{site.data.keyword.iot_short_notm}} and a simulated conveyor belt](getting-started-iot-conveyor.html), you are all set.  
+{: tip}
 
 ## Step 1 - Create a message schema for the sample app
 {: #create_schema}
