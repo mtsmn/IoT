@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-08"
+lastupdated: "2017-06-09"
 
 ---
 
@@ -229,7 +229,7 @@ Where:
  - device id =  Device ID  
  - device token =  Authentication Token
 5. Run the deviceClient program.  
-When you run the program, your Raspberry Pi starts the motor, runs it for one minute and then stops it.  
+When you run the program, your Raspberry Pi starts the motor. To stop the motor, kill the deviceClient Python process using Ctrl-C.  
 ```bash
 python deviceClient.py
 ```  
