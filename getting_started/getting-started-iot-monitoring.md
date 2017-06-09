@@ -196,16 +196,16 @@ npm install
 3. Construct the user interface.  
 To build the application user interface, you must add the widgets as JavaScript code in the application index.html file for each user interface component.  
 Each widget uses the following JavaScript parameters:  
-`WIoTPWidget.CreateWIDGET_TYPE("WIDGET_NAME","EVENT_NAME", "YOUR_IOT_PLATFORM_NAME", "DEVICE_ID", "PROPERTY" , ADDITIONAL_WIDGET_SETTINGS)`
+`WIoTPWidget.CreateWIDGET_TYPE("ELEMENT_ID","EVENT_NAME", "DEVICE_TYPE", "DEVICE_ID", "PROPERTY" , {WIDGET_DEFAULT_OVERRIDE}, [WIDGET_SPECIFIC_SETTINGS])`
 <ul>
-<li>WIDGET_TYPE
-<li>WIDGET_NAME - The name of the widget, as it will appear in the application.
-<li>EVENT_NAME - The device event name that includes the property to display.
-<li>YOUR_IOT_PLATFORM_NAME - The name that you gave your {{site.data.keyword.iot_short_notm}} service.  
-Example: `iotp-for-conveyor`
-<li>DEVICE_ID - The ID of the device that supplies the data to display.
-<li>PROPERTY - The device message payload property to display.
-<li>ADDITIONAL_WIDGET_SETTINGS -  One or more additional parameters for the widget, see examples.
+<li>WIDGET_TYPE - The type of widget to create. Example: `Gauge` or `Chart`
+<li>ELEMENT_ID - The element ID of the widget, as it will appear in the application. Example: `RPM`
+<li>EVENT_NAME - The device event name that includes the property to display. Example: `sensorData`
+<li>DEVICE_TYPE - The device type. Example: `iot-conveyor-belt`
+<li>DEVICE_ID - The ID of the device that supplies the data to display. Example: `belt1`
+<li>PROPERTY - The device message payload property to display. Example: `rpm`
+<li>WIDGET_DEFAULT_OVERRIDE - Widget configuration settings to override the default settings.
+<li>WIDGET_SPECIFIC_SETTINGS -  One or more additional parameters for the widget, see examples.
 </ul>
 For details on each widget type, see the examples that follow and the documentation in the [IoT Widgets GitHub repository ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-widgets){: new_page}.
  1. Add an RPM gauge.  
@@ -220,7 +220,7 @@ This gauge displays the conveyor belt rpm as a gauge that has a minimum of 0 and
     4. Add the rpm JavaScript code.  
 Example:  
  ```javascript
- WIoTPWidget.CreateGauge("rpmgauge","sensorData", "iotp-for-conveyor", "belt1", "rpm" ,{
+ WIoTPWidget.CreateGauge("rpmgauge","sensorData", "iot-conveyor-belt", "belt1", "rpm" ,{
             label: {
                 format: function(value, ratio) {
                     return value;
@@ -243,7 +243,7 @@ This gauge displays the accelerometer reading as a gauge that has readings betwe
     4. Add the accelerometer JavaScript code.  
 Example:   
  ```javascript
- WIoTPWidget.CreateGauge("aygauge","sensorData", "iotp-for-conveyor", "belt1", "ay" ,{
+ WIoTPWidget.CreateGauge("aygauge","sensorData", "iot-conveyor-belt", "belt1", "ay" ,{
       label: {
           format: function(value, ratio) {
               return value;
@@ -266,7 +266,7 @@ This chart displays the motor speed as a line diagram.
     4. Add the speedchart JavaScript code.  
 Example:  
  ```javascript
- WIoTPWidget.CreateGauge("speedchart ","sensorData", "iotp-for-conveyor", "belt1",
+ WIoTPWidget.CreateChart("speedchart ","sensorData", "iot-conveyor-belt", "belt1",
  ["rpm", "ay"], [["line","rpm"],["line","ay"]],['#2ca02c','#d62728']);
  ```
 4. Deploy the application to {{site.data.keyword.Bluemix_notm}}  
