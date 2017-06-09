@@ -18,7 +18,7 @@ Certificates are used for device authentication or to replace the default {{site
 
 To configure certificates and server access for devices, the system operator registers the associated certificate authority (CA) certiﬁcates and optionally registers message server certificates into the {{site.data.keyword.iot_short_notm}} platform.
 
-For information about using APIs to manage CA certificates and messaging server certificates, see [IBM Watson IoT Platform Authentication and Authorization APIs ![External link icon](../../../../icons/launch-glyph.svg)"External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
+For information about using APIs to manage CA certificates and messaging server certificates, see [IBM Watson IoT Platform Authentication and Authorization APIs ![External link icon](../../../../icons/launch-glyph.svg) "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
 
 ## CA certificates
 CA certificates enable the organization to recognize the client certificates on devices as trusted so that devices can connect to the server.
