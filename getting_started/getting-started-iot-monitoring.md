@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-08"
+lastupdated: "2017-06-09"
 
 ---
 
@@ -196,8 +196,9 @@ npm install
 3. Construct the user interface.  
 To build the application user interface, you must add the widgets as JavaScript code in the application index.html file for each user interface component.  
 Each widget uses the following JavaScript parameters:  
-`WIoTPWidget.CreateGauge("WIDGET_NAME","EVENT_NAME", "YOUR_IOT_PLATFORM_NAME", "DEVICE_ID", "PROPERTY" , ADDITIONAL_WIDGET_SETTINGS)`
+`WIoTPWidget.CreateWIDGET_TYPE("WIDGET_NAME","EVENT_NAME", "YOUR_IOT_PLATFORM_NAME", "DEVICE_ID", "PROPERTY" , ADDITIONAL_WIDGET_SETTINGS)`
 <ul>
+<li>WIDGET_TYPE
 <li>WIDGET_NAME - The name of the widget, as it will appear in the application.
 <li>EVENT_NAME - The device event name that includes the property to display.
 <li>YOUR_IOT_PLATFORM_NAME - The name that you gave your {{site.data.keyword.iot_short_notm}} service.  
