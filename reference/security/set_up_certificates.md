@@ -18,7 +18,7 @@ Certificates are used for device authentication or to replace the default {{site
 
 To configure certificates and server access for devices, the system operator registers the associated certificate authority (CA) certiﬁcates and optionally registers message server certificates into the {{site.data.keyword.iot_short_notm}} platform.
 
-For information about using APIs to manage CA certificates and messaging server certificates, see [IBM Watson IoT Platform Authentication and Authorization APIs ![External link icon](../../../../icons/launch-glyph.svg) "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
+For information about using APIs to manage CA certificates and messaging server certificates, see [IBM Watson IoT Platform Authentication and Authorization APIs ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
 
 ## CA certificates
 CA certificates enable the organization to recognize the client certificates on devices as trusted so that devices can connect to the server.
@@ -39,7 +39,7 @@ For gateways, the **CN** field format is `CN=g:typeId:deviceId`, and the **Subje
 
 Note: Do not include the `orgId` in the **CN** or **SubjectAltName** fields for device or gateway certificates. The `orgId` should be provided as part of the SNI information that is provided by the client implementation when connecting to the messaging server.
 
-For more information about client certificates, see [the Connect Raspberry Pi to IBM Watson IoT Platform using Client side Certificates recipe ![External link icon](../../../../icons/launch-glyph.svg) "External link icon")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
+For more information about client certificates, see [the Connect Raspberry Pi to IBM Watson IoT Platform using Client side Certificates recipe ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
 
 ## Messaging server certificates
 
@@ -51,7 +51,7 @@ The following example shows a valid CN for the server certificate:
 
 `mtxpd0.messaging.internetofthings.ibmcloud.com`
 
-For more information about messaging server certificates, see [the Connect Raspberry Pi to IBM Watson IoT Platform using Self-Signed Server Certificate recipe ![External link icon](../../../../icons/launch-glyph.svg) "External link icon")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
+For more information about messaging server certificates, see [the Connect Raspberry Pi to IBM Watson IoT Platform using Self-Signed Server Certificate recipe ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
 
 ### Custom domains (Beta)
 {: #custom_domains}
