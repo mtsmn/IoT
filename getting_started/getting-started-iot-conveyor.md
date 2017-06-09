@@ -198,7 +198,7 @@ For more information about registering devices, see [Connecting devices](/docs/s
      ```
      https://ORG_ID.internetofthings.ibmcloud.com/dashboard/#/overview
      ```
-     Where ORG_ID is the ID of [your {{site.data.keyword.iot_short_notm}} organization](/docs/services/IoT/iotplatform_overview.html#organizations){: new_window}.
+     Where ORG_ID is the unique six character ID of [your {{site.data.keyword.iot_short_notm}} organization](/docs/services/IoT/iotplatform_overview.html#organizations){: new_window}.
  2. In the Overview dashboard, from the menu pane, select **Devices** and then click **Add Device**.
  3. Create a device type for the device that you are adding.
      1. Click **Create device type**.
@@ -219,7 +219,7 @@ For more information about registering devices, see [Connecting devices](/docs/s
      You'll need the values for the Organization ID, Device Type, Device ID, and Authentication Token to configure your device to connect to {{site.data.keyword.iot_short_notm}}.
 2. Navigate to the *iot-guide-conveyor-rasp-pi* root of the cloned repository.
 3. Install dependencies and provide the device information.
-Run the *setup.sh* file and enter the details that you copied from the device infomration page when prompted.
+Run the *setup.sh* file and enter the details that you copied from the device information page when prompted.
 ```bash  
 ./setup.sh
 ```  
@@ -229,7 +229,8 @@ Where:
  - device id =  Device ID  
  - device token =  Authentication Token
 5. Run the deviceClient program.  
-When you run the program, your Raspberry Pi starts the motor. To stop the motor, kill the deviceClient Python process using Ctrl-C.  
+When you run the program, your Raspberry Pi starts the motor for up to 5 minutes.   
+**Tip:** To stop the motor before the scheduled stop time, kill the deviceClient Python process using Ctrl-C.  
 ```bash
 python deviceClient.py
 ```  
