@@ -330,11 +330,11 @@ For more information about creating boards and cards, see [Visualizing real-time
 Continue with the next guide or jump to another topic that interests you:
 - Path A: Modify the conveyor belt app to suit your needs.  
 For technical details, see:
- - [https://github.ibm.com/wiotp-toolingdevx/lesson1a/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/lesson1a/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator/blob/master/README.md){: new_window}
  - [Node.js clienmt libraries ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - Path B: Modify the Raspberry Pi setup to suit your needs.  
 For technical details, see:
- - [https://github.ibm.com/wiotp-toolingdevx/lesson1b/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.ibm.com/wiotp-toolingdevx/lesson1b/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi/blob/master/README.md){: new_window}
 - [Guide 2: Using basic real-time rules and actions](getting-started-iot-rules.html)  
 Now that you successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.
 - [Guide 3: Monitoring your device data](getting-started-iot-monitoring.html)  

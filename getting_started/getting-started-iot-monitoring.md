@@ -196,13 +196,14 @@ npm install
 3. Construct the user interface.  
 To build the application user interface, you must add the widgets as JavaScript code in the application index.html file for each user interface component.  
 Each widget uses the following JavaScript parameters:  
-`WIoTPWidget.CreateGauge("name","event name", "orgID", "deviceID", "property" , ADDITIONAL_WIDGET_SETTINGS)`
+`WIoTPWidget.CreateGauge("WIDGET_NAME","EVENT_NAME", "YOUR_IOT_PLATFORM_NAME", "DEVICE_ID", "PROPERTY" , ADDITIONAL_WIDGET_SETTINGS)`
 <ul>
-<li>name - The name of the widget, which appears in the application.
-<li>event name - The device event name that includes the property to display.
-<li>orgID - The ID of [your {{site.data.keyword.iot_short_notm}} organization](/docs/services/IoT/iotplatform_overview.html#organizations){: new_window}.
-<li>deviceID - The ID of the device that supplies the data to display.
-<li>property - The device message payload property to display.
+<li>WIDGET_NAME - The name of the widget, as it will appear in the application.
+<li>EVENT_NAME - The device event name that includes the property to display.
+<li>YOUR_IOT_PLATFORM_NAME - The name that you gave your {{site.data.keyword.iot_short_notm}} service.  
+Example: `iotp-for-conveyor`
+<li>DEVICE_ID - The ID of the device that supplies the data to display.
+<li>PROPERTY - The device message payload property to display.
 <li>ADDITIONAL_WIDGET_SETTINGS -  One or more additional parameters for the widget, see examples.
 </ul>
 For details on each widget type, see the examples that follow and the documentation in the [IoT Widgets GitHub repository ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-widgets){: new_page}.
@@ -344,7 +345,7 @@ Continue with the next guide or jump to another topic that interests you:
 - Path A: Modify the monitoring app to suit your needs.  
 For technical details, see:
  - [https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-angular/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-angular/blob/master/README.md){: new_window}
- - [Node.js clienmt libraries ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
+ - [Node.js client libraries ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - Path B: Modify the widget library app to suit your needs.  
 For technical details, see:
  - [https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-html/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-html/blob/master/README.md){: new_window}
