@@ -60,7 +60,7 @@ For more information about messaging server certificates, see [the Connect Raspb
 
 As part of the Beta feature, messaging server certificates accept custom domains. The following format must be followed for the certificate CN or SubjectAltName:
 
-- `orgId.messaging<custom domain>`
+- `orgId.messaging.<custom domain>`
 
 The **CN** field accepts wildcard characters for custom domains, as shown in the following example:
 
