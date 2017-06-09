@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-06-09"
 ---
 
 {:new_window: target="\_blank"}
@@ -64,7 +64,7 @@ As part of the Beta feature, messaging server certificates accept custom domains
 
 The **CN** field accepts wildcard characters for custom domains, as shown in the following example:
 
-- `CN=*.messaging.fab-iot.com`
+- `CN=*.messaging.mywiotpcustomdomain.com`
 
 **Important**: For custom domains, an external DNS service is required to resolve the custom domain to the {{site.data.keyword.iot_full}} messaging server. This DNS service is not provided by the platform.
 
