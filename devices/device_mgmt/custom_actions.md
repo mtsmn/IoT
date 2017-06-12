@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-27"
+lastupdated: "2017-03-14"
 
 ---
 
@@ -75,7 +75,7 @@ To add a custom device management package by using the {{site.data.keyword.iot_s
 3. Click the **Add Package** button.
 4. Select your package file and click **Open**.
 
-To add a custom device management package by using the API, see the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window}.
+To add a custom device management package by using the API, see the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Extension package properties
 
@@ -128,7 +128,7 @@ Use the following {{site.data.keyword.iot_short_notm}} REST API commands to mana
 - To delete a device management extension package:
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-For more information about the REST APIs for device management extension packages, see the [{{site.data.keyword.iot_short_notm}} API V2 ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Extensions){: new_window} documentation.
+For more information about the REST APIs for device management extension packages, see the [{{site.data.keyword.iot_short_notm}} API V2 ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} documentation.
 
 
 ## Supporting custom device management actions

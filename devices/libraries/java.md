@@ -394,7 +394,7 @@ public class RegisteredDeviceCommandSubscribe {
             e.printStackTrace();
         }
 
-        //Pass the implemented CommandCallback as an argument to this device client
+        //Pass the above implemented CommandCallback as an argument to this device client
         myClient.setCommandCallback(new MyNewCommandCallback());
 
         //Connect to the {{site.data.keyword.iot_short_notm}}

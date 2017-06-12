@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-12"
+lastupdated: "2017-03-14"
 
 ---
 
@@ -44,14 +44,6 @@ The constructor builds the device client instance. It accepts a configuration JS
 |`id`  |The ID of your device. Typically, for a given device type, the deviceId is a unique identifier of that device, for example a serial number or MAC address.|
 |`auth-method`   |The method of authentication to be used. The only value that is currently supported is `token`.|
 |`auth-token`   |An authentication token to securely connect your device to Watson IoT Platform. This field is required if `auth-method` is `token`.|
-|`domain`	|(Optional)The messaging endpoint URL. By default, the value is "internetofthings.ibmcloud.com"(Watson IoT Production server).|
-|`enforce-ws`	|(Optional)Enforce Websocket when using the library in Node.js.|
-|`use-client-certs`|(Optional) Enforces use of client side certificates when specified as true.|
-|`server-ca`	|(Optional) Path to self-signed CA used to sign Server Certificate.|
-|`client-ca`	|(Mandatory when use-client-certs:true) Specifies the path to device-client CA certificate.|
-|`client-cert`	|(Mandatory when use-client-certs:true) Specifies the path to device-client certificate.|
-|`client-key`	|(Mandatory when use-client-certs:true) Specifies the path to device-client key.|
-|`client-key-passphrase`	|(Optional) Specifies the passphrase for the device-client key if exists.|
 
 **Note:** If you would like to use the Quickstart service, then you need to submit only the first three properties.
 
@@ -69,28 +61,6 @@ The constructor builds the device client instance. It accepts a configuration JS
     var deviceClient = new iotf.IotfDevice(config);
 ```
 
-If you want to use registered mode with Client Side Certificates, you need to have use-client-certs defined to true and client-ca, client-cert and client-key referring to appropriate paths as shown below:
-
-```
-var Client = require("ibmiotf");
-var config = {
-    "org" : "organization",
-    "id" : "deviceId",
-    "domain": "internetofthings.ibmcloud.com",
-    "type" : "deviceType",
-    "auth-method" : "token",
-    "auth-token" : "authToken",
-    "use-client-certs": [true / false],
-    "server-ca": "path to CA used to sign server certificate", # Optional, if there is CA signed server cert, then can be used
-    "client-ca": "path to device-client ca certificate",
-    "client-cert": "path to device-client certificate",
-    "client-key": "path to device-client key"
-};
-
-var deviceClient = new Client.IotfDevice(config);
-
-....
-```
 ### Using a configuration file
 
 Instead of passing the configuration directly, you can use a JSON configuration file to provide the required configuration properties, as shown in the following example:
@@ -288,12 +258,3 @@ The following sample shows how you can disconnect the client and release the con
 
 	....
 ```
-
-## Related Recipes
-{: #related_recipes}
-
-Here are the links to recipes that use Node.js client library to connect to Watson IoT Platform securely using Client Side Certificates based authentication and Self-Signed Server Certificate:
-
-1. [Connect Raspberry Pi to IBM Watson IoT Platform using Client side Certificates](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/)
-
-2. [Connect Raspberry Pi to IBM Watson IoT Platform using Self-Signed Server Certificate](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/)

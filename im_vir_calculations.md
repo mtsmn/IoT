@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-14"
+lastupdated: "2016-12-12"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-02-14"
 Extend the basic virtual property calculations with premade edge analytics formulas.
 {:shortdesc}
 
-**Important:** The advanced calculations return property datapoints only if the data for the selected property comes from a device that is connected to a gateway that has an Edge Analytics Agent installed. An edge rule can use this virtual property directly. To use the property with a cloud rule, an edge rule must send the datapoint to the cloud by using the Forward to cloud action. For more information, see [Installing the edge analytics agent](gateways/dashboard.html#edge).
+**Important:** The advanced calculations only return property datapoints if the data for the selected property comes from a device that is connected to a gateway that has an Edge Analytics Agent installed. An edge rule can use this virtual property directly. To use the property with a cloud rule, an edge rule must send the datapoint to the cloud by using the Forward to cloud action. For more information, see [Installing the edge analytics agent](gateways/dashboard.html#edge).
 
 Example: Use the advanced virtual datapoints in a line graph card to visualize data trends with data spikes removed.  
  ![Actual datapoints vs. average datapoints.](images/vir_adv_avg_card.svg "Comparison between actual and averaged datapoints.")
@@ -28,7 +28,7 @@ Example: Use the advanced virtual datapoints in a line graph card to visualize d
 
 The advanced calculation options include the following formulas:
 
-**Tip:** For some of the formulas, you can choose a period length or a number of datapoints to include. If your data flows at a consistent frequency, a time window might be a good choice. If the data is collected sporadically or unevenly, it might be best to use number of datapoints because the time window is difficult to predict.
+**Tip:** For some of the formulas you have the option to choose a period length or a number of datapoints to include. If you know that your data flows at a consistent frequency, a time window might be a good choice. If the data is collected sporadically or unevenly, it might be best to use number of datapoints, because the time window is difficult to predict.
 
 <table>
 <thead>
@@ -46,7 +46,7 @@ Input:
 <ul>
 <li>Property
  <li>Period length or number of datapoints in the form of an integer that is larger than 0.</ul></td>
- <td>The AVG formula provides an average value of datapoints across a time window that is constantly moving.  </br></br> Use the average formula with a rule to avoid triggering false alerts that are based on noisy data that contains isolated spikes.  </br></br>Use a line graph card to visualize data trends with data spikes removed.  
+ <td>The AVG formula provides an average value of datapoints across a time window that is constantly moving.  </br></br> Use the average formula with a rule to avoid triggering false alerts based on noisy data that contains isolated spikes.  </br></br>Use a line graph card to visualize data trends with data spikes removed.  
 </td>
 </tr>
 <tr>
@@ -64,16 +64,16 @@ Input:
 <tr>
 <td>Exponential smoothing</td>
 <td>Returns the average value for a property over available collected datapoints, where the older property values are weighted exponentially less than newer values. The weight is controlled by the smoothing factor, where a larger value gives more weight to recent values and less to older values.  
-You can also optionally use the slope factor to adjust for any trends in the data. Exponentially smoothed values react quicker to changes in the data than moving average does.  </br></br>
+You can also optionally use the slope factor to adjust for any trends in the data. Exponentially smoothed values reacts quicker to changes in the data than moving average does.  </br></br>
 Input:
 <ul>
 <li>Property
 <li>Smoothing factor, as a number that is larger than 0 and smaller than 1.  
 <li>Optional: Slope, as a number that is larger than 0 and smaller than 1.   </br>
- **Tip:** If you are unsure if your collected data has trends, start by using a slope of 0.5. Depending on your results, you might want to adjust the factor.
+ **Tip:** If you are unsure if your collected data has trends, start by using a slope of .5. Depending on your results, you might want to adjust the factor.
  </ul></td>  
- <td>Applying exponential smoothing to a datapoint results in an average value where older values are weighted less when the average is calculated rather than defining a period length. Instead, you limit the weight of distant values by setting a higher smoothing factor.
-</br></br>Use the exponential smoothing formula with a rule to avoid triggering false alerts that are based on noisy data that contains isolated spikes by using all available data instead of a subset.
+ <td>Applying exponential smoothing to a datapoint results in an average value where older values are weighted less when calculating the average rather than defining a period length. Instead, you limit the weight of distant values by setting a higher smoothing factor.
+</br></br>Use the exponential smoothing formula with a rule to avoid triggering false alerts based on noisy data that contains isolated spikes by using all available data instead of a subset.
 </br></br>Use a line graph card to visualize data trends with data spikes removed.</td>
 </tr>
 <tr>
@@ -85,34 +85,18 @@ Input:
 <li>Property
 <li>Number of datapoints ahead and behind (half-width) in the form of an integer larger than 0.
 </ul></td>
-<td>Applying box smoothing to a datapoint returns an average value of datapoints across a time window that is constantly moving and that is centered on the datapoint of interest. </br></br>**Important:** Depending on the data frequency and the half-width value, the returned datapoints are more or less delayed. For example, if the half-width value is set to `5` and the data frequency is one message every second, the returned virtual datapoints are delayed by five seconds. </br></br>Use the box smoothing formula with a rule to avoid triggering false alerts that are based on noisy data that contains isolated spikes. **Important:** Be aware of the datapoint delay when you create your rules. </br></br>Use a line graph card to visualize data trends with data spikes removed.
+<td>Applying box smoothing to a datapoint returns an average value of datapoints across a time window that is constantly moving and that is centered on the datapoint of interest. </br></br>**Important:** Depending on the data frequency and the half-width value, the returned datapoints are more or less delayed. For example, if the half-width is set to `5` and the data frequency is one message every second, the returned virtual datapoints are delayed by five seconds. </br></br>Use the box smoothing formula with a rule to avoid triggering false alerts based on noisy data that contains isolated spikes. **Important:** Be aware of the datapoint delay when creating your rules. </br></br>Use a line graph card to visualize data trends with data spikes removed.
 </td>
 </tr>
 <tr>
 <td>Gaussian smoothing</td>
-<td>Returns the average value for a property based on a range of datapoints that are centered around the current datapoint. Property values that are farther from the current datapoint are weighted exponentially less than closer values.</br></br>
+<td>Returns the average value for a property based on a range of datapoints that are centered around the current datapoint, where property values farther from the current datapoint are weighted exponentially less than closer values.</br></br>
 Input:
 <ul>
 <li>Property
 <li>Number of datapoints ahead and behind (half-width) in the form of an integer that is larger than 0.
 </ul></td>
-<td>Applying Gaussian smoothing to a datapoint returns a weighted average value of datapoints across a time window that is constantly moving and that is centered on the datapoint of interest. Datapoints that are farther from the datapoint of interest are weighted less when the average is calculated. </br></br>**Important:** Depending on the data frequency and the half-width value, the returned datapoints are more or less delayed. For example, if the half-width value is set to `5` and the data frequency is one message every second, the returned virtual datapoints are delayed by five seconds. </br></br>Use the Gaussian smoothing formula with a rule to avoid triggering false alerts that are based on noisy data that contains isolated spikes. **Important:** Be aware of the datapoint delay when you create your rules. </br></br>Use a line graph card to visualize data trends with data spikes removed.
-</td>
-</tr>
-
-<td>Auto smoothing</td>
-<td>Returns the smoothed average value for a property across available collected datapoints. Auto smoothing is an implementation of the Holt-Winters Seasonal algorithm, which is also known as 'triple exponential smoothing'.  Auto smoothing includes automatic initialization or training of its parameters by using a grid-search, and determines the season automatically.
-</br></br>
-Input:
-<ul>
-<li>Property. This input must be a time series.
-<li>Window of data to be used for the initial training in the algorithm. Other smoothing factors are determined during the training process, and the auto smoothing algorithm uses them to produce the smoothed value.
-</ul></td>
-<td>If your data contains trends or seasonal patterns, the auto smoothing model provides more accurate results than the exponential smoothing models.
-</br></br>
-Use the auto smoothing formula with a rule to avoid triggering false alerts that are based on noisy data that contains isolated spikes. Use all available data instead of a subset to help avoid false alerts.
-</br></br>
-Use a line graph card to visualize data trends with data spikes removed.
+<td>Applying gaussian smoothing to a datapoint returns a weighted average value of datapoints across a time window that is constantly moving and that is centered on the datapoint of interest. Datapoints that are farther from the datapoint of interest are weighted less when calculating the average. </br></br>**Important:** Depending on the data frequency and the half-width value, the returned datapoints are more or less delayed. For example, if the half-width is set to `5` and the data frequency is one message every second, the returned virtual datapoints are delayed by five seconds. </br></br>Use the gaussian smoothing formula with a rule to avoid triggering false alerts based on noisy data that contains isolated spikes. **Important:** Be aware of the datapoint delay when creating your rules. </br></br>Use a line graph card to visualize data trends with data spikes removed.
 </td>
 </tr>
 </tbody>

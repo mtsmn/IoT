@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -53,14 +53,6 @@ By using the {{site.data.keyword.iot_short_notm}} Last Event Cache API, you can 
 ### Device event data storage
 
 Device event data from your {{site.data.keyword.iot_short_notm}} service can be stored for later use. Data storage is an essential first step towards performing insightful analytics to gain insights from that data.  For example, you can track changes over longer periods of time and store sets of data for use with powerful analytics tools, including use with Watson APIs and cognitive computing. For more information, see [connecting a {{site.data.keyword.cloudant_short_notm}} historian service](https://console.ng.bluemix.net/docs/services/IoT/cloudant_connector.html), or [connecting a {{site.data.keyword.messagehub}} historian service](https://console.ng.bluemix.net/docs/services/IoT/message_hub.html).
-
-### Interface mapping
-
-The interface mapping feature lets you map incoming data from different devices to a format that can be understood and processed by applications. This simplifies application development because the application no longer needs to understand the format of the data that is sent from each device.
-
-The data values are stored in a JSON document on {{site.data.keyword.iot_short_notm}}, and represent the most current device state. The values are updated with each inbound device event. The device state can then be consumed by an application through an HTTP API.
-
-For more information about interface mapping, see [Using interfaces to map device data (Beta)](information_management/im_index.html).
 
 ---
 

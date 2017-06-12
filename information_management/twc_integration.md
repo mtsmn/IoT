@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-27"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -24,7 +24,7 @@ Weather data from The Weather Company appears in the device details view if an u
 
 ## REST APIs for The Weather Company
 To access the REST API for The Weather Company, see the
-Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} documentation.
+Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} documentation.
 
 ## Viewing weather data
 

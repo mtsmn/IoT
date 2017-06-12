@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-20"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -220,4 +220,4 @@ To see information about the state of the gateway:
 ## Edge Analytics community
 {: #eaa_community}
 
-You can download the Edge Analytics SDK from the [IBM Edge Analytics community page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){: new_window}. The SDK includes the SDK JAR file, javadoc, sample code, recipe links, and README files. In the community, you can also watch videos to get up and running with Edge Analytics, and you can use the community forum to ask questions.
+You can download the Edge Analytics SDK from the [IBM Edge Analytics community page](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true). The SDK includes the SDK JAR file, javadoc, sample code, recipe links, and README files. In the community, you can also watch videos to get up and running with Edge Analytics, and you can use the community forum to ask questions.

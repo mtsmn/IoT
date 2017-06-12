@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-03-21"
+lastupdated: "2017-02-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-21"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# {{site.data.keyword.iot_short_notm}} beta features
+# {{site.data.keyword.iot_full}} beta features
 {: #beta_features}
 
 In the ongoing development of {{site.data.keyword.iot_full}}, new features are continuously added and are sometimes initially offered as beta features. Some of these features might require beta registration.  

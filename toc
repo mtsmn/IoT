@@ -25,20 +25,12 @@ Internet of Things Platform
         devices/device_cmd_api.md
         [Custom domains (Beta)](reference/security/set_up_certificates.html#custom_domains)
         [Drill-down reporting (Beta)](reference/security/RM_security.html#drill_down)
-        reference/rlac.md      
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     reference/api.md
 
-    {: .topicgroup}
-    Sample apps
-        [OpenFridge](https://github.com/IBM/openfridge)
-        [Simulated conveyor belt](https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator)
-        [Raspberry PI based conveyor belt](https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi)
-        [Node.js based device monitoring](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-angular)
-        [Widget library based device monitoring](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-html)
-        [Multiple-device simulator](https://github.com/ibm-watson-iot/iot-guide-conveyor-multi-simulator)
+    [Sample app: OpenFridge](https://github.com/IBM/openfridge)
 
     {: .topicgroup}
     Watson IoT Platform security
@@ -68,29 +60,11 @@ Internet of Things Platform
     index.md
 
     {: .topicgroup}
-    Getting started guides
-        getting_started/getting-started-iot-overview.md
-        getting_started/getting-started-iot-conveyor.md
-        getting_started/getting-started-iot-rules.md
-        getting_started/getting-started-iot-monitoring.md
-        getting_started/getting-started-iot-large-scale-simulation.md
-
-    {: .topicgroup}
     Connecting to Watson IoT Platform
         iotplatform_task.md
         gateways/dashboard.md
         platform_authorization.md
         reference/security/connect_devices_apps_gw.md
-
-    {: .topicgroup}
-    Managing data in Watson IoT Platform
-        GA_information_management/ga_im_device_twin.md
-        GA_information_management/ga_im_overview.md
-        GA_information_management/ga_im_definitions.md
-        GA_information_management/ga_im_active_draft.md
-        GA_information_management/ga_im_example.md
-        GA_information_management/ga_im_workflow.md
-        GA_information_management/ga_im_index_scenario.md
 
     {: .topicgroup}
     Managing Watson IoT Platform
@@ -123,7 +97,6 @@ Internet of Things Platform
 
     {: .topicgroup}
     Using IoT samples
-        getting_started/getting-started-iot-nodered.md
         nodereddevice_sample.md
         visualizingdata_sample.md
         getting_started/quickstart/index.md
@@ -180,7 +153,6 @@ Internet of Things Platform
         [Connecting an ARM mbed IoT Starter Kit](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/)
         [Connecting a Raspberry Pi to Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/)
     {: .navgroup-end}
-
 
     {: .navgroup id="help"}
     ts_index.md

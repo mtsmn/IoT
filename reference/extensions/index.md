@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-27"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -39,7 +39,7 @@ The built-in Jasper integration that is provided by our platform provides suppor
 You can access the supported operations in the device drilldown of a Jasper connected device after the following configuration steps are completed.
 
 ### REST APIs for Jasper
-To access the REST API for Jasper, see the Jasper Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} documentation.
+To access the REST API for Jasper, see the Jasper Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} documentation.
 
 ### Configuration for Jasper
 
@@ -91,7 +91,7 @@ The AT&T extension enables the following AT&T operations:
 - Change rate plan
 
 ### REST APIs for AT&T
-To access the REST API for AT&T, see the AT&T Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window} documentation.
+To access the REST API for AT&T, see the AT&T Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} documentation.
 
 ### Configuration for AT&T
 
@@ -223,7 +223,7 @@ If you have a device which is connected to your {{site.data.keyword.iot_short_no
 - Location status
 
 ### REST APIs for Orange
-To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} documentation.
+To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} documentation.
 
 ### Configuration for Orange
 
@@ -274,7 +274,7 @@ To add a custom device management package by using the {{site.data.keyword.iot_s
 3. Click the **Add Package** button.
 4. Select your package file and click **Open**.
 
-To add a custom device management package by using the API, see the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
+To add a custom device management package by using the API, see the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Blockchain
 {: #blockchain}

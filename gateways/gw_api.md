@@ -17,7 +17,7 @@ lastupdated: "2017-03-07"
 {: #api_link}
 
 
-To access the {{site.data.keyword.iot_short_notm}} HTTP REST API documentation and find more information about creating, updating, deleting, and listing devices, see [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
+To access the {{site.data.keyword.iot_short_notm}} HTTP REST API documentation and find more information about creating, updating, deleting, and listing devices, see [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
 
 The only version of the {{site.data.keyword.iot_short_notm}} HTTP REST API that is supported is version 2. Ensure that your {{site.data.keyword.iot_short_notm}} solutions are using version 2.
 
@@ -116,4 +116,3 @@ The response includes all event IDs that were sent by the device. In the followi
     }
 ]
 ```
-To access the {{site.data.keyword.iot_short_notm}} HTTP REST API documentation, see [{{site.data.keyword.iot_short_notm}} Organization Information Management REST APIs ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window}.
