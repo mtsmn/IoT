@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-03"
+lastupdated: "2017-06-16"
 
 ---
 
@@ -25,7 +25,13 @@ Before connecting devices and utilizing data, register for a {{site.data.keyword
 
 For detailed information about how to sign up for an account on {{site.data.keyword.Bluemix_notm}}, configure regions, and other account management settings, see [Managing your Bluemix account](https://console.ng.bluemix.net/docs/admin/account.html#signup).
 
-You can set up and configure your {{site.data.keyword.iot_short_notm}} instance from the dashboard. To open the dashboard, go to your {{site.data.keyword.iot_short_notm}} service instance in  {{site.data.keyword.Bluemix_notm}}, and then click **Launch Dashboard**.
+You can set up and configure your {{site.data.keyword.iot_short_notm}} instance from the dashboard. To open the dashboard, go to your {{site.data.keyword.iot_short_notm}} service instance in  {{site.data.keyword.Bluemix_notm}}, and then click **Launch**.
+
+## About this task
+
+The following steps describe how you can quickly get started with your {{site.data.keyword.iot_short_notm}} service.
+
+A more detailed set of getting started guides and sample applications that step through the basics of developing a ready-for-production, end-to-end IoT prototype system with {{site.data.keyword.iot_short_notm}} are also available. If you are a developer who is new to working with {{site.data.keyword.iot_short_notm}}, use the step-by-step processes in the [Getting started guides](getting_started/getting-started-iot-overview.md) section.
 
 ## Step 1: Connect your devices
 {: #up_and_running}
