@@ -102,21 +102,21 @@ The sample app is built using the Node.js client libraries at: [https://github.c
 ![Conveyor belt app](images/app_conveyor_belt.png "Conveyor belt app")
 
 1. Use your favorite git tool to clone the following repository:  
-https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator  
+https://github.com/ibm-watson-iot/guide-conveyor-simulator
 In Git shell, use the following command:
   ```bash
-git clone https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator
+git clone https://github.com/ibm-watson-iot/guide-conveyor-simulator
   ```
 2. On the command line, change the directory to the directory in which the sample app is located.
   ```bash
-cd iot-guide-conveyor-simulator
+cd guide-conveyor-simulator
   ```
-3. From the *iot-guide-conveyor-simulator* directory, push your app to {{site.data.keyword.Bluemix_notm}} and give it a new name by replacing *YOUR_APP_NAME* in the cf push command. Use the `--no-start` option because you will start the app in the next stage after it is bound to {{site.data.keyword.iot_short_notm}}.  
+3. From the *guide-conveyor-simulator* directory, push your app to {{site.data.keyword.Bluemix_notm}} and give it a new name by replacing *YOUR_APP_NAME* in the cf push command. Use the `--no-start` option because you will start the app in the next stage after it is bound to {{site.data.keyword.iot_short_notm}}.
 **Note:** Deploying your application can take a few minutes.
    ```bash
 cf push YOUR_APP_NAME --no-start
   ```  
-1. In the *ot-guide-conveyor-simulator* directory, bind your app to your instance of the {{site.data.keyword.iot_short_notm}} by using the names that you provided for each.  
+1. In the *guide-conveyor-simulator* directory, bind your app to your instance of the {{site.data.keyword.iot_short_notm}} by using the names that you provided for each.
   ```bash
 cf bind-service YOUR_APP_NAME iotp-for-conveyor
   ```
@@ -198,7 +198,7 @@ $ sudo apt-get install git
 
 1. Open the terminal or SSH to your Raspberry Pi.
 2. Use your favorite git tool to clone the following repository to your Raspberry Pi:  
-https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi
+https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi
 In Git Shell, use the following command:
 ```bash
 $ git clone https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi
@@ -240,7 +240,7 @@ For more information about registering devices, see [Connecting devices](/docs/s
 When you run the program, your Raspberry Pi starts the motor and it will run for up to 2 minutes based on parameter settings.
 ```bash
 python deviceClient.py -t 2
-``` 
+```
 
 While the motor is running, the program publishes events of event type `sensorData` that have the following sample payload structure:  
 ```
@@ -339,11 +339,11 @@ For more information about creating boards and cards, see [Visualizing real-time
 Continue with the next guide or jump to another topic that interests you:
 - Path A: Modify the conveyor belt app to suit your needs.  
 For technical details, see:
- - [https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor-simulator/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-simulator/blob/master/README.md){: new_window}
  - [Node.js clienmt libraries ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - Path B: Modify the Raspberry Pi setup to suit your needs.  
 For technical details, see:
- - [https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi/blob/master/README.md){: new_window}
 - [Guide 2: Using basic real-time rules and actions](getting-started-iot-rules.html)  
 Now that you successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.
 - [Guide 3: Monitoring your device data](getting-started-iot-monitoring.html)  
