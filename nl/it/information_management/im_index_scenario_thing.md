@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -68,7 +68,7 @@ Utilizza il seguente scenario di esempio per configurare il tuo ambiente di inte
 {: #add_device}  
 In questo scenario, vengono utilizzati due tipi dispositivo e quattro istanze dispositivo. Le istanze dispositivo *temperatureSensor1* e *temperatureSensor2* sono associate al tipo dispositivo *Thermometer*. Le istanze dispositivo *humiditySensor1* e *humiditySensor2* sono associate al tipo dispositivo *Hygrometer*.
 
-Per informazioni sull'utilizzo delle API REST per aggiungere un tipo dispositivo, consulta la documentazione [API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofThings.ibmcloud.com/swagger/v0002.html#!/Device_Types).  
+Per ulteriori informazioni sull'utilizzo delle API REST per aggiungere un tipo dispositivo, consulta la documentazione [API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration).  
 
 ## Passo 1: crea un file di schema composizione.  
 {: #crt_composition_file}  
@@ -121,7 +121,7 @@ I seguenti parametri sono obbligatori:
 </tr>
 </table>
 
-Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas).  
+Per ulteriori dettagli, consulta la [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas).  
 
 <!-- The following example shows how to use Python to create the thing type schema resource:  
 ```python
@@ -148,7 +148,7 @@ I seguenti parametri sono obbligatori:
 <tr><td>schemaId</td><td>L'ID creato per la risorsa di schema composizione.</td></tr>
 </table>
 
-Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Thing_Types).  
+Per ulteriori dettagli, consulta la [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Thing_Types).  
 
 <!-- The following example shows how to use Python to create a thing type that is called *RoomType*.
 ```python
@@ -206,7 +206,7 @@ I seguenti parametri sono obbligatori:
 </tr>
 </table>  
 
-Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas).  
+Per ulteriori dettagli, consulta la [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas).  
 
 <!-- The following example shows how to use Python to create the thing type application interface schema resource:  
 ```python
@@ -241,7 +241,7 @@ I seguenti parametri sono obbligatori:
 </tr>
 </table>  
 
-Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Application_Interfaces).  
+Per ulteriori dettagli, consulta la [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Application_Interfaces).  
 Utilizza l'identificativo schema che era stato restituito nella risposta precedente per aggiungere lo schema dell'interfaccia dell'applicazione all'interfaccia dell'applicazione.  
 
 <!-- The following example shows how to use Python to create an application interface:  
@@ -276,7 +276,7 @@ I seguenti parametri sono obbligatori:
 </tr>
 </table>  
 
-Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Thing_Types).  
+Per ulteriori dettagli, consulta la [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Thing_Types).  
 In questo scenario, l'interfaccia dell'applicazione è associata al tipo oggetto *RoomType*.
 
 <!-- The following example shows how to use Python to add the thing application interface to the thing type *RoomType*:  
@@ -307,7 +307,7 @@ I seguenti parametri sono obbligatori:
 </tr>
 </table>  
 
-Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Thing_Types).
+Per ulteriori dettagli, consulta la [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Thing_Types).
 
 <!--  The following example shows how to use Python to add a mapping to thing type *RoomType*:
 
@@ -354,7 +354,7 @@ Per distribuire la tua configurazione del tipo oggetto, utilizza la seguente API
 ```
 PATCH /thing/types/{thingtypeId}
 ```
-Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
+Per ulteriori dettagli, consulta la [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 <!-- The following example shows how to use Python to deploy your configuration for thing type *Room*:
 
@@ -386,7 +386,7 @@ I seguenti parametri sono obbligatori:
 </tr>
 </table>
 
-Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Things).
+Per ulteriori dettagli, consulta la [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Things).
 
 In questo scenario, dobbiamo creare due istanze oggetto che sono di tipo oggetto *RoomType*. Una istanza oggetto è denominata *meetingroom1* e l'altra istanza oggetto è denominata *meetingroom2*.
 
@@ -463,7 +463,7 @@ I seguenti parametri sono obbligatori:
 </tr>
 </table>  
 
-Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Thing_Types).  
+Per ulteriori dettagli, consulta la [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Thing_Types).  
 
 <!-- The following example shows how to use Python to retrieve the current state of *meetingroom1* by referencing the identifier of the application interface that was created:  
 ```python

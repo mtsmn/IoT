@@ -24,7 +24,7 @@ L'unica versione dell'API REST HTTP {{site.data.keyword.iot_short_notm}} support
 ## Connessioni client
 {: #client_connections}
 
-Per informazioni sulla sicurezza client e su come collegare i client ai dispositivi client e gateway in {{site.data.keyword.iot_short_notm}}, consulta [Connessione di applicazioni, dispositivi e gateway a {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
+Per informazioni sulla sicurezza client e su come connettere i client ai dispositivi client e gateway in {{site.data.keyword.iot_short_notm}}, consulta [Connessione di applicazioni, dispositivi e gateway a {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
 
 
 ### Autenticazione

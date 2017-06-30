@@ -22,7 +22,7 @@ MQTT è il protocollo primario che i dispositivi e le applicazioni utilizzano pe
 ## Connessioni client
 {: #client_connections}
 
-Per informazioni sulla sicurezza client e su come collegare i client MQTT come gateway, consulta [Connecting applications, devices, and gateways to {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
+Per informazioni sulla sicurezza client e su come connettere i client MQTT come gateway, consulta [Connessione di applicazioni, dispositivi e gateway a {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
 
 ## Autenticazione MQTT
 {: #authentication}
@@ -87,7 +87,7 @@ Il carattere jolly `+` MQTT può essere utilizzato per `typeId`, `deviceId`, `co
 |Device 1 | mydevice    | device1    |
 
 
--   Il Gateway 1 può sottoscriversi ai comandi diretti al gateway:
+-   Il Gateway 1 può sottoscriversi ai comandi indirizzati al gateway:
       
     `iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
 -   Il Gateway 1 può sottoscriversi ai comandi inviati al Device 1:

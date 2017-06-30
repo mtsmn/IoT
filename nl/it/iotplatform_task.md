@@ -120,7 +120,7 @@ Dopo aver registrato il dispositivo con {{site.data.keyword.iot_short_notm}}, pu
 **Suggerimento:** molte ricette di connessione sono disponibili per i dispositivi comunemente utilizzati. Per un elenco delle ricette, consulta le
 [Device connection recipes ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} disponibili in IBM.com.
 
-Le seguenti informazioni sono necessarie quando colleghi il tuo dispositivo:
+Le seguenti informazioni sono necessarie quando connetti il tuo dispositivo:
 - URL: *org_id*.messaging.internetofthings.ibmcloud.com  
 Dove *org_id* è l'ID della tua organizzazione {{site.data.keyword.iot_short_notm}}.
 - Porta:

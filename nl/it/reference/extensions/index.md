@@ -39,7 +39,7 @@ L'integrazione Jasper integrata fornita dalla nostra piattaforma fornisce suppor
 Puoi accedere alle operazioni supportate nel drilldown del dispositivo di un dispositivo collegato a Jasper dopo che sono state completate le seguenti istruzioni di configurazione:
 
 ### API REST per Jasper
-Per accedere all'API REST per Jasper, consulta la sezione dell'estensione Jasper nella [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
+Per accedere all'API REST per Jasper, consulta la sezione dell'estensione Jasper nella [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
 
 ### Configurazione di Jasper
 
@@ -91,7 +91,7 @@ L'estensione AT&T abilita le seguenti operazioni AT&T:
 - Modificare il piano tariffario
 
 ### API REST per AT&T
-Per accedere all'API REST per AT&T, consulta la sezione dell'estensione AT&T nella [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
+Per accedere all'API REST per AT&T, consulta la sezione dell'estensione AT&T nella [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
 
 ### Configurazione di AT&T
 
@@ -223,7 +223,7 @@ Se hai un dispositivo collegato al tuo servizio {{site.data.keyword.iot_short_no
 - Stato ubicazione
 
 ### API REST per Orange
-Per accedere all'API REST per Orange, consulta la sezione dell'estensione Orange nella [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
+Per accedere all'API REST per Orange, consulta la sezione dell'estensione Orange nella [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
 
 ### Configurazione di Orange
 

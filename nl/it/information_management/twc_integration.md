@@ -24,7 +24,7 @@ I dati da Weather Company sono visualizzati nella vista dei dettagli del disposi
 
 ## API REST per Weather Company
 Per accedere all'API REST per Weather Company, consulta la sezione
-Device Location Weather nella [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API ![icona link esterno](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window}.
+Device Location Weather nella [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window}.
 
 ## Visualizzazione dei dati meteo
 

@@ -89,7 +89,7 @@ le suite di cifratura supportate dipendono dal certificato utilizzato.
 
 ### Requisiti TLS per le connessioni HTTP
 
-Se stai utilizzando il certificato server predefinito, {{site.data.keyword.iot_short_notm}} richiede TLS v1, TLS v1.1 o TLS v1.2 e le seguenti suite di cifratura:
+Se stai utilizzando il certificato server predefinito, {{site.data.keyword.iot_short_notm}} richiede TLS v1.1 o TLS v1.2 e le seguenti suite di cifratura:
 
 
 - TLS_RSA_WITH_AES_128_CBC_SHA
