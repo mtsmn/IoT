@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-27"
 
 ---
 
@@ -31,7 +31,7 @@ As solicitações podem ser iniciadas usando a amostra de API (interface de prog
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Para obter mais informações sobre o corpo de uma solicitação de gerenciamento de dispositivo, veja a [documentação da API ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para obter mais informações sobre o corpo de uma solicitação de gerenciamento de dispositivo, veja a [documentação da API ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
 
 ## Ações de dispositivo
 {: #device-actions}

@@ -1,8 +1,8 @@
----
+﻿---
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -61,7 +61,7 @@ Neste cenário, dois sensores de temperatura e dois sensores de umidade publicam
 reunião 1 de um bloco de escritórios. O outro sensor de temperatura e de umidade está na sala
 de reunião 2.
 
-![Mapeamento entre o item de temperatura e umidade e um aplicativo no {{site.data.keyword.iot_short_notm}}.](images/Information "Mapeamento entre múltiplos sensores ambientais em uma sala e um aplicativo no {{site.data.keyword.iot_short_notm}}")
+![Mapeamento entre o item de temperatura e umidade e um aplicativo no {{site.data.keyword.iot_short_notm}}.](images/Information Management Thing example scenario.svg "Mapeamento entre múltiplos sensores ambientais em uma sala e um aplicativo no {{site.data.keyword.iot_short_notm}}")
 
 Um tipo de item chamado *RoomType* é usado para definir como as instâncias de salas são
 compostas. Uma interface de aplicativo está associada ao *RoomType* e define que os eventos de
@@ -72,7 +72,7 @@ sensores, o valor da propriedade que está associada ao estado de item é mudado
 
 Os quatro dispositivos a seguir estão incluídos:
 
-Dispositivo/Tipo | Evento | Propriedade/Carga útil do evento
+Dispositivo/Tipo | Event | Propriedade/Carga útil do evento
 ------------- |  ------------- | -------------
 *temperatureSensor1*/Thermometer (meetingroom1) | `iot-2/evt/`*`tevt`*`/fmt/json` | `{ “t” : 34.5 }`/ **temperature1**
 *temperatureSensor2*/Thermometer (meetingroom2) | `iot-2/evt/`*`tempevt`*`/fmt/json` | `{ “temp” : 34.5 }`/ **temperature2**  
@@ -101,10 +101,7 @@ associadas ao tipo de dispositivo *Termômetro*. As instâncias de dispositivo
 *humiditySensor1* e *humiditySensor2* são associadas ao tipo de dispositivo
 *Higrômetro*.
 
-Para obter informações sobre como usar as APIs de REST para incluir um tipo de dispositivo, consulte a
-documentação
-[API de
-REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofThings.ibmcloud.com/swagger/v0002.html#!/Device_Types).
+Para obter mais informações sobre como usar as APIs de REST para incluir um tipo de dispositivo, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration).  
 
 ## Etapa 1: Criar um arquivo de esquema de composição.  
 {: #crt_composition_file}  
@@ -154,7 +151,7 @@ Os seguintes parâmetros são obrigatórios:
 <th>	Parâmetro	</th><th>	Descrição	</th>
 </tr>
 <tr>
-<td>	nome	</td><td>	Forneça um nome para o esquema de composição que você está criando.	</td>
+<td>	name	</td><td>	Forneça um nome para o esquema de composição que você está criando.	</td>
 </tr>
 <tr>
 <td>	schemaFile	</td><td>	Caminho para o arquivo JSON do esquema de composição local.	</td>
@@ -286,7 +283,7 @@ Os seguintes parâmetros são obrigatórios:
 <th>	Parâmetro	</th><th>	Descrição	</th>
 </tr>
 <tr>
-<td>	nome	</td><td>	Forneça um nome para a interface de aplicativo que você está criando.	</td>
+<td>	name	</td><td>	Forneça um nome para a interface de aplicativo que você está criando.	</td>
 </tr>
 <tr>
 <td>	description	</td><td>	Forneça uma descrição da interface de aplicativo.	</td>
@@ -308,7 +305,7 @@ esquema de interface de aplicativo na interface de aplicativo.
 ```  -->
 
 Use o identificador de interface de aplicativo para incluir sua interface de aplicativo no seu tipo de
-dispositivo. Este identificador também é usado para mapear um evento de dispositivo de entrada para uma propriedade que é definida pela interface de aplicativo.  
+dispositivo. Esse identificador também é usado para mapear um evento de dispositivo de entrada para uma propriedade que é definida pela interface de aplicativo.   
 
 ## Etapa 7: Incluir a interface de aplicativo no tipo de item.  
 {: #add_thing_ai}  
@@ -325,7 +322,7 @@ Os seguintes parâmetros são obrigatórios:
 <td>	id	</td><td>	O ID criado para o tipo de item.	</td>
 </tr>
 <tr>
-<td>	nome	</td><td>	Forneça um nome para a interface de aplicativo que você está criando.	</td>
+<td>	name	</td><td>	Forneça um nome para a interface de aplicativo que você está criando.	</td>
 </tr>
 <tr>
 <td>	schemaId	</td><td>	O ID criado para o recurso da interface de aplicativo.	</td>

@@ -1,8 +1,8 @@
----
+﻿---
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -52,7 +52,7 @@ Uma interface de aplicativo também é configurada. Essa interface de aplicativo
 ```
 Essa configuração significa que é possível configurar seu aplicativo para processar o valor que está associado a **temperatura**, em vez de configurar o aplicativo para processar o valor que está associado a **t** e processar o valor que está associado a **temp** depois de converter esse valor em graus Celsius.
 
-![Mapeamento entre dispositivos de sensor de temperatura e um aplicativo no {{site.data.keyword.iot_short_notm}}.](images/Information "Mapeamento entre dispositivos de sensor de temperatura e um aplicativo no {{site.data.keyword.iot_short_notm}}")  
+![Mapeamento entre dispositivos de sensor de temperatura e um aplicativo no {{site.data.keyword.iot_short_notm}}.](images/Information Management Device example.svg "Mapeamento entre dispositivos de sensor de temperatura e um aplicativo no {{site.data.keyword.iot_short_notm}}")  
 
 Use o cenário de exemplo a seguir para configurar seu próprio ambiente de interfaces.
 
@@ -61,7 +61,7 @@ Use o cenário de exemplo a seguir para configurar seu próprio ambiente de inte
 
 Neste cenário, são assumidos dois tipos de dispositivo e duas instâncias de dispositivo. A instância de dispositivo *TemperatureSensor1* é associada ao tipo de dispositivo *EnvSensor1*. A instância de dispositivo *TemperatureSensor2* é associada ao tipo de dispositivo *EnvSensor2*.
 
-Para obter informações sobre como usar as APIs de REST para incluir um tipo de dispositivo, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Types).
+Para obter informações sobre como usar as APIs de REST para incluir um tipo de dispositivo, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration).
 
 ## Etapa 1: Criar um arquivo de esquema de evento
 {: #step1}
@@ -148,7 +148,9 @@ schemaFile	|	Caminho para o arquivo JSON do esquema de evento local.
 
 
 
-Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas).
+Para obter mais detalhes, consulte a documentação da
+[API
+de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas).
 
 O exemplo a seguir mostra como usar cURL para criar o recurso de esquema de evento *tEventSchema.json*:
 
@@ -232,7 +234,7 @@ schemaId	|	O ID criado para o recurso de
 esquema de evento.
 
 
-Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types).
+Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Event_Types).
 
 
 O exemplo a seguir mostra como usar cURL para criar um tipo de evento para um evento de temperatura que é medido em graus Celsius:
@@ -311,7 +313,7 @@ Parâmetro	|	Descrição
 name	|	Forneça um nome para a interface física que você está criando.
 
 
-Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces).
+Para obter mais detalhes, veja a documentação da [API de REST de HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces).
 
 Neste cenário, precisamos de duas interfaces físicas, uma para cada tipo de evento.
 
@@ -389,7 +391,7 @@ eventTypeId	|	O ID criado para o
 tipo de evento.
 
 
-Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces).
+Para obter mais detalhes, veja a documentação da [API de REST de HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces).
 
 Neste cenário, os tipos de eventos a seguir são incluídos nas interfaces físicas especificadas:
 - o evento de temperatura Celsius *tevt* é incluído na interface física com o identificador *5847d1df6522050001db0e1a* usando o *eventId* do tópico e o *eventTypeId* da criação do recurso de esquema de evento.
@@ -450,7 +452,9 @@ Parâmetro	|	Descrição
 physicalInterfaceId	|	O ID criado para a interface física.
 
 
-Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+Para obter mais detalhes, consulte a documentação da
+[API
+de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 Neste cenário, o tipo de dispositivo *EnvSensor1* é atualizado para se conectar à interface física *5847d1df6522050001db0e1a* e o tipo de dispositivo *EnvSensor2* é atualizado para se conectar à interface física *5847d1df6522050001db0e1b*.
 
@@ -559,7 +563,9 @@ schemaFile	|	Caminho
 para o arquivo JSON do esquema de interface de aplicativo local.
 
 
-Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas).
+Para obter mais detalhes, consulte a documentação da
+[API
+de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas).
 
 O exemplo a seguir mostra como usar cURL para criar o esquema de interface de aplicativo:
 
@@ -610,7 +616,9 @@ schemaId	|	O ID criado para o
 recurso de esquema de interface de aplicativo.
 
 
-Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Application_Interfaces).
+Para obter mais detalhes, consulte a documentação da
+[API
+de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Application_Interfaces).
 
 Neste cenário, use o identificador de esquema *5846ec826522050001db0e11* que foi retornado na resposta anterior para incluir o esquema de interface de aplicativo na interface de aplicativo.
 
@@ -662,7 +670,9 @@ para o recurso da interface de aplicativo.
 refs/schema	|	O caminho para o recurso da interface de aplicativo. Geralmente: /schemas/*schemaId*
 
 
-Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+Para obter mais detalhes, consulte a documentação da
+[API
+de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 Neste cenário, a interface de aplicativo está associada ao tipo de dispositivo *EnvSensor1* e ao tipo de dispositivo *EnvSensor2*.
 
@@ -751,7 +761,9 @@ applicationInterfaceId	|	O ID criado para a interface de aplicativo.
 propertyMappings	|	Uma estrutura JSON válida que mapeia propriedades definidas para a interface de aplicativo com as propriedades da carga útil do evento do dispositivo. Consulte os seguintes exemplos:
 
 
-Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+Para obter mais detalhes, consulte a documentação da
+[API
+de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 Neste cenário, definimos mapeamentos para o tipo de dispositivo *EnvSensor1* mapear a propriedade **t** no evento de entrada *tevt* para a propriedade **temperatura** na interface de aplicativo. Também definimos mapeamentos para o tipo de dispositivo *EnvSensor2* mapear a propriedade **temp** no evento de entrada *tempevt* para a propriedade **temperatura** na interface de aplicativo.
 
@@ -836,7 +848,9 @@ Parâmetro	|	Descrição
 ------	|	-----
 typeId	|	O ID do tipo de dispositivo
 
-Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+Para obter mais detalhes, consulte a documentação da
+[API
+de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 Neste cenário, precisamos implementar a configuração para dois tipos de dispositivos.
 
@@ -913,7 +927,9 @@ Parâmetro	|	Descrição
 typeId	|	O ID do tipo de dispositivo deviceId	|	O ID do dispositivo.
 applicationInterfaceId	|	O ID criado para a interface de aplicativo.
 
-Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+Para obter mais detalhes, consulte a documentação da
+[API
+de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 O exemplo a seguir mostra como usar cURL para recuperar o estado atual de *TemperatureSensor1* referenciando o identificador da interface de aplicativo que foi criada:
 ```
@@ -958,7 +974,9 @@ Use esta API para recuperar a configuração que foi implementada na última vez
 implementação PATCH foi concluída com sucesso. Para recuperar a configuração de um recurso que foi mudado,
 mas não implementado, utilize o método GET regular que está associado ao recurso que você deseja consultar.
 
-Para obter mais detalhes, veja a documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+Para obter mais detalhes, consulte a documentação da
+[API
+de REST HTTP do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 O exemplo a seguir mostra como usar cURL para recuperar a configuração mais recente implementada:
 ```

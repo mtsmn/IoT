@@ -1,4 +1,4 @@
----
+﻿---
 
 copyright:
 years: 2016, 2017
@@ -52,7 +52,7 @@ Neste exemplo, criaremos uma interface de aplicativo que forneça dados homogên
 
 Para obter um cenário de ponta a ponta detalhado que descreva este exemplo, consulte [Cenário de interface de aplicativo 1](im_index_scenario.html).
 
-![Mapeamento entre dispositivos de sensor de temperatura e um aplicativo no {{site.data.keyword.iot_short_notm}}.](images/Information "Mapeamento entre dispositivos de sensor de temperatura e um aplicativo no {{site.data.keyword.iot_short_notm}}")
+![Mapeamento entre dispositivos de sensor de temperatura e um aplicativo no {{site.data.keyword.iot_short_notm}}.](images/Information Management Device example.svg "Mapeamento entre dispositivos de sensor de temperatura e um aplicativo no {{site.data.keyword.iot_short_notm}}")
 
 Como parte do fluxo de dados da interface de aplicativo, é possível executar cálculos em dados de entrada para normalizar essas leituras em uma forma consistente para processamento. Isso significa que não é necessário gravar seu aplicativo para entender ou converter escalas de temperatura diferentes. O aplicativo recebe um estado único e normalizado e usa a propriedade de estado **temperature** em vez das propriedades **t** e **temp** específicas do dispositivo.
 
@@ -62,7 +62,7 @@ Neste exemplo, expandiremos o exemplo de tipo de dispositivo incluindo um conjun
 
 Para obter um cenário de ponta a ponta detalhado que descreva este exemplo, consulte [Cenário de interface de aplicativo 2](im_index_scenario_thing.html).
 
-![Mapeamento entre o item de temperatura e umidade e um aplicativo no {{site.data.keyword.iot_short_notm}}.](images/Information "Mapeamento entre múltiplos sensores ambientais em uma sala e um aplicativo no {{site.data.keyword.iot_short_notm}}")
+![Mapeamento entre o item de temperatura e umidade e um aplicativo no {{site.data.keyword.iot_short_notm}}.](images/Information Management Thing example.svg "Mapeamento entre múltiplos sensores ambientais em uma sala e um aplicativo no {{site.data.keyword.iot_short_notm}}")
 
 O Sensor de temperatura 1 e Sensor de umidade 3 publica dados ambientais dados que são coletados na sala R1. Os dados de sensores de temperatura e de umidade são mapeados separadamente para duas interfaces de aplicativo de tipo de dispositivo, uma para o tipo de dispositivo termômetro e outra para o tipo de dispositivo higrômetro de acordo com o exemplo anterior. Agora criaremos um tipo de item chamado Room e instanciaremos duas instâncias de item de sala (R1 e R2).
 
@@ -79,7 +79,7 @@ Os diagramas a seguir ilustram o mapeamento lógico entre dispositivos e aplicat
 
 Conceitos                        | Descrição       
 ------------- | ------------- | -------------  
-Evento | Eventos são o mecanismo pelo qual os dispositivos publicam dados no {{site.data.keyword.iot_short_notm}}. O dispositivo controla o conteúdo do evento e designa um nome para cada evento que ele envia.
+Event | Eventos são o mecanismo pelo qual os dispositivos publicam dados no {{site.data.keyword.iot_short_notm}}. O dispositivo controla o conteúdo do evento e designa um nome para cada evento que ele envia.
 Propriedade | Os dados transportam parte de uma carga útil do evento de dispositivo.
 Status | O valor mais recente de uma propriedade de estado mapeada.
 Composição                         | Uma construção lógica que define as interfaces de aplicativo que estão associadas a um tipo de item. A composição é especificada por um esquema de tipo de item.   

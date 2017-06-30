@@ -200,7 +200,8 @@ O cartão de temperatura aparece no painel e inclui um gráfico de linha dos dad
 meio da seção Dispositivos.
   2. Selecione o seu dispositivo na lista e, em seguida, clique em **Avançar**.
   3. Clique em **Conectar novo conjunto de dados**.
-  4. Na página Criar cartão de valor, selecione ou insira os valores a seguir e clique em **Avançar**.Evento: atualização
+  4. Na página Criar cartão de valor, selecione ou insira os valores a seguir e clique em **Avançar**.
+  Evento: atualização
      - Propriedade: umidade
      - Nome: Umidade
      - Tipo: Valor flutuante
