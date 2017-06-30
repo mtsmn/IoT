@@ -233,7 +233,7 @@ URL | 目標 Node-RED HTTP 輸入節點的 URL。
 若要建立「傳送文字訊息」動作，請執行下列動作：
 1. 在 Twilio 中，找出或建立新的「傳訊服務」，以用來傳送 Twilio 帳戶的文字訊息。如需相關資訊，請參閱 [Twilio 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.twilio.com/help){: new_window}。
 2. 在 Bluemix 中，使用 Node-RED URL `http://mynodered.mybluemix.net/red/` 來設定並存取 Node-RED 帳戶。如需相關資訊，請參閱 Bluemix 文件中的[使用 Node-RED 入門範本建立應用程式](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html)主題。
-3. 在 Node-RED 中，建立簡式兩節點流程（例如 [RTI-alert]->[SMS]）。
+3. 在 Node-RED 中，建立簡單的兩節點流程（例如 [RTI-alert]->[SMS]）。
   
 其中，第一個節點是 http 節點，第二個節點則是 twilio 節點。
  1. 新增 "http" 輸入節點，並使用下列屬性進行配置：

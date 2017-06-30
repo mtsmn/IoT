@@ -73,7 +73,7 @@ Per impostare l'attivazione condizionale per un regola:
  Per una descrizione più dettagliata dei trigger condizionali, consulta [Attivazione regola condizionale](#conditional "Panoramica attivazione condizionale").
 5. Crea o seleziona una o più azioni che si verificano se vengono soddisfatte le condizioni della regola.  
 Per ulteriori informazioni sulle azioni, consulta [Utilizzo delle azioni con le tue regole](#shared "Crea azioni").   
- Ad esempio: un azione può essere di inviare una email o di inserire un webhook.
+ Ad esempio: un azione può consistere nell'inviare una email o di inserire un webhook.
 3. **Facoltativo:** seleziona una priorità dell'avviso per la regola.  
  La priorità viene utilizzata per classificare gli avvisi che vengono visualizzati nella tabella **Rule-Based Analytics**. La priorità predefinita è bassa.
 6. Quando sei soddisfatto della tua regola, fai clic su **Save** per salvare senza attivare o su **Activate** per salvare e attivare la regola.

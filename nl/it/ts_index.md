@@ -33,9 +33,9 @@ Il tuo accesso alla tua organizzazione {{site.data.keyword.iot_short_notm}} potr
 Puoi risolvere questo problema accedendo alla tua organizzazione {{site.data.keyword.iot_short_notm}} utilizzando {{site.data.keyword.Bluemix_notm}} e modificando le impostazioni sulla scadenza del tuo profilo utente. Per modificare le tue impostazioni di scadenza utente:
 
 1. Dal tuo dashboard {{site.data.keyword.Bluemix_notm}}, apri il tuo servizio {{site.data.keyword.iot_short_notm}}.
-2. Fai clic su **Membri** dalla barra di navigazione.
-3. Fai clic sull'icona **Modifica**.
-4. Deseleziona la casella **Accesso con scadenza** e fai clic su **Salva**.
+2. Fai clic su **Members** dalla barra di navigazione.
+3. Fai clic sull'icona **Edit**.
+4. Deseleziona la casella **Access expires** e fai clic su **Save**.
 {: tsResolve}
 
 ## Problema di connessione a {{site.data.keyword.iot_short_notm}}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-27"
 
 ---
 
@@ -31,7 +31,7 @@ Las solicitudes se pueden iniciar utilizando el siguiente ejemplo API REST:
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Para obtener más información sobre el cuerpo de una solicitud de gestión de dispositivos, consulte la [Documentación de la API ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para obtener más información sobre el cuerpo de una solicitud de gestión de dispositivos, consulte la [Documentación de la API ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
 
 ## Acciones de dispositivos
 {: #device-actions}

@@ -653,19 +653,19 @@ Weitere Informationen zu Geräteaktionen finden Sie in [Gerätemanagementanforde
 ## Erweiterungspakete für das Gerätemanagement
 {: #dme}
 
-Ein Paket mit Gerätemanagementerweiterungen (Device Management Extensions, DME) ist ein JSON-Dokument, das eine Reihe von angepassten Gerätemanagementaktionen definiert. Die Aktionen können auf einem oder mehr Geräten initialisiert werden, die diese Aktionen unterstützen. Die Aktionen werden unter Verwendung des {{site.data.keyword.iot_short}}-Dashboards oder der Gerätemanagement-REST-APIs initialisiert. 
+Ein Paket mit Gerätemanagementerweiterungen (Device Management Extensions, DME) ist ein JSON-Dokument, das eine Reihe von angepassten Gerätemanagementaktionen definiert. Die Aktionen können auf einem oder mehr Geräten initialisiert werden, die diese Aktionen unterstützen. Die Aktionen werden unter Verwendung des {{site.data.keyword.iot_short}}-Dashboards oder der Gerätemanagement-REST-APIs initialisiert.
 
-Weitere Informationen zu DME-Paketformaten finden Sie in [Gerätemanagement erweitern](../../devices/device_mgmt/custom_actions.html). 
+Weitere Informationen zu DME-Paketformaten finden Sie in [Gerätemanagement erweitern](../../devices/device_mgmt/custom_actions.html).
 
 ### Unterstützung für angepasste Gerätemanagementaktionen bereitstellen
 
-Gerätemanagementaktionen, die in einem Erweiterungspaket definiert sind, können auf einem Gateway oder verbundenen Geräten initiiert werden, die diese Aktionen unterstützen. 
+Gerätemanagementaktionen, die in einem Erweiterungspaket definiert sind, können auf einem Gateway oder verbundenen Geräten initiiert werden, die diese Aktionen unterstützen.
 
-Ein Gerät gibt die Aktionstypen an, die es unterstützt, wenn es eine Managementanforderung an {{site.data.keyword.iot_short}} publiziert. Um einem Gerät die Möglichkeit zu geben, angepasste Aktionen zu empfangen, die in einem bestimmten Erweiterungspaket definiert sind, muss das Gerät die Bundle-ID dieser Erweiterung beim Publizieren eines Managementobjekts im Objekt 'supports' angeben. 
+Ein Gerät gibt die Aktionstypen an, die es unterstützt, wenn es eine Managementanforderung an {{site.data.keyword.iot_short}} publiziert. Um einem Gerät die Möglichkeit zu geben, angepasste Aktionen zu empfangen, die in einem bestimmten Erweiterungspaket definiert sind, muss das Gerät die Bundle-ID dieser Erweiterung beim Publizieren eines Managementobjekts im Objekt 'supports' angeben.
 
-Das Gateway kann die API `manage()` mit der Liste der Bundle-IDs aufrufen, um {{site.data.keyword.iot_short}} mitzuteilen, dass das Gateway oder das verbundene Gerät DME-Aktionen für die angegebene Liste von Bundle-IDs in der Managementanforderung unterstützt. 
+Das Gateway kann die API `manage()` mit der Liste der Bundle-IDs aufrufen, um {{site.data.keyword.iot_short}} mitzuteilen, dass das Gateway oder das verbundene Gerät DME-Aktionen für die angegebene Liste von Bundle-IDs in der Managementanforderung unterstützt.
 
-Das folgende Code-Snippet wird zum Publizierung einer Managementanforderung verwendet, um {{site.data.keyword.iot_short}} mitzuteilen, dass dieses Gateway eine DME-Aktion unterstützt: 
+Das folgende Code-Snippet wird zum Publizierung einer Managementanforderung verwendet, um {{site.data.keyword.iot_short}} mitzuteilen, dass dieses Gateway eine DME-Aktion unterstützt:
 
 ```java
 List<String> bundleIds = new ArrayList<String>();
@@ -674,9 +674,9 @@ bundleIds.add("example-dme-actions-v1");
 mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
 ```
 
-Der letzte Parameter gibt die angepasste Aktion an, die das Gerät unterstützt. 
+Der letzte Parameter gibt die angepasste Aktion an, die das Gerät unterstützt.
 
-Auf ähnliche Weise kann ein Gateway die entsprechende Gerätemethode aufrufen, um die DME-Aktionsunterstützung der angeschlossenen Geräten zu kommunizieren: 
+Auf ähnliche Weise kann ein Gateway die entsprechende Gerätemethode aufrufen, um die DME-Aktionsunterstützung der angeschlossenen Geräten zu kommunizieren:
 
 ```java
 List<String> bundleIds = new ArrayList<String>();
@@ -687,18 +687,18 @@ mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds)
 
 ### Angepasste Gerätemanagementaktionen bearbeiten
 
-Wenn auf einem Gateway oder Gerät, das an {{site.data.keyword.iot_short}} angeschlossen ist, eine angepasste Aktion initiiert wird, wird eine MQTT-Nachricht an das Gateway publiziert. Die Nachricht enthält Parameter, die als Bestandteil der Anforderung angegeben wurden. Das Gateway muss einen 'CustomActionHandler' hinzufügen, um die Nachricht empfangen und verarbeiten zu können. Die Nachricht wird als eine Instanz der Klasse `CustomAction` zurückgegeben, die folgende Eigenschaften hat: 
+Wenn auf einem Gateway oder Gerät, das an {{site.data.keyword.iot_short}} angeschlossen ist, eine angepasste Aktion initiiert wird, wird eine MQTT-Nachricht an das Gateway publiziert. Die Nachricht enthält Parameter, die als Bestandteil der Anforderung angegeben wurden. Das Gateway muss einen 'CustomActionHandler' hinzufügen, um die Nachricht empfangen und verarbeiten zu können. Die Nachricht wird als eine Instanz der Klasse `CustomAction` zurückgegeben, die folgende Eigenschaften hat:
 
 | Eigenschaft     | Datentyp     | Beschreibung |
 |----------------|----------------|----------------|
-|`bundleId` |Zeichenfolge | Eine eindeutige ID für die DME. |
-|`actionId` |Zeichenfolge|Die angepasste Aktion, die initialisiert wird. |
-|`typeId` |Zeichenfolge|Der Gerätetyp, auf dem die angepasste Aktion initiiert wird. |
-|`deviceId` |Zeichenfolge|Das Gerät, auf dem die angepasste Aktion initiiert wird. |
-|`payload` |Zeichenfolge|Die Nachricht, die die Parameterliste im JSON-Format enthält. |
-|`reqId` |Zeichenfolge|Die Anforderungs-ID, die verwendet wird, um auf die Anforderung der angepassten Aktion zu antworten. |
+|`bundleId` |Zeichenfolge | Eine eindeutige ID für die DME.|
+|`actionId` |Zeichenfolge|Die angepasste Aktion, die initialisiert wird.|
+|`typeId` |Zeichenfolge|Der Gerätetyp, auf dem die angepasste Aktion initiiert wird.|
+|`deviceId` |Zeichenfolge|Das Gerät, auf dem die angepasste Aktion initiiert wird.|
+|`payload` |Zeichenfolge|Die Nachricht, die die Parameterliste im JSON-Format enthält.|
+|`reqId` |Zeichenfolge|Die Anforderungs-ID, die verwendet wird, um auf die Anforderung der angepassten Aktion zu antworten.|
 
-Der folgende Code ist eine Beispielimplementierung eines `CustomActionHandler`: 
+Der folgende Code ist eine Beispielimplementierung eines `CustomActionHandler`:
 
 ```java
 import java.util.HashMap;
@@ -765,22 +765,22 @@ public class MyCustomActionHandler extends CustomActionHandler implements Runnab
 }
 ```
 
-Wenn der `CustomActionHandler` zur `ManagedGateway`-Instanz hinzugefügt wird, wird die Methode `handleCustomAction()` immer aufgerufen, wenn eine angepasste Aktion von der Anwendung initiiert wird. 
+Wenn der `CustomActionHandler` zur `ManagedGateway`-Instanz hinzugefügt wird, wird die Methode `handleCustomAction()` immer aufgerufen, wenn eine angepasste Aktion von der Anwendung initiiert wird.
 
-Das folgende Codebeispiel zeigt, wie der `CustomActionHandler` zur `ManagedGateway`-Instanz hinzugefügt wird. 
+Das folgende Codebeispiel zeigt, wie der `CustomActionHandler` zur `ManagedGateway`-Instanz hinzugefügt wird.
 
 ```java
 MyCustomActionHandler handler = new MyCustomActionHandler();
 mgdGateway.addCustomActionHandler(handler);
 ```
 
-Wenn das Gateway die Nachricht der angepassten Aktion empfängt, führt es die Aktion entweder aus oder es antwortet mit einem Fehlercode, mit dem angegeben wird, dass die Aktion zurzeit nicht ausgeführt werden kann. Das Gateway muss die Methode *setStatus()* verwenden, um den Status der Aktion festzulegen: 
+Wenn das Gateway die Nachricht der angepassten Aktion empfängt, führt es die Aktion entweder aus oder es antwortet mit einem Fehlercode, mit dem angegeben wird, dass die Aktion zurzeit nicht ausgeführt werden kann. Das Gateway muss die Methode *setStatus()* verwenden, um den Status der Aktion festzulegen:
 
 ```java
 action.setStatus(Status.OK);
 ```
 
-Weitere Informationen zur DME finden Sie in [Gerätemanagementanforderungen erweitern ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](../../devices/device_mgmt/custom_actions.html){: new_window}. 
+Weitere Informationen zur DME finden Sie in [Gerätemanagementanforderungen erweitern ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
 ## Empfangsbereitschaft für Geräteattributänderungen
 {: #listen_device_attributes}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-03-14"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -45,7 +45,7 @@ lastupdated: "2016-03-14"
 # アプリケーション用の HTTP Messaging API
 {: #rest_messaging_api}
 
-{{site.data.keyword.iot_short_notm}} HTTP Messaging API 資料にアクセスして、HTTP を使用してイベントをパブリッシュしたりコマンドを送信したりする方法に関する詳細情報を見つけるには、[{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window} を参照してください。
+{{site.data.keyword.iot_short_notm}} HTTP Messaging API 資料にアクセスして、HTTP を使用してイベントをパブリッシュしたりコマンドを送信したりする方法に関する詳細情報を見つけるには、[{{site.data.keyword.iot_short_notm}}HTTP Messaging API ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window} を参照してください。
 
 ## イベントとコマンドのパブリッシュ
 {: #event_command_publication}
@@ -53,10 +53,10 @@ lastupdated: "2016-03-14"
 MQTT メッセージング・プロトコルを使用するほかにも、HTTP を使用してイベントやコマンドを {{site.data.keyword.iot_short_notm}} にパブリッシュするようにアプリケーションを構成できます。そのためには、以下の HTTP REST API コマンドのいずれかを使用します。
 
 ### 無保護のイベント POST 要求
-<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### セキュアなイベント POST 要求
-<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **注:** デフォルト SSL ポートのポート 443 も、セキュアな HTTP API 呼び出し用に指定できます。
 

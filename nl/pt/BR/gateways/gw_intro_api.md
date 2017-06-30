@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-21"
+ years: 2015, 2017
+lastupdated: "2017-05-24"
 
 ---
 
@@ -94,3 +94,32 @@ Semelhante ao nível 0 de serviço de entrega de qualidade de serviço MQTT "no 
 Para obter mais informações sobre o protocolo MQTT e os níveis de qualidade de serviço para o {{site.data.keyword.iot_short_notm}}, consulte [Sistema de mensagens MQTT](../reference/mqtt/index.html).
 
 Para obter mais informações sobre como gerenciar dispositivos de gateway usando APIs, veja [APIs de REST HTTP para dispositivos de gateway](../gateways/gw_api.html).
+
+## Recebendo comandos
+{: #receive_commands}
+
+Além de usar o protocolo de sistema de mensagens MQTT, também é possível configurar seus dispositivos de gateway para receber comandos do {{site.data.keyword.iot_short_notm}} sobre HTTP usando comandos da API de sistema de mensagens HTTP. Um dispositivo de gateway pode receber comandos que são direcionados para dispositivos dentro de seu grupo de recursos associado. Para obter mais informações sobre grupos de recursos do gateway, veja [Controle de acesso ao gateway (beta)](../gateways/gateway-access-control.html).
+
+Use uma das URLs a seguir para enviar uma solicitação de `POST` de um gateway que está conectado ao {{site.data.keyword.iot_short_notm}}:
+
+### Solicitação de POST não segura
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+### Solicitação de POST segura
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+**Nota:** porta 443, a porta SSL padrão, também pode ser especificada para proteger as chamadas API HTTP.
+
+É possível incluir opcionalmente o parâmetro *waitTimeSecs* no corpo da solicitação de HTTP para especificar um número inteiro que represente o número máximo de segundos a aguardar por um comando:
+<pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>
+
+
+**Notas importantes:**
+- O valor de *waitTimeSecs* deve ser um número inteiro no intervalo de 0 a 3600 segundos. O valor
+padrão é 0.
+- Para receber comandos para qualquer tipo de dispositivo, use o caractere curinga "qualquer" (+) para o componente `typeId`. Se o caractere curinga for usado, o tipo de dispositivo estará contido no campo de cabeçalho de resposta *X-deviceType*.
+- Para receber comandos para qualquer dispositivo, use o caractere curinga "qualquer" (+) para o componente `deviceId`. Se o caractere curinga for usado, o identificador de dispositivo estará contido no campo de cabeçalho de resposta *X-deviceId*.
+- Para receber qualquer comando, use o caractere curinga "qualquer" (+) para o componente `command`. Se o caractere curinga for usado, o identificador de comando estará contido no campo de cabeçalho de resposta *X-commandId*.
+- Se o código de status de resposta de HTTP for 200, os dados do comando estarão contidos no corpo da resposta. Revise o campo de cabeçalho de resposta *Content-Type* para localizar o tipo de conteúdo.
+- Se o código de status de resposta de HTTP for 204, nenhum dado de comando estará disponível.

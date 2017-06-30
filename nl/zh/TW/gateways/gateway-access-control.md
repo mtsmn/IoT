@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -12,12 +12,13 @@ lastupdated: "2017-04-20"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 閘道存取控制
+# 閘道存取控制（測試版）
 {: #gateway-access-control}
 
 閘道裝置獲授權可代表其他裝置作業。閘道資源群組定義組織內每一個閘道都可以代表作業的裝置。閘道可獲指派*標準閘道* 角色。標準閘道只能代表其資源群組中的裝置來發佈或訂閱訊息。
 {: #shortdesc}
 
+**重要事項：**「{{site.data.keyword.iot_full}} 閘道存取控制」特性僅是有限測試版程式的一部分。未來更新可能包含與此特性的目前版本不相容的變更。請試用，並且[讓我們知道您的想法 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
 
 如需使用 API 來發佈閘道裝置事件的相關資訊，請參閱[閘道裝置的 HTTP 傳訊 API](../gateways/gw_intro_api.html)。
 

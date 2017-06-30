@@ -5,6 +5,8 @@
 物联网平台
 
     {: .navgroup id="learn"}
+    getting-started.md
+
     {: .topicgroup}
     关于
         iotplatform_overview.md
@@ -16,14 +18,19 @@
     {: .topicgroup}
     Beta 功能
         information_management/im_index.md
-        information_management/im_index_split.md
         information_management/im_index_scenario.md
         information_management/im_index_scenario_thing.md
+        gateways/gateway-access-control.md
         gateways/gw_intro_api.md
+        devices/device_cmd_api.md
+        [定制域 (Beta)](reference/security/set_up_certificates.html#custom_domains)
+        [向下钻取报告 (Beta)](reference/security/RM_security.html#drill_down)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     reference/api.md
+
+    [样本应用程序：OpenFridge](https://github.com/IBM/openfridge)
 
     {: .topicgroup}
     Watson IoT Platform 安全性
@@ -33,13 +40,7 @@
         reference/security/set_up_certificates.md
         reference/security/set_up_policies.md
 
-    {: .topicgroup}
-    Bluemix 安全性
-        [Bluemix 安全性](https://console.ng.bluemix.net/docs/security/index.html#security)
-        [Bluemix 平台安全性](https://console.ng.bluemix.net/docs/security/index.html#platform-security)
-        [Bluemix 合规性](https://console.ng.bluemix.net/docs/security/index.html#compliance)
-        [Bluemix 基础架构 (SoftLayer) 安全性](http://www.softlayer.com/security)
-        [Bluemix 基础架构 (SoftLayer) 合规性](http://www.softlayer.com/compliance)
+    [Bluemix 安全性](https://console.ng.bluemix.net/docs/security/index.html#security)
 
     reference/mqtt/index.md
     reference/device_model.md
@@ -141,7 +142,6 @@
         gateways/mqtt.md
         gateways/libraries/java_cli_gw.md
         gateways/libraries/java_cli_managed_gw.md
-        gateways/gateway-access-control.md
 
     blockchain/dev_blockchain.md
 

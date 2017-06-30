@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -43,12 +43,9 @@ API                     | Utilícela para...
 [Administración de la organización ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | Configurar una organización (incluyendo crear y suprimir dispositivos), comprobar el uso, el estado del servicio y diagnosticar problemas de conexión del dispositivo.
 [Seguridad ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Gestionar la autenticación y las invitaciones de usuarios, y la autorización de usuarios, claves de API y dispositivos.
 [Gestión de la información ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Acceder a los datos de sucesos del dispositivo, así como para obtener y actualizar la ubicación del dispositivo y obtener información meteorológica para dicha ubicación. **Nota:** la información meteorológica depende de la integración de los datos de The Weather Company.
-[The Weather Company ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html#!/Device_Location_Weather){: new_window} | Integrar datos de The Weather Company con sus dispositivos existentes.
 [Gestión de dispositivos ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | Interactuar con dispositivos gestionados utilizando el protocolo de gestión de dispositivos.
 [Mensajería ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | Publicar sucesos y enviar mandatos utilizando HTTP.
-
-
-
+[Gestión de riesgos ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | Gestión de los informes y las políticas de gestión de riesgos.
 ## API HTTP de extensión
 {: #api_extension}
 

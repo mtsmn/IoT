@@ -654,8 +654,7 @@ Para obter mais informações sobre ações de dispositivo, veja [Solicitações
 ## Pacotes de extensão de gerenciamento de dispositivo
 {: #dme}
 
-Um pacote de extensão de gerenciamento de dispositivo (DME) é um documento do JSON que define um conjunto de ações de gerenciamento de dispositivo customizado. 
-As ações podem ser iniciadas em um ou mais dispositivos que suportem essas ações. As ações são iniciadas usando o painel do {{site.data.keyword.iot_short}} ou
+Um pacote de extensão de gerenciamento de dispositivo (DME) é um documento do JSON que define um conjunto de ações de gerenciamento de dispositivo customizado. As ações podem ser iniciadas em um ou mais dispositivos que suportem essas ações. As ações são iniciadas usando o painel do {{site.data.keyword.iot_short}} ou
 as APIs de REST de gerenciamento de dispositivo.
 
 Para obter mais informações sobre formatos do pacote do DME, consulte [Estendendo o gerenciamento de

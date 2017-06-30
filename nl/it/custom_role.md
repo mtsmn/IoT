@@ -42,11 +42,11 @@ Il ruolo personalizzato è stato incluso nell'elenco di ruoli disponibili.
 Per modificare o eliminare un ruolo personalizzato:
 
 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, apri il pannello **Members** dalla barra di navigazione.
-2. Seleziona la scheda **Ruoli**.
+2. Seleziona la scheda **Roles**.
 3. Individua la colonna che corrisponde al ruolo personalizzato che desideri modificare.
 3. Fai clic sull'icona di modifica del nome del ruolo personalizzato.
 4. Effettua tutte le modifiche necessarie alla descrizione del ruolo e alle autorizzazioni.
-5. Per eliminare il ruolo, scorri fino alla parte inferiore dell'elenco delle categorie e fa clic su **Elimina ruolo**.
-5. Se hai effettuato modifiche, fai clic su **Salva** per aggiornare il ruolo.
+5. Per eliminare il ruolo, scorri fino alla parte inferiore dell'elenco delle categorie e fa clic su **Delete Role**.
+5. Se hai effettuato modifiche, fai clic su **Save** per aggiornare il ruolo.
 
 Il ruolo è stato aggiornato.

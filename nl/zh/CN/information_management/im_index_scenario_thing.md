@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -68,7 +68,7 @@ The code that is used in this example is available in the updated {{site.data.ke
 {: #add_device}  
 在此场景中，会使用两种设备类型和四个设备实例。设备实例 *temperatureSensor1* 和 *temperatureSensor2* 与设备类型 *Thermometer* 相关联。设备实例 *humiditySensor1* 和 *humiditySensor2* 与设备类型 *Hygrometer* 相关联。
 
-有关使用 REST API 来添加设备类型的信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofThings.ibmcloud.com/swagger/v0002.html#!/Device_Types) 文档。  
+有关使用 REST API 来添加设备类型的更多信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration) 文档。  
 
 ## 步骤 1：创建组合模式文件。  
 {: #crt_composition_file}  

@@ -87,7 +87,7 @@ TLS 需求取决于是要通过 MQTT 还是通过 HTTP 协议连接到 {{site.da
 
 ### 针对 HTTP 连接的 TLS 需求
 
-如果要使用缺省服务器证书，那么 {{site.data.keyword.iot_short_notm}} 需要 TLS V1、TLS V1.1 或 TLS V1.2 以及以下密码套件：
+如果要使用缺省服务器证书，那么 {{site.data.keyword.iot_short_notm}} 需要 TLS V1.1 或 TLS V1.2 以及以下密码套件：
 
 
 - TLS_RSA_WITH_AES_128_CBC_SHA

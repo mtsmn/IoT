@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -68,7 +68,7 @@ Utilice el siguiente caso de ejemplo para configurar su propio entorno de interf
 {: #add_device}  
 En este caso de ejemplo, se utilizan dos tipos de dispositivo y cuatro instancias de dispositivo. Las instancias de dispositivo *temperatureSensor1* y *temperatureSensor2* están asociadas al tipo de dispositivo *Thermometer*. Las instancias de dispositivo *humiditySensor1* y *humiditySensor2* están asociadas al tipo de dispositivo *Hygrometer*.
 
-Para obtener información sobre cómo utilizar las API REST para añadir un tipo de dispositivo, consulte la [documentación de la API REST HTTP de {{site.data.keyword.iot_short_notm}}](https://docs.internetofThings.ibmcloud.com/swagger/v0002.html#!/Device_Types).  
+Para obtener información sobre cómo utilizar las API REST para añadir un tipo de dispositivo, consulte la documentación de [{{site.data.keyword.iot_short_notm}}API REST HTTP](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration).   
 
 ## Paso 1. Cree un archivo de esquema de composición.  
 {: #crt_composition_file}  

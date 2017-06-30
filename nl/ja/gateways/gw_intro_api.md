@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-21"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -94,3 +94,31 @@ MQTT メッセージング・プロトコルの使用に加えて、HTTP Messagi
 {{site.data.keyword.iot_short_notm}} の MQTT プロトコルおよびサービス品質レベルについて詳しくは、[MQTT メッセージング](../reference/mqtt/index.html)を参照してください。
 
 API を使用したゲートウェイ・デバイスの管理について詳しくは、[ゲートウェイ・デバイス用の HTTP REST API](../gateways/gw_api.html) を参照してください。
+
+## コマンドの受信
+{: #receive_commands}
+
+MQTT メッセージング・プロトコルの使用に加えて、HTTP Messaging API コマンドを使用することで、HTTP を介してコマンドを {{site.data.keyword.iot_short_notm}} から受信するようにゲートウェイ・デバイスを構成することもできます。ゲートウェイ・デバイスは、関連するリソース・グループ内のデバイスに対するコマンドを受信することができます。ゲートウェイ・リソース・グループについて詳しくは、[ゲートウェイ・アクセス制御 (ベータ)](../gateways/gateway-access-control.html) を参照してください。
+
+{{site.data.keyword.iot_short_notm}} に接続されているゲートウェイから `POST` 要求を送信するには、以下のいずれかの URL を使用します。
+
+### 非セキュアな POST 要求
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+### セキュアな POST 要求
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+**注:** デフォルト SSL ポートのポート 443 も、セキュアな HTTP API 呼び出し用に指定できます。
+
+オプションで、HTTP 要求の body にパラメーター *waitTimeSecs* を含めて、コマンドを待機する最大秒数を表す整数を指定することができます。
+<pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>
+
+
+**重要事項:**
+- *waitTimeSecs* の値は、0 から 3600 までの範囲の整数にする必要があります。デフォルト値は 0 です。
+- すべてのデバイス・タイプに対するコマンドを受信するには、`typeId` コンポーネントで、「あらゆる」を意味するワイルドカード文字 (+) を使用します。このワイルドカード文字を使用すると、デバイス・タイプが応答ヘッダー・フィールド *X-deviceType* に含められます。
+- すべてのデバイスに対するコマンドを受信するには、`deviceId` コンポーネントで、「あらゆる」を意味するワイルドカード文字 (+) を使用します。このワイルドカード文字を使用すると、デバイス識別子が応答ヘッダー・フィールド *X-deviceId* に含められます。
+- すべてのコマンドを受信するには、`command` コンポーネントで、「あらゆる」を意味するワイルドカード文字 (+) を使用します。このワイルドカード文字を使用すると、コマンド識別子が応答ヘッダー・フィールド *X-commandId* に含められます。
+- HTTP 応答の状況コードが 200 である場合は、コマンド・データが応答の body に含まれています。応答ヘッダー・フィールド *Content-Type* を確認すると、コンテンツ・タイプが見つかります。
+- HTTP 応答の状況コードが 204 である場合、コマンド・データはありません。

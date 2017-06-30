@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -60,5 +60,5 @@ Os detalhes para o seu plano de precificação atual são exibidos.
 * [Segurança do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
 * [Segurança da plataforma do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [Conformidade do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Segurança do {{site.data.keyword.BluSoftlayer}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.softlayer.com/security){:new_window}
-* [Conformidade do {{site.data.keyword.BluSoftlayer}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.softlayer.com/compliance){:new_window}
+* [Segurança do {{site.data.keyword.BluSoftlayer_full}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.softlayer.com/security){:new_window}
+* [Conformidade do {{site.data.keyword.BluSoftlayer_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.softlayer.com/compliance){:new_window}

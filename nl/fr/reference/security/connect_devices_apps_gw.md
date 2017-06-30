@@ -59,7 +59,9 @@ Lorsque vous utilisez la messagerie MQTT sécurisée sur les ports 8883 ou 443, 
 
 Certaines bibliothèques client TLS (Transport Layer Security) ne prennent pas en charge les domaines qui incluent un caractère générique. Si vous ne pouvez pas changer de bibliothèques, désactivez la vérification des certificats.
 
-Les exigences TLS varient selon que vous vous connectez à {{site.data.keyword.iot_short_notm}} à l'aide du protocole MQTT ou HTTP. Les sections ci-après montrent les suites de chiffrement qui sont prises en charge si le certificat serveur par défaut est utilisé. Si vous utilisez votre propre certificat client, les suites de chiffrement qui sont prises en charge varient en fonction du certificat utilisé.
+Les exigences TLS varient selon que vous vous connectez à {{site.data.keyword.iot_short_notm}} à l'aide du protocole MQTT ou HTTP. 
+Les sections ci-après montrent les suites de chiffrement prises en charge si le
+certificat de serveur par défaut est utilisé. Si vous utilisez votre propre certificat de client, les suites de chiffrement utilisables varieront en fonction du certificat utilisé.
 
 ### Exigences TLS pour les connexions MQTT
 
@@ -87,7 +89,7 @@ Les exigences TLS varient selon que vous vous connectez à {{site.data.keyword.i
 
 ### Exigences TLS pour les connexions HTTP
 
-Si vous utilisez le certificat serveur par défaut, {{site.data.keyword.iot_short_notm}} requiert TLS v1, TLS v1.1 ou TLS v1.2 et les suites de chiffrement suivantes :
+Si vous utilisez le certificat de serveur par défaut, {{site.data.keyword.iot_short_notm}} requiert TLS v1.1 ou TLS v1.2 et les suites de chiffrement suivantes :
 
 
 - TLS_RSA_WITH_AES_128_CBC_SHA

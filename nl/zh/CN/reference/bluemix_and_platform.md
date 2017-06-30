@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -60,5 +60,5 @@ lastupdated: "2017-03-13"
 * [{{site.data.keyword.Bluemix_notm}} 安全 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 平台安全 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 合规性 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} 安全 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} 合规性 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer_full}} 安全 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer_notm}} 合规性 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://www.softlayer.com/compliance){:new_window}

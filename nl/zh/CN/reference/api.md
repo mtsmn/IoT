@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -44,9 +44,10 @@ API                     | 用于...
 [安全 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | 管理用户邀请和认证，以及用户、API 密钥和设备的授权。
 [信息管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  访问设备事件数据，以及获取和更新设备位置并取得该位置的天气信息。
 **注：**天气信息依赖于 The Weather Company 数据集成。
-[The Weather Company ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html#!/Device_Location_Weather){: new_window} | 将 The Weather Company 的数据与现有设备集成。
 [设备管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | 使用设备管理协议与受管设备进行交互。
 [消息传递 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | 使用 HTTP 发布事件并发送命令。
+[风险管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | 管理“风险管理”策略和报告。
+
 ## 扩展 HTTP API
 {: #api_extension}
 

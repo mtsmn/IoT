@@ -22,7 +22,7 @@ MQTT è il protocollo primario che i dispositivi e le applicazioni utilizzano pe
 ## Connessioni client
 {: #client_connections}
 
-Per informazioni sulla sicurezza client e su come collegare i client MQTT alle applicazioni in {{site.data.keyword.iot_short_notm}}, consulta [Connecting applications, devices, and gateways to {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
+Per informazioni sulla sicurezza client e su come connettere i client MQTT alle applicazioni in {{site.data.keyword.iot_short_notm}}, consulta [Connessione di applicazioni, dispositivi e gateway a {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
 
 ## Autenticazione MQTT
 {: #mqtt_authentication}
@@ -76,7 +76,7 @@ Un'applicazione può sottoscriversi agli eventi da uno o più dispositivi, ad es
 
 -  Sottoscrizione all'argomento iot-2/type/*device_type*/id/*device_id*/evt/*event_id*/fmt/*format_string*
 
-**Nota:**  per la sottoscrizione a più di un tipo di evento o agli eventi da più di un dispositivo, utilizza il carattere jolly "any" MQTT (+) per tutti i seguenti componenti:
+**Nota:** per la sottoscrizione a più di un tipo di evento o agli eventi da più di un dispositivo, utilizza il carattere jolly "qualsiasi" MQTT (+) per tutti i seguenti componenti:
 
 - device_type
 - device_id
@@ -90,7 +90,7 @@ Un'applicazione può sottoscriversi ai comandi che stanno venendo inviati a uno 
 
 -  Sottoscrizione all'argomento iot-2/type/*device_type*/id/*device_id*/cmd/*command_id*/fmt/*format_string*
 
-**Nota:**  per la sottoscrizione a più di un tipo di evento o agli eventi da più di un dispositivo, utilizza il carattere jolly "any" MQTT (+) per tutti i seguenti componenti:
+**Nota:** per la sottoscrizione a più di un tipo di evento o agli eventi da più di un dispositivo, utilizza il carattere jolly "qualsiasi" MQTT (+) per tutti i seguenti componenti:
 
 -  device_type
 -  device_id
@@ -104,7 +104,7 @@ Un'applicazione può sottoscriversi per monitorare lo stato di uno o più dispos
 
 -  Sottoscrizione all'argomento iot-2/type/*device_type*/id/*device_id*/mon
 
-**Nota:** per la sottoscrizione agli aggiornamenti da più di un dispositivo, utilizza il carattere jolly "any" MQTT (+) per tutti i seguenti componenti:
+**Nota:** per la sottoscrizione agli aggiornamenti da più di un dispositivo, utilizza il carattere jolly "qualsiasi" MQTT (+) per tutti i seguenti componenti:
 
 - device_type
 - device_id
@@ -116,7 +116,7 @@ Un'applicazione può sottoscriversi per monitorare lo stato di una o più applic
 
 - Sottoscrizione all'argomento iot-2/app/*appId*/mon
 
-**Nota:** per la sottoscrizione agli aggiornamenti di tutte le applicazioni, utilizza il carattere jolly "any" MQTT (+) per il componente *appId*.
+**Nota:** per la sottoscrizione agli aggiornamenti di tutte le applicazioni, utilizza il carattere jolly "qualsiasi" MQTT (+) per il componente *appId*.
 
 
 ## Restrizioni Quickstart
@@ -125,7 +125,7 @@ Se stai pianificando di creare un codice dell'applicazione da utilizzare con il 
 
 - Pubblicazione dei comandi
 - Sottoscrizione ai comandi
-- Utilizzo del carattere jolly "any" MQTT (+) nei componenti **deviceType** o **appId**
+- Utilizzo del carattere jolly "qualsiasi" MQTT (+) nei componenti **deviceType** o **appId**
 - La connessione MQTT tramite TLS (Transport Layer Security)
 - Applicazioni scalabili
 

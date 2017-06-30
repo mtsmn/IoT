@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -12,14 +12,15 @@ lastupdated: "2017-04-20"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Contrôle d'accès aux passerelles
+# Contrôle d'accès aux passerelles (bêta)
 {: #gateway-access-control}
 
-Les terminaux de passerelle sont habilités à agir pour le compte d'autres terminaux. Les groupes de ressources de passerelle définissent les terminaux d'une organisation pour le compte desquels les passerelles sont autorisées à agir. Les passerelles peuvent se voir attribuer le rôle *Passerelle standard*. Les passerelles standard peuvent uniquement publier ou s'abonner à des messages pour le compte de terminaux présents dans leur groupe de ressources.
+Les terminaux passerelle sont habilités à agir pour le compte d'autres terminaux. Les groupes de ressources de passerelle définissent les terminaux d'une organisation pour le compte desquels les passerelles sont autorisées à agir. Les passerelles peuvent se voir attribuer le rôle *Passerelle standard*. Les passerelles standard peuvent uniquement publier ou s'abonner à des messages pour le compte de terminaux présents dans leur groupe de ressources.
 {: #shortdesc}
 
+**Important :** La fonction {{site.data.keyword.iot_full}} Contrôle d'accès aux passerelles est disponible uniquement dans le cadre d'un programme bêta limité. Il est possible que des mises à jour ultérieures incluent des modifications incompatibles avec la version en cours de cette fonction. Essayez-la et [dites-nous ce que vous en pensez ![ ](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
-Pour plus d'informations sur la publication d'événements à partir de terminaux de passerelle à l'aide d'API, voir [API de messagerie HTTP pour des terminaux de passerelle](../gateways/gw_intro_api.html).
+Pour plus d'informations sur la publication d'événements à partir de terminaux passerelle à l'aide d'API, voir [API de messagerie HTTP pour des terminaux passerelle](../gateways/gw_intro_api.html).
 
 ## Affectation d'un rôle à une passerelle
 {: #gw_roles}

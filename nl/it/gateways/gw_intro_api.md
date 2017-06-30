@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-21"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -27,7 +27,7 @@ Per accedere alla documentazione dell'API di messaggistica HTTP {{site.data.keyw
 ## Connessioni client
 {: #client_connections}
 
-Per informazioni sulla sicurezza client e su come collegare i client ai dispositivi client e gateway in {{site.data.keyword.iot_short_notm}}, consulta [Connessione di applicazioni, dispositivi e gateway a {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
+Per informazioni sulla sicurezza client e su come connettere i client ai dispositivi client e gateway in {{site.data.keyword.iot_short_notm}}, consulta [Connessione di applicazioni, dispositivi e gateway a {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
 
 
 ## Pubblicazione eventi
@@ -49,7 +49,7 @@ Per inoltrare una richiesta `POST` da un dispositivo collegato a {{site.data.key
 - Se un gateway non è assegnato al ruolo *Gateway standard*, può pubblicare gli eventi al posto di tutti i dispositivi nell'organizzazione. Se il dispositivo collegato al gateway non è registrato, il gateway automaticamente registra tale dispositivo.
 - Assegna il ruolo *Gateway standard* se desideri controllare i livelli di autorizzazione.
 
-Per ulteriori informazioni sul ruolo dei gateway e dei gruppi di risorse, consulta [Controllo accesso gateway (Beta)](../gateways/gateway-access-control.html).
+Per ulteriori informazioni sul ruolo dei gateway e dei gruppi di risorse, consulta [Controllo dell'accesso al gateway (Beta)](../gateways/gateway-access-control.html).
 
 ### Autenticazione
 
@@ -94,3 +94,31 @@ Simile al livello di sicurezza di distribuzione 0 di QOS (quality of service) MQ
 Per ulteriori informazioni sul protocollo MQTT e sui livelli di QOS (quality of service) per {{site.data.keyword.iot_short_notm}}, consulta [Messaggistica MQTT](../reference/mqtt/index.html).
 
 Per informazioni sulla gestione dei dispositivi gateway utilizzando le API, consulta [API REST HTTP per dispositivi gateway](../gateways/gw_api.html).
+
+## Ricezione di comandi
+{: #receive_commands}
+
+Oltre a utilizzare il protocollo di messaggistica MQTT, puoi anche configurare i tuoi dispositivi gateway per ricevere comandi da {{site.data.keyword.iot_short_notm}} su HTTP utilizzando i comandi della API di messaggistica HTTP. Un dispositivo gateway può ricevere i comandi indirizzati ai dispositivi nel suo gruppo di risorse associato. Per ulteriori informazioni sui gruppi di risorse dei gateway, consulta [Controllo dell'accesso al gateway (Beta)](../gateways/gateway-access-control.html).
+
+Usa uno dei seguenti URL per inoltrare una richiesta `POST` da un gateway connesso a {{site.data.keyword.iot_short_notm}}:
+
+### Richiesta POST non sicura
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+### Richiesta POST sicura
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+**Nota:** la porta 443, la porta SSL predefinita, può anche essere specificata per le chiamate API HTTP sicure.
+
+Puoi, facoltativamente, includere il parametro *waitTimeSecs* nel corpo della richiesta HTTP per specificare un numero intero che rappresenta il numero massimo di secondi di attesa per un comando:
+<pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>
+
+
+**Note importanti:**
+- Il valore di *waitTimeSecs* deve essere un numero intero nell'intervallo 0 - 3600. Il valore predefinito è 0.
+- Per ricevere comandi da qualsiasi tipo di dispositivo, utilizza il carattere jolly "qualsiasi" (+) per il componente `typeId`. Se viene utilizzato il carattere jolly, il tipo di dispositivo è contenuto nel campo dell'intestazione della risposta *X-deviceType*.
+- Per ricevere comandi per da qualsiasi dispositivo, utilizza il carattere jolly "qualsiasi" (+) per il componente `deviceId`. Se viene utilizzato il carattere jolly, l'identificativo del dispositivo è contenuto nel campo dell'intestazione della risposta *X-deviceId*.
+- Per ricevere qualsiasi comando, utilizza il carattere jolly "qualsiasi" (+) per il componente `command`. Se viene utilizzato il carattere jolly, l'identificativo del comando è contenuto nel campo dell'intestazione della risposta *X-commandId*.
+- Se il codice di stato della risposta HTTP è 200, i dati del comando sono contenuti nel corpo della risposta. Esamina il campo dell'intestazione della risposta *Content-Type* per trovare il tipo di contenuto.
+- Se il codice di stato della risposta HTTP è 204, non è disponibile alcun dato del comando.

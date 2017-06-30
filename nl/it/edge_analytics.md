@@ -91,7 +91,7 @@ Per impostare l'attivazione condizionale per un regola:
  Per una descrizione più dettagliata dei trigger condizionali, consulta [Attivazione regola condizionale](cloud_analytics.html#conditional "Panoramica attivazione condizionale"), nella sessione di analisi cloud.
 5. Crea o seleziona una o più azioni che si verificano se vengono soddisfatte le condizioni della regola.  
 Per ulteriori informazioni sulle azioni edge, consulta [Creazione di azioni edge](#edge_actions "Crea azioni edge").   
- Esempio: un azione può essere di inviare i dati del dispositivo al cloud o di scrivere un avviso in un file locale.
+ Esempio: un azione può consistere nell'inviare i dati del dispositivo al cloud o di scrivere un avviso in un file locale.
 3. **Facoltativo:** seleziona una priorità dell'avviso per la regola.  
  La priorità viene utilizzata per classificare gli avvisi che vengono visualizzati nella tabella **Rule-Based Analytics**. La priorità predefinita è bassa.
 6. Quando sei soddisfatto della tua regola, fai clic su **Save**.

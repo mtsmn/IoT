@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-21"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -94,3 +94,31 @@ lastupdated: "2017-03-21"
 有关 {{site.data.keyword.iot_short_notm}} 的 MQTT 协议和服务质量级别的更多信息，请参阅 [MQTT 消息传递](../reference/mqtt/index.html)。
 
 有关使用 API 管理网关设备的更多信息，请参阅[针对网关设备的 HTTP REST API](../gateways/gw_api.html)。
+
+## 接收命令
+{: #receive_commands}
+
+除了使用 MQTT 消息传递协议外，还可以配置网关设备，以使用 HTTP 消息传递 API 命令通过 HTTP 从 {{site.data.keyword.iot_short_notm}} 接收命令。网关设备可以接收导向到其相关联资源组内设备的命令。有关网关资源组的更多信息，请参阅[网关访问控制 (Beta)](../gateways/gateway-access-control.html)。
+
+使用以下某个 URL 提交来自连接到 {{site.data.keyword.iot_short_notm}} 的网关的 `POST` 请求：
+
+### 非安全 POST 请求
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+### 安全 POST 请求
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+**注：**还可以为安全 HTTP API 调用指定端口 443（缺省 SSL 端口）。
+
+您可以选择性地在 HTTP 请求的主体中包含 *waitTimeSecs* 参数，以指定整数，代表等待命令的最大秒数：
+<pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>
+
+
+**重要说明：**
+- *waitTimeSecs* 的值必须是 0 - 3600 秒之间的整数。缺省值为 0。
+- 要接收任何设备类型的命令，请对 `typeId` 组件使用“任意”通配符 (+)。如果使用通配符，那么设备类型包含在响应头字段 *X-deviceType* 中。
+- 要接收任何设备的命令，请对 `deviceId` 组件使用“任意”通配符 (+)。如果使用通配符，那么设备标识包含在响应头字段 *X-deviceId* 中。
+- 要接收任何命令，请对 `command` 组件使用“任意”通配符 (+)。如果使用通配符，那么命令标识包含在响应头字段 *X-commandId* 中。
+- 如果 HTTP 响应状态码为 200，那么命令数据包含在响应的主体中。请复查响应头字段 *Content-Type*，以找到内容类型。
+- 如果 HTTP 响应状态码为 204，那么没有可用的命令数据。

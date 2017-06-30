@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-21"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -94,3 +94,31 @@ Zusammen mit der Anforderung muss ein Anforderungsheader des Typs `Content-Type`
 Weitere Informationen zum MQTT-Protokoll und den Servicequalitätsstufen für {{site.data.keyword.iot_short_notm}} finden Sie in [MQTT-Messaging](../reference/mqtt/index.html).
 
 Weitere Informationen zum Verwalten von Gateway-Geräten mithilfe von APIs finden Sie in [HTTP-REST-APIs für Gateway-Geräte](../gateways/gw_api.html).
+
+## Befehle empfangen
+{: #receive_commands}
+
+Zusätzlich zur Verwendung des MQTT-Nachrichtenprotokolls können Sie Ihre Gateway-Geräte auch so konfigurieren, dass Befehle von {{site.data.keyword.iot_short_notm}} über HTTP mithilfe von HTTP-Messaging-API-Befehlen empfangen werden. Ein Gateway-Gerät kann Befehle empfangen, die an Geräte innerhalb der zugehörigen Ressourcengruppe gerichtet sind. Weitere Informationen zu Gateway-Ressourcengruppen finden Sie unter [Gateway-Zugriffssteuerung (Beta)](../gateways/gateway-access-control.html).
+
+Verwenden Sie eine der folgenden URLs, um eine `POST`-Anforderung von einem Gateway zu übergeben, das mit {{site.data.keyword.iot_short_notm}} verbunden ist:
+
+### Nicht sichere POST-Anforderung
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/commands/<var class="keyword varname">Befehl</var>/request</code></pre>
+
+### Sichere POST-Anforderung
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/commands/<var class="keyword varname">Befehl</var>/request</code></pre>
+
+**Hinweis:** Port 443, der SSL-Standardport, kann auch für sichere HTTP-API-Aufrufe angegeben werden.
+
+Optional können Sie den Parameter *waitTimeSecs* in den Hauptteil der HTTP-Anforderung einschließen, um eine Ganzzahl für die maximale Anzahl Sekunden anzugeben, für die auf einen Befehl gewartet werden soll:
+<pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>
+
+
+**Wichtige Hinweise:**
+- Der Wert von *waitTimeSecs* muss eine Ganzzahl zwischen 0 - 3600 Sekunden sein. Der Standardwert ist '0'.
+- Um Befehle für jeden Gerätetyp empfangen zu können, verwenden Sie für die Komponente `Typ-ID` das Platzhalterzeichen für "beliebig" (+). Wird das Platzhalterzeichen verwendet, so ist der Gerätetyp im Antwortheaderfeld *X-deviceType* enthalten.
+- Um Befehle für jedes Gerät empfangen zu können, verwenden Sie für die Komponente `Geräte-ID` das Platzhalterzeichen für "beliebig" (+). Wird das Platzhalterzeichen verwendet, so ist die Geräte-ID im Antwortheaderfeld *X-Geräte-ID* enthalten.
+- Um alle Befehle empfangen zu können, verwenden Sie für die Komponente `Befehl` das Platzhalterzeichen für "beliebig" (+). Wird das Platzhalterzeichen verwendet, so ist die Befehls-ID im Antwortheaderfeld *X-commandId* enthalten.
+- Wenn der Statuscode der HTTP-Antwort 200 ist, dann sind die Befehlsdaten im Hauptteil der Antwort enthalten. Suchen Sie im Antwortheaderfeld *Inhaltstyp* nach dem Inhaltstyp.
+- Wenn der Statuscode der HTTP-Antwort 204 ist, dann sind keine Befehlsdaten verfügbar.

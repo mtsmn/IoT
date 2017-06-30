@@ -5,8 +5,10 @@
 Internet of Things Platform
 
     {: .navgroup id="learn"}
+    getting-started.md
+
     {: .topicgroup}
-    Sobre
+    About
         iotplatform_overview.md
         feature_overview.md
         reference/standards_and_requirements.md
@@ -14,43 +16,42 @@ Internet of Things Platform
         [IoT pricing calculator](http://iot-cost-calculator.ng.bluemix.net/)
 
     {: .topicgroup}
-    Recursos beta
+    Beta features
         information_management/im_index.md
-        information_management/im_index_split.md
         information_management/im_index_scenario.md
         information_management/im_index_scenario_thing.md
+        gateways/gateway-access-control.md
         gateways/gw_intro_api.md
+        devices/device_cmd_api.md
+        [Custom domains (Beta)](reference/security/set_up_certificates.html#custom_domains)
+        [Drill-down reporting (Beta)](reference/security/RM_security.html#drill_down)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     reference/api.md
 
+    [Sample app: OpenFridge](https://github.com/IBM/openfridge)
+
     {: .topicgroup}
-    Segurança do Watson IoT Platform
+    Watson IoT Platform security
         reference/security/index.md
         reference/security/custom_cards_server.md
         reference/security/RM_security.md
         reference/security/set_up_certificates.md
         reference/security/set_up_policies.md
 
-    {: .topicgroup}
-    Segurança do Bluemix
-        [Bluemix security](https://console.ng.bluemix.net/docs/security/index.html#security)
-        [Bluemix platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security)
-        [Bluemix compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance)
-        [Bluemix Infrastructure (SoftLayer) security](http://www.softlayer.com/security)
-        [Bluemix Infrastructure (SoftLayer) compliance](http://www.softlayer.com/compliance)
+    [Bluemix security](https://console.ng.bluemix.net/docs/security/index.html#security)
 
     reference/mqtt/index.md
     reference/device_model.md
 
     {: .topicgroup}
-    Bibliotecas do cliente
+    Client libraries
         [C++](https://github.com/ibm-watson-iot/iot-cpp)
         [C#](https://github.com/ibm-watson-iot/iot-csharp)
-        [C integrada](https://github.com/ibm-watson-iot/iot-embeddedc)
+        [Embedded C](https://github.com/ibm-watson-iot/iot-embeddedc)
         [Java](https://github.com/ibm-watson-iot/iot-java)
-        [Embedded C](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)
+        [mBed C++](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)
         [Node.js](https://github.com/ibm-watson-iot/iot-nodejs)
         [Python](https://github.com/ibm-watson-iot/iot-python)
     {: .navgroup-end}
@@ -59,14 +60,14 @@ Internet of Things Platform
     index.md
 
     {: .topicgroup}
-    Conectando-se ao Watson IoT Platform
+    Connecting to Watson IoT Platform
         iotplatform_task.md
         gateways/dashboard.md
         platform_authorization.md
         reference/security/connect_devices_apps_gw.md
 
     {: .topicgroup}
-    Gerenciando o Watson IoT Platform
+    Managing Watson IoT Platform
         reference/extensions/index.md
         cloudant_connector.md
         message_hub.md
@@ -74,7 +75,7 @@ Internet of Things Platform
         bl_blockchain_integration.md
 
     {: .topicgroup}
-    Acessando o Watson IoT Platform
+    Accessing Watson IoT Platform
         add_users.md
         singlesignon.md
         roles_index.md
@@ -85,7 +86,7 @@ Internet of Things Platform
         reference/gateway_roles_access.md
 
     {: .topicgroup}
-    Analisando dados de IoT em tempo real
+    Analyzing real-time IoT data
         analytics.md
         data_visualization.md
         im_schemas.md
@@ -95,19 +96,19 @@ Internet of Things Platform
         edge_analytics.md
 
     {: .topicgroup}
-    Usando amostras de IoT
+    Using IoT samples
         nodereddevice_sample.md
         visualizingdata_sample.md
         getting_started/quickstart/index.md
 
     {: .topicgroup}
-    Desenvolvendo para Watson IoT Platform
+    Developing for Watson IoT Platform
         developer_doc_overview.md
         iot_platform_client_lib.md
         applications/dev_nodered.md
 
     {: .topicgroup}
-    Desenvolvendo aplicativos
+    Developing applications
         applications/app_dev_index.md
         applications/api.md
         reference/mqtt/index.md
@@ -118,7 +119,7 @@ Internet of Things Platform
         applications/libraries/c_sharp.md
 
     {: .topicgroup}
-    Desenvolvendo  dispositivos
+    Developing devices
         devices/device_dev_index.md
         devices/api.md
         reference/mqtt/index.md
@@ -134,24 +135,23 @@ Internet of Things Platform
         devices/libraries/mbedcpp.md
 
     {: .topicgroup}
-    Desenvolvendo gateways
+    Developing gateways
         gateways/gw_dev_index.md
         gateways/gw_api.md
         reference/mqtt/index.md
         gateways/mqtt.md
         gateways/libraries/java_cli_gw.md
         gateways/libraries/java_cli_managed_gw.md
-        gateways/gateway-access-control.md
 
     blockchain/dev_blockchain.md
 
     {: .topicgroup}
-    Receitas
-        [Receitas para conectar seus dispositivos](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)
-        [Organização do Watson IoT Platform Play](https://play.internetofthings.ibmcloud.com/)
-        [Conectando um Intel Galileo ao Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/)
-        [Conectando um Kit de iniciador do ARM mbed IoT](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/)
-        [Conectando um Raspberry Pi ao Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/)
+    Recipes
+        [Recipes for connecting your devices](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)
+        [Watson IoT Platform Play organization](https://play.internetofthings.ibmcloud.com/)
+        [Connecting an Intel Galileo to the Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/)
+        [Connecting an ARM mbed IoT Starter Kit](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/)
+        [Connecting a Raspberry Pi to Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

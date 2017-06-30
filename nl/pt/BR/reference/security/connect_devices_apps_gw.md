@@ -88,7 +88,7 @@ O {{site.data.keyword.iot_short_notm}} requer TLS v1.2 e os conjuntos de criptog
 
 ### Requisitos de TLS para conexões HTTP
 
-Se você estiver usando o certificado de servidor padrão, o {{site.data.keyword.iot_short_notm}} requererá TLS v1, TLS v1.1 ou TLS v1.2 e os conjuntos de criptografia a seguir:
+Se você está usando o certificado do servidor padrão, o {{site.data.keyword.iot_short_notm}} requer o TLS v1.1 ou TLS v1.2 e os conjuntos de cifras a seguir:
 
 
 - TLS_RSA_WITH_AES_128_CBC_SHA

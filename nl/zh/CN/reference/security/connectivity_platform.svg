@@ -14,20 +14,13 @@
    viewBox="0 0 478.78057 243.70057"
    id="svg5645"
    version="1.1"
-   inkscape:version="0.47 r22583"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="connectivity_platform.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
      id="defs5647">
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 121.85029 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="478.78052 : 121.85029 : 1"
-       inkscape:persp3d-origin="239.39026 : 81.233526 : 1"
-       id="perspective280" />
     <marker
        style="overflow:visible"
        id="TriangleOutM"
@@ -894,17 +887,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.44"
-     inkscape:cx="239.39023"
-     inkscape:cy="148.79468"
+     inkscape:zoom="2.55"
+     inkscape:cx="202.40573"
+     inkscape:cy="93.239126"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1440"
-     inkscape:window-height="838"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1019"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -1081,13 +1074,6 @@
        width="159.05861"
        id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000191px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-       id="text44191"
-       font-size="11"
-       x="346.57446"
-       y="429.8287"
-       sodipodi:linespacing="125%">Watson IoT Platform</text>
     <rect
        ry="0"
        rx="0"
@@ -1111,9 +1097,7 @@
          sodipodi:role="line"
          x="136.77055"
          y="512.95654"
-         id="tspan8202">IoT <tspan
-   style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3088">设备</tspan></tspan><tspan
+         id="tspan8202">IoT 设备</tspan><tspan
          sodipodi:role="line"
          x="136.77055"
          y="526.70654"
@@ -1143,15 +1127,11 @@
          id="tspan44239-7"
          y="529.77588"
          x="383.15887"
-         sodipodi:role="line">REST <tspan
-   style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3102">和 </tspan></tspan><tspan
+         sodipodi:role="line">REST 和 </tspan><tspan
          y="543.52588"
          x="383.15887"
          sodipodi:role="line"
-         id="tspan7973"><tspan
-   style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3104">实时</tspan> API</tspan><tspan
+         id="tspan7973">实时 API</tspan><tspan
          y="557.27588"
          x="383.15887"
          sodipodi:role="line"
@@ -1179,9 +1159,7 @@
          sodipodi:role="line"
          x="134.90659"
          y="440.80542"
-         id="tspan8202-7">IoT <tspan
-   style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3086">网关</tspan></tspan><tspan
+         id="tspan8202-7">IoT 网关</tspan><tspan
          sodipodi:role="line"
          x="134.90659"
          y="454.55542"
@@ -1207,9 +1185,7 @@
          sodipodi:role="line"
          x="369.39407"
          y="484.14883"
-         id="tspan4887"><tspan
-   style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3100">组织：</tspan>q1bc3a</tspan><tspan
+         id="tspan4887">组织：q1bc3a</tspan><tspan
          sodipodi:role="line"
          x="369.39407"
          y="498.21133"
@@ -1240,14 +1216,10 @@
          id="flowPara7065" /></flowRoot>    <text
        sodipodi:linespacing="125%"
        y="589.29645"
-       x="252.61366"
+       x="246.61366"
        font-size="11"
        id="text66184"
-       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial">
-      <tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SimHei;-inkscape-font-specification:SimHei"
-         id="tspan3098">因特网</tspan>
-    </text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">因特网</text>
     <path
        inkscape:connector-curvature="0"
        id="path13593"
@@ -1292,24 +1264,21 @@
              cy="200.3"
              cx="389.39999"
              stroke-miterlimit="10"
-             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none"
-             d="m 407.99999,200.3 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.27249,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.32751,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
+             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none" />
           <circle
              id="circle5299"
              r="18.6"
              cy="200.3"
              cx="250"
              stroke-miterlimit="10"
-             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none"
-             d="m 268.6,200.3 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
+             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none" />
           <circle
              id="circle5301"
              r="18.6"
              cy="200.3"
              cx="110.6"
              stroke-miterlimit="10"
-             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none"
-             d="m 129.2,200.3 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.600002,-8.3275 -18.600002,-18.6 0,-10.27249 8.327502,-18.6 18.600002,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
+             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none" />
         </g>
         <g
            id="g5303"
@@ -1320,16 +1289,14 @@
              cy="299.70001"
              cx="389.39999"
              stroke-miterlimit="10"
-             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none"
-             d="m 407.99999,299.70001 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.27249,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.32751,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
+             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none" />
           <circle
              id="circle5307"
              r="18.6"
              cy="299.70001"
              cx="250"
              stroke-miterlimit="10"
-             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none"
-             d="m 268.6,299.70001 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
+             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none" />
         </g>
       </g>
       <line
@@ -1480,33 +1447,37 @@
            y="-62.752552" /></flowRegion><flowPara
          id="flowPara5808" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif"
-       x="68.772636"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="72.772636"
        y="566.47717"
        id="text4681-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="68.772636"
+         x="72.772636"
          y="566.47717"
          style="font-size:12.50000191px"
-         id="tspan5522"><tspan
-   style="font-family:SimHei;-inkscape-font-specification:SimHei"
-   id="tspan3090">完全支持通过</tspan><tspan
-   style="font-weight:bold"
-   id="tspan5514"> TLS</tspan> (V1.2) <tspan
-   style="font-family:SimHei;-inkscape-font-specification:SimHei"
-   id="tspan3092">连接。</tspan></tspan><tspan
+         id="tspan5832">完全支持通过</tspan><tspan
          sodipodi:role="line"
-         x="68.772636"
-         y="583.42975"
+         x="72.772636"
+         y="580.72717"
+         style="font-size:12.50000191px"
+         id="tspan5522"><tspan
+   style="font-weight:bold"
+   id="tspan5514">TLS</tspan> (V1.2) 连接。</tspan><tspan
+         sodipodi:role="line"
+         x="72.772636"
+         y="603.35217"
+         style="font-size:12.50000191px"
+         id="tspan5512">支持开放式标准 <tspan
+   style="font-weight:bold"
+   id="tspan5516" /></tspan><tspan
+         sodipodi:role="line"
+         x="72.772636"
+         y="618.97717"
          style="font-size:12.50000191px"
          id="tspan5525"><tspan
-   id="tspan3096"
-   style="font-size:12.50000191px;font-family:SimHei;-inkscape-font-specification:SimHei">支持开放式标准 </tspan><tspan
    style="font-weight:bold"
-   id="tspan5527">MQTT</tspan> (V3.1.1)<tspan
-   style="font-family:SimHei;-inkscape-font-specification:SimHei"
-   id="tspan3094">。</tspan></tspan></text>
+   id="tspan5527">MQTT</tspan> (V3.1.1)。</tspan></text>
     <g
        id="g11065"
        transform="translate(292.82563,483.0889)">
@@ -1639,5 +1610,20 @@
          y="444.83862"
          style="font-size:12.50000191px"
          id="tspan5454-5">MQTT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="333.3031"
+       y="425.96832"
+       id="text266398-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="333.3031"
+         y="425.96832"
+         id="tspan4887-5">Watson™ IoT Platform </tspan><tspan
+         sodipodi:role="line"
+         x="333.3031"
+         y="440.96832"
+         id="tspan266402-4" /></text>
   </g>
 </svg>

@@ -86,7 +86,7 @@ Stato | Il valore più recente di una proprietà di stato associata.
 Composizione                         | Un costrutto logico che definisce le interfacce dell'associazione associate a un tipo oggetto. La composizione è specificata da uno schema di tipo oggetto.   
 
 ### Risorse di gestione delle informazioni
-Puoi gestire le risorse utilizzando le API REST. Per informazioni sulle API REST, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html).
+Puoi gestire le risorse utilizzando le API REST. Per informazioni sulle API REST, consulta la [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html).
 
 Risorse tipo                        | Descrizione       
 ------------- | ------------- | -------------  
@@ -97,7 +97,7 @@ Risorse di schema                         |  Costrutti programmatici che definis
 
 Risorse di interfaccia                        | Descrizione       
 ------------- | ------------- | -------------  
-Interfaccia applicazione | Un costrutto programmatico che a cui le applicazioni possono connettersi, o che possono sottoscrivere, per appurare lo stato di un dispositivo o di un oggetto. L'interfaccia dell'applicazione è definita da uno schema dell'interfaccia dell'applicazione che definisce la forma della struttura dei dati di stato memorizzati come stato dispositivo od oggetto. Lo stato viene aggiornato in risposta ad eventi di stato in entrata. Un'interfaccia dell'applicazione associata a un tipo dispositivo può avere una singola interfaccia fisica come input. Un'interfaccia dell'applicazione associata a un tipo oggetto può avere una o più interfacce dell'applicazione come input.
+Interfaccia applicazione | Un costrutto programmatico che a cui le applicazioni possono connettersi, o che possono sottoscrivere, per appurare lo stato di un dispositivo o di un oggetto. L'interfaccia applicazione è definita da uno schema di interfaccia applicazione che imposta la struttura dei dati di stato memorizzati come stato del dispositivo o dell'oggetto. Lo stato viene aggiornato in risposta ad eventi di stato in entrata. Un'interfaccia dell'applicazione associata a un tipo dispositivo può avere una singola interfaccia fisica come input. Un'interfaccia dell'applicazione associata a un tipo oggetto può avere una o più interfacce dell'applicazione come input.
 
 Risorse di istanza                        | Descrizione       
 ------------- | ------------- | -------------  
@@ -115,7 +115,7 @@ Associazioni                         | Un costrutto programmatico che definisce 
 
 Utilizza la seguente procedura come supporto per la configurazione delle risorse di cui hai bisogno per iniziare l'associazione dei tuo i dati del dispositivo utilizzando le interfacce.
 
-Per i dettagli sull'API, consulta la documentazione [{{site.data.keyword.iot_short_notm}} HTTP REST API ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html){:new_window}.
+Per i dettagli sull'API, consulta la documentazione della [API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html){:new_window}.
 
 **Suggerimento:** per informazioni più dettagliate su ciascuno dei passi, vedi gli scenari di esempio oppure utilizza i link per andare direttamente a uno specifico passo nello scenario di esempio. Lo [scenario di esempio 1](im_index_scenario.html#scenario) descrive i passi per creare un'interfaccia dell'applicazione di tipo dispositivo per dispositivi termometro eterogenei e lo [scenario di esempio 2](im_index_scenario_thing.html#scenario) sviluppa ulteriormente il concetto descrivendo come creare un'interfaccia dell'applicazione che ti consente di utilizzare i dati da due diversi tipi di dispositivo climatico uniti in un oggetto di tipo stanza.
 

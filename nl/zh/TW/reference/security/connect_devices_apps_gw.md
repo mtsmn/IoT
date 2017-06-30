@@ -87,7 +87,7 @@ MQTT 是透過 TCP 及 WebSockets 所支援。MQTT 用戶端會使用適當的�
 
 ### HTTP 連線的傳輸層安全 (TLS) 需求
 
-如果您使用的是預設伺服器憑證，則 {{site.data.keyword.iot_short_notm}} 需要 TLS 第 1 版、TLS 1.1 版或 TLS 1.2 版，以及下列密碼組合：
+如果您使用的是預設伺服器憑證，則 {{site.data.keyword.iot_short_notm}} 需要 TLS 1.1 版或 TLS 1.2 版，以及下列密碼組合：
 
 
 - TLS_RSA_WITH_AES_128_CBC_SHA

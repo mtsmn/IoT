@@ -37,7 +37,7 @@ Wenn Sie sich bei {{site.data.keyword.iot_short_notm}} registrieren, erhalten Si
 
 Aus Gründen Ihrer Sicherheit ist es unmöglich, zwischen Organisationen zu kommunizieren. Die einzige Möglichkeit, Daten zwischen zwei Organisationen zu übertragen, besteht darin, innerhalb jeder der Organisationen eine Anwendung zu erstellen, die mit Anwendungen in der anderen Organisation kommuniziert.
 
-**Hinweis:** Ihre {{site.data.keyword.iot_short_notm}}-Organisations-ID unterscheidet sich von Ihrer [Bluemix-Organisation](../../docs/admin/orgs_spaces.html#orginfo). 
+**Hinweis:** Ihre {{site.data.keyword.iot_short_notm}}-Organisations-ID unterscheidet sich von Ihrer [Bluemix-Organisation](../../docs/admin/orgs_spaces.html#orginfo).
 
 ### Geräte
 

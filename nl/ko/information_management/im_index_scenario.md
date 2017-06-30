@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -61,7 +61,7 @@ lastupdated: "2017-04-10"
 
 이 시나리오에서는 두 개의 디바이스 유형과 두 개의 디바이스 인스턴스를 가정합니다. 디바이스 인스턴스 *TemperatureSensor1*은 디바이스 유형 *EnvSensor1*과 연관되어 있습니다. 디바이스 인스턴스 *TemperatureSensor2*는 디바이스 유형 *EnvSensor2*와 연관되어 있습니다. 
 
-REST API를 사용한 디바이스 유형 추가에 대한 정보는 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Types) 문서를 참조하십시오. 
+REST API를 사용한 디바이스 유형 추가에 대한 정보는 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration) 문서를 참조하십시오. 
 
 ## 1단계: 이벤트 스키마 파일 작성. 
 {: #step1}
@@ -148,7 +148,7 @@ schemaFile	|	로컬 이벤트 스키마 JSON 파일의 경로입니다.
 
 
 
-세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) 문서를 참조하십시오. 
+세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas) 문서를 참조하십시오. 
 
 다음 예제는 cURL을 사용하여 이벤트 스키마 리소스 *tEventSchema.json*을 작성하는 방법을 표시합니다. 
 
@@ -231,7 +231,7 @@ name	|	작성 중인 이벤트 유형의 이름을 제공합니다.
 schemaId	|	이벤트 스키마 리소스에 대해 작성된 id입니다.
 
 
-세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types) 문서를 참조하십시오. 
+세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Event_Types) 문서를 참조하십시오. 
 
 
 다음 예제는 cURL을 사용하여 섭씨로 측정되는 온도 이벤트에 대한 이벤트 유형을 작성합니다. 
@@ -310,7 +310,7 @@ POST /physicalinterfaces
 name	|	작성 중인 실제 인터페이스의 이름을 제공합니다.
 
 
-세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) 문서를 참조하십시오. 
+세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces) 문서를 참조하십시오. 
 
 이 시나리오에서는 각 이벤트 유형마다 하나씩 두 개의 실제 인터페이스가 필요합니다. 
 
@@ -387,7 +387,7 @@ eventId	|	디바이스 이벤트 페이로드에서 이벤트 이름을 입력�
 eventTypeId	|	이벤트 유형에 대해 작성된 id입니다.
 
 
-세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) 문서를 참조하십시오. 
+세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces) 문서를 참조하십시오. 
 
 이 시나리오에서는 다음 이벤트 유형이 지정된 실제 인터페이스에 추가됩니다. 
 - 섭씨 온도 이벤트 *tevt*가 주제의 *eventId* 및 이벤트 스키마 리소스 작성의 *eventTypeId*를 사용하여 ID *5847d1df6522050001db0e1a*의 실제 인터페이스에 추가됩니다. 
@@ -448,7 +448,7 @@ PUT /device/types/{typeId}
 physicalInterfaceId	|	실제 인터페이스에 대해 작성된 id입니다.
 
 
-세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 문서를 참조하십시오. 
+세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 문서를 참조하십시오. 
 
 이 시나리오에서는 실제 인터페이스 *5847d1df6522050001db0e1a*에 연결하도록 디바이스 유형 *EnvSensor1*이 업데이트되며 실제 인터페이스 *5847d1df6522050001db0e1b*에 연결하도록 디바이스 유형 *EnvSensor2*이 업데이트됩니다. 
 
@@ -556,7 +556,7 @@ name	|	작성 중인 애플리케이션 인터페이스 스키마의 이름을 �
 schemaFile	|	로컬 애플리케이션 인터페이스 스키마 JSON 파일의 경로입니다.
 
 
-세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) 문서를 참조하십시오. 
+세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas) 문서를 참조하십시오. 
 
 다음 예제는 cURL을 사용하여 애플리케이션 인터페이스 스키마를 작성하는 방법을 표시합니다. 
 
@@ -606,7 +606,7 @@ name	|	작성 중인 애플리케이션 인터페이스의 이름을 제공합�
 schemaId	|	애플리케이션 인터페이스 스키마 리소스에 대해 작성된 id입니다.
 
 
-세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Application_Interfaces) 문서를 참조하십시오. 
+세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Application_Interfaces) 문서를 참조하십시오. 
 
 이 시나리오에서는 이전 응답에서 리턴된 스키마 ID *5846ec826522050001db0e11*을 사용하여 애플리케이션 인터페이스 스키마를 애플리케이션 인터페이스에 추가합니다. 
 
@@ -657,7 +657,7 @@ schemaId	|	애플리케이션 인터페이스 리소스에 대해 작성된 id�
 refs/schema	|	애플리케이션 인터페이스 리소스의 경로입니다. 일반적인 값: /schemas/*schemaId*
 
 
-	세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 문서를 참조하십시오. 
+	세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 문서를 참조하십시오. 
 
 이 시나리오에서는 애플리케이션 인터페이스가 디바이스 유형 *EnvSensor1* 및 디바이스 유형 *EnvSensor2*와 연관됩니다. 
 
@@ -745,7 +745,7 @@ applicationInterfaceId		|	애플리케이션 인터페이스에 대해 작성된
 propertyMappings	|	디바이스 이벤트 페이로드의 특성으로 애플리케이션 인터페이스에 대해 정의된 특성을 맵핑하는 유효한 JSON 구조입니다. 다음 예제를 참조하십시오.
 
 
-세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 문서를 참조하십시오. 
+세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 문서를 참조하십시오. 
 
 이 시나리오에서는 인바운드 이벤트 *tevt*의 **t** 특성을 애플리케이션 인터페이스의 **temperature** 특성에 맵핑하기 위한 디바이스 유형 *EnvSensor1*의 맵핑을 정의합니다. 또한 인바운드 이벤트 *tempevt*의 **temp** 특성을 애플리케이션 인터페이스의 **temperature** 특성에 맵핑하기 위한 디바이스 유형 *EnvSensor2*의 맵핑도 정의합니다. 
 
@@ -829,7 +829,7 @@ PATCH /device/types/{typeId}
 ------	|	-----
 typeId	|	디바이스 유형 ID입니다.
 
-세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 문서를 참조하십시오. 
+세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 문서를 참조하십시오. 
 
 이 시나리오에서는 두 개의 디바이스 유형에 대한 구성을 배치해야 합니다. 
 
@@ -907,7 +907,7 @@ typeId	|	디바이스 유형 ID
 deviceId	|	디바이스 ID입니다.
 applicationInterfaceId		|	애플리케이션 인터페이스에 대해 작성된 id입니다.
 
-세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 문서를 참조하십시오. 
+세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 문서를 참조하십시오. 
 
 다음 예제는 cURL을 사용하여 작성된 애플리케이션 인터페이스의 ID를 참조함으로써 *TemperatureSensor1*의 현재 상태를 검색하는 방법을 표시합니다. 
 ```
@@ -949,7 +949,7 @@ GET /device/types/<typeId>/deployedconfiguration
 ```
 이 API를 사용하면 PATCH 배치 조작이 정상적으로 완료된 최근 시간에 배치된 구성을 검색할 수 있습니다. 변경되었지만 배치되지 않은 리소스의 구성을 검색하려면 조회할 리소스와 연관된 일반 GET 메소드를 사용하십시오.
 
-세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 문서를 참조하십시오. 
+세부사항은 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 문서를 참조하십시오. 
 
 다음 예제는 cURL을 사용하여 최근에 배치된 구성을 검색하는 방법을 보여줍니다. 
 ```

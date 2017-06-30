@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-21"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -94,3 +94,31 @@ De forma parecida a la calidad de servicio MQTT "at most once" del servicio de e
 Para obtener más información sobre el protocolo MQTT y la calidad de los niveles de servicio para {{site.data.keyword.iot_short_notm}}, consulte [Mensajería MQTT](../reference/mqtt/index.html).
 
 Para obtener más información sobre la gestión de dispositivos de pasarela mediante API, consulte [API REST HTTP para dispositivos de pasarela](../gateways/gw_api.html).
+
+## Recepción de mandatos
+{: #receive_commands}
+
+Además de utilizar el protocolo de mensajería MQTT, es posible configurar los dispositivos de pasarela para recibir mandatos desde {{site.data.keyword.iot_short_notm}} sobre HTTP utilizando mandatos de API de mensajería HTTP. Un dispositivo de pasarela puede recibir mandatos dirigidos a otros dispositivos dentro de su grupo de recursos asociado. Para obtener más información sobre los grupos de recursos de pasarela, consulte [Control de acceso de pasarela (Beta)](../gateways/gateway-access-control.html).
+
+Utilice uno de los URL siguientes para enviar una solicitud `POST` desde una pasarela conectada a {{site.data.keyword.iot_short_notm}}:
+
+### Solicitud POST no segura
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+### Solicitud POST segura
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+**Nota:** el puerto 443, el puerto SSL predeterminado, también se puede especificar para llamadas de API HTTP seguras.
+
+Opcionalmente se puede incluir el mandato *waitTimeSecs* en el cuerpo de la solicitud HTTP para especificar un entero que represente el número máximo de segundos por lo que se esperará un mandato: 
+<pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>
+
+
+**Notas importantes:**
+- El valor de *waitTimeSecs* debe ser un entero entre 0 y 3600 segundos. El valor predeterminado es 0.
+- Para recibir mandatos de cualquier tipo de dispositivo, utilice el carácter "cualquiera" (+) para el componente `typeId`. Si se utiliza el carácter de comodín, el tipo de dispositivo estará en el campo de cabecera de respuesta *X-deviceType*. 
+- Para recibir mandatos de cualquier dispositivo, utilice el carácter "cualquiera" (+) para el componente `deviceId`. Si se utiliza el carácter de comodín, el identificador de dispositivo estará en el campo de cabecera de respuesta *X-deviceId*. 
+- Para recibir cualquier mandato, utilice el carácter de comodín "cualquiera" (+) para el componente `command`. Si se utiliza el carácter de comodín, el identificador de mandato estará en el campo de cabecera de respuesta *X-commandId*. 
+- Si el código de estado de respuesta HTTP es 200, los datos del mandato se incluyen en el cuerpo de la respuesta. Revise el campo de cabecera de respuesta *Content-Type* para encontrar el tipo de contenido. 
+- Si el código de estado de respuesta HTTP es 204, quiere decir que no hay disponibles datos de mandato. 

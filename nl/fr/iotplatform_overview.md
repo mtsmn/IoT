@@ -18,7 +18,7 @@ lastupdated: "2017-03-13"
 {{site.data.keyword.iot_full}} fournit aux applications un accès puissant aux terminaux et aux données IoT afin de vous aider à composer rapidement des applications d'analyse, des tableaux de bord de visualisation et des applications IoT mobiles.
 {:shortdesc}
 
-{{site.data.keyword.iot_short_notm}} vous permet d'effectuer des opérations de gestion de terminaux puissantes, de stocker des données de terminal et d'y accéder, et de connecter une grande diversité de terminaux et de terminaux de passerelle. {{site.data.keyword.iot_short_notm}} fournit une communication sécurisée vers et depuis vos terminaux à l'aide de MQTT et de TLS.
+{{site.data.keyword.iot_short_notm}} vous permet d'effectuer des opérations de gestion de terminaux puissantes, de stocker des données de terminal et d'y accéder, et de connecter une grande diversité de terminaux et de terminaux passerelle. {{site.data.keyword.iot_short_notm}} fournit une communication sécurisée vers et depuis vos terminaux à l'aide de MQTT et de TLS.
 
 ## Architecture de {{site.data.keyword.iot_short_notm}}
 {: #watsoniotplatform_architecture}
@@ -51,7 +51,7 @@ Les **terminaux non gérés** représentent tous les terminaux sans un agent de 
 
 ### Passerelles
 
-Les passerelles sont des terminaux spécialisés qui possèdent les fonctions combinées d'une application et d'un terminal, ce qui leur permet de servir de points d'accès pour d'autres terminaux. Les terminaux qui ne peuvent pas se connecter directement à Internet peuvent accéder au service {{site.data.keyword.iot_short_notm}} en se connectant d'abord au terminal de passerelle.
+Les passerelles sont des terminaux spécialisés qui possèdent les fonctions combinées d'une application et d'un terminal, ce qui leur permet de servir de points d'accès pour d'autres terminaux. Les terminaux qui ne peuvent pas se connecter directement à Internet peuvent accéder au service {{site.data.keyword.iot_short_notm}} en se connectant d'abord au terminal passerelle.
 
 Les passerelles doivent être enregistrées avant de pouvoir se connecter au service.
 

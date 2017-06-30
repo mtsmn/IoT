@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-21"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -94,3 +94,31 @@ MQTT 서비스 품질(QoS) "최대 한 번" 전달 서비스 레벨 0과 유사�
 MQTT 프로토콜 및 {{site.data.keyword.iot_short_notm}}의 서비스 품질(QoS) 레벨에 대한 자세한 정보는 [MQTT 메시징](../reference/mqtt/index.html)을 참조하십시오. 
 
 API를 사용하여 게이트웨이 디바이스를 관리하는 데 대한 자세한 정보는 [게이트웨이 디바이스용 HTTP REST API](../gateways/gw_api.html)를 참조하십시오. 
+
+## 명령 수신
+{: #receive_commands}
+
+MQTT 메시징 프로토콜 사용 외에도 HTTP 메시징 API 명령을 사용하여 HTTP를 통해 {{site.data.keyword.iot_short_notm}}에서 이벤트를 명령을 수신하도록 게이트웨이 디바이스를 구성할 수도 있습니다. 게이트웨이 디바이스는 연관된 리소스 그룹 내의 디바이스에 전달되는 명령을 수신할 수 있습니다. 게이트웨이 리소스 그룹에 대한 자세한 정보는 [게이트웨이 액세스 제어(베타)](../gateways/gateway-access-control.html)를 참조하십시오. 
+
+다음 URL 중 하나를 사용하여 {{site.data.keyword.iot_short_notm}}에 연결된 게이트웨이에서 `POST` 요청을 제출하십시오. 
+
+### 비보안 POST 요청
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+### 보안 POST 요청
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+**참고:** 기본 SSL 포트인 443 포트가 보안 HTTP API 호출에 대해 지정될 수도 있습니다. 
+
+명령을 대기하는 시간의 최대수(초)를 표시하는 정수를 지정하도록 HTTP 요청의 본문에 매개변수 *waitTimeSecs*를 선택적으로 포함시킬 수 있습니다. 
+<pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>
+
+
+**중요 참고사항:**
+- *waitTimeSecs*의 값은 0 - 3600초 범위의 정수여야 합니다. 기본값은 0입니다. 
+- 디바이스 유형에 대한 명령을 수신하려면 `typeId` 컴포넌트에 대해 "any" 와일드카드 문자(+)를 사용하십시오. 와일드카드 문자가 사용되면 디바이스 유형이 응답 헤더 필드 *X-deviceType*에 포함됩니다.
+- 디바이스에 대한 명령을 수신하려면 `deviceId` 컴포넌트에 대해 "any" 와일드카드 문자(+)를 사용하십시오. 와일드카드 문자가 사용되면 디바이스 ID가 응답 헤더 필드 *X-deviceId*에 포함됩니다.
+- 명령을 수신하려면 `command` 컴포넌트에 대해 "any" 와일드카드 문자(+)를 사용하십시오. 와일드카드 문자가 사용되면 명령 ID가 응답 헤더 필드 *X-commandId*에 포함됩니다.
+- HTTP 응답 상태 코드가 200인 경우, 명령 데이터는 응답의 본문에 포함됩니다. 컨텐츠 유형을 찾으려면 응답 헤더 필드 *Content-Type*을 검토하십시오.
+- HTTP 응답 상태 코드가 204인 경우, 명령 데이터를 사용할 수 없습니다. 

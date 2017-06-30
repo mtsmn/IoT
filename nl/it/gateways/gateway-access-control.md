@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -12,12 +12,13 @@ lastupdated: "2017-04-20"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Controllo dell'accesso al gateway
+# Controllo dell'accesso al gateway (Beta)
 {: #gateway-access-control}
 
 I dispositivi gateway sono autorizzati ad agire per conto di altri dispositivi. I gruppi di risorse gateway definiscono in una organizzazione quali gateway possono interagire al posto di quali dispositivi. Ai gateway può essere assegnato il ruolo *Gateway standard*. I gateway standard possono soltanto pubblicare o sottoscrivere i messaggi al posto dei dispositivi nel loro gruppo di risorse.
 {: #shortdesc}
 
+**Importante:** la funzione Controllo dell'accesso al gateway di {{site.data.keyword.iot_full}} è disponibile solo come parte di un programma beta limitato. Futuri aggiornamenti possono includere modifiche incompatibili con la versione corrente di questa funzione. Provala e [facci sapere cosa ne pensi ![Icona link esterno](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 Per informazioni sulla pubblicazione degli eventi dai dispositivi gateway utilizzando le API, consulta [API di messaggistica HTTP per i dispositivi gateway](../gateways/gw_intro_api.html).
 

@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -72,10 +72,10 @@ Utilisez l'exemple suivant pour mettre en place votre propre environnement d'int
 
 Dans ce scénario, on utilise deux types de terminaux et deux instances de terminaux. L'instance de terminal *TemperatureSensor1* est associée au type de terminal *EnvSensor1*. L'instance de terminal *TemperatureSensor2* est associée au type de terminal *EnvSensor2*.
 
-Pour plus d'informations sur l'utilisation de l'API REST servant à ajouter un type de
+Pour des informations sur l'utilisation de l'API REST servant à ajouter un type de
 terminal, consultez la documentation correspondante dans le document
-[API
-REST HTTP de {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Types) (en anglais).
+[API REST HTTP de {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration) (en anglais).
+
 
 ## Etape 1 : créez un fichier schéma d'événement
 {: #step1}
@@ -167,7 +167,7 @@ schemaFile	|	Chemin du fichier JSON local contenant le schéma d'événement.
 
 
 
-Pour plus d'informations, consultez la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) (en anglais).
+Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas) (en anglais).
 
 L'exemple suivant montre comment utiliser cURL pour créer la ressource Schéma d'événement *tEventSchema.json* :
 
@@ -252,7 +252,7 @@ name	|	Nom que vous donnez au type d'événement que vous créez.
 schemaId	|	Identificateur créé précédemment pour la ressource Schéma d'événement.
 
 
-Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types) (en anglais).
+Pour plus d'informations, consultez la documentation de l'[API REST HTTP de {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Event_Types) (en anglais).
 
 
 L'exemple suivant montre comment utiliser cURL afin de créer un type d'événement pour un événement de température mesuré en degrés Celsius :
@@ -331,7 +331,7 @@ Paramètre	|	Description
 name	|	Nom que vous donnez à l'interface physique que vous créez.
 
 
-Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) (en anglais).
+Pour plus d'informations, consultez la documentation de l'[API REST HTTP de {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces) (en anglais).
 
 Dans ce scénario, nous avons besoin de deux interfaces physiques, une pour chaque type d'événement.
 
@@ -408,7 +408,7 @@ eventId	|	Nom d'événement issu de la charge utile de l'événement émis par l
 eventTypeId	|	Identificateur créé précédemment pour le type d'événement.
 
 
-Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) (en anglais).
+Pour plus d'informations, consultez la documentation de l'[API REST HTTP de {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces) (en anglais).
 
 Dans ce scénario, les types d'événement suivants sont ajoutés aux interfaces physiques spécifiées :
 - L'événement de température en degrés Celsius, *tevt*, est ajouté à l'interface physique dont
@@ -478,7 +478,7 @@ Paramètre	|	Description
 physicalInterfaceId	|	Identificateur créé pour l'interface physique.
 
 
-Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) (en anglais).
+Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) (en anglais).
 
 Dans ce scénario, le type de terminal *EnvSensor1* est mis à jour pour se connecter à l'interface physique *5847d1df6522050001db0e1a* et le type de terminal *EnvSensor2* est mis à jour pour se connecter à l'interface physique *5847d1df6522050001db0e1b*.
 
@@ -586,7 +586,7 @@ name	|	Nom que vous donnez au schéma d'interface d'application que vous créez.
 schemaFile	|	Chemin du fichier JSON local contenant le schéma d'interface d'application.
 
 
-Pour plus d'informations, consultez la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) (en anglais).
+Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas) (en anglais).
 
 L'exemple suivant montre comment utiliser cURL pour créer le schéma d'interface d'application :
 
@@ -637,7 +637,7 @@ name	|	Nom que vous donnez à l'interface d'application que vous créez.
 schemaId	|	Identificateur créé précédemment pour la ressource Schéma d'interface d'application.
 
 
-Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Application_Interfaces) (en anglais).
+Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Application_Interfaces) (en anglais).
 
 Dans ce scénario, utilisez l'identificateur de schéma
 *5846ec826522050001db0e11* qui a été renvoyé dans la réponse précédente pour
@@ -693,7 +693,7 @@ schemaId	|	Identificateur créé pour la ressource Interface d'application.
 refs/schema	|	Chemin de la ressource Interface d'application. Généralement : /schemas/*schemaId*
 
 
-Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) (en anglais).
+Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) (en anglais).
 
 Dans ce scénario, l'interface d'application est associée au type de terminal *EnvSensor1* et au type de terminal *EnvSensor2*.
 
@@ -787,7 +787,7 @@ applicationInterfaceId	|	Identificateur précédemment créé pour l'interface d
 propertyMappings	|	Structure JSON valide mettant en correspondance les propriétés définies pour l'interface d'application avec les propriétés contenues dans la charge utile des événements du terminal. Consultez les exemples ci-dessous.
 
 
-Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) (en anglais).
+Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) (en anglais).
 
 Dans ce scénario, nous définissons des mappages pour le type de terminal
 *EnvSensor1* afin de mapper la propriété **t** de
@@ -883,7 +883,7 @@ Paramètre	|	Description
 ------	|	-----
 typeId	|	Identificateur du type de terminal.
 
-Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) (en anglais).
+Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) (en anglais).
 
 Dans ce scénario, nous devons déployer une configuration pour deux types de terminaux.
 
@@ -965,7 +965,7 @@ typeId	|	Identificateur du type de terminal.
 deviceId	|	Identificateur du terminal.
 applicationInterfaceId	|	Identificateur créé précédemment pour l'interface d'application.
 
-Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) (en anglais).
+Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) (en anglais).
 
 L'exemple suivant montre comment utiliser cURL pour obtenir l'état actuel
 de *TemperatureSensor1* en faisant référence à l'identificateur de l'interface
@@ -1012,7 +1012,7 @@ GET /device/types/<typeId>/deployedconfiguration
 Utilisez cette API pour obtenir la configuration qui a été déployée la dernière fois que la demande PATCH avec l'opération 'deploy' a réussi. Pour obtenir la configuration d'une ressource dont l'état change mais qui n'est pas
 déployée, utilisez la méthode GET classique en l'associant à la ressource en question.
 
-Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) (en anglais).
+Pour plus d'informations, consultez la documentation de l'[ API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) (en anglais).
 
 L'exemple suivant montre comment utiliser cURL pour obtenir la dernière configuration déployée :
 ```

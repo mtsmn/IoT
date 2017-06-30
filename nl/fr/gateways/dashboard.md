@@ -19,7 +19,7 @@ lastupdated: "2017-03-16"
 # Connexion de passerelles
 {: #IoT_connectGateway}
 
-Avant de pouvoir commencer à recevoir des données depuis des terminaux connectés à vos passerelles, vous devez connecter la passerelle à {{site.data.keyword.iot_full}}. Connecter une passerelle à {{site.data.keyword.iot_short_notm}} implique de créer un type de terminal de passerelle et d'enregistrer la passerelle auprès de {{site.data.keyword.iot_short_notm}}. Vous pouvez ensuite utiliser les informations d'enregistrement pour connecter la passerelle à {{site.data.keyword.iot_short_notm}}.
+Avant de pouvoir commencer à recevoir des données depuis des terminaux connectés à vos passerelles, vous devez connecter la passerelle à {{site.data.keyword.iot_full}}. Connecter une passerelle à {{site.data.keyword.iot_short_notm}} implique de créer un type de terminal passerelle et d'enregistrer la passerelle auprès de {{site.data.keyword.iot_short_notm}}. Vous pouvez ensuite utiliser les informations d'enregistrement pour connecter la passerelle à {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
 Les passerelles représentent une classe spécialisée de terminal dans {{site.data.keyword.iot_short_notm}}. Les passerelles servent de points d'accès à {{site.data.keyword.iot_short_notm}} pour les autres terminaux.
@@ -28,14 +28,14 @@ Les passerelles représentent une classe spécialisée de terminal dans {{site.d
 ## Avant de commencer
 {: #Prerequisites}
 
-Les terminaux de passerelle possèdent des autorisations supplémentaires par rapport aux terminaux réguliers et peuvent exécuter les fonctions suivantes :
+Les terminaux passerelle possèdent des autorisations supplémentaires par rapport aux terminaux réguliers et peuvent exécuter les fonctions suivantes :
 - Enregistrer de nouveaux terminaux sur {{site.data.keyword.iot_short_notm}}
 - Envoyer et recevoir leurs propres données de détection, tout comme un terminal connecté
 - Envoyer et recevoir des données pour le compte des terminaux qui leur sont connectés
 - Exécuter un agent de gestion des terminaux, de manière à pouvoir le gérer, et gérer les terminaux qui lui sont connectés  
 Pour les informations du développeur de passerelle, voir [Connectivité MQTT pour les passerelles](mqtt.html).
 
-Vous pouvez également utiliser des passerelles pour exécuter des fonctions Edge Analytics sur les données envoyées par les terminaux de passerelle. Pour plus d'informations, voir [Edge analytics](../edge_analytics.html) et [Installation de l'agent Edge Analytics](#edge).
+Vous pouvez également utiliser des passerelles pour exécuter des fonctions Edge Analytics sur les données envoyées par les terminaux passerelle. Pour plus d'informations, voir [Edge analytics](../edge_analytics.html) et [Installation de l'agent Edge Analytics](#edge).
 
 ## Etape 1 : Enregistrement de votre passerelle auprès de {{site.data.keyword.iot_short_notm}}  
 {: #register_gateway}
@@ -62,9 +62,9 @@ Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être ass
   </ul>3. Facultatif : Entrez des métadonnées et des attributs de type de passerelle.    
  **Astuce :** Vous pouvez ajouter et éditer des attributs et des métadonnées ultérieurement.
  4. Cliquez sur **Créer** pour ajouter le nouveau type de passerelle.
-10. Cliquez sur **Suivant** pour commencer le processus d'ajout de votre terminal de passerelle avec le type de passerelle sélectionné.
+10. Cliquez sur **Suivant** pour commencer le processus d'ajout de votre terminal passerelle avec le type de passerelle sélectionné.
 11. Entrez un ID de terminal, tel que `my_gateway_device`.  
-L'ID de terminal permet d'identifier le terminal de passerelle dans le tableau de bord {{site.data.keyword.iot_short_notm}} et représente également un paramètre requis pour la connexion de votre terminal de passerelle à {{site.data.keyword.iot_short_notm}}.  
+L'ID de terminal permet d'identifier le terminal passerelle dans le tableau de bord {{site.data.keyword.iot_short_notm}} et représente également un paramètre requis pour la connexion de votre terminal passerelle à {{site.data.keyword.iot_short_notm}}.  
 **Important :** L'ID de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
  <ul>
  <li>Caractères alphanumériques (a-z, A-Z, 0-9)</li>
@@ -73,12 +73,12 @@ L'ID de terminal permet d'identifier le terminal de passerelle dans le tableau d
  <li>Points (.)</li>  
  </ul>
  **Astuce :** Pour les terminaux connectés à un réseau, l'ID de terminal pourrait être par exemple l'adresse MAC du terminal sans aucun deux-points de séparation.  
-12. Facultatif : Cliquez sur **Zones supplémentaires** pour ajouter des informations de terminal de passerelle, par exemple, le numéro de série, le fabricant, le modèle, etc.  
+12. Facultatif : Cliquez sur **Zones supplémentaires** pour ajouter des informations de terminal passerelle, par exemple, le numéro de série, le fabricant, le modèle, etc.  
  **Astuce :** Vous pouvez ajouter et éditer ces informations ultérieurement.
 12. Facultatif : Entrez les métadonnées JSON de terminal.  
  **Astuce :** Vous pouvez ajouter et éditer des métadonnées de terminal ultérieurement.
-13. Cliquez sur **Suivant** pour terminer l'ajout de votre terminal de passerelle.
-14. Vérifiez que les informations récapitulatives sont correctes, puis cliquez sur  **Ajouter** pour ajouter le terminal de passerelle.  
+13. Cliquez sur **Suivant** pour terminer l'ajout de votre terminal passerelle.
+14. Vérifiez que les informations récapitulatives sont correctes, puis cliquez sur  **Ajouter** pour ajouter le terminal passerelle.  
 **Astuce :** Vous avez la possibilité d'accepter un jeton d'authentification généré automatiquement ou de fournir vous-même un jeton d'authentification. Si vous choisissez de créer votre propre jeton, assurez-vous qu'il comporte entre 8 et 36 caractères et qu'il contient une combinaison de minuscules et de majuscules, des nombres, un trait d'union, un tiret de soulignement ou un point. Le jeton ne doit pas contenir des séquences de caractères répétés, des mots de dictionnaire, des noms d'utilisateur ni d'autres séquences prédéfinies.
 15. Sur la page Informations sur le terminal, copiez et sauvegardez les informations de terminal suivantes :  
  - ID d'organisation, par exemple, `tubo8x`
@@ -88,7 +88,7 @@ L'ID de terminal permet d'identifier le terminal de passerelle dans le tableau d
  - Jeton d'authentification, par exemple, `PtBVriRqIg4uh)_-Kl`  
   **Astuce :** Vous aurez besoin d'un ID d'organisation, d'un jeton d'authentification, d'un type de terminal et d'un ID de terminal pour configurer votre terminal afin qu'il se connecte à {{site.data.keyword.iot_short_notm}}.  
 
-Félicitations, vous avez enregistré votre terminal de passerelle. Vous pouvez maintenant configurer votre terminal de passerelle pour qu'il se connecte à {{site.data.keyword.iot_short_notm}}.
+Félicitations, vous avez enregistré votre terminal passerelle. Vous pouvez maintenant configurer votre terminal passerelle pour qu'il se connecte à {{site.data.keyword.iot_short_notm}}.
 
 Pour obtenir les instructions étape par étape qui illustrent le flux requis pour enregistrer une passerelle, voir la recette [How to Register Gateways in IBM Watson IoT Platform ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/){:new_window}.
 
@@ -129,7 +129,7 @@ Pour installer l'agent EAA sur votre passerelle :
 1. Dans le tableau de bord {{site.data.keyword.iot_short}}, accédez à **Règles**.
 2. Cliquez sur **Télécharger un agent Edge** pour accéder à la [communauté IBM Edge Analytics ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}.
 3. Accédez à la section **Fichiers** et téléchargez les répertoires compressés appropriés pour votre type de passerelle.  
-La solution Edge Analytics est disponible en tant que logiciel SDK pour les terminaux qui prennent en charge Java en tant que DSLink pour les terminaux de passerelle Cisco.
+La solution Edge Analytics est disponible en tant que logiciel SDK pour les terminaux qui prennent en charge Java en tant que DSLink pour les terminaux passerelle Cisco.
 4. Pour plus d'informations sur l'installation et la configuration du composant logiciel EAA sur votre passerelle, voir les informations suivantes :
  - Logiciel SDK  
  Voir le PDF et le fichier Readme, ainsi que les liens de vidéo disponibles dans la communauté.  

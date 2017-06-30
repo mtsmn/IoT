@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -11,6 +11,7 @@ lastupdated: "2017-03-13"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
 # Visualizando dados em tempo real usando placas e cartões
 {: #boards_and_cards}
@@ -20,7 +21,7 @@ Crie placas e cartões para criar e compartilhar seus próprios painéis que vis
 
 Usando placas e cartões, é possível visualizar graficamente valores do conjunto de dados de um ou mais dispositivos para fornecer uma visão geral rápida e aprimorar o entendimento dos dados. Crie placas e inclua cartões que exibam os dados como números brutos, gráficos em tempo real, medidores e mais. Inclua membros em suas placas para compartilhá-los com outros usuários em sua organização. Organize os cartões e inclua divisórias de texto explicativo para fazer um ajuste fino de sua apresentação.  
 
-É possível também expandir o conjunto padrão de cartões fornecidos pela IBM [criando seus próprios cartões customizados](custom_cards/custom-cards.html).
+É possível também expandir o conjunto padrão de cartões [criando seus próprios cartões customizados](custom_cards/custom-cards.html).
 
 ![Mostrando dados em tempo real com cartões.](images/boards_and_cards.svg "Mostrando dados em tempo real com cartões.")
 
@@ -28,39 +29,137 @@ Usando placas e cartões, é possível visualizar graficamente valores do conjun
 {: #default_boards}
 O painel do {{site.data.keyword.iot_full}} têm as placas padrão a seguir:
 
-|Nome do Painel | Descrição |  
-|:---|:---|  
-|Visão Geral do Uso  | Mostra estatísticas de uso para sua organização. Lista os tipos de dispositivo e os dados que são consumidos.
-|Análise de dados central da regra | Mostra as regras para sua organização. Cartões adicionais listam alertas acionados, dispositivos associados, propriedades dos dispositivos e informações de alerta. |  
-|Análise de dados central do dispositivo | Mostra os dispositivos que estão conectados à sua organização. Cartões adicionais mostram alertas para um dispositivo selecionado, informações para um dispositivo selecionado, propriedades do dispositivo e informações de alerta. |
-|Gerenciamento de risco e segurança | Mostra cartões que resumem o status de segurança geral. Os operadores do sistema e os analistas de segurança podem visualizar detalhes de conformidade, status de conexão para dispositivos, as causas das falhas de conexão e os dispositivos bloqueados ou permitidos por meio de uma lista de bloqueio ou uma lista de desbloqueio.  No cartão Conformidade de conexão, o usuário pode realizar drill down para um relatório detalhado sobre dispositivos fora de conformidade e pode exportar o relatório para o Excel. |
+|Nome do Painel | Descrição | Cartões incluídos
+|:---|:---|:---|  
+|Visão geral da utilização  | As estatísticas de uso para sua organização. Lista os tipos de dispositivo e os dados que são consumidos. | <ul><li>Tipos de dispositivos<li>Dados transferidos</ul>
+|Análise de dados central da regra | As regras para sua organização. Cartões adicionais listam alertas acionados, dispositivos associados, propriedades dos dispositivos e informações de alerta. | <ul><li>Regras gerenciadas por mim<li>Alertas de regra<li>Informações de alerta de regra<li>Dispositivos Associados<li>Informações do Dispositivo<li>Propriedades do Dispositivo</ul>  
+|Análise de dados central do dispositivo | Os dispositivos que estão conectados à sua organização. Cartões adicionais mostram alertas para um dispositivo selecionado, informações para um dispositivo selecionado, propriedades do dispositivo e informações de alerta. | <ul><li>Dispositivos com os quais eu me preocupo<li>Informações do Dispositivo<li>Alertas de regra para esse dispositivo<li>Informações de alerta de regra<li>Propriedades do Dispositivo</ul>
+|Visão geral de risco e segurança (beta) | O status de segurança geral de sua organização. Os operadores do sistema e os analistas de segurança podem visualizar detalhes de conformidade, status de conexão para dispositivos, as causas das falhas de conexão e os dispositivos que estão bloqueados ou permitidos por uma lista de bloqueio ou uma lista de desbloqueio. No cartão Conformidade de conexão, os usuários podem realizar drill down para um relatório detalhado sobre dispositivos fora de conformidade e podem exportar o relatório para o Excel. | <ul><li>Conformidade de Políticas<li>Segurança da Conexão<li>Conformidade de lista de bloqueio/lista de desbloqueio</ul>
 
 É possível atualizar essas placas incluindo, atualizando e removendo cartões.
 
-**Dica:** para reconfigurar uma placa padrão para seu estado original pode excluí-la. A placa será então recriada com os cartões originais.
+Para reconfigurar uma placa padrão para seu estado original, é possível excluí-la. A placa será então recriada com os cartões originais.
+{: tip}
 
 ## Criando placas e cartões
 {: #visualizing_data}
 
 O {{site.data.keyword.iot_short_notm}} fornece um painel integrado que é possível usar para exibir os dados em tempo real que seu dispositivo está retornando. Por padrão, a página Visão geral exibe informações de uso sobre o sua organização do {{site.data.keyword.iot_short_notm}}, como dados e o espaço de armazenamento consumido. Para ver os dados do dispositivo de tempo real conforme fluem para dentro, inclua cartões específicos do dispositivo nesta página.
 
-Para incluir um cartão específico do dispositivo em uma placa:
+Para uma orientação passo a passo sobre como exibir dados do dispositivo de tempo real, veja a orientação [Configurando placas e cartões no novo painel do Watson IoT ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}.
+{: tip}
+
+Para criar uma placa e incluir um cartão para essa placa:
 1. No painel do {{site.data.keyword.iot_short_notm}}, selecione **Placas**.
 2. Selecione uma placa para a qual você tem direitos de edição ou crie uma placa nova.
 3. Na placa, clique em **Incluir novo cartão**.
-2. Na caixa Editar cartão de visualização genérica, role para baixo até a seção Dispositivos.
-3. Selecione um tipo de visualização.
-**Dica:** selecione **Visualização genérica** para a configuração básica. É possível mudar o tipo de cartão posteriormente.
-Clique em **Mostrar mais** para a lista completa de tipos de cartão.
-4.	Selecione uma ou mais origens de dados de cartão e, em seguida, clique em **Avançar** para incluir um ou mais conjuntos de dados.
- 1.	Forneça ao conjunto de dados um nome de identificação.
- 2. Selecione um evento que inclua o ponto de dados que você deseja exibir.
- 3.	Selecione a propriedade que representa o ponto de dados.
- 4.	Configure o tipo, a unidade, a precisão e os valores mínimo e máximo para o ponto de dados.  
- Quando você tiver terminado, será possível clicar em **Novo conjunto de dados** para incluir mais conjuntos de dados ou clicar em **Avançar**.
-5.	Selecione a visualização.  
-Selecione o tipo e o tamanho da visualização que você deseja usar.  Alguns tipos de cartão têm mais configurações.
+3. Selecione um tipo de cartão.  
+**Dica:** se você não tiver certeza de qual visualização escolher para um cartão do tipo dispositivos, selecione **Visualização genérica**. É possível mudar o tipo de cartão posteriormente.
 <dl>
+<dt>Dispositivos</dt>
+<dd><table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Dados exibidos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visualização genérica</td>
+<td>O valor de um ou mais conjuntos de dados. </br>**Dica:** para ver até três valores de pontos de dados em uma tabela pequena, escolha o tamanho de widget grande. </td>
+</tr>
+<tr>
+<td>Gráfico de Linhas</td>
+<td>Um ou mais conjuntos de dados em um gráfico de rolagem em tempo real. Use o menu Configurações para configurar o intervalo de dados e a retenção, a aparência dos gráficos e mais. </td>
+<tr>
+<td>gráfico de barras</td>
+<td>Valores do conjunto de dados em barras rotuladas. Use o menu Configurações para alternar a direção da barra horizontal ou vertical.</td>
+</tr>
+<tr>
+<td>Gráfico de rosca</td>
+<td>Dois ou mais conjuntos de dados em uma representação circular.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>O valor bruto de um ou mais conjuntos de dados.</td>
+</tr>
+<tr>
+<td>Medidor</td>
+<td>O valor de um conjunto de dados mostrado como um medidor. Use o menu Configurações para opcionalmente configurar limites do medidor para intervalos de dados inferior, intermediário e superior.  </td>
+</tr>
+<tr>
+<td>Propriedades do Dispositivo</td>
+<td>Propriedades específicas para um ou mais dispositivos.</td>
+</tr>
+<tr>
+<td>Todas as propriedades do dispositivo</td>
+<td>Todas as propriedades para um ou mais dispositivos.</td>
+</tr>
+<tr>
+<td>Lista de dispositivos</td>
+<td>Uma lista para monitorar vários dispositivos. Uma lista pode ser usada como uma origem de dados para outros cartões. </br>É possível filtrar listas por ID do dispositivo e o tipo nas configurações do cartão. As listas de dispositivos de tamanho L ou maior também podem ser filtradas de forma interativa clicando no ícone de filtro no cartão. As entradas de filtro podem ser incluídas como entradas únicas, intervalos (x-y) ou separadas por vírgula.</br> Por padrão, uma lista exibe o ID do dispositivo e o tipo. É possível definir as configurações de cartão de lista para que o cartão também exiba outros metadados do dispositivo.</td>
+</tr>
+<tr>
+<td>Informações do dispositivo</td>
+<td>Informações básicas para um único dispositivo.</td>
+<tr>
+<td>Mapa de dispositivos</td>
+<td>O local de dispositivos em uma lista de dispositivos.</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Analytics</dt>
+<dd>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Dados exibidos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rules</td>
+<td>Uma lista das regras que têm alertas.</td>
+</tr>
+<tr>
+<td>Alertas de regra</td>
+<td>Uma lista de alertas para um dispositivo.</td>
+</tr>
+<tr>
+<td>Informações de alerta</td>
+<td>Informações básicas para um único alerta.</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Gerenciamento de risco (beta)</dt>
+<dd>Disponível somente com [Segurança avançada](reference/security/RM_security.html).
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Dados exibidos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conformidade de Políticas</td>
+<td>Uma visão geral de segurança de conexão e de dispositivos incluídos na lista de bloqueio e na lista de desbloqueio.</td>
+</tr>
+<tr>
+<td>Conformidade de lista de bloqueio/lista de desbloqueio</td>
+<td>O número de dispositivos incluídos na lista de bloqueio ou na lista de desbloqueio.</td>
+</tr>
+<tr>
+<td>Segurança da Conexão</td>
+<td>O número de dispositivos que falharam na verificação de segurança de conexão.</td>
+</tr>
+</tbody>
+</table>
+</dd>
 <dt>Uso</dt>
 <dd>
 <table>
@@ -73,7 +172,7 @@ Selecione o tipo e o tamanho da visualização que você deseja usar.  Alguns ti
 <tbody>
 <tr>
 <td>Tipos de dispositivos</td>
-<td>Um gráfico de pizza que exibe o número de dispositivos por tipo de dispositivo.</td>
+<td>Um gráfico de pizza que exibe o número de dispositivos registrados por tipo de dispositivo para sua organização.</td>
 </tr><tr>
 <td>Dados transferidos</td>
 <td>Estatísticas de uso para dados transferidos para sua organização.</td>
@@ -98,103 +197,32 @@ Selecione o tipo e o tamanho da visualização que você deseja usar.  Alguns ti
 </tbody>
 </table>
 </dd>
-<dt>Dispositivos</dt>
-<dd><table>
-<thead>
-<tr>
-<th>Tipo</th>
-<th>Dados exibidos</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Visualização genérica</td>
-<td>O valor de um ou mais conjuntos de dados. </br>**Dica:** para ver até três valores de pontos de dados em uma tabela pequena, escolha o tamanho de widget grande.  </td>
-</tr>
-<tr>
-<td>Gráfico em tempo real</td>
-<td>Um ou mais conjuntos de dados em um gráfico de rolagem em tempo real. Use o menu Configurações para configurar o intervalo de dados e a retenção, a aparência dos gráficos e mais. </td>
-</tr>
-<tr>
-<td>gráfico de barras</td>
-<td>Valores do conjunto de dados em barras rotuladas. Use o menu Configurações para alternar a direção da barra horizontal ou vertical.</td>
-</tr>
-<tr>
-<td>Gráfico de rosca</td>
-<td>Dois ou mais conjuntos de dados em uma representação circular.</td>
-</tr>
-<tr>
-<td>Value</td>
-<td>O valor bruto de um ou mais conjuntos de dados.</td>
-</tr>
-<tr>
-<td>Medidor</td>
-<td>O valor de um conjunto de dados mostrado como um medidor. É possível configurar limites de exibição para valores bom, justo e crítico do conjunto de dados. Use o menu Configurações para opcionalmente configurar limites do medidor para intervalos de dados inferior, intermediário e superior.  </td>
-</tr>
-</tbody>
-</table>
-</dd>
-<dt>Analytics</dt>
-<dd>
-<table>
-<thead>
-<tr>
-<th>Tipo</th>
-<th>Dados exibidos</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Informações do dispositivo</td>
-<td>Mostra informações básicas para um único dispositivo.</td>
-</tr>
-<tr>
-<td>Informações de alerta</td>
-<td>Mostra informações básicas para um único alerta.</td>
-</tr>
-<tr>
-<td>Lista de dispositivos</td>
-<td>Uma lista para monitorar vários dispositivos.</td>
-</tr>
-<tr>
-<td>Alerts</td>
-<td>Uma lista de alertas para um dispositivo.</td>
-</tr>
-<tr>
-<td>Rules</td>
-<td>Uma lista das regras que têm alertas.</td>
-</tr>
-<tr>
-<td>Propriedades do Dispositivo</td>
-<td>Mostra propriedades específicas para um ou mais dispositivos.</td>
-</tr>
-<tr>
-<td>Todas as propriedades do dispositivo</td>
-<td>Mostrar todas as propriedades para um ou mais dispositivos.</td>
-</tr>
-<tr>
-<td>Mapa de dispositivos</td>
-<td>Mostra o local de vários dispositivos em uma lista.</td>
-</tr>
-</tbody>
-</table>
-</dd>
 </dl>
 
-6. Especifique a origem de dados para o cartão.  
-Dependendo do tipo de cartão selecionado, os dados exibidos em um cartão podem vir de um dispositivo ou de outro cartão. Selecione um dispositivo específico, uma lista de dispositivos ou um cartão de lista de alertas para a origem de dados e clique em **Avançar**.
-7. Somente para cartões de tipo de dispositivo: inclua um ou mais conjuntos de dados para exibir no cartão.   
- 1. Clique em **Conectar conjunto de dados** para incluir uma propriedade para exibir no cartão.
- 2. Forneça ao conjunto de dados um nome.
- 3. Insira ou selecione o evento para o qual exibir as propriedades.
- 4. Insira ou selecione a propriedade para exibir.
- 5. Especifique o tipo da propriedade e, opcionalmente, configure a unidade, a precisão, os valores mínimo e máximo para a propriedade.  
- 6. Clique em **Avançar**.
-7. Selecione o tamanho da apresentação.   
-Para determinados tipos de cartão, é possível clicar em **Configurações** para configurar detalhes de visualização adicionais. Clique em **Avançar**.
-7. Forneça um título e uma descrição para o cartão e, opcionalmente, selecione um esquema de cores e, em seguida, clique em **Enviar** para criar o cartão.
-7.	Por fim, posicione o novo cartão em sua placa arrastando-o para uma boa localização.  
-
-Ótimo! Agora é possível ver os dados em tempo real de seu dispositivo!
-
-Para obter instruções passo a passo sobre como exibir dados do dispositivo em tempo real, veja a orientação [Configurando placas e cartões no novo Painel do Watson IoT ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}.
+4.	Selecione os dados de origem do cartão.  
+Selecione uma ou mais origens de dados do cartão e, em seguida, clique em **Avançar**.  
+As origens de dados podem ser dispositivos únicos registrados ou outros cartões. Para usar uma origem de dados do cartão, um cartão de lista ou mapa deve existir na placa.  
+5. Inclua um ou mais conjuntos de dados para cada uma de suas origens de dados.
+ - Dispositivos
+    2. Selecione um evento que inclua o ponto de dados que você deseja exibir.
+    3.	Selecione a propriedade que representa o ponto de dados.
+    1.	Forneça ao conjunto de dados um nome de identificação.
+    4.	Configure o tipo, a unidade, a precisão e os valores mínimo e máximo para o ponto de dados.  
+    Quando estiver pronto, será possível clicar em **Novo conjunto de dados** para incluir mais conjuntos de dados ou clicar em **Avançar**.
+ - As listas
+    2. Selecione um tipo de dispositivo ou selecione **Qualquer tipo de dispositivo**.
+    2. Selecione um evento que inclua o ponto de dados que você deseja exibir.
+    3.	Selecione a propriedade que representa o ponto de dados.
+    1.	Forneça ao conjunto de dados um nome de identificação.
+    4.	Configure o tipo, a unidade, a precisão e os valores mínimo e máximo para o ponto de dados.  
+    Quando estiver pronto, será possível clicar em **Novo conjunto de dados** para incluir mais conjuntos de dados ou clicar em **Avançar**.
+5.	Customize a visualização do cartão em visualização prévia do cartão.  
+ 7. Selecione o tamanho da apresentação.  
+Além de configurar o tamanho do cartão em sua placa, a configuração de tamanho do cartão também controla outras variáveis de apresentação, como o número de dispositivos que estão listados, os metadados de gráfico que são exibidos e assim por diante.   
+**Dica:** clique nos diferentes rótulos de tamanho para ver visualizações das cartas em tamanhos diferentes.
+ 8. Defina quaisquer configurações adicionais.  
+Se o cartão suportar isso, clique em **Configurações** para ver configurações adicionais que podem ser definidas, como intervalos de dados para cartões do tipo de calibrador e opções de filtragem para cartões de lista de dispositivos.
+6. Atualize as informações do cartão.  
+ 1. Forneça um título e uma descrição para o cartão e, opcionalmente, selecione um esquema de cores.   
+ 2. Clique em **Enviar** para criar o cartão.
+7.	Posicione o novo cartão em sua placa arrastando-o para uma boa localização.  

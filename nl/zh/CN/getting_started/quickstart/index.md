@@ -39,17 +39,17 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 - 对象温度
 
 
-![映像 (image)](iotsensor.png)
+![图像](iotsensor.png)
 
 ## 数据可视化
 
 要从移动设备查看生成的数据，请确保模拟设备在该移动设备上运行，然后启动 Quickstart 应用程序。输入设备的 12 个字符设备标识，这会显示在 UI 的右上角。
 
-![映像 (image)](quickstart.png)
+![图像](quickstart.png)
 
 在模拟设备中调整传感器值时，可看到 Quickstart 应用程序中实时显示的设备中数据，如以下截屏中所示：
 
-![映像 (image)](iotsensor_data.png)
+![图像](iotsensor_data.png)
 
 
 ## Mosquitto 演示

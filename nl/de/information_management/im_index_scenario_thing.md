@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -69,7 +69,7 @@ Verwenden Sie das folgende Beispielszenario zum Einrichten Ihrer eigenen Schnitt
 {: #add_device}  
 In diesem Szenario werden zwei Gerätetypen und vier Geräteinstanzen verwendet. Die Geräteinstanzen *Temperatursensor 1* und *Temperatursensor 2* sind dem Gerättyp *Thermometer* zugeordnet. Die Geräteinstanzen *Feuchtigkeitssensor 1* und *Feuchtigkeitssensor 2* sind dem Gerättyp *Hygrometer* zugeordnet.
 
-Informationen zur Verwendung von REST-APIs zum Hinzufügen eines Gerätetyps finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofThings.ibmcloud.com/swagger/v0002.html#!/Device_Types).  
+Weitere Informationen über die Verwendung von REST-APIs zum Hinzufügen eines Gerätetyps finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration).  
 
 ## Schritt 1: Zusammensetzungsschemadatei erstellen  
 {: #crt_composition_file}  

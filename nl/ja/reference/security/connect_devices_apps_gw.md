@@ -87,7 +87,7 @@ TLS 要件は、MQTT プロトコルと HTTP プロトコルのどちらを使�
 
 ### HTTP 接続の TLS 要件
 
-デフォルトのサーバー証明書を使用している場合、{{site.data.keyword.iot_short_notm}} では、TLS v1、TLS v1.1、または TLS v1.2 と、以下の暗号スイートが必要です。
+デフォルトのサーバー証明書を使用している場合、{{site.data.keyword.iot_short_notm}} では、TLS v1.1 または TLS v1.2 と、以下の暗号スイートが必要です。
 
 
 - TLS_RSA_WITH_AES_128_CBC_SHA

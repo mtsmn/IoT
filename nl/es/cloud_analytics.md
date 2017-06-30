@@ -33,7 +33,7 @@ Utilice el panel de control **Reglas** para crear y gestionar reglas y acciones 
 
 Para obtener una visión general de las reglas y las alertas que se han desencadenado para los dispositivos, utilice los paneles siguientes:
 
- |Nombre del tablero | Descripción |  
+ |Nombre de panel | Descripción |  
  |:---|:---|  
   |Analítica centrada en las reglas | Muestra las reglas para su organización. Las alertas desencadenadas de lista de tarjetas adicionales, los dispositivos asociados, las propiedades de dispositivos y la información de alertas. |  
  |Analítica centradas en los dispositivos | Muestra los dispositivos conectados a su organización. Las tarjetas adicionales muestran alertas para un dispositivo seleccionado, información para un dispositivo seleccionado, propiedades de dispositivos e información de alerta. |

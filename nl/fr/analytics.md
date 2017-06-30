@@ -19,7 +19,10 @@ lastupdated: "2017-02-28"
 Utilisez Watson {{site.data.keyword.iot_full}} Analytics pour obtenir les informations d'analyse en temps réel dont vous avez besoin à partir des données brutes générées par vos terminaux.  
 {: shortdesc}
 
-En utilisant des [tableaux et des cartes](data_visualization.html), vous pouvez visualiser des graphiques qui représentent des valeurs de fichier provenant d'un ou de plusieurs terminaux pour une présentation et une compréhension rapides des données de terminal.
+En utilisant des [tableaux et des cartes](data_visualization.html), vous pouvez visualiser, sous forme
+graphique, les valeurs de jeux de données d'un ou de plusieurs terminaux afin de bénéficier
+d'un aperçu rapide et d'une meilleure compréhension des données.
+
 
 Les règles d'analyse vous permettent de spécifier les conditions qui déclenchent des actions. Par exemple, vous pouvez créer une règle garantissant qu'une alerte est envoyée au tableau de bord du terminal de l'utilisateur et qu'un courrier électronique est envoyé à l'administrateur lorsque le terminal est supprimé ou que la température du terminal augmente.
 
