@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -29,7 +29,7 @@ lastupdated: "2017-03-17"
 ## {{site.data.keyword.iot_short_notm}} と {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}} は {{site.data.keyword.Bluemix_notm}} プラットフォーム内で実行されるため、アクセスと接続を {{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer_full}} の両方に依存しています。{{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer}} に依存しているため、{{site.data.keyword.iot_short_notm}} のユーザーにとって、{{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer}} のセキュリティーと信頼性は重要です。
+{{site.data.keyword.iot_short_notm}} は {{site.data.keyword.Bluemix_notm}} プラットフォーム内で実行されるため、アクセスと接続を {{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer_full}} の両方に依存しています。{{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer_notm}} に依存しているため、{{site.data.keyword.iot_short_notm}} のユーザーにとって、{{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer_notm}} のセキュリティーと信頼性は重要です。
 
 {{site.data.keyword.Bluemix_notm}} のセキュリティーについて詳しくは、[{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー](index.html#platform-security)を参照してください。
 
@@ -67,13 +67,14 @@ lastupdated: "2017-03-17"
 ## デバイスと {{site.data.keyword.iot_short_notm}} の接続のセキュリティー保護方法
 {: #secure-device-connection}
 
-デバイスの接続では、プラットフォームにデバイスを追加するときに生成される認証トークン、または clientID のいずれかを使用するか、あるいはその両方を使用します。多くのプラットフォームと言語で使用するときの相互運用性が高い MQTT が使用されます。{{site.data.keyword.iot_short_notm}} は TLS v1.2 を介した接続をサポートします。
+デバイスの接続では、clientID と、プラットフォームにデバイスを追加するときに生成される認証トークンを使用します。多くのプラットフォームと言語で使用するときの相互運用性が高い MQTT が使用されます。{{site.data.keyword.iot_short_notm}} は TLS v1.2 を介した接続をサポートします。
 
 ![画像](connectivity_platform.svg)
 
+
 TLS および暗号スイートの要件について詳しくは、`Watson IoT Platform へのアプリケーション、デバイス、ゲートウェイの接続`という資料の [TLS 要件](connect_devices_apps_gw.html#tls_requirements)セクションを参照してください。
 
-デバイス接続のセキュリティーを強化するために、証明書とセキュリティー・ポリシーを使用することができます。セキュリティー・ポリシーを設定すると、暗号化されていない接続を許可したり、トランスポート層セキュリティー (TLS) 接続だけに制限したり、クライアント・サイドの証明書によるデバイスの認証を有効にしたりできます。接続を許可しないデバイスを指定するためにブラックリストを使用したり、特定のデバイスの接続を許可するためにホワイトリストを使用したりできます。セキュリティーの強化について詳しくは、[リスク管理とセキュリティー管理](RM_security.html)を参照してください。
+デバイス接続のセキュリティーを強化するために、証明書とセキュリティー・ポリシーを使用することができます。セキュリティー・ポリシーを設定すると、暗号化されていない接続を許可したり、トランスポート層セキュリティー (TLS) 接続だけに制限したり、クライアント・サイドの証明書を使用したトークンなしでのデバイスの認証を有効にしたりできます。接続を許可しないデバイスを指定するためにブラックリストを使用するか、特定のデバイスの接続を許可するためにホワイトリストを使用することができます。セキュリティーの強化について詳しくは、[リスク管理とセキュリティー管理](RM_security.html)を参照してください。
 
 ## IoT デバイス間のデータ・リークを回避する方法
 {: #prevent-leak-devices}
@@ -109,5 +110,5 @@ TLS および暗号スイートの要件について詳しくは、`Watson IoT P
 * [{{site.data.keyword.Bluemix_notm}} のセキュリティー![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} プラットフォーム・セキュリティー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} のコンプライアンス](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} のセキュリティー![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} のコンプライアンス ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer_notm}} のセキュリティー![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer_notm}} のコンプライアンス ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.softlayer.com/compliance){:new_window}

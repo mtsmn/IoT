@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -44,9 +44,10 @@ API                     | 使用目的
 [セキュリティー ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | ユーザーの招待および認証と、ユーザー、API キー、およびデバイスの権限を管理します。
 [情報管理 ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  デバイス・イベント・データにアクセスし、デバイス・ロケーションを取得および更新し、そのロケーションの気象情報を取得します。
 **注:** 気象情報は、The Weather Company のデータ統合に依存しています。
-[The Weather Company ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html#!/Device_Location_Weather){: new_window} | The Weather Company からのデータを既存のデバイスに統合します。
 [デバイス管理 ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | デバイス管理プロトコルを使用して、管理対象デバイスとやり取りします。
-[メッセージング ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | HTTP を使用して、イベントをパブリッシュし、コマンドを送信します。## 拡張 HTTP API
+[メッセージング ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | HTTP を使用して、イベントをパブリッシュし、コマンドを送信します。[リスク管理![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | リスク管理のポリシーとレポートを管理します。
+
+## 拡張 HTTP API
 {: #api_extension}
 
 API                     | 使用目的       

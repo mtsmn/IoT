@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -60,5 +60,5 @@ lastupdated: "2017-03-13"
 * [{{site.data.keyword.Bluemix_notm}} のセキュリティー![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} プラットフォーム・セキュリティー ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} のコンプライアンス ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} のセキュリティー![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} のコンプライアンス ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer_full}} のセキュリティー![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer_notm}} のコンプライアンス ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.softlayer.com/compliance){:new_window}

@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -69,8 +69,7 @@ The code that is used in this example is available in the updated {{site.data.ke
 {: #add_device}  
 このシナリオでは、2 つのデバイス・タイプと 4 つのデバイス・インスタンスを使用します。デバイス・インスタンス *temperatureSensor1* と *temperatureSensor2* はデバイス・タイプ *Thermometer* と関連付けられます。デバイス・インスタンス *humiditySensor1* と *humiditySensor2* はデバイス・タイプ *Hygrometer* と関連付けられます。
 
-REST API を使用してデバイス・タイプを追加する方法については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofThings.ibmcloud.com/swagger/v0002.html#!/Device_Types) の資料を参照してください。
-  
+REST API を使用してデバイス・タイプを追加する方法については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration) の資料を参照してください。  
 
 ## 手順 1: 構成スキーマ・ファイルを作成する  
 {: #crt_composition_file}  
