@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -70,7 +70,7 @@ The code that is used in this example is available in the updated {{site.data.ke
 {: #add_device}  
 이 시나리오에서는 두 개의 디바이스 유형과 네 개의 디바이스 인스턴스가 사용됩니다. 디바이스 인스턴스 *temperatureSensor1* 및 *temperatureSensor2*는 디바이스 유형 *온도계*와 연관되어 있습니다. 디바이스 인스턴스 *humiditySensor1* 및 *humiditySensor2*는 디바이스 유형 *습도계*와 연관되어 있습니다. 
 
-REST API를 사용한 디바이스 유형 추가에 대한 정보는 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofThings.ibmcloud.com/swagger/v0002.html#!/Device_Types) 문서를 참조하십시오.   
+REST API를 사용하여 디바이스 유형 추가에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration) 문서를 참조하십시오.   
 
 ## 1단계: 구성 스키마 파일 작성.   
 {: #crt_composition_file}  

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -12,12 +12,13 @@ lastupdated: "2017-04-20"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 게이트웨이 액세스 제어
+# 게이트웨이 액세스 제어(베타)
 {: #gateway-access-control}
 
 게이트웨이 디바이스에는 기타 디바이스를 대신해서 작동할 수 있는 권한이 있습니다. 게이트웨이 리소스 그룹은 각 게이트웨이가 대신 작동할 수 있는 조직 내의 디바이스를 정의합니다. 게이트웨이에는 *표준 게이트웨이* 역할이 지정될 수 있습니다. 표준 게이트웨이는 해당 리소스 그룹의 디바이스 대신 메시지를 공개하거나 이를 구독할 수만 있습니다.
 {: #shortdesc}
 
+**중요:** {{site.data.keyword.iot_full}} 게이트웨이 액세스 제어 기능은 제한된 베타 프로그램의 일부로서만 사용 가능합니다. 향후 업데이트에는 이 기능의 현재 버전과 호환 가능한 변경사항이 포함될 수 있습니다. 시도해 보고 [의견을 보내주십시오. ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}
 
 API를 사용하여 게이트웨이 디바이스에서 이벤트 공개에 대한 정보는 [게이트웨이 디바이스용 HTTP Messaging API](../gateways/gw_intro_api.html)를 참조하십시오. 
 

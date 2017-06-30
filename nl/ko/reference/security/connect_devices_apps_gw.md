@@ -88,7 +88,7 @@ TLS 요구사항은 MQTT 또는 HTTP 프로토콜로 {{site.data.keyword.iot_sho
 
 ### HTTP 연결을 위한 TLS 요구사항
 
-기본 서버 인증서를 사용 중인 경우, {{site.data.keyword.iot_short_notm}}에서는 TLS v1, TLS v1.1 또는 TLS v1.2 및 다음 암호 스위트가 필요합니다. 
+기본 서버 인증서를 사용 중인 경우, {{site.data.keyword.iot_short_notm}}에서는 TLS v1.1 또는 TLS v1.2 및 다음 암호 스위트가 필요합니다. 
 
 
 - TLS_RSA_WITH_AES_128_CBC_SHA
