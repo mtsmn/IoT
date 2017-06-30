@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -12,12 +12,13 @@ lastupdated: "2017-04-20"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 网关访问控制
+# 网关访问控制 (Beta)
 {: #gateway-access-control}
 
 网关设备有权代表其他设备执行操作。网关资源组定义每个网关可以代表组织内的哪些设备执行操作。可以向网关分配*标准网关*角色。标准网关只能代表其资源组中的设备来发布或预订消息。
 {: #shortdesc}
 
+**重要信息：** {{site.data.keyword.iot_full}} 网关访问控制功能只作为受限 Beta 程序的一部分提供。未来更新可能会包含与此功能当前版本不兼容的更改。请尝试此功能，[让我们了解您的想法 ![外部链接图标](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
 
 有关使用 API 从网关设备发布事件的信息，请参阅[针对网关设备的 HTTP 消息传递 API](../gateways/gw_intro_api.html)。
 

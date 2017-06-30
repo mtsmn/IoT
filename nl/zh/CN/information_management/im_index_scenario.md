@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -60,7 +60,7 @@ lastupdated: "2017-04-10"
 
 在此场景中，假定有两种设备类型和两个设备实例。设备实例 *TemperatureSensor1* 与设备类型 *EnvSensor1* 相关联。设备实例 *TemperatureSensor2* 与设备类型 *EnvSensor2* 相关联。
 
-有关使用 REST API 来添加设备类型的信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Types) 文档。
+有关使用 REST API 来添加设备类型的信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration) 文档。
 
 ## 步骤 1：创建事件模式文件
 {: #step1}
@@ -147,7 +147,7 @@ schemaFile	|	到本地事件模式 JSON 文件的路径。
 
 
 
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas) 文档。
 
 
 
@@ -230,7 +230,8 @@ POST /event/types
 ------	|	-----
 name	|	为您要创建的事件类型提供名称。
 schemaId	|	为事件模式资源创建的标识。
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Event_Types) 文档。
+
 
 
 
@@ -306,7 +307,8 @@ POST /physicalinterfaces
 参数	|	描述
 ------	|	-----
 name	|	为您要创建的物理接口提供名称。
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces) 文档。
+
 
 
 在此场景中，需要两个物理接口，分别用于每种事件类型。
@@ -382,7 +384,8 @@ POST /physicalinterfaces/{physicalInterfaceId}/events
 ------	|	-----
 eventId	|	输入来自设备事件有效内容的事件名称。
 eventTypeId	|	为事件类型创建的标识。
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces) 文档。
+
 
 
 在此场景中，将向指定的物理接口添加以下事件类型：
@@ -442,7 +445,8 @@ PUT /device/types/{typeId}
 参数	|	描述
 ------	|	-----
 physicalInterfaceId	|	为物理接口创建的标识。
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 文档。
+
 
 
 在此场景中，设备类型 *EnvSensor1* 更新为连接到物理接口 *5847d1df6522050001db0e1a*，并且设备类型 *EnvSensor2* 更新为连接到物理接口 *5847d1df6522050001db0e1b*。
@@ -549,7 +553,7 @@ POST /schemas
 ------	|	-----
 name	|	为您要创建的应用程序接口模式提供名称。
 schemaFile	|	到本地应用程序接口模式 JSON 文件的路径。
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas) 文档。
 
 
 
@@ -599,7 +603,7 @@ POST /applicationinterfaces
 ------	|	-----
 name	|	为您要创建的应用程序接口提供名称。
 schemaId	|	为应用程序接口模式资源创建的标识。
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Application_Interfaces) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Application_Interfaces) 文档。
 
 
 
@@ -652,7 +656,8 @@ schemaId	|	为应用程序接口资源创建的标识。
 refs/schema	|	到应用程序接口资源的路径。通常是：/schemas/*schemaId*
 
 
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 文档。
+
 
 
 在此场景中，应用程序接口与设备类型 *EnvSensor1* 和设备类型 *EnvSensor2* 相关联。
@@ -738,7 +743,8 @@ POST /device/types/{typeId}/mappings
 参数	|	描述
 ------	|	-----
 applicationInterfaceId	|	为应用程序接口创建的标识。
-propertyMappings	|	有效的 JSON 结构，将为应用程序接口定义的属性映射到设备事件有效内容的属性。请参阅以下示例。有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文档。
+propertyMappings	|	有效的 JSON 结构，将为应用程序接口定义的属性映射到设备事件有效内容的属性。请参阅以下示例。有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 文档。
+
 
 
 在此场景中，将针对设备类型 *EnvSensor1* 定义映射以用于将入站事件 *tevt* 中的 **t** 属性映射到应用程序接口上的 **temperature** 属性。此外，还将针对设备类型 *EnvSensor1* 定义映射以用于将入站事件 *tempevt* 中的 **temp** 属性映射到应用程序接口上的 **temperature** 属性。
@@ -822,7 +828,8 @@ PATCH /device/types/{typeId}
 ------	|	-----
 typeId	|	设备类型标识
 
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 文档。
+
 
 
 在此场景中，需要部署两种设备类型的配置。
@@ -900,7 +907,8 @@ GET /device/types/{typeId}/devices/{deviceId}/state/{applicationInterfaceId}
 typeId	|	设备类型标识
 deviceId	|	设备的标识。
 applicationInterfaceId	|	为应用程序接口创建的标识。
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 文档。
+
 
 
 以下示例显示了如何使用 cURL 通过引用所创建应用程序接口的标识来检索 *TemperatureSensor1* 的当前状态：
@@ -940,7 +948,8 @@ curl --request GET \
 GET /device/types/<typeId>/deployedconfiguration
 ```
 使用此 API 可检索 PATCH 部署操作上次成功完成的已部署配置。要检索已更改但未部署的资源的配置，请使用与您要查询的资源关联的常规 GET 方法。
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 文档。
+
 
 
 以下示例显示了如何使用 cURL 检索最新部署的配置：
