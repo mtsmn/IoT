@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -61,7 +61,7 @@ Verwenden Sie das folgende Beispielszenario zum Einrichten Ihrer eigenen Schnitt
 
 Im vorliegenden Szenario werden zwei Gerätetypen und zwei Geräteinstanzen angenommen. Die Geräteinstanz *Temperatursensor 1* ist dem Gerätetyp *EnvSensor1* zugeordnet. Die Geräteinstanz *Temperatursensor 2* ist dem Gerätetyp *EnvSensor2* zugeordnet.
 
-Informationen zur Verwendung von REST-APIs zum Hinzufügen eines Gerätetyps finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Types).
+Informationen über die Verwendung von REST-APIs zum Hinzufügen eines Gerätetyps finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration).
 
 ## Schritt 1: Eine Ereignisschemadatei erstellen
 {: #step1}
@@ -148,7 +148,7 @@ schemaFile	|	Pfad zur lokalen JSON-Datei des Ereignisschemas.
 
 
 
-Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas).
+Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas).
 
 Das folgende Beispiel zeigt die Verwendung von 'cURL' zum Erstellen der Ereignisschemaressource *tEventSchema.json*:
 
@@ -231,7 +231,7 @@ name	|	Geben Sie einen Namen für den Ereignistyp an, den Sie erstellen.
 schemaId	|	Die für die Ereignisschemaressource erstellte ID.
 
 
-Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types).
+Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Event_Types).
 
 
 Das folgende Beispiel zeigt die Verwendung von 'cURL' zum Erstellen eines Ereignistyps für ein Temperaturereignis, das in Grad Celsius gemessen wird:
@@ -310,7 +310,7 @@ Parameter	|	Beschreibung
 name	|	Geben Sie einen Namen für die physische Schnittstelle an, die Sie erstellen.
 
 
-Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces).
+Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces).
 
 Für das vorliegende Szenario sind zwei physische Schnittstellen erforderlich (eine für jeden Ereignistyp).
 
@@ -387,7 +387,7 @@ eventId	|	Geben Sie den Ereignisnamen von den Ereignisnutzdaten Ihres Geräts ei
 eventTypeId	|	Die für den Ereignistyp erstellte ID.
 
 
-Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces).
+Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces).
 
 Im vorliegenden Szenario werden die folgenden Ereignistypen zu den angegebenen physischen Schnittstellen hinzugefügt:
 - Das Temperaturereignis in Grad Celsius (*tevt*) wird zur physischen Schnittstelle mit der ID *5847d1df6522050001db0e1a* unter Verwendung von *eventId* aus dem Topic und von *eventTypeId* aus der Erstellung der Ereignisschemaressource hinzugefügt.
@@ -448,7 +448,7 @@ Parameter	|	Beschreibung
 physicalInterfaceId	|	Die für die physische Schnittstelle erstellte ID.
 
 
-Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 In diesem Szenario wird der Gerätetyp *EnvSensor1* zum Verbinden mit der physischen Schnittstelle *5847d1df6522050001db0e1a* und der Gerätetyp *EnvSensor2* zum Verbinden mit der physischen Schnittstelle *5847d1df6522050001db0e1b* aktualisiert.
 
@@ -556,7 +556,7 @@ name	|	Geben Sie einen Namen für das Anwendungsschnittstellenschema an, das Sie
 schemaFile	|	Pfad zur lokalen JSON-Datei des Anwendungsschnittstellenschemas.
 
 
-Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas).
+Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas).
 
 Das folgende Beispiel zeigt die Verwendung von 'cURL' zum Erstellen des Anwendungsschnittstellenschemas:
 
@@ -606,7 +606,7 @@ name	|	Geben Sie einen Namen für die Anwendungsschnittstelle an, die Sie erstel
 schemaId	|	Die für die Anwendungsschnittstellenschemaressource erstellte ID.
 
 
-Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Application_Interfaces).
+Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Application_Interfaces).
 
 Verwenden Sie in diesem Szenario die Schema-ID *5846ec826522050001db0e11*, die in der vorherigen Antwort zurückgegeben wurde, um das Anwendungsschnittstellenschema zu der Anwendungsschnittstelle hinzuzufügen.
 
@@ -657,7 +657,7 @@ schemaId	|	Die für die Anwendungsschnittstellenressource erstellte ID.
 refs/schema	|	Der Pfad zur Anwendungsschnittstellenressource. Für gewöhnlich: /schemas/*schemaId*
 
 
-Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 Im vorliegenden Szenario ist die Anwendungsschnittstelle dem Gerätetyp *EnvSensor1* und dem Gerätetyp *EnvSensor2* zugeordnet.
 
@@ -745,7 +745,7 @@ applicationInterfaceId	|	Die für die Anwendungsschnittstelle erstellte ID.
 propertyMappings	|	Eine gültige JSON-Struktur, die für die Anwendungsschnittstelle definierte Eigenschaften zu Eigenschaften der Ereignisnutzdaten des Geräts zuordnet. Siehe folgende Beispiele.
 
 
-Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 In diesem Szenario werden Zuordnungen für den Gerätetyp *EnvSensor1* definiert, um die Eigenschaft **t** im eingehenden Ereignis *tevt* der Eigenschaft **temperature** in der Anwendungsschnittstelle zuzuordnen. Außerdem werden Zuordnungen für den Gerätetyp *EnvSensor2* definiert, um die Eigenschaft **temp** im eingehenden Ereignis *tempevt* der Eigenschaft **temperature** in der Anwendungsschnittstelle zuzuordnen.
 
@@ -829,7 +829,7 @@ Parameter	|	Beschreibung
 ------	|	-----
 typeId	|	Die Gerätetyp-ID.
 
-Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 Im vorliegenden Szenario muss die Konfiguration für zwei Gerätetypen implementiert werden.
 
@@ -896,7 +896,7 @@ Informationen zum Publizieren eines eingehenden Ereignisses von einem Gerät fin
 
 Verwenden Sie die folgende API, um den Gerätestatus zu prüfen:
 ```
-GET /device/types/{typeId}/devices/{deviceId}/state/{applicationInterfaceId}
+GET /device/types/{typeId}/devices/{Geräte-ID}/state/{applicationInterfaceId}
 ```
 
 Folgende Parameter sind erforderlich:  
@@ -907,7 +907,7 @@ typeId	|	Die Gerätetyp-ID.
 deviceId	|	Die Geräte-ID.
 applicationInterfaceId	|	Die für die Anwendungsschnittstelle erstellte ID.
 
-Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 Das folgende Beispiel zeigt die Verwendung von 'cURL' zum Abrufen des aktuellen Status von *Temperatursensor 1* durch Verweisen auf die ID der erstellten Anwendungsschnittstelle.
 ```
@@ -949,7 +949,7 @@ GET /device/types/<typeId>/deployedconfiguration
 ```
 Verwenden Sie diese API, um die Konfiguration abzurufen, die implementiert wurde, als die PATCH-Bereitstellungsoperation zum letzten Mal erfolgreich durchgeführt wurde. Um die Konfiguration für eine Ressource abzurufen, die zwar geändert, aber nicht implementiert wird, verwenden Sie die reguläre GET-Methode, die der abzufragenden Ressource zugeordnet ist.
 
-Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+Weitere Informationen finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}} HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types).
 
 Das folgende Beispiel zeigt die Verwendung von 'cURL' zum Abrufen der aktuell implementierten Konfiguration:
 ```

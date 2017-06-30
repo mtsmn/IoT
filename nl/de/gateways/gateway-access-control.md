@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -12,12 +12,13 @@ lastupdated: "2017-04-20"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Gateway-Zugriffssteuerung
+# Gateway-Zugriffssteuerung (Beta)
 {: #gateway-access-control}
 
 Gateway-Geräte sind berechtigt, im Namen anderer Geräte zu handeln. Gateway-Ressourcengruppen definieren, im Namen welcher Geräte innerhalb einer Organisation jedes Gateway handeln kann. Gateways kann die Rolle *Standardgateway* zugeordnet werden. Standardgateways können nur im Namen der Geräte aus der zugehörigen Ressourcengruppe Nachrichten publizieren oder subskribieren.
 {: #shortdesc}
 
+**Wichtig:** Die {{site.data.keyword.iot_full}}-Funktion 'Gateway-Zugriffssteuerung' steht nur als Bestandteil des eingeschränkten Beta-Programms zur Verfügung. Zukünftige Aktualisierungen enthalten möglicherweise Änderungen, die mit der aktuellen Version dieser Funktion nicht kompatibel sind. Starten Sie einen Versuch und [senden Sie uns Ihren Erfahrungsbericht ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 Informationen zum Publizieren von Ereignissen von Gateway-Geräten mithilfe von APIs finden Sie in [HTTP-Messaging-APIs für Gateway-Geräte](../gateways/gw_intro_api.html).
 
@@ -29,7 +30,7 @@ Einem Gateway muss eine Rolle zugeordnet werden, damit das Gateway über eine Re
 Verwenden Sie die folgende API, um einem Gateway eine Rolle zuzuordnen:
 
 ```
-PUT /authorization/devices/{deviceId}/roles
+PUT /authorization/devices/{Geräte-ID}/roles
 ```
 
 Details zu dem Anforderungsschema finden Sie in der Dokumentation für die [{{site.data.keyword.iot_full}} Limited Gateway-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}.
@@ -67,10 +68,10 @@ Diese API gibt die Ressourcengruppen zurück, die dem verwendeten Suchtag zugeor
 Die ID einer Ressourcengruppe kann mithilfe der folgenden API gefunden werden:
 
 ```
-GET /authorization/devices/{deviceId}
+GET /authorization/devices/{Geräte-ID}
 ```
 
-Diese API gibt die eindeutige Kennung der Ressourcengruppe(n) zurück, der bzw. denen dieses Gerät als Mitglied zugeordnet ist. Weitere Informationen zu dieser API finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}} Limited Gateway-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
+Diese API gibt die eindeutige Kennung der Ressourcengruppe(n) zurück, der bzw. denen dieses Gerät als Mitglied zugeordnet ist. Weitere Informationen zu dieser API finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}} Limited Gateway-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_Geräte-ID){: new_window}.
 
 
 ## Ressourcengruppe abfragen
@@ -142,7 +143,7 @@ Diese API gibt die Eigenschaften aller mit der Organisation verbundenen Geräte 
 Verwenden Sie die folgende API, um Geräteeigenschaften ohne die zugehörigen Informationen für die Zugriffssteuerung abzurufen:
 
 ```
-GET /authorization/devices/{deviceId}
+GET /authorization/devices/{Geräte-ID}
 ```
 
 Diese API gibt alle Geräteeigenschaften für das angegebene Geräte ohne die Zugriffssteuerungsinformationen zurück. <!-- For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API). -->
@@ -150,7 +151,7 @@ Diese API gibt alle Geräteeigenschaften für das angegebene Geräte ohne die Zu
 Verwenden Sie die folgende API, um die Zugriffssteuerungsinformationen für ein bestimmtes Gerät abzurufen:
 
 ```
-GET /authorization/devices/{deviceId}/roles
+GET /authorization/devices/{Geräte-ID}/roles
 ```
 
 Diese API gibt die zugehörigen Informationen für die Zugriffssteuerung des angegebenen Geräts ohne die übrigen Geräteeigenschaften zurück. <!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
@@ -160,7 +161,7 @@ Die Geräteeigenschaften können mit zwei Methoden aktualisiert werden, entweder
 Verwenden Sie die folgende API, um Geräteeigenschaften ohne Änderung der Zugriffssteuerungseigenschaften zu aktualisieren:
 
 ```
-PUT /authorization/devices/{deviceId}
+PUT /authorization/devices/{Geräte-ID}
 ```
 
 Diese API aktualisiert nur Geräteeigenschaften, die nicht der Zugriffssteuerung zugeordnet sind. <!-- For more information on request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
@@ -168,7 +169,7 @@ Diese API aktualisiert nur Geräteeigenschaften, die nicht der Zugriffssteuerung
 Verwenden Sie die folgende API, um nur die Zugriffssteuerungseigenschaften für das angegebene Gerät zu aktualisieren:
 
 ```
-PUT /authorization/devices/{deviceId}/withroles
+PUT /authorization/devices/{Geräte-ID}/withroles
 ```
 
 Diese API aktualisiert nur die Zugriffssteuerungseigenschaften für das angegebene Gerät. <!-- For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->

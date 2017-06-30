@@ -87,7 +87,7 @@ Ihre TLS-Anforderungen sind davon abhängig, ob Sie eine Verbindung zu {{site.da
 
 ### TLS-Anforderungen für HTTP-Verbindungen
 
-Wenn Sie das Standardserverzertifikat verwenden, sind für {{site.data.keyword.iot_short_notm}} TLS Version 1, TLS Version 1.1 oder TLS Version 1.2 und die folgenden Cipher-Suites erforderlich:
+Wenn Sie das Standardserverzertifikat verwenden, sind für {{site.data.keyword.iot_short_notm}} TLS Version 1.1, TLS Version 1.2 und die folgenden Cipher-Suites erforderlich:
 
 
 - TLS_RSA_WITH_AES_128_CBC_SHA

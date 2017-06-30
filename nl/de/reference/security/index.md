@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -29,7 +29,7 @@ Im folgenden Dokument werden einige häufig gestellte Fragen zum Schutz der Date
 ## {{site.data.keyword.iot_short_notm}} und {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}} wird innerhalb der {{site.data.keyword.Bluemix_notm}}-Plattform ausgeführt und gründet sich in Bezug auf Zugriff und Konnektivität daher sowohl auf {{site.data.keyword.Bluemix_notm}} als auch auf {{site.data.keyword.BluSoftlayer_full}}. Durch die Abhängigkeit von {{site.data.keyword.Bluemix_notm}} und {{site.data.keyword.BluSoftlayer}} ist die Sicherheit und Zuverlässigkeit von {{site.data.keyword.Bluemix_notm}} und {{site.data.keyword.BluSoftlayer}} wichtig für Benutzer von {{site.data.keyword.iot_short_notm}}.
+{{site.data.keyword.iot_short_notm}} wird innerhalb der {{site.data.keyword.Bluemix_notm}}-Plattform ausgeführt und gründet sich in Bezug auf Zugriff und Konnektivität daher sowohl auf {{site.data.keyword.Bluemix_notm}} als auch auf {{site.data.keyword.BluSoftlayer_full}}. Durch die Abhängigkeit von {{site.data.keyword.Bluemix_notm}} und {{site.data.keyword.BluSoftlayer_notm}} ist die Sicherheit und Zuverlässigkeit von {{site.data.keyword.Bluemix_notm}} und {{site.data.keyword.BluSoftlayer_notm}} wichtig für Benutzer von {{site.data.keyword.iot_short_notm}}.
 
 Weitere Details zur Sicherheit von {{site.data.keyword.Bluemix_notm}} finden Sie in [Sicherheit der {{site.data.keyword.Bluemix_notm}}-Plattform](index.html#platform-security).
 
@@ -67,13 +67,14 @@ Die Identifikationsdaten von Geräten und API-Schlüssel können einzeln widerru
 ## Wie stellen wir sicher, dass Ihre Geräte eine sichere Verbindung zu {{site.data.keyword.iot_short_notm}}?
 {: #secure-device-connection}
 
-Geräte werden über eine Client-ID und/oder das Authentifizierungstoken verbunden, das generiert wird, wenn die Geräte Ihrer Plattform hinzugefügt werden. MQTT wird verwendet, um plattform- und sprachübergreifend eine einfache Interoperabilität zu ermöglichen. {{site.data.keyword.iot_short_notm}} unterstützt Konnektivität über TLS Version 1.2.
+Geräte werden über eine Client-ID und das Authentifizierungstoken verbunden, das generiert wird, wenn die Geräte zu Ihrer Plattform hinzugefügt werden. MQTT wird verwendet, um plattform- und sprachübergreifend eine einfache Interoperabilität zu ermöglichen. {{site.data.keyword.iot_short_notm}} unterstützt Konnektivität über TLS Version 1.2.
 
 ![Abbildung](connectivity_platform.svg)
 
+
 Weitere Informationen zu den Anforderungen für TLS und Cipher-Suite finden Sie im Abschnitt [TLS-Anforderungen](connect_devices_apps_gw.html#tls_requirements) in der Dokumentation `Verbindungen für Anwendungen, Geräte und Gateways in Watson IoT Platform`.
 
-Sie können Zertifikate und Sicherheitsrichtlinien verwenden, um die Geräteverbindungssicherheit zu verbessern. Sicherheitsrichtlinien können so eingerichtet werden, dass unverschlüsselte Verbindungen möglich sind, nur TLS-Verbindungen zulässig sind oder Geräte sich mit clientseitigen Zertifikaten authentifizieren müssen. Mit Blacklists können Geräte angegeben werden, mit den eine Verbindung nicht zulässig ist. In Whitelists können Sie bestimmte Geräte für die Verbindung zulassen. Weitere Informationen zur erweiterten Sicherheit finden Sie in [Risiko- und Sicherheitsmanagement](RM_security.html).
+Sie können Zertifikate und Sicherheitsrichtlinien verwenden, um die Geräteverbindungssicherheit zu verbessern. Sicherheitsrichtlinien können so eingerichtet werden, dass unverschlüsselte Verbindungen möglich sind, nur TLS-Verbindungen zulässig sind oder Geräte sich mit clientseitigen Zertifikaten und ohne Tokens authentifizieren können. Mit Blacklists können Geräte angegeben werden, mit denen eine Verbindung nicht zulässig ist. Mit Whitelists können Sie bestimmte Geräte für die Verbindung zulassen. Weitere Informationen zur erweiterten Sicherheit finden Sie in [Risiko- und Sicherheitsmanagement](RM_security.html).
 
 ## Wie verhindern wir, dass es zwischen Geräten Datenlecks gibt?
 {: #prevent-leak-devices}
@@ -109,5 +110,5 @@ Der Topic-Bereich, in dem Geräte und Anwendungen operieren, befindet sich berei
 * [{{site.data.keyword.Bluemix_notm}} - Sicherheit ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} - Plattformsicherheit ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} - Einhaltung von Sicherheitsbestimmungen](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} - Sicherheit ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} - Compliance ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer_notm}} - Sicherheit ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer_notm}} - Compliance ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.softlayer.com/compliance){:new_window}
