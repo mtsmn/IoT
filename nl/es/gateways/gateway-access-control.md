@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -12,12 +12,13 @@ lastupdated: "2017-04-20"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Control de acceso de pasarela
+# Control de acceso de pasarela (Beta)
 {: #gateway-access-control}
 
 Se autoriza a los dispositivos de pasarela para que actúen en nombre de otros dispositivos. Los grupos de recursos de pasarela definen los dispositivos de una organización en cuyo nombre puede actuar cada pasarela. Se puede asignar a las pasarelas el rol *Pasarela estándar*. Las pasarelas estándar solo pueden publicar o suscribirse a mensajes en nombre de los dispositivos de su grupo de recursos.
 {: #shortdesc}
 
+**Importante:** La característica de Control de acceso de pasarela de {{site.data.keyword.iot_full}} únicamente está disponible como parte de un programa beta limitado. Las actualizaciones futuras pueden incluir cambios que no son compatibles con la versión actual de esta característica. Pruébela y [denos su opinión ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 Para obtener información sobre la publicación de sucesos desde dispositivos de pasarela mediante API, consulte [API de mensajería HTTP para dispositivos de pasarela](../gateways/gw_intro_api.html).
 

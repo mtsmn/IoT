@@ -95,7 +95,7 @@ Si decide crear su propia señal, asegúrese de que tenga entre 8 y 36 caractere
  - Asterisco (\*)
  - Signo más (+)
  - Punto (.)
- - Paréntesis derecho e izquierdo .  
+ - Paréntesis derecho e izquierdo.  
 
  **Importante:** la señal no debe contener secuencias de caracteres repetidos, palabras de diccionario, nombres de usuario ni otras secuencias predefinidas.
 15. En la página de información de dispositivos, copie y guarde la siguiente información de dispositivos:  

@@ -557,7 +557,7 @@ Para obtener más información sobre las acciones de firmware, consulte [Solicit
 - Rearranque
 - Restablecimiento de fábrica
 
-La pasarela debe realizar las siguientes actividades para dar soporte a las acciones de dispositivo para sí misma y para los dispositivos que hay detrás:
+La pasarela debe realizar las siguientes actividades para dar soporte a las acciones de dispositivo para sí misma y para los dispositivos que hay detrás.
 
 1. Informar al servidor sobre el soporte de acciones de dispositivo.
 2. Crear el manejador de acciones de dispositivo.
@@ -653,19 +653,19 @@ Para obtener más información sobre las acciones de dispositivo, consulte [Soli
 ## Paquetes de ampliación de gestión de dispositivos
 {: #dme}
 
-Un paquete de ampliación de gestión de dispositivos (DME) es un documento JSON que define al menos un conjunto de acciones de gestión de dispositivos. Las acciones se pueden iniciar en uno o varios dispositivos que den soporte a estas acciones. Las acciones se inician mediante el panel de control de {{site.data.keyword.iot_short}} o mediante las API REST de gestión de dispositivos. 
+Un paquete de ampliación de gestión de dispositivos (DME) es un documento JSON que define al menos un conjunto de acciones de gestión de dispositivos. Las acciones se pueden iniciar en uno o varios dispositivos que den soporte a estas acciones. Las acciones se inician mediante el panel de control de {{site.data.keyword.iot_short}} o mediante las API REST de gestión de dispositivos.
 
 Para obtener más información sobre formatos de paquetes DME, consulte [Ampliación de la gestión de dispositivos](../../devices/device_mgmt/custom_actions.html).
 
 ### Soporte de acciones de gestión de dispositivos personalizada
 
-Las acciones de gestión de dispositivos definidas en un paquete de ampliación se pueden iniciar en una pasarela o en dispositivos conectados que den soporte a dichas acciones. 
+Las acciones de gestión de dispositivos definidas en un paquete de ampliación se pueden iniciar en una pasarela o en dispositivos conectados que den soporte a dichas acciones.
 
-Un dispositivo especifica los tipos de acciones a las que da soporte cuando publica una solicitud de gestión en {{site.data.keyword.iot_short}}. Para permitir que un dispositivo reciba acciones personalizadas definidas en un determinado paquete de ampliación, el dispositivo debe especificar el identificador de paquete de dicha ampliación en el objeto de soporte cuando publique una solicitud de gestión. 
+Un dispositivo especifica los tipos de acciones a las que da soporte cuando publica una solicitud de gestión en {{site.data.keyword.iot_short}}. Para permitir que un dispositivo reciba acciones personalizadas definidas en un determinado paquete de ampliación, el dispositivo debe especificar el identificador de paquete de dicha ampliación en el objeto de soporte cuando publique una solicitud de gestión.
 
-La pasarela puede invocar la API `manage()` con la lista de los ID de paquete para informar a {{site.data.keyword.iot_short}} de que la pasarela o el dispositivo conectado dan soporte a las acciones DME para la lista proporcionada de ID de paquete que están en la solicitud de gestión. 
+La pasarela puede invocar la API `manage()` con la lista de los ID de paquete para informar a {{site.data.keyword.iot_short}} de que la pasarela o el dispositivo conectado dan soporte a las acciones DME para la lista proporcionada de ID de paquete que están en la solicitud de gestión.
 
-Se utiliza el siguiente fragmento de código para publicar una solicitud de gestión para comunicar a {{site.data.keyword.iot_short}} que esta pasarela da soporte a una acción DME: 
+Se utiliza el siguiente fragmento de código para publicar una solicitud de gestión para comunicar a {{site.data.keyword.iot_short}} que esta pasarela da soporte a una acción DME:
 
 ```java
 List<String> bundleIds = new ArrayList<String>();
@@ -674,9 +674,9 @@ bundleIds.add("example-dme-actions-v1");
 mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
 ```
 
-El último parámetro especifica la acción personalizada a la que da soporte el dispositivo. 
+El último parámetro especifica la acción personalizada a la que da soporte el dispositivo.
 
-De forma similar, una pasarela puede invocar el método de dispositivo correspondiente para comunicar el soporte de la acción DME a los dispositivos conectados: 
+De forma similar, una pasarela puede invocar el método de dispositivo correspondiente para comunicar el soporte de la acción DME a los dispositivos conectados:
 
 ```java
 List<String> bundleIds = new ArrayList<String>();
@@ -691,12 +691,12 @@ Cuando se inicia una acción personalizada en una pasarela o dispositivo conecta
 
 | Propiedad     | Tipos de datos     | Descripción |
 |----------------|----------------|----------------|
-|`bundleId` |Serie | Identificador exclusivo del DME. |
-|`actionId` |Serie|La acción personalizada de la que se crea una instancia. |
-|`typeId` |Serie|El tipo de dispositivo en el que se crea la instancia de la acción personalizada. |
-|`deviceId` |Serie|El dispositivo en el que se crea la instancia de la acción personalizada. |
-|`payload` |Serie|El mensaje real que contiene la lista de parámetros en formato JSON. |
-|`reqId` |Serie|El ID de solicitud utilizado para responder a la solicitud de la acción personalizada. |
+|`bundleId` |Serie | Identificador exclusivo del DME.|
+|`actionId` |Serie|La acción personalizada de la que se crea una instancia.|
+|`typeId` |Serie|El tipo de dispositivo en el que se crea la instancia de la acción personalizada.|
+|`deviceId` |Serie|El dispositivo en el que se crea la instancia de la acción personalizada.|
+|`payload` |Serie|El mensaje real que contiene la lista de parámetros en formato JSON.|
+|`reqId` |Serie|El ID de solicitud utilizado para responder a la solicitud de la acción personalizada.|
 
 El código siguiente es una implementación de ejemplo de `CustomActionHandler`:
 
@@ -767,14 +767,14 @@ public class MyCustomActionHandler extends CustomActionHandler implements Runnab
 
 Cuando se añade `CustomActionHandler` a la instancia `ManagedGateway`, se invoca el método `handleCustomAction()` siempre que la aplicación inicia cualquier acción personalizada.
 
-En el ejemplo de código siguiente se muestra cómo añadir `CustomActionHandler` a la instancia `ManagedGateway`. 
+En el ejemplo de código siguiente se muestra cómo añadir `CustomActionHandler` a la instancia `ManagedGateway`.
 
 ```java
 MyCustomActionHandler handler = new MyCustomActionHandler();
 mgdGateway.addCustomActionHandler(handler);
 ```
 
-Cuando la pasarela recibe el mensaje de acción personalizada, la pasarela completa la acción o responde con un código de error que indica que no puede completar la acción. La pasarela debe utilizar el método *setStatus()* para definir el estado de la acción: 
+Cuando la pasarela recibe el mensaje de acción personalizada, la pasarela completa la acción o responde con un código de error que indica que no puede completar la acción. La pasarela debe utilizar el método *setStatus()* para definir el estado de la acción:
 
 ```java
 action.setStatus(Status.OK);

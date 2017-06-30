@@ -87,7 +87,7 @@ Plataforma Internet de las cosas
         reference/gateway_roles_access.md
 
     {: .topicgroup}
-    Análisis de datos en tiempo real
+    Análisis de datos IoT en tiempo real
         analytics.md
         data_visualization.md
         im_schemas.md

@@ -87,7 +87,7 @@ Los requisitos de TLS dependen de si está conectando a {{site.data.keyword.iot_
 
 ### Requisitos de TLS para conexiones HTTP
 
-Si utiliza el certificado de servidor predeterminado, {{site.data.keyword.iot_short_notm}} necesita TLS v1, TLS v1.1 o TLS v1.2 y las siguientes suites de cifrado:
+Si utiliza el certificado de servidor predeterminado, {{site.data.keyword.iot_short_notm}} necesita TLS v1.1 o TLS v1.2 y las siguientes suites de cifrado:
 
 
 - TLS_RSA_WITH_AES_128_CBC_SHA
