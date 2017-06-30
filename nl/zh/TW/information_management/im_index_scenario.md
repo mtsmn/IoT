@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -61,7 +61,7 @@ lastupdated: "2017-04-10"
 
 在此情境下，假設兩種裝置類型及兩個裝置實例。裝置實例 *TemperatureSensor1* 與裝置類型 *EnvSensor1* 相關聯。裝置實例 *TemperatureSensor2* 與裝置類型 *EnvSensor2* 相關聯。
 
-如需使用 REST API 來新增裝置類型的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Types) 文件。
+如需使用 REST API 來新增裝置類型的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration) 文件。
 
 ## 步驟 1：建立事件綱目檔
 {: #step1}
@@ -148,7 +148,7 @@ schemaFile	|	本端事件綱目 JSON 檔案的路徑。
 
 
 
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) 文件。
+如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas) 文件。
 
 
 
@@ -233,7 +233,9 @@ name	|	提供所建立事件類型的名稱。
 schemaId	|	針對事件綱目資源所建立的 ID。
 
 
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types) 文件。
+如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Event_Types) 文件。
+
+
 
 
 下列範例顯示如何使用 cURL 來建立以攝氏度數測量的溫度事件的事件類型：
@@ -312,7 +314,7 @@ POST /physicalinterfaces
 name	|	提供所建立實體介面的名稱。
 
 
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) 文件。
+如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces) 文件。
 
 
 
@@ -391,7 +393,7 @@ eventId	|	輸入裝置事件有效負載中的事件名稱。
 eventTypeId	|	針對事件類型所建立的 ID。
 
 
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) 文件。
+如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces) 文件。
 
 
 
@@ -454,7 +456,9 @@ PUT /device/types/{typeId}
 physicalInterfaceId	|	針對實體介面所建立的 ID。
 
 
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文件。
+如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 文件。
+
+
 
 在此情境下，會更新裝置類型 *EnvSensor1* 以連接至實體介面 *5847d1df6522050001db0e1a*，以及更新裝置類型 *EnvSensor2* 以連接至實體介面 *5847d1df6522050001db0e1b*。
 
@@ -562,7 +566,7 @@ name	|	提供所建立應用程式介面綱目的名稱。
 schemaFile	|	本端應用程式介面綱目 JSON 檔案的路徑。
 
 
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) 文件。
+如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas) 文件。
 
 
 
@@ -614,7 +618,7 @@ name	|	提供所建立應用程式介面的名稱。
 schemaId	|	針對應用程式介面綱目資源所建立的 ID。
 
 
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Application_Interfaces) 文件。
+如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Application_Interfaces) 文件。
 
 
 
@@ -667,7 +671,9 @@ schemaId	|	針對應用程式介面資源所建立的 ID。
 refs/schema	|	應用程式介面資源的路徑。一般是：/schemas/*schemaId*
 
 
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文件。
+如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 文件。
+
+
 
 在此情境下，應用程式介面會與裝置類型 *EnvSensor1* 和裝置類型 *EnvSensor2* 相關聯。
 
@@ -755,7 +761,9 @@ applicationInterfaceId	|	針對應用程式介面所建立的 ID。
 propertyMappings	|	有效的 JSON 結構，可對映針對應用程式介面所定義的內容與裝置事件有效負載的內容。請參閱下列範例。
 
 
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文件。
+如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 文件。
+
+
 
 在此情境下，我們定義裝置類型 *EnvSensor1* 的對映，以將入埠事件 *tevt* 中的 **t** 內容對映至應用程式介面上的 **temperature** 內容。我們還會定義裝置類型 *EnvSensor2* 的對映，以將入埠事件 *tempevt* 中的 **temp** 內容對映至應用程式介面上的 **temperature** 內容。
 
@@ -839,7 +847,9 @@ PATCH /device/types/{typeId}
 ------	|	-----
 typeId	|	裝置類型 ID
 
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文件。
+如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 文件。
+
+
 
 在此情境下，我們需要部署兩種裝置類型的配置。
 
@@ -916,7 +926,9 @@ GET /device/types/{typeId}/devices/{deviceId}/state/{applicationInterfaceId}
 typeId	|	裝置類型 ID
 deviceId	|	裝置 ID。applicationInterfaceId	|	針對應用程式介面所建立的 ID。
 
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文件。
+如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 文件。
+
+
 
 下列範例顯示如何使用 cURL 以參照所建立應用程式介面的 ID 來擷取 *TemperatureSensor1* 的現行狀態：
 ```
@@ -958,7 +970,9 @@ GET /device/types/<typeId>/deployedconfiguration
 ```
 使用此 API，以擷取上次順利完成 PATCH 部署作業時所部署的配置。若要擷取已變更但未部署之資源的配置，請使用與所要查詢之資源相關聯的一般 GET 方法。
 
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文件。
+如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types) 文件。
+
+
 
 下列範例顯示如何使用 cURL 來擷取最新的已部署配置：
 ```

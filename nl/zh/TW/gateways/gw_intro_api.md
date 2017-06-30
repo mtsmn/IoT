@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-21"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -95,3 +95,31 @@ lastupdated: "2017-03-21"
 如需 {{site.data.keyword.iot_short_notm}} 的 MQTT 通訊協定及服務品質水準的相關資訊，請參閱 [MQTT 傳訊](../reference/mqtt/index.html)。
 
 如需使用 API 來管理閘道裝置的相關資訊，請參閱[閘道裝置的 HTTP REST API](../gateways/gw_api.html)。
+
+## 接收指令
+{: #receive_commands}
+
+除了使用 MQTT 傳訊通訊協定之外，您也可以使用「HTTP 傳訊 API」指令來配置閘道裝置，透過 HTTP 接收來自 {{site.data.keyword.iot_short_notm}} 的指令。閘道裝置可以接收指向其相關聯資源群組內裝置的指令。如需閘道資源群組的相關資訊，請參閱[閘道存取控制（測試版）](../gateways/gateway-access-control.html)。
+
+請使用下列其中一個 URL，來提交來自連接至 {{site.data.keyword.iot_short_notm}} 之閘道的 `POST` 要求：
+
+### 未受保護的 POST 要求
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+### 安全的 POST 要求
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+**附註：**您也可以指定埠 443（預設 SSL 埠）來進行安全 HTTP API 呼叫。
+
+您可以選擇性地在 HTTP 要求主體中包括參數 *waitTimeSecs* 來指定一個整數，這個整數代表等待指令的秒數上限：
+<pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>
+
+
+**重要注意事項：**
+- *waitTimeSecs* 的值必須是 0 - 3600 秒範圍內的整數。預設值為 0。
+- 若要接收任何裝置類型的指令，請針對 `typeId` 元件使用「任何」萬用字元 (+)。如果使用萬用字元，則會在回應標頭欄位 *X-deviceType* 中包含裝置類型。
+- 若要接收任何裝置的指令，請針對 `deviceId` 元件使用「任何」萬用字元 (+)。如果使用萬用字元，則會在回應標頭欄位 *X-deviceId* 中包含裝置 ID。
+- 若要接收任何指令，請針對 `command` 元件使用「任何」萬用字元 (+)。如果使用萬用字元，則會在回應標頭欄位 *X-commandId* 中包含指令 ID。
+- 如果 HTTP 回應狀態碼是 200，則會在回應主體中包含指令資料。請檢閱回應標頭欄位 *Content-Type*，以尋找內容類型。
+- 如果 HTTP 回應狀態碼是 204，則沒有可用的指令資料。

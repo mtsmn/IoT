@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -41,10 +41,7 @@ https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002
 API                     | 用來...       
 ------------- | -------------
 [組織管理 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | 配置組織（包括建立及刪除裝置），檢查用法、服務狀態，以及診斷裝置連線問題。[安全 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | 管理使用者邀請與鑑別，以及使用者、API 金鑰和裝置的授權。[資訊管理 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  存取裝置事件資料、取得和更新裝置位置，以及取得該位置的天氣資訊。**附註：**天氣資訊取決於 The Weather Company 資料整合。
-[The Weather Company ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html#!/Device_Location_Weather){: new_window} | 將 The Weather Company 的資料與您的現有裝置整合。
-[裝置管理 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | 使用裝置管理通訊協定來與受管理裝置互動。[傳訊 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | 使用 HTTP 來發佈事件及傳送指令。
-
-
+[裝置管理 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | 使用裝置管理通訊協定來與受管理裝置互動。[傳訊 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | 使用 HTTP 來發佈事件及傳送指令。[風險管理 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | 管理「風險管理」原則及報告。
 
 ## 延伸規格 HTTP API
 {: #api_extension}

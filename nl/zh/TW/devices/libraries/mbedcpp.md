@@ -28,7 +28,7 @@ lastupdated: "2017-03-14"
 
 |相依關係 |說明|
 |:---|:---|
-|[Eclipse Paho MQTT 程式庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/teams/mqtt/code/MQTT/){: new_window}|提供 mBed 裝置的 MQTT 用戶端程式庫。如需相關資訊，請參閱[嵌入式 MQTT C/C++ 用戶端程式庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}|
+|[Eclipse Paho MQTT 程式庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/teams/mqtt/code/MQTT/){: new_window}|提供 mBed 裝置的 MQTT 用戶端程式庫。如需相關資訊，請參閱 [Embedded MQTT C/C++ Client Libraries ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}|
 |[EthernetInterface 程式庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/){: new_window}|透過乙太網路的 mBed IP 程式庫。|
 
 ## 如何使用程式庫

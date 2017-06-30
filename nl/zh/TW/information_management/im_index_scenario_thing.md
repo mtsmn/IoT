@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -68,7 +68,7 @@ The code that is used in this example is available in the updated {{site.data.ke
 {: #add_device}  
 在此情境下，會使用兩個裝置類型及四個裝置實例。裝置實例 *temperatureSensor1* 及 *temperatureSensor2* 是與裝置類型 *Thermometer* 相關聯。裝置實例 *humiditySensor1* 及 *humiditySensor2* 是與裝置類型 *Hygrometer* 相關聯。
 
-如需使用 REST API 來新增裝置類型的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofThings.ibmcloud.com/swagger/v0002.html#!/Device_Types) 文件。  
+如需使用 REST API 來新增裝置類型的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration) 文件。  
 
 ## 步驟 1：建立組合綱目檔。  
 {: #crt_composition_file}  
