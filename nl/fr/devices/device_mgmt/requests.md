@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-27"
 
 ---
 
@@ -31,7 +31,7 @@ Les demandes peuvent être lancées à l'aide de l'exemple d'API REST suivant :
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Pour plus d'informations sur le corps d'une demande de gestion des terminaux, voir la [documentation de l'API ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Pour plus d'informations sur le corps d'une demande de gestion des terminaux, voir la [documentation de l'API ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
 
 ## Actions sur les terminaux
 {: #device-actions}

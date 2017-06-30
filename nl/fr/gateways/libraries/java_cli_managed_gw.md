@@ -29,7 +29,7 @@ Une passerelle gérée exécute un agent de gestion des terminaux, lequel s'exé
 
 ### Agent de gestion des terminaux
 
-Les terminaux qui se connectent à {{site.data.keyword.iot_short}} indirectement via une passerelle peuvent utiliser différents protocoles de connexion, s'ils sont pris en charge par le terminal de passerelle.
+Les terminaux qui se connectent à {{site.data.keyword.iot_short}} indirectement via une passerelle peuvent utiliser différents protocoles de connexion, s'ils sont pris en charge par le terminal passerelle.
 
 L'instance `ManagedGateway` est un agent de gestion des terminaux qui fournit une liste de méthodes permettant d'effectuer une ou plusieurs actions de gestion des terminaux, telles que la participation à l'activité de gestion des terminaux et la mise à jour de codes d'erreur, de journaux, d'emplacement et de microprogramme ou de terminal.
 
@@ -106,8 +106,8 @@ Le constructeur 1 construit une instance `ManagedGateway` en acceptant une class
 | Propriété     |Description     |
 |----------------|----------------|
 |`Organization-ID` |ID de votre organisation.|
-|`Gateway-Type` |Type de votre terminal de passerelle.|
-|`Gateway-ID` |ID du terminal de passerelle.|
+|`Gateway-Type` |Type de votre terminal passerelle.|
+|`Gateway-ID` |ID du terminal passerelle.|
 |`Authentication-Method`|Méthode d'authentification. La seule méthode prise en charge est "token".|
 |`Authentication-Token`|Jeton de clé d'API.|
 |`auth-key`   |Clé d'API facultative qui est requise lorsque vous affectez la valeur `apikey` au paramètre auth-method.|
@@ -655,29 +655,25 @@ Pour plus d'informations sur les actions sur les terminaux, voir [Demande de ges
 
 Un package d'extension de gestion des terminaux (DME, Device Management Extension) est un document JSON qui définit un ensemble d'actions personnalisées de gestion de terminaux. Les actions
 peuvent être initiées sur un ou plusieurs terminaux qui les acceptent. Les actions sont initiées soit à l'aide du tableau de bord {{site.data.keyword.iot_short}}, soit par l'intermédiaire
-des API REST de gestion des terminaux. 
+des API REST de gestion des terminaux.
 
 Pour plus d'informations sur les formats de package DME, référez-vous à [Extension de la gestion des terminaux](../../devices/device_mgmt/custom_actions.html).
 
 ### Prise en charge des actions de gestion des terminaux personnalisées
 
 Les actions de gestion des terminaux qui sont définies dans un package
-d'extension peuvent être lancées sur une passerelle ou par des terminaux connectés qui les acceptent. 
+d'extension peuvent être lancées sur une passerelle ou par des terminaux connectés qui les acceptent.
 
-Un terminal spécifie les types d'actions qu'il accepte lorsqu'il publie une demande de gestion sur {{site.data.keyword.iot_short}}. 
-Pour que le terminal puisse recevoir des actions personnalisées définies dans un package d'extension particulier,
+Un terminal spécifie les types d'actions qu'il accepte lorsqu'il publie une demande de gestion sur {{site.data.keyword.iot_short}}. Pour que le terminal puisse recevoir des actions personnalisées définies dans un package d'extension particulier,
 il doit spécifier l'identificateur du bundle (regroupement) de cette extension dans l'objet supports en même temps qu'il publie une
 demande de gestion.
-
 
 La passerelle peut appeler l'API `manage()` avec la liste
 des ID de bundle pour informer {{site.data.keyword.iot_short}} qu'elle-même ou
 les terminaux connectés supportent les actions DME pour cette liste d'ID de bundle.
 
-
 Le fragment de code suivant est utilisé pour publier une demande de gestion afin de faire savoir à
 {{site.data.keyword.iot_short}} que cette passerelle supporte une action DME :
-
 
 ```java
 List<String> bundleIds = new ArrayList<String>();
@@ -688,7 +684,7 @@ mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
 
 Le dernier paramètre spécifie l'action personnalisée que le terminal supporte.
 
-De même, une passerelle peut appeler la méthode de terminal correspondante pour faire connaître le support d'actions DME par les terminaux connectés : 
+De même, une passerelle peut appeler la méthode de terminal correspondante pour faire connaître le support d'actions DME par les terminaux connectés :
 
 ```java
 List<String> bundleIds = new ArrayList<String>();
@@ -700,10 +696,8 @@ mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds)
 ### Traitement des actions de gestion des terminaux personnalisées
 
 Lorsqu'une action personnalisée est initiée sur une passerelle ou un terminal connecté à {{site.data.keyword.iot_short}},
-un message MQTT est publié à destination de la passerelle.
-Ce message contient les paramètres qui ont été spécifiés dans le cadre de la demande. La passerelle doit ajouter un CustomActionHandler pour permettre la réception et le traitement du message. Le message est retourné en
+un message MQTT est publié à destination de la passerelle. Ce message contient les paramètres qui ont été spécifiés dans le cadre de la demande. La passerelle doit ajouter un CustomActionHandler pour permettre la réception et le traitement du message. Le message est retourné en
 tant qu'instance de la classe `CustomAction`, dont les propriétés sont les suivantes :
-
 
 | Propriété     | Type de données     | Description |
 |----------------|----------------|----------------|
@@ -791,8 +785,7 @@ MyCustomActionHandler handler = new MyCustomActionHandler();
 mgdGateway.addCustomActionHandler(handler);
 ```
 
-Lorsque la passerelle reçoit le message d'action personnalisée, elle exécute l'action ou répond avec un code d'erreur indiquant la raison pour laquelle elle ne peut pas exécuter l'action.
-La passerelle doit utiliser la méthode *setStatus()* pour fixer l'état de l'action : 
+Lorsque la passerelle reçoit le message d'action personnalisée, elle exécute l'action ou répond avec un code d'erreur indiquant la raison pour laquelle elle ne peut pas exécuter l'action. La passerelle doit utiliser la méthode *setStatus()* pour fixer l'état de l'action :
 
 ```java
 action.setStatus(Status.OK);

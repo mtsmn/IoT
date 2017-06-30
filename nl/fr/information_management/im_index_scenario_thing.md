@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -91,8 +91,8 @@ type de terminal *Hygromètre*.
 
 Pour plus d'informations sur l'utilisation de l'API REST servant à ajouter un type de
 terminal, consultez la documentation correspondante dans le document
-[API
-REST HTTP de {{site.data.keyword.iot_short_notm}}](https://docs.internetofThings.ibmcloud.com/swagger/v0002.html#!/Device_Types) (en anglais).
+[API REST HTTP de {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration) (en anglais).
+  
 
 ## Etape 1 : créez un fichier schéma de composition  
 {: #crt_composition_file}  

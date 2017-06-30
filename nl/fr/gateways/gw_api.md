@@ -13,7 +13,7 @@ lastupdated: "2017-03-07"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# API REST HTTP pour les terminaux de passerelle
+# API REST HTTP pour les terminaux passerelle
 {: #api_link}
 
 
@@ -24,7 +24,7 @@ La seule version de l'API REST HTTP {{site.data.keyword.iot_short_notm}} prise e
 ## Connexions client
 {: #client_connections}
 
-Pour plus d'informations sur la sécurité du client et pour savoir comment connecter des terminaux de passerelle dans {{site.data.keyword.iot_short_notm}}, voir [Connexion d'applications, de terminaux et de passerelles à {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
+Pour plus d'informations sur la sécurité du client et pour savoir comment connecter des terminaux passerelle dans {{site.data.keyword.iot_short_notm}}, voir [Connexion d'applications, de terminaux et de passerelles à {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
 
 
 ### Authentification
@@ -34,7 +34,7 @@ Toutes les demandes doivent inclure un en-tête d'autorisation. L'authentificati
 |Données d'identification|Entrée requise|
 |:---|:---|
 |Nom d'utilisateur| `g/{orgId}/{gwType}/{gwDevId}`
-|Mot de passe| Jeton d'authentification qui a été généré automatiquement ou que vous avez spécifié manuellement lors de l'enregistrement du terminal de passerelle.
+|Mot de passe| Jeton d'authentification qui a été généré automatiquement ou que vous avez spécifié manuellement lors de l'enregistrement du terminal passerelle.
 
 où :
 
@@ -47,7 +47,7 @@ où :
 <dd>Type de passerelle. </dd>
 <p></p>
 <dt>gwDevId</dt>  
-<dd>Identificateur de terminal de passerelle. </dd>
+<dd>Identificateur de terminal passerelle. </dd>
 </dl>
 
 

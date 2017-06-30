@@ -102,9 +102,9 @@ Le caractère générique `+` MQTT sera utilisé pour `typeId`, `deviceId`, `com
 ## Enregistrement automatique de la passerelle
 {: #auto-reg}
 
-Les terminaux de passerelle peuvent enregistrer automatiquement les terminaux qui leur sont connectés. Lorsqu'une passerelle publie un message ou s'abonne à un sujet pour le compte d'un terminal non enregistré, ce terminal est automatiquement enregistré.
+Les terminaux passerelle peuvent enregistrer automatiquement les terminaux qui leur sont connectés. Lorsqu'une passerelle publie un message ou s'abonne à un sujet pour le compte d'un terminal non enregistré, ce terminal est automatiquement enregistré.
 
-Le nombre de demandes d'enregistrement en attente simultanées provenant des terminaux de passerelle ne peut pas être supérieur à 128. Essayer de connecter un grand nombre de nouveaux terminaux peut retarder l'enregistrement des terminaux via la passerelle.
+Le nombre de demandes d'enregistrement en attente simultanées provenant des terminaux passerelle ne peut pas être supérieur à 128. Essayer de connecter un grand nombre de nouveaux terminaux peut retarder l'enregistrement des terminaux via la passerelle.
 
 **Avertissement**
 
@@ -113,7 +113,7 @@ Si la passerelle ne parvient pas à enregistrer un terminal automatiquement, ell
 ## Notifications de la passerelle
 {: #notification}
 
-Lorsque des erreurs se produisent lors de la validation du sujet de publication ou d'abonnement ou lors de l'enregistrement automatique, une notification est envoyée au terminal de passerelle. Une passerelle peut recevoir ces notifications en s'abonnant au sujet suivant, en remplaçant les valeurs `typeId` et `deviceId` :
+Lorsque des erreurs se produisent lors de la validation du sujet de publication ou d'abonnement ou lors de l'enregistrement automatique, une notification est envoyée au terminal passerelle. Une passerelle peut recevoir ces notifications en s'abonnant au sujet suivant, en remplaçant les valeurs `typeId` et `deviceId` :
 
 ```
 iot-2/type/**typeId**/id/**deviceId**/notify

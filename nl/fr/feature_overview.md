@@ -27,9 +27,9 @@ lastupdated: "2017-01-12"
 
 La fonctionnalité de connexion de {{site.data.keyword.iot_short_notm}} est le point de départ de n'importe quel service {{site.data.keyword.iot_short_notm}}. Les opérations de connexion de terminaux, de création d'applications, de contrôle de vos terminaux et d'interaction avec des services de tiers sont toutes disponibles sous la fonctionnalité de connexion de {{site.data.keyword.iot_short_notm}}.
 
-### Terminaux de passerelle
+### Terminaux passerelle
 
-A l'aide d'une passerelle, vous pouvez connecter des terminaux à {{site.data.keyword.iot_short_notm}}, faute de quoi, ils ne peuvent pas se connecter à Internet. Les passerelles ont toutes les fonctions d'un terminal, mais peuvent également publier et s'abonner pour le compte des terminaux qui y sont connectés. Les terminaux de passerelle permettent à des groupes de capteurs qui ne peuvent pas se connecter à Internet de se connecter à votre {{site.data.keyword.iot_short_notm}} en envoyant leurs données à une passerelle. Pour plus d'informations, voir la rubrique relative au [développement pour les passerelles](https://console.ng.bluemix.net/docs/services/IoT/gateways/gw_dev_index.html).
+A l'aide d'une passerelle, vous pouvez connecter des terminaux à {{site.data.keyword.iot_short_notm}}, faute de quoi, ils ne peuvent pas se connecter à Internet. Les passerelles ont toutes les fonctions d'un terminal, mais peuvent également publier et s'abonner pour le compte des terminaux qui y sont connectés. Les terminaux passerelle permettent à des groupes de capteurs qui ne peuvent pas se connecter à Internet de se connecter à votre {{site.data.keyword.iot_short_notm}} en envoyant leurs données à une passerelle. Pour plus d'informations, voir la rubrique relative au [développement pour les passerelles](https://console.ng.bluemix.net/docs/services/IoT/gateways/gw_dev_index.html).
 
 ### Gestion des terminaux
 

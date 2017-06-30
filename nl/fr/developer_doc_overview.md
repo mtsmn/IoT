@@ -57,7 +57,7 @@ Vous pouvez générer et gérer des terminaux dans {{site.data.keyword.iot_short
 
 ## Développement de passerelles
 {: #gateway-dev}
-Si vos terminaux ne peuvent pas se connecter directement à Internet, utilisez les informations fournies pour générer un terminal de passerelle afin d'extraire et d'envoyer des données aux applications de votre organisation {{site.data.keyword.iot_short_notm}}.
+Si vos terminaux ne peuvent pas se connecter directement à Internet, utilisez les informations fournies pour générer un terminal passerelle afin d'extraire et d'envoyer des données aux applications de votre organisation {{site.data.keyword.iot_short_notm}}.
 Le protocole de messagerie MQTT est pris en charge pour le développement de passerelles dans {{site.data.keyword.iot_short_notm}}.
 
 Pour plus d'informations et pour accéder à des liens vers les bibliothèques client disponibles, voir [Bibliothèques client pour le développement {{site.data.keyword.iot_short_notm}}](iot_platform_client_lib.html).

@@ -15,7 +15,7 @@ lastupdated: "2017-05-03"
 # Initiation à {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
 
-{{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} fournit un kit d'outils polyvalent comportant des terminaux de passerelle, la gestion des terminaux et un accès puissant aux applications. {{site.data.keyword.iot_short_notm}} vous permet de collecter des données relatives à des terminaux connectés et d'effectuer des analyses sur des données temps réel à partir de votre organisation.
+{{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} fournit un kit d'outils polyvalent comportant des terminaux passerelle, la gestion des terminaux et un accès puissant aux applications. {{site.data.keyword.iot_short_notm}} vous permet de collecter des données relatives à des terminaux connectés et d'effectuer des analyses sur des données temps réel à partir de votre organisation.
 {:shortdesc}
 
 ## Avant de commencer
