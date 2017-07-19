@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -597,7 +597,7 @@ Topic: iotdm-1/response
 
 {{site.data.keyword.iot_short_notm}} can send an Observe Attribute Change request to a device to observe changes of one or more device attributes by using the Observe Attribute Changes request type. When the device receives the request, it must send a notification request to {{site.data.keyword.iot_short_notm}} whenever the values of the observed attributes change.
 
-**Important:** Devices must implement, observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update)  request types.
+**Important:** Devices must implement, observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update)  request types. Observe attribute change requests are only used in the context of firmware requests.
 
 ### Topic for an Observe Attribute Changes request
 
@@ -624,7 +624,9 @@ Topic: iotdm-1/observe
 {
     "d": {
         "fields": [
-            "string"
+            {
+                "field": "field_name"
+            }
         ]
     },
     "reqId": "string"
@@ -660,7 +662,7 @@ Topic: iotdevice-1/response
 
 The `message` parameter must be specified if the value of the `rc` parameter is not `200`.
 
-**Important:** Devices must implement, observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update) request types.
+**Important:** Devices must implement, observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update) request types. Cancel attribute observation requests are only used in the context of firmware requests.
 
 ### Topic for a Cancel Attribute Observation request
 
@@ -684,7 +686,9 @@ Topic: iotdm-1/cancel
 {
     "d": {
         "fields": [
-            "string"
+            {
+                "field": "field_name"
+            }
         ]
     },
     "reqId": "string"
@@ -715,7 +719,7 @@ The value of the `field_name` parameter is the name of the attribute that change
 
 When the notify request is processed successfully, the value of the `rc` parameter is set to `200`. If the request is not correct, the value of the `rc` parameter is set to `400`. If the parameter that is specified in the notify request is not observed, the value of the `rc` parameter is set to `404`.
 
-**Important:** Devices must implement observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update) request types.
+**Important:** Devices must implement observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update) request types. Notify attribute changes requests are only used in the context of firmware requests.
 
 
 ### Topic for a Notify Attribute Change request
@@ -739,8 +743,12 @@ Outgoing message from the device:
 Topic: iotdevice-1/notify
 {
     "d": {
-        "field": "field_name",
-        "value": "field_value"
+        "fields": [
+            {
+                "field": "field_name",
+                "value": "field_value"
+            }
+        ]
     }
     "reqId": "string"
 }
