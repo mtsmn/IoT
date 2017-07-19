@@ -24,7 +24,9 @@ Internet of Things Platform
         gateways/gw_intro_api.md
         devices/device_cmd_api.md
         [Custom domains (Beta)](reference/security/set_up_certificates.html#custom_domains)
-        [Drill-down reporting (Beta)](reference/security/RM_security.html#drill_down)
+        [Drill-down reporting (Beta)](reference/security/RM_security.html#drill_down
+        reference/rlac_overview.md
+        reference/rlac.md     
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -99,6 +101,8 @@ Internet of Things Platform
         reference/roles_access.md
         reference/app_roles_access.md
         reference/gateway_roles_access.md
+        reference/rlac_overview.md
+        reference/rlac.md     
 
     {: .topicgroup}
     Analyzing real-time IoT data
