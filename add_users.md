@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -139,6 +139,10 @@ Users can be blocked from accessing the {{site.data.keyword.iot_short_notm}} org
 1. From your {{site.data.keyword.iot_short_notm}} dashboard, click **Members** from the navigation bar on the left.
 2. Click the toggle next to the user you wish to block from accessing the {{site.data.keyword.iot_short_notm}} organization.
 
+## Limiting user access (Beta)
+{: #limiting-users}
+
+Resource-level access control enables you to limit access to devices within an organization. You can use resource groups to specify the devices that each user or API key can manage. For information on how to configure resource-level access control, see [Configuring resource-level access control](reference/rlac.html#configure_RLAC).
 
 ## Removing users
 {: #removing-users}

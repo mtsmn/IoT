@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-13"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -31,7 +31,7 @@ The following document answers some common questions about how your organization
 
 {{site.data.keyword.iot_short_notm}} runs within {{site.data.keyword.Bluemix_notm}} platform and so relies upon both {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer_full}} for access and connectivity. The reliance upon {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer_notm}} makes {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer_notm}} security and reliability important to users of {{site.data.keyword.iot_short_notm}}
 
-For more details about the security of the {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} platform security](index.html#platform-security).
+For more details about the security of the {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} platform security](index.html#platform-security). 
 
 ## {{site.data.keyword.iot_short_notm}} Security compliance
 {: #compliance}  
@@ -68,6 +68,10 @@ Device credentials and API keys can be individually revoked if they are compromi
 {: #secure-device-connection}
 
 Devices connect by using a clientID and the authentication token that is generated when the devices are added to your platform. MQTT is used to allow simple interoperability across many platforms and languages. The {{site.data.keyword.iot_short_notm}} supports connectivity over TLS v1.2.
+
+**Important:** New organizations are automatically configured to force devices to connect using TLS security by default, which ensures that devices can connect only by using a secure, encrypted channel. However, {{site.data.keyword.iot_short_notm}} also supports cases where organizations must enable devices to connect without TLS. For example, an organization might use devices that lack TLS support, or low-powered IoT devices that cannot spare the processing power necessary to encrypt or decrypt transmissions. The organization's plan determines which settings can be used in these cases.
+
+For more information about how to configure connection security, see [Configuring security policies](set_up_policies.html).
 
 ![image](connectivity_platform.svg)
 

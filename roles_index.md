@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-09-16"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -64,7 +64,7 @@ The following standard gateway roles are available:
 
 Gateway role | Description
 ------------- | -------------
-Standard | The default gateway role. It grants restricted access to operations.
-Privileged | Intended for trusted gateways and allows privileged gateways to add devices to the {{site.data.keyword.iot_short_notm}}. It grants access to the relevant operations to add, update, and manage devices and device properties, but has no access to other operations.  
+Standard | Grants restricted access to operations. Standard gateways are limited to acting on behalf of devices contained within the gateways assigned resource group.
+Privileged | The default gateway role. Intended for trusted gateways and allows privileged gateways to add devices to the {{site.data.keyword.iot_short_notm}}. It grants access to the relevant operations to add, update, and manage devices and device properties, but has no access to other operations.  
 
 For more information about the operations access of gateway roles, see [Gateway roles](reference/gateway_roles_access.html).

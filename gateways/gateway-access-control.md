@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-10"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -25,12 +25,35 @@ For information about publishing events from gateway devices by using APIs, see 
 ## Assigning a role to a gateway
 {: #gw_roles}
 
-Assigning a role to a gateway is mandatory for the gateway to have a resource group. Gateways without a resource group can act on behalf of all devices in the organization. Assigning the *Standard Gateway* role automatically creates a new resource group for the gateway. Once a gateway is assigned to a resource group, it can only act on behalf of the devices in that resource group and itself, even if its role is changed.
+Assigning a role to a gateway is mandatory for the gateway to have a resource group. Gateways without a resource group can act on behalf of all devices in the organization. Assigning the *Standard Gateway* role automatically creates a new resource group for the gateway. Once a gateway is assigned a resource group, it can only act on behalf of the devices in that resource group and itself, even if its role is changed.
 
 To assign a role to a gateway, use the following API:
 
 ```
 PUT /authorization/devices/{deviceId}/roles
+
+Request Body:
+{
+    "roles": [
+        {
+            "roleId": "PD_STANDARD_GATEWAY_DEVICE",
+            "roleStatus": 1
+        }
+    ]
+}
+
+Request Response: 200
+{
+    "roles": [
+        {
+            "roleId": "PD_STANDARD_GW_DEVICE",
+            "roleStatus": 1
+        }
+    ],
+    "rolesToGroups": {
+        "PD_STANDARD_GW_DEVICE": ["gw_def_res_grp:abcdef:gatewayTypeId:gatewayDeviceId"]
+    }
+}
 ```
 
 For details of the request schema, see the [{{site.data.keyword.iot_full}} Limited Gateway API documentation ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}.
@@ -65,13 +88,13 @@ GET /groups
 
 This API returns the resource groups associated with the search tag used. If no search tag is specified, all resource groups are returned. <!-- For more information about the request schema, response, and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-A resource group's ID can be found by using the following API:
+The ID of a resource group assigned to a gateway can be found by using the following API:
 
 ```
 GET /authorization/devices/{deviceId}
 ```
 
-This API returns the unique identifier of the resource group(s) this device is a member of. More information on this API can be found in the [{{site.data.keyword.iot_short_notm}} Limited Gateway API documentation ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
+This API returns the unique identifier of the resource group(s) assigned to this device. More information on this API can be found in the [{{site.data.keyword.iot_short_notm}} Limited Gateway API documentation ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
 
 
 ## Querying a resource group
@@ -131,24 +154,24 @@ This API deletes the specified resource group. Devices which were a member of th
 ## Retrieving and updating device properties.
 {: #fdevice_group_props}
 
-There are several ways to retrieve device properties using the API, each API returns different information. To retrieve the device properties of all devices connected to your {{site.data.keyword.iot_short_notm}} organization, use the following API:
+There are several ways to retrieve device properties using the API, each API returns different information. To retrieve the device properties of all existing devices in your {{site.data.keyword.iot_short_notm}} organization, use the following API:
 
 ```
 GET /authorization/devices
 
 ```
 
-This API returns the properties of all device connected to the organization, including their access control relevant properties (role, status, expiration date). <!-- For more information on responses and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
+This API returns the properties of all existing devices in the organization, including their access control relevant properties (role, status, expiration date). <!-- For more information on responses and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-To retrieve device properties without retrieving the access control relevant information, use the following API:
+To retrieve device properties of a single device in the organization, use the following API:
 
 ```
 GET /authorization/devices/{deviceId}
 ```
 
-This API returns all device properties of the specified device, without returning the access control information. <!-- For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API). -->
+This API returns all device properties of the specified device. <!-- For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API). -->
 
-To retrieve the access control information of a specific device, use the following API:
+To retrieve only the access control information of a specific device, use the following API:
 
 ```
 GET /authorization/devices/{deviceId}/roles

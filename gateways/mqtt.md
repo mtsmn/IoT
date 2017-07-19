@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -167,30 +167,35 @@ Messages with QoS=0 can be discarded and do not persist after the messaging serv
 
 When a managed gateway uses a durable subscription, device management commands that are sent to the gateway while it is offline are reported as failed operations if the gateway does not reconnect to the service before the request times out. When the gateway reconnects, those requests are processed by the gateway. Durable subscriptions are specified by the ``cleansession=false`` parameter.
 
-The gateway owns the MQTT session, regardless of the devices that are behind it. When a device submits a subscription request through a gateway, the request does not roam to other gateways, regardless of whether the ``cleansession=false`` options is set.
+The gateway owns the MQTT session, regardless of the devices that are behind it. When a device submits a subscription request through a gateway, the request does not roam to other gateways, regardless of whether the ``cleansession=false`` option is set.
 
 ### Topics
 {: #topics}
 
-A managed gateway must subscribe to the following topics to handle requests and responses from {{site.data.keyword.iot_short_notm}}:
+A managed gateway must subscribe to the following topics to handle its own requests and responses to and from {{site.data.keyword.iot_short_notm}}:
 
--   The managed gateway subscribes to device management responses on:  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/+</pre>
-{: codeblock}
--   The managed gateway subscribes to device management requests on:  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/+</pre>
+-   The managed gateway subscribes to its own device management requets and responses on:  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">gatewayTypeId</var>/id/<var class="keyword varname">gatewayDeviceId</var>/#</pre>
 {: codeblock}
 
-A managed gateway publishes the following responses and requests:
+A managed gateway must subscribe to the following topics to handle requests and responses from {{site.data.keyword.iot_short_notm}} for its connected devices:
 
-- Device management responses are published on:  
-<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/</pre>
+-   The managed gateway subscribes to device management requests and responses for its connected devices on:  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/#</pre>
 {: codeblock}
-- Device management requests are published on:  
+
+The gateway can process Device Management Protocol messages for both itself and on behalf other connected devices by using the relevant **typeId** and **deviceId**. The MQTT wildcard **+** may also be used in place of **typeId** and **deviceId**.
+
+A managed gateway publishes to topics that are specific to the type of management request that is being performed:
+
+- Managed gateways publishes device management responses on:
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
+{: codeblock}
+
+For other topics that a managed gateway can publish to, see [Device Management Protocol](device_mgmt/index.html) and [Device management requests](../devices/device_mgmt/requests.html). 
+- The protocol remains the same for gateways, except that any topic that begins with **iotdevice-1/** will instead begin with:
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}
-
-The gateway can process Device Management Protocol messages for both itself and on behalf other connected devices by using the relevant **typeId** and **deviceId**.
 
 ### Message format
 {: #msg_format}
