@@ -39,8 +39,10 @@ Device management capabilities are provided through a device management API and 
 
 Extensions and service integration enable both external services and user-defined extensions of core services to be added to an instance of {{site.data.keyword.iot_short_notm}}. External services which can be integrated with the {{site.data.keyword.iot_short_notm}} include The Weather Company weather location services, allowing you to find the current weather at a device location, Jasper SIM data, and {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. For more information on third-party service integrations and extensions, see [integrating external services](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
 
+
 ---
 
+## Information Management
 {: #information_management}
 
 {{site.data.keyword.iot_short_notm}} Information Management controls the data that is sent by devices after it reaches your {{site.data.keyword.iot_short_notm}} service. Information management includes data storage and transformation.
@@ -53,8 +55,13 @@ By using the {{site.data.keyword.iot_short_notm}} Last Event Cache API, you can 
 
 Device event data from your {{site.data.keyword.iot_short_notm}} service can be stored for later use. Data storage is an essential first step towards performing insightful analytics to gain insights from that data.  For example, you can track changes over longer periods of time and store sets of data for use with powerful analytics tools, including use with Watson APIs and cognitive computing. For more information, see [connecting a {{site.data.keyword.cloudant_short_notm}} historian service](https://console.ng.bluemix.net/docs/services/IoT/cloudant_connector.html), or [connecting a {{site.data.keyword.messagehub}} historian service](https://console.ng.bluemix.net/docs/services/IoT/message_hub.html).
 
----
+### Data management
 
+Different makes and models of devices publish data in different formats. The data management feature lets you transform and normalize this data into a single, logical view called *device state*, which can be understood and processed by applications. Using the data management feature greatly simplifies application development because the application no longer needs to understand the different formats of the event data that is sent from each device. When devices publish events to {{site.data.keyword.iot_short_notm}}, the content of the events can be mapped to user-defined state properties by using mappings. If the inbound event results in a change to the state of the device, the values of the device state properties are updated and stored in {{site.data.keyword.iot_short_notm}}. The values are made available to the application on request by using an HTTP API, or by subscribing to a topic.
+
+For more information about using this feature, see [Introduction to data management](GA_information_management/ga_im_device_twin.html).
+
+---
 ## Analytics
 {: #analytics}
 
