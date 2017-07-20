@@ -12,7 +12,7 @@ lastupdated: "2017-02-06"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# {{site.data.keyword.iot_full}} beta features
+# Watson IoT Platform beta features
 {: #beta_features}
 
 In the ongoing development of {{site.data.keyword.iot_full}}, new features are continuously added and are sometimes initially offered as beta features. Some of these features might require beta registration.  
