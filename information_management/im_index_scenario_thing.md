@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-07-20"
 
 ---
 
@@ -12,32 +12,34 @@ lastupdated: "2017-05-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Application interface scenario 2 (Beta)
+
+# Application interface scenario 1 (Beta)
 {: #scenario}
 
-The application interface is used to remove the requirement for the application to understand how a device or thing is configured. For example, you might measure the temperature of a room by using a single device, or you might calculate the room temperature by taking the average reading of a number of devices. The application requires information on the state of a room or rooms, one component of which is a temperature property. It does not matter how the temperature value that is received by the application is calculated.
+******************************************************************************************************************************************
+**Important:** Please note that the information management Beta is now closed as we work towards the delivery of an updated and generally available version of this functionality.
 
-In this scenario, temperature sensors and humidity sensors publish environmental data that is collected in two meeting rooms. The temperature and humidity sensor data is separately mapped to two device type application interfaces, one for the thermometer device type and one for the hygrometer device type. A thing type called *RoomType* is then created, along with two room thing instances: *meetingroom1* and *meetingroom2*.
+The device state functionality of this Beta is now generally available as part of the Data Management feature.  For more information, see [Introduction to data management](../GA_information_management/ga_im_device_twin.html). Please note that there are changes to the HTTP REST APIs and the configuration steps.
 
-This scenario sets up a composition that includes the thermometer and hygrometer application interfaces and then maps the correct environmental sensors to each of the room instances, for example, *temperatureSensor1* and *humiditySensor1* are mapped to *meetingroom1*.
+The device aggregation functionality of this Beta is not part of the current release but will be generally available soon in a future update.
+******************************************************************************************************************************************
+
+Use the following information to create a scenario in which two temperature sensors publish events to {{site.data.keyword.iot_short_notm}}. One sensor measures temperature in degrees Celsius. The other sensor measures temperature in degrees Fahrenheit. These readings are mapped to a single temperature reading that is in degrees Celsius. When a new temperature reading is published by these devices, the value of the property associated with the device state is changed.
 
 ## Pre-requisites
-{: #pre_req}
 
-This scenario builds on the previous [Application interface scenario 1](im_index_scenario).
-
-Before you continue, make sure that you:
-- Use the same {{site.data.keyword.iot_short_notm}} organization instance and an API key or token for that organization. For more information about API keys and tokens, see [HTTP REST API for applications](../applications/api.html#authentication).
-- Created two application interfaces, one for a temperature sensor and one for a humidity sensor. For information about configuring an application interface for a temperature sensor, see [Device type application interface scenario](../information_management/im_index_scenario).
+You must have a {{site.data.keyword.iot_short_notm}} organization instance and an API key or token for that organization. For more information about API keys and tokens, see [HTTP REST API for applications](../applications/api.html#authentication).
 
 ## About this task
-{: #about}
 
-In {{site.data.keyword.iot_short_notm}}, a thing can consist of a number of devices and things. A thing type defines how instances of a thing are composed. An application interface can be
-associated with a thing type. This association defines the structure of the state that is generated for a thing type instance. Mappings are used to define how properties from the aggregated
-devices and things are mapped to properties on a thing state.
+In this scenario, two devices are configured.
 
-In this scenario, two temperature sensors and two humidity sensors publish events to {{site.data.keyword.iot_short_notm}}. One temperature sensor and one humidity sensor are in meeting room 1 of an office block. The other temperature and humidity sensor are in meeting room 2.
+One device is called *TemperatureSensor1*. This device publishes temperature events that are measured in degrees Celsius. The temperature event is published on the topic `iot-2/evt/tevt/fmt/json` and has the following example payload:
+```
+{
+  “t” : 34.5
+}
+```
 
 ![Mapping between temperature and humidity thing and an application on {{site.data.keyword.iot_short_notm}}.](images/Information Management Thing example scenario.svg "Mapping between multiple environmental sensors in one room and an application on {{site.data.keyword.iot_short_notm}}")
 
