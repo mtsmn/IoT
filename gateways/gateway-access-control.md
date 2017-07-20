@@ -36,7 +36,7 @@ Request Body:
 {
     "roles": [
         {
-            "roleId": "PD_STANDARD_GATEWAY_DEVICE",
+            "roleId": "PD_STANDARD_GW_DEVICE",
             "roleStatus": 1
         }
     ]
