@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-07-20"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -42,3 +42,17 @@ Define the incoming state properties that you want your logical interface to mak
 <li>[Create a draft physical interface](ga_im_index_scenario.html#step7).
 <li>[Add the event type to the draft physical interface](ga_im_index_scenario.html#step8).
 <li>[Update the draft device type to connect the draft physical interface](ga_im_index_scenario.html#step9).
+</ol>
+</dd>
+</dl>
+4. 	Create the draft logical interface.
+ 1. 	[Create a draft logical interface schema file](ga_im_index_scenario.html#step4) for the draft device type.  
+A logical interface schema file is a local .JSON file that defines the device state that is made available to your applications.
+ 2. [Create a draft logical interface schema resource](ga_im_index_scenario.html#step5) for the draft device type.
+ 3.	[Create a draft logical interface](ga_im_index_scenario.html#step6) for the draft device type.
+ 4.	[Add the draft logical interface to the draft device type](ga_im_index_scenario.html#step10).
+5. 	[Define the draft mappings](ga_im_index_scenario.html#step11) for the draft device type.   
+Mappings are used to map inbound properties to properties in the logical interface.
+6. 	[Validate and activate the configuration](ga_im_index_scenario.html#step15) that is associated with the draft device type.
+7. 	[Retrieve the state of the active device](ga_im_index_scenario.html#step13).  
+Verify that your subscriptions show the updated device data or that updated device data is returned by using a REST-call or by subscribing to a topic.
