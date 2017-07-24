@@ -47,7 +47,7 @@ cf login -u <your_bluemix_login_id>
 ```
 If you are not using the default organization and space, you can use:
 ```
-cf target-o <your_bluemix_org> -s dev
+cf target -o <your_bluemix_org> -s dev
 ```
 
 5. Edit the `manifest.yml` file and update the host and application names using the following format:
