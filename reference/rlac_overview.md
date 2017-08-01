@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-07-25"
+lastupdated: "2017-08-01"
 
 ---
 
@@ -42,9 +42,9 @@ You can use the following sections to help you to understand the terminology tha
 A subject is an authenticated entity that requests platform access, which must be authorized. The following types of subjects are valid:
 
 - *Users*: End users who are the people using the applications. A member is a user whose account has no expiration date, and a guest is a user whose account has an expiration date.
-- *Devices*: Physical devices that access the [{{site.data.keyword.iot_short_notm}} platform and use the type Device.
-- *Gateways*: Physical devices that access the [{{site.data.keyword.iot_short_notm}} platform and use the type Gateway.
-- *Applications*: Applications or services that access the [{{site.data.keyword.iot_short_notm}} platform by using API keys for authorization and access control.
+- *Devices*: Physical devices that access the {{site.data.keyword.iot_short_notm}} platform and use the type Device.
+- *Gateways*: Physical devices that access the {{site.data.keyword.iot_short_notm}} platform and use the type Gateway.
+- *Applications*: Applications or services that access the {{site.data.keyword.iot_short_notm}} platform by using API keys for authorization and access control.
 
 ### Resources
 {: #resources}
@@ -61,7 +61,7 @@ The action is what the subject performs, which most often is Create, Read, Updat
 
 An application can act on behalf of a subject that is unknown to the platform, such as a mobile application that controls a domestic appliance, and an application can act on behalf of a real or simulated device that is known or unknown to the platform. An application also can be a true server-side application that is not acting on behalf of any other kind of device.
 
-Authentication is provided by and access to the [{{site.data.keyword.iot_short_notm}} platform is given based on an API key or token.
+Authentication is provided by and access to the {{site.data.keyword.iot_short_notm}} platform is given based on an API key or token.
 
 ### Operations
 {: #operations}
@@ -113,37 +113,37 @@ When resource-level access control is enabled, the device-related APIs that are 
 
 **List devices of type**
 
-    GET /api/v0002/devices/type/${typeId}
+    GET /api/v0002/device/types/${typeId}
 
 Only the subset of devices that belong to the appropriate groups is returned.
 
 **Get device**
 
-    GET /api/v0002/devices/type/${typeId}/device/${deviceId}
+    GET /api/v0002/device/types/${typeId}/devices/${deviceId}
 
 Returns a 404 error if the device is not accessible by the caller.
 
 **Get device management details**
 
-    GET /api/v0002/devices/type/${typeId}/device/${deviceId}/mgmt
+    GET /api/v0002/device/types/${typeId}/devices/${deviceId}/mgmt
 
 Returns a 404 error if the device is not accessible by the caller.
 
 **Get devices registered by a gateway**
 
-    GET /api/v0002/devices/type/${typeId}/device/${gatewayId}/devices
+    GET /api/v0002/device/types/${typeId}/devices/${gatewayId}/devices
 
 Returns a 404 error if the gateway is not accessible by the caller. Only the subset of devices that belong to the appropriate groups is returned. The devices and the gateways must be in the group of the caller.
 
 **Update device**
 
-    PUT /api/v0002/devices/type/${typeId}/device/${deviceId}
+    PUT /api/v0002/device/types/${typeId}/devices/${deviceId}
 
 Returns a 404 error if the device is not accessible by the caller.
 
 **Delete device**
 
-    DELETE /api/v0002/devices/type/${typeId}/device/${deviceId}
+    DELETE /api/v0002/device/types/${typeId}/devices/${deviceId}
 
 Returns a 404 error if the device is not accessible by the caller.
 
@@ -163,7 +163,7 @@ Only the subset of devices that belong to the appropriate groups is deleted. Dev
 
 **Update devices:**
 
-    PUT /api/v0002/bulk/devices/upsert
+    PUT /api/v0002/bulk/devices/update
 
 ### Device Management APIs
 
@@ -209,49 +209,49 @@ Returns an empty array if the device is not accessible.
 
 **Add device error code**
 
-    POST /api/v0002/devices/type/${typeId}/device/${deviceId}/diag/errorCodes
+    POST /api/v0002/device/types/${typeId}/devices/${deviceId}/diag/errorCodes
 
 Returns a 404 error if the device is not accessible by the caller.
 
 **List device error codes**
 
-    GET /api/v0002/devices/type/${typeId}/device/${deviceId}/diag/errorCodes
+    GET /api/v0002/device/types/${typeId}/devices/${deviceId}/diag/errorCodes
 
 Returns a 404 error if the device is not accessible by the caller.
 
 **Clear device error codes**
 
-    DELETE /api/v0002/devices/type/${typeId}/device/${deviceId}/diag/errorCodes
+    DELETE /api/v0002/device/types/${typeId}/devices/${deviceId}/diag/errorCodes
 
 Returns a 404 error if the device is not accessible by the caller.
 
 **Add device diagnostic log**
 
-    POST /api/v0002/devices/type/${typeId}/device/${deviceId}/diag/logs
+    POST /api/v0002/device/types/${typeId}/devices/${deviceId}/diag/logs
 
 Returns a 404 error if the device is not accessible by the caller.
 
 **List device diagnostic log**
 
-    GET /api/v0002/devices/type/${typeId}/device/${deviceId}/diag/logs
+    GET /api/v0002/device/types/${typeId}/devices/${deviceId}/diag/logs
 
 Returns a 404 error if the device is not accessible by the caller.
 
 **Get one device diagnostic log**
 
-    GET /api/v0002/devices/type/${typeId}/device/${deviceId}/diag/logs/${logId}
+    GET /api/v0002/device/types/${typeId}/devices/${deviceId}/diag/logs/${logId}
 
 Returns a 404 error if the device is not accessible by the caller.
 
 **Clear device diagnostic log**
 
-    DELETE /api/v0002/devices/type/${typeId}/device/${deviceId}/diag/logs
+    DELETE /api/v0002/device/types/${typeId}/devices/${deviceId}/diag/logs
 
 Returns a 404 error if the device is not accessible by the caller.
 
 **Delete one device diagnostic log**
 
-    DELETE /api/v0002/devices/type/${typeId}/device/${deviceId}/diag/logs/${logId}
+    DELETE /api/v0002/device/types/${typeId}/devices/${deviceId}/diag/logs/${logId}
 
 Returns a 404 error if the device is not accessible by the caller.
 
@@ -259,12 +259,12 @@ Returns a 404 error if the device is not accessible by the caller.
 
 **Get events for the device**
 
-    GET /api/v0002/devices/type/${typeId}/device/${deviceId}/events
+    GET /api/v0002/device/types/${typeId}/devices/${deviceId}/events
 
 Returns a 404 error if the device is not accessible by the caller.
 
 **Get events for the device**
 
-    GET /api/v0002/devices/type/${typeId}/device/${deviceId}/events/${eventId}
+    GET /api/v0002/device/types/${typeId}/devices/${deviceId}/events/${eventId}
 
 Returns a 404 error if the device is not accessible by the caller.
