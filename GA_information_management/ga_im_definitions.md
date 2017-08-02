@@ -105,6 +105,35 @@ Supporting resources                        | Description
 ------------- | ------------- | -------------  
 Mappings                         | Use mappings to define how properties that are associated with inbound events are mapped to properties that are defined on a logical interface. </br>**Important:** At least one logical interface must be associated with a device type before any mappings can be defined.
 
+## Supported mapping expression language
+{: #mapping_expression}
+
+The expression language that can be used when defining mappings is a subset of [JSONata ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://docs.jsonata.org/index.html){:new_window}.
+
+The following subset of JSONata operators are supported: 
+
+Type of operator                   | Supported operators     | Notes   
+------------- | ------------- | -------------
+Arithmetic | *+* - / * % | The % operator returns the remainder
+Comparison | < <= > >= != = | The equality operator is = , as it is in JSONata
+Boolean | *in*, *and*, *not* | The boolean constants are *true* or *false*
+Conditional ternary | ? | The ? operator evaluates one of two alternative expressions based on the result of a test condition. The operator takes the following form *expression*  ? *value_if_true* : *value_if_false*
+String | & | The & operator joins the string values of the operands into a single resultant string
+Other | . | The dot operator is used for object access with a literal key, for example $event.object.hh. *Note:* The expression on the left hand side is constrained to a specific item, either in the event ($event) or the state ($state).   
+ 
+
+The following subset of JSONata functions are supported: 
+
+Type of function                   |Function                   | Description
+------------- | ------------- | ------------- 
+String | $substr(string, start_index, end_index) | String substring
+String | $string(arg) | Casts the argument to a string value
+Numeric | $number(arg) | Casts the argument to a numeric value, if possible
+Boolean | $exists(expression) | Returns true if the property in the expression exists, false otherwise
+
+Notes: 
+- Use Parenthesis ( ) for expression grouping and to alter operator precedence
+- Use single quotes to surround property names that contain spaces, for example $event.object.'a b' 
 
 ## Naming restrictions for resources
 {: #naming_restrictions}
