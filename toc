@@ -33,6 +33,7 @@ Internet of Things Platform
 
     {: .navgroup id="reference"}
     reference/api.md
+    reference/back_up.md
 
     {: .topicgroup}
     Sample apps
