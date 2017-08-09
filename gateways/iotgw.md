@@ -26,7 +26,7 @@ The {{site.data.keyword.iot_short_notm}} Gateway package includes the following 
 
 | Entity | Type | Parameters | Description |
 | --- | --- | --- | --- |
-| `/watson-iot/iot-gateway` | package | org, domain, gatewayTypeId, gatewayId, gatewayToken  | Work with {{site.data.keyword.iot_short_notm}} Gateway |
+| `/watson-iot/iot-gateway` | package | org, gatewayTypeId, gatewayId, gatewayToken  | Work with {{site.data.keyword.iot_short_notm}} Gateway |
 | `/watson-iot/iot-gateway/publishEvent` | action | org, domain, gatewayTypeId, gatewayId, gatewayToken, eventType, typeId, deviceId, payload | Send events from a registered gateway on behalf of its associated devices to {{site.data.keyword.iot_short_notm}}   |
 
 ## Creating a {{site.data.keyword.iot_short_notm}} Gateway package binding
