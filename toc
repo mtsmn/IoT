@@ -29,6 +29,8 @@ Internet of Things Platform
         reference/rlac_overview.md
         reference/rlac.md 
         gateways/iotgw.md
+        GA_information_management/im_ui_flow.md
+        GA_information_management/im_config_devices.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
