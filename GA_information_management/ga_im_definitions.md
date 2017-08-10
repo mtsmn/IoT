@@ -282,3 +282,15 @@ You can refer to the following error log to help you to diagnose run time errors
 ```
 iot-2/type/${typeId}/id/${devieId}/err/data
 ```
+### Resource limits
+
+The following table shows the maximum number of resources that can be configured based on plan type. 
+
+Resource                   |Standard plan                  | Lite plan 
+------------- | ------------- | ------------- 
+Logical Interfaces | 1000 | 10
+Physical Interfaces           | 1000 | 5
+Event Types | 1000 | 10
+Schemas |2000 | 20
+Logical Interface references (Number of logical interfaces that a device type can map to)  |20 | 5
+Event Type references (Number of event ID to event type associations that a physical interface can have)| 40 | 10
