@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-08-18"
 
 ---
 
@@ -79,6 +79,26 @@ For more information about how to configure connection security, see [Configurin
 For more information about TLS and cipher suite requirements, see the [TLS requirements](connect_devices_apps_gw.html#tls_requirements) section in the `Application, device, and gateway connections to Watson IoT Platform` documentation.
 
 You can use certificates and security polices to enhance device connection security. Security policies can be set to allow unencrypted connections, to enforce only transport layer security (TLS) connections, and to enable devices to authenticate with client-side certificates and no tokens. Blacklists can be used to specify devices that are not allowed to connect, or whitelists can be used to allow specific devices to connect. For more information about enhanced security, see [Risk and security management](RM_security.html).
+
+### Disabling and enabling devices (Beta)
+{: #disable-devices}
+
+You can use the **Authorization > Device Management > Update device details** HTTP API to disable a device from connecting directly to the platform. For example, you can forcibly disconnect the device of a malicious user, or a device that is not behaving correctly and causing issues such as unwanted data usage due to spam. The API is used to disconnect the device from its current connection and prevent the device from connecting to the platform in the future.
+
+For more information about the API, see [Beta HTTP APIs](../api.html#api_beta). 
+
+To disable a device from connecting to the platform, call the API: 
+
+    PUT /api/v0002/authorization/devices/${deviceId}
+
+Where *${deviceId}* is the full ClientID of the device.
+
+In the request body, us a status of “0” to indicate that the device is disabled. 
+
+	{ "status": 0 }
+
+The response on success is 200. 
+
 
 ## How do we prevent data leaking between IoT devices?
 {: #prevent-leak-devices}
