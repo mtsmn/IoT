@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-08-25"
 
 ---
 
@@ -27,10 +27,10 @@ For information about publishing events from gateway devices by using APIs, see 
 
 Assigning a role to a gateway is mandatory for the gateway to have a resource group. Gateways without a resource group can act on behalf of all devices in the organization. Assigning the *Standard Gateway* role automatically creates a new resource group for the gateway. Once a gateway is assigned a resource group, it can only act on behalf of the devices in that resource group and itself, even if its role is changed.
 
-To assign a role to a gateway, use the following API:
+To assign a role to a gateway, use the following API where *${clientID}* is the URL-encoded ClientID in the format *d:${orgId}:${typeId}:${deviceId}* for devices or *g:${orgId}:${typeId}:${deviceId}* for gateways:
 
 ```
-PUT /authorization/devices/{deviceId}/roles
+PUT /authorization/devices/${clientID}/roles
 
 Request Body:
 {
@@ -88,10 +88,10 @@ GET /groups
 
 This API returns the resource groups associated with the search tag used. If no search tag is specified, all resource groups are returned. <!-- For more information about the request schema, response, and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-The ID of a resource group assigned to a gateway can be found by using the following API:
+The ID of a resource group assigned to a gateway can be found by using the following API where *${clientID}* is the URL-encoded ClientID in the format *d:${orgId}:${typeId}:${deviceId}* for devices or *g:${orgId}:${typeId}:${deviceId}* for gateways:
 
 ```
-GET /authorization/devices/{deviceId}
+GET /authorization/devices/${clientId}
 ```
 
 This API returns the unique identifier of the resource group(s) assigned to this device. More information on this API can be found in the [{{site.data.keyword.iot_short_notm}} Limited Gateway API documentation ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
@@ -163,36 +163,36 @@ GET /authorization/devices
 
 This API returns the properties of all existing devices in the organization, including their access control relevant properties (role, status, expiration date). <!-- For more information on responses and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-To retrieve device properties of a single device in the organization, use the following API:
+To retrieve device properties of a single device in the organization, use the following API where *${clientID}* is the URL-encoded ClientID in the format *d:${orgId}:${typeId}:${deviceId}* for devices or *g:${orgId}:${typeId}:${deviceId}* for gateways:
 
 ```
-GET /authorization/devices/{deviceId}
+GET /authorization/devices/${clientId}
 ```
 
 This API returns all device properties of the specified device. <!-- For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API). -->
 
-To retrieve only the access control information of a specific device, use the following API:
+To retrieve only the access control information of a specific device, use the following API where *${clientID}* is the URL-encoded ClientID in the format *d:${orgId}:${typeId}:${deviceId}* for devices or *g:${orgId}:${typeId}:${deviceId}* for gateways:
 
 ```
-GET /authorization/devices/{deviceId}/roles
+GET /authorization/devices/${clientId}/roles
 ```
 
 This API retrieves the access control relevant information for the specified device without returning other device properties. <!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
 Device properties can be updated in two ways. Properties can be updated without changing the access control properties, or access control properties can be updated directly.
 
-To update device properties without affecting the access control properties, use the following API:
+To update device properties without affecting the access control properties, use the following API where *${clientID}* is the URL-encoded ClientID in the format *d:${orgId}:${typeId}:${deviceId}* for devices or *g:${orgId}:${typeId}:${deviceId}* for gateways:
 
 ```
-PUT /authorization/devices/{deviceId}
+PUT /authorization/devices/${clientId}
 ```
 
 This API will only update properties of the device which are not associated with access control. <!-- For more information on request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-To update only the access control properties of the specified device, use the following API:
+To update only the access control properties of the specified device, use the following API where *${clientID}* is the URL-encoded ClientID in the format *d:${orgId}:${typeId}:${deviceId}* for devices or *g:${orgId}:${typeId}:${deviceId}* for gateways:
 
 ```
-PUT /authorization/devices/{deviceId}/withroles
+PUT /authorization/devices/${clientId}/withroles
 ```
 
 This API will only update the access control properties of the specified device. <!-- For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
