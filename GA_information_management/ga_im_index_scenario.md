@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-07-20"
+lastupdated: "2017-09-01"
 
 ---
 
@@ -69,24 +69,6 @@ For information about using REST APIs to add a device type, see the [{{site.data
 
 For this scenario, create two draft event schema files to define the structure of each of the inbound temperature events.
 
-**Important:** For structured [JSON ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://json-schema.org/){:new_window} event payloads, make sure that each level of nesting is properly wrapped in a `"properties"` entry. For example, if the payload is `{"d":{"t":<temp>}}`, you might use the following code:
-```
- "properties" : {
-    "d" : {
-      "properties" : {
-        "t" : {
-          "description" : "Temperature in degrees Celsius",
-          "type" : "number",
-          "minimum" : -273.15,
-          "default" : 0.0
-        }
-      },
-      "required" : ["t"]
-    }
-  },
-  "required" : ["d"]
-```
-
 The following example shows how to create a draft schema file that is called *tEventSchema.json*. This file defines the structure of an inbound event from a temperature sensor that measures temperature in degrees Celsius:
 
 ```
@@ -122,7 +104,7 @@ The following example shows how to create a draft schema file that is called *te
     "temp" : {
       "description" : "temperature in degrees Fahrenheit",
       "type" : "number",
-      "minimum" : −459.67,
+      "minimum" : -459.67,
       "default" : 0.0
     }
   },
@@ -448,11 +430,7 @@ To update a draft device type, use the following API:
 POST /draft/device/types/{typeId}/physicalinterface
 ```
 
-The following parameters are required:  
-
-Parameter	|	Description
-------	|	-----
-typeId	|	The device type identifier.
+where *typeId* is the device type identifier.
 
 
 For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Device_Types) documentation.
@@ -466,11 +444,10 @@ curl --request POST \
 --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor1/physicalinterface \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: application/json' \
-  --data '{"updatedBy" : "a-8x7nmj-9iqt56kfil","refs" : {"events" : "api/v0002/draft/physicalinterfaces/5847d1df6522050001db0e1a/events"},"id" : "5847d1df6522050001db0e1a", "name" : "Env sensor physical interface 1","version":"draft","created":"2016-12-07T09:09:51Z","updated" : "2016-12-07T09:09:51Z","createdBy" : "a-8x7nmj-9iqt56kfil"}'
+  --data '{"id" : "5847d1df6522050001db0e1a"}'
 ```
 
 The following example shows a response to the POST method:
-
 ```
 {
   "updatedBy" : "a-8x7nmj-9iqt56kfil",
@@ -490,22 +467,11 @@ The device identifier *EnvSensor1* is required when you add your physical interf
 The following example shows how to use cURL to update device type *EnvSensor2*:
 
 ```
-curl --request PUT \
---url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor2 \
+curl --request POST \
+--url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor2/physicalinterface \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: application/json' \
-  --data '{
-  "updatedBy" : "a-8x7nmj-9iqt56kfil",
-  "refs" : {
-    "events" : "/api/v0002/draft/physicalinterfaces/5847d1df6522050001db0e1b/events"
-  },
-  "id" : "5847d1df6522050001db0e1b",
-  "name" : "Env sensor physical interface 2",
-  "version" : "draft",
-  "created" : "2016-12-07T09:19:51Z",
-  "updated" : "2016-12-07T09:19:51Z",
-  "createdBy" : "a-8x7nmj-9iqt56kfil"
-}'
+  --data '{"id" : "5847d1df6522050001db0e1b"}'
 ```
 
 The following example shows a response to the POST method:
@@ -661,28 +627,19 @@ To add a draft logical interface to a device type, use the following API:
 POST /draft/device/types/{typeId}/logicalinterfaces
 ```
 
-The following parameters are required:  
+where *typeId* is the name of the device type. 
 
-Parameter	|	Description
-------	|	-----
-id	|	The identifier created for the logical interface.
-name	|	The name of the device type.
-schemaId	|	The identifer created for the logical interface resource.
-refs/schema	|	The path to the logical interface resource. Typically: /schemas/*schemaId*
+For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Device_Types) documentation.  
+**Note:** In this scenario, the same logical interface *5846ed076522050001db0e12* is associated with *EnvSensor1* and *EnvSensor2*.
 
-
-For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Device_Types) documentation.
-
-In this scenario, the logical interface is associated with device type *EnvSensor1* and device type *EnvSensor2*.
-
-The following example shows how to use cURL to add the logical interface *5846ed076522050001db0e12* which references application schema identifier *5846ec826522050001db0e11* to the device type *EnvSensor1*:
+The following example shows how to use cURL to add the logical interface *5846ed076522050001db0e12* which references logical interface schema identifier *5846ec826522050001db0e11* to the device type *EnvSensor1*:
 
 ```
 curl --request POST \
 --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor1/logicalinterfaces \
 --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
 --header 'content-type: application/json' \
---data '{"createdBy" : "a-8x7nmj-9iqt56kfil", "refs" : {"schema" : "/api/v0002/draft/schemas/5846ec826522050001db0e11"},"schemaId" :"5846ec826522050001db0e11", "created" : "2016-12-06T16:53:27Z", "updatedBy" : "a-8x7nmj-9iqt56kfil","id":"5846ed076522050001db0e12","updated" : "2016-12-06T16:53:27Z","name" : "environment sensor interface"}'
+--data '{"id": "5846ed076522050001db0e12"}'
 ```
 
 The following example shows a response to the POST method:
@@ -703,16 +660,15 @@ The following example shows a response to the POST method:
 }
 ```
 
-The following example shows how to use cURL to add the logical interface *5846ed076522050001db0e12* associated with application schema identifier *5846ec826522050001db0e11* to the device type *EnvSensor2*:
+The following example shows how to use cURL to add the logical interface *5846ed076522050001db0e12* associated with logical schema identifier *5846ec826522050001db0e11* to the device type *EnvSensor2*:
 
 ```
 curl --request POST \
 --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor2/logicalinterfaces \
 --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
 --header 'content-type: application/json' \
---data '{"createdBy" : "a-8x7nmj-9iqt56kfil","refs" : {"schema" : "/api/v0002/draft/schemas/5846ec826522050001db0e11"},"schemaId" : "5846ec826522050001db0e11", "created" : "2016-12-06T16:53:27Z", "updatedBy" : "a-8x7nmj-9iqt56kfil","id" : "5846ed076522050001db0e12","updated" : "2016-12-06T16:53:27Z","name" : "environment sensor interface"}'
+--data '{"id": "5846ed076522050001db0e12"}'
 ```
-
 
 The following example shows a response to the POST method:
 
@@ -840,11 +796,7 @@ To validate and activate your draft device type configuration, use the following
 PATCH /draft/device/types/{typeId}
 ```
 
-The following parameters are required:  
-
-Parameter	|	Description
-------	|	-----
-typeId	|	The device type identifier
+where *typeId* is the device type identifier.
 
 For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Device_Types) documentation.
 
@@ -901,7 +853,18 @@ The following example shows a response to the PATCH method:
 ## Step 13: Publish an inbound device event
 {: #step12}
 
-Publish a temperature event from *TemperatureSensor1* on topic `iot-2/evt/tevt/fmt/json` and a temperature event from *TemperatureSensor2* on topic `iot-2/evt/tempevt/fmt/json`.
+Publish a temperature event from *TemperatureSensor1* on topic `iot-2/evt/tevt/fmt/json` with the following example payload:
+```
+{
+  "t" : 34.5
+}
+```
+Publish a temperature event from *TemperatureSensor2* on topic `iot-2/evt/tempevt/fmt/json`with the following example payload:
+```
+{
+  "temp" : 72.55
+}
+```
 
 For information about publishing an inbound event from a device, see [MQTT connectivity for applications](../applications/mqtt.html#publishing_device_events).
 
