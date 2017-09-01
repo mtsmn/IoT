@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-08-18"
+lastupdated: "2017-08-25"
 
 ---
 
@@ -83,22 +83,21 @@ You can use certificates and security polices to enhance device connection secur
 ### Disabling and enabling devices (Beta)
 {: #disable-devices}
 
-You can use the **Authorization > Device Management > Update device details** HTTP API to disable a device from connecting directly to the platform. For example, you can forcibly disconnect the device of a malicious user, or a device that is not behaving correctly and causing issues such as unwanted data usage due to spam. The API is used to disconnect the device from its current connection and prevent the device from connecting to the platform in the future.
+**Important:** The {{site.data.keyword.iot_full}} disabling and enabling devices feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
-For more information about the API, see [Beta HTTP APIs](../api.html#api_beta). 
+You can use the **Authorization - Device Management** HTTP API to disable a device from connecting directly to the platform. For example, you can forcibly disconnect the device of a malicious user or a device that is not behaving correctly and is causing issues such as unwanted data usage due to spam. The API is used to disconnect the device from its current connection and prevent the device from reconnecting to the platform.
 
-To disable a device from connecting to the platform, call the API: 
+To enable or disable a device, use the following API, where *${clientId}* is the URL-encoded ClientID in the format *d:${orgId}:${typeId}:${deviceId}* for devices or *g:${orgId}:${typeId}:${deviceId}* for gateways:
 
-    PUT /api/v0002/authorization/devices/${deviceId}
+    PUT /api/v0002/authorization/devices/${clientId}
+    
+In the request body, use a status value of 0 to disable the device, or use a status value of 1 to enable the device. For example, the following status value indicates that the device is disabled:
 
-Where *${deviceId}* is the full ClientID of the device.
-
-In the request body, us a status of “0” to indicate that the device is disabled. 
-
-	{ "status": 0 }
+    { "status": 0 }
 
 The response on success is 200. 
 
+For more information about the API see [Device Security Beta APIs ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){:new_window}, and navigate to **Authorization - Device Management**.
 
 ## How do we prevent data leaking between IoT devices?
 {: #prevent-leak-devices}
