@@ -125,6 +125,11 @@ Internet of Things Platform
         edge_analytics.md
 
     {: .topicgroup}
+    Analyzing historical IoT data
+        analytics_integration/historical_data_overview.md
+        analytics_integration/analyzing_with_WA.md
+
+    {: .topicgroup}
     Using IoT samples
         nodereddevice_sample.md
         visualizingdata_sample.md
