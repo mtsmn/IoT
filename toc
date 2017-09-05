@@ -13,6 +13,8 @@ Internet of Things Platform
         feature_overview.md
         reference/standards_and_requirements.md
         reference/bluemix_and_platform.md
+        reference/back_up.md
+        reference/billing.md
         [IoT pricing calculator](http://iot-cost-calculator.ng.bluemix.net/)
 
     {: .topicgroup}
@@ -33,7 +35,6 @@ Internet of Things Platform
 
     {: .navgroup id="reference"}
     reference/api.md
-    reference/back_up.md
 
     {: .topicgroup}
     Sample apps
