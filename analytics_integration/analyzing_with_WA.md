@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-01"
+lastupdated: "2017-09-06"
 ---
 
 ---
@@ -24,7 +24,7 @@ You can use {{site.data.keyword.iot_full}} with Watson Analytics (WA) to visuali
 
 This guide walks you, step-by-step, through the process of visualizing {{site.data.keyword.iot_short_notm}} device event data by using Watson Analytics (WA) as an analysis tool.
 
-The device data that is sent to {{site.data.keyword.iot_short_notm}} can be collected and stored in {{site.data.keyword.Bluemix}} using the {{site.data.keyword.cloudantfull}} NoSQL DB service. To collect the data, you must first connect {{site.data.keyword.iot_short_notm}} to the {{site.data.keyword.cloudant_short_notm}} service. After data is collected, export the data to a CSV file. You upload this file to WA where you can visualize and analyze the device data. Device data is stored in {{site.data.keyword.cloudant_short_notm}} daily, weekly, or monthly databases depending on the [selected] bucket interval that is configured.
+The device data that is sent to {{site.data.keyword.iot_short_notm}} can be collected and stored in {{site.data.keyword.Bluemix}} using the {{site.data.keyword.cloudantfull}} NoSQL DB service. To collect the data, you must first connect {{site.data.keyword.iot_short_notm}} to the {{site.data.keyword.cloudant_short_notm}} service. After data is collected, export the data to a CSV file. You upload this file to WA where you can visualize and analyze the device data. Device data is stored in {{site.data.keyword.cloudant_short_notm}} daily, weekly, or monthly databases depending on the bucket interval that is configured.
 
 ![Overview of using WA to analyze data](images/WA_overview.png)
 
@@ -44,7 +44,7 @@ To complete these steps you must have access to [{{site.data.keyword.iot_short_n
 ## Step 1. Set up the simulator
 {: #WA_sensor_data}
 
-In order to conduct a meaningful analysis, you must have meaningful data. You can simulate real sensor data to learn about how the Watson IoT Platform device data can be analyzed using Watson Analytics. This step provides instructions for setting up the simulator. This step also provides instructions for downloading a pre-made CSV sample file with data, if you do not want to use the simulator.
+In order to conduct a meaningful analysis, you must have meaningful data. You can simulate real sensor data to learn about how the Watson IoT Platform device data can be analyzed using Watson Analytics. This step provides instructions for setting up the simulator. This step also provides instructions for [downloading a pre-made CSV sample file with data](#WA_sensor_premade), if you do not want to use the simulator.
 
 
 ### Setting up the Weather Sensors simulator
@@ -60,11 +60,12 @@ To simulate real sensor data events against your organizations by using the Weat
 
 
 ### Using sensor data from a pre-made sample CSV file
+{: #WA_sensor_premade}
 
 To simulate real sensor data events against your organizations by using a pre-made CSV file:
 
-1. [Download the Cloudant CSV file ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator/blob/master/server/data/cloudant.csv){: new_window}.
-2. Proceed to [Step 5. Set up WA and visualize data](#WA_export_csv).
+1. [Download the Cloudant CSV file ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator/releases/download/v1.0/cloudant.csv){: new_window}.
+2. Proceed to [Step 5. Set up WA and visualize data](#WA_import_data).
 
 
 ## Step 2. Configure database connector
@@ -79,10 +80,8 @@ To use {{site.data.keyword.cloudant_short_notm}} with Watson Analytics, you must
   - Bucket interval = Day
   - Time zone = UTC
   - Database name = default
-5. Click **Done** and confirm authorization for the connection to Cloudant Service. Ensure that popups are enabled in your browser in order have access to the confirmation window.
+5. Click **Done** and confirm authorization for the connection to Cloudant Service. Ensure that popups are enabled in your browser in order have access to the confirmation window. When you have successfully configured the Cloudant NoSQL DB, the Historical Data Storage status is changed to configured and the device data is stored in {{site.data.keyword.cloudant_short_notm}} NoSQL DB.
 6. Proceed to [Step 3. Run the simulator](#run_simulator).
-
-When you have successfully configured the Cloudant NoSQL DB, the Historical Data Storage status is changed to configured and the device data is stored in {{site.data.keyword.cloudant_short_notm}} NoSQL DB.
 
 
 ## Step 3. Run the simulator
