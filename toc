@@ -129,6 +129,7 @@ Internet of Things Platform
     Analyzing historical IoT data
         analytics_integration/historical_data_overview.md
         analytics_integration/analyzing_with_WA.md
+        analytics_integration/analyzing_with_DSX.md
 
     {: .topicgroup}
     Using IoT samples
