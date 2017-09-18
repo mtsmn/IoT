@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-09-18"
 ---
 
 ---
@@ -44,19 +44,38 @@ To complete these steps you must have access to [{{site.data.keyword.iot_short_n
 ## Step 1. Set up the simulator
 {: #WA_sensor_data}
 
-In order to conduct a meaningful analysis, you must have meaningful data. You can simulate real sensor data to learn about how the Watson IoT Platform device data can be analyzed using Watson Analytics. This step provides instructions for setting up the simulator. This step also provides instructions for [downloading a pre-made CSV sample file with data](#WA_sensor_premade), if you do not want to use the simulator.
+
+In order to conduct a meaningful analysis, you must have meaningful data. You can simulate real sensor data to learn about how the Watson IoT Platform device data can be analyzed by using Wastson Analytic. This step provides instructions for:
+ - [Setting up the simulator with an **existing instance of {{site.data.keyword.iot_short_notm}}**](#sim_existing_platorm)
+ - [Setting up the simulator with a **new instance of {{site.data.keyword.iot_short_notm}}**](#sim_new_platform)
+ - [Downloading a pre-made CSV sample file with data](#WA_sensor_premade), if you do not want to use the simulator
 
 
-### Setting up the Weather Sensors simulator
+### Setting up the Weather Sensors simulator with an existing instance of {{site.data.keyword.iot_short_notm}}
 
-To simulate real sensor data events against your organizations by using the Weather Sensors simulator, you must first set up the simulator:
+{: #sim_existing_platform}
+
+To simulate real sensor data events against your organizations by using the Weather Sensors simulator, you must first set up the simulator. These steps assume that you already have an instance of {{site.data.keyword.iot_short_notm}} up and running.
 
 1. [Generate the apikey and token that are required to run the simulator. ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#api-key){: new_window}
-2. Click this button to deploy the Weather Sensors simulator web app and follow the detailed steps:
-   [![Weather Sensors simulator web app](images/toolchain.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator)
+2. [Deploy the Weather Sensors simulator web app ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window} and follow the detailed instructions.
 
    For more information about the Weather Sensors, see [the Weather Sensors simulator guide ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
 3. Proceed to [Step 2. Configure database connector](#WA_config_db).
+
+
+### Setting up the Weather Sensors simulator with a new instance of {{site.data.keyword.iot_short_notm}}
+
+{: #sim_new_platform}
+
+To simulate real sensor data events against your organizations by using the Weather Sensors simulator, you must first set up the simulator. These steps include the instructions for creating a {{site.data.keyword.iot_short_notm}} instance along with the simulator.
+
+1. [Deploy the Weather Sensors simulator web app with an instance of {{site.data.keyword.iot_short_notm}} ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window} and follow the detailed steps.
+
+   For more information about the Weather Sensors, see [the Weather Sensors simulator guide ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
+2. Wait for the deployment to complete and then navigate to Bluemix dashboard.
+3. Launch the {{site.data.keyword.iot_short_notm}} service "wiotp-for-weather-sensors-simulator" that was created by the deployment process.
+4. Proceed to [Step 2. Configure database connector](#WA_config_db).
 
 
 ### Using sensor data from a pre-made sample CSV file
