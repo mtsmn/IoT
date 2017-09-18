@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-15"
+lastupdated: "2017-09-18"
 ---
 
 ---
@@ -49,7 +49,9 @@ To complete these steps you must have access to [{{site.data.keyword.iot_short_n
 
 {:#DSX_sensor_data}
 
-In order to conduct a meaningful analysis, you must have meaningful data. You can simulate real sensor data to learn about how the Watson IoT Platform device data can be analyzed by using DSX. This step provides instructions for **setting up the simulator with an existing instance of {{site.data.keyword.iot_short_notm}}** and for **setting up the simulator with a new instance of {{site.data.keyword.iot_short_notm}}**.
+In order to conduct a meaningful analysis, you must have meaningful data. You can simulate real sensor data to learn about how the Watson IoT Platform device data can be analyzed by using DSX. This step provides instructions for:
+ - [Setting up the simulator with an **existing instance of {{site.data.keyword.iot_short_notm}}**](#sim_existing_platorm)
+ - [Setting up the simulator with a **new instance of {{site.data.keyword.iot_short_notm}}**](#sim_new_platform)
 
 
 ### Setting up the Weather Sensors simulator with an existing instance of {{site.data.keyword.iot_short_notm}}
@@ -70,7 +72,6 @@ To simulate real sensor data events against your organizations by using the Weat
 {: #sim_new_platform}
 
 To simulate real sensor data events against your organizations by using the Weather Sensors simulator, you must first set up the simulator. These steps include the instructions for creating a {{site.data.keyword.iot_short_notm}} instance along with the simulator.
-
 
 1. [Deploy the Weather Sensors simulator web app with an instance of {{site.data.keyword.iot_short_notm}} ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window} and follow the detailed steps.
 
