@@ -52,7 +52,6 @@ In order to conduct a meaningful analysis, you must have meaningful data. You ca
 
 
 ### Setting up the Weather Sensors simulator with an existing instance of {{site.data.keyword.iot_short_notm}}
-
 {: #sim_existing_platform}
 
 To simulate real sensor data events against your organizations by using the Weather Sensors simulator, you must first set up the simulator. These steps assume that you already have an instance of {{site.data.keyword.iot_short_notm}} up and running.
@@ -65,7 +64,6 @@ To simulate real sensor data events against your organizations by using the Weat
 
 
 ### Setting up the Weather Sensors simulator with a new instance of {{site.data.keyword.iot_short_notm}}
-
 {: #sim_new_platform}
 
 To simulate real sensor data events against your organizations by using the Weather Sensors simulator, you must first set up the simulator. These steps include the instructions for creating a {{site.data.keyword.iot_short_notm}} instance along with the simulator.
