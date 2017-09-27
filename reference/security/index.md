@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-08-25"
+lastupdated: "2017-09-27"
 
 ---
 
@@ -80,12 +80,12 @@ For more information about TLS and cipher suite requirements, see the [TLS requi
 
 You can use certificates and security polices to enhance device connection security. Security policies can be set to allow unencrypted connections, to enforce only transport layer security (TLS) connections, and to enable devices to authenticate with client-side certificates and no tokens. Blacklists can be used to specify devices that are not allowed to connect, or whitelists can be used to allow specific devices to connect. For more information about enhanced security, see [Risk and security management](RM_security.html).
 
-### Disabling and enabling devices (Beta)
+### Disabling and enabling devices and gateways (Beta)
 {: #disable-devices}
 
-**Important:** The {{site.data.keyword.iot_full}} disabling and enabling devices feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+**Important:** The {{site.data.keyword.iot_full}} disabling and enabling devices and gateways feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
-You can use the **Authorization - Device Management** HTTP API to disable a device from connecting directly to the platform. For example, you can forcibly disconnect the device of a malicious user or a device that is not behaving correctly and is causing issues such as unwanted data usage due to spam. The API is used to disconnect the device from its current connection and prevent the device from reconnecting to the platform.
+You can use the **Authorization - Device Management** HTTP API to disable a device from connecting directly to the platform or from connecting behind a gateway. For example, you can forcibly disconnect the device of a malicious user or a device that is not behaving correctly and is causing issues such as unwanted data usage due to spam. The API is used to disconnect the device from its current connection and prevent the device from reconnecting to the platform.
 
 To enable or disable a device, use the following API, where *${clientId}* is the URL-encoded ClientID in the format *d:${orgId}:${typeId}:${deviceId}* for devices or *g:${orgId}:${typeId}:${deviceId}* for gateways:
 
@@ -95,7 +95,9 @@ In the request body, use a status value of 0 to disable the device, or use a sta
 
     { "status": 0 }
 
-The response on success is 200. 
+The response code on success is 200. 
+
+When a gateway publishes for a device that is disabled, it receives an error notification with a response code of 180. For more information, see [Gateway notifications](../../gateways/mqtt.html#notification). 
 
 For more information about the API see [Device Security Beta APIs ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){:new_window}, and navigate to **Authorization - Device Management**.
 

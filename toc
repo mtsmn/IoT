@@ -30,7 +30,7 @@ Internet of Things Platform
         gateways/iotgw.md
         GA_information_management/im_ui_flow.md
         GA_information_management/im_config_devices.md
-        [Disabling and enabling devices (Beta)](reference/security/index.html#disable-devices)
+        [Disabling and enabling devices and gateways (Beta)](reference/security/index.html#disable-devices)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
