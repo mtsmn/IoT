@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -13,10 +13,8 @@ lastupdated: "2017-05-24"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# HTTP Messaging APIs for gateway devices (Beta)
+# HTTP Messaging APIs for gateway devices
 {: #api}
-
-**Important:** The {{site.data.keyword.iot_full}} HTTP API for gateway devices feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Accessing the HTTP Messaging API documentation for gateway devices
 {: #rest_messaging_api}
