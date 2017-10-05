@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-06-14"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -13,10 +13,8 @@ lastupdated: "2017-06-14"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# HTTP Messaging APIs for devices (Beta)
+# HTTP Messaging APIs for devices
 {: #api}
-
-**Important:** The {{site.data.keyword.iot_full}} HTTP Messaging API for devices feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 
 ## Accessing the HTTP Messaging API documentation for devices

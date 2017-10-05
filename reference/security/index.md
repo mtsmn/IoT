@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-09-27"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -80,10 +80,8 @@ For more information about TLS and cipher suite requirements, see the [TLS requi
 
 You can use certificates and security polices to enhance device connection security. Security policies can be set to allow unencrypted connections, to enforce only transport layer security (TLS) connections, and to enable devices to authenticate with client-side certificates and no tokens. Blacklists can be used to specify devices that are not allowed to connect, or whitelists can be used to allow specific devices to connect. For more information about enhanced security, see [Risk and security management](RM_security.html).
 
-### Disabling and enabling devices and gateways (Beta)
+### Disabling and enabling devices and gateways
 {: #disable-devices}
-
-**Important:** The {{site.data.keyword.iot_full}} disabling and enabling devices and gateways feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 You can use the **Authorization - Device Management** HTTP API to disable a device from connecting directly to the platform or from connecting behind a gateway. For example, you can forcibly disconnect the device of a malicious user or a device that is not behaving correctly and is causing issues such as unwanted data usage due to spam. The API is used to disconnect the device from its current connection and prevent the device from reconnecting to the platform.
 
