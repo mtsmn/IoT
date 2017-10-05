@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-08-02"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -12,25 +12,25 @@ lastupdated: "2017-08-02"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Watson IoT Platform Gateway package (Beta)
+# IoT gateway package (Beta)
 {: #gw_package}
 
-The {{site.data.keyword.iot_full}} Gateway package enables a {{site.data.keyword.iot_short_notm}} registered gateway to send events to {{site.data.keyword.iot_short_notm}} on behalf of devices that are in the resource group that is associated with the gateway.
+The {{site.data.keyword.iot_full}} IoT gateway package enables a gateway that is registered with {{site.data.keyword.iot_short_notm}} to send events to the platform for devices that are in the resource group that is associated with the gateway. 
 {:shortdesc}
 
-**Important:** The {{site.data.keyword.iot_short_notm}} Gateway package is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+**Important:** The IoT gateway package is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Overview
 
-The {{site.data.keyword.iot_short_notm}} Gateway package includes the following entities:
+The IoT gateway package includes the following entities:
 
 | Entity | Type | Parameters | Description |
 | --- | --- | --- | --- |
-| `/watson-iot/iot-gateway` | package | org, gatewayTypeId, gatewayId, gatewayToken  | Work with {{site.data.keyword.iot_short_notm}} Gateway |
+| `/watson-iot/iot-gateway` | package | org, domain, gatewayTypeId, gatewayId, gatewayToken  | Work with {{site.data.keyword.iot_short_notm}} Gateway |
 | `/watson-iot/iot-gateway/publishEvent` | action | org, domain, gatewayTypeId, gatewayId, gatewayToken, eventType, typeId, deviceId, payload | Send events from a registered gateway on behalf of its associated devices to {{site.data.keyword.iot_short_notm}}   |
 
-## Creating a {{site.data.keyword.iot_short_notm}} Gateway package binding
-To create a {{site.data.keyword.iot_short_notm}} Gateway package binding, you must specify the following parameters:
+## Creating an IoT gateway package binding
+To create an IoT gateway package binding, you must specify the following parameters:
 
 | Parameter |  Description |
 | --- | ---  |
@@ -44,7 +44,7 @@ Complete the following steps to create a package binding:
 1. [Login to the Bluemix console ![External link icon](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/).
 2. Create the [Internet of Things Platform Service](https://console.bluemix.net/docs/services/IoT/index.html) in Bluemix and [note the `API Key` and the `API Token`](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#connecting-applications). This information is required to create a gateway type and to register a gateway.
 3. [Create a gateway type](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), for example, *myGWType* in your Watson IoT organization and [register an instance of the gateway](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), for example, *myGWId*. Make a note of the *Gateway Token* for the registered gateway.
-4. Create a package binding with the Watson IoT Platform Gateway package by using the following example command:
+4. Create a package binding with the IoT gateway package by using the following example command:
    ```
    wsk package bind /watson/iotgw myGW -p org myorg -p gatewayTypeId myGWType -p gatewayId myGWId -p gatewayToken myGWToken
    ```
