@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-10-03"
+lastupdated: "2017-10-06"
 
 ---
 
@@ -22,7 +22,7 @@ This section provides information about the limits that are set for {{site.data.
 
 Quotas specify the upper limits that are set for a resource. When usage exceeds a specified limit, user requests might be delayed or denied. In exceptional circumstances, exceeding limits which affect system stability might result in the {{site.data.keyword.iot_short_notm}} organization being suspended to prevent other users from being affected.
 
-The following tables list the limits for {{site.data.keyword.iot_short_notm}}. Most of the limits that are specified are per {{site.data.keyword.iot_short_notm}} organization, unless explicitly listed as per device. Some of the limits have an enforced maximum, while other limits can be increased upon request. If you need limits that are higher than those specified, please raise a [parature ticket ![External link icon](../../../icons/launch-glyph.svg)](https://support.ng.bluemix.net/gethelp/){: new_window}.
+The following tables list the limits for {{site.data.keyword.iot_short_notm}}. Most of the limits that are specified are per {{site.data.keyword.iot_short_notm}} organization, unless explicitly listed as per device. Some of the limits have an enforced maximum, while other limits can be increased upon request. If you need limits that are higher than those specified, please raise a [ticket ![External link icon](../../../icons/launch-glyph.svg)](https://support.ng.bluemix.net/gethelp/){: new_window}.
 
 ## Messaging
 {: #messaging_metrics}
