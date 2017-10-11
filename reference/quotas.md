@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-10-06"
+lastupdated: "2017-10-11"
 
 ---
 
@@ -40,6 +40,10 @@ Device-to-Cloud sends (MQTT) - Device | 5 msg/sec or 20 KB/sec | 10 msg/sec or 4
 Device-to-Cloud sends (MQTT) - Gateway  | 50 msg/sec or 200 KB/sec | 100 msg/sec or 400 KB/sec| 100 msg/sec or 400 KB/sec
 Device-to-Cloud sends (MQTT) - Application | 10 msg/sec or 40 KB/sec | 20 msg/sec or 80 KB/sec| 20 msg/sec or 80 KB/sec
 Device-to-Cloud sends (MQTT) - per Organization | 5000 msg/sec | 6000 msg/sec | 6000 msg/sec
+Device-to-Cloud sends (HTTP) - Device | 30 msg/min or 2 KB/sec | 1 msg/sec or 4 KB/sec | 1 msg/sec or 4 KB/sec
+Device-to-Cloud sends (HTTP) - Gateway | 5 msg/sec or 20 KB/sec | 10 msg/sec or 40 KB/sec | 10 msg/sec or 40 KB/sec
+Device-to-Cloud sends (HTTP) - Application | 1 msg/sec or 4 KB/sec| 2 msg/sec or 8 KB/sec | 2 msg/sec or 8 KB/sec
+Device-to-Cloud sends (HTTP) - per Organization | 500 msg/sec | 600 msg/sec | 600 msg/sec
 Cloud-to-Device sends (MQTT) - Device  |1 msg/sec |2 msg/sec or 8 KB/sec |2 msg/sec or 8 KB/sec
 Cloud-to-Device sends (MQTT) - Gateway| 10 msg/sec |20 msg/sec or 80 KB/sec  |20 msg/sec or 80KB/sec  
 Cloud-to-Device sends (MQTT) - Application | 10 msg/sec |20 msg/sec or 80 KB/sec |20 msg/sec or 80 KB/sec  
