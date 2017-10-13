@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-08-01"
+lastupdated: "2017-10-13"
 
 ---
 
@@ -25,16 +25,25 @@ Resource-level access control enables you to control user and API key access to 
 
 Device groups are part of the resource-level access controls for {{site.data.keyword.iot_short_notm}}. You can use the device groups feature to manage the number of devices that personnel can access according to their role. Before you implement device groups, determine and record the intent and scope of the device groups to increase the efficiency of your solution. 
 
-You can implement device groups as part of your IoT solution to enable a user or application to access a subset of devices - rather than all devices that are associated with an organization. To increase the efficiency of device groups, use device groups when one person must have access to many devices.
+You can implement device groups as part of your IoT solution to enable a user or application to access a subset of devices rather than all devices that are associated with an organization. To increase the efficiency of device groups, use device groups when one person must have access to many devices.
 
 For example, a company that employs a number of field engineers and operations personnel wants to implement an IoT solution across the United Kingdom. The company configures a device group for each of the 69 cities, 9 device groups for each of the geographical regions, and a device group for the whole of the United Kingdom. Devices are allocated to these groups, and the groups are assigned to 15 field engineers and operations personnel, some of whom have access to more than one group. Users that are responsible for just one or two devices can continue to use mobile applications and enterprise architectures that are external to {{site.data.keyword.iot_short_notm}} but compliment the overall IoT solution.
 
 Questions about device groups can be raised in the [Questions in Internet of Things space ![External link icon](../../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smartspace/internet-of-things/){: new_window}.
 
-## Resource-level access control terminology
-{: #RLAC_terminology}
+## Resource group limits for access control
 
-You can use the following sections to help you to understand the terminology that is used in the resource-level access control feature.
+Resource group limits are enforced to ensure that the resource-level access control feature works effectively. The limits restrict the number of resource groups that are assigned to a subject, the number of devices within the groups, and the number of groups that a resource can belong to.
+
+The following limits are enforced:
+
+ - A maximum of 10 resource groups can be assigned to an API key, user, or gateway.
+ - A resource group can have a maximum of 300 resources.
+ - A resource can belong to a maximum of 10 groups.
+
+## Resource-level access control terminology
+
+You can use the following sections to help you to understand the terminology that is used in the resource-level access control feature. 
 
 ### Subjects
 {: #subjects}
