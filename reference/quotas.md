@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-10-11"
+lastupdated: "2017-10-17"
 
 ---
 
@@ -123,6 +123,9 @@ Metric        | Lite plan      | Standard plan       | Dedicated
 ------------- | -------------|------------- |
 Maximum number of custom roles |20|20|20
 Maximum number of user members |1000|1000|1000
+Maximum number of devices in a resource group |300|300|300
+Maximum number of resource groups assigned to a gateway |10|10|10
+Maximum number of resource groups to which a device can belong |10|10|10
 
 ## User Interface
 {: #UI_metrics}
