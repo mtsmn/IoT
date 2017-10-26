@@ -188,5 +188,6 @@ Internet of Things Platform
     {: .navgroup id="help"}
     ts_index.md
     service_status.md
+    contact.md
     glossary.md
     {: .navgroup-end}
