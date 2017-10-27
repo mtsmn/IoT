@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-16"
+lastupdated: "2017-10-18"
 
 ---
 
@@ -17,12 +17,12 @@ lastupdated: "2017-06-16"
 In the first guide, you set up a basic device simulator to manually simulate one or more conveyor belts. In this guide, we expand on this simulation by adding large numbers of self-running simulators to your environment to test analytics and monitoring in a more realistic, multi-device environment.
 {:shortdesc}
 
-**Important:** The application requires 512 MB of memory, which is more than is allocated by default and which also exceeds the amount that is available to free trial accounts, including the Bluemix Trial Account and Standard Account. Subscription and Pay-As-You-Go account holders can increase the allocated memory to 512 MB. Free trial account holders need to upgrade to a Subscription or Pay-As-You-Go account. For more information about {{site.data.keyword.Bluemix_notm}} account types, see [Account types](/docs/pricing/index.html#pricing).
+**Important:** The application requires 512 MB of memory, which is more than is allocated by default and which also exceeds the amount that is available to free trial accounts, including the {{site.data.keyword.Bluemix}} Trial Account and Standard Account. Subscription and Pay-As-You-Go account holders can increase the allocated memory to 512 MB. Free trial account holders need to upgrade to a Subscription or Pay-As-You-Go account. For more information about {{site.data.keyword.Bluemix_notm}} account types, see [Account types](/docs/pricing/index.html#pricing).
 
 ## Overview and goal
 {: #overview}
 
-In this guide, you will set up a {{site.data.keyword.Bluemix_notm}} application to simulate multiple conveyor belt devices using a  [Node-RED ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://nodered.org){: new_window} "back end".
+In this guide, you will set up an {{site.data.keyword.Bluemix_notm}} application to simulate multiple conveyor belt devices using a  [Node-RED ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://nodered.org){: new_window} "back end".
 
 The application contains three flows that:   
 1. Create multiple devices.   

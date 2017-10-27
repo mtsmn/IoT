@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-16"
+lastupdated: "2017-10-18"
 
 ---
 
@@ -20,7 +20,7 @@ Now that you have one or more devices connected, it is time to start monitoring 
 ## Overview and goal
 {: #overview}  
 
-In this guide, you will deploy a monitoring application on {{site.data.keyword.Bluemix_notm}} to view data from your devices.
+In this guide, you will deploy a monitoring application on {{site.data.keyword.Bluemix}} to view data from your devices.
 
 As in guide 1, you can follow one or both of the following paths:
 - Path A: [Step 1A - Deploy and connect the monitoring web application](#deploy_app)  

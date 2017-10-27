@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-16"
+lastupdated: "2017-10-18"
 
 ---
 
@@ -19,7 +19,7 @@ Use the instructions in this guide to configure a set of basic rules and actions
 
 ## Overview and goal
 {: #overview}  
-Now that you successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.
+Now that you successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_full}}, and sent some data, it is time to make that data work for you by using rules and actions.
 
 ![Example rule](images/slow_rule.svg "Example rule")
 

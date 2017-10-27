@@ -15,7 +15,7 @@ lastupdated: "2017-06-16"
 
 
 # Guide 1: Connecting a conveyor belt device  
-Create a basic conveyor belt with an IoT device that sends monitoring data to {{site.data.keyword.iot_short_notm}} on {{site.data.keyword.Bluemix_notm}}.
+Create a basic conveyor belt with an IoT device that sends monitoring data to {{site.data.keyword.iot_full}} on {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
 ## Overview and goal
@@ -96,7 +96,7 @@ Example: `cf create-service iotf-service iotf-service-free iotp-for-conveyor`
 ## Step 2A - Deploy the sample conveyor belt web application  
 {: #deploy_app}
 
-The sample app lets you simulate a {{site.data.keyword.Bluemix_notm}} connected industrial conveyor belt. You can start and stop the belt and adjust the speed of the belt. Every change to the belt is sent to {{site.data.keyword.Bluemix_notm}} in the form of an MQTT message that is displayed in the app. You can monitor the belt behavior by using the default dashboard cards.
+The sample app lets you simulate an {{site.data.keyword.Bluemix_notm}} connected industrial conveyor belt. You can start and stop the belt and adjust the speed of the belt. Every change to the belt is sent to {{site.data.keyword.Bluemix_notm}} in the form of an MQTT message that is displayed in the app. You can monitor the belt behavior by using the default dashboard cards.
 The sample app is built using the Node.js client libraries at: [https://github.com/ibm-watson-iot/iot-nodejs ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 
 ![Conveyor belt app](images/app_conveyor_belt.png "Conveyor belt app")
