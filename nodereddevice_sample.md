@@ -17,10 +17,9 @@ Use Node-RED to create a device simulator to send simulated device data to your 
 {:shortdesc}
 
 ## Overview
-
 Node-RED is a tool that is used for wiring together hardware devices, APIs, and online services in new and interesting ways. For more information, see the [Node-RED ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://nodered.org/){: new_window} web site.  
 
-You can run your Node-RED instance in your own environment or use it as a {{site.data.keyword.Bluemix_notm}} application. The following steps include instructions for {{site.data.keyword.Bluemix_notm}}.
+You can run your Node-RED instance in your own environment or use it as an {{site.data.keyword.Bluemix_notm}} application. The following steps include instructions for {{site.data.keyword.Bluemix_notm}}.
 
 Create and connect the Node-RED device simulator to send MQTT device messages to {{site.data.keyword.iot_short_notm}}. In the following example, the device simulator simulates sending data for a freight container to an MQTT broker, for example {{site.data.keyword.iot_short_notm}}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-10-18"
 
 ---
 
@@ -34,10 +34,10 @@ To create a new API key and authentication token pair:
 
 
 
-## Bluemix binding connection
+## IBM Cloud binding connection
 {: #bluemix-binding}
 You can bind applications to your {{site.data.keyword.iot_short_notm}} organization from {{site.data.keyword.Bluemix_notm}}. By binding the application, it can only communicate with service instances in the same space or organization. You can find all the required data for the application to communicate with the service instance in the VCAP_SERVICES environment variable. If your application is bound to multiple services, the VCAP_SERVICES variable includes the connection information for each service instance.  
 
 However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information, see [Requesting a new service instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) in the {{site.data.keyword.Bluemix_notm}} documentation.
 
-To see details for the Bluemix applications that are bound to the Bluemix service instance associated with your organization, go to **Apps > Bluemix Apps**.  
+To see details for the {{site.data.keyword.Bluemix_notm}} applications that are bound to the {{site.data.keyword.Bluemix_notm}} service instance associated with your organization, go to **Apps > IBM Cloud Apps**.  
