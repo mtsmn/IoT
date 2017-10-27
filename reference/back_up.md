@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-08-07"
+lastupdated: "2017-10-18"
 
 ---
 
@@ -49,9 +49,9 @@ The following off-site locations are currently used for data backup:
 
 Location                   | Backup location                      
 ------------- | -------------
-Bluemix US South (Dallas)| Washington
-Bluemix United Kingdom (London) | Frankfurt
-Bluemix Germany (Frankfurt) | London
-Bluemix Dedicated | As per customer request when ordering {{site.data.keyword.iot_short_notm}} Dedicated
+IBM Cloud US South (Dallas)| Washington
+IBM Cloud United Kingdom (London) | Frankfurt
+IBM Cloud Germany (Frankfurt) | London
+IBM Cloud Dedicated | As per customer request when ordering {{site.data.keyword.iot_short_notm}} Dedicated
 
 **Note:** Future locations might change to reflect data privacy laws, for example the potential impact of Brexit on EU data sovereignty rules.
