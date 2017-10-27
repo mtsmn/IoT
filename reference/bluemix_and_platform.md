@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-08"
+lastupdated: "2017-10-18"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-05-08"
 # {{site.data.keyword.Bluemix_notm}} and the {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
 
-The {{site.data.keyword.iot_full}} is a service that is available in {{site.data.keyword.Bluemix}}. You can access your {{site.data.keyword.iot_short_notm}} organization dashboard by using your {{site.data.keyword.Bluemix_notm}} dashboard. As a {{site.data.keyword.Bluemix_notm}} service, {{site.data.keyword.iot_short_notm}} can be integrated with other services that are hosted on {{site.data.keyword.Bluemix_notm}}. Details of specific third-party service integrations can be found in the [External Service Integrations](extensions/index.html) topic.
+The {{site.data.keyword.iot_full}} is a service that is available in {{site.data.keyword.Bluemix_notm}}. You can access your {{site.data.keyword.iot_short_notm}} organization dashboard by using your {{site.data.keyword.Bluemix_notm}} dashboard. As an {{site.data.keyword.Bluemix_notm}} service, {{site.data.keyword.iot_short_notm}} can be integrated with other services that are hosted on {{site.data.keyword.Bluemix_notm}}. Details of specific third-party service integrations can be found in the [External Service Integrations](extensions/index.html) topic.
 {:shortdesc}
 
 ## How the {{site.data.keyword.iot_short_notm}} works with {{site.data.keyword.Bluemix_notm}}
