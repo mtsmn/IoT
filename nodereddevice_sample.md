@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-08-11"
+lastupdated: "2017-11-02"
 
 ---
 
@@ -35,7 +35,7 @@ Create and connect the Node-RED device simulator to send MQTT device messages to
      <li> Space: dev
      <li> App name: myDevice
      <li> Host name: myDevice  
-    <ul>  
+    </ul>  
 Leave the other options as the default values. After the application is deployed, the Start coding with Node-RED page is displayed.
 **Note:** The staging process might take a few minutes.  
 
