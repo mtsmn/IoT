@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-16"
+lastupdated: "2017-11-08"
 
 ---
 
@@ -82,7 +82,7 @@ declared-services:
      label: iotf-service
      plan: iotf-service-free
 applications:  </br>
-  &#45;  path: .
+  -  path: .
       memory: 512M
       instances: 1
       domain: mybluemix.net
@@ -90,8 +90,8 @@ applications:  </br>
       host: lesson4-simulate
       disk_quota: 1024M</br>
   services:</br>
-  &#45; lesson4-simulate-cloudantNoSQLDB
-  &#45; lesson4-simulate-iotf-service
+     - lesson4-simulate-cloudantNoSQLDB
+     - lesson4-simulate-iotf-service
 </code></pre>  
 1. From the command line, set your API endpoint by running the cf api command.   
 Replace the `API-ENDPOINT` value with the API endpoint for your region.
