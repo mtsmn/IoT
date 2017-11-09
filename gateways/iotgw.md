@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-10-04"
+lastupdated: "2017-10-18"
 
 ---
 
@@ -41,8 +41,8 @@ To create an IoT gateway package binding, you must specify the following paramet
 
 
 Complete the following steps to create a package binding:  
-1. [Login to the Bluemix console ![External link icon](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/).
-2. Create the [Internet of Things Platform Service](https://console.bluemix.net/docs/services/IoT/index.html) in Bluemix and [note the `API Key` and the `API Token`](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#connecting-applications). This information is required to create a gateway type and to register a gateway.
+1. [Login to the IBM Cloud console ![External link icon](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/).
+2. Create the [Internet of Things Platform Service](https://console.bluemix.net/docs/services/IoT/index.html) in IBM Cloud and [note the `API Key` and the `API Token`](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#connecting-applications). This information is required to create a gateway type and to register a gateway.
 3. [Create a gateway type](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), for example, *myGWType* in your Watson IoT organization and [register an instance of the gateway](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), for example, *myGWId*. Make a note of the *Gateway Token* for the registered gateway.
 4. Create a package binding with the IoT gateway package by using the following example command:
    ```

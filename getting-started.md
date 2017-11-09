@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-01"
+lastupdated: "2017-05-31"
 
 ---
 
@@ -24,7 +24,7 @@ In this {{site.data.keyword.iot_full}} getting started tutorial, we connect an I
 ## Before you begin
 {: #prereqs}
 
-You'll need a [Bluemix account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/registration/){: new_window},
+You'll need an [IBM Cloud account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/registration/){: new_window},
 an instance of the {{site.data.keyword.iot_short_notm}} service, and a device that meets the following requirements:
 
 *	Your device must be able to communicate by using HTTP or MQTT protocols.

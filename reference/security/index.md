@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-10-04"
+lastupdated: "2017-10-18"
 
 ---
 
@@ -29,7 +29,7 @@ The following document answers some common questions about how your organization
 ## {{site.data.keyword.iot_short_notm}} and {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}} runs within {{site.data.keyword.Bluemix_notm}} platform and so relies upon both {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer_full}} for access and connectivity. The reliance upon {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer_notm}} makes {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer_notm}} security and reliability important to users of {{site.data.keyword.iot_short_notm}}
+{{site.data.keyword.iot_short_notm}} runs within {{site.data.keyword.Bluemix_notm}} platform and so relies upon both {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer_notm}} Infrastructure for access and connectivity. The reliance upon {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer_notm}} Infrastructure makes {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer_notm}} Infrastructure security and reliability important to users of {{site.data.keyword.iot_short_notm}}
 
 For more details about the security of the {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} platform security](index.html#platform-security). 
 

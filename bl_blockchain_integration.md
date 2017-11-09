@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-10-18"
 
 ---
 
@@ -196,7 +196,7 @@ If you are connected to the IBM-provided fabric and mapped your device data to t
 </tr>
 <tr>
 <td>Secure Context</td>
-<td>This parameter is required for connecting to {{site.data.keyword.iot_short_notm}} instances on Bluemix. Use the secureContext entry.  
+<td>This parameter is required for connecting to {{site.data.keyword.iot_short_notm}} instances on {{site.data.keyword.Bluemix_notm}}. Use the secureContext entry.  
 **Important:** The secureContext should be an authorized user of the fabric, defined when you created the fabric.
 </td>
 </tr>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-10-18"
 
 ---
 
@@ -60,15 +60,15 @@ If the device data is not valid JSON or if the format is not set to `JSON` the d
 
 Before connecting a {{site.data.keyword.cloudant_short_notm}} to your {{site.data.keyword.iot_short}} service, please complete the following tasks:
 
-- Set up a {{site.data.keyword.cloudant_short_notm}} in the same Bluemix space as your {{site.data.keyword.iot_short_notm}} by using the Bluemix Catalog.
+- Set up a {{site.data.keyword.cloudant_short_notm}} in the same {{site.data.keyword.Bluemix_notm}} space as your {{site.data.keyword.iot_short_notm}} by using the {{site.data.keyword.Bluemix_notm}} Catalog.
 
-Ensure that you have developer privileges in the Bluemix organization and that you are signed in via Bluemix. If you are not signed in through Bluemix, or do not have developer privileges in this Bluemix organization, you will not be able to authorize the binding of the {{site.data.keyword.cloudant_short_notm}} and the {{site.data.keyword.iot_short_notm}}.
+Ensure that you have developer privileges in the {{site.data.keyword.Bluemix_notm}} organization and that you are signed in via {{site.data.keyword.Bluemix_notm}}. If you are not signed in through {{site.data.keyword.Bluemix_notm}}, or do not have developer privileges in this {{site.data.keyword.Bluemix_notm}} organization, you will not be able to authorize the binding of the {{site.data.keyword.cloudant_short_notm}} and the {{site.data.keyword.iot_short_notm}}.
 
 Complete the following steps to connect a {{site.data.keyword.cloudant_short_notm}}:
 
 1. On your {{site.data.keyword.iot_short}} dashboard click **Extensions** in the navigation bar.
 2. In the Historical Data Storage tile, click **Setup**.
-2. All available {{site.data.keyword.cloudant_short_notm}} services within the same Bluemix space as your {{site.data.keyword.iot_short}} service are listed in the Configure historical data storage section.
+2. All available {{site.data.keyword.cloudant_short_notm}} services within the same {{site.data.keyword.Bluemix_notm}} space as your {{site.data.keyword.iot_short}} service are listed in the Configure historical data storage section.
 3. Select the {{site.data.keyword.cloudant_short_notm}} service that you wish to connect.
 4. Select your {{site.data.keyword.cloudant_short_notm}} configuration options:
 

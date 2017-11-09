@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-20"
+lastupdated: "2017-10-18"
 
 ---
 
@@ -37,7 +37,7 @@ When you register with the {{site.data.keyword.iot_short_notm}}, you are given a
 
 For your security, it is impossible for cross-organization communication. The only way to transmit data between two organizations is to create an application within each organization that will communicate with applications in the other organization.
 
-**Note:** Your {{site.data.keyword.iot_short_notm}} organization ID is different from your [Bluemix organization](../../docs/admin/orgs_spaces.html#orginfo).
+**Note:** Your {{site.data.keyword.iot_short_notm}} organization ID is different from your [IBM Cloud organization](../../docs/admin/orgs_spaces.html#orginfo).
 
 ### Devices
 
