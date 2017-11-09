@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-10-17"
+lastupdated: "2017-11-01"
 
 ---
 
@@ -27,7 +27,7 @@ The following tables list the limits for {{site.data.keyword.iot_short_notm}}. M
 ## Messaging
 {: #messaging_metrics}
 
-Metric        | Lite plan      | Standard plan      | Dedicated plan
+Metric        | Lite plan      | Standard & Advanced Security plans     | Dedicated plan
 ------------- | -------------|------------- |
 Maximum number of device types |50 |1000 |1000
 Maximum number of concurrently connected devices | 500| 500K. If you want to connect more than 50,000 devices, please get in touch to discuss your plans. | 500K
@@ -69,14 +69,14 @@ Maximum buffered messages for 'A' applications |50K durable, 50K non-durable |50
 ## APIs
 {: #api_metrics}
 
-Metric        | Lite plan      | Standard plan       | Dedicated
+Metric        | Lite plan      | Standard & Advanced Security plans       | Dedicated
 ------------- | -------------|------------- |
 API calls |10/sec |10/sec |10/sec
 
 ## Rule Engine
 {: #rule_engine_metrics}
 
-Metric        | Lite plan      | Standard plan       | Dedicated
+Metric        | Lite plan      | Standard & Advanced Security plans       | Dedicated
 ------------- | -------------|------------- |
 Maximum rules per Organization |100|1000|1000
 Actions per rule|10|10|10
@@ -84,7 +84,7 @@ Actions per rule|10|10|10
 ## Device Management
 {: #device_mgmt_metrics}
 
-Metric        | Lite plan      | Standard plan       | Dedicated
+Metric        | Lite plan      | Standard & Advanced Security plans       | Dedicated
 ------------- | -------------|------------- |
 Maximum size of diagnostic logs per device |500K|500K|500K
 Maximum historical versions of diagnostic logs held|2  |2 |2
@@ -95,7 +95,7 @@ Maximum number of devices per action |5000 |5000 | 5000
 ## Last event cache
 {: #last_event_metrics}
 
-Metric        | Lite plan      | Standard plan       | Dedicated
+Metric        | Lite plan      | Standard & Advanced Security plans       | Dedicated
 ------------- | -------------|------------- |
 Maximum number of event IDs per device |5|5|5
 Maximum number of formats |2|3|3
@@ -104,14 +104,14 @@ Expiry from last event cache |12 months |12 months | 12 months
 ## Extensions
 {: #extensions_metrics}
 
-Metric        | Lite plan      | Standard plan       | Dedicated
+Metric        | Lite plan      | Standard & Advanced Security plans       | Dedicated
 ------------- | -------------|------------- |
 Maximum number of services with which you can bind |12|12|12
 
 ## Information management
 {: #information_management_metrics}
 
-Metric        | Lite plan      | Standard plan       | Dedicated
+Metric        | Lite plan      | Standard & Advanced Security plans       | Dedicated
 ------------- | -------------|------------- |
 Maximum nesting depth for JSON payload |5|5|5
 Maximum JSON string size |512|512|512
@@ -119,7 +119,7 @@ Maximum JSON string size |512|512|512
 ## Security
 {: #security_metrics}
 
-Metric        | Lite plan      | Standard plan       | Dedicated
+Metric        | Lite plan      | Standard & Advanced Security plans       | Dedicated
 ------------- | -------------|------------- |
 Maximum number of custom roles |20|20|20
 Maximum number of user members |1000|1000|1000
@@ -130,7 +130,7 @@ Maximum number of resource groups to which a device can belong |10|10|10
 ## User Interface
 {: #UI_metrics}
 
-Metric        | Lite plan      | Standard plan       | Dedicated
+Metric        | Lite plan      | Standard & Advanced Security plans       | Dedicated
 ------------- | -------------|------------- |
 Maximum number of dashboards |50|50|50
 Maximum number of cards on board |30|30|30
