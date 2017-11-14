@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-16"
+lastupdated: "2017-11-14"
 
 ---
 
@@ -341,11 +341,17 @@ Continue with the next guide or jump to another topic that interests you:
 For technical details, see:
  - [https://github.com/ibm-watson-iot/guide-conveyor-simulator/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-simulator/blob/master/README.md){: new_window}
  - [Node.js clienmt libraries ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
+ 
+ **Note:** Bluemix is now IBM Cloud. Check out the [IBM Cloud Blog](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") for more details.
+ 
 - Path B: Modify the Raspberry Pi setup to suit your needs.  
 For technical details, see:
  - [https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi/blob/master/README.md){: new_window}
 - [Guide 2: Using basic real-time rules and actions](getting-started-iot-rules.html)  
 Now that you successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.
+
+**Note:** Bluemix is now IBM Cloud. Check out the [IBM Cloud Blog](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") for more details.
+
 - [Guide 3: Monitoring your device data](getting-started-iot-monitoring.html)  
 Now that you connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices.
 - [Guide 4: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
