@@ -153,9 +153,9 @@ Internet of Things Platform
     {: .topicgroup}
     Developing devices
         devices/device_dev_index.md
-        devices/api.md
         reference/mqtt/index.md
         devices/mqtt.md
+        devices/api.md
         devices/device_mgmt/index.md
         devices/device_mgmt/requests.md
         devices/device_mgmt/custom_actions.md
@@ -169,9 +169,9 @@ Internet of Things Platform
     {: .topicgroup}
     Developing gateways
         gateways/gw_dev_index.md
-        gateways/gw_api.md
         reference/mqtt/index.md
         gateways/mqtt.md
+        gateways/gw_api.md
         gateways/libraries/java_cli_gw.md
         gateways/libraries/java_cli_managed_gw.md
         edge_analytics.md
