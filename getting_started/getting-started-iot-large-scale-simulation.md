@@ -19,6 +19,8 @@ In the first guide, you set up a basic device simulator to manually simulate one
 
 **Important:** The application requires 512 MB of memory, which is more than is allocated by default and which also exceeds the amount that is available to free trial accounts, including the {{site.data.keyword.Bluemix}} Trial Account and Standard Account. Subscription and Pay-As-You-Go account holders can increase the allocated memory to 512 MB. Free trial account holders need to upgrade to a Subscription or Pay-As-You-Go account. For more information about {{site.data.keyword.Bluemix_notm}} account types, see [Account types](/docs/pricing/index.html#pricing).
 
+**Note:** Bluemix is now IBM Cloud. Check out the [IBM Cloud Blog](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") for more details.
+
 ## Overview and goal
 {: #overview}
 
