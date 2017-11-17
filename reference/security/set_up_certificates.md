@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-13"
+lastupdated: "2017-11-13"
 ---
 
 {:new_window: target="\_blank"}
@@ -53,12 +53,10 @@ The following example shows a valid CN for the server certificate:
 
 For more information about messaging server certificates, see [the Connect Raspberry Pi to IBM Watson IoT Platform using Self-Signed Server Certificate recipe ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
 
-### Custom domains (Beta)
-{: #custom_domains}
+### Custom domains
+{: #custom-domains}
 
-**Important**: The custom domains feature for messaging server certificates is available only as part of a limited Beta program. To enable custom domains, turn on the **Experimental Features** on the **Settings** page.
-
-As part of the Beta feature, messaging server certificates accept custom domains. The following format must be followed for the certificate CN or SubjectAltName:
+Messaging server certificates accept custom domains. The following format must be followed for the certificate CN or SubjectAltName:
 
 - `orgId.messaging.<custom domain>`
 
