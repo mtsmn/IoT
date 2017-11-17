@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-10-02"
+lastupdated: "2017-11-14"
 
 ---
 
@@ -141,6 +141,27 @@ This value is the unique token that you defined or that was assigned to your dev
 For more information about connecting your device, see [MQTT Connectivity for Devices](devices/mqtt.html) in the technical documentation.
 
 The [Organization Administration ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} API documentation also contains the required information.
+
+## Restoring deleted devices (Beta)
+{: #restore_device}
+
+**Important:** The {{site.data.keyword.iot_short_notm}} restore devices feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+
+If a device deleted by mistake, you can restore it within 14 days. 
+
+When the device is deleted, a device “memento” is created. The memento is a copy of the device document and is available for 14 days, after which it is deleted.
+
+The following Restore a Device API enables you to use the memento to restore a previous version of the device:
+
+    POST /archive/device/types/{typeId}/devices/{deviceId}/restore
+
+
+You can use the following API to retrieve a list of all of the device mementos:
+
+    GET /archive/device/types/{typeId}/devices/{deviceId}
+
+For more information about the Restore Devices APIs, see [Restore Devices APIs Beta ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html).
+
 
 ## Recipes on Connecting Devices
 
