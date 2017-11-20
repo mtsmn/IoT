@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-10-04"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -28,3 +28,4 @@ Resource-level access control | [Overview of RLAC (Beta)](reference/rlac_overvie
  | [Configuring RLAC (Beta)](reference/rlac.html#configure_RLAC)
 IoT gateway package | [IoT gateway package (Beta)](gateways/iotgw.html#gw_package)
 Simulating device data | [Simulating device data (Beta)](devices/device_sim.html)
+Restoring deleted devices | [Restoring deleted devices (Beta)(iotplatform_task.html#restore_device)
