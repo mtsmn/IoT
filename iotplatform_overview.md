@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-10-18"
+lastupdated: "2017-11-21"
 
 ---
 
@@ -35,7 +35,7 @@ The {{site.data.keyword.iot_short_notm}} communicates with your applications and
 
 When you register with the {{site.data.keyword.iot_short_notm}}, you are given an organization ID. Your organization ID is a unique six character identifier for your account. Organizations ensure that your data is only accessible by your devices and applications. After registration, devices and API keys are bound to a single organization. When an application connects to the service by using an API key, it will register to the organization that is associated with the API key that is used.
 
-For your security, it is impossible for cross-organization communication. The only way to transmit data between two organizations is to create an application within each organization that will communicate with applications in the other organization.
+For your security, communication between different organizations is not possible. The only way to transmit data between two organizations is to create an application within each organization that will communicate with applications in the other organization.
 
 **Note:** Your {{site.data.keyword.iot_short_notm}} organization ID is different from your [IBM Cloud organization](../../docs/admin/orgs_spaces.html#orginfo).
 
