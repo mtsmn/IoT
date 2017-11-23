@@ -33,7 +33,7 @@ Conditional ternary | ? | The ? operator evaluates one of two alternative expres
 String | & | The & operator joins the string values of the operands into a single resultant string.
 Sequence generator | .. | Creates an array of increasing integers, starting  with the number on the LHS and ending with the number on the RHS, for example, [1..4] -> [1,2,3,4]. The operands must evaluate to an integer. The sequence generator can only be used within an array constructor [].
 Other | . | The dot operator is used for object access with a literal key, for example $event.object.hh. *
-e:* The expression on the left-hand side is constrained to a specific property, either in the event ($event) or the state ($state) or the metadata ($instance). 
+* Note: The expression on the left-hand side is constrained to a specific property, either in the event ($event) or the state ($state) or the metadata ($instance). 
 
 **Notes:** 
 - Use Parenthesis ( ) for expression grouping and to alter operator precedence
