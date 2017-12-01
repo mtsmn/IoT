@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-27"
+lastupdated: "2017-12-01"
 
 ---
 
@@ -33,11 +33,23 @@ Requests can be initiated by using the following REST API sample:
 
 For more information about the body of a device management request, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
 
+## Canceling device management requests (Beta)
+{: #cancel-requests}
+
+You can cancel device management requests that are in progress by using the following REST API request:
+
+`POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests/{requestId}/cancel`
+
+This request clears the current operations for all in-progress requests and marks the requests as complete. 
+
+Important: The {{site.data.keyword.iot_full}} cancel device management request feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+
+For more information about the cancel device management request API, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests_requestId_cancel){: new_window}.
+
 ## Device actions
 {: #device-actions}
 
 A device can specify that it supports device actions when it publishes a manage request. A device action request indicates to the {{site.data.keyword.iot_short_notm}} that the device is able to respond to device reboot and device reset actions.
-
 
 ## Device actions - reboot
 {: #device-actions-reboot}
@@ -173,7 +185,6 @@ Topic: iotdevice-1/response
     "reqId": "string"
 }
 ```
-
 
 ## Firmware actions
 {: #firmware-actions}
