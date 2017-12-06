@@ -35,8 +35,8 @@ C#을 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용�
 |`orgId`|조직 ID입니다. |
 |`deviceType`|디바이스 유형입니다. |
 |`deviceId` |디바이스 ID입니다. |
-|`auth-method`   |사용할 인증 메소드입니다. 현재 지원되는 값은 `token`입니다. |
-|`auth-token`   |디바이스를 Watson IoT Platform에 안전하게 연결하기 위한 인증 토큰입니다. |
+|`auth-method`   |사용할 인증 메소드입니다. 현재 지원되는 값은 `token`입니다.|
+|`auth-token`   |디바이스를 Watson IoT Platform에 안전하게 연결하기 위한 인증 토큰입니다.|
 
 
 `deviceId` 및 `deviceType`이 유일하게 제공되는 인수인 경우, 클라이언트는 {{site.data.keyword.iot_short_notm}} Quickstart 서비스에 미등록 디바이스로 연결합니다. 인수 목록은 클라이언트가 {{site.data.keyword.iot_short_notm}} 모듈에 연결하는 방법을 정의합니다. 
@@ -99,8 +99,8 @@ deviceClient.commandCallback += processCommand;
 ```
 다음 표에는 commandCallback 메소드의 매개변수가 설명되어 있습니다.
 
-|매개변수|데이터 유형|설명|
+|매개변수|데이터 유형|설명 |
 |:---|:---|
-|`cmdName`|문자열|명령을 식별합니다.  |
+|`cmdName`|문자열|명령을 식별합니다.|
 |`cmdFormat`|문자열|형식은 임의의 문자열일 수 있습니다(예: JSON). |
-|`cmdData`|사전|페이로드의 데이터입니다. 최대 길이는 131072바이트입니다. |
+|`cmdData`|사전|페이로드의 데이터입니다. 최대 길이는 131072바이트입니다.|

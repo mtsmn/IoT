@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-03"
+lastupdated: "2017-06-16"
 
 ---
 
@@ -25,16 +25,22 @@ Antes de conectar dispositivos y de utilizar datos, regístrese para una cuenta 
 
 Para obtener información detallada sobre cómo registrarse para una cuenta en {{site.data.keyword.Bluemix_notm}}, configurar regiones y otros valores de gestión de cuentas, consulte [Gestión de la cuenta de Bluemix](https://console.ng.bluemix.net/docs/admin/account.html#signup).
 
-Puede establecer y configurar la instancia de {{site.data.keyword.iot_short_notm}} desde el panel de control. Para abrir el panel de control, vaya a la instancia de servicio de {{site.data.keyword.iot_short_notm}} en {{site.data.keyword.Bluemix_notm}} y, a continuación, pulse **Iniciar panel de control**.
+Puede establecer y configurar la instancia de {{site.data.keyword.iot_short_notm}} desde el panel de control. Para abrir el panel de control, vaya a la instancia de servicio de {{site.data.keyword.iot_short_notm}} en {{site.data.keyword.Bluemix_notm}} y, a continuación, pulse **Iniciar**.
+
+## Acerca de esta tarea
+
+Los siguientes pasos describen cómo puede empezar rápidamente con su servicio de {{site.data.keyword.iot_short_notm}}.
+
+También hay disponible un conjunto más detallado de guías de iniciación y aplicaciones de muestra que le guían a través de las bases del desarrollo de un sistema prototipo de IoT completo listo para producción con {{site.data.keyword.iot_short_notm}}. Si es un desarrollador que no ha trabajado antes con {{site.data.keyword.iot_short_notm}}, utilice los procesos paso a paso de la sección [Guías de iniciación](getting_started/getting-started-iot-overview.md).
 
 ## Paso 1: Conectar los dispositivos
 {: #up_and_running}
 
 Para ejecutar el servicio, explore las opciones siguientes en función de su situación:
 
-   |   El servicio se despliega | El servicio no se despliega
+   |   El servicio de despliega | El servicio no se despliega
   ------------- | -------------
-  **Tengo un dispositivo para conectar** | [Conecte el dispositivo a {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore la conexión del dispositivo en la [Demostración de la organización Play ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
+  **Tengo un dispositivo para conectar** | [Conectar el dispositivo a {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore la conexión del dispositivo en la [Demostración de la organización Play ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
   **No tengo un dispositivo para conectar** | [Cree y conecte un simulador de dispositivos Node-RED](nodereddevice_sample.html){:new_window}. | Iníciese a [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html).
 Para obtener más información sobre cómo conectarse a tipos de dispositivos específicos a {{site.data.keyword.iot_short_notm}}, consulte [Recetas de developerWorks ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 

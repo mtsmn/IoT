@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -33,7 +33,7 @@ MQTT 是设备和应用程序用于与 {{site.data.keyword.iot_full}} 通信的�
 ### 用户名
 {: #username}
 
-用户名对于所有网关都是相同的值：`use-token-auth`。此值会使 {{site.data.keyword.iot_short_notm}} 使用指定为密码的网关认证令牌。
+用户名对于所有网关都是相同的值：``use-token-auth``。此值会使 {{site.data.keyword.iot_short_notm}} 使用指定为密码的网关认证令牌。
 
 ### 密码
 {: #password}
@@ -54,13 +54,13 @@ MQTT 是设备和应用程序用于与 {{site.data.keyword.iot_full}} 通信的�
 
 |    |“typeID”|“deviceID”|
 |:---|:---|:---|
-|网关 1 |mygateway |gateway1 |
-|设备 1 |mydevice |device1 |
+|网关 1|mygateway|gateway1|
+|设备 1|mydevice|device1|
 
 -   网关 1 可以发布其自己的状态事件：  
-    `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
+    ``iot-2/type/mygateway/id/gateway1/evt/status/fmt/json``
 -   网关 1 可以代表设备 1 发布状态事件：  
-    `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
+    ``iot-2/type/mydevice/id/device1/evt/status/fmt/json``
 
 **重要信息：**消息有效内容限制为最大 131072 字节。大于此限制的消息将被拒绝。
 
@@ -80,10 +80,10 @@ MQTT `+` 通配符可用于 `typeId`、`deviceId`、`commandId` 和 `formatStrin
 **示例：
 **
 
-|设备 |`typeId`|`deviceId`|
+|设备|`typeId`|`deviceId`|
 |:---|:---|
-|网关 1| mygateway   | gateway1   |
-|设备 1 | mydevice    | device1    |
+|网关 1| mygateway| gateway1|
+|设备 1| mydevice| device1|
 
 
 -   网关 1 可以预订针对该网关的命令：  
@@ -160,38 +160,43 @@ iot-2/type/**typeId**/id/**deviceId**/notify
 
 受管网关可以发布服务质量 (QoS) 级别为 0 或 1 的消息。
 
-QoS 为 0 的消息可以废弃，并且在消息传递服务器重新启动后不会持久存储。QoS 为 1 的消息可以排队，并且在消息传递服务器重新启动后会持久存储。预订的持久性将确定请求是否排队。进行预订的连接的 `cleansession` 参数将确定预订的持久性。  
+QoS 为 0 的消息可以废弃，并且在消息传递服务器重新启动后不会持久存储。QoS 为 1 的消息可以排队，并且在消息传递服务器重新启动后会持久存储。预订的持久性将确定请求是否排队。进行预订的连接的 ``cleansession`` 参数将确定预订的持久性。  
 
-{{site.data.keyword.iot_short_notm}} 发布 QoS 级别为 1 的请求，以支持消息排队。要对未连接受管网关期间发送的消息排队，请通过将 `cleansession` 参数设置为 false，将设备配置为不使用干净会话。
+{{site.data.keyword.iot_short_notm}} 发布 QoS 级别为 1 的请求，以支持消息排队。要对未连接受管网关期间发送的消息排队，请通过将 ``cleansession`` 参数设置为 false，将设备配置为不使用干净会话。
 
 **警告**
 
-受管网关使用持久预订时，如果网关未在请求超时之前重新连接到服务，那么在该网关脱机时向其发送的设备管理命令会报告为失败操作。网关重新连接后，将处理这些请求。持久预订由 `cleansession=false` 参数指定。
+受管网关使用持久预订时，如果网关未在请求超时之前重新连接到服务，那么在该网关脱机时向其发送的设备管理命令会报告为失败操作。网关重新连接后，将处理这些请求。持久预订由 ``cleansession=false`` 参数指定。
 
-网关拥有 MQTT 会话，与网关背后的设备无关。设备通过网关提交预订请求时，不管是否设置了 `cleansession=false` 选项，该请求都不会流转到其他网关。
+网关拥有 MQTT 会话，与网关背后的设备无关。设备通过网关提交预订请求时，该请求不会漫游到其他网关，无论是否设置了 ``cleansession=false`` 选项都是如此。
 
 ### 主题
 {: #topics}
 
-受管网关必须预订以下主题，才可处理来自 {{site.data.keyword.iot_short_notm}} 的请求和响应：
+受管网关必须预订以下主题，以处理其自己的请求和对 {{site.data.keyword.iot_short_notm}} 的响应：
 
--   受管网关预订以下主题上的设备管理响应：  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/+</pre>
-{: codeblock}
--   受管网关预订以下主题上的设备管理请求：  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/+</pre>
+-   受管网关在以下位置预订其自己的设备管理请求和响应：  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">gatewayTypeId</var>/id/<var class="keyword varname">gatewayDeviceId</var>/#</pre>
 {: codeblock}
 
-受管网关发布以下响应和请求：
+受管网关必须预订以下主题，才能处理来自 {{site.data.keyword.iot_short_notm}} 的已连接设备的请求和响应：
 
-- 设备管理响应在以下主题上发布：  
-<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/</pre>
+-   受管网关在以下位置预订对其已连接设备的设备管理请求和响应：  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/#</pre>
 {: codeblock}
-- 设备管理请求在以下主题上发布：  
+
+网关可以使用相关的 **typeId** 和 **deviceId** 为自身以及代表其他已连接设备处理设备管理协议消息。MQTT 通配符 **+** 也可用来代替 **typeId** 和 **deviceId**。
+
+受管网关会发布到特定于要执行的管理请求类型的主题：
+
+- 受管网关在以下位置发布设备管理响应：
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
+{: codeblock}
+
+有关受管网关可以发布到哪些其他主题，请参阅[设备管理协议](device_mgmt/index.html)和[设备管理请求](../devices/device_mgmt/requests.html)。 
+- 对于网关而言，协议保持不变，但以 **iotdevice-1/** 开头的任何主题都将改为以下列内容开头：
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}
-
-网关可以使用相关的 **typeId** 和 **deviceId** 为自身以及代表其他已连接设备处理设备管理协议消息。
 
 ### 消息格式
 {: #msg_format}

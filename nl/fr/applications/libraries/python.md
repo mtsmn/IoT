@@ -102,9 +102,9 @@ Pour plus d'informations sur la raison de l'échec d'un appel d'API, ou pour dé
 
 |Propriété|Description|
 |:---|:---|
-|`httpcode`|Code de statut HTTP.|
-|`message`|Message d'exception qui contient le motif de l'échec.|
-|`response`|Elément JSON qui contient la réponse partielle. En l'absence de réponse, cette valeur est NULL.|
+|``httpcode``|Code de statut HTTP.|
+|``message``|Message d'exception qui contient le motif de l'échec.|
+|``response``|Elément JSON qui contient la réponse partielle. En l'absence de réponse, cette valeur est NULL.|
 
 ## Abonnement aux événements d'un terminal
 {: #subscribe_device_events}
@@ -191,13 +191,13 @@ Pour traiter les événements reçus par vos abonnements, vous devez enregistrer
 
 |Propriété|Type de données|Description|
 |:---|:---|
-|`event.device`|Chaîne|Identifie le terminal de manière unique parmi tous les types de terminaux dans l'organisation.|
-|`event.deviceType`|Chaîne|Identifie le type de terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
-|`event.deviceId`|Chaîne|Représente l'ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
-|`event.event`|Chaîne|Utilisé généralement pour regrouper des événements spécifiques, par exemple, "status", "warning" et "data".
-|`event.format`|Chaîne|Le format peut être n'importe quelle chaîne, par exemple, JSON.
-|`event.data`|Dictionnaire|Données du contenu du message. La longueur maximale est de 131072 octets.
-|`event.timestamp`|Date et heure|Date et heure de l'événement.|
+|``event.device``|Chaîne|Identifie le terminal de manière unique parmi tous les types de terminaux dans l'organisation.|
+|``event.deviceType``|Chaîne|Identifie le type de terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
+|``event.deviceId``|Chaîne|Représente l'ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
+|``event.event``|Chaîne|Utilisé généralement pour regrouper des événements spécifiques, par exemple, "status", "warning" et "data".
+|``event.format``|Chaîne|Le format peut être n'importe quelle chaîne, par exemple, JSON.
+|``event.data``|Dictionnaire|Données du contenu du message. La longueur maximale est de 131072 octets.
+|``event.timestamp``|Date et heure|Date et heure de l'événement.|
 
 ```python
 
@@ -273,31 +273,31 @@ Evénements de statut
 
 Pour traiter les mises à jour de statut reçues par vos abonnements, vous devez enregistrer une méthode de rappel d'événement. Les messages sont renvoyés sous la forme d'une instance de la classe Status.
 
-Il existe deux types d'événement de statut, `Connect` et `Disconnect`. Tous les événements de statut comprennent les propriétés suivantes :
+Il existe deux types d'événement de statut, ``Connect`` et ``Disconnect``. Tous les événements de statut comprennent les propriétés suivantes :
 
 |Propriété|Type de données|
 |:---|:---|
-|`status.clientAddr`|Chaîne|
-|`status.protocol`|Chaîne|
-|`status.clientId`|Chaîne|
-|`status.user`|Chaîne|
-|`status.time`|Date et heure|
-|`status.action`|Chaîne|
-|`status.connectTime`|Date et heure|
-|`status.port`|Entier|
+|``status.clientAddr``|Chaîne|
+|``status.protocol``|Chaîne|
+|``status.clientId``|Chaîne|
+|``status.user``|Chaîne|
+|``status.time``|Date et heure|
+|``status.action``|Chaîne|
+|``status.connectTime``|Date et heure|
+|``status.port``|Entier|
 
 
-La propriété `status.action` détermine si un événement de statut est de type `Connect` ou `Disconnect`.
+La propriété ``status.action`` détermine si un événement de statut est de type ``Connect`` ou ``Disconnect``.
 
-Les événements de statut `Disconnect` incluent les propriétés supplémentaires suivantes :
+Les événements de statut ``Disconnect`` incluent les propriétés supplémentaires suivantes :
 
 |Propriété|Type de données|
 |:---|:---|
-|`status.writeMsg`|Entier|
-|`status.readMsg`|Entier|
-|`status.reason`|Chaîne|
-|`status.readBytes`|Entier|
-|`status.writeBytes`|Entier|
+|``status.writeMsg``|Entier|
+|``status.readMsg``|Entier|
+|``status.reason``|Chaîne|
+|``status.readBytes``|Entier|
+|``status.writeBytes``|Entier|
 
 ```python
 
@@ -360,7 +360,7 @@ client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", commandData)
 ## Informations concernant l'organisation
 {: #org_details}
 
-Les applications peuvent utiliser la méthode `getOrganizationDetails()` pour extraire les détails sur la configuration de l'organisation.
+Les applications peuvent utiliser la méthode ``getOrganizationDetails()`` pour extraire les détails sur la configuration de l'organisation.
 
 ```python
 
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-Pour plus d'informations sur le modèle de demande et de réponse et les codes de statut HTTP, voir la section 'Organization Configuration' dans la documentation sur l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
+Pour plus d'informations sur le modèle de demande et de réponse et les codes de statut HTTP, voir la section "Organization Configuration" dans la documentation sur l'[API {{site.data.keyword.iot_short_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ## Opérations globales sur les terminaux
@@ -383,14 +383,14 @@ Pour plus d'informations sur le modèle de demande et de réponse et les codes d
 
 Vos applications peuvent utiliser des opérations globales pour obtenir, ajouter ou retirer plusieurs terminaux simultanément.
 
-Pour plus d'informations sur la liste de paramètres de requête, le modèle de réponse et de demande et les codes de statut HTTP, voir la section 'Bulk Operations' de la documentation sur l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
+Pour plus d'informations sur la liste de paramètres de resuête, le modèle de demande et de réponse et les codes de statut HTTP, voir la section "Bulk Operations" de la documentation sur l'[API {{site.data.keyword.iot_short_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ### Extraction d'informations sur les terminaux
 
-Les informations sur les terminaux peuvent être extraits à l'aide de la méthode `getAllDevices()`. Cette méthode permet d'extraire des informations sur tous les terminaux enregistrés dans l'organisation. Chaque demande peut contenir 512 Ko au maximum.
+Les informations sur les terminaux peuvent être extraits à l'aide de la méthode ``getAllDevices()``. Cette méthode permet d'extraire des informations sur tous les terminaux enregistrés dans l'organisation. Chaque demande peut contenir 512 Ko au maximum.
 
-La réponse contient des paramètres qui sont requis par l'application. Utilisez les résultats de dictionnaire de la réponse pour obtenir le tableau de terminaux renvoyé. D'autres paramètres contenus dans la réponse sont nécessaires pour effectuer d'autres appels, par exemple, l'élément `_bookmark` peut être utilisé pour parcourir les pages de résultats. Soumettez la première demande sans spécifier de signet, puis récupérez le signet qui est renvoyé dans la réponse et indiquez-le dans la demande relative à la page suivante. Répétez cette opération jusqu'à la fin de l'ensemble de résultats, signalé par l'absence de signet. Chaque demande doit utiliser les mêmes valeurs pour les autres paramètres, sinon, les résultats seront non définis.
+La réponse contient des paramètres qui sont requis par l'application. Utilisez les résultats de dictionnaire de la réponse pour obtenir le tableau de terminaux renvoyé. D'autres paramètres contenus dans la réponse sont nécessaires pour effectuer d'autres appels, par exemple, l'élément ``_bookmark`` peut être utilisé pour parcourir les pages de résultats. Soumettez la première demande sans spécifier de signet, puis récupérez le signet qui est renvoyé dans la réponse et indiquez-le dans la demande relative à la page suivante. Répétez cette opération jusqu'à la fin de l'ensemble de résultats, signalé par l'absence de signet. Chaque demande doit utiliser les mêmes valeurs pour les autres paramètres, sinon, les résultats seront non définis.
 
 
 ```python
@@ -408,7 +408,7 @@ except IoTFCReSTException as e:
 ### Ajout de plusieurs terminaux
 
 
-Utilisez la méthode `addMultipleDevices()` pour ajouter un ou plusieurs terminaux à votre organisation {{site.data.keyword.iot_short_notm}}. Une demande ne peut pas être supérieure à 512 ko. La réponse contient les jetons d'authentification qui ont été générés pour chaque terminal. Prenez soin d'effectuer une copie des jetons d'authentification car si vous les perdez, vous ne pouvez pas les récupérer.
+Utilisez la méthode ``addMultipleDevices()`` pour ajouter un ou plusieurs terminaux à votre organisation {{site.data.keyword.iot_short_notm}}. Une demande ne peut pas être supérieure à 512 ko. La réponse contient les jetons d'authentification qui ont été générés pour chaque terminal. Prenez soin d'effectuer une copie des jetons d'authentification car si vous les perdez, vous ne pouvez pas les récupérer.
 
 
 ```python
@@ -432,7 +432,7 @@ except IoTFCReSTException as e:
 ### Suppression de plusieurs terminaux
 
 
-Utilisez la méthode `deleteMultipleDevices()` pour supprimer plusieurs terminaux sur une organisation {{site.data.keyword.iot_short_notm}}. Une demande ne peut pas être supérieure à 512 ko.
+Utilisez la méthode ``deleteMultipleDevices()`` pour supprimer plusieurs terminaux sur une organisation {{site.data.keyword.iot_short_notm}}. Une demande ne peut pas être supérieure à 512 ko.
 
 ```python
 
@@ -458,13 +458,13 @@ except IoTFCReSTException as e:
 
 Les types de terminaux que vous créez dans votre organisation peuvent être utilisés pour créer des modèles destinés à l'ajout de terminaux. En utilisant les fonctions API de {{site.data.keyword.iot_short_notm}}, vos applications peuvent répertorier, créer, supprimer, afficher ou mettre à jour des types de terminaux dans votre organisation.
 
-Pour plus d'informations sur les paramètres de requête, le modèle de demande et de réponse et les codes de statut HTTP, voir la section 'Device types' dans la documentation sur l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Pour plus d'informations sur les paramètres de requête, le modèle de demande et de réponse et les codes de statut HTTP, voir la section "Device types" de la documentation sur l'[API {{site.data.keyword.iot_short_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ### Extraction de tous les types de terminaux
 
-Utilisez la méthode `getAllDeviceTypes()` pour extraire tous les types de terminaux que compte votre organisation {{site.data.keyword.iot_short_notm}}.
-Utilisez les résultats de dictionnaire de la réponse pour obtenir le tableau de terminaux renvoyé. D'autres paramètres contenus dans la réponse sont nécessaires pour effectuer d'autres appels, par exemple, l'élément `_bookmark` peut être utilisé pour parcourir les pages de résultats. Soumettez la première demande sans spécifier de signet, puis récupérez le signet qui est renvoyé dans la réponse et indiquez-le dans la demande relative à la page suivante. Répétez cette opération jusqu'à la fin de l'ensemble de résultats, signalé par l'absence de signet. Chaque demande doit utiliser les mêmes valeurs pour les autres paramètres, sinon, les résultats seront non définis.
+Utilisez la méthode ``getAllDeviceTypes()`` pour extraire tous les types de terminaux que compte votre organisation {{site.data.keyword.iot_short_notm}}.
+Utilisez les résultats de dictionnaire de la réponse pour obtenir le tableau de terminaux renvoyé. D'autres paramètres contenus dans la réponse sont nécessaires pour effectuer d'autres appels, par exemple, l'élément ``_bookmark`` peut être utilisé pour parcourir les pages de résultats. Soumettez la première demande sans spécifier de signet, puis récupérez le signet qui est renvoyé dans la réponse et indiquez-le dans la demande relative à la page suivante. Répétez cette opération jusqu'à la fin de l'ensemble de résultats, signalé par l'absence de signet. Chaque demande doit utiliser les mêmes valeurs pour les autres paramètres, sinon, les résultats seront non définis.
 
 ```python
 
@@ -488,7 +488,7 @@ except IoTFCReSTException as e:
 
 ### Ajout d'un type de terminal
 
-Utilisez la méthode `addDeviceType()` pour enregistrer un type de terminal sur votre instance {{site.data.keyword.iot_short_notm}}. Dans chaque demande, vous devez d'abord définir les informations sur le terminal et les éléments de métadonnées de terminal à appliquer à tous les terminaux de ce type. L'élément d'informations sur le terminal se compose de plusieurs variables, tels que le numéro de série, le fabricant, le modèle, la classe, la description, le microprogramme, les versions de matériel et l'emplacement descriptif. L'élément de métadonnées se compose de variables et de valeurs personnalisées, qui peuvent être définies par l'utilisateur.
+Utilisez la méthode ``addDeviceType()`` pour enregistrer un type de terminal sur votre instance {{site.data.keyword.iot_short_notm}}. Dans chaque demande, vous devez d'abord définir les informations sur le terminal et les éléments de métadonnées de terminal à appliquer à tous les terminaux de ce type. L'élément d'informations sur le terminal se compose de plusieurs variables, tels que le numéro de série, le fabricant, le modèle, la classe, la description, le microprogramme, les versions de matériel et l'emplacement descriptif. L'élément de métadonnées se compose de variables et de valeurs personnalisées, qui peuvent être définies par l'utilisateur.
 
 
 ```python
@@ -522,7 +522,7 @@ except IoTFCReSTException as e:
 ### Suppression d'un type de terminal
 
 
-Utilisez la méthode `deleteDeviceType()` pour supprimer un type de terminal de votre organisation {{site.data.keyword.iot_short_notm}}.
+Utilisez la méthode ``deleteDeviceType()`` pour supprimer un type de terminal de votre organisation {{site.data.keyword.iot_short_notm}}.
 
 ```python
 
@@ -540,7 +540,7 @@ except IoTFCReSTException as e:
 ### Extraction d'informations pour certains types de terminaux
 
 
-Utilisez la méthode `getDeviceType()` afin d'extraire des informations pour un certain type de terminal. L'élément `typeId` du type de terminal que vous souhaitez extraire doit être spécifié en tant que paramètre.
+Utilisez la méthode ``getDeviceType()`` afin d'extraire des informations pour un certain type de terminal. L'élément ``typeId`` du type de terminal que vous souhaitez extraire doit être spécifié en tant que paramètre.
 
 ```python
 
@@ -558,11 +558,11 @@ except IoTFCReSTException as e:
 ### Mise à jour d'un type de terminal
 
 
-Utilisez la méthode `updateDeviceType()` pour modifier les propriétés d'un type de terminal. Lorsque vous utilisez la méthode `updateDeviceType()`, spécifiez d'abord l'élément `typeId` du type de terminal à mettre à jour, puis indiquez les éléments suivants :
+Utilisez la méthode ``updateDeviceType()`` pour modifier les propriétés d'un type de terminal. Lorsque vous utilisez la méthode ``updateDeviceType()``, spécifiez d'abord l'élément ``typeId`` du type de terminal à mettre à jour, puis indiquez les éléments suivants :
 
-- `description`
-- `deviceInfo`
-- `metadata`
+- ``description``
+- ``deviceInfo``
+- ``metadata``
 
 ```python
 
@@ -599,12 +599,12 @@ except IoTFCReSTException as e:
 
 Les opérations relatives aux terminaux disponibles dans l'API incluent le recensement, l'ajout, le retrait, l'affichage, la mise à jour, la visualisation de l'emplacement et la visualisation des informations de gestion des terminaux dans une organisation {{site.data.keyword.iot_short_notm}}.
 
-Pour plus d'informations sur les paramètres de requête, le modèle de demande et de réponse et les codes de statut HTTP, voir la section 'Device section' de la documentation sur l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Pour plus d'informations sur les paramètres de requête, le modèle de requête et de réponse et les codes de statut HTTP, voir la section "Device section" de la documentation sur l'[API {{site.data.keyword.iot_short_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ### Extraction de terminaux d'un type donné
 
-Utilisez la méthode `retrieveDevices()` pour extraire tous les terminaux d'un type donné d'une organisation dans une instance {{site.data.keyword.iot_short_notm}}, illustrée dans l'exemple suivant :
+Utilisez la méthode ``retrieveDevices()`` pour extraire tous les terminaux d'un type donné d'une organisation dans une instance {{site.data.keyword.iot_short_notm}}, illustrée dans l'exemple suivant :
 
 
 ```python
@@ -626,20 +626,20 @@ L'exemple de code précédent trie la réponse en fonction de l'ID de terminal, 
 ### Ajout d'un terminal
 
 
-Pour ajouter un terminal à une organisation {{site.data.keyword.iot_short_notm}}, utilisez la méthode `registerDevice()`. La méthode `registerDevice()` ajoute un terminal à votre organisation {{site.data.keyword.iot_short_notm}}. Lorsque vous ajoutez un terminal, vous pouvez définir les paramètres suivants :
+Pour ajouter un terminal à une organisation {{site.data.keyword.iot_short_notm}}, utilisez la méthode ``registerDevice()``. La méthode ``registerDevice()`` ajoute un terminal à votre organisation {{site.data.keyword.iot_short_notm}}. Lorsque vous ajoutez un terminal, vous pouvez définir les paramètres suivants :
 
 |Paramètre|Exigence|Description
 |:---|:---|
-|`deviceTypeId`|Facultatif|Affecte un type de terminal au terminal. En cas de conflit entre les variables définies par le type de terminal et celles définies par la variable `deviceInfo`, les variables spécifiques du terminal sont prioritaires.|
-|`deviceId`|Obligatoire||
-|`authToken`|Facultatif|Si ce paramètre n'est pas défini, un jeton d'authentification est généré et inclus dans la réponse.|
-|`deviceInfo`|Facultatif|Contient plusieurs variables, notamment le numéro de série, le fabricant, le modèle, la classe de terminaux, la description, l'emplacement descriptif, le microprogramme et les versions de matériel.|
-|`metadata`|Facultatif|Paires de chaînes personnalisées zone:valeur, comme indiqué dans [Exemple de code pour l'ajout d'un type de terminal](#sample_device_type).|
-|`location`|Facultatif|Contient les variables longitude, latitude, elevation, accuracy et measuredDateTime.|
+|``deviceTypeId``|Facultatif|Affecte un type de terminal au terminal. En cas de conflit entre les variables définies par le type de terminal et celles définies par la variable ``deviceInfo``, les variables spécifiques du terminal sont prioritaires.|
+|``deviceId``|Obligatoire||
+|``authToken``|Facultatif|Si ce paramètre n'est pas défini, un jeton d'authentification est généré et inclus dans la réponse.|
+|``deviceInfo``|Facultatif|Contient plusieurs variables, notamment le numéro de série, le fabricant, le modèle, la classe de terminaux, la description, l'emplacement descriptif, le microprogramme et les versions de matériel.|
+|``metadata``|Facultatif|Paires de chaînes personnalisées zone:valeur, comme indiqué dans [Exemple de code pour l'ajout d'un type de terminal](#sample_device_type).|
+|``location``|Facultatif|Contient les variables longitude, latitude, elevation, accuracy et measuredDateTime.|
 
 Pour plus d'informations sur ces paramètres et le format et les codes de réponse, voir la [documentation sur l'API ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices){: new_window}.
 
-Lorsque vous utilisez la méthode `registerDevice()`, définissez le paramètre deviceID obligatoire, ainsi que les paramètres facultatifs requis pour votre terminal, puis appelez la méthode à l'aide des paramètres que vous avez sélectionnés.
+Lorsque vous utilisez la méthode ``registerDevice()``, définissez le paramètre deviceID obligatoire, ainsi que les paramètres facultatifs requis pour votre terminal, puis appelez la méthode à l'aide des paramètres que vous avez sélectionnés.
 
 ### Exemple de code pour l'ajout d'un type de terminal
 {: #sample_device_type}
@@ -658,7 +658,7 @@ apiCli.registerDevice(deviceTypeId, deviceId, metadata, deviceInfo, location)
 ```
 ### Suppression d'un terminal
 
-Utilisez la méthode `deleteDevice()` pour retirer un terminal d'une organisation sur l'organisation {{site.data.keyword.iot_short_notm}}. Lorsque vous supprimez un terminal en utilisant la méthode `deleteDevice()`, vous devez spécifier les paramètres deviceTypeId et deviceId.
+Utilisez la méthode ``deleteDevice()`` pour retirer un terminal d'une organisation sur l'organisation {{site.data.keyword.iot_short_notm}}. Lorsque vous supprimez un terminal en utilisant la méthode ``deleteDevice()``, vous devez spécifier les paramètres deviceTypeId et deviceId.
 
 L'exemple de code suivant présente le format requis pour cette méthode :
 
@@ -668,7 +668,7 @@ apiCli.deleteDevice(deviceTypeId, deviceId)
 
 ### Extraction d'un terminal
 
-Utilisez la méthode `getDevice()` pour extraire un terminal d'une organisation sur {{site.data.keyword.iot_short_notm}}. Lorsque vous extrayez les détails d'un termina en utilisant la méthode `getDevice()`, vous devez spécifier les paramètres deviceTypeId et deviceId.
+Utilisez la méthode ``getDevice()`` pour extraire un terminal d'une organisation sur {{site.data.keyword.iot_short_notm}}. Lorsque vous extrayez les détails d'un termina en utilisant la méthode ``getDevice()``, vous devez spécifier les paramètres deviceTypeId et deviceId.
 
 L'exemple de code suivant présente le format requis pour cette méthode.
 
@@ -678,7 +678,7 @@ apiCli.getDevice(deviceTypeId, deviceId)
 
 ### Extraction de tous les terminaux
 
-Utilisez la méthode `getAllDevices()` pour extraire tous les terminaux d'une organisation sur {{site.data.keyword.iot_short_notm}}.
+Utilisez la méthode ``getAllDevices()`` pour extraire tous les terminaux d'une organisation sur {{site.data.keyword.iot_short_notm}}.
 
 ```python
 apiCli.getAllDevices({'typeId' : deviceTypeId})
@@ -686,9 +686,9 @@ apiCli.getAllDevices({'typeId' : deviceTypeId})
 
 ### Mise à jour d'un terminal
 
-Pour modifier une ou plusieurs propriétés d'un terminal, utilisez la méthode `updateDevice()`.
+Pour modifier une ou plusieurs propriétés d'un terminal, utilisez la méthode ``updateDevice()``.
 
-Vous pouvez mettre à jour n'importe quelle propriété dans les paramètres deviceInfo ou metadata. Pour mettre à jour une propriété de terminal, définissez le paramètre deviceInfo avant d'appeler la méthode `updateDevice()`. Le paramètre status doit contenir `alert`: True. La propriété d'alerte détermine si un terminal affiche des codes d'erreur dans l'interface utilisateur de {{site.data.keyword.iot_short_notm}} et doit prendre par défaut la valeur `enabled`: True, comme indiqué dans l'exemple de code suivant :
+Vous pouvez mettre à jour n'importe quelle propriété dans les paramètres deviceInfo ou metadata. Pour mettre à jour une propriété de terminal, définissez le paramètre deviceInfo avant d'appeler la méthode ``updateDevice()``. Le paramètre status doit contenir ``alert``: True. La propriété d'alerte détermine si un terminal affiche des codes d'erreur dans l'interface utilisateur de {{site.data.keyword.iot_short_notm}} et doit prendre par défaut la valeur ``enabled``: True, comme indiqué dans l'exemple de code suivant :
 
 ```python
 status = { "alert": { "enabled": True }  }
@@ -708,7 +708,7 @@ apiCli.updateDevice("MyDeviceType", "200020002000", deviceInfo, status)
 ### Extraction d'informations d'emplacement
 
 
-Utilisez la méthode `getDeviceLocation()` pour extraire les informations d'emplacement d'un terminal. Les paramètres requis pour l'extraction des données d'emplacement sont deviceTypeId et deviceId.
+Utilisez la méthode ``getDeviceLocation()`` pour extraire les informations d'emplacement d'un terminal. Les paramètres requis pour l'extraction des données d'emplacement sont deviceTypeId et deviceId.
 
 ```python
 apiClient.getDeviceLocation("iotsample-arduino", "arduino01")
@@ -719,7 +719,7 @@ La réponse à cette méthode inclut les propriétés longitude, latitude, eleva
 ### Mise à jour des informations d'emplacement
 
 
-Utilisez la méthode `updateDeviceLocation()` afin de modifier les informations d'emplacement pour un terminal. Comme pour la mise à jour des propriétés de terminal, le paramètre deviceLocation doit être défini avec les modifications que vous souhaitez appliquer. L'exemple de code suivant montre comment modifier les données d'emplacement pour un terminal donné :
+Utilisez la méthode ``updateDeviceLocation()`` afin de modifier les informations d'emplacement pour un terminal. Comme pour la mise à jour des propriétés de terminal, le paramètre deviceLocation doit être défini avec les modifications que vous souhaitez appliquer. L'exemple de code suivant montre comment modifier les données d'emplacement pour un terminal donné :
 
 ```python
 deviceLocation = { "longitude": 0, "latitude": 0, "elevation": 0, "accuracy": 0, "measuredDateTime": "2015-10-28T08:45:11.673Z"}
@@ -732,7 +732,7 @@ Si une date n'est pas fournie, la date du jour et l'heure en cours sont utilisé
 ### Obtention d'informations de gestion
 
 
-Utilisez la méthode `getDeviceManagementInformation()` pour obtenir les informations de gestion des terminaux pour un terminal. La réponse contient la date et l'heure de la dernière activité, le statut de veille du terminal (True/False), la prise en charge des actions sur les terminaux et le microprogramme et les données de microprogramme. Pour obtenir une liste complète du contenu de réponse, voir la documentation d'API appropriée.
+Utilisez la méthode ``getDeviceManagementInformation()`` pour obtenir les informations de gestion des terminaux pour un terminal. La réponse contient la date et l'heure de la dernière activité, le statut de veille du terminal (True/False), la prise en charge des actions sur les terminaux et le microprogramme et les données de microprogramme. Pour obtenir une liste complète du contenu de réponse, voir la documentation d'API appropriée.
 
 L'exemple de code suivant renvoie les informations de gestion des terminaux pour un terminal dont le paramètre deviceId a pour valeur "00aabbccde03" et le paramètre deviceTypeId a pour valeur "iotsample-arduino" :
 
@@ -757,7 +757,7 @@ Pour plus d'informations sur les modèles de requête et de réponse, les codes 
 ### Extraction de journaux de diagnostic
 
 
-Utilisez la méthode `getAllDiagnosticLogs()` pour extraire tous les journaux de diagnostic pour un terminal donné. La méthode `getAllDiagnosticLogs()` requiert les paramètres deviceTypeId et deviceId.
+Utilisez la méthode ``getAllDiagnosticLogs()`` pour extraire tous les journaux de diagnostic pour un terminal donné. La méthode ``getAllDiagnosticLogs()`` requiert les paramètres deviceTypeId et deviceId.
 
 ```python
 apiCli.getAllDiagnosticLogs(deviceTypeId, deviceId)
@@ -768,7 +768,7 @@ Le modèle de réponse pour cette réponse contient les propriétés d'ID de jou
 ### Effacement des journaux de diagnostic d'un terminal
 
 
-Utilisez la méthode `clearAllDiagnosticLogs()` pour supprimer tous les journaux de diagnostic pour un terminal donné* Les paramètres obligatoires sont deviceTypeId et deviceId. Soyez prudent lorsque vous supprimez des fichiers journaux, car ils ne peuvent pas être récupérés une fois qu'ils ont été supprimés.
+Utilisez la méthode ``clearAllDiagnosticLogs()`` pour supprimer tous les journaux de diagnostic pour un terminal donné* Les paramètres obligatoires sont deviceTypeId et deviceId. Soyez prudent lorsque vous supprimez des fichiers journaux, car ils ne peuvent pas être récupérés une fois qu'ils ont été supprimés.
 
 ```python
 apiCli.clearAllDiagnosticLogs(deviceTypeId, deviceId)
@@ -777,20 +777,20 @@ apiCli.clearAllDiagnosticLogs(deviceTypeId, deviceId)
 ### Ajout d'un journal de diagnostic
 
 
-Utilisez la méthode `addDiagnosticLog()` pour ajouter une entrée dans le journal de diagnostic du terminal. Le journal peut être élagué lorsque la nouvelle entrée est ajoutée. Si une date n'est pas fournie, la date du jour et l'heure en cours sont ajoutées à l'entrée. Pour utiliser cette méthode, vous devez définir un paramètre 'logs' avec les variables suivantes :
+Utilisez la méthode ``addDiagnosticLog()`` pour ajouter une entrée dans le journal de diagnostic du terminal. Le journal peut être élagué lorsque la nouvelle entrée est ajoutée. Si une date n'est pas fournie, la date du jour et l'heure en cours sont ajoutées à l'entrée. Pour utiliser cette méthode, vous devez définir un paramètre 'logs' avec les variables suivantes :
 
 
 |Variable|Exigence|Description|
 |:---|:---|:---|
-|`message`|Obligatoire|Contient le message de diagnostic que vous souhaitez ajouter|
-|`severity`|Facultatif|Correspond à la gravité du journal de diagnostic et peut prendre la valeur 0, 1 ou 2, correspondant aux catégories d'informations, d'avertissement et d'erreur|
-|`data`|Facultatif|Contient des données de diagnostic|
-|`timestamp`|Facultatif|Contient la date et l'heure de l'entrée de journal au format ISO8601. Si cette variable n'est pas définie, la date du jour et l'heure en cours sont utilisées|
+|``message``|Obligatoire|Contient le message de diagnostic que vous souhaitez ajouter|
+|``severity``|Facultatif|Correspond à la gravité du journal de diagnostic et peut prendre la valeur 0, 1 ou 2, correspondant aux catégories d'informations, d'avertissement et d'erreur|
+|``data``|Facultatif|Contient des données de diagnostic|
+|``timestamp``|Facultatif|Contient la date et l'heure de l'entrée de journal au format ISO8601. Si cette variable n'est pas définie, la date du jour et l'heure en cours sont utilisées|
 
 
 Les autres paramètres requis dans la méthode sont les valeurs deviceTypeId et deviceId pour le terminal.
 
-L'exemple de code suivant contient un exemple de la méthode `addDiagnosticLog()` :
+L'exemple de code suivant contient un exemple de la méthode ``addDiagnosticLog()`` :
 
 ```python
 logs = { "message": "MessageContent", "severity": 0, "data": "LogData"}
@@ -800,7 +800,7 @@ apiCli.addDiagnosticLog(deviceTypeId, deviceId, logs)
 ### Extraction d'un journal de diagnostic donné
 
 
-Utilisez la méthode `getDiagnosticLog()` pour extraire un journal de diagnostic pour un terminal spécifié en fonction de l'ID de journal. Les paramètres requis pour cette méthode sont deviceTypeId, deviceId et logId.
+Utilisez la méthode ``getDiagnosticLog()`` pour extraire un journal de diagnostic pour un terminal spécifié en fonction de l'ID de journal. Les paramètres requis pour cette méthode sont deviceTypeId, deviceId et logId.
 
 ```python
 apiCli.getDiagnosticLog(deviceTypeId, deviceId, logId)
@@ -809,7 +809,7 @@ apiCli.getDiagnosticLog(deviceTypeId, deviceId, logId)
 ### Suppression d'un journal de diagnostic
 
 
-Utilisez la méthode `deleteDiagnosticLog()` pour supprimer un journal de diagnostic donné. Pour spécifier un journal de diagnostic, les paramètres deviceTypeId, deviceId et logID doivent être fournis.
+Utilisez la méthode ``deleteDiagnosticLog()`` pour supprimer un journal de diagnostic donné. Pour spécifier un journal de diagnostic, les paramètres deviceTypeId, deviceId et logID doivent être fournis.
 
 ```python
 apiCli.deleteDiagnosticLog(deviceTypeId, deviceId, logId)
@@ -818,7 +818,7 @@ apiCli.deleteDiagnosticLog(deviceTypeId, deviceId, logId)
 ### Extraction de codes d'erreur de terminaux
 
 
-Utilisez la méthode `getAllDiagnosticErrorCodes()` pour extraire tous les codes d'erreur de diagnostic qui sont associés à un terminal donné.
+Utilisez la méthode ``getAllDiagnosticErrorCodes()`` pour extraire tous les codes d'erreur de diagnostic qui sont associés à un terminal donné.
 
 ```python
 apiCli.getAllDiagnosticErrorCodes(deviceTypeId, deviceId)
@@ -827,7 +827,7 @@ apiCli.getAllDiagnosticErrorCodes(deviceTypeId, deviceId)
 ### Effacement des codes d'erreur de diagnostic
 
 
-Utilisez la méthode `clearAllErrorCodes()` pour effacer la liste de codes d'erreur qui sont associés au terminal. La liste est remplacée par le code d'erreur unique 0.
+Utilisez la méthode ``clearAllErrorCodes()`` pour effacer la liste de codes d'erreur qui sont associés au terminal. La liste est remplacée par le code d'erreur unique 0.
 
 ```python
 apiCli.clearAllErrorCodes(deviceTypeId, deviceId)
@@ -836,7 +836,7 @@ apiCli.clearAllErrorCodes(deviceTypeId, deviceId)
 ### Ajout d'un code d'erreur de diagnostic
 
 
-Utilisez la méthode `addErrorCode()` pour ajouter un code d'erreur à la liste de codes d'erreur qui sont associés au terminal. La liste peut être élaguée lorsque la nouvelle entrée est ajoutée. Les paramètres requis dans la méthode sont deviceTypeId, deviceId et errorCode. Le paramètre errorCode contient les variables suivantes :
+Utilisez la méthode ``addErrorCode()`` pour ajouter un code d'erreur à la liste de codes d'erreur qui sont associés au terminal. La liste peut être élaguée lorsque la nouvelle entrée est ajoutée. Les paramètres requis dans la méthode sont deviceTypeId, deviceId et errorCode. Le paramètre errorCode contient les variables suivantes :
 
 - errorCode : Cette variable est obligatoire et doit correspondre à un entier. Cette variable définit le numéro du code d'erreur qui est créé.
 - timestamp : Cette variable est facultative et contient la date et l'heure de l'entrée de journal au format ISO8601. Si cette variable n'est pas incluse, elle est ajoutée automatiquement avec la date et l'heure en cours.
@@ -849,7 +849,7 @@ apiCli.addErrorCode(deviceTypeId, deviceId, errorCode)
 ## Identification d'un problème de connexion
 {: #connection_problem_determination}
 
-Utilisez la méthode `getDeviceConnectionLogs()` pour obtenir la liste des événements de journal de connexion pour un terminal. Les événements de journal de connexion peuvent être utilisés pour diagnostiquer des problèmes de connectivité entre le terminal et le service {{site.data.keyword.iot_short_notm}}. Les entrées enregistrent des événements de connexion ayant abouti, de tentatives de connexion ayant échoué, de déconnexion volontaire et de déconnexion à l'initiative du serveur.
+Utilisez la méthode ``getDeviceConnectionLogs()`` pour obtenir la liste des événements de journal de connexion pour un terminal. Les événements de journal de connexion peuvent être utilisés pour diagnostiquer des problèmes de connectivité entre le terminal et le service {{site.data.keyword.iot_short_notm}}. Les entrées enregistrent des événements de connexion ayant abouti, de tentatives de connexion ayant échoué, de déconnexion volontaire et de déconnexion à l'initiative du serveur.
 
 ```
 apiCli.getDeviceConnectionLogs(deviceTypeId, deviceId)

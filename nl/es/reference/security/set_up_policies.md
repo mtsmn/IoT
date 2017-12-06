@@ -15,9 +15,9 @@ lastupdated: "2017-05-11"
 # Configuración de políticas de seguridad
 {: #set_up_policies.md}
 
-Si se utiliza un plan de seguridad avanzada (ASP) para una organización, un analista de seguridad puede configurar políticas de seguridad de conexión y listas negras o listas blancas. Si se utiliza un plan estándar, el analista puede configurar valores con menos opciones y no puede configurar listas blancas ni listas negras. 
+Si se utiliza un plan de seguridad avanzada (ASP) para una organización, un analista de seguridad puede configurar políticas de seguridad de conexión y listas negras o listas blancas. Si se utiliza un plan estándar, el analista puede configurar valores con menos opciones y no puede configurar listas blancas ni listas negras.
 
-Para obtener información sobre la utilización de las API para gestionar políticas, consulte [API de gestión de riesgo de IBM Watson IoT Platform ![Icono de enlace externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}. 
+Para obtener información sobre la utilización de las API para gestionar políticas, consulte [API de gestión de riesgo de IBM Watson IoT Platform ![Icono de enlace externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}.
 
 ## Configuración de políticas de seguridad de conexión para la seguridad avanzada
 {: #config_connect}
@@ -53,8 +53,7 @@ En organizaciones que utilizan seguridad estándar, puede cambiar los valores de
 ## Configuración de listas negras y listas blancas
 {: #config_black_white}
 
-Las organizaciones que utilizan la seguridad avanzada pueden restringir el acceso al servidor desde determinados dispositivos utilizando una lista negra o pueden utilizar una lista blanca para otorgar acceso al servidor a dispositivos específicos. 
-Puede utilizar una lista blanca o una lista negra, pero no ambas. 
+Las organizaciones que utilizan la seguridad avanzada pueden restringir el acceso al servidor desde determinados dispositivos utilizando una lista negra o pueden utilizar una lista blanca para otorgar acceso al servidor a dispositivos específicos. Puede utilizar una lista blanca o una lista negra, pero no ambas.
 
 ### Configure una lista negra
 {: #config_blacklist}
@@ -76,7 +75,7 @@ Puede utilizar una lista blanca o una lista negra, pero no ambas.
 1. En la página **Políticas de seguridad**, pulse **Configurar** junto a **Lista blanca**.
 2. En la página **Lista blanca**, pulse **Añadir a lista blanca**.
 3. En la ventana **Añadir a lista blanca**, realice una de las acciones siguientes:
-    - En el separador **Dirección IP/Rango**, especifique las direcciones IP de los dispositivos a los que desea permitir el acceso o los rangos de direcciones IP para varios dispositivos consecutivos. 
+    - En el separador **Dirección IP/Rango**, especifique las direcciones IP de los dispositivos a los que desea permitir el acceso o los rangos de direcciones IP para varios dispositivos consecutivos.
     - En el separador **CIDR**, especifique un bloque CIDR (Classless Inter-Domain Routing).
     - En el separador **País**, especifique o seleccione países desde los que desea permitir el acceso para todos los dispositivos.
 4. En la ventana **Añadir a lista blanca**, pulse **Guardar**.

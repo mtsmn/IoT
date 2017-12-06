@@ -31,7 +31,7 @@ Node.js의 클라이언트 라이브러리 및 샘플을 조정하여 {{site.dat
 {{site.data.keyword.iot_short_notm}}에 대한 Node.js 클라이언트 라이브러리 및 기타 사용 가능한 리소스에 액세스하려면 GitHub의 [iot-nodejs ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오. 
 
 
-자세한 정보는 다음 리소스를 참조하십시오. 
+자세한 정보는 다음 리소스를 참조하십시오.
 - GitHub의 [애플리케이션 샘플 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples){: new_window}.
 - NPM의 [ibmiotf ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.npmjs.com/package/ibmiotf){: new_window}.
 - 이 문서의 [참조](#reference_nodejs) 섹션. 
@@ -117,7 +117,7 @@ JSON 구성 파일의 형식이 다음과 같은지 확인하십시오.
 ## 로깅
 {: #logging}
 
-기본적으로 `warn` 유형의 로그 이벤트만 기록됩니다. 로깅 레벨을 올리거나 내리려면 `log.setLevel` 함수를 사용하십시오. 지원되는 로그 레벨은 다음과 같습니다. 
+기본적으로 `warn` 유형의 로그 이벤트만 기록됩니다. 로깅 레벨을 올리거나 내리려면 `log.setLevel` 함수를 사용하십시오. 지원되는 로그 레벨은 다음과 같습니다.
 - 추적
 - 디버그
 - 정보
@@ -273,7 +273,7 @@ JSON 구성 파일의 형식이 다음과 같은지 확인하십시오.
 ### 디바이스에서 이벤트 처리
 
 
-구독으로 수신된 이벤트를 처리하려면 디바이스 이벤트 콜백 메소드를 구현하십시오. {{site.data.keyword.iot_short_notm}} 애플리케이션 클라이언트는 `deviceEvent` 이벤트를 전송합니다. 이 함수의 특성은 다음과 같습니다. 
+구독으로 수신된 이벤트를 처리하려면 디바이스 이벤트 콜백 메소드를 구현하십시오. {{site.data.keyword.iot_short_notm}} 애플리케이션 클라이언트는 ``deviceEvent`` 이벤트를 전송합니다. 이 함수의 특성은 다음과 같습니다. 
 
 - deviceType
 - deviceId
@@ -464,12 +464,12 @@ JSON 구성 파일의 형식이 다음과 같은지 확인하십시오.
 
 다음 표에는 이 Node.js 문서에서 설명한 함수에서 사용되는 매개변수가 설명되어 있습니다. 
 
-|매개변수|데이터 유형|설명|
+|매개변수|데이터 유형|설명 |
 |:---|:---|
 |`deviceType`|문자열|디바이스 유형입니다. 일반적으로, deviceType은 특정 태스크를 수행하는 디바이스의 그룹화입니다(예: "weatherballoon"). |
 |`deviceId`|문자열|디바이스의 ID입니다. 일반적으로, 제공된 디바이스 유형의 경우 deviceId는 해당 디바이스의 고유 ID입니다(예: 일련 번호 또는 MAC 주소). |
 |`eventType`|문자열|특정 이벤트의 그룹입니다(예: "상태", "경고" 및 "데이터"). |
-|`format`|문자열|형식은 임의의 문자열일 수 있습니다(예: JSON).   |
-|`data`|사전|메시지 페이로드의 데이터입니다. 최대 길이는 131072바이트입니다. |
-|`payload`|문자열|메시지 페이로드의 데이터입니다. 최대 길이는 131072바이트입니다. |
-|`topic`|문자열|디바이스로 공개할 때 주제 문자열에는 디바이스 유형이나 디바이스 ID가 포함되지 않습니다. 이러한 정보는 클라이언트 ID에서 가져옵니다. 예를 들어 `iot-2/evt/event_id/fmt/format_string`입니다.  디바이스 대신에 애플리케이션 또는 게이트웨이로서 공개 중인 경우, 주제에는 디바이스 유형 및 디바이스 ID가 포함되어야 합니다. 예를 들어 `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`입니다.|
+|`format`|문자열|형식은 임의의 문자열일 수 있습니다(예: JSON).  |
+|`data`|사전|메시지 페이로드의 데이터입니다. 최대 길이는 131072바이트입니다.|
+|`payload`|문자열|메시지 페이로드의 데이터입니다. 최대 길이는 131072바이트입니다.|
+|`topic`|문자열|디바이스로 공개할 때 주제 문자열에는 디바이스 유형이나 디바이스 ID가 포함되지 않습니다. 이러한 정보는 클라이언트 ID에서 가져옵니다. 예를 들어 `iot-2/evt/event_id/fmt/format_string`입니다. 디바이스 대신에 애플리케이션 또는 게이트웨이로서 공개 중인 경우, 주제에는 디바이스 유형 및 디바이스 ID가 포함되어야 합니다. 예를 들어 `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`입니다.|

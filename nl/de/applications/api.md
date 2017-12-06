@@ -40,7 +40,7 @@ Die {{site.data.keyword.iot_short_notm}}-HTTP-REST-API unterstützt folgende Fun
 
 Weitere Informationen zum Zugriff auf die Dokumentation der {{site.data.keyword.iot_short_notm}}-HTTP-REST-API und zur Vorgehensweise beim Erstellen und Anpassen Ihrer Anwendungen finden Sie in [APIs](../reference/api.html).
 
-Nur Version 2 der {{site.data.keyword.iot_short_notm}}-HTTP-REST-API ist unterstützt. Stellen Sie sicher, dass Ihre {{site.data.keyword.iot_short_notm}}-Lösungen Version 2 verwenden.
+Die einzige unterstützte {{site.data.keyword.iot_short_notm}}-HTTP-REST-API ist Version 2. Stellen Sie sicher, dass Ihre {{site.data.keyword.iot_short_notm}}-Lösungen Version 2 verwenden.
 
 # HTTP-Messaging-APIs für Anwendungen
 {: #rest_messaging_api}
@@ -87,7 +87,7 @@ password = Authentifizierungstoken
 
 Zusammen mit der Anforderung muss ein Anforderungsheader des Typs `Content-Type` ('Inhaltstyp') angegeben werden. Die folgende Tabelle zeigt die Zuordnung der unterstützten Typen zu den internen {{site.data.keyword.iot_short_notm}}-Formaten.
 
-|Content-Type-Header|Format in {{site.data.keyword.iot_short_notm}}|
+|Header des Typs 'Content-Type'|Format in {{site.data.keyword.iot_short_notm}}|
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
@@ -96,7 +96,7 @@ Zusammen mit der Anforderung muss ein Anforderungsheader des Typs `Content-Type`
 
 ### Servicequalität
 
-Ähnlich der Servicestufe 0 der MQTT-Servicequalität (Zustellung höchstens einmal) bietet das HTTP-REST-Messaging eine Zustellung nicht persistenter Nachrichten, prüft aber, ob die Anforderung richtig ist und an den Server gesendet werden kann, bevor es die HTTP-Antwort sendet. Durch eine Antwort, die den HTTP-Statuscode 200 enthält, wird bestätigt, dass die Nachricht an den Server übermittelt wurde. Wenn Sie entweder die MQTT-Servicequalitätsstufe 'höchstens einmal' oder das HTTP-Äquivalent zum Zustellen von Ereignisnachrichten verwenden, muss das Gerät oder die Anwendung Wiederholungslogik implementieren, damit die Zustellung garantiert ist.
+Ähnlich der Servicestufe 0 der MQTT-Servicequalität (Zustellung höchstens einmal) bietet das HTTP-REST-Messaging die Zustellung nicht persistenter Nachrichten, prüft aber, ob die Anforderung richtig ist und an den Server gesendet werden kann, bevor es die HTTP-Antwort sendet. Durch eine Antwort, die den HTTP-Statuscode 200 enthält, wird bestätigt, dass die Nachricht an den Server übermittelt wurde. Wenn Sie entweder die MQTT-Servicequalitätsstufe 'höchstens einmal' oder das HTTP-Äquivalent zum Zustellen von Ereignisnachrichten verwenden, muss das Gerät oder die Anwendung Wiederholungslogik implementieren, damit die Zustellung garantiert ist.
 
 
 Weitere Informationen zum MQTT-Protokoll und zu den Servicequalitätsstufen für {{site.data.keyword.iot_short_notm}} finden Sie in [MQTT-Messaging](../reference/mqtt/index.html).

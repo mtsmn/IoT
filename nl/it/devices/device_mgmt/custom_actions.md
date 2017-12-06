@@ -75,7 +75,7 @@ Per aggiungere un pacchetto di gestione personalizzato utilizzando il dashboard 
 3. Fai clic sul pulsante **Aggiungi pacchetto**.
 4. Selezione il tuo file pacchetto e fai clic su **Apri**.
 
-Per aggiungere un pacchetto di gestione personalizzato utilizzando l'API, consulta la [Documentazione API {{site.data.keyword.iot_short_notm}}![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Per aggiungere un pacchetto di gestione personalizzato utilizzando l'API, consulta la [Documentazione API {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Estensione delle proprietà del pacchetto
 
@@ -83,31 +83,31 @@ Un pacchetto di estensione di gestione del dispositivo contiene le seguenti prop
 
 |Proprietà|Descrizione|Obbligatorio
 |:---|:---|:---|
-|`bundleId`|Identificativo univoco per un estensione di gestione del dispositivo.|Sì|
-|`version`|Stringa della versione per un estensione di gestione del dispositivo.|No|
-|`provider`|Stringa del provider per un estensione di gestione del dispositivo, limitata a 1024 caratteri.|No|
-|`displayName`|Associazione di coppie valore-chiave `locale`: `String` visualizzate nel dashboard {{site.data.keyword.iot_short_notm}}. Devi specificare almeno una voce.|Sì|
-|`description`|Associazione di coppie valore-chiave `locale`: `String` utilizzate per la visualizzazione nel dashboard {{site.data.keyword.iot_short_notm}}. Se definito, devi specificare almeno una voce.|No|
-|`actions`| Associazione di coppie valore-chiave `actionId`: `<action>` che definiscono le azioni contenute in un'estensione di gestione del dispositivo. Devi specificare almeno una voce.|Sì|
+|``bundleId``|Identificativo univoco per un estensione di gestione del dispositivo.|Sì|
+|``version``|Stringa della versione per un estensione di gestione del dispositivo.|No|
+|``provider``|Stringa del provider per un estensione di gestione del dispositivo, limitata a 1024 caratteri.|No|
+|``displayName``|Associazione di coppie valore-chiave ``locale``: ``String`` visualizzate nel dashboard {{site.data.keyword.iot_short_notm}}. Devi specificare almeno una voce.|Sì|
+|``description``|Associazione di coppie valore-chiave ``locale``: ``String`` utilizzate per la visualizzazione nel dashboard {{site.data.keyword.iot_short_notm}}. Se definito, devi specificare almeno una voce.|No|
+|``actions``| Associazione di coppie valore-chiave ``actionId``: ``<action>`` che definiscono le azioni contenute in un'estensione di gestione del dispositivo. Devi specificare almeno una voce.|Sì|
 
 ### Proprietà per ogni azione:
 
 |Proprietà|Descrizione|Obbligatorio
 |:---|:---|
-|`actionDisplayName`|Associazione di coppie valore-chiave `locale`: `String` visualizzate nel dashboard {{site.data.keyword.iot_short_notm}}. Devi specificare almeno una voce.|Sì|
-|`description`|Associazione di coppie valore-chiave `locale`: `String` utilizzate per la visualizzazione nel dashboard {{site.data.keyword.iot_short_notm}}. Facoltativo. Devi specificare almeno una voce.|No|
-|`parameters`|Array di parametri consentiti per un'azione in particolare. Se definito, devi specificare almeno una voce.|No|
+|``actionDisplayName``|Associazione di coppie valore-chiave ``locale``: ``String`` visualizzate nel dashboard {{site.data.keyword.iot_short_notm}}. Devi specificare almeno una voce.|Sì|
+|``description``|Associazione di coppie valore-chiave ``locale``: ``String`` utilizzate per la visualizzazione nel dashboard {{site.data.keyword.iot_short_notm}}. Facoltativo. Devi specificare almeno una voce.|No|
+|``parameters``|Array di parametri consentiti per un'azione in particolare. Se definito, devi specificare almeno una voce.|No|
 
 ### Proprietà per ogni parametro dell'azione:
 
 |Proprietà|Descrizione|Obbligatorio
 |:---|:---|
-|`name`|Identificativo univoco per un parametro in un'azione|Sì|
-|`value`|Espressione regolare utilizzata per convalidare i valori del parametro quando viene avviata una richiesta. Se non specificato, la convalida non viene effettuata.|No|
-|`required`|Il valore booleano che determina se il parametro è obbligatorio. Il valore è impostato per impostazione predefinita su false. |No|
-|`defaultValue`|Il valore da utilizzare se il parametro non viene fornito quando una richiesta viene avviata|No|
+|``name``|Identificativo univoco per un parametro in un'azione|Sì|
+|``value``|Espressione regolare utilizzata per convalidare i valori del parametro quando viene avviata una richiesta. Se non specificato, la convalida non viene effettuata.|No|
+|``required``|Il valore booleano che determina se il parametro è obbligatorio. Il valore è impostato per impostazione predefinita su false. |No|
+|``defaultValue``|Il valore da utilizzare se il parametro non viene fornito quando una richiesta viene avviata|No|
 
-**Nota:** i valori `bundleId`, `version`, `actionId` e `parameterId` possono contenere un massimo di 255 caratteri e possono essere formati da solo caratteri alfanumerici (a-z, A-Z, 0-9) e dai seguenti caratteri speciali:
+**Nota:** i valori ``bundleId``, ``version``, ``actionId`` e ``parameterId`` possono contenere un massimo di 255 caratteri e possono essere formati da solo caratteri alfanumerici (a-z, A-Z, 0-9) e dai seguenti caratteri speciali:
  - trattino (-)
  - segno di sottolineatura (\_)
  - punto (.)
@@ -174,7 +174,7 @@ Per avviare le azioni di gestione del dispositivo personalizzate, utilizza il se
 
 Devi fornire le seguenti informazioni quando avvii una richiesta:
 
-- L'azione `<bundleId>/<actionId>`
+- L'azione ``<bundleId>/<actionId>``
 - Un elenco di dispositivi su cui avviare l'azione, al massimo 5000 dispositivi
 - Un elenco di parametri, definito nella definizione dell'azione personalizzata
 
@@ -205,7 +205,7 @@ Il payload per avviare una richiesta è nel seguente formato:
 
 Quando viene avviata un'azione personalizzata su un dispositivo, viene pubblicato un messaggio MQTT nel dispositivo. Il messaggio MQTT contiene tutti i parametri specificati come parte della richiesta. Quando il dispositivo riceve il messaggio MQTT, esegue l'azione o risponde con un codice di errore che indica il motivo per cui non può al momento completare l'azione.
 
-Quando un'azione del dispositivo viene completata correttamente, il dispositivo pubblica una risposta nella quale il valore `rc` viene impostato su `200`.
+Quando un'azione del dispositivo viene completata correttamente, il dispositivo pubblica una risposta nella quale il valore ``rc`` viene impostato su ``200``.
 
 Il seguente estratto fornisce un esempio dello scambio che si verifica tra un server e un dispositivo.
 
@@ -242,7 +242,7 @@ Il seguente estratto fornisce un esempio dello scambio che si verifica tra un se
 
 Il seguente esempio dimostra come puoi definire una nuova estensione di gestione del dispositivo ed eseguire un'azione definita in tale estensione.
 
-Alcuni dispositivi `exampleDeviceType` di produzione aziendale. Puoi installare e gestire i plug-in per essere eseguiti sui dispositivi `exampleDeviceType`. Per facilitare la gestione remota dei plug-in nei dispositivi `exampleDeviceType`, i produttori normalmente forniscono un'estensione di gestione del dispositivo che puoi importare nella tua organizzazione {{site.data.keyword.iot_short_notm}}.
+Alcuni dispositivi ``exampleDeviceType`` di produzione aziendale. Puoi installare e gestire i plug-in per essere eseguiti sui dispositivi ``exampleDeviceType``. Per facilitare la gestione remota dei plug-in nei dispositivi ``exampleDeviceType``, i produttori normalmente forniscono un'estensione di gestione del dispositivo che puoi importare nella tua organizzazione {{site.data.keyword.iot_short_notm}}.
 
 Il seguente documento di estensione JSON viene utilizzato nell'esempio:
 
@@ -338,7 +338,7 @@ Per aggiungere l'estensione, utilizza il seguente comando API REST:
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 
-I dispositivi registrati nell'organizzazione `<orgID>` possono specificare di supportare le azioni `exampleDeviceType-actions-v1` quando pubblicano una richiesta di gestione, come mostrato nel seguente esempio:
+I dispositivi registrati nell'organizzazione ``<orgID>`` possono specificare di supportare le azioni ``exampleDeviceType-actions-v1`` quando pubblicano una richiesta di gestione, come mostrato nel seguente esempio:
 
 ```
 	Outgoing message from device:
@@ -366,9 +366,9 @@ Il dispositivo riceve la seguente risposta da {{site.data.keyword.iot_short_notm
 	}
 
 ```
-A questo punto, puoi avviare le azioni del dispositivo definite nell'estensione `exampleIoT-exampleDeviceType-v1`.
+A questo punto, puoi avviare le azioni del dispositivo definite nell'estensione ``exampleIoT-exampleDeviceType-v1``.
 
-Il seguente payload viene utilizzato per avviare un'azione `installPlugin`:
+Il seguente payload viene utilizzato per avviare un'azione ``installPlugin``:
 
 ```
 	{
@@ -400,7 +400,7 @@ Avvia la richiesta utilizzando il seguente comando API REST:
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-Quando viene immesso il comando, i dispositivi `device0` e `device1` del tipo `exampleDeviceType` ricevono il seguente messaggio MQTT:
+Quando viene immesso il comando, i dispositivi ``device0`` e ``device1`` del tipo ``exampleDeviceType`` ricevono il seguente messaggio MQTT:
 
 ```
 	Incoming message from server:
@@ -437,7 +437,7 @@ Ogni dispositivo esegue un'azione nel messaggio e installa il plug-in specificat
 
 ```
 
-A questo punto, l'azione di gestione del dispositivo `installPlugin` viene completata.
+A questo punto, l'azione di gestione del dispositivo ``installPlugin`` viene completata.
 
 ## Esempi API
 {: #api_examples}

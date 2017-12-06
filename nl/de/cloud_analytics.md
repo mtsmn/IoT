@@ -54,11 +54,9 @@ Gehen Sie wie folgt vor, um eine Regel zu erstellen:
 3. Fügen Sie zum Einrichten der Regellogik mindestens eine IF-Bedingung hinzu, die als Auslöser für die Regel verwendet wird.  
 Sie können Bedingungen in parallelen Reihen hinzufügen, um sie als OR-Bedingungen anzuwenden, oder Sie können Bedingungen in sequenziellen Spalten hinzufügen, um sie als AND-Bedingungen anzuwenden.  
 **Wichtig:** Um eine Bedingung auszulösen, die zwei Eigenschaften vergleicht, oder um mindestens zwei Eigenschaftsbedingungen auszulösen, die sequenziell durch AND verbunden sind, müssen die auslösenden Datenpunkte in dieselbe Gerätenachricht eingeschlossen werden. Wenn die Daten in mehr als einer Nachricht empfangen werden, werden die Bedingung oder die sequenziellen Bedingungen nicht ausgelöst.  
-**Beispiele:**  
-Eine einfache Regel kann einen Alert auslösen, wenn ein Parameterwert größer als ein angegebener Wert ist:
-Bedingung = `temp_cpu>80`  
-Eine komplexere Regel kann zu einem Auslösen führen, wenn eine Übereinstimmung mit einer Kombination aus Schwellenwerten auftritt:
-Bedingung = `temp_cpu>60 AND cpu_load>90`   
+**Beispiele:**   
+Eine einfache Regel kann einen Alert auslösen, wenn ein Parameterwert größer ist als ein angegebener Wert: Bedingung = `temp_cpu>80`  
+Eine komplexere Regel kann zu einem Auslösen führen, wenn eine Übereinstimmung mit einer Kombination aus Schwellenwerten auftritt: Bedingung = `temp_cpu>60 AND cpu_load>90`   
 
 4. Konfigurieren Sie für Ihre Regel Anforderungen für bedingte Auslöser.  
 Zum Steuern der Anzahl von Alerts, die für eine Regel in einem bestimmten Zeitraum ausgelöst werden, können Sie für Ihre Regel Anforderungen für bedingte Auslöser konfigurieren.  
@@ -266,7 +264,7 @@ Dabei ist der erste Knoten ein HTTP-Knoten und der zweite ist ein Twilio-Knoten.
 ### Webhook
 {: #webhook}
 
-Verwenden Sie die Aktion 'Webhook', um eine HTTP-Anforderung an einen für Webhooks aktivierten Web-Service zu senden, wenn ein Alert ausgelöst wird. Ein Webhook kann beispielsweise verwendet werden, um eine Serviceanforderung für ein Asset zu öffnen, wenn ein Sensor im Gerät eine abnormalen Messwert berichtet.
+Verwenden Sie die Aktion 'Webhook', um eine HTTP-Anforderung an einen für Webhooks aktivierten Web-Service zu senden, wenn ein Alert ausgelöst wird. Ein Webhook kann beispielsweise verwendet werden, um eine Serviceanforderung für ein Asset zu öffnen, wenn ein Sensor im Gerät einen abnormalen Messwert meldet.
 
 Beispiel: [Webhook zum Posten in Slack verwenden](#webhookex).
 

@@ -167,7 +167,7 @@ ARM mbed 플랫폼, 알림 및 비동기 응답에서 수신되는 두 가지 �
 
 #### 비동기 응답
 
-{{site.data.keyword.iot_short_notm}}이 ARM mbed 플랫폼에 연결된 디바이스로 명령을 보내면 디바이스가 {{site.data.keyword.iot_short_notm}}으로 다시 확인 메시지를 보냅니다. 이 확인 메시지는 *비동기 응답*이라고 하며 이벤트 유형 `asyncResponse`를 사용합니다.
+{{site.data.keyword.iot_short_notm}}이 ARM mbed 플랫폼에 연결된 디바이스로 명령을 보내면 디바이스가 {{site.data.keyword.iot_short_notm}}으로 다시 확인 메시지를 보냅니다. 이 확인 메시지는 _비동기 응답_이라고 하며 이벤트 유형 `asyncResponse`를 사용합니다.
 
 다음 코드 샘플은 ARM mbed 클라우드 서비스에서 보낸 비동기 응답에 대한 페이로드 형식을 표시합니다.
 

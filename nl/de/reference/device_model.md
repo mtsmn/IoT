@@ -43,7 +43,7 @@ Weitere Informationen zu den Kennungen sowie Beschreibungen vergleichbarer Kennu
 
 Jedem mit {{site.data.keyword.iot_short_notm}} verbundenen Gerät ist ein Gerätetyp zugeordnet. Gerätetypen sind Gruppen von Geräten, die gemeinsame Merkmale haben oder gleiches Verhalten zeigen.
 
-Ein Gerätetyp hat eine Gruppe von Attributen. Wenn ein Gerät zu {{site.data.keyword.iot_short_notm}} hinzugefügt wird, werden die Attribute im zugehörigen Gerätetyp als Vorlage verwendet. Wenn das Gerät einen Wert hat, wird dieser Wert verwendet. Wenn das Gerät keinen Wert hat, wird der für den Gerätetyp angegebene Wert verwendet. Beispielsweise könnte der Gerätetyp einen Wert für das Attribut `deviceInfo.fwVersion` aufweisen, das die Firmware-Version zum Zeitpunkt der Herstellung widerspiegelt. Dieser Wert wird beim Hinzufügen der Geräte vom Gerätetyp in die Geräte kopiert. Wenn ein Gerät hinzugefügt wird und der Wert `deviceInfo.fwVersion` bereits vorhanden ist, wird er nicht überschrieben.
+Ein Gerätetyp hat eine Gruppe von Attributen. Wenn ein Gerät zu {{site.data.keyword.iot_short_notm}} hinzugefügt wird, werden die Attribute im zugehörigen Gerätetyp als Vorlage verwendet. Wenn das Gerät einen Wert hat, wird dieser Wert verwendet. Wenn das Gerät keinen Wert hat, wird der für den Gerätetyp angegebene Wert verwendet. Beispielsweise könnte der Gerätetyp einen Wert für das Attribut ``deviceInfo.fwVersion`` aufweisen, das die Firmware-Version zum Zeitpunkt der Herstellung widerspiegelt. Dieser Wert wird beim Hinzufügen der Geräte vom Gerätetyp in die Geräte kopiert. Wenn ein Gerät hinzugefügt wird und der Wert ``deviceInfo.fwVersion`` bereits vorhanden ist, wird er nicht überschrieben.
 
 Beim Aktualisieren eines Attributs für einen Gerätetyp übernehmen nur neue zu registrierende Geräte die Änderungen, die an der Gerätetypschablone vorgenommen wurden.
 
@@ -96,7 +96,7 @@ Erweiterungsname    | Präfix der Attribute | Verwendungszweck
 ------------- | ------------- | -------------                                         
  Diagnose       | diag                 | Fehlerprotokolle und Diagnoseinformationen                 
  Position          | location             | Position des Geräts, wird möglicherweise regelmäßig aktualisiert
-Gerätemanagement | mgmt                 | Gerätemanagementaktionen, wie zum Beispiel 'Firmware-Update'       
+ Gerätemanagement | mgmt                 | Gerätemanagementaktionen, wie zum Beispiel 'Firmware-Update'       
 
 
 ### Diagnoseerweiterung
@@ -104,13 +104,13 @@ Gerätemanagement | mgmt                 | Gerätemanagementaktionen, wie zum Be
 
 Die Diagnoseattribute sind optional und nur für Geräte verfügbar, die Fehlerprotokollinformationen haben. Diese Attribute sind für die Diagnose von Geräteproblemen konzipiert und nicht für die Behebung von Fehlern im Zusammenhang mit der Verbindung zu {{site.data.keyword.iot_short_notm}}. Der Umfang der in Diagnoseattributen gespeicherten Informationen kann sehr groß sein und muss daher in besonderer Weise abgefragt werden.
 
-Diagnoseprotokollinformationen werden als eine Reihe von Einträgen gespeichert. Jeder Eintrag besteht aus einer Nachricht, einer Angabe zum Schweregrad, einer Zeitmarke und optional Daten in Bytefeldgruppen. Sie können Einträge mithilfe einer API anhängen. Das Anhängen von Einträgen kann jedoch dazu führen, dass ältere Einträge verloren gehen, damit die Diagnoseprotokolle eine praktikable Größe beibehalten.
+Diagnoseprotokollinformationen werden als eine Reihe von Einträgen gespeichert. Jeder Eintrag besteht aus einer Nachricht, einer Angabe zum Schweregrad, einer Zeitmarke und optional einem Byte-Array mit Daten. Sie können Einträge mithilfe einer API anhängen. Das Anhängen von Einträgen kann jedoch dazu führen, dass ältere Einträge verloren gehen, damit die Diagnoseprotokolle eine praktikable Größe beibehalten.
 
 
 Attribut            | Typ       | Beschreibung                                                 | API | DMA
 ------------- | ------------- | ------------- | ------------- | -------------
- diag.errorCodes[]    | Feldgruppe aus </br> ganzen Zahlen  | Feldgruppe aus Fehlercodes                                        |  A  |  A  
- diag.log[]           | Feldgruppe      | Feldgruppe aus Diagnosedaten                                    |  A  |  A  
+ diag.errorCodes[]    | Array aus </br> ganzen Zahlen  | Array aus Fehlercodes                                        |  A  |  A  
+ diag.log[]           | Array           | Array aus Diagnosedaten                                    |  A  |  A  
  diag.log[].message   | Zeichenfolge     | Diagnosenachricht                                          |  -   |    -
  diag.log[].timestamp | Zeichenfolge     | ISO8601 date-time: Datum und Zeit des Protokolleintrags               |  -   |    -
  diag.log[].logData   | Zeichenfolge     | byte: Diagnosedaten, base-64-codiert                      |  -   |    -
@@ -137,9 +137,9 @@ Attribut                 | Typ   | Beschreibung                                 
 ### Gerätemanagementerweiterung
 {: #devicemanagementextension}
 
-Managementattribute stehen nur für verwaltete Geräte zur Verfügung. Wenn ein verwaltetes Gerät zu einem ruhenden Gerät wird, wird es zu einem nicht verwalteten Gerät und die Attribute des Typs `mgmt.` werden gelöscht. Die Attribute des Typs `mgmt.` werden von {{site.data.keyword.iot_short_notm}} als Ergebnis der Verarbeitung von Gerätemanagementanforderungen festgelegt. Diese Attribute können mithilfe der API nicht direkt geschrieben werden.
+Managementattribute stehen nur für verwaltete Geräte zur Verfügung. Wenn ein verwaltetes Gerät zu einem ruhenden Gerät wird, wird es zu einem nicht verwalteten Gerät und die Attribute des Typs ``mgmt.`` werden gelöscht. Die Attribute des Typs ``mgmt.`` werden von {{site.data.keyword.iot_short_notm}} als Ergebnis der Verarbeitung von Gerätemanagementanforderungen festgelegt. Diese Attribute können mithilfe der API nicht direkt geschrieben werden.
 
-Geräte haben einen Lebenszyklus im Management, der durch ihren Status als verwaltete Geräte definiert ist. Der Gerätemanagementagent eines Geräts ist dafür zuständig, die Anforderung 'Gerät verwalten' mithilfe des Gerätemanagementprotokolls zu senden. Zur Handhabung von nicht mehr vorhandenen Geräten in einer Umgebung mit einer großen Anzahl von Geräten kann ein verwaltetes Gerät so eingerichtet werden, dass es regelmäßig die Anforderung 'Gerät verwalten' sendet. Ein verwaltetes Gerät wird zu einem ruhenden Gerät, wenn diese Anforderung innerhalb eines angegebenen Zeitraums nicht an {{site.data.keyword.iot_short_notm}} gesendet wird. Zum Vereinfachen dieser Funktionalität hat die Anforderung 'Gerät verwalten' einen optionalen Parameter für den Lebenszyklus. Wenn {{site.data.keyword.iot_short_notm}} die Anforderung 'Gerät verwalten' empfängt, für die der Parameter für den Lebenszyklus festgelegt ist, wird der Zeitpunkt berechnet, vor dem eine weitere Anforderung 'Gerät verwalten' erforderlich ist, und im Attribut `mgmt.dormantDateTime` gespeichert.
+Geräte haben einen Lebenszyklus im Management, der durch ihren Status als verwaltete Geräte definiert ist. Der Gerätemanagementagent eines Geräts ist dafür zuständig, die Anforderung 'Gerät verwalten' mithilfe des Gerätemanagementprotokolls zu senden. Zur Handhabung von nicht mehr vorhandenen Geräten in einer Umgebung mit einer großen Anzahl von Geräten kann ein verwaltetes Gerät so eingerichtet werden, dass es regelmäßig die Anforderung 'Gerät verwalten' sendet. Ein verwaltetes Gerät wird zu einem ruhenden Gerät, wenn diese Anforderung innerhalb eines angegebenen Zeitraums nicht an {{site.data.keyword.iot_short_notm}} gesendet wird. Zum Vereinfachen dieser Funktionalität hat die Anforderung 'Gerät verwalten' einen optionalen Parameter für den Lebenszyklus. Wenn {{site.data.keyword.iot_short_notm}} die Anforderung 'Gerät verwalten' empfängt, für die der Parameter für den Lebenszyklus festgelegt ist, wird der Zeitpunkt berechnet, vor dem eine weitere Anforderung 'Gerät verwalten' erforderlich ist, und im Attribut ``mgmt.dormantDateTime`` gespeichert.
 
 
 Attribut                     | Typ    | Beschreibung                             | API | DMA

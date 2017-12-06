@@ -60,9 +60,9 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 - 字母数字字符（a-z、A-Z 和 0-9）
 - 连字符 (-)
 - 下划线 (_)
-- 点 (.)
+- 点 ( . )
 
-定义应用程序标识和设备标识后，通过使用 `mosquitto_sub` 创建表示应用程序的连接。使用 `<applicationId>` = myApplicationId 且 `<deviceId>` = myDeviceId 的以下示例：
+定义应用程序标识和设备标识后，通过使用 `mosquitto_sub` 创建表示应用程序的连接。使用以下示例：`<applicationId>` = myApplicationId 和 `<deviceId>` = myDeviceId:
 ```
     [user@host ~]$ mosquitto_sub -h quickstart.messaging.internetofthings.ibmcloud.com -p 1883 -i "a:quickstart:myApplicationId" -t iot-2/type/mosquitto/id/myDeviceId/evt/helloworld/fmt/json
 

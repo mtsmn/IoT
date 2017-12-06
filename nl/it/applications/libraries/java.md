@@ -310,7 +310,7 @@ Per elaborare gli aggiornamenti dello stato ricevuti dalle tue sottoscrizioni, d
 |`status.connectTime`   |java.util.Date|
 |`status.port`|numero intero|
 
-Le seguenti proprietà vengono impostate solo quando l'evento dello stato è `Disconnect`:
+Le seguenti proprietà vengono impostate solo quando l'evento dello stato è ``Disconnect``:
 
 | Proprietà     |Tipo di dati     |
 |----------------|----------------|
@@ -346,7 +346,7 @@ Il seguente esempio di codice fornisce un'implementazione di esempio del callbac
   }
 ```
 
-Quando il callback dello stato viene aggiunto al client dell'applicazione, viene richiamato il metodo `processDeviceStatus()` se viene collegato o scollegato un dispositivo che corrisponde ai criteri da {{site.data.keyword.iot_short_notm}}. Il seguente esempio di codice mostra come puoi aggiungere l'istanza di callback dello stato al client dell'applicazione:
+Quando il callback dello stato viene aggiunto al client dell'applicazione, viene richiamato il metodo ``processDeviceStatus()`` se viene collegato o scollegato un dispositivo che corrisponde ai criteri da {{site.data.keyword.iot_short_notm}}. Il seguente esempio di codice mostra come puoi aggiungere l'istanza di callback dello stato al client dell'applicazione:
 
 ```
 
@@ -361,7 +361,7 @@ Le applicazioni possono sottoscriversi a qualsiasi altro stato dell'applicazione
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-Il metodo overloaded è disponibile per controllare la sottoscrizione dello stato a un'applicazione in particolare. Il metodo `processApplicationStatus()` è richiamato se viene collegata o scollegata un'applicazione che corrisponde ai criteri da {{site.data.keyword.iot_short_notm}}.
+Il metodo overloaded è disponibile per controllare la sottoscrizione dello stato a un'applicazione in particolare. Il metodo ``processApplicationStatus()`` è richiamato se viene collegata o scollegata un'applicazione che corrisponde ai criteri da {{site.data.keyword.iot_short_notm}}.
 
 
 ## Pubblicazione degli eventi dai dispositivi

@@ -23,8 +23,7 @@ Os dados de clima do Weather Company aparecem na visualização de detalhes do d
 **Importante:** apenas dispositivos gerenciados podem configurar suas próprias localizações. Todos os dispositivos não gerenciados devem ter seus locais configurados manualmente usando a API. Para obter mais informações sobre a configuração de um local do dispositivo, consulte [Atualizar solicitações de localização](../../devices/device_mgmt/index.html#update-location).
 
 ## APIs de REST para The Weather Company
-Para acessar a API de REST da The Weather Company, veja a
-seção Clima do local do dispositivo na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window}.
+Para acessar a API de REST para The Weather Company, consulte a seção Device Location Weather na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window}.
 
 ## Visualizando dados meteorológicos
 

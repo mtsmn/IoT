@@ -38,8 +38,8 @@ Un environnement de développement d'intégration de chaîne de blocs {{site.dat
   - Référentiel GitHub fourni par IBM pour les exemples de contrats intelligents
   - Référentiel GitHub pour déployer des contrats intelligents sur la matrice {{site.data.keyword.blockchainfull_notm}}
 
-Le diagramme suivant illustre l'environnement de développement d'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} :
-![Architecture de l'intégration de chaîne de blocs IoT{{site.data.keyword.iot_short_notm}} ](images/architecture_contracts.svg "Chaîne de blocs IoT {{site.data.keyword.iot_short_notm}} integrationarchitecture")
+Le diagramme suivant illustre l'environnement de développement d'intégration de blockchain {{site.data.keyword.iot_short_notm}} :
+![Architecture d'intégration IoT blockchain {{site.data.keyword.iot_short_notm}}.](images/architecture_contracts.svg "Architecture d'intégration IoT blockchain {{site.data.keyword.iot_short_notm}}")
 
 ## Avant de commencer
 
@@ -59,8 +59,8 @@ Un certain nombre d'exemples de contrats peuvent être téléchargés depuis le 
 
 |Exemple de contrat |Description |
 |:---|:---|
-|[De base : Contrat simple ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | Version simplifiée du contrat avancé qui vous permet de suivre et stocker des données d'actif de terminal sur la chaîne de blocs.
-|[Avancé : Exemple de contrat générique IoT ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | Exemple de contrat avancé doté de nombreuses fonctions et dont le modèle de données et le comportement revêtent un aspect **commercial**.|
+|[De base : Contrat simple![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | Version simplifiée du contrat avancé qui vous permet de suivre et stocker des données d'actif de terminal sur la chaîne de blocs.
+|[Avancé : Exemple de contrat générique IoT ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | Exemple de contrat avancé doté de nombreuses fonctions et dont le modèle de données et le comportement revêtent un aspect **commercial**.|
 
 
 ## Configuration de votre environnement {{site.data.keyword.blockchainfull_notm}}
@@ -97,7 +97,7 @@ L'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} requiert
 
       Exemple de données d'identification pour le service
      ```json
-    {
+  {
       "peers": [
       {
         "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
@@ -276,7 +276,7 @@ Pour télécharger les exemples de contrats :
    2. Sélectionnez l'espace dans lequel vous avez déployé {{site.data.keyword.iot_short_notm}}.
    3. Cliquez sur le service **{{site.data.keyword.iot_short_notm}}**.
    4. Cliquez sur **Lancer** pour ouvrir le tableau de bord {{site.data.keyword.iot_short_notm}}.
-   5. Sélectionnez **Chaîne de blocs** en cliquant sur ![Chaîne de blocs.](images/platform_blockchain.png "Chaîne de blocs") dans la barre latérale de menus.
+   5. Sélectionnez **Blockchain** en cliquant sur ![Blockchain.](images/platform_blockchain.png "Blockchain") dans la barre latérale de menus.
    6. Cliquez sur **Mapper les données de terminal**.
    7. Sélectionnez le type de terminal pour lequel vous souhaitez stocker des données de terminal dans la chaîne de blocs et le nom d'événement des événements que vous souhaitez stocker. Cliquez sur **Suivant**.
    8. Sélectionnez le nom de la matrice que vous avez créée précédemment. Cliquez sur **Suivant**.

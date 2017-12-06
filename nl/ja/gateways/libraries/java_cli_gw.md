@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
-
----
+lastupdated: "2017-03-14"---
 
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}
@@ -28,7 +26,8 @@ lastupdated: "2017-03-14"
 
 コンストラクターは、ゲートウェイ・クライアント・インスタンスを作成し、以下の定義を格納する `Properties` オブジェクトを受け入れます。
 
-|定義 |説明 |
+|定義|説明
+|
 |:----|:----|
 |`org`|組織 ID に設定する必要がある必須の値。Quickstart フローを使用する場合は、`quickstart` を指定します。|
 |`domain`|メッセージング・エンドポイント URL (オプション)。ドメインの値を指定しない場合、URL はデフォルトの `internetofthings.ibmcloud.com` になります。これは {{site.data.keyword.iot_short_notm}} 実動サーバーです。|
@@ -268,7 +267,7 @@ gwClient.subscribeToDeviceCommands(DEVICE_TYPE, DEVICE_ID);
 特定のコマンドを処理するには、`Command` コールバック・メソッドを登録する必要があります。メッセージは `Command` クラスのインスタンスとして返され、以下のプロパティーが含まれます。
 
 
-| プロパティー     |データ・タイプ     | 説明|
+| プロパティー|データ・タイプ| 説明|
 |----------------|----------------|---------------
 |`deviceType`|ストリング| コマンドを受け取るデバイスのタイプ。|
 |`deviceId`|ストリング| コマンドを受け取るデバイスの ID。これはゲートウェイか、またはゲートウェイを介して接続されているデバイスのどちらかです。|
@@ -345,7 +344,7 @@ gwClient.api().getDevicesConnectedThroughGateway(gatewayType, gatewayId);
 ## レシピ
 {: #recipes}
 
-| レシピ     | 説明|
+| レシピ| 説明|
 |----------------|----------------
 |[Connecting your device as a gateway to {{site.data.keyword.iot_short_notm}} ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/){: new_window}| GitHub プロジェクト。Raspberry Pi ゲートウェイとゲートウェイの背後の Arduino Uno デバイスを {{site.data.keyword.iot_short_notm}} に接続する方法に関する詳細手順です。
 |[Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}} ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}|上記のゲートウェイ・レシピの拡張。Raspberry Pi ゲートウェイを {{site.data.keyword.iot_short_notm}} 内の管理対象デバイスとして接続する方法と、デバイス管理の操作方法を説明しています。

@@ -39,7 +39,7 @@ L'intégration Jasper fournie par notre plateforme assure la prise en charge des
 Les opérations prises en charge sont accessibles dans le menu d'exploration d'un terminal connecté via Jasper, après l'exécution des étapes de configuration ci-dessous.
 
 ### API REST pour Jasper
-Pour accéder à l'API REST pour Jasper, voir la section Jasper Extension dans la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
+Pour accéder à l'API REST pour Jasper, voir la section Jasper Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
 
 ### Configuration pour Jasper
 
@@ -62,7 +62,7 @@ Pour configurer vos terminaux connectés via Jasper, procédez comme suit :
  3. Faites défiler l'écran jusqu'à *Configuration d'une extension*.
  4. Entrez la configuration d'extension au format JSON ci-dessous, puis cliquez sur **Confirmation des modifications** pour sauvegarder votre configuration.  
 
-```json
+```json  
     {
         "jasper": {
             "iccid": "string"
@@ -91,7 +91,7 @@ L'extension AT&T permet d'effectuer les opérations AT&T suivantes
 - Modification du plan tarifaire
 
 ### API REST pour AT&T
-Pour accéder à l'API REST pour AT&T, voir la section AT&T Extension dans la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
+Pour accéder à l'API REST pour AT&T, voir la section AT&T Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
 
 ### Configuration pour AT&T
 
@@ -118,7 +118,7 @@ Pour configurer vos terminaux connectés via AT&T, procédez comme suit :
  3. Faites défiler l'écran jusqu'à *Configuration d'une extension*.
  4. Entrez la configuration d'extension au format JSON ci-dessous, puis cliquez sur **Confirmation des modifications** pour sauvegarder votre configuration.  
 
-```json
+```json  
     {
         "atnt": {
             "iccid": "string"
@@ -167,7 +167,7 @@ L'exemple de code suivant illustre le format de contenu d'une notification envoy
 
 #### Réponses asynchrones
 
-Lorsque {{site.data.keyword.iot_short_notm}} envoie une commande à un terminal connecté à la plateforme ARM mbed, le terminal renvoie un message de confirmation à {{site.data.keyword.iot_short_notm}}. Ce message de confirmation est appelé *réponse asynchrone* et utilise le type d'événement `asyncResponse`.
+Lorsque {{site.data.keyword.iot_short_notm}} envoie une commande à un terminal connecté à la plateforme ARM mbed, le terminal renvoie un message de confirmation à {{site.data.keyword.iot_short_notm}}. Ce message de confirmation est appelé _réponse asynchrone_ et utilise le type d'événement `asyncResponse`.
 
 L'exemple de code suivant illustre le format de contenu d'une réponse asynchrone envoyée par le service cloud ARM mbed :
 
@@ -223,7 +223,7 @@ Si vous disposez d'un terminal connecté à votre service {{site.data.keyword.io
 - Statut d'emplacement
 
 ### API REST pour Orange
-Pour accéder à l'API REST pour Orange, voir la section Orange Extension dans la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
+Pour accéder à l'API REST pour Orange, voir la section Orange Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
 
 ### Configuration pour Orange
 
@@ -274,7 +274,7 @@ Pour ajouter un package de gestion des terminaux personnalisé à l'aide du tabl
 3. Cliquez sur le bouton **Ajouter un package**.
 4. Sélectionnez votre fichier de package et cliquez sur **Ouvrir**.
 
-Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la [documentation de l'API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la documentation de l'API [{{site.data.keyword.iot_short_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Chaîne de blocs
 {: #blockchain}

@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-15"
-
----
+lastupdated: "2017-03-15"---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
@@ -171,7 +169,7 @@ ARM mbed プラットフォームでは、通知と非同期応答の 2 種類�
 
 #### 非同期応答
 
-ARM mbed プラットフォームに接続されているデバイスに {{site.data.keyword.iot_short_notm}} がコマンドを送信すると、デバイスは {{site.data.keyword.iot_short_notm}} に確認メッセージを送り戻します。この確認メッセージは*非同期応答*と呼ばれ、イベント・タイプ `asyncResponse` を使用します。
+ARM mbed プラットフォームに接続されているデバイスに {{site.data.keyword.iot_short_notm}} がコマンドを送信すると、デバイスは {{site.data.keyword.iot_short_notm}} に確認メッセージを送り戻します。この確認メッセージは_非同期応答_と呼ばれ、イベント・タイプ `asyncResponse` を使用します。
 
 以下のコード・サンプルは、ARM mbed クラウド・サービスによって送信される非同期応答のペイロード形式を示しています。
 

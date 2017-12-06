@@ -55,10 +55,11 @@ lastupdated: "2017-03-14"
 
 [https://github.com/ibm-watson-iot/blockchain-samples ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/blockchain-samples){: new_window} 上有若干样本合同可供下载。您可以将样本合同用作基础，以将自己的用例开发成可部署的链代码：
 
-|样本合同 |描述 |
+|样本合同|描述
+|
 |:---|:---|
-|[基本：简单合同 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | 简单版本的高级合同，允许您跟踪和存储区块链上的设备资产数据
-|[高级：IoT 通用样本合同 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | 高级样本合同，具有多种功能和可用于其数据模型和行为的**贸易航线**类型|
+|[基本：简单合同 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window}| 简单版本的高级合同，允许您跟踪和存储区块链上的设备资产数据
+|[高级：IoT 通用样本合同 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window}| 高级样本合同，具有多种功能和可用于其数据模型和行为的**贸易航线**类型|
 
 
 ## 配置 {{site.data.keyword.blockchainfull_notm}} 环境
@@ -95,7 +96,7 @@ lastupdated: "2017-03-14"
 
       服务凭证的示例：
      ```json
-     {
+  {
       "peers": [
       {
        "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
@@ -219,7 +220,7 @@ IBM 提供了若干智能合同，您可以下载并按原样直接使用，也�
 6. 将智能合同链代码部署到 {{site.data.keyword.blockchainfull_notm}}。  
  在本地测试并验证合同后，可以将其部署到 {{site.data.keyword.blockchainfull_notm}} 光纤网来进行测试。
   1. 将合同上传到公共 GitHub 存储库。  
-  例如，将 sample.go 文件上传到：  
+  例如，将 sample.go 文件上载至：  
   `http://github.com/{my organization}/{my project}/`
   2. 向早先连接的同级注册合同。  
   使用 REST 客户机（例如 CURL 或 Postman）来提交注册调用。有关注册调用的更多信息，请参阅 [POST registrar API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#registrar){: new_window}。注册时，请使用以下信息：

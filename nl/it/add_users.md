@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -54,7 +54,7 @@ Quando inviti un utente a diventare membro della tua organizzazione {{site.data.
 **Importante:** la funzione di invito richiede un servizio di posta configurato. Per ulteriori informazioni, consulta la sezione Email dell'argomento [Integrazioni del servizio esterno](reference/extensions/index.html#email).
 
 Per invitare un membro nella tua organizzazione {{site.data.keyword.iot_short_notm}}:
-1. Nel dashboard {{site.data.keyword.iot_short_notm}}, passa a **Members**.
+1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Members**.
 2. Seleziona la scheda **Invitations**.
 2. Fai clic su **Invite Members** e seleziona la scheda **Invite**.
 3. Immetti l'indirizzo email del membro.
@@ -63,7 +63,7 @@ Per invitare un membro nella tua organizzazione {{site.data.keyword.iot_short_no
 6. Fai clic su **Invite Member**.
 
 Per invitare più membri contemporaneamente, devi caricare un file `.csv` che contiene l'indirizzo email, il ruolo e facoltativamente la data di scadenza di ogni membro. Per informazioni, consulta [Messa a punto del tuo file CSV](#constructing-your-csv).
-1. Nel dashboard {{site.data.keyword.iot_short_notm}}, passa a **Members**.
+1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Members**.
 2. Seleziona la scheda **Invitations**.
 2. Fai clic su **Invite Members** e seleziona la scheda **Import**.
 3. Fai clic sui tuoi file o trascina il file `.csv` nella finestra **Upload CSV**.
@@ -139,6 +139,10 @@ Gli utenti possono essere bloccati dall'accedere all'organizzazione {{site.data.
 1. Dal tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Members** dalla barra di navigazione sulla sinistra.
 2. Fai clic sull'attivazione accanto all'utente che desideri bloccare dall'accedere all'organizzazione {{site.data.keyword.iot_short_notm}}.
 
+## Limitazione dell'accesso utente (Beta)
+{: #limiting-users}
+
+Il controllo dell'accesso al livello della risorsa ti permette di limitare l'accesso ai dispositivi in un'organizzazione. Puoi utilizzare i gruppi di risorse per specificare i dispositivi che ogni utente o chiave API possono gestire. Per informazioni su come configurare il controllo dell'accesso al livello della risorsa, consulta [Configurazione del controllo dell'accesso al livello della risorsa](reference/rlac.html#configure_RLAC).
 
 ## Rimozione di utenti
 {: #removing-users}

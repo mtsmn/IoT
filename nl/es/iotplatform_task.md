@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-10-02"
 
 ---
 
@@ -35,7 +35,7 @@ Complete los pasos siguientes para conectar el dispositivo a {{site.data.keyword
 
 El registro de un dispositivo implica la clasificación del dispositivo como un tipo de dispositivo, lo que le da un nombre al dispositivo, y proporciona una información de dispositivo. A continuación, proporcione una señal de conexión o acepte una señal generada por {{site.data.keyword.iot_short_notm}}.
 
-Puede añadir dispositivos de uno en uno desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}} o puede utilizar la [ API de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} para añadir uno o varios dispositivos a la vez.
+Puede añadir dispositivos de uno en uno desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}} o puede utilizar la [API de {{site.data.keyword.iot_short_notm}}![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} para añadir uno o varios dispositivos a la vez.
 
 Para añadir un dispositivo desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}}:
 
@@ -134,8 +134,7 @@ Este valor indica que está utilizando la autorización de señales.
 Este valor es la señal exclusiva que ha definido o que se ha asignado al dispositivo al registrarlo.
 - Formato del tema del suceso: iot-2/evt/*event_id*/fmt/*format_string*  
  Donde el *event_id* especifica el nombre del suceso que se muestra en {{site.data.keyword.iot_short_notm}}, y *format_string* es el formato del suceso, como por ejemplo JSON.
-- Formato de mensaje:
-   
+- Formato del mensaje: JSON  
  {{site.data.keyword.iot_short_notm}} JSON da soporte a varios formatos, como JSON y texto.
 
 Para obtener más información sobre cómo conectar su dispositivo, consulte [Conectividad de MQTT para dispositivos](devices/mqtt.html) en la documentación técnica.

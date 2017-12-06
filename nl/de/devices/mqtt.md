@@ -28,7 +28,7 @@ Informationen zur Clientsicherheit und zur Vorgehensweise beim Herstellen von Ve
 ## Verbindung zwischen Geräten und dem Quickstart-Service herstellen
 {: #connecting_devices}
 
-Der Quickstart-Service ist die schnellste Servicestufe. Er bietet keine Empfangsbestätigung und unterstützt keine MQTT-Servicequalitätsstufen, die höher als null sind. Wenn Sie eine Verbindung zum Quickstart-Service herstellen, ist keine Authentifizierung oder Registrierung erforderlich und für `orgId` muss `quickstart` festgelegt werden.
+Der Quickstart-Service ist die schnellste Servicestufe. Er bietet keine Empfangsbestätigung und unterstützt keine MQTT-Servicequalitätsstufen, die höher als null sind. Wenn Sie eine Verbindung zum Quickstart-Service herstellen, ist keine Authentifizierung oder Registrierung erforderlich und für ``orgId`` muss ``quickstart`` festgelegt werden.
 
 Wenn Sie Gerätecode schreiben, der mit Quickstart verwendet werden soll, müssen Sie beachten, dass folgende Servicefunktionen von {{site.data.keyword.iot_short_notm}} im Quickstart-Modus nicht unterstützt werden:
 
@@ -48,7 +48,7 @@ Zum Aktivieren der MQTT-Authentifizierung übergeben Sie beim Herstellen der MQT
 
 ### Benutzername
 
-Der Benutzername ist für alle Geräte gleich: `use-token-auth`. Dieser Wert bewirkt, dass {{site.data.keyword.iot_short_notm}} das Authentifizierungstoken des Geräts verwendet, das als Kennwort angegeben ist.
+Der Benutzername ist für alle Geräte gleich: ``use-token-auth``. Dieser Wert bewirkt, dass {{site.data.keyword.iot_short_notm}} das Authentifizierungstoken des Geräts verwendet, das als Kennwort angegeben ist.
 
 ### Kennwort
 
@@ -64,7 +64,7 @@ Geräte verwenden zum Publizieren in Ereignistopics folgendes Format:
 
 Dabei gilt:
 
--  **Ereignis-ID** ist die ID des Ereignisses, beispielsweise `status`.  Die Ereignis-ID kann eine beliebige Zeichenfolge sein, die in MQTT gültig ist. Wenn keine Platzhalterzeichen verwendet werden, müssen Subskribentenanwendungen diese Zeichenfolge in ihrem Subskriptionstopic verwenden, um die Ereignisse zu empfangen, die in ihrem Topic publiziert werden.
+-  **Ereignis-ID** ist die ID des Ereignisses, beispielsweise ``status``.  Die Ereignis-ID kann eine beliebige Zeichenfolge sein, die in MQTT gültig ist. Wenn keine Platzhalterzeichen verwendet werden, müssen Subskribentenanwendungen diese Zeichenfolge in ihrem Subskriptionstopic verwenden, um die Ereignisse zu empfangen, die in ihrem Topic publiziert werden.
 -  **Format_Zeichenfolge** ist eine Zeichenfolge, die den Inhaltstyp der Nachrichtennutzdaten definiert, damit der Empfänger der Nachricht bestimmen kann, wie der Inhalt geparst werden muss. Zu den üblichen Werten für den Inhaltstyp gehören unter anderen 'json', 'xml', 'txt' und 'csv'. Der Wert kann eine beliebige Zeichenfolge sein, die in MQTT gültig ist.
 
 **Wichtig:** Der Umfang der Nachrichtennutzdaten ist auf maximal 131072 Byte begrenzt. Nachrichten, die größer sind als dieser Wert, werden abgelehnt.
@@ -82,7 +82,7 @@ Geräte verwenden zum Subskribieren von Befehlstopics folgendes Format:
 {: codeblock}
 
 Dabei gilt:
- - **Ereignis-ID** ist die ID des Befehls, zum Beispiel `update`. Die Befehls-ID kann eine beliebige Zeichenfolge sein, die im MQTT-Protokoll gültig ist.  Wenn keine Platzhalterzeichen verwendet werden, müssen Geräte diese Zeichenfolge in ihrem Subskriptionstopic verwenden, um Befehle zu empfangen, die in ihrem Topic publiziert werden.
+ - **Ereignis-ID** ist die ID des Befehls, zum Beispiel ``update``. Die Befehls-ID kann eine beliebige Zeichenfolge sein, die im MQTT-Protokoll gültig ist.  Wenn keine Platzhalterzeichen verwendet werden, müssen Geräte diese Zeichenfolge in ihrem Subskriptionstopic verwenden, um Befehle zu empfangen, die in ihrem Topic publiziert werden.
  - **Format_Zeichenfolge** ist eine Zeichenfolge, die den Inhaltstyp der Befehlsnutzdaten definiert, damit der Empfänger des Befehls bestimmen kann, wie der Inhalt geparst werden muss. Zu den üblichen Werten für den Inhaltstyp gehören unter anderen 'json', 'xml', 'txt' und 'csv'. Der Wert kann eine beliebige Zeichenfolge sein, die in MQTT gültig ist.
 
 Geräte können keine Ereignisse anderer Geräte subskribieren. Ein Gerät empfängt publizierte Befehle nur für das eigene Gerät.
@@ -96,12 +96,12 @@ Die Unterstützung für das Lebenszyklusmanagement von Geräten ist optional. Da
 
 Verwaltete Geräte können Nachrichten publizieren, deren Servicequalitätsstufe (QoS) '0' oder '1' ist.
 
-Nachrichten, für die 'QoS=0' gilt, können verworfen werden; sie bleiben nach dem Neustart des Nachrichtenservers nicht bestehen. Nachrichten, für die 'QoS=1' gilt, können in die Warteschlange gestellt werden; sie bleiben nach dem Neustart des Nachrichtenservers bestehen. Durch die für eine Subskription geltende Permanenz ist festgelegt, ob eine Anforderung in die Warteschlange gestellt wird. Durch den Parameter `cleansession` der Verbindung, die die Subskription vorgenommen hat, wird die Permanenz der Subskription festgelegt.  
+Nachrichten, für die 'QoS=0' gilt, können verworfen werden; sie bleiben nach dem Neustart des Nachrichtenservers nicht bestehen. Nachrichten, für die 'QoS=1' gilt, können in die Warteschlange gestellt werden; sie bleiben nach dem Neustart des Nachrichtenservers bestehen. Durch die für eine Subskription geltende Permanenz ist festgelegt, ob eine Anforderung in die Warteschlange gestellt wird. Durch den Parameter ``cleansession`` der Verbindung, die die Subskription vorgenommen hat, wird die Permanenz der Subskription festgelegt.  
 
-{{site.data.keyword.iot_short_notm}} publiziert Anforderungen, die die Servicequalitätsstufe '1' aufweisen, um das Einreihen von Nachrichten in die Warteschlange zu unterstützen. Um Nachrichten in die Warteschlange einzureihen, die gesendet werden, während ein verwaltetes Gerät nicht verbunden ist, konfigurieren Sie das Gerät mithilfe der Einstellung 'false' für den Parameter `cleansession` so, dass keine bereinigten Sitzungen verwendet werden.
+{{site.data.keyword.iot_short_notm}} publiziert Anforderungen, die die Servicequalitätsstufe '1' aufweisen, um das Einreihen von Nachrichten in die Warteschlange zu unterstützen. Um Nachrichten in die Warteschlange einzureihen, die gesendet werden, während ein verwaltetes Gerät nicht verbunden ist, konfigurieren Sie das Gerät mithilfe der Einstellung 'false' für den Parameter ``cleansession`` so, dass keine bereinigten Sitzungen verwendet werden.
 
 **Warnung:**
-Wenn Ihr verwaltetes Gerät eine permanente Subskription verwendet, werden alle Befehle, die an Ihr Gerät gesendet werden, während dies offline ist, als fehlgeschlagene Operationen berichtet, wenn das Gerät nicht vor dem Überschreiten des Zeitlimitwerts für die Anforderung erneut eine Verbindung zum Service herstellt. Wenn das Gerät die Verbindung jedoch wiederherstellt, werden diese Anforderungen vom Gerät verarbeitet. Die Permanenz der Subskription wird durch den Parameter `cleansession=false` angegeben.
+Wenn Ihr verwaltetes Gerät eine permanente Subskription verwendet, werden alle Befehle, die an Ihr Gerät gesendet werden, während dies offline ist, als fehlgeschlagene Operationen berichtet, wenn das Gerät nicht vor dem Überschreiten des Zeitlimitwerts für die Anforderung erneut eine Verbindung zum Service herstellt. Wenn das Gerät die Verbindung jedoch wiederherstellt, werden diese Anforderungen vom Gerät verarbeitet. Die Permanenz der Subskription wird durch den Parameter ``cleansession=false`` angegeben.
 
 ### Topics
 
@@ -114,7 +114,7 @@ iotdm-1/#
 
 Ein verwaltetes Gerät publiziert in Topics, die für den ausgeführten Typ von Managementanforderung spezifisch sind:
 
-- Das verwaltete Gerät publiziert Gerätemanagementantworten in `iotdevice-1/response`.
+- Das verwaltete Gerät publiziert Gerätemanagementantworten in ``iotdevice-1/response``.
 - Weitere Topics, in denen ein verwaltetes Gerät publizieren kann, finden Sie im [Gerätemanagementprotokoll](device_mgmt/index.html) und in den [Gerätemanagementanforderungen](device_mgmt/requests.html).
 
 

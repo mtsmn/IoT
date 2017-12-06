@@ -26,7 +26,7 @@ lastupdated: "2017-03-14"
 ## 依赖关系
 {: #dependencies}
 
-|依赖关系 |描述|
+|依赖关系|描述|
 |:---|:---|
 |[Eclipse Paho MQTT 库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/teams/mqtt/code/MQTT/){: new_window}|为 mBed 设备提供 MQTT 客户机库。有关更多信息，请参阅 [Embedded MQTT C/C++ ClientLibraries ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}|
 |[EthernetInterface 库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/){: new_window}|基于以太网的 mBed IP 库。|
@@ -45,7 +45,8 @@ lastupdated: "2017-03-14"
 
 构造方法用于构建客户机实例，并接受以下参数：
 
-|参数 |描述 |
+|参数|描述
+|
 |:---|:---|
 |`org` |组织标识。此值是必需的。如果使用的是 Quickstart 流，请指定 `quickstart`。|
 |`type`   |设备类型。此字段是必填的。|
@@ -71,7 +72,7 @@ lastupdated: "2017-03-14"
   IoTF::DeviceClient client(organization, deviceType, deviceId);
 
   // Get the DeviceID(MAC Address) if we are in quickstart mode and device ID is not specified
-  if((strcmp(organization, QUICKSTART) == 0) && (strcmp("", deviceId) == 0))
+  if((strcmp(organization, QUICKSTART) == 0) &&  (strcmp("", deviceId) == 0))
   {
   	char tmpBuf[50];
   	client.getDeviceId(tmpBuf, sizeof(tmpBuf));
@@ -215,11 +216,13 @@ lastupdated: "2017-03-14"
 设备客户机进行连接时，会自动预订此设备的所有命令。要处理特定命令，需要注册命令回调方法。
 消息将作为 Command 类的实例返回，此类具有以下属性：
 
-|属性 |描述|
+|属性|描述|
 |:---|:---|
 |`command` | 调用的命令的名称。|  
-|`format`  |事件的格式。格式可以为任意字符串，例如 JSON。 |
-|`payload`  |命令有效内容的数据。最大长度为 131072 字节。 |
+|`format`  |事件的格式。格式可以为任意字符串，例如 JSON。
+|
+|`payload`  |命令有效内容的数据。最大长度为 131072 字节。
+|
 
 
 以下代码定义了样本命令回调函数，此函数处理来自应用程序的 LED 闪烁时间间隔命令，并在 DeviceClient 实例上设置函数句柄，以便每当设备接收到 blink 命令时，都运行回调方法。

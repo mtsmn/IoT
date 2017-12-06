@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-10-02"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-03-13"
 # Connessione dispositivi
 {: #iotplatform_task}
 
-Prima di poter iniziare a ricevere i dati dai tuoi dispositivi IoT, devi collegarli a {{site.data.keyword.iot_full}}. La connessione di un dispositivo a {{site.data.keyword.iot_short_notm}} implica la registrazione del dispositivo con {{site.data.keyword.iot_short_notm}} e quindi l'utilizzo delle informazioni di registrazione per configurare il dispositivo da collegare a {{site.data.keyword.iot_short_notm}}.
+Prima di poter iniziare a ricevere i dati dai tuoi dispositivi IoT, devi collegarli a  {{site.data.keyword.iot_full}}. La connessione di un dispositivo a {{site.data.keyword.iot_short_notm}} implica la registrazione del dispositivo con {{site.data.keyword.iot_short_notm}} e quindi l'utilizzo delle informazioni di registrazione per configurare il dispositivo da collegare a {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
 ## Prima di cominciare
@@ -35,7 +35,7 @@ Completa la seguente procedura per collegare il tuo dispositivo a {{site.data.ke
 
 La registrazione di un dispositivo implica la classificazione del dispositivo come un tipo dispositivo, dando al dispositivo un nome e fornendo le informazioni sul dispositivo. Quindi fornisci un token di connessione o accetta un token generato da {{site.data.keyword.iot_short_notm}}.
 
-Puoi aggiungere un dispositivo alla volta dal dashboard {{site.data.keyword.iot_short_notm}} o puoi utilizzare l'API [{{site.data.keyword.iot_short_notm}} ![icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} per aggiungere uno o più dispositivi contemporaneamente.
+Puoi aggiungere un dispositivo alla volta dal dashboard {{site.data.keyword.iot_short_notm}} o puoi utilizzare l'API [{{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} per aggiungere uno o più dispositivi contemporaneamente.
 
 Per aggiungere un dispositivo dal dashboard {{site.data.keyword.iot_short_notm}}:
 
@@ -67,7 +67,7 @@ Quando aggiungi il tuo primo dispositivo alla tua organizzazione {{site.data.key
  3. Facoltativo: immetti i metadati e gli attributi per il tipo dispositivo.    
  **Suggerimento:** puoi aggiungere e modificare gli attributi e i metadati successivamente.
  4. Fai clic su **Create** per aggiungere il nuovo tipo dispositivo.
-10. Fai clic su **Next** per avviare il processo di aggiunta del tuo dispositivo. con il tipo dispositivo.
+10. Fai clic su **Next** per avviare il processo di aggiunta del tuo dispositivo con il tipo dispositivo.
 11. Immetti un ID dispositivo, come ad esempio `my_first_device`.  
 L'ID dispositivo viene utilizzato per identificare il dispositivo nel dashboard {{site.data.keyword.iot_short_notm}} ed è anche un parametro obbligatorio per la connessione del tuo dispositivo a {{site.data.keyword.iot_short_notm}}.  
 **Importante:** l'ID del tipo dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
@@ -132,11 +132,10 @@ Questa combinazione di parametri identifica univocamente il tuo dispositivo.
 - Nome utente: use-token-auth  
 Questo valore indica che stai utilizzando l'autorizzazione token.
 - Password: *Token di autenticazione*  
-Questo valore è il token univoco che hai definito o che è stato assegnato al tuo dispositivo quando lo hai registrato.
+Questo valore è il token univoco che hai definito o che è stato assegnato al tuo dispositivo quando lo hai registrato. 
 - Formato argomento dell'evento: iot-2/evt/*event_id*/fmt/*format_string*  
  Dove *event_id* specifica il nome dell'evento visualizzato in {{site.data.keyword.iot_short_notm}} e *format_string* è il formato dell'evento, come ad esempio JSON.
-- Formato del messaggio: JSON
-   
+- Formato messaggio: JSON  
  {{site.data.keyword.iot_short_notm}} supporta diversi formati, come JSON e testo.
 
 Per ulteriori informazioni sulla connessione del tuo dispositivo, consulta [Connettività MQTT per i dispositivi](devices/mqtt.html) nella documentazione tecnica.

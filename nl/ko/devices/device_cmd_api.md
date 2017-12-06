@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-06-08"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -13,10 +13,8 @@ lastupdated: "2017-06-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 디바이스용 HTTP 메시징 API(베타)
+# 디바이스용 HTTP 메시징 API
 {: #api}
-
-**중요:** 디바이스용 {{site.data.keyword.iot_full}} HTTP 메시징 API 기능은 제한된 베타 프로그램의 일부로서만 사용 가능합니다. 향후 업데이트에는 이 기능의 현재 버전과 호환 가능한 변경사항이 포함될 수 있습니다. 시도해 보고 [의견을 보내주십시오. ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}
 
 
 ## 디바이스용 HTTP 메시징 API 문서에 액세스
@@ -35,7 +33,7 @@ lastupdated: "2017-06-08"
 
 MQTT 메시징 프로토콜 외에도 HTTP REST API 명령을 사용하여 {{site.data.keyword.iot_short_notm}}에 HTTP를 통해 이벤트를 공개하도록 디바이스를 구성할 수도 있습니다. 
 
-다음 URL 중 하나를 사용하여 {{site.data.keyword.iot_short_notm}}에 연결된 디바이스에서 `POST` 요청을 제출하십시오. 
+다음 URL 중 하나를 사용하여 {{site.data.keyword.iot_short_notm}}에 연결된 디바이스에서 ``POST`` 요청을 제출하십시오. 
 
 ### 비보안 POST 요청
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
@@ -58,13 +56,13 @@ MQTT 메시징 프로토콜 외에도 HTTP REST API 명령을 사용하여 {{sit
 
 ### Content-Type 요청 헤더
 
-`Content-Type` 요청 헤더는 요청과 함께 제공되어야 합니다. 다음 표에는 지원되는 유형이 {{site.data.keyword.iot_short_notm}} 내부 형식으로 맵핑되는 방법이 표시되어 있습니다. 
+컨텐츠가 JSON이 아닌 경우 `Content-Type` 요청 헤더는 요청과 함께 제공되어야 합니다. 다음 표에는 지원되는 유형이 {{site.data.keyword.iot_short_notm}} 내부 형식으로 맵핑되는 방법이 표시되어 있습니다. 
 
 |Content-Type 헤더|{{site.data.keyword.iot_short_notm}}의 형식|
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml | "xml"
+|application/xml| "xml"
 |application/octet-stream|"bin"
 
 
@@ -73,7 +71,7 @@ MQTT 메시징 프로토콜 외에도 HTTP REST API 명령을 사용하여 {{sit
 
 MQTT 메시징 프로토콜 사용 외에도 HTTP 메시징 API 명령을 사용하여 HTTP를 통해 {{site.data.keyword.iot_short_notm}}에서 이벤트를 명령을 수신하도록 디바이스를 구성할 수도 있습니다. 디바이스는 그 자체에 전달되는 명령을 수신할 수 있습니다. 
 
-다음 URL 중 하나를 사용하여 {{site.data.keyword.iot_short_notm}}에 연결된 디바이스에서 `POST` 요청을 제출하십시오. 
+다음 URL 중 하나를 사용하여 {{site.data.keyword.iot_short_notm}}에 연결된 디바이스에서 ``POST`` 요청을 제출하십시오. 
 
 ### 비보안 POST 요청
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
@@ -83,10 +81,6 @@ MQTT 메시징 프로토콜 사용 외에도 HTTP 메시징 API 명령을 사용
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
 **참고:** 기본 SSL 포트인 443 포트가 보안 HTTP API 호출에 대해 지정될 수도 있습니다. 
-
-{{site.data.keyword.iot_short_notm}}에서 명령을 수신하려면 다음 API를 사용하십시오. 
-
-<pre class="pre"><code class="hljs">/device/types/{deviceType}/devices/{deviceId}/commands/{command}/request</code></pre>
 
 명령을 대기하는 시간의 최대수(초)를 표시하는 정수를 지정하도록 HTTP 요청의 본문에 매개변수 *waitTimeSecs*를 선택적으로 포함시킬 수 있습니다. 
 <pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>

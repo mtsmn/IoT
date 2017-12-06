@@ -8,29 +8,33 @@ Internet of Things Platform
     getting-started.md
 
     {: .topicgroup}
-    Informationen
+    Produktinformation
         iotplatform_overview.md
         feature_overview.md
         reference/standards_and_requirements.md
         reference/bluemix_and_platform.md
+        reference/back_up.md
+        reference/billing.md
         [IoT-Preisrechner](http://iot-cost-calculator.ng.bluemix.net/)
+        reference/quotas.md
 
     {: .topicgroup}
-    Betafunktionen
-        information_management/im_index.md
-        information_management/im_index_scenario.md
-        information_management/im_index_scenario_thing.md
-        gateways/gateway-access-control.md
-        gateways/gw_intro_api.md
-        devices/device_cmd_api.md
-        [Angepasste Domänen (Beta)](reference/security/set_up_certificates.html#custom_domains)
-        [Berichte mit Drilldown-Funktion (Beta)](reference/security/RM_security.html#drill_down)
+    Betaversionen
+        iotplatform_beta_features.md
+                
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     reference/api.md
 
-    [Beispielapp: OpenFridge](https://github.com/IBM/openfridge)
+    {: .topicgroup}
+    Beispielapps
+        [OpenFridge](https://github.com/IBM/openfridge)
+        [Simuliertes Laufband](https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator)
+        [Raspberry PI-basiertes Laufband](https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi)
+        [Node.js-basierte Geräteüberwachung](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-angular)
+        [Widgetbibliotheksbasierte Geräteüberwachung](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-html)
+        [Simulator für mehrere Geräte](https://github.com/ibm-watson-iot/iot-guide-conveyor-multi-simulator)
 
     {: .topicgroup}
     Watson IoT Platform - Sicherheit
@@ -58,6 +62,14 @@ Internet of Things Platform
 
     {: .navgroup id="howto"}
     index.md
+    
+    {: .topicgroup}
+    Einführende Anleitungen
+        getting_started/getting-started-iot-overview.md
+        getting_started/getting-started-iot-conveyor.md
+        getting_started/getting-started-iot-rules.md
+        getting_started/getting-started-iot-monitoring.md
+        getting_started/getting-started-iot-large-scale-simulation.md
 
     {: .topicgroup}
     Verbindung zu Watson IoT Platform
@@ -66,6 +78,17 @@ Internet of Things Platform
         platform_authorization.md
         reference/security/connect_devices_apps_gw.md
 
+    {: .topicgroup}
+    devices/device_sim.md
+
+    {: .topicgroup}
+    Datenmanagement in Watson IoT Platform
+        GA_information_management/ga_im_device_twin.md
+        GA_information_management/ga_im_definitions.md
+        GA_information_management/mapping_expression_language.md
+        GA_information_management/ga_im_example.md
+        GA_information_management/ga_im_index_scenario.md
+        
     {: .topicgroup}
     Verwaltung von Watson IoT Platform
         reference/extensions/index.md
@@ -84,6 +107,8 @@ Internet of Things Platform
         reference/roles_access.md
         reference/app_roles_access.md
         reference/gateway_roles_access.md
+        reference/rlac_overview.md
+        reference/rlac.md     
 
     {: .topicgroup}
     Analyse von IoT-Echtzeitdaten
@@ -94,6 +119,12 @@ Internet of Things Platform
         custom_cards/custom-cards.md
         cloud_analytics.md
         edge_analytics.md
+
+    {: .topicgroup}
+    Analyse archivierter IoT-Daten
+        analytics_integration/historical_data_overview.md
+        analytics_integration/analyzing_with_WA.md
+        analytics_integration/analyzing_with_DSX.md
 
     {: .topicgroup}
     Verwendung von IoT-Beispielen
@@ -142,6 +173,7 @@ Internet of Things Platform
         gateways/mqtt.md
         gateways/libraries/java_cli_gw.md
         gateways/libraries/java_cli_managed_gw.md
+        edge_analytics.md
 
     blockchain/dev_blockchain.md
 
@@ -157,5 +189,6 @@ Internet of Things Platform
     {: .navgroup id="help"}
     ts_index.md
     service_status.md
+    contact.md
     glossary.md
     {: .navgroup-end}

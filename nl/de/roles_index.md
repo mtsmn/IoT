@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-09-16"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -49,9 +49,9 @@ Anwendungsrolle | Beschreibung
 ------------- | -------------
 Standard | Die standardmäßige Anwendungsrolle. Gewährt Zugriff auf den größten Teil der Anwendungsoperationen, jedoch nicht auf Benutzer- oder Rollenoperationen.   
 Operationen | Gewährt Zugriff auf ein breites Spektrum an Operationen, verweigert jedoch den Zugriff auf Subskriptions- oder Publizierungsoperationen.
-Vertrauenswürdige Backend-Anwendung | Bestimmt für Anwendungen, die keine Interaktion vom Systemoperator erfordern. Verweigert Zugriff auf Operationen des Gerätemanagements, auf Organisationsoperationen, Rollenoperationen oder Erweiterungsoperationen.
+Vertrauenswürdige Back-End-Anwendung | Bestimmt für Anwendungen, die keine Interaktion vom Systemoperator erfordern. Verweigert Zugriff auf Operationen des Gerätemanagements, auf Organisationsoperationen, Rollenoperationen oder Erweiterungsoperationen.
 Datenprozessor | Bestimmt für Anwendungen, die Analysen und Datenverarbeitung ausführen. Datenprozessoranwendungen wird eingeschränkter Zugriff auf Organisationsoperationen und Benutzeroperationen gewährt; sie haben jedoch vollständigen Zugriff auf Analyseoperationen einschließlich dem Erstellen und Verwalten von Rollen, Aktionen und Schemas.
-Visualisierung | Bestimmt für Anwendungen, die für das Generieren von Datenvisualisierungen zuständig sind. Visualisierungsanwendungen haben Zugriff auf Live-Datenoperationen und Live-Dashboard-Operationen sowie auf gespeicherte Datenoperationen bzw. Dashboardoperationen.
+Visualisierung | Bestimmt für Anwendungen, die für das Generieren von Datenvisualisierungen zuständig sind. Visualisierungsanwendungen haben Zugriff auf Livedatenoperationen und Operationen für gespeicherte Daten sowie auf Dashboardoperationen.
 Gerät | Bestimmt für Anwendungen, die die Rolle von Geräten annehmen; das bedeutet, sie stellen eine Quelle von Daten bereit, die an {{site.data.keyword.iot_short_notm}} in einer Form gesendet werden, als handele es sich bei den Anwendungen um ein Gerät. Geräteanwendungen wird nur eingeschränkter Zugriff auf Operationen gewährt.
 
 Weitere Informationen dazu, welchen Zugriff auf Operationen Anwendungsrollen haben, finden Sie in [Anwendungsrollen](reference/app_roles_access.html).
@@ -64,7 +64,7 @@ Folgende standardmäßige Gateway-Rollen sind verfügbar:
 
 Gateway-Rolle | Beschreibung
 ------------- | -------------
-Standard | Die Rolle des Standardgateways. Hiermit wird eingeschränkter Zugriff auf Operationen gewährt.
-Privilegiert | Für vertrauenswürde Gateways bestimmt, ermöglicht privilegierten Gateways, Geräte zu {{site.data.keyword.iot_short_notm}} hinzuzufügen. Gewährt Zugriff auf die relevanten Operationen zum Hinzufügen, Aktualisieren und Verwalten von Geräten und Geräteeigenschaften, bietet jedoch keinen Zugriff auf andere Operationen.  
+Standard | Gewährt eingeschränkten Zugriff auf Operationen. Standardgateways sind auf die Ausführung von Aktionen im Namen von Geräten beschränkt, die in der zugewiesenen Ressourcengruppe der Gateways enthalten sind.
+Privilegiert | Die Rolle des Standardgateways. Für vertrauenswürde Gateways bestimmt, ermöglicht privilegierten Gateways, Geräte zu {{site.data.keyword.iot_short_notm}} hinzuzufügen. Gewährt Zugriff auf die relevanten Operationen zum Hinzufügen, Aktualisieren und Verwalten von Geräten und Geräteeigenschaften, bietet jedoch keinen Zugriff auf andere Operationen.  
 
 Weitere Informationen dazu, welchen Zugriff auf Operationen Gateway-Rollen haben, finden Sie in [Gateway-Rollen](reference/gateway_roles_access.html).

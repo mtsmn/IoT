@@ -273,7 +273,7 @@ Per impostazione predefinita, le applicazioni si sottoscrivono a tutti gli event
 ### Gestione degli eventi dai dispositivi
 
 
-Per elaborare gli eventi ricevuti dalle tue sottoscrizioni, implementa un metodo di callback dell'evento. Il client dell'applicazione {{site.data.keyword.iot_short_notm}} invia l'evento `deviceEvent`. Questa funzione ha le seguenti proprietà:
+Per elaborare gli eventi ricevuti dalle tue sottoscrizioni, implementa un metodo di callback dell'evento. Il client dell'applicazione {{site.data.keyword.iot_short_notm}} invia l'evento ``deviceEvent``. Questa funzione ha le seguenti proprietà:
 
 - deviceType
 - deviceId

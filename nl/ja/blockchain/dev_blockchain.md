@@ -2,9 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-14"
-
----
+lastupdated: "2017-03-14"---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
@@ -57,7 +55,8 @@ Go 言語のチェーン・コードの実行可能ファイル形式で、ス�
 
 [https://github.com/ibm-watson-iot/blockchain-samples ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/blockchain-samples){: new_window} からいくつかのサンプル・コントラクトをダウンロードできます。これらのサンプル・コントラクトを土台として使用し、デプロイ可能なチェーン・コードに独自のユースケースを組み込んで開発することができます。
 
-|サンプル・コントラクト |説明 |
+|サンプル・コントラクト|説明
+|
 |:---|:---|
 |[基本: シンプル・コントラクト ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | ブロック・チェーンのデバイス・アセット・データを追跡して格納するための簡略版の拡張コントラクト
 |[拡張: IoT 汎用サンプル・コントラクト ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | データ・モデルと動作に数多くの機能や**トレード・レーン**の特色を追加した拡張サンプル・コントラクト|
@@ -99,7 +98,7 @@ Go 言語のチェーン・コードの実行可能ファイル形式で、ス�
 
       サービス資格情報の例:
      ```json
-     {
+  {
       "peers": [
       {
        "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",

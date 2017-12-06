@@ -1,8 +1,6 @@
 ---
 
-copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-15"
+copyright: years: 2016, 2017 lastupdated: "2017-06-13"
 ---
 
 {:new_window: target="\_blank"}
@@ -18,7 +16,7 @@ Os certificados são usados para autenticação de dispositivo ou para substitui
 
 Para configurar certificados e acesso ao servidor para dispositivos, o operador do sistema registra os certificados de autoridade de certificação (CA) associados e, como opção, registra os certificados do servidor de mensagens na plataforma {{site.data.keyword.iot_short_notm}}.
 
-Para obter informações sobre como usar as APIs para gerenciar certificados de CA e certificados do servidor de sistema de mensagens, veja [APIs de autenticação e autorização do IBM Watson IoT Platform ![Ícone de link externo](../../../../icons/launch-glyph.svg)"Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
+Para obter informações sobre como usar as APIs para gerenciar certificados de CA e certificados do servidor de sistema de mensagens, consulte [APIs de autenticação e autorização do IBM Watson IoT Platform ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
 
 ## Certificados de autoridade de certificação
 Os certificados de autoridade de certificação permitem que a organização reconheça os certificados de cliente em dispositivos como confiáveis para que os dispositivos possam se conectar ao servidor.
@@ -31,7 +29,7 @@ Se você incluir um certificado de CA ou substituir o certificado do servidor de
 
 Os certificados individuais de cliente (dispositivo ou gateway) permanecem nos dispositivos e não são transferidos por upload para a plataforma. O certificado de assinatura de CA usado para assinar todos os certificados de dispositivo e gateway é o único certificado que você transfere por upload para a plataforma. Se você está usando certificados autoassinados do servidor de sistema de mensagens, deve-se fazer upload dos certificados raiz e intermediários usados para assinar o certificado de cliente (cert.pem).
 
-O certificado de dispositivo ou gateway individual que você assina com o certificado de CA deve ter o ID do dispositivo ou ID do gateway inserido como Nome Comum (CN) ou SubjectAltName no certificado. 
+O certificado de dispositivo ou gateway individual que você assina com o certificado de CA deve ter o ID do dispositivo ou ID do gateway inserido como Nome Comum (CN) ou SubjectAltName no certificado.
 
 Para dispositivos, o formato de campo **CN** é `CN=d:devtype:devid` e o formato de campo **SubjectAltName** é `SubjectAltName=email:d:*devtype:devid*`, em que `email:d` é constante e `*devtype*` é o Tipo de dispositivo do dispositivo e `*devid*` é o ID do dispositivo na plataforma.
 
@@ -39,7 +37,7 @@ Para gateways, o formato de campo **CN** é `CN=g:typeId:deviceId` e o formato d
 
 Nota: não inclua o `orgId` nos campos **CN** ou **SubjectAltName** para certificados de dispositivo ou gateway. O `orgId` deve ser fornecido como parte das informações de SNI que são fornecidas pela implementação do cliente ao se conectar ao servidor de sistema de mensagens.
 
-Para obter mais informações sobre certificados de cliente, veja [a orientação Conectar o Raspberry Pi ao IBM Watson IoT Platform usando certificados do lado do cliente ![Ícone de link externo](../../../../icons/launch-glyph.svg) "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
+Para obter mais informações sobre certificados de cliente, consulte [a receita Conectar o Raspberry Pi ao IBM Watson IoT Platform usando certificados do lado do cliente ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
 
 ## Certificados do servidor de mensagens
 
@@ -51,7 +49,7 @@ O exemplo a seguir mostra uma CN válido para o certificado do servidor:
 
 `mtxpd0.messaging.internetofthings.ibmcloud.com`
 
-Para obter mais informações sobre certificados do servidor de sistema de mensagens, veja [a orientação Conectar o Raspberry Pi ao IBM Watson IoT Platform usando o certificado de servidor autoassinado ![Ícone de link externo](../../../../icons/launch-glyph.svg) "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
+Para obter mais informações sobre certificados do servidor de sistema de mensagens, consulte [a receita Conectar o Raspberry Pi ao IBM Watson IoT Platform usando certificado de servidor autoassinado ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
 
 ### Domínios customizados (beta)
 {: #custom_domains}
@@ -60,11 +58,11 @@ Para obter mais informações sobre certificados do servidor de sistema de mensa
 
 Como parte do recurso Beta, os certificados do servidor de sistema de mensagens aceitam domínios customizados. O formato a seguir deve ser seguido para o CN ou SubjectAltName do certificado:
 
-- `orgId.messaging<custom domain>`
+- `orgId.messaging.<custom domain>`
 
 O campo **CN** aceita caracteres curingas para domínios customizados, conforme mostrado no exemplo a seguir:
 
-- `CN=*.messaging.fab-iot.com`
+- `CN=*.messaging.mywiotpcustomdomain.com`
 
 **Importante**: para domínios customizados, um serviço DNS externo é necessário para resolver o domínio customizado para o servidor de sistema de mensagens {{site.data.keyword.iot_full}}. Esse serviço DNS não é fornecido pela plataforma.
 

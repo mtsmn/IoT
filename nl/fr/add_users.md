@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -139,6 +139,10 @@ Il est possible de bloquer l'accès des utilisateurs à l'organisation {{site.da
 1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Membres** dans la barre de navigation sur la gauche.
 2. Cliquez sur le bouton à bascule en regard de l'utilisateur dont vous souhaitez bloquer l'accès à l'organisation {{site.data.keyword.iot_short_notm}}.
 
+## Limitation de l'accès utilisateur (bêta)
+{: #limiting-users}
+
+Le contrôle d'accès au niveau de la ressource permet de limiter l'accès aux terminaux d'une organisation. Vous pouvez utiliser les groupes de ressources pour spécifier les terminaux que chaque utilisateur ou clé d'APi peut gérer. Pour plus d'informations sur la façon de configurer le contrôle d'accès au niveau de la ressource, voir [Configuration du contrôle d'accès au niveau de la ressource](reference/rlac.html#configure_RLAC).
 
 ## Retrait d'utilisateurs
 {: #removing-users}

@@ -309,7 +309,7 @@ boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, Co
 
 Pour visualiser la totalité du code, voir l'exemple de terminal [HttpDeviceEventPublish ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")].{: new_window}
 
-En fonction des paramètres définis dans le fichier de propriétés, la méthode `publishEventOverHTTP()` publie l'événement en mode Quickstart ou en mode de flux enregistré. Lorsque l'ID d'organisation défini dans le fichier de propriétés a pour valeur `quickstart`, la méthode `publishEventOverHTTP()` publie l'événement sur le service Quickstart de l'exemple de terminal au format HTTP normal. Lorsqu'une organisation enregistrée valide est spécifiée dans le fichier de propriétés, les événements sont publiés de manière sécurisée via HTTPS.
+En fonction des paramètres définis dans le fichier de propriétés, la méthode ``publishEventOverHTTP()`` publie l'événement en mode Quickstart ou en mode de flux enregistré. Lorsque l'ID d'organisation défini dans le fichier de propriétés a pour valeur ``quickstart``, la méthode ``publishEventOverHTTP()`` publie l'événement sur le service Quickstart de l'exemple de terminal au format HTTP normal. Lorsqu'une organisation enregistrée valide est spécifiée dans le fichier de propriétés, les événements sont publiés de manière sécurisée via HTTPS.
 
 Le protocole HTTP fournit une distribution de type 'une fois tout au plus', semblable au niveau de qualité de service 'une fois tout au plus' (QoS 0) du protocole MQTT. Lorsque vous utilisez la distribution de type 'une fois tout au plus' pour publier des événements, l'application doit implémenter une logique de relance au cas où une erreur se produirait.
 
@@ -345,7 +345,7 @@ import com.ibm.iotf.client.device.DeviceClient;
 //Implement the CommandCallback class to provide the way in which you want the command to be handled
 class MyNewCommandCallback implements CommandCallback, Runnable {
 
-    // A queue to hold & process the commands for smooth handling of MQTT messages
+    // A queue to hold &  process the commands for smooth handling of MQTT messages
     private BlockingQueue<Command> queue = new LinkedBlockingQueue<Command>();
 
     /**

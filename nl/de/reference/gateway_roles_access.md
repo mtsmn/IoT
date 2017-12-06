@@ -55,14 +55,14 @@ Diagnoseprotokolle anzeigen|-|-
 
 Protokolloperationen || Gateway-Rollen|
 :--------: | ---------------------|------------------------
-           | **Standardgateway** | **Priviligiertes Gateway**
+           | **Standardgateway** | **Privilegiertes Gateway**
 Serverprotokolle anzeigen|-|-
 
 ### Cacheoperationen {: #gateway-cache-ops}
 
 Cacheoperationen || Gateway-Rollen|
 :--------: | ---------------------|------------------------
-           | **Standardgateway** | **Priviligiertes Gateway**
+           | **Standardgateway** | **Privilegiertes Gateway**
 Livedaten anzeigen (Ereigniscache)|-|-
 Livedaten verwalten (Ereigniscache)|-|-
 
@@ -72,7 +72,7 @@ Livedaten verwalten (Ereigniscache)|-|-
 Organisationsoperationen || Gateway-Rollen|
 :--------: | ---------------------|------------------------
            | **Standardgateway** | **Privilegiertes Gateway**
-Speicherparameter konfigurieren|-|-
+Konfigurieren von Speicherparametern|-|-
 Authentifizierungsprovider konfigurieren|-|-
 Mailkonfiguration erstellen, anzeigen, aktualisieren oder löschen|-|-
 Verfügbare Mail-Provider anzeigen|-|-

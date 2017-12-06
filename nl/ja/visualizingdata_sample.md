@@ -2,9 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-20"
-
----
+lastupdated: "2017-03-20"---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
@@ -47,7 +45,7 @@ cf login -u <your_bluemix_login_id>
 ```
 デフォルトの組織とスペースを使用していない場合は、次のコマンドを使用できます。
 ```
-cf target-o <your_bluemix_org> -s dev
+cf target -o <your_bluemix_org> -s dev
 ```
 
 5. `manifest.yml` ファイルを編集して、ホスト名とアプリケーション名を以下の形式を使用して更新します。

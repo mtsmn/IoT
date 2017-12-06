@@ -36,8 +36,8 @@ Der {{site.data.keyword.ssoshort}}-Service kann nicht direkt an andere Services 
 4. Für die Anwendung {{site.data.keyword.sdk4nodefull}} muss nun ein erneutes Staging ausgeführt werden.
 5. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf die Anwendung {{site.data.keyword.sdk4nodefull}}.
 6. Wählen Sie den {{site.data.keyword.ssoshort}}-Service aus und klicken Sie auf **Integrieren**.
-7. Geben Sie die URL an, an die die Rückgabe erfolgen soll:
-`https://<Organisations-ID>.internetofthings.ibmcloud.com/get-ibmsso-access-token`, wobei `<Organisations-ID>` die ID Ihrer {{site.data.keyword.iot_short_notm}}-Organisation ist.
+7. Geben Sie die Antwort-URL ein:
+`https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token`. Dabei steht `<orgid>` für Ihre {{site.data.keyword.iot_short_notm}}-Organisations-ID.
 
 ## {{site.data.keyword.iot_short_notm}} für {{site.data.keyword.ssoshort}} konfigurieren
 
@@ -77,7 +77,7 @@ Nach dem Binden und Konfigurieren der Anwendung {{site.data.keyword.sdk4nodefull
 
 ### {{site.data.keyword.iot_short_notm}} für {{site.data.keyword.ssoshort}} mithilfe der API konfigurieren
 
-Zum Konfigurieren von {{site.data.keyword.iot_short_notm}} für {{site.data.keyword.ssoshort}} mithilfe der API muss die Methode `POST` und die URL `https://<Organisations-ID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig` lauten, wobei `<Organisations-ID>` die ID Ihrer {{site.data.keyword.iot_short_notm}}-Organisation ist. Die Berechtigung muss 'No Auth' oder 'Basic Auth' sein, wobei die ID und das Token Ihres API-Schlüssels verwendet werden. Der Hauptteil muss Konfigurationsdaten für `secret`, `clientId` und `issuerIdentifier` als JSON im folgenden Format enthalten:
+Um {{site.data.keyword.iot_short_notm}} for {{site.data.keyword.ssoshort}} mithilfe der API zu konfigurieren, müssen Sie als Methode `POST` und als URL `https://<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig` verwenden. Dabei steht `<orgID>` für Ihre {{site.data.keyword.iot_short_notm}}-Organisations-ID. Die Berechtigung muss 'No Auth' oder 'Basic Auth' sein, wobei die ID und das Token Ihres API-Schlüssels verwendet werden. Der Hauptteil muss Konfigurationsdaten für `secret`, `clientId` und `issuerIdentifier` als JSON im folgenden Format enthalten:
 ```
 {
  "secret": "myclientpwd",

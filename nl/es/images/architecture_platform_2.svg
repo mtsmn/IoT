@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="architecture_platform_2.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="241.76543"
+     inkscape:cy="918.94366"
+     inkscape:document-units="mm"
+     inkscape:current-layer="Layer_3"
+     showgrid="false"
+     inkscape:snap-text-baseline="false"
+     inkscape:window-width="1616"
+     inkscape:window-height="1027"
+     inkscape:window-x="56"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1034"
+       transform="matrix(0.26458333,0,0,0.26458333,-26.599346,4.9925292)">
+      <g
+         data-name="Layer 1"
+         id="Layer_1">
+        <path
+           style="fill:#70caee"
+           d="M 178.62,332.74 H 159.5 v -0.07 a 8.78,8.78 0 1 1 2.74,-17.33 9.66,9.66 0 0 1 19.21,0.42 8.78,8.78 0 0 1 -2,16.91 v 0.06 h -0.8 z m -18.06,-1.6 h 18 a 7.18,7.18 0 0 0 1.85,-14 l -0.55,-0.17 v -0.57 a 8.06,8.06 0 0 0 -16.11,0 v 1.06 l -1,-0.31 a 7.18,7.18 0 1 0 -2.4,14 h 0.22 z"
+           id="path13593"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         data-name="Layer 2"
+         id="Layer_2">
+        <rect
+           id="rect14"
+           style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
+           transform="rotate(-0.32,60.706607,61.046607)"
+           height="59"
+           width="116.82"
+           y="31.16"
+           x="2.5" />
+        <rect
+           id="rect16"
+           style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
+           transform="rotate(-0.32,60.501607,134.45663)"
+           height="59"
+           width="117.49"
+           y="105.16"
+           x="2.1600001" />
+        <rect
+           id="rect18"
+           style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
+           transform="matrix(1,-0.01,0.01,1,-1.16,0.34)"
+           height="59"
+           width="117.1"
+           y="179.16"
+           x="2.3599999" />
+        <rect
+           id="rect20"
+           style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
+           transform="rotate(-0.32,66.093073,55.690142)"
+           height="59"
+           width="116.82"
+           y="26.16"
+           x="7.5" />
+        <rect
+           id="rect22"
+           style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
+           transform="rotate(-0.32,65.888073,129.10017)"
+           height="59"
+           width="117.49"
+           y="100.16"
+           x="7.1599998" />
+        <rect
+           id="rect24"
+           style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
+           transform="matrix(1,-0.01,0.01,1,-1.13,0.37)"
+           height="59"
+           width="117.1"
+           y="174.16"
+           x="7.3600001" />
+        <rect
+           id="rect26"
+           style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
+           transform="rotate(-0.32,69.68905,50.328677)"
+           height="59"
+           width="116.82"
+           y="21.16"
+           x="12.5" />
+        <text
+           id="text52"
+           style="font-size:11.00000014px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';fill:#1d1d1b;-inkscape-font-specification:'HelveticaNeue-Medium, Helvetica Neue, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+           transform="translate(39.11,69.85)">
+          <tspan
+             sodipodi:role="line"
+             id="tspan1038">Aplicaciones</tspan>
+        </text>
+        <g
+           id="g72">
+          <g
+             id="g58">
+            <rect
+               id="rect54"
+               style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+               height="7"
+               width="24"
+               y="28.66"
+               x="58.91" />
+            <circle
+               id="circle56"
+               style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+               r="1.25"
+               cy="32.16"
+               cx="78.160004" />
+          </g>
+          <g
+             id="g64">
+            <rect
+               id="rect60"
+               style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+               height="7"
+               width="24"
+               y="37.66"
+               x="58.91" />
+            <circle
+               id="circle62"
+               style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+               r="1.25"
+               cy="41.16"
+               cx="78.160004" />
+          </g>
+          <g
+             id="g70">
+            <rect
+               id="rect66"
+               style="fill:none;stroke:#ffffff;stroke-width:0.93541437px;stroke-miterlimit:10"
+               height="7"
+               width="24"
+               y="46.66"
+               x="58.91" />
+            <circle
+               id="circle68"
+               style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+               r="1.25"
+               cy="50.16"
+               cx="78.160004" />
+          </g>
+        </g>
+        <rect
+           id="rect74"
+           style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
+           transform="rotate(-0.32,71.274538,123.7437)"
+           height="59"
+           width="117.49"
+           y="95.160004"
+           x="12.16" />
+        <text
+           id="text94"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';-inkscape-font-specification:'HelveticaNeue-Medium, Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1d1d1b"
+           x="32.174286"
+           y="143.85001">
+          <tspan
+             sodipodi:role="line"
+             id="tspan1040"
+             x="32.174286"
+             y="143.85001">Dispositivos IoT</tspan>
+        </text>
+        <rect
+           id="rect96"
+           style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
+           transform="matrix(1,-0.01,0.01,1,-1.1,0.4)"
+           height="59"
+           width="117.1"
+           y="169.16"
+           x="12.36" />
+        <text
+           id="text118"
+           style="font-size:11.00000014px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';fill:#1d1d1b;-inkscape-font-specification:'HelveticaNeue-Medium, Helvetica Neue, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+           transform="translate(36.69,217.85)">
+          <tspan
+             sodipodi:role="line"
+             id="tspan1042">Pasarelas IoT</tspan>
+        </text>
+        <rect
+           id="rect120"
+           style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
+           height="70"
+           width="127.5"
+           y="242.16"
+           x="2.4100001" />
+        <text
+           id="text174"
+           style="font-size:11.00000014px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.04367898em;fill:#1d1d1b;-inkscape-font-specification:'HelveticaNeue-Medium, Helvetica Neue, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+           transform="translate(21.17,290.85)">
+          <tspan
+             sodipodi:role="line"
+             id="tspan1050">Panel de control de</tspan>
+          <tspan
+             sodipodi:role="line"
+             id="tspan1052">Watson IoT Platform</tspan>
+        </text>
+        <rect
+           id="rect176"
+           style="fill:#f0f0ef"
+           height="286"
+           width="438"
+           y="26"
+           x="213" />
+        <text
+           id="text198"
+           style="font-weight:700;font-size:12px;font-family:HelveticaNeue-Bold, 'Helvetica Neue';fill:#1d1d1b"
+           transform="translate(244,20.5)">
+          <tspan
+             id="tspan178"
+             style="letter-spacing:0.00325521em">I</tspan>
+          <tspan
+             id="tspan180"
+             style="letter-spacing:0.00130208em"
+             y="0"
+             x="3.5799999">B</tspan>
+          <tspan
+             id="tspan182"
+             style="letter-spacing:0.009847em"
+             y="0"
+             x="12.04">M</tspan>
+          <tspan
+             id="tspan184"
+             y="0"
+             x="23.040001">®</tspan>
+          <tspan
+             id="tspan186"
+             style="letter-spacing:0.00504557em"
+             y="0"
+             x="35.98">Bl</tspan>
+          <tspan
+             id="tspan188"
+             style="letter-spacing:0.00838216em"
+             y="0"
+             x="47.650002">u</tspan>
+          <tspan
+             id="tspan190"
+             style="letter-spacing:0.00537109em"
+             y="0"
+             x="54.860001">e</tspan>
+          <tspan
+             id="tspan192"
+             style="letter-spacing:0.00415039em"
+             y="0"
+             x="61.82">m</tspan>
+          <tspan
+             id="tspan194"
+             style="letter-spacing:0.0090332em"
+             y="0"
+             x="72.739998">i</tspan>
+          <tspan
+             id="tspan196"
+             style="letter-spacing:-0.00008138em"
+             y="0"
+             x="75.940002">x</tspan>
+        </text>
+        <text
+           id="text234"
+           style="font-weight:700;font-size:12px;font-family:HelveticaNeue-Bold, 'Helvetica Neue';fill:#1d1d1b"
+           transform="translate(244,72.5)">
+          <tspan
+             id="tspan200"
+             style="letter-spacing:-0.02612305em">W</tspan>
+          <tspan
+             id="tspan202"
+             style="letter-spacing:0.00651042em"
+             y="0"
+             x="11.01">a</tspan>
+          <tspan
+             id="tspan204"
+             style="letter-spacing:0.0139974em"
+             y="0"
+             x="17.98">t</tspan>
+          <tspan
+             id="tspan206"
+             style="letter-spacing:0.00260417em"
+             y="0"
+             x="22.370001">s</tspan>
+          <tspan
+             id="tspan208"
+             style="letter-spacing:0.00333659em"
+             y="0"
+             x="28.85">o</tspan>
+          <tspan
+             id="tspan210"
+             style="letter-spacing:-0.06022136em"
+             y="0"
+             x="36.220001">n</tspan>
+          <tspan
+             id="tspan212"
+             y="0"
+             x="42.610001">™</tspan>
+          <tspan
+             id="tspan214"
+             style="letter-spacing:0.00227865em"
+             y="0"
+             x="57.950001">I</tspan>
+          <tspan
+             id="tspan216"
+             style="letter-spacing:-0.08357748em"
+             y="0"
+             x="61.52">o</tspan>
+          <tspan
+             id="tspan218"
+             y="0"
+             x="67.839996">T</tspan>
+          <tspan
+             id="tspan220"
+             style="letter-spacing:-0.00553385em"
+             y="0"
+             x="78.510002">P</tspan>
+          <tspan
+             id="tspan222"
+             style="letter-spacing:0.00691732em"
+             y="0"
+             x="86.449997">la</tspan>
+          <tspan
+             id="tspan224"
+             style="letter-spacing:0.03157552em"
+             y="0"
+             x="96.599998">t</tspan>
+          <tspan
+             id="tspan226"
+             style="letter-spacing:-0.00301107em"
+             y="0"
+             x="101.2">f</tspan>
+          <tspan
+             id="tspan228"
+             style="letter-spacing:0.00333659em"
+             y="0"
+             x="105.16">o</tspan>
+          <tspan
+             id="tspan230"
+             style="letter-spacing:0.00854492em"
+             y="0"
+             x="112.53">r</tspan>
+          <tspan
+             id="tspan232"
+             style="letter-spacing:-0.00008138em"
+             y="0"
+             x="117.3">m</tspan>
+        </text>
+        <line
+           id="line236"
+           style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+           y2="187"
+           x2="81"
+           y1="187"
+           x1="62" />
+        <line
+           id="line238"
+           style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+           y2="194"
+           x2="81"
+           y1="194"
+           x1="72" />
+        <line
+           id="line240"
+           style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+           y2="194"
+           x2="72"
+           y1="187.05"
+           x1="67.050003" />
+        <g
+           id="g246">
+          <circle
+             id="circle242"
+             style="fill:#6fc9ee"
+             r="1.5"
+             cy="187"
+             cx="62" />
+          <path
+             id="path244"
+             style="fill:#ffffff"
+             d="m 62,186 a 1,1 0 1 1 -1,1 1,1 0 0 1 1,-1 m 0,-1 a 2,2 0 1 0 2,2 2,2 0 0 0 -2,-2 z"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g252">
+          <circle
+             id="circle248"
+             style="fill:#6fc9ee"
+             r="1.5"
+             cy="187"
+             cx="72" />
+          <path
+             id="path250"
+             style="fill:#ffffff"
+             d="m 72,186 a 1,1 0 1 1 -1,1 1,1 0 0 1 1,-1 m 0,-1 a 2,2 0 1 0 2,2 2,2 0 0 0 -2,-2 z"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g258">
+          <circle
+             id="circle254"
+             style="fill:#6fc9ee"
+             r="1.5"
+             cy="187"
+             cx="81" />
+          <path
+             id="path256"
+             style="fill:#ffffff"
+             d="m 81,186 a 1,1 0 1 1 -1,1 1,1 0 0 1 1,-1 m 0,-1 a 2,2 0 1 0 2,2 2,2 0 0 0 -2,-2 z"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g264">
+          <circle
+             id="circle260"
+             style="fill:#6fc9ee"
+             r="1.5"
+             cy="194"
+             cx="81" />
+          <path
+             id="path262"
+             style="fill:#ffffff"
+             d="m 81,193 a 1,1 0 1 1 -1,1 1,1 0 0 1 1,-1 m 0,-1 a 2,2 0 1 0 2,2 2,2 0 0 0 -2,-2 z"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g270">
+          <circle
+             id="circle266"
+             style="fill:#6fc9ee"
+             r="1.5"
+             cy="194"
+             cx="72" />
+          <path
+             id="path268"
+             style="fill:#ffffff"
+             d="m 72,193 a 1,1 0 1 1 -1,1 1,1 0 0 1 1,-1 m 0,-1 a 2,2 0 1 0 2,2 2,2 0 0 0 -2,-2 z"
+             inkscape:connector-curvature="0" />
+        </g>
+        <rect
+           id="rect272"
+           style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+           height="24.66"
+           width="24"
+           y="250"
+           x="58.91" />
+      </g>
+      <g
+         data-name="Layer 3"
+         id="Layer_3">
+        <rect
+           id="rect275"
+           style="fill:#6fc9ee"
+           height="186"
+           width="285"
+           y="78"
+           x="244" />
+        <text
+           id="text297"
+           style="font-size:10px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';fill:#1d1d1b"
+           transform="translate(467.34,114.57)">
+          <tspan
+             id="tspan277"
+             style="letter-spacing:0.01162109em">D</tspan>
+          <tspan
+             id="tspan279"
+             style="letter-spacing:-0.00507812em"
+             y="0"
+             x="7.3400002">e</tspan>
+          <tspan
+             id="tspan281"
+             style="letter-spacing:0.00791016em"
+             y="0"
+             x="12.84">vi</tspan>
+          <tspan
+             id="tspan283"
+             style="letter-spacing:0.00849609em"
+             y="0"
+             x="20.6">c</tspan>
+          <tspan
+             id="tspan285"
+             y="0"
+             x="26.25">e</tspan>
+          <tspan
+             id="tspan287"
+             style="letter-spacing:0.01386719em"
+             y="12"
+             x="3.6099999">S</tspan>
+          <tspan
+             id="tspan289"
+             style="letter-spacing:0.01523438em"
+             y="12"
+             x="10.23">t</tspan>
+          <tspan
+             id="tspan291"
+             style="letter-spacing:0.00605469em"
+             y="12"
+             x="13.71">a</tspan>
+          <tspan
+             id="tspan293"
+             style="letter-spacing:-0.00253906em"
+             y="12"
+             x="19.33">t</tspan>
+          <tspan
+             id="tspan295"
+             y="12"
+             x="22.639999">e</tspan>
+        </text>
+        <text
+           id="text319"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';-inkscape-font-specification:'HelveticaNeue-Medium, Helvetica Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1d1d1b"
+           x="542.89001"
+           y="173.28">
+          <tspan
+             sodipodi:role="line"
+             id="tspan1068"
+             x="542.89001"
+             y="173.28">Almacenes de datos</tspan>
+        </text>
+        <path
+           id="path321"
+           style="fill:#f0f0ef"
+           d="m 513,95 v 43 H 453.5 V 95 H 513 m 1,-1 h -61.5 v 45 H 514 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path323"
+           style="fill:#f0f0ef"
+           d="m 513,205 v 43 H 453.5 V 205 H 513 m 1,-1 h -61.5 v 45 H 514 Z"
+           inkscape:connector-curvature="0" />
+        <text
+           id="text353"
+           style="font-size:10px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';fill:#1d1d1b"
+           transform="translate(458.64,223.68)">
+          <tspan
+             id="tspan325"
+             style="letter-spacing:0.02314453em">L</tspan>
+          <tspan
+             id="tspan327"
+             style="letter-spacing:0.01572266em"
+             y="0"
+             x="5.9699998">a</tspan>
+          <tspan
+             id="tspan329"
+             style="letter-spacing:0.01191406em"
+             y="0"
+             x="11.69">s</tspan>
+          <tspan
+             id="tspan331"
+             y="0"
+             x="17">t</tspan>
+          <tspan
+             id="tspan333"
+             style="letter-spacing:-0.00878906em"
+             y="0"
+             x="23.110001">E</tspan>
+          <tspan
+             id="tspan335"
+             style="letter-spacing:-0.01035156em"
+             y="0"
+             x="29.32">v</tspan>
+          <tspan
+             id="tspan337"
+             style="letter-spacing:0.01201172em"
+             y="0"
+             x="34.41">e</tspan>
+          <tspan
+             id="tspan339"
+             style="letter-spacing:0.00566406em"
+             y="0"
+             x="40.09">n</tspan>
+          <tspan
+             id="tspan341"
+             y="0"
+             x="45.880001">t</tspan>
+          <tspan
+             id="tspan343"
+             style="letter-spacing:0.00615234em"
+             y="12"
+             x="9.6400003">C</tspan>
+          <tspan
+             id="tspan345"
+             style="letter-spacing:0.00751953em"
+             y="12"
+             x="16.92">a</tspan>
+          <tspan
+             id="tspan347"
+             style="letter-spacing:0.00839844em"
+             y="12"
+             x="22.549999">c</tspan>
+          <tspan
+             id="tspan349"
+             style="letter-spacing:0.00742187em"
+             y="12"
+             x="28.200001">h</tspan>
+          <tspan
+             id="tspan351"
+             y="12"
+             x="34.009998">e</tspan>
+        </text>
+        <text
+           id="text359"
+           style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.00423177em;fill:#1d1d1b"
+           transform="translate(162.45,52)">A<tspan
+   id="tspan355"
+   style="letter-spacing:-0.02354601em"
+   y="0"
+   x="5.96">P</tspan>
+<tspan
+   id="tspan357"
+   style="letter-spacing:-0.01996528em"
+   y="0"
+   x="11.76">I</tspan>
+</text>
+        <text
+           id="text367"
+           style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.01085069em;fill:#1d1d1b"
+           transform="translate(157.97,281.89)">H<tspan
+   id="tspan361"
+   style="letter-spacing:0.02105035em"
+   y="0"
+   x="6.4000001">T</tspan>
+<tspan
+   id="tspan363"
+   style="letter-spacing:-0.01128472em"
+   y="0"
+   x="11.93">T</tspan>
+<tspan
+   id="tspan365"
+   style="letter-spacing:-0.02007378em"
+   y="0"
+   x="17.16">P</tspan>
+</text>
+        <text
+           id="text383"
+           style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.00954861em;fill:#1d1d1b"
+           transform="translate(153.81,344)">I<tspan
+   id="tspan369"
+   style="letter-spacing:-0.01019965em"
+   y="0"
+   x="2.4200001">n</tspan>
+<tspan
+   id="tspan371"
+   style="letter-spacing:-0.01822917em"
+   y="0"
+   x="7.4899998">t</tspan>
+<tspan
+   id="tspan373"
+   style="letter-spacing:-0.00368924em"
+   y="0"
+   x="10.32">e</tspan>
+<tspan
+   id="tspan375"
+   style="letter-spacing:0.00249566em"
+   y="0"
+   x="15.29">r</tspan>
+<tspan
+   id="tspan377"
+   style="letter-spacing:-0.00835503em"
+   y="0"
+   x="18.48">n</tspan>
+<tspan
+   id="tspan379"
+   style="letter-spacing:-0.01009115em"
+   y="0"
+   x="23.58">e</tspan>
+<tspan
+   id="tspan381"
+   style="letter-spacing:-0.01996528em"
+   y="0"
+   x="28.49">t</tspan>
+</text>
+        <g
+           id="g389">
+          <polyline
+             id="polyline385"
+             style="fill:none;stroke:#000000;stroke-miterlimit:10"
+             points="427 174.16 481 174.16 481 147.18" />
+          <polygon
+             id="polygon387"
+             points="476.01,148.63 485.99,148.63 481,140 " />
+        </g>
+        <g
+           id="g395">
+          <line
+             id="line391"
+             style="fill:none;stroke:#000000;stroke-miterlimit:10"
+             y2="198.16"
+             x2="551.82001"
+             y1="198.16"
+             x1="529" />
+          <polygon
+             id="polygon393"
+             points="550.37,193.17 550.37,203.15 559,198.16 " />
+        </g>
+        <g
+           id="g427">
+          <g
+             id="g405">
+            <path
+               id="path397"
+               style="fill:#f0f0ef;stroke:#1d1d1b;stroke-miterlimit:10"
+               d="m 565.5,202.5 v 5.5 c 0,1.93 5.82,3.5 13,3.5 7.18,0 13,-1.57 13,-3.5 v -5.5"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g403">
+              <path
+                 id="path399"
+                 style="fill:#f0f0ef"
+                 d="m 578.5,205.62 c -8,0 -13,-1.81 -13,-3.12 0,-1.31 4.94,-3.12 13,-3.12 8.06,0 13,1.81 13,3.12 0,1.31 -4.96,3.12 -13,3.12 z"
+                 inkscape:connector-curvature="0" />
+              <path
+                 id="path401"
+                 style="fill:#1d1d1b"
+                 d="m 578.5,199.9 c 8.29,0 12.33,1.88 12.46,2.59 -0.13,0.72 -4.17,2.6 -12.46,2.6 -8.29,0 -12.33,-1.88 -12.46,-2.59 0.13,-0.72 4.17,-2.6 12.46,-2.6 m 0,-1 c -7.46,0 -13.5,1.63 -13.5,3.63 0,2 6,3.63 13.5,3.63 7.5,0 13.5,-1.63 13.5,-3.63 0,-2 -6,-3.63 -13.5,-3.63 z"
+                 inkscape:connector-curvature="0" />
+            </g>
+          </g>
+          <g
+             id="g415">
+            <path
+               id="path407"
+               style="fill:#f0f0ef;stroke:#1d1d1b;stroke-miterlimit:10"
+               d="m 565.5,194.5 v 5.5 c 0,1.93 5.82,3.5 13,3.5 7.18,0 13,-1.57 13,-3.5 v -5.5"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g413">
+              <path
+                 id="path409"
+                 style="fill:#f0f0ef"
+                 d="m 578.5,197.62 c -8,0 -13,-1.81 -13,-3.12 0,-1.31 4.94,-3.12 13,-3.12 8.06,0 13,1.81 13,3.12 0,1.31 -4.96,3.12 -13,3.12 z"
+                 inkscape:connector-curvature="0" />
+              <path
+                 id="path411"
+                 style="fill:#1d1d1b"
+                 d="m 578.5,191.9 c 8.29,0 12.33,1.88 12.46,2.59 -0.13,0.72 -4.17,2.6 -12.46,2.6 -8.29,0 -12.33,-1.88 -12.46,-2.59 0.13,-0.72 4.17,-2.6 12.46,-2.6 m 0,-1 c -7.46,0 -13.5,1.63 -13.5,3.63 0,2 6,3.63 13.5,3.63 7.5,0 13.5,-1.63 13.5,-3.63 0,-2 -6,-3.63 -13.5,-3.63 z"
+                 inkscape:connector-curvature="0" />
+            </g>
+          </g>
+          <g
+             id="g425">
+            <path
+               id="path417"
+               style="fill:#f0f0ef;stroke:#1d1d1b;stroke-miterlimit:10"
+               d="m 565.5,186.5 v 5.5 c 0,1.93 5.82,3.5 13,3.5 7.18,0 13,-1.57 13,-3.5 v -5.5"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g423">
+              <path
+                 id="path419"
+                 style="fill:#f0f0ef"
+                 d="m 578.5,189.62 c -8,0 -13,-1.81 -13,-3.12 0,-1.31 4.94,-3.12 13,-3.12 8.06,0 13,1.81 13,3.12 0,1.31 -4.96,3.12 -13,3.12 z"
+                 inkscape:connector-curvature="0" />
+              <path
+                 id="path421"
+                 style="fill:#1d1d1b"
+                 d="m 578.5,183.9 c 8.29,0 12.33,1.88 12.46,2.59 -0.13,0.72 -4.17,2.6 -12.46,2.6 -8.29,0 -12.33,-1.88 -12.46,-2.59 0.13,-0.72 4.17,-2.6 12.46,-2.6 m 0,-1 c -7.46,0 -13.5,1.63 -13.5,3.63 0,2 6,3.63 13.5,3.63 7.5,0 13.5,-1.63 13.5,-3.63 0,-2 -6,-3.63 -13.5,-3.63 z"
+                 inkscape:connector-curvature="0" />
+            </g>
+          </g>
+        </g>
+        <g
+           id="g449">
+          <rect
+             id="rect429"
+             style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.41033876px;stroke-miterlimit:10"
+             ry="8.1451941"
+             rx="11.528269"
+             height="16.290388"
+             width="87.181664"
+             y="168.60481"
+             x="112.1048" />
+          <text
+             id="text447"
+             style="font-size:9.00000011px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.01378038em;fill:#1d1d1b;-inkscape-font-specification:'HelveticaNeue-Medium, Helvetica Neue, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+             transform="translate(120.03,180.31)">
+            <tspan
+               sodipodi:role="line"
+               id="tspan1058">Reglas de extremo</tspan>
+          </text>
+        </g>
+        <g
+           id="g471">
+          <rect
+             id="rect451"
+             style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.20072794px;stroke-miterlimit:10"
+             ry="8.25"
+             rx="8.25"
+             height="16.5"
+             width="62.389999"
+             y="187.5"
+             x="112" />
+          <text
+             id="text469"
+             style="font-size:9.00000011px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:0.00227865em;fill:#1d1d1b;-inkscape-font-specification:'HelveticaNeue-Medium, Helvetica Neue, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+             transform="translate(124.45,199.31)">
+            <tspan
+               sodipodi:role="line"
+               id="tspan1054">Analítica</tspan>
+          </text>
+        </g>
+        <g
+           id="g477">
+          <polygon
+             id="polygon473"
+             style="fill:#999999"
+             points="145.87,44.87 145.87,53.52 139.8,49.2 " />
+          <polygon
+             id="polygon475"
+             style="fill:#999999"
+             points="195.25,53.52 195.25,44.87 201.32,49.2 " />
+        </g>
+        <g
+           id="g503">
+          <text
+             id="text495"
+             style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.00705295em;fill:#1d1d1b"
+             transform="translate(156.79,123.63)">M<tspan
+   id="tspan479"
+   style="letter-spacing:-0.02560764em"
+   y="0"
+   x="7.9400001">Q</tspan>
+<tspan
+   id="tspan481"
+   style="letter-spacing:0.02094184em"
+   y="0"
+   x="14.55">T</tspan>
+<tspan
+   id="tspan483"
+   style="letter-spacing:-0.01996528em"
+   y="0"
+   x="20.07">T</tspan>
+<tspan
+   id="tspan493"
+   style="letter-spacing:-0.01085069em">
+  <tspan
+     id="tspan485"
+     y="9"
+     x="1.12">H</tspan>
+  <tspan
+     id="tspan487"
+     style="letter-spacing:0.02105035em"
+     y="9"
+     x="7.52">T</tspan>
+  <tspan
+     id="tspan489"
+     style="letter-spacing:-0.01128472em"
+     y="9"
+     x="13.05">T</tspan>
+  <tspan
+     id="tspan491"
+     style="letter-spacing:-0.02007378em"
+     y="9"
+     x="18.290001">P</tspan>
+</tspan>
+</text>
+          <g
+             id="g501">
+            <polygon
+               id="polygon497"
+               style="fill:#999999"
+               points="145.87,119.84 145.87,128.49 139.8,124.17 " />
+            <polygon
+               id="polygon499"
+               style="fill:#999999"
+               points="195.25,128.49 195.25,119.84 201.32,124.17 " />
+          </g>
+        </g>
+        <g
+           id="g509">
+          <polygon
+             id="polygon505"
+             style="fill:#999999"
+             points="145.89,274.79 145.86,283.44 139.8,279.09 " />
+          <polygon
+             id="polygon507"
+             style="fill:#999999"
+             points="195.24,283.61 195.27,274.96 201.32,279.31 " />
+        </g>
+        <rect
+           id="rect511"
+           style="fill:#c4e6f5"
+           height="45"
+           width="163"
+           y="94"
+           x="274" />
+        <rect
+           id="rect513"
+           style="fill:#c4e6f5"
+           height="45"
+           width="163"
+           y="149"
+           x="274" />
+        <rect
+           id="rect515"
+           style="fill:#c4e6f5"
+           height="45"
+           width="163"
+           y="204"
+           x="274" />
+        <text
+           id="text535"
+           style="font-size:10.00000013px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';fill:#1d1d1b;-inkscape-font-specification:'HelveticaNeue-Medium, Helvetica Neue, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+           transform="translate(327.21,119.35)">
+          <tspan
+             sodipodi:role="line"
+             id="tspan1060">Reglas de nube</tspan>
+        </text>
+        <text
+           id="text563"
+           style="font-size:10.00000013px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';fill:#1d1d1b;-inkscape-font-specification:'HelveticaNeue-Medium, Helvetica Neue, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+           transform="translate(324.75,174.35)">
+          <tspan
+             sodipodi:role="line"
+             id="tspan1062">Gestión de datos</tspan>
+        </text>
+        <text
+           id="text605"
+           style="font-size:10.00000013px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';fill:#1d1d1b;-inkscape-font-specification:'HelveticaNeue-Medium, Helvetica Neue, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+           transform="translate(324.75,223.35)">
+          <tspan
+             sodipodi:role="line"
+             id="tspan1064">Integración con</tspan>
+          <tspan
+             sodipodi:role="line"
+             id="tspan1066">Blockchain</tspan>
+        </text>
+        <polygon
+           id="polygon607"
+           style="fill:#ffffff;stroke:#6fc9ee;stroke-width:2px;stroke-miterlimit:10"
+           points="229,249 244,249 259,249 259,94 244,94 229,94 " />
+        <text
+           id="text615"
+           style="font-size:10px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';fill:#1d1d1b"
+           transform="translate(240.67,155.22)">A<tspan
+   id="tspan609"
+   y="13"
+   x="0">P</tspan>
+<tspan
+   id="tspan611"
+   y="26"
+   x="1.95">I</tspan>
+<tspan
+   id="tspan613"
+   y="39"
+   x="0.090000004">S</tspan>
+</text>
+        <g
+           id="g641">
+          <text
+             id="text633"
+             style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.00705295em;fill:#1d1d1b"
+             transform="translate(156.79,220.63)">M<tspan
+   id="tspan617"
+   style="letter-spacing:-0.02560764em"
+   y="0"
+   x="7.9400001">Q</tspan>
+<tspan
+   id="tspan619"
+   style="letter-spacing:0.02094184em"
+   y="0"
+   x="14.55">T</tspan>
+<tspan
+   id="tspan621"
+   style="letter-spacing:-0.01996528em"
+   y="0"
+   x="20.07">T</tspan>
+<tspan
+   id="tspan631"
+   style="letter-spacing:-0.01085069em">
+  <tspan
+     id="tspan623"
+     y="9"
+     x="1.12">H</tspan>
+  <tspan
+     id="tspan625"
+     style="letter-spacing:0.02105035em"
+     y="9"
+     x="7.52">T</tspan>
+  <tspan
+     id="tspan627"
+     style="letter-spacing:-0.01128472em"
+     y="9"
+     x="13.05">T</tspan>
+  <tspan
+     id="tspan629"
+     style="letter-spacing:-0.02007378em"
+     y="9"
+     x="18.290001">P</tspan>
+</tspan>
+</text>
+          <g
+             id="g639">
+            <polygon
+               id="polygon635"
+               style="fill:#999999"
+               points="145.87,216.84 145.87,225.49 139.8,221.17 " />
+            <polygon
+               id="polygon637"
+               style="fill:#999999"
+               points="195.25,225.49 195.25,216.84 201.32,221.17 " />
+          </g>
+        </g>
+        <g
+           id="g4804">
+          <path
+             style="fill:#ffffff"
+             d="M 299.56,228.21 297.31,226 v -1.1 h -1.1 v -0.79 h 1.1 v -2.52 h -1.09 l -0.92,-0.63 h 0.28 v -2.52 H 292.9 V 221 h 0.29 l -0.91,0.63 h -1.11 v 2.52 h 2.52 v -2.52 h -1 L 293.6,221 h 1.22 l 0.92,0.63 h -1 v 2.52 h 1.1 v 0.79 h -1.1 v 2.52 h 1.1 v 0.79 h -1.1 v 2.52 h 1.1 v 0.79 h -1.1 v 2.68 h 2.52 v -2.68 h -1.1 v -0.79 h 1.1 v -2.52 h -1.1 v -0.79 h 1.1 v -1.07 l 1.89,1.85 h -0.79 v 2.52 h 2.52 v -2.52 z m -6,-9.31 h 1.42 v 1.58 h -1.42 z"
+             id="path4806"
+             inkscape:connector-curvature="0" />
+        </g>
+        <rect
+           id="rect645"
+           style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+           height="31"
+           width="31"
+           y="211"
+           x="281" />
+        <rect
+           id="rect647"
+           style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+           height="31"
+           width="31"
+           y="156"
+           x="281.5" />
+        <rect
+           id="rect649"
+           style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+           height="31"
+           width="31"
+           y="101.5"
+           x="281.5" />
+        <g
+           id="g5278">
+          <path
+             style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+             d="m 84.91,108.26 h -28 v 16.8 h 28 z m -7.38,6.45 h 4.26 m -4.26,2 h 4.26 m -4.26,2 h 4.26 m -14.86,-3.9 h 4.26 m -4.26,2 h 4.26 m -4.26,2 h 4.26 m 0,1.2 h 6.3 v -6.3 h -6.3 z m -8.78,-2 a 1.6,1.6 0 1 1 -1.6,1.6 1.6,1.6 0 0 1 1.58,-1.8 z m 1.58,-2.3 h -3.2 v -3.2 H 64 Z"
+             id="path5280"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           data-name="g5278"
+           id="g5278-2">
+          <path
+             style="fill:none;stroke:#ffffff;stroke-width:1.21376061px;stroke-miterlimit:10"
+             d="M 88,180 H 55 v 21 h 33 z"
+             data-name="path5280"
+             id="path5280-2"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g5722">
+          <g
+             id="g5710">
+            <polygon
+               style="fill:#ffffff"
+               points="71.72,269.33 70.8,260.97 69.87,269.33 "
+               id="polygon5712" />
+            <path
+               style="fill:none;stroke:#ffffff"
+               d="m 75,267 a 6.54,6.54 0 1 0 -8.25,-0.09"
+               id="path5714"
+               inkscape:connector-curvature="0" />
+          </g>
+        </g>
+        <g
+           id="g4835">
+          <g
+             id="g4817">
+            <rect
+               style="fill:#ffffff"
+               height="1.08"
+               width="10.81"
+               y="124.02"
+               x="291.60001"
+               id="rect4819" />
+            <path
+               style="fill:#ffffff"
+               d="m 291.6,108.9 v 14 h 10.8 v -14 z m 9.73,13 h -8.64 v -9.73 h 8.64 z"
+               id="path4821"
+               inkscape:connector-curvature="0" />
+            <rect
+               style="fill:#ffffff"
+               height="0.54000002"
+               width="6.48"
+               y="116.46"
+               x="293.76001"
+               id="rect4823" />
+            <rect
+               style="fill:#ffffff"
+               height="0.54000002"
+               width="6.48"
+               y="114.3"
+               x="293.76001"
+               id="rect4825" />
+            <rect
+               style="fill:#ffffff"
+               height="0.54000002"
+               width="6.48"
+               y="118.62"
+               x="293.76001"
+               id="rect4827" />
+          </g>
+        </g>
+        <g
+           id="g678">
+          <g
+             id="g670">
+            <path
+               id="path666"
+               style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+               d="M 301.78,165.1 A 8,8 0 0 0 289.14,173"
+               inkscape:connector-curvature="0" />
+            <polygon
+               id="polygon668"
+               style="fill:#ffffff"
+               points="291.33,171.35 286.69,173.19 290.6,176.28 " />
+          </g>
+          <g
+             id="g676">
+            <path
+               id="path672"
+               style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+               d="M 292.22,177.9 A 8,8 0 0 0 304.86,170"
+               inkscape:connector-curvature="0" />
+            <polygon
+               id="polygon674"
+               style="fill:#ffffff"
+               points="302.67,171.65 307.31,169.81 303.4,166.72 " />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

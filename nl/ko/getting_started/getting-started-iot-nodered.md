@@ -58,7 +58,7 @@ lastupdated: "2017-04-24"
  **팁:** 명령행에서 배치하는 경우에는 GitHub의 IBM Watson IoT 조직에서 [{{site.data.keyword.iot_short_notm}} 스타터를 찾을 수](https://github.com/ibm-watson-iot/iot-platform-bluemix-starter) 있습니다. 
  2. 프롬프트가 표시되면 IBM Bluemix에 로그인하십시오. 
  3. 필요하면 스타터 애플리케이션이 배치될 Bluemix 조직을 선택하십시오. 
- 4. 도구 체인 이름을 유지하거나 필요하면 이를 업데이트하십시오. 이는 기본 앱 이름 및 앱 URL의 루트로서 사용됩니다(`<app-name>.mybluemix.net`). 
+ 4. 도구 체인 이름을 유지하거나 필요하면 이를 업데이트하십시오. 이는 기본 앱 이름 및 앱의 URL 루트로 사용됩니다. `<app-name>.mybluemix.net`
  5. **작성**을 클릭하십시오.   
 **팁:** **Delivery Pipeline** 타일을 클릭하면 첫 번째 배치의 진행상태를 모니터할 수 있습니다. 
  6. 배치가 완료되면 **앱 보기**를 클릭하여 새 탭에서 새 Node-RED 애플리케이션을 여십시오. 
@@ -110,7 +110,7 @@ lastupdated: "2017-04-24"
   1. Bluemix 대시보드의 *모든 앱* 아래에서 도구 체인의 이름을 클릭하십시오.   
 **팁:** 도구 체인 이름에는 대개 `default-toolchain...`이 포함됩니다. 
   2. 도구 체인 대시보드에서 **라우트**를 클릭하고 라우트 링크를 선택하여 Node-RED 인스턴스를 여십시오.   
-  2. **Node-RED 플로우 편집기로 이동**을 클릭하여 편집기를 여십시오. 
+  2. **Node-RED 플로우 편집기로 이동**을 클릭하여 편집기를 엽니다.
 2. 디바이스를 배치하십시오. 
   1. 디바이스 시뮬레이터 플로우에서 파란색 **IBM IoT Platform에 전송** 노드를 두 번 클릭하십시오. 
   2. 인증이 **Bluemix 서비스**로 설정되었는지 확인하십시오. 

@@ -319,7 +319,7 @@ Variable | Descripción
 `{{deviceId}}` | El ID del dispositivo.
 `{{ruleName}}` | El nombre de la regla que incluye la acción.
 `{{ruleID}}` | El ID de la regla que incluye la acción.
-**Sólo cuerpo** |
+**Solo cuerpo** |
 `{{ruleDescription}}`| La descripción de la regla que incluye la acción.
 `{{ruleCondition}}` | La condición de la regla que ha desencadenado la acción.
 `{{message}}` | El mensaje de dispositivo en bruto que incluía el valor de punto de datos que ha desencadenado la regla.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-08"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2017-05-08"
 
 {{site.data.keyword.iot_short_notm}}은 {{site.data.keyword.Bluemix_notm}} 플랫폼 내에서 실행되므로 액세스 및 연결에 {{site.data.keyword.Bluemix_notm}} 및 {{site.data.keyword.BluSoftlayer_full}}를 둘 다 사용합니다. {{site.data.keyword.Bluemix_notm}} 및 {{site.data.keyword.BluSoftlayer_notm}}를 사용하기 때문에 {{site.data.keyword.Bluemix_notm}} 및 {{site.data.keyword.BluSoftlayer_notm}}의 보안과 신뢰성이 {{site.data.keyword.iot_short_notm}} 사용자에게 중요합니다.
 
-{{site.data.keyword.Bluemix_notm}}의 보안에 대한 세부사항은 [{{site.data.keyword.Bluemix_notm}} 플랫폼 보안](index.html#platform-security)을 참조하십시오. 
+{{site.data.keyword.Bluemix_notm}}의 보안에 대한 세부사항은 [{{site.data.keyword.Bluemix_notm}} 플랫폼 보안](index.html#platform-security)을 참조하십시오.  
 
 ## {{site.data.keyword.iot_short_notm}} 보안 준수
 {: #compliance}  
@@ -67,7 +67,11 @@ lastupdated: "2017-05-08"
 ## {{site.data.keyword.iot_short_notm}}에 디바이스를 안전하게 연결하는 방법
 {: #secure-device-connection}
 
-디바이스가 플랫폼에 추가될 때 생성되는 인증 토큰 및 클라이언트 ID 또는 둘 다를 사용하여 디바이스가 연결됩니다. MQTT는 여러 플랫폼과 언어 간에 단순 상호 운용성을 지원하기 위해 사용됩니다. {{site.data.keyword.iot_short_notm}}에서는 TLS v1.2를 통한 연결을 지원합니다. 
+디바이스가 플랫폼에 추가될 때 생성되는 인증 토큰 및 클라이언트 ID를 사용하여 디바이스가 연결됩니다. MQTT는 여러 플랫폼과 언어 간에 단순 상호 운용성을 지원하기 위해 사용됩니다. {{site.data.keyword.iot_short_notm}}에서는 TLS v1.2를 통한 연결을 지원합니다. 
+
+**중요:** 새 조직은 기본적으로 TLS 보안을 사용하여 디바이스가 연결되도록 자동 구성되며, 이로 인해 디바이스는 오직 암호화된 보안 채널을 사용하여 연결될 수 있습니다. 하지만 {{site.data.keyword.iot_short_notm}}은 조직이 TLS 없이 디바이스가 연결 가능하도록 해야 하는 경우도 지원합니다. 예를 들어, 조직은 TLS 지원이 부족한 디바이스 또는 전송을 암호화하거나 복호화하는 데 필요한 처리 전력을 할애할 수 없는 저전력 IoT 디바이스를 사용할 수 있습니다. 조직의 플랜은 이러한 경우에 사용할 수 있는 설정을 판별합니다.
+
+연결 보안 구성 방법에 대한 자세한 정보는 [보안 정책 구성](set_up_policies.html)을 참조하십시오.
 
 ![이미지](connectivity_platform.svg)
 
@@ -75,6 +79,25 @@ lastupdated: "2017-05-08"
 TLS 및 암호 스위트 요구사항에 대한 자세한 정보는 `Watson IoT Platform에 애플리케이션, 디바이스 및 게이트웨이 연결` 문서의 [TLS 요구사항](connect_devices_apps_gw.html#tls_requirements) 섹션을 참조하십시오. 
 
 인증서 및 보안 정책을 사용하여 디바이스 연결 보안을 강화할 수 있습니다. 암호화되지 않은 연결을 허용하고 TLS(Transport Layer Security) 연결만 적용하며 디바이스가 토큰 없이 클라이언트 측 인증서로 인증을 수행할 수 있도록 보안 정책을 설정할 수 있습니다. 블랙리스트는 연결이 허용되지 않는 디바이스를 지정하는 데 사용할 수 있으며, 화이트리스트는 특정 디바이스의 연결을 허용하는 데 사용할 수 있습니다. 보안 강화에 대한 자세한 정보는 [위험 및 보안 관리](RM_security.html)를 참조하십시오. 
+
+### 디바이스 및 게이트웨이를 사용 및 사용 안함으로 설정
+{: #disable-devices}
+
+**권한 - 디바이스 관리** HTTP API를 사용하여 디바이스가 플랫폼에 직접 연결되지 않도록 하거나 게이트웨이 뒤에서 연결되지 않도록 할 수 있습니다. 예를 들어, 올바르게 작동하지 않으며 스팸으로 인한 원하지 않는 데이터 사용과 같은 문제의 원인이 되는 디바이스나 악의적인 사용자에 대한 연결은 강제로 끊을 수 있습니다. API를 사용하여 디바이스의 현재 연결을 끊고 이 디바이스가 플랫폼에 다시 연결되지 않도록 할 수 있습니다.
+
+디바이스를 사용 또는 사용 안함으로 설정하려면 다음 API를 사용하십시오. 여기서 *${clientId}*는 *d:${orgId}:${typeId}:${deviceId}* 형식(디바이스용) 또는 *g:${orgId}:${typeId}:${deviceId}*(게이트웨이용) 형식의 URL 인코딩 클라이언트 ID입니다.
+
+    PUT /api/v0002/authorization/devices/${clientId}
+    
+요청 본문에서 0 상태 값을 사용하여 디바이스를 사용 안함으로 설정하거나 1 상태 값을 사용하여 디바이스를 사용으로 설정하십시오. 예를 들어, 다음 상태 값은 디바이스가 사용되지 않음을 표시합니다.
+
+    { "status": 0 }
+
+성공 시 응답 코드는 200입니다. 
+
+게이트웨이가 사용되지 않는 디바이스에 대해 공개하는 경우 응답 코드 180인 오류 알림을 수신합니다. 자세한 정보는 [게이트웨이 알림](../../gateways/mqtt.html#notification)을 참조하십시오. 
+
+API에 대한 자세한 정보는 [디바이스 보안 베타 API(![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){:new_window}를 참조하고, **권한 - 디바이스 관리**로 이동하십시오.
 
 ## IoT 디바이스 간 데이터 누출 방지 방법
 {: #prevent-leak-devices}

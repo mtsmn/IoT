@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-06-14"
 
 ---
 
@@ -36,8 +36,8 @@ Das Optionsverzeichnis erstellt Definitionen, die für die Interaktion mit dem {
 |`orgId`|Die ID Ihrer Organisation.|
 |`type`|Der Typ des Geräts. Der Gerätetyp ist eine Gruppierung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'.|
 |`id`|Eine eindeutige ID zur Angabe eines Geräts. In der Regel ist die Geräte-ID bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse.|
-|`auth-method`|Die Methode der Authentifizierung. Die einzige Methode, die unterstützt ist, lautet `apikey`.|
-|`auth-token`|API-Schlüsseltoken, das ebenfalls erforderlich ist, wenn Sie `apikey` als Wert für 'auth-method' festlegen.|
+|`auth-method`|Die Methode der Authentifizierung. Die einzige Methode, die unterstützt ist, lautet `token`.|
+|`auth-token`|Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und {{site.data.keyword.iot_short_notm}}.|
 |`clean-session`|Der Wert 'true' oder 'false', der nur erforderlich ist, wenn Sie die Anwendung im Modus der permanenten Subskription verbinden möchten. Für `clean-session` ist standardmäßig der Wert 'true' festgelegt.|
 
 Steht kein Optionsverzeichnis zur Verfügung, wird der Client als nicht registriertes Gerät mit dem Quickstart-Service von {{site.data.keyword.iot_short_notm}} verbunden.
@@ -151,7 +151,7 @@ client.commandCallback = myCommandCallback
 ## Unterstützung für das Format angepasster Nachrichten
 {: #custom_message_format}
 
-Als Nachrichtenformat wird standardmäßig `json` festgelegt; dies bedeutet, dass die Bibliothek das Verschlüsseln und Entschlüsseln der Python-Wörterverzeichnisobjekte im Format JSON unterstützt. Wenn als Nachrichtenformat `json-iotf` festgelegt ist, wird die Nachricht in Übereinstimmung mit der JSON-Nutzdatenspezifikation von {{site.data.keyword.iot_short_notm}} verschlüsselt. Informationen zum Hinzufügen von Unterstützung für Ihre eigenen angepassten Nachrichtenformate finden Sie in GitHub im [Beispiel für das Format angepasster Nachrichten ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window}.
+Als Nachrichtenformat wird standardmäßig ``json`` festgelegt; dies bedeutet, dass die Bibliothek das Verschlüsseln und Entschlüsseln der Python-Wörterverzeichnisobjekte im Format JSON unterstützt. Wenn als Nachrichtenformat ``json-iotf`` festgelegt ist, wird die Nachricht in Übereinstimmung mit der JSON-Nutzdatenspezifikation von {{site.data.keyword.iot_short_notm}} verschlüsselt. Informationen zum Hinzufügen von Unterstützung für Ihre eigenen angepassten Nachrichtenformate finden Sie in GitHub im [Beispiel für das Format angepasster Nachrichten ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window}.
 
 Wenn Sie ein angepasstes Encodermodul erstellen, müssen Sie es wie im folgenden Beispiel dargestellt im Geräteclient registrieren:
 
@@ -162,4 +162,4 @@ import myCustomCodec
 client.setMessageEncoderModule("custom", myCustomCodec)
 client.publishEvent("status", "custom", myData)
 ```
-Wenn ein Ereignis in einem unbekannten Format gesendet wird oder wenn ein Ereignis das Format nicht erkennt, gibt die Gerätebibliothek die Bedingung `MissingMessageDecoderException` zurück.
+Wenn ein Ereignis in einem unbekannten Format gesendet wird oder wenn ein Ereignis das Format nicht erkennt, gibt die Gerätebibliothek die Bedingung ``MissingMessageDecoderException`` zurück.

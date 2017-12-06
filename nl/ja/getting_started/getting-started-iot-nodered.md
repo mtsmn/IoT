@@ -2,8 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-24"
----
+lastupdated: "2017-04-24"---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
@@ -58,7 +57,7 @@ lastupdated: "2017-04-24"
  **ヒント:** コマンド・ラインからデプロイする場合は、GitHub の IBM Watson IoT 組織で [{{site.data.keyword.iot_short_notm}} スターター](https://github.com/ibm-watson-iot/iot-platform-bluemix-starter)を見つけてください。
  2. プロンプトが出されたら、IBM Bluemix にログインします。
  3. 必要に応じて、スターター・アプリケーションをデプロイする Bluemix 組織を選択します。
- 4. ツールチェーン名をそのまま使用するか、必要に応じて更新します。その名前はデフォルトのアプリ名になり、アプリの URL のルートとして使用されます (`<app-name>.mybluemix.net`)。
+ 4. ツールチェーン名をそのまま使用するか、必要に応じて更新します。その名前がデフォルトのアプリケーション名になり、アプリケーションの URL のルートとして使用されます (`<app-name>.mybluemix.net`)。
  5. **「作成」**をクリックします。  
 **ヒント:** **Delivery Pipeline** タイルをクリックして、最初のデプロイメントの進行状況をモニターしてください。
  6. デプロイメントが完了したら、**「アプリの表示」** をクリックして、新しい Node-RED アプリケーションを新しいタブで開きます。

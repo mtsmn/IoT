@@ -273,7 +273,7 @@ De forma predeterminada, las aplicaciones se suscriben a todos los sucesos desde
 ### Manejo de sucesos desde dispositivos
 
 
-Para procesar los sucesos recibidos por las suscripciones, implemente un método callback de sucesos de dispositivos. El cliente de aplicaciones de {{site.data.keyword.iot_short_notm}} envía el suceso `deviceEvent`. Esta función tiene las propiedades siguientes:
+Para procesar los sucesos recibidos por las suscripciones, implemente un método callback de sucesos de dispositivos. El cliente de aplicaciones de {{site.data.keyword.iot_short_notm}} envía el suceso ``deviceEvent``. Esta función tiene las propiedades siguientes:
 
 - deviceType
 - deviceId

@@ -34,35 +34,35 @@ As tabelas mostram níveis de acesso para:
 
 Operações de Dispositivo || Funções de gateway|
 :--------: | ---------------------|------------------------
-           | **Gateway padrão** | **Gateway privilegiado**
-Criar, atualizar ou excluir dispositivos|-|X
-Visualizar dispositivos|P|X
-Ativar dispositivo|-|X
-Publicar um evento|P|X
-Assinar um evento|-|-
+           | **Gateway Padrão** | **Gateway privilegiado**
+Criar, atualizar ou excluir dispositivos|-|P
+Visualizar dispositivos|P|P
+Ativar dispositivo|-|P
+Publicar um evento|P|P
+Subscrever para um evento|-|-
 Publicar um comando|-|-
-Assinar um comando|P|X
-Iniciar ação de gerenciamento de dispositivo|P|X
-Visualizar ações de gerenciamento de dispositivo|P|X
+Assinar um comando|P|P
+Iniciar ação de gerenciamento de dispositivo|P|P
+Visualizar ações de gerenciamento de dispositivo|P|P
 Limpar ações de gerenciamento de dispositivo|-|-
-Gerenciar pacotes configuráveis de ações de gerenciamento de dispositivo|-|X
-Criar, atualizar ou excluir tipos de dispositivos|-|-
-Visualizar tipos de dispositivos|P|X
-Gerenciar logs de diagnóstico|-|-
-Visualizar logs de diagnóstico|-|-
+Gerenciar pacotes configuráveis de ação de gerenciamento de dispositivo|-|P
+Criar, atualizar ou excluir tipos de dispositivo|-|-
+Visualizar tipos de dispositivo|P|P
+Gerenciar logs de diagnósticos|-|-
+Visualizar logs de diagnósticos|-|-
 
 ### Operações de log {: #gateway-log-ops}
 
 Operações de log || Funções de gateway|
 :--------: | ---------------------|------------------------
-           | **Gateway padrão** | **Gateway privilegiado**
+           | **Gateway Padrão** | **Gateway privilegiado**
 Visualizar logs do servidor|-|-
 
 ### Operações de cache {: #gateway-cache-ops}
 
 Operações de cache || Funções de gateway|
 :--------: | ---------------------|------------------------
-           | **Gateway padrão** | **Gateway privilegiado**
+           | **Gateway Padrão** | **Gateway privilegiado**
 Visualizar dados ativos (cache de eventos)|-|-
 Gerenciar dados ativos (cache de eventos)|-|-
 
@@ -71,62 +71,62 @@ Gerenciar dados ativos (cache de eventos)|-|-
 
 Operações de organização || Funções de gateway|
 :--------: | ---------------------|------------------------
-           | **Gateway padrão** | **Gateway privilegiado**
-Configurar parâmetros de armazenamento|-|-				
-Configurar provedor de autenticação|-|-				
-Criar, visualizar, atualizar ou excluir configuração de e-mail|-|-				
-Visualizar provedores de e-mail disponíveis|-|-			
-Criar, visualizar, atualizar ou excluir modelos de correio|-|-		
-Criar, atualizar ou excluir usuários|-|-			
+           | **Gateway Padrão** | **Gateway privilegiado**
+Configure os parâmetros de armazenamento|-|-
+Configurar provedor de autenticação|-|-
+Criar, visualizar, atualizar ou excluir configuração de e-mail|-|-
+Visualizar provedores de e-mail disponíveis|-|-
+Criar, visualizar, atualizar ou excluir modelos de correio|-|-
+Criar, atualizar ou excluir usuários|-|-
 Visualizar usuários|-|-
-Criar, atualizar, excluir convites de usuários|-|-		
-Visualizar convites de usuários|-|-		
-Preencher convite|-|-		
-Criar, atualizar ou excluir chaves API (interface de programação de aplicativos)|-|-		
-Visualizar chaves API (interface de programação de aplicativos)|-|-		
+Criar, atualizar, excluir convites de usuário|-|-
+Visualizar convites de usuário|-|-
+Concluir convite|-|-
+Criar, atualizar ou excluir chaves API|-|-
+Visualizar chaves API|-|-
 Visualizar informações de uso da organização|-|-
 
 ### Operações de controle de acesso {: #gateway-access-ops}
 
 Operações de controle de acesso || Funções de gateway|
 :--------: | ---------------------|------------------------
-           | **Gateway padrão** | **Gateway privilegiado**
+           | **Gateway Padrão** | **Gateway privilegiado**
 Visualizar propriedades de usuários (incluindo direitos de acesso)|-|-
 Visualizar propriedades próprias dos usuários (incluindo direitos de acesso)|-|-
-Gerenciar usuários (incluindo direitos de acesso)|-|-		
-Visualizar propriedades da chave API (incluindo direitos de acesso)|-|-		
-Visualizar propriedades próprias da chave API (incluindo direitos de acesso)|-|-		
+Gerenciar usuários (incluindo direitos de acesso|-|-
+Visualizar propriedades de chave API (incluindo direitos de acesso)|-|-
+Visualizar propriedades próprias da chave API (incluindo direitos de acesso)|-|-
 Criar, atualizar ou excluir chaves API (incluindo direitos de acesso)|-|-
-Visualizar propriedades do dispositivo (incluindo direitos de acesso)|P|X
-Visualizar propriedades próprias do dispositivo (incluindo direitos de acesso)|P|X		
-Criar, atualizar, excluir dispositivo (incluindo direitos de acesso)|-|X
-Visualizar funções|-|-
+Visualizar propriedades do dispositivo (incluindo direitos de acesso)|P|P
+Visualizar propriedades próprias do dispositivo (incluindo direitos de acesso)|P|P
+Criar, atualizar, excluir dispositivo (incluindo direitos de acesso)|-|P
+Visualizar Funções|-|-
 Criar, atualizar, excluir funções customizadas|-|-
-Visualizar operações|-|-
+Visualizar Operações|-|-
 
 ### Operações de análise de dados {: #gateway-analytics-ops}
 
 Operações de análise de dados || Funções de gateway|
 :--------: | ---------------------|------------------------|
-           | **Gateway padrão** | **Gateway privilegiado** |
+           | **Gateway Padrão** | **Gateway privilegiado** |
 Visualizar regras de análise de dados|-|-
-Gerenciar regras de análise de dados|-|-
-Visualizar ações de análise de dados|-|-
-Gerenciar ações de análise de dados|-|-
-Visualizar alertas de análise de dados|-|-
-Visualizar esquemas de mensagens de análise de dados|-|-
-Gerenciar esquemas de mensagens de análise de dados|-|-
+Gerenciar regras de analítica|-|-
+Visualizar ações de analítica|-|-
+Gerenciar ações de analítica|-|-
+Visualizar alertas de analítica|-|-
+Visualizar esquemas de mensagens de analítica|-|-
+Gerenciar esquemas de mensagens de analítica|-|-
 
 ### Operações de serviço de terceiro {: #gateway-third-party}
 
 Operações de serviço de terceiro || Funções de gateway|
 :--------: | ---------------------|------------------------
-           | **Gateway padrão** | **Gateway privilegiado**
-Processar notificações em lote de plataforma externa|-|-
-Processar notificações em lote e enviá-las à plataforma externa|-|-		
+           | **Gateway Padrão** | **Gateway privilegiado**
+Processar notificações em lote da plataforma externa|-|-
+Processar notificações em lote e enviá-las para a plataforma externa|-|-
 Publicar um evento para um dispositivo|-|-
-Assinar eventos a partir de um dispositivo|-|-		
-Configurar uma URL (Localizador Uniforme de Recursos) de retorno de chamada da plataforma externa|-|-		
-Configurar o nível de assinatura da plataforma externa|-|-		
+Assinar eventos de um dispositivo|-|-
+Configurar uma URL de retorno de chamada para a plataforma externa|-|-
+Configurar nível de assinatura da plataforma externa|-|-
 Obter status de funcionamento do status do conector|-|-
-Verificar se um sistema externo está ativado e validar credenciais|-|-
+Verificar se um sistema externo está operacional e validar credenciais|-|-

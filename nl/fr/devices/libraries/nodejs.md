@@ -153,7 +153,7 @@ Les événements peuvent être publiés à l'aide des propriétés suivantes :
 
 |Propriété |Description|
 |:---|:---|
-|`eventType`  | Type d'événement à publier, par exemple, status ou GPS. |  
+|`eventType`  | Type d'événement à publier, par exemple, statut ou GPS. |  
 |`eventFormat`  |Format de l'événement, par exemple, JSON. |
 |`data`  | Contenu de l'événement, qui doit correspondre à une chaîne de mémoire tampon. |
 |`QoS`  | Qualité de service MQTT de l'événement publié. Les valeurs prises en charge sont 0, 1 et 2.|

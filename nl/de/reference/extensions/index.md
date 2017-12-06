@@ -47,7 +47,7 @@ Damit eine Verbindung zwischen Ihrem Jasper-Service mit Ihrer {{site.data.keywor
 
 
 1. Jasper-Erweiterung aktivieren. Führen Sie folgende Schritte aus, um die Integration von Jasper in Ihre {{site.data.keyword.iot_short_notm}}-Organisation zu ermöglichen.
-  1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen**.
+  1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen** aus.
   2. Klicken Sie auf der Seite **Erweiterungen** auf **Erweiterung hinzufügen**.
   3. Klicken Sie neben 'Jasper' auf **Hinzufügen**.
   4. Geben Sie Ihren Benutzernamen, das Kennwort, den Zugriffsschlüssel und die Domänen-ID für Jasper ein.
@@ -58,7 +58,7 @@ Sie können die Geräte, die sowohl mit Ihrer {{site.data.keyword.iot_short_notm
 **Wichtig:** Die Jasper-Konfiguration kann nicht im Rahmen des Prozesses zum Hinzufügen von Geräten angewendet werden, nur zuvor bereits verbundene Geräte können mit Jasper konfiguriert werden.  
 Führen Sie folgende Schritte aus, um Ihre mit Jasper verbundenen Geräte zu konfigurieren:
  1. Suchen Sie auf der Registerkarte 'Geräte' in Ihrem {{site.data.keyword.iot_short_notm}}-Dashboard nach dem zu konfigurierenden und mit Jasper verbundenen Gerät.
- 2. Wählen Sie das Gerät aus, um die *Drilldown-Ansicht für Geräte* zu öffnen.
+ 2. Wählen Sie das Gerät aus, um die Ansicht *Drilldown für Geräte* zu öffnen.
  3. Blättern Sie abwärts zur Option *Erweiterungskonfiguration*.
  4. Geben Sie die Erweiterungskonfiguration ein, indem Sie das folgende JSON-Format verwenden, und klicken Sie anschließend auf **Änderungen bestätigen**, um Ihre Konfiguration zu speichern.  
 
@@ -71,7 +71,7 @@ Führen Sie folgende Schritte aus, um Ihre mit Jasper verbundenen Geräte zu kon
 
 ```
 
-Wenn die Organisation erfolgreich konfiguriert ist, wird der Abschnitt *Erweiterungen* unterhalb des Abschnitts zur *Erweiterungskonfiguration* in der *Drilldown-Ansicht für Geräte* angezeigt.
+Wenn die Organisation erfolgreich konfiguriert wurde, wird der Abschnitt *Erweiterungen* unterhalb des Abschnitts zur *Erweiterungskonfiguration* in der Ansicht *Drilldown für Geräte* angezeigt.
 
 ## AT&T
 {: #att}
@@ -87,7 +87,7 @@ Die AT&T-Erweiterung ermöglicht folgende AT&T-Operationen:
 - SIM-Nutzung anzeigen
   - Folgendes wird angezeigt: Zyklusstartdatum, abrechnungsfähige und gesamte Datennutzung, abrechnungsfähige und gesamte SMS-Nutzung, abrechnungsfähige und gesamte Telefonnutzung.
   - Das Zyklusstartdatum kann im Format JJJJ-MM-TT festgelegt werden.
-- Send SMS to SIM
+- SMS an SIM senden
 - Tarifplan ändern
 
 ### REST-APIs für AT&T
@@ -100,7 +100,7 @@ Um Ihre {{site.data.keyword.iot_short_notm}}-Organisation mit AT&T zu verbinden,
 Führen Sie folgende Schritte aus, um Ihre {{site.data.keyword.iot_short_notm}}-Plattform zu konfigurieren.
 
 1. AT&T-Erweiterung aktivieren. Führen Sie folgende Schritte aus, um die Integration von AT&T und der {{site.data.keyword.iot_short_notm}}-Organisation zu aktivieren:
-  1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen**.
+  1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen** aus.
   2. Klicken Sie auf der Seite **Erweiterungen** auf **Erweiterung hinzufügen**.
   3. Klicken Sie neben AT&T auf die Option **Hinzufügen**.
   4. Geben Sie Ihren Benutzernamen, das Kennwort, den Zugriffsschlüssel und die Domänen-ID für AT&T ein.
@@ -114,7 +114,7 @@ Sie können die Geräte, die sowohl mit Ihrer {{site.data.keyword.iot_short_notm
 **Wichtig:** Die AT&T-Konfiguration kann nicht im Rahmen des Prozesses zum Hinzufügen von Geräten angewendet werden, nur zuvor bereits verbundene Geräte können mit AT&T konfiguriert werden.  
 Führen Sie folgende Schritte aus, um Ihre mit AT&T verbundenen Geräte zu konfigurieren:
  1. Suchen Sie auf der Registerkarte 'Geräte' in Ihrem {{site.data.keyword.iot_short_notm}}-Dashboard nach dem zu konfigurierenden und mit AT&T verbundenen Gerät.
- 2. Wählen Sie das Gerät aus, um die Ansicht Drilldown-Ansicht für Geräte zu öffnen.
+ 2. Wählen Sie das Gerät aus, um die Ansicht *Drilldown für Geräte* zu öffnen.
  3. Blättern Sie abwärts zur Option *Erweiterungskonfiguration*.
  4. Geben Sie die Erweiterungskonfiguration ein, indem Sie das folgende JSON-Format verwenden, und klicken Sie anschließend auf **Änderungen bestätigen**, um Ihre Konfiguration zu speichern.  
 
@@ -127,7 +127,7 @@ Führen Sie folgende Schritte aus, um Ihre mit AT&T verbundenen Geräte zu konfi
 
 ```
 
-Wenn die Organisation erfolgreich konfiguriert ist, wird der Abschnitt *Erweiterungen* unterhalb des Abschnitts zur Erweiterungskonfiguration in der Drilldown-Ansicht für Geräte angezeigt.
+Wenn die Organisation erfolgreich konfiguriert wurde, wird der Abschnitt *Erweiterungen* unterhalb des Abschnitts zur *Erweiterungskonfiguration* in der Ansicht *Drilldown für Geräte* angezeigt.
 
 ## ARM mbed-Connector
 {: #arm}
@@ -167,7 +167,7 @@ Das folgende Codebeispiel zeigt das Nutzdatenformat für eine Benachrichtigung, 
 
 #### Asynchrone Antworten
 
-Wenn {{site.data.keyword.iot_short_notm}} einen Befehle an ein mit der ARM mbed-Plattform verbundenes Gerät sendet, sendet das Gerät eine Bestätigungsnachricht zurück an {{site.data.keyword.iot_short_notm}}. Diese Bestätigungsnachricht wird als *asynchrone Antwort* bezeichnet und verwendet den Ereignistyp `asyncResponse`.
+Wenn {{site.data.keyword.iot_short_notm}} einen Befehle an ein mit der ARM mbed-Plattform verbundenes Gerät sendet, sendet das Gerät eine Bestätigungsnachricht zurück an {{site.data.keyword.iot_short_notm}}. Diese Bestätigungsnachricht wird als _asynchrone Antwort_ bezeichnet und verwendet den Ereignistyp `asyncResponse`.
 
 Das folgende Codebeispiel zeigt das Nutzdatenformat für eine asynchrone Antwort, die vom ARM mbed-Cloud-Service gesendet wurde:
 
@@ -229,7 +229,7 @@ Informationen für den Zugriff auf die REST-API für Orange finden Sie im Abschn
 
 Gehen Sie wie folgt vor, die Orange-Erweiterung zu aktivieren:
 
-1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen**.
+1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen** aus.
 2. Klicken Sie auf der Seite **Erweiterungen** auf **Erweiterung hinzufügen**.
 3. Klicken Sie neben der Orange-Erweiterung auf **Hinzufügen**.
 4. Geben Sie Ihren Benutzernamen und das Kennwort für Orange ein.
@@ -289,7 +289,7 @@ Informationen zum Hinzufügen eines angepassten Gerätemanagementpakets mithilfe
 ### Konfiguration für Blockchain
 
 {{site.data.keyword.iot_short_notm}}-Blockchain-Integration ist ein Serviceangebot, das in {{site.data.keyword.iot_short_notm}} nicht standardmäßig aktiviert ist. Führen Sie die folgenden Schritte aus, um die Funktion in Ihrer Organisation zu aktivieren:
- 1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen**.
+ 1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen** aus.
  2. Klicken Sie auf der Seite **Erweiterungen** auf **Erweiterung hinzufügen**.
  3. Klicken Sie neben der Blockchain-Erweiterung auf **Hinzufügen**.
  4. Klicken Sie auf der Kachel 'Blockchain' auf **Einrichten**.

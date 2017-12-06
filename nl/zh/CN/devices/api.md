@@ -39,7 +39,7 @@ lastupdated: "2017-03-21"
 
 除了使用 MQTT 消息传递协议外，还可以配置设备，以使用 HTTP REST API 命令通过 HTTP 将事件发布到 {{site.data.keyword.iot_short_notm}}。
 
-使用以下某个 URL 提交来自连接到 {{site.data.keyword.iot_short_notm}} 的设备的 `POST` 请求：
+使用以下某个 URL 提交来自连接到 {{site.data.keyword.iot_short_notm}} 的设备的 ``POST`` 请求：
 
 ### 非安全 POST 请求
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
@@ -80,7 +80,7 @@ lastupdated: "2017-03-21"
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml | "xml"
+|application/xml| "xml"
 |application/octet-stream|"bin"
 
 ### 服务质量

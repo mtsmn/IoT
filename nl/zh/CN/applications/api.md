@@ -91,7 +91,7 @@ password = 认证令牌
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml | "xml"
+|application/xml| "xml"
 |application/octet-stream|"bin"
 
 ### 服务质量

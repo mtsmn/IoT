@@ -75,7 +75,7 @@ Para incluir um pacote de gerenciamento de dispositivo customizado usando o pain
 3. Clique no botão **Incluir pacote**.
 4. Selecione seu arquivo de pacote e clique em **Abrir**.
 
-Para incluir um pacote de gerenciamento de dispositivo customizado usando a API, veja a [documentação da API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para incluir um pacote de gerenciamento de dispositivo customizado usando a API, veja a documentação da API do [{{site.data.keyword.iot_short_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Propriedades do pacote de extensão
 
@@ -83,31 +83,31 @@ Um pacote de extensão de gerenciamento de dispositivo contém as propriedades a
 
 |Propriedade|Descrição|Necessárias
 |:---|:---|:---|
-|`bundleId`|Identificador exclusivo para uma extensão de gerenciamento de dispositivo.|Sim|
-|`version`|Sequência de versões para uma extensão de gerenciamento de dispositivo.|no|
-|`provider`|Sequência do provedor para uma extensão de gerenciamento de dispositivo, limitada a 1024 caracteres.|no|
-|`displayName`|Mapa de pares de chave-valor `locale`: `String` mostrados no painel do {{site.data.keyword.iot_short_notm}}. Deve-se especificar pelo menos uma entrada.|Sim|
-|`description`|Mapa de pares de chave-valor `locale`: `String` usados para exibição no painel do {{site.data.keyword.iot_short_notm}}. Se definido, deve-se especificar pelo menos uma entrada.|no|
-|`actions`| Mapa de pares chave-valor `actionId`: `<action>` que definem as ações que estão contidas em uma extensão de gerenciamento de dispositivo. Deve-se especificar pelo menos uma entrada.|Sim|
+|``bundleId``|Identificador exclusivo para uma extensão de gerenciamento de dispositivo.|Sim|
+|``version``|Sequência de versões para uma extensão de gerenciamento de dispositivo.|no|
+|``provider``|Sequência do provedor para uma extensão de gerenciamento de dispositivo, limitada a 1024 caracteres.|no|
+|``displayName``|Mapa de pares de chave-valor ``locale``: ``String`` mostrados no painel do {{site.data.keyword.iot_short_notm}}. Deve-se especificar pelo menos uma entrada.|Sim|
+|``description``|Mapa de pares de chave-valor ``locale``: ``String`` usados para exibição no painel do {{site.data.keyword.iot_short_notm}}. Se definido, deve-se especificar pelo menos uma entrada.|no|
+|``actions``| Mapa de pares de chave-valor ``actionId``: ``<action>`` que definem as ações que estão contidas em uma extensão de gerenciamento de dispositivo. Deve-se especificar pelo menos uma entrada.|Sim|
 
 ### Propriedades para cada ação:
 
 |Propriedade|Descrição|Necessárias
 |:---|:---|
-|`actionDisplayName`|Mapa de pares de chave-valor `locale`: `String` mostrados no painel do {{site.data.keyword.iot_short_notm}}. Deve-se especificar pelo menos uma entrada.|Sim|
-|`description`|Mapa de pares de chave-valor `locale`: `String` usados para exibição no painel do {{site.data.keyword.iot_short_notm}}. Opcional. Deve-se especificar pelo menos uma entrada.|no|
-|`parameters`|Matriz de parâmetros que são permitidos para uma ação específica. Se definido, deve-se especificar pelo menos uma entrada.|no|
+|``actionDisplayName``|Mapa de pares de chave-valor ``locale``: ``String`` mostrados no painel do {{site.data.keyword.iot_short_notm}}. Deve-se especificar pelo menos uma entrada.|Sim|
+|``description``|Mapa de pares de chave-valor ``locale``: ``String`` usados para exibição no painel do {{site.data.keyword.iot_short_notm}}. Opcional. Deve-se especificar pelo menos uma entrada.|no|
+|``parameters``|Matriz de parâmetros que são permitidos para uma ação específica. Se definido, deve-se especificar pelo menos uma entrada.|no|
 
 ### Propriedades para cada parâmetro de ação:
 
 |Propriedade|Descrição|Necessárias
 |:---|:---|
-|`name`|Identificador exclusivo para um parâmetro em uma ação|Sim|
-|`value`|Expressão regular usada para validar valores de parâmetros quando uma solicitação é iniciada. Se não for especificada, a validação não ocorre.|no|
-|`required`|O valor booleano que determina se o parâmetro é necessário. O valor está configurado por padrão como false. |no|
-|`defaultValue`|Valor a ser usado se o parâmetro não for fornecido quando uma solicitação for iniciada|no|
+|``name``|Identificador exclusivo para um parâmetro em uma ação|Sim|
+|``value``|Expressão regular usada para validar valores de parâmetros quando uma solicitação é iniciada. Se não for especificada, a validação não ocorre.|no|
+|``required``|O valor booleano que determina se o parâmetro é necessário. O valor está configurado por padrão como false. |no|
+|``defaultValue``|Valor a ser usado se o parâmetro não for fornecido quando uma solicitação for iniciada|no|
 
-**Nota:** os valores de `bundleId`, `version`, `actionId` e `parameterId` são limitados a 255 caracteres e podem consistir somente em caracteres alfanuméricos (a-z, A-Z, 0-9) e os caracteres especiais a seguir:
+**Nota:** os valores de ``bundleId``, ``version``, ``actionId`` e ``parameterId`` são limitados a 255 caracteres e podem consistir somente em caracteres alfanuméricos (a-z, A-Z, 0-9) e os caracteres especiais a seguir:
  - travessão (-)
  - sublinhado (\_)
  - ponto (.)
@@ -121,7 +121,7 @@ Use os comandos da API (interface de programação de aplicativos) REST do {{sit
   `GET https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 - Para criar um novo pacote de extensão de gerenciamento de dispositivo:
   `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
-- Para obter um pacote de extensão de gerenciamento de dispositivo:
+- Para obter um pacote de extensão de gerenciamento de dispositivo específico:
   `GET https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 - Para atualizar um pacote de extensão de gerenciamento de dispositivo:
   `PUT https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
@@ -174,7 +174,7 @@ Para iniciar ações customizadas de gerenciamento de dispositivo, use o comando
 
 Deve-se fornecer as informações a seguir ao iniciar uma solicitação:
 
-- A ação `<bundleId>/<actionId>`
+- A ação ``<bundleId>/<actionId>``
 - Uma lista de dispositivos nos quais iniciar a ação, até no máximo 5000 dispositivos
 - Uma lista de parâmetros que estão definidos na definição da ação customizada
 
@@ -205,7 +205,7 @@ A carga útil para iniciar uma solicitação tem o formato a seguir:
 
 Quando uma ação customizada é iniciada em um dispositivo, uma mensagem MQTT é publicada no dispositivo. A mensagem MQTT contém quaisquer parâmetros que foram especificados como parte da solicitação. Quando o dispositivo recebe a mensagem MQTT, ele executa a ação ou responde com um código de erro que indica por que ele não pode concluir a ação no momento.
 
-Quando uma ação de dispositivo é concluída com sucesso, o dispositivo publica uma resposta na qual o valor de `rc` está configurado para `200`.
+Quando uma ação de dispositivo é concluída com sucesso, o dispositivo publica uma resposta na qual o valor de ``rc`` está configurado para ``200``.
 
 A extração a seguir fornece um exemplo da troca que ocorre entre um servidor e um dispositivo.
 
@@ -242,7 +242,7 @@ A extração a seguir fornece um exemplo da troca que ocorre entre um servidor e
 
 O exemplo a seguir demonstra como é possível definir uma nova extensão de gerenciamento de dispositivo e executar uma ação que está definida nessa extensão.
 
-Algumas empresas fabricam dispositivos `exampleDeviceType`. É possível instalar e gerenciar plug-ins para execução em dispositivos `exampleDeviceType`. Para facilitar o gerenciamento remoto de plug-ins em dispositivos `exampleDeviceType`, o fabricante geralmente fornece uma extensão de gerenciamento de dispositivo que é possível importar para sua organização do {{site.data.keyword.iot_short_notm}}.
+Algumas empresas fabricam dispositivos ``exampleDeviceType``. É possível instalar e gerenciar plug-ins para execução em dispositivos ``exampleDeviceType``. Para facilitar o gerenciamento remoto de plug-ins em dispositivos ``exampleDeviceType``, o fabricante geralmente fornece uma extensão de gerenciamento de dispositivo que é possível importar para sua organização do {{site.data.keyword.iot_short_notm}}.
 
 O documento JSON de extensão a seguir é usado neste exemplo:
 
@@ -338,7 +338,7 @@ Para incluir a extensão, use o comando da API (interface de programação de ap
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 
-Os dispositivos registrados na organização `<orgID>` podem especificar que eles suportam ações `exampleDeviceType-actions-v1` ao publicarem uma solicitação de gerenciamento, o que é mostrado no exemplo a seguir:
+Dispositivos que estão registrados na organização ``<orgID>`` podem especificar que suportam ações ``exampleDeviceType-actions-v1`` quando publicam uma solicitação de gerenciamento, que é mostrada no exemplo a seguir:
 
 ```
 	Outgoing message from device:
@@ -366,9 +366,9 @@ O dispositivo recebe a resposta a seguir do {{site.data.keyword.iot_short_notm}}
 	}
 
 ```
-Neste ponto, é possível iniciar as ações do dispositivo definidas na extensão `exampleIoT-exampleDeviceType-v1`.
+Neste ponto, é possível iniciar as ações do dispositivo definidas na extensão ``exampleIoT-exampleDeviceType-v1``.
 
-A carga útil a seguir é usada para iniciar uma ação `installPlugin`:
+A carga útil a seguir é usada para iniciar uma ação ``installPlugin``:
 
 ```
 	{
@@ -400,7 +400,7 @@ Inicie a solicitação usando o comando da API (interface de programação de ap
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-Quando o comando for enviado, os dispositivos `device0` e `device1` do tipo `exampleDeviceType` recebem a mensagem MQTT a seguir:
+Quando o comando for enviado, os dispositivos ``device0`` e ``device1`` do tipo ``exampleDeviceType`` recebem a mensagem MQTT a seguir:
 
 ```
 	Incoming message from server:
@@ -437,7 +437,7 @@ Cada dispositivo toma uma ação na mensagem e instala o plug-in especificado. Q
 
 ```
 
-Neste momento, a ação de gerenciamento de dispositivo `installPlugin` é concluída.
+Neste momento, a ação de gerenciamento de dispositivo ``installPlugin`` é concluída.
 
 ## Exemplos de API
 {: #api_examples}

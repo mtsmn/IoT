@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-09-16"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -64,7 +64,8 @@ Están disponibles los siguientes roles de pasarela estándares:
 
 Rol de pasarela | Descripción
 ------------- | -------------
-Estándar | El rol de pasarela predeterminado. Otorga acceso restringido a las operaciones.
-Privilegiado | Pensado para pasarelas de confianza y permite a las pasarelas privilegiadas añadir dispositivos al {{site.data.keyword.iot_short_notm}}. Otorga acceso a las operaciones relevantes para añadir, actualizar y gestionar dispositivos y propiedades de dispositivos, pero no tiene acceso a otras operaciones.  
+Estándar | Otorga acceso restringido a las operaciones.
+Las pasarelas estándar están limitadas a actuar en nombre de los dispositivos contenidos en la pasarela asignada al grupo de recursos.
+Privilegiado | El rol de pasarela predeterminado. Pensado para pasarelas de confianza y permite a las pasarelas privilegiadas añadir dispositivos al {{site.data.keyword.iot_short_notm}}. Otorga acceso a las operaciones relevantes para añadir, actualizar y gestionar dispositivos y propiedades de dispositivos, pero no tiene acceso a otras operaciones.  
 
 Para obtener más información sobre el acceso de las operaciones de los roles de pasarela, consulte [Roles de pasarela](reference/gateway_roles_access.html).

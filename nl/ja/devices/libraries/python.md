@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-06-14"
 
 ---
 
@@ -31,13 +31,14 @@ Python を使用して、{{site.data.keyword.iot_full}} で組織と対話する
 
 options 辞書は、{{site.data.keyword.iot_short_notm}} モジュールと対話するために使用する定義を作成します。コンストラクターはクライアント・インスタンスを作成し、以下の定義を格納する options 辞書を受け入れます。
 
-|定義|説明 |
+|定義|説明
+|
 |:---|:---|
 |`orgId`|組織 ID。|
 |`type`|デバイスのタイプ。デバイスのタイプとは、特定のタスクを実行するデバイスのグループです (「weatherballoon」など)。|
 |`id`|デバイスを特定するための固有の ID。通常、特定のデバイス・タイプにおいて、デバイス ID はそのデバイスの固有の ID です (シリアル番号や MAC アドレスなど)。|
-|`auth-method`|認証の方式。サポートされている唯一の方式は `apikey` です。|
-|`auth-token`|API キー・トークン。auth-method の値を `apikey` に設定する場合は、これも指定する必要があります。|
+|`auth-method`|認証の方式。サポートされている唯一の方式は `token` です。|
+|`auth-token`|デバイスを {{site.data.keyword.iot_short_notm}} に安全に接続するための認証トークン。|
 |`clean-session`|true または false の値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は true に設定されます。|
 
 options 辞書が提供されない場合、クライアントは未登録デバイスとして {{site.data.keyword.iot_short_notm}} Quickstart サービスに接続されます。
@@ -151,7 +152,7 @@ client.commandCallback = myCommandCallback
 ## カスタム・メッセージ形式のサポート
 {: #custom_message_format}
 
-デフォルトでは、メッセージ形式は `json` に設定されます。つまり、ライブラリーが JSON 形式の Python 辞書オブジェクトのエンコードとデコードをサポートします。メッセージの形式が `json-iotf` に設定されると、メッセージは {{site.data.keyword.iot_short_notm}} JSON ペイロードの仕様に応じてエンコードされます。独自のカスタム・メッセージ形式のサポートを追加する場合は、GitHub の[カスタム・メッセージ形式のサンプル ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} を参照してください。
+デフォルトでは、メッセージ形式は ``json`` に設定されます。つまり、ライブラリーが JSON 形式の Python 辞書オブジェクトのエンコードとデコードをサポートします。メッセージの形式が ``json-iotf`` に設定されると、メッセージは {{site.data.keyword.iot_short_notm}} JSON ペイロードの仕様に応じてエンコードされます。独自のカスタム・メッセージ形式のサポートを追加する場合は、GitHub の[カスタム・メッセージ形式のサンプル ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} を参照してください。
 
 カスタム・エンコーダー・モジュールを作成するときは、以下の例に示されているように、デバイス・クライアントに登録する必要があります。
 
@@ -162,4 +163,4 @@ import myCustomCodec
 client.setMessageEncoderModule("custom", myCustomCodec)
 client.publishEvent("status", "custom", myData)
 ```
-イベントが不明な形式で送信されたり、デバイスが形式を認識しなかったりする場合、デバイスのライブラリーは `MissingMessageDecoderException` 条件を戻します。
+イベントが不明な形式で送信されたり、デバイスが形式を認識しなかったりする場合、デバイスのライブラリーは ``MissingMessageDecoderException`` 条件を戻します。

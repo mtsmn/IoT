@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -139,6 +139,10 @@ user3@sample.com,PD_ADMIN_USER,1489505652152
 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板左侧的导航栏中，单击**成员**。
 2. 单击要阻止其访问 {{site.data.keyword.iot_short_notm}} 组织的用户旁的切换开关。
 
+## 限制用户访问权 (Beta)
+{: #limiting-users}
+
+资源级别的访问控制使您能够限制对组织内设备的访问权。您可以使用资源组来指定每个用户或 API 密钥可管理的设备。有关如何配置资源级别访问控制的信息，请参阅[配置资源级别访问控制](reference/rlac.html#configure_RLAC)。
 
 ## 除去用户
 {: #removing-users}

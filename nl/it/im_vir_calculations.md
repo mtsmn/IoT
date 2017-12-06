@@ -21,7 +21,7 @@ Estendi i calcoli della proprietà virtuale di base con le formule di analisi ed
 **Importante:** i calcoli avanzati restituiscono solo i punti dati della proprietà se i dati per la proprietà selezionata provengono da un dispositivo collegato a un gateway con installato un EAA (Edge Analytics Agent). Una regola edge può utilizzare questa proprietà virtuale direttamente. Per utilizzare la proprietà con una regola del cloud, è necessario che una regola edge invii il punto dati al cloud utilizzando l'azione Inoltra a cloud. Per ulteriori informazioni, consulta [Installazione dell'agent di analisi edge](gateways/dashboard.html#edge).
 
 Esempio: utilizza i punti dati virtuali avanzati in una scheda grafica a linee per visualizzare gli andamenti dei dati con i malfunzionamenti rimossi.  
- ![Punti dati attuali in confronto con i punti dati medi.](images/vir_adv_avg_card.svg "Confronto tra i punti dati medi e attuali.")
+ ![Punti dati attuali in confronto ai medi.](images/vir_adv_avg_card.svg "Confronto tra i punti dati attuali e medi.")
 
 ## Formule avanzate
 {: #advanced}

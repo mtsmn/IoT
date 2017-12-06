@@ -39,7 +39,7 @@ Para acceder a la documentación de API de mensajería HTTP de {{site.data.keywo
 
 Además de utilizar el protocolo de mensajería MQTT, también puede configurar los dispositivos para publicar sucesos en el {{site.data.keyword.iot_short_notm}} a través de HTTP utilizando mandatos de la API REST HTTP.
 
-Utilice uno de los URL siguientes para enviar una solicitud `POST` desde un dispositivo conectado a {{site.data.keyword.iot_short_notm}}:
+Utilice uno de los URL siguientes para enviar una solicitud ``POST`` desde un dispositivo conectado a {{site.data.keyword.iot_short_notm}}:
 
 ### Solicitud POST no segura
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>

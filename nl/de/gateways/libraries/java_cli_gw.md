@@ -200,7 +200,7 @@ XML-Daten können in das Zeichenfolgeformat konvertiert und publiziert werden, w
 status = gwClient.publishGatewayEvent("load", xmlConvertedString, "xml", 2);
 ```
 
-Verwenden Sie ähnlich dazu die im folgenden Beispiel gezeigte Bytefeldgruppe, um Ereignisse im Binärformat zu publizieren:
+Verwenden Sie ähnlich dazu das im folgenden Beispiel gezeigte Byte-Array, um Ereignisse im Binärformat zu publizieren:
 
 ```java
 gwClient.connect();
@@ -247,7 +247,7 @@ XML-Daten können in das Zeichenfolgeformat konvertiert und publiziert werden, w
 status = gwClient.publishDeviceEvent(deviceType, deviceId, "load", xmlConvertedString, "xml", 2);
 ```
 
-In ähnlicher Weise können Sie Geräteereignisse im Binärformat publizieren, indem Sie die Bytefeldgruppe verwenden, wie im folgenden Beispiel gezeigt:
+In ähnlicher Weise können Sie Geräteereignisse im Binärformat publizieren, indem Sie das Byte-Array wie im folgenden Beispiel gezeigt verwenden:
 ```java
 gwClient.connect();
 byte[] cpuLoad = new byte[] {30, 35, 30, 25};

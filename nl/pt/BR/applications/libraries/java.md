@@ -312,7 +312,7 @@ Para processar as atualizações de status que são recebidas por suas assinatur
 |`status.connectTime`   |java.util.Date|
 |`status.port`|inteiro|
 
-As propriedades a seguir são configuradas somente quando o evento de status é `Disconnect`:
+As propriedades a seguir são configuradas somente quando o evento de status é ``Disconnect``:
 
 | Propriedade     |Tipo de Dados     |
 |----------------|----------------|
@@ -348,7 +348,7 @@ A amostra de código a seguir fornece uma implementação de exemplo do retorno 
   }
 ```
 
-Quando o retorno de chamada de status é incluído no aplicativo cliente, o método `processDeviceStatus()` é chamado sempre que um dispositivo que corresponde aos critérios é conectado ou desconectado do {{site.data.keyword.iot_short_notm}}. A amostra de código a seguir mostra como é possível incluir a instância de retorno de chamada de status para o aplicativo cliente:
+Quando o retorno de chamada de status é incluído no aplicativo cliente, o método ``processDeviceStatus()`` é chamado sempre que um dispositivo que corresponde aos critérios é conectado ou desconectado do {{site.data.keyword.iot_short_notm}}. A amostra de código a seguir mostra como é possível incluir a instância de retorno de chamada de status para o aplicativo cliente:
 
 ```
 
@@ -363,7 +363,7 @@ Os aplicativos podem assinar qualquer outro status de aplicativo, como conexão 
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-O método sobrecarregado está disponível para controlar a assinatura de status para um aplicativo específico. O método `processApplicationStatus()` é chamado sempre que um aplicativo que corresponde aos critérios é conectado ou desconectado do {{site.data.keyword.iot_short_notm}}.
+O método sobrecarregado está disponível para controlar a assinatura de status para um aplicativo específico. O método ``processApplicationStatus()`` é chamado sempre que um aplicativo que corresponde aos critérios é conectado ou desconectado do {{site.data.keyword.iot_short_notm}}.
 
 
 ## Publicando eventos a partir de dispositivos

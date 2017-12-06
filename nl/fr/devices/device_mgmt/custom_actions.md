@@ -66,7 +66,7 @@ L'exemple de code suivant présente le format standard d'un package d'extension 
 
 ### Ajout d'un package de gestion des terminaux personnalisé
 
-Vous pouvez ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de nord {{site.data.keyword.iot_short_notm}} ou de l'API.
+Vous pouvez ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} ou de l'API.
 
 Pour ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} :
 
@@ -75,7 +75,7 @@ Pour ajouter un package de gestion des terminaux personnalisé à l'aide du tabl
 3. Cliquez sur le bouton **Ajouter un package**.
 4. Sélectionnez votre fichier de package et cliquez sur **Ouvrir**.
 
-Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la [documentation de l'API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la documentation de l'API [{{site.data.keyword.iot_short_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Propriétés de package d'extension
 
@@ -83,31 +83,31 @@ Un package d'extension de gestion des terminaux contient les propriétés suivan
 
 |Propriété|Description|Obligatoire
 |:---|:---|:---|
-|`bundleId`|Identificateur unique d'une extension de gestion des terminaux.|Oui|
-|`version`|Chaîne de version d'une extension de gestion des terminaux.|Non|
-|`provider`|Chaîne de fournisseur d'une extension de gestion des terminaux, limitée à 1024 caractères.|Non|
-|`displayName`|Mappe de paires valeur-clé `locale`:`String` affichées dans le tableau de bord {{site.data.keyword.iot_short_notm}}. Vous devez spécifier au moins une entrée.|Oui|
-|`description`|Mappe de paires clé-valeur `locale`:`String` utilisées à des fins d'affichage dans le tableau de bord {{site.data.keyword.iot_short_notm}}. Si cette propriété est définie, vous devez spécifier au moins une entrée.|Non|
-|`actions`| Mappe de paires clé-valeur `actionId`:`<action>` qui définissent les actions contenues dans une extension de gestion des terminaux. Vous devez spécifier au moins une entrée.|Oui|
+|``bundleId``|Identificateur unique d'une extension de gestion des terminaux.|Oui|
+|``version``|Chaîne de version d'une extension de gestion des terminaux.|Non|
+|``provider``|Chaîne de fournisseur d'une extension de gestion des terminaux, limitée à 1024 caractères.|Non|
+|``displayName``|Mappe de paires valeur-clé ``locale``:``String`` affichées dans le tableau de bord {{site.data.keyword.iot_short_notm}}. Vous devez spécifier au moins une entrée.|Oui|
+|``description``|Mappe de paires clé-valeur ``locale``:``String`` utilisées à des fins d'affichage dans le tableau de bord {{site.data.keyword.iot_short_notm}}. Si cette propriété est définie, vous devez spécifier au moins une entrée.|Non|
+|``actions``| Mappe de paires clé-valeur ``actionId``: ``<action>`` qui définissent les actions contenues dans une extension de gestion des terminaux. Vous devez spécifier au moins une entrée.|Oui|
 
 ### Propriétés de chaque action :
 
 |Propriété|Description|Obligatoire
 |:---|:---|
-|`actionDisplayName`|Mappe de paires valeur-clé `locale`:`String` affichées dans le tableau de bord {{site.data.keyword.iot_short_notm}}. Vous devez spécifier au moins une entrée.|Oui|
-|`description`|Mappe de paires clé-valeur `locale`:`String` utilisées à des fins d'affichage dans le tableau de bord {{site.data.keyword.iot_short_notm}}. Facultatif. Vous devez spécifier au moins une entrée.|Non|
-|`parameters`|Tableau de paramètres autorisés pour une action donnée. Si cette propriété est définie, vous devez spécifier au moins une entrée.|Non|
+|``actionDisplayName``|Mappe de paires valeur-clé ``locale``:``String`` affichées dans le tableau de bord {{site.data.keyword.iot_short_notm}}. Vous devez spécifier au moins une entrée.|Oui|
+|``description``|Mappe de paires clé-valeur ``locale``:``String`` utilisées à des fins d'affichage dans le tableau de bord {{site.data.keyword.iot_short_notm}}. Facultatif. Vous devez spécifier au moins une entrée.|Non|
+|``parameters``|Tableau de paramètres autorisés pour une action donnée. Si cette propriété est définie, vous devez spécifier au moins une entrée.|Non|
 
 ### Propriétés de chaque paramètre d'action :
 
 |Propriété|Description|Obligatoire
 |:---|:---|
-|`name`|Identificateur unique d'un paramètre dans une action|Oui|
-|`value`|Expression régulière utilisée pour valider des valeurs de paramètre lorsqu'une demande est lancée. Si la propriété n'est pas spécifiée, la validation n'a pas lieu.|Non|
-|`required`|Valeur booléenne qui détermine si le paramètre est obligatoire. La valeur par défaut est false. |Non|
-|`defaultValue`|Valeur à utiliser si le paramètre n'est pas fourni lorsqu'une demande est lancée.|Non|
+|``name``|Identificateur unique d'un paramètre dans une action|Oui|
+|``value``|Expression régulière utilisée pour valider des valeurs de paramètre lorsqu'une demande est lancée. Si la propriété n'est pas spécifiée, la validation n'a pas lieu.|Non|
+|``required``|Valeur booléenne qui détermine si le paramètre est obligatoire. La valeur par défaut est false. |Non|
+|``defaultValue``|Valeur à utiliser si le paramètre n'est pas fourni lorsqu'une demande est lancée.|Non|
 
-**Remarque :** Les valeurs `bundleId`, `version`, `actionId` et `parameterId` sont limitées à 255 caractères et ne peuvent comporter que des caractères alphanumériques (a-z, A-Z, 0-9), ainsi que les caractères spéciaux suivants :
+**Remarque :** Les valeurs ``bundleId``, ``version``, ``actionId`` et ``parameterId`` sont limitées à 255 caractères et ne peuvent comporter que des caractères alphanumériques (a-z, A-Z, 0-9), ainsi que les caractères spéciaux suivants :
  - Le trait d'union (-)
  - Le trait de soulignement (_)
  - Le point (.)
@@ -122,13 +122,13 @@ Utilisez les commandes d'API REST {{site.data.keyword.iot_short_notm}} suivantes
 - Pour créer un nouveau package d'extension de gestion des terminaux :
   `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 - Pour obtenir un package d'extension de gestion des terminaux spécifique :
-`GET https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
+  `GET https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 - Pour mettre à jour un package d'extension de gestion des terminaux :
   `PUT https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 - Pour supprimer un package d'extension de gestion des terminaux :
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-Pour plus d'informations sur les API REST pour les packages d'extension de gestion des terminaux, voir la documentation de l'[API V2 {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Pour plus d'informations sur les API REST pour les packages d'extension de gestion des terminaux, voir la documentation de l'[API V2 {{site.data.keyword.iot_short_notm}}  ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ## Prise en charge des actions de gestion des terminaux personnalisées
@@ -174,7 +174,7 @@ Pour lancer des actions de gestion des terminaux personnalisées, utilisez la co
 
 Vous devez indiquer les informations suivantes lorsque vous lancez une demande :
 
-- L'action `<bundleId>/<actionId>`
+- L'action ``<bundleId>/<actionId>``
 - Une liste de terminaux sur lesquels lancer l'action (5 000 terminaux au maximum)
 - Une liste de paramètres, qui sont définis dans la définition de l'action personnalisée
 
@@ -205,7 +205,7 @@ Le contenu pour le lancement d'une demande est au format suivant :
 
 Lorsqu'une action personnalisée est lancée sur un terminal, un message MQTT est publié sur le terminal. Le message MQTT contient des paramètres qui ont été spécifiés dans le cadre de la demande. Lorsque le terminal reçoit le message MQTT, il exécute l'action ou il répond avec un code d'erreur indiquant la raison pour laquelle l'action ne peut pas être exécutée pour le moment.
 
-Lorsqu'une action de terminal aboutit, le terminal publie une réponse dans laquelle la valeur `rc` prend la valeur `200`.
+Lorsqu'une action de terminal aboutit, le terminal publie une réponse dans laquelle la valeur ``rc`` prend la valeur ``200``.
 
 L'extrait suivant fournit un exemple de l'échange qui a lieu entre un serveur et un terminal.
 
@@ -242,7 +242,7 @@ L'extrait suivant fournit un exemple de l'échange qui a lieu entre un serveur e
 
 L'exemple suivant vous montre comment définir une nouvelle extension de gestion des terminaux et comment exécuter une action qui est définie dans cette extension.
 
-Certaines sociétés fabriquent des terminaux `exampleDeviceType`. Vous pouvez installer et gérer des plug-ins pour qu'ils s'exécutent sur des terminaux `exampleDeviceType`. Pour faciliter la gestion à distance de plug-ins sur les terminaux `exampleDeviceType`, le fabricant fournit généralement une extension de gestion des terminaux que vous pouvez importer dans votre organisation {{site.data.keyword.iot_short_notm}}.
+Certaines sociétés fabriquent des terminaux ``exampleDeviceType``. Vous pouvez installer et gérer des plug-ins pour qu'ils s'exécutent sur des terminaux ``exampleDeviceType``. Pour faciliter la gestion à distance de plug-ins sur les terminaux ``exampleDeviceType``, le fabricant fournit généralement une extension de gestion des terminaux que vous pouvez importer dans votre organisation {{site.data.keyword.iot_short_notm}}.
 
 Le document JSON d'extension suivant est utilisé dans cet exemple :
 
@@ -338,7 +338,7 @@ Pour ajouter l'extension, utilisez la commande d'API REST suivante :
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 
-Les terminaux qui sont enregistrés sur l'organisation `<orgID>` peuvent spécifier qu'ils prennent en charge des actions `exampleDeviceType-actions-v1` lorsqu'ils publient une demande de gestion, illustrée dans l'exemple suivant :
+Les terminaux qui sont enregistrés sur l'organisation ``<orgID>`` peuvent spécifier qu'ils prennent en charge des actions ``exampleDeviceType-actions-v1`` lorsqu'ils publient une demande de gestion, illustrée dans l'exemple suivant :
 
 ```
 	Message sortant depuis le terminal :
@@ -366,9 +366,9 @@ Le terminal reçoit la réponse suivante depuis {{site.data.keyword.iot_short_no
 	}
 
 ```
-A ce stade, vous pouvez lancer les actions sur les terminaux que vous avez définies dans l'extension `exampleIoT-exampleDeviceType-v1`.
+A ce stade, vous pouvez lancer les actions sur les terminaux que vous avez définies dans l'extension ``exampleIoT-exampleDeviceType-v1``.
 
-Le contenu suivant est utilisé pour lancer une action `installPlugin` :
+Le contenu suivant est utilisé pour lancer une action ``installPlugin`` :
 
 ```
 	{
@@ -400,7 +400,7 @@ Lancez la demande à l'aide de la commande d'API REST suivante :
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-Lorsque la commande est soumise, les terminaux `device0` et `device1` de type `exampleDeviceType` reçoivent le message MQTT suivant :
+Lorsque la commande est soumise, les terminaux ``device0`` et ``device1`` de type ``exampleDeviceType`` reçoivent le message MQTT suivant :
 
 ```
 	Message entrant depuis le serveur :
@@ -437,7 +437,7 @@ Chaque terminal exécute une action sur le message et installe le plug-in spéci
 
 ```
 
-A ce stade, l'action de gestion des terminaux `installPlugin` est terminée.
+A ce stade, l'action de gestion des terminaux ``installPlugin`` est terminée.
 
 ## Exemples d'API
 {: #api_examples}

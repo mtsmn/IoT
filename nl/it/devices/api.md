@@ -32,14 +32,14 @@ Per informazioni sulla sicurezza client e su come connettere i client ai disposi
 # API di messaggistica REST HTTP per i dispositivi
 {: #rest_messaging_api}
 
-Per accedere alla documentazione dell'API di messaggistica HTTP {{site.data.keyword.iot_short_notm}} e trovare più informazioni sulla pubblicazione degli eventi utilizzando HTTP, consulta [API di messaggistica HTTP {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
+Per accedere alla documentazione dell'API di messaggistica HTTP {{site.data.keyword.iot_short_notm}} e trovare più informazioni sulla pubblicazione degli eventi utilizzando HTTP, consulta [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
 ## Pubblicazione eventi
 {: #event_publication}
 
 In aggiunta all'utilizzo del protocollo di messaggistica MQTT, puoi anche configurare i tuoi dispositivi a pubblicare eventi {{site.data.keyword.iot_short_notm}} in HTTP utilizzando i comandi API REST HTTP.
 
-Utilizza uno dei seguenti URL per inviare una richiesta `POST` da un dispositivo collegato a {{site.data.keyword.iot_short_notm}}:
+Utilizza uno dei seguenti URL per inviare una richiesta ``POST`` da un dispositivo collegato a {{site.data.keyword.iot_short_notm}}:
 
 ### Richiesta POST non sicura
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>

@@ -322,7 +322,7 @@ En el ejemplo de código siguiente se describe cómo añadir la devolución de l
 gwClient.connect()
 GatewayCommandCallback callback = new GatewayCommandCallback();
 gwClient.setGatewayCallback(callback);
-//Suscripción a un dispositivo conectado a la pasarela
+//Subscribe to a device that is connected to the gateway
 gwClient.subscribeToDeviceCommands(DEVICE_TYPE, DEVICE_ID);
 ```
 

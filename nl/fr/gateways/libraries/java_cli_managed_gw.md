@@ -554,8 +554,8 @@ Pour plus d'informations sur les actions sur le microprogramme, voir [Demandes d
 
 {{site.data.keyword.iot_short}} prend en charge les actions sur les terminaux décrites ci-dessous :
 
-- Réamorçage
-- Réinitialisation avec les paramètres d'usine
+- Réamorcer
+- Réinitialiser avec les paramètres d'usine
 
 La passerelle doit exécuter les activités suivantes afin de prendre en charge les actions sur les terminaux à la fois pour elle-même et pour les terminaux situés derrière elle :
 
@@ -725,7 +725,7 @@ import com.ibm.iotf.devicemgmt.CustomActionHandler;
 
 public class MyCustomActionHandler extends CustomActionHandler implements Runnable {
 
-	// A queue to hold & process the commands for smooth handling of MQTT messages
+	// A queue to hold &  process the commands for smooth handling of MQTT messages
 	private BlockingQueue<CustomAction> queue = new LinkedBlockingQueue<CustomAction>();
 	// A map to hold the publish interval time for each device
 	private Map<String, Long> intervalMap = new HashMap<String, Long>();

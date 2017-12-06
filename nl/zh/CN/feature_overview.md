@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-12"
+lastupdated: "2017-07-20"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-01-12"
 {{site.data.keyword.iot_full}} 基于以下关键方面进行构建：
 
   1. Connect - 连接设备并开发应用程序。
-  2. 信息管理 - 存储和查看设备数据，并将 {{site.data.keyword.iot_short_notm}} 与其他服务集成。
+  2. 信息管理 - 存储、规范化、转换和复查设备数据，并将 {{site.data.keyword.iot_short_notm}} 与其他服务集成。
   3. 分析 - 通过使用 {{site.data.keyword.iot_short_notm}} 仪表板可视化实时设备数据。
   4. 风险管理 - 通过对用户和应用程序的访问控制来配置安全的连接和体系结构。
 
@@ -39,6 +39,7 @@ lastupdated: "2017-01-12"
 
 扩展和服务集成支持将外部服务和核心服务的用户定义扩展添加到 {{site.data.keyword.iot_short_notm}} 实例。可以与 {{site.data.keyword.iot_short_notm}} 集成的外部服务包括 The Weather Company 天气位置服务（可用于查找设备所在位置的当前天气）、Jasper SIM 数据以及 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}。有关第三方服务集成和扩展的更多信息，请参阅[集成外部服务](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)。
 
+
 ---
 
 ## 信息管理
@@ -54,8 +55,13 @@ lastupdated: "2017-01-12"
 
 可以存储 {{site.data.keyword.iot_short_notm}} 服务中的设备事件数据以供将来使用。要执行深度分析以获取对该数据的洞察，数据存储是非常关键的第一步。例如，您可跟踪较长时间段内的更改，存储数据集，以用于功能强大的分析工具（包括用于 Watson API 和认知计算）。有关更多信息，请参阅[连接 {{site.data.keyword.cloudant_short_notm}} 历史服务](https://console.ng.bluemix.net/docs/services/IoT/cloudant_connector.html)或[连接 {{site.data.keyword.messagehub}} 历史服务](https://console.ng.bluemix.net/docs/services/IoT/message_hub.html)。
 
----
+### 数据管理
 
+不同的设备和型号以不同的格式发布数据。数据管理功能允许您将此数据转换并规范化为单一逻辑视图，称为*设备状态*，应用程序可以理解和处理该视图。使用数据管理功能可大大简化应用程序开发，因为应用程序不再需要了解从每个设备发送的事件数据的不同格式。设备将事件发布到 {{site.data.keyword.iot_short_notm}} 后，可以使用映射将事件的内容映射到用户定义的状态属性。如果入站事件导致设备的状态发生更改，那么将更新设备状态属性的值并将其存储在 {{site.data.keyword.iot_short_notm}} 中。通过使用 HTTP API 或预订主题，可以在请求上对应用程序提供这些值。
+
+有关使用此功能的更多信息，请参阅[数据管理简介](GA_information_management/ga_im_device_twin.html)。
+
+---
 ## 分析
 {: #analytics}
 

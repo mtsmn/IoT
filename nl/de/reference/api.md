@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-07-20"
 
 ---
 
@@ -40,9 +40,10 @@ https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002
 
 API                     | Verwendungszweck       
 ------------- | -------------
-[Organizationsadministration ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | Konfigurieren einer Organisation (einschließlich Erstellen und Löschen von Geräten), Prüfen der Verwendung und des Servicestatus und Diagnostizieren von Geräteverbindungsproblemen.
+[Organisationsadministration ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | Konfigurieren einer Organisation (einschließlich Erstellen und Löschen von Geräten), Prüfen der Verwendung und des Servicestatus und Diagnostizieren von Geräteverbindungsproblemen.
 [Sicherheit ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Verwalten von Benutzereinladungen, der Authentifizierung und Berechtigung von Benutzern sowie von API-Schlüsseln und Geräten.
-[Information Management ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Zugriff auf Geräteereignisdaten, Abrufen und Aktualisieren der Geräteposition sowie Abrufen von Wetterdaten für diese Position. **Hinweis:** Wetterinformationen können nur angezeigt werden, wenn 'The Weather Company'-Daten integriert sind.
+[Information Management ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Zugriff auf Geräteereignisdaten, Abrufen und Aktualisieren der Geräteposition sowie Abrufen von Wetterdaten für diese Position. 
+[Datenmanagement  ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window}   |   Organisieren und Integrieren von ein- und ausgehenden Daten für {{site.data.keyword.iot_short_notm}}.
 [Gerätemanagement ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | Interagieren mit verwalteten Geräten mithilfe des Gerätemanagementprotokolls.
 [Messaging ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | Publizieren von Ereignissen und Senden von Befehlen mithilfe von HTTP.
 [Risikomanagement ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | Verwalten von Richtlinien und Berichten für das Risikomanagement.
@@ -53,7 +54,7 @@ API                     | Verwendungszweck
 API                     | Verwendungszweck       
 ------------- | -------------
 [AT&T-Erweiterung ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window} | Verwalten von AT&T-Geräten.
-[Jasper-Erweiterung  ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} | Verwalten von Jasper-Geräten.
+[Jasper-Erweiterung ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} | Verwalten von Jasper-Geräten.
 [Orange-Erweiterung ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} | Anzeigen von Daten der SIM-Karte von Geräten, die mit Ihrer {{site.data.keyword.iot_short_notm}}-Organisation verbunden sind und in die eine Orange-SIM-Karte installiert ist.
 
 ## Beta-HTTP-APIs
@@ -63,4 +64,4 @@ API                     | Verwendungszweck
 ------------- | -------------
 [Gatewaysicherheit ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html){: new_window}   | Prüfen und Zuweisen von Rollen für Gateway-Geräte.
 [Gerätesicherheit ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-devices-beta.html){: new_window} | Prüfen und Zuweisen von Rollen für Geräte.
-[Schnittstellenzuordnung ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window}   |   Zuordnen von und Zugreifen auf Gerätedaten mithilfe von Schnittstellen.
+[Zugriffssteuerung ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window} | Eingrenzen des Benutzerzugriffs.

@@ -39,7 +39,7 @@ lastupdated: "2017-03-21"
 
 MQTT 메시징 프로토콜 외에도 HTTP REST API 명령을 사용하여 {{site.data.keyword.iot_short_notm}}에 HTTP를 통해 이벤트를 공개하도록 디바이스를 구성할 수도 있습니다. 
 
-다음 URL 중 하나를 사용하여 {{site.data.keyword.iot_short_notm}}에 연결된 디바이스에서 `POST` 요청을 제출하십시오. 
+다음 URL 중 하나를 사용하여 {{site.data.keyword.iot_short_notm}}에 연결된 디바이스에서 ``POST`` 요청을 제출하십시오. 
 
 ### 비보안 POST 요청
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
@@ -81,7 +81,7 @@ MQTT 메시징 프로토콜 외에도 HTTP REST API 명령을 사용하여 {{sit
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml | "xml"
+|application/xml| "xml"
 |application/octet-stream|"bin"
 
 ### 서비스 품질(QoS)

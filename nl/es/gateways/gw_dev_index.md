@@ -24,7 +24,7 @@ Las pasarelas se conectan a {{site.data.keyword.iot_short_notm}} utilizando el p
 ## Bibliotecas de clientes
 Las bibliotecas de cliente para desarrollar pasarelas que se conectan a {{site.data.keyword.iot_short_notm}} están disponibles en los siguientes lenguajes:
 
-|Biblioteca cliente |Enlace a biblioteca y más documentación
+|Biblioteca de cliente |Enlace a biblioteca y más documentación
 |:---|:---
 |C++|[https://github.com/ibm-watson-iot/iot-cpp ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-cpp){: new_window}
 |C#|[https://github.com/ibm-watson-iot/iot-csharp ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-csharp){: new_window}

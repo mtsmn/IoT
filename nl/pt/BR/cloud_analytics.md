@@ -257,7 +257,10 @@ Em que o primeiro nó é um nó http e o segundo é um nó twilio.
  - URL - `http://mynodered.mybluemix.net/RTI-alert`
  - BODY   
  ```json
- {"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iot_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}
+ {"text":"*Um dispositivo precisa de sua atenção*\n Hora: {{timestamp}}\n
+{{site.data.keyword.iot_short}} instância: {{tenantId}}\n Dispositivo: {{deviceId}}\n Regra:
+{{ruleName}}\n Descrição: {{ruleDescription}}\n Condição: {{ruleCondition}}\n Mensagem do
+dispositivo bruto: \n{{message}}"}
  ```  
 5. Clique em **Concluir** para salvar a ação.
 
@@ -299,7 +302,10 @@ Para criar a ação postar no Slack:
  - Tipo de conteúdo - `application/json`
  - Corpo   
  ```json
- {"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iot_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}
+ {"text":"*Um dispositivo precisa de sua atenção*\n Hora: {{timestamp}}\n
+{{site.data.keyword.iot_short}} instância: {{tenantId}}\n Dispositivo: {{deviceId}}\n Regra:
+{{ruleName}}\n Descrição: {{ruleDescription}}\n Condição: {{ruleCondition}}\n Mensagem do
+dispositivo bruto: \n{{message}}"}
  ```  
   **Importante:** O webhook do Slack deve conter, no mínimo, o campo "text". Para obter informações, veja [Webhooks de entrada ![Ícone de link externo](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks "Documentação do Slack"){: new_window} na documentação do Slack.
 11. Clique em **Concluir** para salvar a ação.
@@ -319,7 +325,7 @@ Variável | Descrição
 `{{deviceId}}` | O ID do dispositivo.
 `{{ruleName}}` | O nome da regra que inclui a ação.
 `{{ruleID}}` | O ID da regra que inclui a ação.
-**Somente o corpo** |
+**Somente corpo** |
 `{{ruleDescription}}`| A descrição da regra que inclui a ação.
 `{{ruleCondition}}` | A condição da regra que acionou a ação.
 `{{message}}` | A mensagem do dispositivo bruto que incluiu o valor de ponto de dados que acionou a regra.

@@ -28,9 +28,9 @@ lastupdated: "2017-03-13"
 ## 依赖关系
 {: #dependencies}
 
-|依赖关系 |描述|
+|依赖关系|描述|
 |:---|:---|
-|[Eclipse Paho Embedded C 库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |提供 MQTT C 客户机库。有关更多信息，请参阅 [MQTT Client Package -  C for embedded devices ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}。|
+|[Eclipse Paho Embedded C 库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window}|提供 MQTT C 客户机库。有关更多信息，请参阅 [MQTT Client Package -  C for embedded devices ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}。|
 
 
 ## 安装
@@ -74,7 +74,8 @@ lastupdated: "2017-03-13"
 
 `initialize` 函数使用以下参数来连接到 {{site.data.keyword.iot_short_notm}} 服务：
 
-|定义 |描述 |
+|定义|描述
+|
 |:---|:---|
 |`客户机 (client)`|*iotfclient* 的指针。|
 |`org`|组织标识。|
@@ -153,11 +154,12 @@ lastupdated: "2017-03-13"
 
 设备客户机进行连接时，会自动预订此设备的任何命令。要处理特定命令，需要通过调用 `setCommandHandler` 函数来注册命令回调函数。回调函数具有以下属性：
 
-|属性 |描述|
+|属性|描述|
 |:---|:---|
-|`commandName`  |调用的命令的名称。 |  
+|`commandName`  |调用的命令的名称。|  
 |`format`  |事件的格式。格式可以为任意字符串，例如 JSON。|
-|`payload`  |命令有效内容的数据。最大长度为 131072 字节。 |
+|`payload`  |命令有效内容的数据。最大长度为 131072 字节。
+|
 
 
 ```
@@ -179,19 +181,20 @@ lastupdated: "2017-03-13"
 	....
 
 ```
-**注：**通过 `yield()` 函数，设备能接收来自 Watson IoT Platform 的命令，并使连接保持活动。如果未在 keepAlive 时间间隔指定的时间范围内调用 `yield()` 函数，那么设备不会接收到从该平台发出的任何命令。分配给 `yield()` 函数的值指定在将控制返回给应用程序之前，可以从套接字读取数据的时间长度（以毫秒为单位）。
+**注：**通过 ``yield()`` 函数，设备能接收来自 Watson IoT Platform 的命令，并使连接保持活动。如果未在 keepAlive 时间间隔指定的时间范围内调用 ``yield()`` 函数，那么设备不会接收到从该平台发出的任何命令。分配给 ``yield()`` 函数的值指定在将控制返回给应用程序之前，可以从套接字读取数据的时间长度（以毫秒为单位）。
 
 ## 发布事件
 {: #publishing_events}
 
 可以使用以下属性来发布事件：
 
-|属性 |描述|
+|属性|描述|
 |:---|:---|
-|eventType  |发布的事件的类型，例如 status 或 gps。 |  
-|eventFormat  |格式可以为任意字符串，例如 `json`。 |
-|data  |有效内容的数据。最大长度为 131072 字节。 |
-|QoS  |发布活动的服务质量级别。支持的值为 `0`、`1` 和 `2`。|
+|eventType|发布的事件的类型，例如 status 或 gps。|  
+|eventFormat|格式可以为任意字符串，例如 `json`。|
+|data|有效内容的数据。最大长度为 131072 字节。
+|
+|QoS|发布活动的服务质量级别。支持的值为 `0`、`1` 和 `2`。|
 
 
 ```

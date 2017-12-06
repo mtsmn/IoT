@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-10-02"
 
 ---
 
@@ -131,12 +131,12 @@ IoT 디바이스에서 데이터 수신을 시작하려면 {{site.data.keyword.i
 이 매개변수 조합이 디바이스를 고유하게 식별합니다.
 - 사용자 이름: use-token-auth  
 이 값은 사용자가 토큰 인증을 사용 중임을 표시합니다. 
-- 비밀번호: *Authentication token*  
+- 비밀번호: *인증 토큰*  
 이 값은 사용자가 정의했거나 등록할 때 디바이스에 지정된 고유 토큰입니다.
 - 이벤트 주제 형식: iot-2/evt/*event_id*/fmt/*format_string*  
  여기서 *event_id*는 {{site.data.keyword.iot_short_notm}}에 표시된 이벤트 이름을 지정하고 *format_string*은 이벤트 형식(예: JSON)입니다.
 - 메시지 형식: JSON  
- {{site.data.keyword.iot_short_notm}}에서는 여러 형식을 지원합니다(예: JSON 및 텍스트).
+ {{site.data.keyword.iot_short_notm}}은 여러 형식을 지원합니다(예: JSON 및 텍스트).
 
 디바이스 연결에 대한 자세한 정보는 기술 문서에서 [디바이스용 MQTT 연결](devices/mqtt.html)을 참조하십시오.
 

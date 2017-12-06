@@ -35,10 +35,10 @@ Le tabelle mostrano i livelli di accesso per:
 Operazioni del dispositivo || Ruoli del gateway|
 :--------: | ---------------------|------------------------
            | **Gateway standard** | **Gateway privilegiato**
-Creazione, aggiornamento o eliminazione dispositivi|-|X
+Creazione, aggiornamento o eliminazione dei dispositivi |-|X
 Visualizzazione dispositivi|X|X
 Attivazione dispositivo|-|X
-Pubblicazione di un evento|X|X
+Pubblicazione evento|X|X
 Sottoscrizione a un evento|-|-
 Pubblicazione di un comando|-|-
 Sottoscrizione a un comando|X|X
@@ -56,14 +56,14 @@ Visualizzazione log di diagnostica|-|-
 Operazioni di log || Ruoli del gateway|
 :--------: | ---------------------|------------------------
            | **Gateway standard** | **Gateway privilegiato**
-Visualizzazione log del server|-|-
+Visualizzazione log del server |-|-
 
 ### Operazioni cache {: #gateway-cache-ops}
 
 Operazioni cache || Ruoli del gateway|
 :--------: | ---------------------|------------------------
            | **Gateway standard** | **Gateway privilegiato**
-Visualizzazione dati live (cache evento)|-|-
+Visualizzazione dati live (cache evento) |-|-
 Gestione dei dati live (cache evento)|-|-
 
 
@@ -73,15 +73,15 @@ Operazioni dell'organizzazione || Ruoli del gateway|
 :--------: | ---------------------|------------------------
            | **Gateway standard** | **Gateway privilegiato**
 Configurazione dei parametri di archiviazione|-|-
-Configurazione del provider di autenticazione|-|-
-Creazione, visualizzazione, aggiornamento o eliminazione della configurazione email|-|-
+Configurazione del provider di autenticazione |-|-
+Creazione, visualizzazione, aggiornamento o eliminazione della configurazione email |-|-
 Visualizzazione dei provider di posta disponibili|-|-
 Creazione, visualizzazione, aggiornamento o eliminazione dei template dell'email|-|-
 Creazione, aggiornamento o eliminazione degli utenti|-|-
 Visualizzazione utenti|-|-
-Creazione, aggiornamento, eliminazione degli inviti utente|-|-
+Creazione, aggiornamento, eliminazione degli inviti utente |-|-
 Visualizzazione degli inviti utente|-|-
-Completamento dell'invito|-|-
+Completamento invito|-|-
 Creazione, aggiornamento o eliminazione delle chiavi API|-|-
 Visualizzazione delle chiavi API|-|-
 Visualizzazione delle informazioni sull'utilizzo dell'organizzazione|-|-
@@ -91,17 +91,17 @@ Visualizzazione delle informazioni sull'utilizzo dell'organizzazione|-|-
 Operazioni di controllo dell'accesso || Ruoli del gateway|
 :--------: | ---------------------|------------------------
            | **Gateway standard** | **Gateway privilegiato**
-Visualizzazione delle proprietà dell'utente (inclusi i diritti di accesso)|-|-
-Visualizzazione delle proprie proprietà utente (inclusi i diritti di accesso)|-|-
-Gestione degli utenti (inclusi i diritti di accesso)|-|-
-Visualizzazione delle proprietà della chiave API (inclusi i diritti di accesso)|-|-
-Visualizzazione delle proprie proprietà della chiave API (inclusi i diritti di accesso)|-|-
-Creazione, aggiornamento o eliminazione delle chiavi API (inclusi i diritti di accesso)|-|-
-Visualizzazione delle proprietà del dispositivo (inclusi i diritti di accesso)|X|X
-Visualizzazione delle proprie proprietà del dispositivo (inclusi i diritti di accesso)|X|X
-Creazione, aggiornamento, eliminazione del dispositivo (inclusi i diritti di accesso)|-|X
-Visualizzazione dei ruoli|-|-
-Creazione, aggiornamento, eliminazione dei ruoli personalizzati|-|-
+Visualizzazione delle proprietà dell'utente (inclusi i diritti di accesso) |-|-
+Visualizzazione delle proprie proprietà utente (inclusi i diritti di accesso) |-|-
+Gestione degli utenti (inclusi i diritti di accesso) |-|-
+Visualizzazione delle proprietà della chiave API (inclusi i diritti di accesso) |-|-
+Visualizzazione delle proprie proprietà della chiave API (inclusi i diritti di accesso) |-|-
+Creazione, aggiornamento o eliminazione delle chiavi API (inclusi i diritti di accesso) |-|-
+Visualizzazione delle proprietà del dispositivo (inclusi i diritti di accesso) |X|X
+Visualizzazione delle proprie proprietà del dispositivo (inclusi i diritti di accesso) |X|X
+Creazione, aggiornamento, eliminazione del dispositivo (inclusi i diritti di accesso) |-|X
+Visualizzazione ruoli|-|-
+Creazione, aggiornamento, eliminazione dei ruoli personalizzati |-|-
 Visualizzazione operazioni|-|-
 
 ### Operazioni di analisi {: #gateway-analytics-ops}
@@ -122,11 +122,11 @@ Gestione degli schemi del messaggio di analisi|-|-
 Operazioni del servizio di terze parti || Ruoli del gateway|
 :--------: | ---------------------|------------------------
            | **Gateway standard** | **Gateway privilegiato**
-Elaborazione delle notifiche batch da una piattaforma esterna|-|-
-Elaborazione delle notifiche batch e loro invio alla piattaforma esterna|-|-
+Elaborazione delle notifiche batch da una piattaforma esterna |-|-
+Elaborazione notifiche batch e invio alla piattaforma esterna|-|-
 Pubblicazione di un evento per un dispositivo|-|-
-Sottoscrizione a eventi da un dispositivo|-|-
-Configurazione di un URL di callback per la piattaforma esterna|-|-
-Configurazione del livello di sottoscrizione della piattaforma esterna|-|-
+Sottoscrizione agli eventi da un dispositivo|-|-
+Configurazione di un URL di callback per la piattaforma esterna |-|-
+Configurazione del livello di sottoscrizione della piattaforma esterna |-|-
 Ottenimento dello stato di integrità dal connector|-|-
 Verifica se un sistema esterno è attivo e convalida delle credenziali|-|-

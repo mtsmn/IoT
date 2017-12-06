@@ -27,4 +27,4 @@ Puede grabar código para crear y gestionar aplicaciones que interactúen y util
 - Node-RED
 - Python
 
-Para obtener más información y ver enlaces con las bibliotecas de cliente disponibles, consulte [Bibliotecas de cliente para el desarrollo de {{site.data.keyword.iot_short_notm}}](../iot_platform_client_lib.html).
+Para obtener más información y enlaces a las bibliotecas de cliente disponibles, consulte [Bibliotecas de cliente para el desarrollo de {{site.data.keyword.iot_short_notm}}](../iot_platform_client_lib.html).

@@ -52,7 +52,7 @@ Données d'entrée :
 <tr>
 <td>Z-Score mobile</td>
 <td>Renvoie la différence des unités d'écart type entre le point de données et la valeur moyenne de point de données pour un nombre de points de données récents ou une période récente.  </br></br>
-Input:
+Données d'entrée :
 <ul>
 <li>Propriété
 <li>Période ou nombre de points de données sous la forme d'un entier supérieur à 0.</ul></td>
@@ -80,7 +80,7 @@ Données d'entrée :
 <td>Lissage par zone</td>
 <td>Renvoie la valeur moyenne d'une propriété en fonction d'une plage de points de données centrés autour du point de données en cours.  
 Le lissage par zone utilise un nombre configuré de valeurs de point de données situées avant et après le point de données en cours de traitement afin de déterminer sa valeur lissée. Avec ce mode de calcul, le lissage par zone pondère toutes les valeurs de point de données de manière équitable.  </br></br>
-Input:
+Données d'entrée :
 <ul>
 <li>Propriété
 <li>Nombre de points de données situés avant et après (demi-chasse) sous la forme d'un entier supérieur à 0.

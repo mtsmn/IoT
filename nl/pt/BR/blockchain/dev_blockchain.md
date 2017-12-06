@@ -46,7 +46,7 @@ O diagrama a seguir ilustra o ambiente de desenvolvimento de integração de blo
 Obtenha uma visão geral de {{site.data.keyword.blockchainfull_notm}}, como se relaciona ao conceito geral de blockchain e o que pode fazer por você:
 - [{{site.data.keyword.blockchainfull_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.ibm.com/blockchain/){: new_window} em IBM.com.
 - [DOCS de {{site.data.keyword.blockchainfull_notm}}](https://console.ng.bluemix.net/docs/services/blockchain/index.html) - Introdução ao serviço de {{site.data.keyword.blockchainfull_notm}}.
-- [Documentação do {{site.data.keyword.blockchainfull_notm}} HFC SDK for Node.js com API ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/hyperledger/fabric/tree/v0.6/docs/API){: new_window} - Uma visão geral da API do {{site.data.keyword.blockchainfull_notm}}.
+- [{{site.data.keyword.blockchainfull_notm}} HFC SDK para Node.js com documentação da API ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/hyperledger/fabric/tree/v0.6/docs/API){: new_window} -  Uma visão geral da API do {{site.data.keyword.blockchainfull_notm}}.
 - [{{site.data.keyword.blockchainfull_notm}} for Developers ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.ibm.com/blockchain/for_developers.html){: new_window} - Uma visão geral de como o blockchain se ajusta em seu ambiente de desenvolvimento, que inclui explicações com demos em tempo real e código implementável para execução no {{site.data.keyword.Bluemix_notm}}.
 
 ## Contratos inteligentes de amostra
@@ -58,7 +58,7 @@ Vários contratos de amostra estão disponíveis para download no [https://githu
 |Contrato de amostra |Descrição |
 |:---|:---|
 |[Básico: contrato simples ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | Uma versão simplificada do contrato avançado que permite rastrear e armazenar dados de ativo do dispositivo no blockchain
-|[Avançado: contrato IoT Generic Sample ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | Um contrato de amostra avançada com muitos recursos e um tipo de **linha comercial** para seu modelo e comportamento de dados|
+|[Avançado: contrato de amostra genérico do IoT ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | Um contrato de amostra avançada com muitos recursos e um tipo de **linha comercial** para seu modelo e comportamento de dados|
 
 
 ## Configurar seu ambiente de {{site.data.keyword.blockchainfull_notm}}
@@ -95,7 +95,7 @@ A integração de blockchain ao {{site.data.keyword.iot_short_notm}} requer que 
 
       Exemplo de credenciais de serviço:
      ```json
-     {
+  {
       "peers": [
       {
         "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",

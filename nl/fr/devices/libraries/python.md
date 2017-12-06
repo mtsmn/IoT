@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-06-14"
 
 ---
 
@@ -36,8 +36,8 @@ Le dictionnaire d'options crée des définitions utilisées pour interagir avec 
 |`orgId`|ID de votre organisation.|
 |`type`|Type du terminal. Le type de terminal est un regroupement pour les terminaux qui exécutent une tâche spécifique, par exemple, "weatherballoon".|
 |`id`|ID unique pour identifier un terminal. Généralement, pour un type de terminal donné, l'ID de terminal est un identificateur unique de ce terminal, par exemple, un numéro de série ou une adresse MAC.|
-|`auth-method`|Méthode d'authentification. La seule méthode prise en charge est `apikey`.|
-|`auth-token`|Jeton de clé d'API qui est également requis lorsque vous affectez la valeur `apikey` au paramètre auth-method.|
+|`auth-method`|Méthode d'authentification. La seule méthode prise en charge est `token`.|
+|`auth-token`|Jeton d'authentification permettant d'établir une connexion sécurisée entre votre terminal et {{site.data.keyword.iot_short_notm}}.|
 |`clean-session`|Valeur true ou false requise uniquement si vous souhaitez connecter l'application en mode d'abonnement durable. Par défaut, `clean-session` a pour valeur true.|
 
 Si aucun dictionnaire d'options n'est fourni, le client se connecte au service QuickStart de {{site.data.keyword.iot_short_notm}} en tant que terminal non enregistré.
@@ -151,7 +151,7 @@ client.commandCallback = myCommandCallback
 ## Prise en charge d'un format de message personnalisé
 {: #custom_message_format}
 
-Par défaut, le format de message est `json`, ce qui signifie que la bibliothèque prend en charge le codage et le décodage des objets dictionnaire Python au format JSON. Lorsque le format de message est `json-iotf`, le message est codé conformément à la spécification de contenu JSON {{site.data.keyword.iot_short_notm}}. Pour ajouter la prise en charge de vos propres formats de message personnalisés, voir l'[exemple de format de message personnalisé ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} dans GitHub.
+Par défaut, le format de message est ``json``, ce qui signifie que la bibliothèque prend en charge le codage et le décodage des objets dictionnaire Python au format JSON. Lorsque le format de message est ``json-iotf``, le message est codé conformément à la spécification de contenu JSON {{site.data.keyword.iot_short_notm}}. Pour ajouter la prise en charge de vos propres formats de message personnalisés, voir l'[exemple de format de message personnalisé ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} dans GitHub.
 
 Lorsque vous créez un module de codage personnalisé, vous devez l'enregistrer dans le client de terminal, comme illustré dans l'exemple suivant :
 
@@ -162,4 +162,4 @@ import myCustomCodec
 client.setMessageEncoderModule("custom", myCustomCodec)
 client.publishEvent("status", "custom", myData)
 ```
-Si un événement est envoyé dans un format inconnu ou si un terminal ne reconnaît pas le format, la bibliothèque de terminal renvoie une condition `MissingMessageDecoderException`.
+Si un événement est envoyé dans un format inconnu ou si un terminal ne reconnaît pas le format, la bibliothèque de terminal renvoie une condition ``MissingMessageDecoderException``.

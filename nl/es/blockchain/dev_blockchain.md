@@ -58,7 +58,7 @@ Hay disponibles varios contratos de ejemplo para su descarga desde [https://gith
 
 |Contrato de ejemplo |Descripción |
 |:---|:---|
-|[Basic: Simple Contract ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | Una versión simplificada del contrato avanzado que le permite realizar un seguimiento y almacenar los datos de activos de dispositivos en el blockchain
+|[Basic: Simple Contract ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window}| Una versión simplificada del contrato avanzado que le permite realizar un seguimiento y almacenar los datos de activos de dispositivos en el blockchain
 |[Advanced: IoT Generic Sample Contract ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | Un contrato de ejemplo avanzado con muchas características y un toque de **ruta comercial** en su modelo y comportamiento de datos|
 
 
@@ -96,7 +96,7 @@ La integración de blockchain de {{site.data.keyword.iot_short_notm}} requiere q
 
       Ejemplo de credenciales de servicio:
      ```json
-     {
+  {
       "peers": [
       {
         "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",

@@ -64,14 +64,14 @@ Il seguente codice di esempio descrive come un'istanza DeviceClient può interag
 
   // Imposta i parametri di connessione {{site.data.keyword.iot_short_notm}}
   char organization[11] = "quickstart";     // Per una connessione registrata sostituisci con la tua organizzazione
-  char deviceType[8] = "LPC1768";           // Per una connessione registrata sostituisci con il tuo tipo dispositivo
+  char deviceType[8] = "LPC1768";           // Per una connessione registrata sostituisci con il tuo tipo di dispositivo
   char deviceId[3] = "01";                  // Per una connessione registrata sostituisci con il tuo ID del dispositivo
 
   // Crea DeviceClient
   IoTF::DeviceClient client(organization, deviceType, deviceId);
 
   // Ottieni il DeviceID(MAC Address) se sei nella modalità quickstart e l'ID del dispositivo non è specificato
-  if((strcmp(organization, QUICKSTART) == 0) && (strcmp("", deviceId) == 0))
+  if((strcmp(organization, QUICKSTART) == 0) &&  (strcmp("", deviceId) == 0))
   {
   	char tmpBuf[50];
   	client.getDeviceId(tmpBuf, sizeof(tmpBuf));

@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
-
----
+lastupdated: "2017-03-14"---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -16,7 +14,8 @@ lastupdated: "2017-03-14"
 # デバイス開発者用の mBed C++
 {: #mbedcpp}
 
-[mBed C++ クライアント・ライブラリー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window} を使用して、[LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) や [FRDM-K64F ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/platforms/FRDM-K64F/){: new_window} などの [mBed デバイス ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.mbed.com/en/){: new_window} を {{site.data.keyword.iot_full}} サービスに簡単に接続します。{:shortdesc}
+[mBed C++ クライアント・ライブラリー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window} を使用して、[LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) や [FRDM-K64F ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/platforms/FRDM-K64F/){: new_window} などの [mBed デバイス ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.mbed.com/en/){: new_window} を {{site.data.keyword.iot_full}} サービスに簡単に接続します。
+{:shortdesc}
 
 詳しくは、[developer.mbed.org ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/){: new_window} の [ibmiotf ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window} を参照してください。
 
@@ -25,7 +24,7 @@ lastupdated: "2017-03-14"
 ## 従属関係
 {: #dependencies}
 
-|従属関係 |説明|
+|従属関係|説明|
 |:---|:---|
 |[Eclipse Paho MQTT ライブラリー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/teams/mqtt/code/MQTT/){: new_window}|mBed デバイス向けの MQTT クライアント・ライブラリーを提供します。詳しくは、[Embedded MQTT C/C++ client libraries ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window} を参照してください|
 |[EthernetInterface ライブラリー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/){: new_window}|イーサネット経由の mBed IP ライブラリー。|
@@ -44,12 +43,13 @@ ARM mBed NXP LPC 1768 マイクロコントローラーを {{site.data.keyword.i
 
 コンストラクターはクライアント・インスタンスを作成し、次のパラメーターを受け入れます。
 
-|パラメーター |説明 |
+|パラメーター|説明
+|
 |:---|:---|
 |`org` |組織 ID。この値は必須です。Quickstart フローを使用する場合は、`quickstart` を指定します。|
-|`type`   |デバイスのタイプ。このフィールドは必須です。|
-|`id`   |デバイスの ID。このフィールドは必須です。|
-|`auth-method`   |認証の方式。登録されたフローの場合にのみ必要な、オプション・フィールドです。現在サポートされている値は、`token` のみです。|
+|`type` |デバイスのタイプ。このフィールドは必須です。|
+|`id` |デバイスの ID。このフィールドは必須です。|
+|`auth-method` |認証の方式。登録されたフローの場合にのみ必要な、オプション・フィールドです。現在サポートされている値は、`token` のみです。|
 |`auth-token`   |デバイスを Watson IoT Platform に安全に接続するための認証トークン。登録されたフローの場合にのみ必要な、オプション・フィールドです。|
 
 これらのパラメーターによって、{{site.data.keyword.iot_short_notm}} サービスとの対話に使用する定義が作成されます。
@@ -70,7 +70,7 @@ ARM mBed NXP LPC 1768 マイクロコントローラーを {{site.data.keyword.i
   IoTF::DeviceClient client(organization, deviceType, deviceId);
 
   // Get the DeviceID(MAC Address) if we are in quickstart mode and device ID is not specified
-  if((strcmp(organization, QUICKSTART) == 0) && (strcmp("", deviceId) == 0))
+  if((strcmp(organization, QUICKSTART) == 0) &&  (strcmp("", deviceId) == 0))
   {
   	char tmpBuf[50];
   	client.getDeviceId(tmpBuf, sizeof(tmpBuf));
@@ -216,11 +216,13 @@ ARM mBed NXP LPC 1768 マイクロコントローラーを {{site.data.keyword.i
 デバイス・クライアントは、接続時に、このデバイスに対するコマンドに自動的にサブスクライブします。特定のコマンドを処理するには、コマンド・コールバック・メソッドを登録する必要があります。
 メッセージは、以下のプロパティーを持つ Command クラスのインスタンスとして返されます。
 
-|プロパティー |説明|
+|プロパティー|説明|
 |:---|:---|
-|`command` | 呼び出されたコマンドの名前。|  
-|`format`  |イベントの形式。形式は任意のストリング (JSON など) となります。 |
-|`payload`  |コマンド・ペイロードのデータ。最大長は 131072 バイトです。 |
+|`command`   | 呼び出されたコマンドの名前。|  
+|`format`  |イベントの形式。形式は任意のストリング (JSON など) となります。
+|
+|`payload`  |コマンド・ペイロードのデータ。最大長は 131072 バイトです。
+|
 
 
 次のコードで定義されたサンプル・コマンド・コールバック関数では、アプリケーションからの LED 点滅間隔コマンドを処理し、DeviceClient インスタンスに関数ハンドルを設定することで、デバイスが点滅コマンドを受信するたびにコールバック・メソッドが実行されるようにします。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-06-14"
 
 ---
 
@@ -36,8 +36,8 @@ Il dizionario delle opzioni crea le definizioni utilizzate per interagire con il
 |`orgId`|Il tuo ID dell'organizzazione.|
 |`type`|Il tipo del dispositivo. Il tipo del dispositivo è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
 |`id`|Un ID univoco per identificare un dispositivo. Generalmente, per un determinato tipo di dispositivo, l'ID dispositivo è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
-|`auth-method`|Il metodo di autenticazione. L'unico metodo supportato è `apikey`.|
-|`auth-token`|Un token chiave API, che è inoltre obbligatorio quando imposti il valore di auth-method su `apikey`.|
+|`auth-method`|Il metodo di autenticazione. L'unico metodo supportato è `token`.|
+|`auth-token`|Un token di autenticazione per la connessione sicura al tuo dispositivo a {{site.data.keyword.iot_short_notm}}.|
 |`clean-session`|Un valore true o false obbligatorio solo se desideri collegarti all'applicazione con il metodo di sottoscrizione durevole. Per impostazione predefinita, `clean-session` è impostato su true.|
 
 Se non viene fornito un dizionario delle opzioni, il client si collega al servizio {{site.data.keyword.iot_short_notm}} come un dispositivo non registrato.
@@ -151,7 +151,7 @@ client.commandCallback = myCommandCallback
 ## Supporto formato messaggio personalizzato
 {: #custom_message_format}
 
-Per impostazione predefinita, il formato del messaggio è impostato su `json`, che significa che la libreria supporta la codifica e la decodifica degli oggetti del dizionario Python nel formato JSON. Quando il formato del messaggio è impostato su `json-iotf`, il messaggio viene codificato in base alla specifica del payload JSON di {{site.data.keyword.iot_short_notm}}. Per aggiungere il supporto ai tuoi propri formati del messaggio personalizzati, consulta l'esempio [Custom Message Format ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} in GitHub.
+Per impostazione predefinita, il formato del messaggio è impostato su ``json``, che significa che la libreria supporta la codifica e la decodifica degli oggetti del dizionario Python nel formato JSON. Quando il formato del messaggio è impostato su ``json-iotf``, il messaggio viene codificato in base alla specifica del payload JSON di {{site.data.keyword.iot_short_notm}}. Per aggiungere il supporto ai tuoi propri formati del messaggio personalizzati, consulta l'esempio [Custom Message Format ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} in GitHub.
 
 Quando crei un modulo di codifica personalizzato, devi registrarlo nel client del dispositivo come descritto nel seguente esempio:
 
@@ -162,4 +162,4 @@ import myCustomCodec
 client.setMessageEncoderModule("custom", myCustomCodec)
 client.publishEvent("status", "custom", myData)
 ```
-Se viene inviato un evento in un formato sconosciuto o se un dispositivo non riconosce il formato, la libreria del dispositivo restituisce una condizione `MissingMessageDecoderException`.
+Se viene inviato un evento in un formato sconosciuto o se un dispositivo non riconosce il formato, la libreria del dispositivo restituisce una condizione ``MissingMessageDecoderException``.

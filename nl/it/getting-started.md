@@ -65,7 +65,7 @@ Per aggiungere un dispositivo dal dashboard {{site.data.keyword.iot_short_notm}}
         Puoi aggiungere e modificare gli attributi e i metadati successivamente.
         {: tip}
 
-4. Fai clic su **Next** per avviare il processo di aggiunta del tuo dispositivo. con il tipo dispositivo.
+4. Fai clic su **Next** per avviare il processo di aggiunta del tuo dispositivo con il tipo dispositivo.
 
 5. Immetti un ID dispositivo, ad esempio `my_first_device`.
 
@@ -77,7 +77,7 @@ Per aggiungere un dispositivo dal dashboard {{site.data.keyword.iot_short_notm}}
 
 5. Fai clic su **Next** per completare il processo.
 
-6. Fornisci un token di autenticazione oppure accetta un token generato automaticamente. Se scegli di creare un tuo token, assicurati che abbia un nome di lunghezza compresa tra gli 8 e i 36 caratteri e che contenga solo caratteri alfanumerici e i seguenti caratteri: `_`, `.`, `!`, `&`, `@`, `?`, `\*`, `+`, `(`, `)` e `-`.
+6. Fornisci un token di autenticazione oppure accetta un token generato automaticamente. Se scegli di creare un tuo token, assicurati che abbia un nome di lunghezza compresa tra gli 8 e i 36 caratteri e che contenga solo caratteri alfanumerici e i seguenti caratteri: `_`, `.`, `!`, `&`, `@`, `?`, `\*`, `+`, `(`, `)`, and `-`.
 
     Il token non deve contenere sequenze di caratteri ripetuti, parole del dizionario, nomi utente o altre sequenze predefinite.
 
@@ -109,12 +109,12 @@ Per aggiungere un dispositivo dal dashboard {{site.data.keyword.iot_short_notm}}
       * 1883
       * 8883 (crittografata)
       * 443 (socket web)
-    * ID dispositivo: d:*id_organizzzione:tipo_dispositivo:id_dispositivo*
+    * ID dispositivo: d:_id_organizzzione:tipo_dispositivo:id_dispositivo_
     * Nome utente: use-token-auth
-    * Password: *Token di autenticazione*
-    * Formato argomento evento: iot-2/evt/*id_evento/fmt/stringa_formato*
+    * Password: _Token di autenticazione_
+    * Formato argomento evento: iot-2/evt/_id_evento/fmt/stringa_formato_
 
-      Dove *id_evento* specifica il nome evento visualizzato in {{site.data.keyword.iot_short_notm}} e *stringa_formato* è il formato dell'evento, come ad esempio JSON.
+      Dove _id_evento_ specifica il nome evento visualizzato in {{site.data.keyword.iot_short_notm}} e _stringa_formato_ è il formato dell'evento, come ad esempio JSON.
 
     * Formato messaggio: JSON
 
@@ -135,7 +135,7 @@ Utilizzando tabelle e schede, puoi visualizzare dei grafici che rappresentano i 
 | Tipo | Dati visualizzati |
 |---------------|---------------|
 | Visualizzazione generica | Il valore di uno o più dataset. Scegli la dimensione del widget grande per visualizzare fino a tre valori di punto dati in una piccola tabella. |
-| Grafico a linee | Uno o più dataset in un grafico a scorrimento in tempo reale. Utilizza il menu delle impostazioni per impostare l'intervallo e la conservazione dei dati, l'aspetto dei grafici e altro.  |
+| Grafico a linee | Uno o più dataset in un grafico a scorrimento in tempo reale. Utilizza il menu delle impostazioni per impostare l'intervallo e la conservazione dei dati, l'aspetto dei grafici e altro. |
 | Grafico a barre | Valori dei dataset nelle barre etichettate. Utilizza il menu delle impostazioni per cambiare la direzione della barra, verticale o orizzontale. |
 | Grafico ad anello | Due o più dataset in una rappresentazione circolare. |
 | Valore | Il valore non elaborato di uno o più dataset. |
@@ -178,7 +178,7 @@ A questo punto, dovrai creare uno schema di tipo di dispositivo e associare le p
         * Unità dati (facoltativo)
         * Posizioni decimali
 
-    * Per selezionare le proprietà da un dispositivo connesso, seleziona la scheda **From Connected** e seleziona quindi una o più proprietà da aggiungere allo schema. Le proprietà selezionate vengono aggiunte e la descrizione è impostata sul nome della proprietà. 
+    * Per selezionare le proprietà da un dispositivo connesso, seleziona la scheda **From Connected** e seleziona quindi una o più proprietà da aggiungere allo schema. Le proprietà selezionate vengono aggiunte e la descrizione è impostata sul nome della proprietà.
 
 4. Fai clic su **Finish** per creare le proprietà.
 
@@ -208,7 +208,7 @@ Le regole sono punti di decisione che corrispondono ai dati in tempo reale con v
       2. Seleziona e configura il trigger condizionale che desideri utilizzare nella regola.
 
         * Attiva ogni volta che le condizioni sono soddisfatte
-        * Attiva se le condizioni sono soddisfatte N volte in M *Unità di tempo*
+        * Attiva se le condizioni sono soddisfatte N volte in M _Unità di tempo_
 
 5. Crea o seleziona una o più azioni che si verificano se vengono soddisfatte le condizioni della regola.
 
@@ -222,7 +222,7 @@ Le regole sono punti di decisione che corrispondono ai dati in tempo reale con v
 
     Quando attivi la regola, alla tabella **Rule-Based Analytics** viene aggiunto un avviso quando vengono soddisfatte le condizioni e vengono eseguire tutte le azioni della regola.
 
-## Passi successivi
+## Fasi successive
 
 Estendi le funzioni di analisi dati creando e connettendo le tue proprie applicazioni per utilizzare i dati del dispositivo cronologici e in tempo reale.
 

@@ -47,20 +47,20 @@ cf login -u <Ihre_Anmelde-ID_für_Bluemix>
 ```
 Wenn Sie nicht die Standardorganisation und den Standardbereich verwenden, können Sie Folgendes verwenden:
 ```
-cf target-o <Ihre_Bluemix-Organisation> -s dev
+cf target -o <Ihre_Bluemix-Organisation> -s dev
 ```
 
 5. Bearbeiten Sie die Datei `manifest.yml` und aktualisieren Sie den Hostnamen und den Anwendungsnamen mithilfe des folgenden Formats:
 ```
-applications:
- - disc quota: 1024M
-   host: <Name_Ihres_Bluemix-Hosts>
-   name: <Name_Ihres_Bluemix-Hosts>
-   command: node ap.js
-   path:
-   domain: mybluemix.net
-   instances: 1
-   memory: 128M
+Anwendungen:
+ - Plattenkapazität: 1024M
+   Host: <Name_Ihres_Bluemix-Hosts>
+   Name: <Name_Ihres_Bluemix-Hosts>
+   Befehl: node ap.js
+   Pfad:
+   Domäne: mybluemix.net
+   Instanzen: 1
+   Speicher: 128M
 ```
 6. Implementieren Sie Ihr Visualisierungsbeispiel mithilfe des folgenden Befehls:
 ```
@@ -92,7 +92,7 @@ Die Beispielanwendung wird durch folgende Verzeichnisse strukturiert:
 - Historian: Code für Visualisierung über Archivierungsfunktion
 - Realtime: Code für Echtzeitvisualisierung
 - Uicontroller.js: Code zum Steuern der Benutzerschnittstelle
-- Routes: Weiterleitungslogik und Webanwendung
+- Routen: Weiterleitungslogik und Webanwendung
 - Utils: Dienstprogrammfunktionen, die zum Ausführen von HTTP-Aufrufen verwendet werden
 - Views: in Jade geschriebene Benutzerschnittstellendateien
 - Die Rickshaw-Bibliothek für die Diagrammerstellung wird zum Darstellen des Diagramms für Echtzeit- und archivierte Daten verwendet.

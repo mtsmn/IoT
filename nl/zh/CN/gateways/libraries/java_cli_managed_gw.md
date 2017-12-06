@@ -62,7 +62,7 @@ lastupdated: "2017-04-20"
 
 ```java
 DeviceInfo deviceInfo = new DeviceInfo.Builder().
-                           serialNumber("10087").
+           serialNumber("10087").
            manufacturer("IBM").
            model("7865").
            deviceClass("A").
@@ -83,8 +83,8 @@ DeviceMetadata metadata = new DeviceMetadata(data);
 以下代码片段概述了如何使用先前样本中创建的 `DeviceInfo` 和 `DeviceMetadata` 对象来创建 `DeviceData` 类：
 
 ```java
-DeviceData deviceData = new DeviceData.Builder().
-                         deviceInfo(deviceInfo).
+  DeviceData deviceData = new DeviceData.Builder().
+               deviceInfo(deviceInfo).
             metadata(metadata).
              build();
 ```
@@ -102,7 +102,8 @@ DeviceData deviceData = new DeviceData.Builder().
 
 构造方法一用于通过接受包含以下所有属性的 `DeviceData` 类来构造 `ManagedGateway` 实例：
 
-| 属性     |描述     |
+| 属性|描述
+|
 |----------------|----------------|
 |`Organization-ID` |组织标识。|
 |`Gateway-Type` |网关设备的类型。|
@@ -110,7 +111,7 @@ DeviceData deviceData = new DeviceData.Builder().
 |`Authentication-Method`|认证方法。支持的唯一方法是“token”。|
 |`Authentication-Token`|API 密钥令牌。|
 |`auth-key`   |可选的 API 密钥，将 auth-method 的值设置为 `apikey` 时必须指定。|
-|`auth-token`   |API 密钥令牌，将 auth-method 的值设置为 `apikey` 时，此参数也是必需的。 |
+|`auth-token`   |API 密钥令牌，将 auth-method 的值设置为 `apikey` 时，此参数也是必需的。|
 |`clean-session`|true 或 false 值，仅当要以持久预订方式连接网关时是必需的。缺省情况下，`clean-session` 设置为 `true`。|
 |`Port`|要连接到的端口号。指定 8883 或 443。如果未指定端口号，缺省情况下客户机将通过端口号 8883 连接到 {{site.data.keyword.iot_short_notm}}。|
 |`WebSocket`|true 或 false 值，仅当要使用 WebSocket 连接网关时是必需的。|
@@ -170,7 +171,8 @@ managedGateway.sendGatewayManageRequest(0, true, true);
 
 `sendGatewayManageRequest()` 方法接受以下参数：
 
-| 参数     |描述     |
+| 参数|描述
+|
 |----------------|----------------|
 |`lifetime`|时间长度（以秒为单位），设备必须在此期间发送另一个管理设备类型请求，才能避免被分类为休眠而变成非受管设备。如果省略 `lifetime` 字段或将其设置为 0，那么受管设备不会变为休眠。`lifetime` 字段支持的最小值设置为 3600 秒（1 小时）。|
 |`supportFirmwareActions`|true 或 false 值，用于确定网关是否支持固件操作。网关还必须添加固件处理程序才可处理固件请求。|
@@ -333,7 +335,7 @@ int rc = managedGateway.clearDeviceLogs(typeId, deviceId);
 
 ```java
 DeviceFirmware firmware = new DeviceFirmware.Builder().
-			version("Firmware.version").
+            version("Firmware.version").
             name("Firmware.name").
             url("Firmware.url").
             verifier("Firmware.verifier").
@@ -404,7 +406,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
-	boolean success = false;
+    boolean success = false;
     URL firmwareURL = null;
     URLConnection urlConnection = null;
 
@@ -468,7 +470,7 @@ public void downloadFirmware(DeviceFirmware deviceFirmware) {
 
 ```java
 private boolean verifyFirmware(File file, String verifier) throws IOException {
-	FileInputStream fis = null;
+    FileInputStream fis = null;
     String md5 = null;
     try {
         fis = new FileInputStream(file);
@@ -506,7 +508,7 @@ private boolean verifyFirmware(File file, String verifier) throws IOException {
 
 ```java
 public void updateFirmware(DeviceFirmware deviceFirmware) {
-	try {
+    try {
 			ProcessBuilder pkgInstaller = null;
         Process p = null;
         pkgInstaller = new ProcessBuilder("sudo", "dpkg", "-i", downloadedFirmwareName);
@@ -599,7 +601,7 @@ public abstract void handleFactoryReset(DeviceAction action);
 
 ```java
 public void handleReboot(DeviceAction action) {
-	ProcessBuilder processBuilder = null;
+    ProcessBuilder processBuilder = null;
     Process p = null;
     processBuilder = new ProcessBuilder("sudo", "shutdown", "-r", "now");
     boolean status = false;
@@ -627,7 +629,7 @@ public void handleReboot(DeviceAction action) {
 
 ```java
 public void handleFactoryReset(DeviceAction action) {
-	try {
+    try {
 			// code to perform Factory reset
     } catch (IOException e) {
         action.setMessage(e.getMessage());
@@ -688,9 +690,10 @@ mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds)
 
 在网关或已连接到 {{site.data.keyword.iot_short}} 的设备上启动定制操作时，将向该网关发布一条 MQTT 消息。该消息中包含被指定为请求一部分的参数。网关必须添加 CustomActionHandler 才能接收和处理该消息。该消息将作为 `CustomAction` 类的实例返回，并包含下列属性：
 
-| 属性     | 数据类型     | 描述 |
+| 属性| 数据类型| 描述
+|
 |----------------|----------------|----------------|
-|`bundleId` |字符串 | DME 的唯一标识。|
+|`bundleId` |字符串| DME 的唯一标识。|
 |`actionId` |字符串|被启动的定制操作。|
 |`typeId` |字符串|在其上启动定制操作的设备类型。|
 |`deviceId` |字符串|在其上启动定制操作的设备。|
@@ -801,7 +804,7 @@ metadata.addPropertyChangeListener(listener);
 
 ```java
 public void propertyChange(PropertyChangeEvent evt) {
-	if(evt.getNewValue() == null) {
+    if(evt.getNewValue() == null) {
         return;
 	}
 	Object value = (Object) evt.getNewValue();

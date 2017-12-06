@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -43,7 +43,7 @@ Zum gleichzeitigen Hinzufügen mehrerer Mitglieder müssen Sie eine CSV-Datei (`
 3. Durchsuchen Sie Ihre Dateien oder ziehen Sie die CSV-Datei (`.csv`) in das Fenster **CSV-Upload**.
 4. Wählen Sie eine Standardrolle aus, die verwendet werden soll, wenn eine in der CSV-Datei angegebene Rolle nicht erkannt wird.
 5. Ordnen Sie die Spaltennummern in Ihrer CSV-Datei der entsprechenden Einträgen für IBMid, Rolle und (optional) Ablaufdatum zu.
-6. Wählen Sie das passende Komma- oder Semikolonspaltentrennzeichen aus, das mit dem Trennzeichen in Ihrer `.csv`-Datei übereinstimmt.
+6. Wählen Sie das passende Komma- oder Semikolonspaltentrennzeichen aus, das mit dem Trennzeichen in Ihrer CSV-Datei (`.csv`) übereinstimmt.
 7. Klicken Sie auf **Importieren**, um die IBMids zu importieren, und erstellen Sie die Mitglieder.
 
 
@@ -69,7 +69,7 @@ Zum gleichzeitigen Einladen mehrerer Mitglieder müssen Sie eine CSV-Datei (`.cs
 3. Durchsuchen Sie Ihre Dateien oder ziehen Sie die CSV-Datei (`.csv`) in das Fenster **CSV-Upload**.
 4. Wählen Sie eine Standardrolle aus, die verwendet werden soll, wenn eine in der CSV-Datei angegebene Rolle nicht erkannt wird.
 5. Ordnen Sie die Spaltennummern in Ihrer CSV-Datei der entsprechenden Einträgen für E-Mail-Adresse, Rolle und (optional) Ablaufdatum zu.
-6. Wählen Sie das passende Komma- oder Semikolonspaltentrennzeichen aus, das mit dem Trennzeichen in Ihrer `.csv`-Datei übereinstimmt.
+6. Wählen Sie das passende Komma- oder Semikolonspaltentrennzeichen aus, das mit dem Trennzeichen in Ihrer CSV-Datei (`.csv`) übereinstimmt.
 7. Klicken Sie auf **Importieren**, um die Einladungen zu senden.
 
 <!-- ### Registering a member with your {{site.data.keyword.iot_short_notm}} organization
@@ -139,6 +139,10 @@ Sie können den Zugriff von Benutzern auf die {{site.data.keyword.iot_short_notm
 1. Klicken Sie in Ihrem {{site.data.keyword.iot_short_notm}}-Dashboard links in der Navigationsleiste auf **Mitglieder**.
 2. Klicken Sie auf den Schalter neben dem Benutzer, für den der Zugriff auf die {{site.data.keyword.iot_short_notm}}-Organisation gesperrt werden soll.
 
+## Benutzerzugriff einschränken (Beta)
+{: #limiting-users}
+
+Die Zugriffssteuerung auf Ressourcenebene ermöglicht Ihnen die Einschränkung des Zugriffs auf Geräte innerhalb einer Organisation. Sie können Ressourcengruppen verwenden, um die Geräte anzugeben, die von den einzelnen Benutzern oder API-Schlüsseln verwaltet werden können. Weitere Informationen zur Vorgehensweise bei der Konfiguration der Zugriffssteuerung auf Ressourcenebene finden Sie in [Zugriffssteuerung auf Ressourcenebene konfigurieren](reference/rlac.html#configure_RLAC).
 
 ## Benutzer entfernen
 {: #removing-users}

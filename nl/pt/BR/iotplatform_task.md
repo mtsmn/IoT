@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-10-02"
 
 ---
 
@@ -15,7 +15,8 @@ lastupdated: "2017-03-13"
 # Conectando dispositivos
 {: #iotplatform_task}
 
-Antes que possa iniciar o recebimento de dados de seus dispositivos IoT, deve-se conectá-los ao {{site.data.keyword.iot_full}}. A conexão de um dispositivo ao {{site.data.keyword.iot_short_notm}} envolve registrar o dispositivo com o {{site.data.keyword.iot_short_notm}} e, em seguida, usar as informações de registro para configurar o dispositivo para se conectar ao {{site.data.keyword.iot_short_notm}}.
+Para poder iniciar o recebimento de dados de seus dispositivos IoT, deve-se
+conectá-los ao {{site.data.keyword.iot_full}}. A conexão de um dispositivo ao {{site.data.keyword.iot_short_notm}} envolve registrar o dispositivo com o {{site.data.keyword.iot_short_notm}} e, em seguida, usar as informações de registro para configurar o dispositivo para se conectar ao {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
 ## Antes de iniciar
@@ -35,7 +36,7 @@ Conclua as etapas a seguir para conectar seu dispositivo ao {{site.data.keyword.
 
 O registro de um dispositivo envolve classificar o dispositivo como um tipo de dispositivo, dando ao dispositivo um nome e fornecendo informações do dispositivo. Em seguida, você fornece um token de conexão ou aceita um token que é gerado pelo {{site.data.keyword.iot_short_notm}}.
 
-É possível incluir dispositivos um de cada vez por meio do painel do {{site.data.keyword.iot_short_notm}} ou usar a [API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} para incluir um ou mais dispositivos de cada vez.
+É possível incluir dispositivos um por vez pelo painel do {{site.data.keyword.iot_short_notm}} ou usando a [API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} para incluir um ou mais dispositivos por vez.
 
 Para incluir um dispositivo a partir do painel do {{site.data.keyword.iot_short_notm}}:
 

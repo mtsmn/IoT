@@ -277,7 +277,7 @@ Alle XML-Daten können in das Zeichenfolgeformat konvertiert und wie folgt publi
 status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
 ```
 
-Verwenden Sie ähnlich dazu die im folgenden Beispiel gezeigte Bytefeldgruppe, um Ereignisse im Binärformat zu publizieren:
+Verwenden Sie ähnlich dazu das im folgenden Beispiel gezeigte Byte-Array, um Ereignisse im Binärformat zu publizieren:
 
 ```
 myClient.connect();
@@ -309,7 +309,7 @@ boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, Co
 
 Zum Lesen des gesamten Codes rufen Sie das Gerätebeispiel [HttpDeviceEventPublish ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")] auf.{: new_window}
 
-Je nach den Einstellungen in der Eigenschaftendatei wird das Ereignis mit der Methode `publishEventOverHTTP()` entweder im Quickstart-Modus oder im Modus des registrierten Ablaufs publiziert. Wenn als Organisations-ID in der Eigenschaftendatei `quickstart` festgelegt ist, publiziert die Methode `publishEventOverHTTP()` das Ereignis an den Quickstart-Service des Gerätebeispiels und publiziert das Ereignis im einfachen HTTP-Format. Wenn in der Eigenschaftendatei eine gültige registrierte Organisation angegeben ist, werden Ereignisse sicher mithilfe von HTTPS publiziert.
+Je nach den Einstellungen in der Eigenschaftendatei wird das Ereignis mit der Methode ``publishEventOverHTTP()`` entweder im Quickstart-Modus oder im Modus des registrierten Ablaufs publiziert. Wenn als Organisations-ID in der Eigenschaftendatei ``quickstart`` festgelegt ist, publiziert die Methode ``publishEventOverHTTP()`` das Ereignis an den Quickstart-Service des Gerätebeispiels und publiziert das Ereignis im einfachen HTTP-Format. Wenn in der Eigenschaftendatei eine gültige registrierte Organisation angegeben ist, werden Ereignisse sicher mithilfe von HTTPS publiziert.
 
 Das HTTP-Protokoll bietet die Zustellung 'höchstens einmal', die der Servicequalitätsstufe 'höchstens einmal' (QoS 0) des MQTT-Protokolls ähnelt. Wenn Sie die Zustellungsart 'höchstens einmal' zum Publizieren von Ereignissen verwenden, muss die Anwendung bei jedem Fehler, der auftritt, Wiederholungslogik implementieren.
 
@@ -345,7 +345,7 @@ import com.ibm.iotf.client.device.DeviceClient;
 //Implementieren Sie die Klasse 'CommandCallback', um anzugeben, wie der Befehl verarbeitet werden soll
 class MyNewCommandCallback implements CommandCallback, Runnable {
 
-    // Eine Warteschlange, die die Befehle für eine reibungslose Verarbeitung von MQTT-Nachrichten enthält & handhabt
+    // Eine Warteschlange, die die Befehle für eine reibungslose Verarbeitung von MQTT-Nachrichten enthält &  handhabt
     private BlockingQueue<Befehl> queue = new LinkedBlockingQueue<Befehl>();
 
     /**

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-06-13"
 ---
 
 {:new_window: target="\_blank"}
@@ -18,7 +18,7 @@ lastupdated: "2017-05-15"
 
 要为设备配置证书和服务器访问权，系统操作员应将关联的认证中心 (CA) 证书注册到 {{site.data.keyword.iot_short_notm}} 平台，还可以选择将消息服务器证书注册到该平台。
 
-有关使用 API 来管理 CA 证书和消息传递服务器证书的信息，请参阅 [IBM Watson IoT Platform 认证和授权 API ![外部链接图标](../../../../icons/launch-glyph.svg)（外部链接图标）](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}。
+有关使用 API 来管理 CA 证书和消息传递服务器证书的信息，请参阅 [IBM Watson IoT Platform 认证和授权 API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}。
 
 ## CA 证书
 通过 CA 证书，组织可以将设备上的客户机证书识别为可信证书，以便设备可以连接到服务器。
@@ -39,7 +39,7 @@ lastupdated: "2017-05-15"
 
 注：对于设备或网关证书，请勿在 **CN** 或 **SubjectAltName** 字段中包含 `orgId`。`orgId` 应该作为连接到消息传递服务器时，客户机实现所提供的 SNI 信息的一部分提供。
 
-有关客户机证书的更多信息，请参阅[使用客户机端证书将 Raspberry Pi 连接到 IBM Watson IoT Platform 诀窍 ![外部链接图标](../../../../icons/launch-glyph.svg)（外部链接图标）](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
+有关客户机证书的更多信息，请参阅[使用客户机端证书将 Raspberry Pi 连接到 IBM Watson IoT Platform 诀窍 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
 
 ## 消息传递服务器证书
 
@@ -51,7 +51,7 @@ lastupdated: "2017-05-15"
 
 `mtxpd0.messaging.internetofthings.ibmcloud.com`
 
-有关消息传递服务器证书的更多信息，请参阅[使用自签名服务器证书将 Raspberry Pi 连接到 IBM Watson IoT Platform 诀窍 ![外部链接图标](../../../../icons/launch-glyph.svg)（外部链接图标）](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
+有关消息传递服务器证书的更多信息，请参阅[使用自签名服务器证书将 Raspberry Pi 连接到 IBM Watson IoT Platform 诀窍 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
 
 ### 定制域 (Beta)
 {: #custom_domains}
@@ -60,11 +60,11 @@ lastupdated: "2017-05-15"
 
 作为 Beta 功能的一部分，消息传递服务器证书接受定制域。证书 CN 或 SubjectAltName 必须遵循以下格式：
 
-- `orgId.messaging<custom domain>`
+- `orgId.messaging.<custom domain>`
 
 对于定制域，**CN** 字段接受通配符，如以下示例所示：
 
-- `CN=*.messaging.fab-iot.com`
+- `CN=*.messaging.mywiotpcustomdomain.com`
 
 **重要信息**：对于定制域，需要外部 DNS 服务才能将定制域解析到 {{site.data.keyword.iot_full}} 消息传递服务器。平台不提供此 DNS 服务。
 

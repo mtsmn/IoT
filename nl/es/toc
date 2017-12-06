@@ -5,27 +5,36 @@
 Plataforma Internet de las cosas
 
     {: .navgroup id="learn"}
+    getting-started.md
+
     {: .topicgroup}
     Acerca de
         iotplatform_overview.md
         feature_overview.md
         reference/standards_and_requirements.md
         reference/bluemix_and_platform.md
+        reference/back_up.md
+        reference/billing.md
         [Calculadora de tarifas de IoT](http://iot-cost-calculator.ng.bluemix.net/)
+        reference/quotas.md
 
     {: .topicgroup}
-    Características Beta
-        information_management/im_index.md
-        information_management/im_index_split.md
-        information_management/im_index_scenario.md
-        information_management/im_index_scenario_thing.md
-        gateways/gateway-access-control.md
-        gateways/gw_intro_api.md
-        [Suscripciones compartidas de duración mixta](/applications/mqtt.html#shared_sub_mixed)
+    Características beta
+        iotplatform_beta_features.md
+                
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     reference/api.md
+
+    {: .topicgroup}
+    Aplicaciones de muestra
+        [OpenFridge](https://github.com/IBM/openfridge)
+        [Cinta transportadora simulada](https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator)
+        [Cinta transportadora basada en Raspberry PI](https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi)
+        [Supervisión de dispositivo basada en Node.js](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-angular)
+        [Supervisión de dispositivo basada en biblioteca de widgets](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-html)
+        [Simulador de varios dispositivos](https://github.com/ibm-watson-iot/iot-guide-conveyor-multi-simulator)
 
     {: .topicgroup}
     Seguridad de Watson IoT Platform
@@ -35,13 +44,7 @@ Plataforma Internet de las cosas
         reference/security/set_up_certificates.md
         reference/security/set_up_policies.md
 
-    {: .topicgroup}
-    Seguridad de Bluemix
-        [Seguridad de Bluemix](https://console.ng.bluemix.net/docs/security/index.html#security)
-        [Seguridad de la plataforma Bluemix](https://console.ng.bluemix.net/docs/security/index.html#platform-security)
-        [Conformidad de Bluemix](https://console.ng.bluemix.net/docs/security/index.html#compliance)
-        [Seguridad de la infraestructura de Bluemix (SoftLayer)](http://www.softlayer.com/security)
-        [Conformidad de la infraestructura de Bluemix (SoftLayer)](http://www.softlayer.com/compliance)
+    [Seguridad de Bluemix](https://console.ng.bluemix.net/docs/security/index.html#security)
 
     reference/mqtt/index.md
     reference/device_model.md
@@ -59,6 +62,14 @@ Plataforma Internet de las cosas
 
     {: .navgroup id="howto"}
     index.md
+    
+    {: .topicgroup}
+    Guías de iniciación
+        getting_started/getting-started-iot-overview.md
+        getting_started/getting-started-iot-conveyor.md
+        getting_started/getting-started-iot-rules.md
+        getting_started/getting-started-iot-monitoring.md
+        getting_started/getting-started-iot-large-scale-simulation.md
 
     {: .topicgroup}
     Conexión a Watson IoT Platform
@@ -67,6 +78,17 @@ Plataforma Internet de las cosas
         platform_authorization.md
         reference/security/connect_devices_apps_gw.md
 
+    {: .topicgroup}
+    devices/device_sim.md
+
+    {: .topicgroup}
+    Gestión de datos en Watson IoT Platform
+        GA_information_management/ga_im_device_twin.md
+        GA_information_management/ga_im_definitions.md
+        GA_information_management/mapping_expression_language.md
+        GA_information_management/ga_im_example.md
+        GA_information_management/ga_im_index_scenario.md
+        
     {: .topicgroup}
     Gestión de Watson IoT Platform
         reference/extensions/index.md
@@ -85,6 +107,8 @@ Plataforma Internet de las cosas
         reference/roles_access.md
         reference/app_roles_access.md
         reference/gateway_roles_access.md
+        reference/rlac_overview.md
+        reference/rlac.md     
 
     {: .topicgroup}
     Análisis de datos IoT en tiempo real
@@ -95,6 +119,12 @@ Plataforma Internet de las cosas
         custom_cards/custom-cards.md
         cloud_analytics.md
         edge_analytics.md
+
+    {: .topicgroup}
+    Análisis de datos de IoT históricos
+        analytics_integration/historical_data_overview.md
+        analytics_integration/analyzing_with_WA.md
+        analytics_integration/analyzing_with_DSX.md
 
     {: .topicgroup}
     Uso de muestras de IoT
@@ -143,7 +173,7 @@ Plataforma Internet de las cosas
         gateways/mqtt.md
         gateways/libraries/java_cli_gw.md
         gateways/libraries/java_cli_managed_gw.md
-        gateways/gateway-access-control.md
+        edge_analytics.md
 
     blockchain/dev_blockchain.md
 
@@ -159,5 +189,6 @@ Plataforma Internet de las cosas
     {: .navgroup id="help"}
     ts_index.md
     service_status.md
+    contact.md
     glossary.md
     {: .navgroup-end}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-08"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2017-05-08"
 
 {{site.data.keyword.iot_short_notm}} は {{site.data.keyword.Bluemix_notm}} プラットフォーム内で実行されるため、アクセスと接続を {{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer_full}} の両方に依存しています。{{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer_notm}} に依存しているため、{{site.data.keyword.iot_short_notm}} のユーザーにとって、{{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer_notm}} のセキュリティーと信頼性は重要です。
 
-{{site.data.keyword.Bluemix_notm}} のセキュリティーについて詳しくは、[{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー](index.html#platform-security)を参照してください。
+{{site.data.keyword.Bluemix_notm}} のセキュリティーについて詳しくは、[{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー](index.html#platform-security)を参照してください。 
 
 ## {{site.data.keyword.iot_short_notm}} のセキュリティー・コンプライアンス
 {: #compliance}  
@@ -69,12 +69,35 @@ lastupdated: "2017-05-08"
 
 デバイスの接続では、clientID と、プラットフォームにデバイスを追加するときに生成される認証トークンを使用します。多くのプラットフォームと言語で使用するときの相互運用性が高い MQTT が使用されます。{{site.data.keyword.iot_short_notm}} は TLS v1.2 を介した接続をサポートします。
 
+**重要:** 新しい組織は自動的に構成されて、デバイスがデフォルトで強制的に TLS セキュリティーを使用して接続するように設定されます。これによりデバイスは、暗号化されたセキュアなチャネルを使用してのみ接続できます。ただし {{site.data.keyword.iot_short_notm}} は、組織がデバイスを TLS なしで接続できるようにするための機能もサポートします。例えば、組織は TLS サポートがないデバイス、または送信データを暗号化または暗号化解除するのに必要な処理能力を振り向ける余力がない低能力 IoT デバイスを使用する場合があります。組織のプランに応じて、これらのケースでどの設定を使用できるかが決まります。
+
+接続セキュリティーを構成する方法について詳しくは、[セキュリティー・ポリシーの構成](set_up_policies.html)を参照してください。
+
 ![画像](connectivity_platform.svg)
 
 
 TLS および暗号スイートの要件について詳しくは、`Watson IoT Platform へのアプリケーション、デバイス、ゲートウェイの接続`という資料の [TLS 要件](connect_devices_apps_gw.html#tls_requirements)セクションを参照してください。
 
 デバイス接続のセキュリティーを強化するために、証明書とセキュリティー・ポリシーを使用することができます。セキュリティー・ポリシーを設定すると、暗号化されていない接続を許可したり、トランスポート層セキュリティー (TLS) 接続だけに制限したり、クライアント・サイドの証明書を使用したトークンなしでのデバイスの認証を有効にしたりできます。接続を許可しないデバイスを指定するためにブラックリストを使用するか、特定のデバイスの接続を許可するためにホワイトリストを使用することができます。セキュリティーの強化について詳しくは、[リスク管理とセキュリティー管理](RM_security.html)を参照してください。
+
+### デバイスとゲートウェイの無効化と有効化
+{: #disable-devices}
+
+**Authorization - Device Management** HTTP API を使用して、デバイスが直接またはゲートウェイを介してプラットフォームに接続しないように設定することができます。例えば、悪意のあるユーザーのデバイス、または正しく動作しておらず、スパムが原因でデータ使用量が増えるなどの問題を引き起こしているデバイスを強制的に切断できます。この API は、現行接続からデバイスを切断し、デバイスがプラットフォームに再接続するのを防ぐために使用されます。
+
+デバイスを有効化または無効化するには、以下の API を使用します。ここで、*${clientId}* は、*d:${orgId}:${typeId}:${deviceId}* (デバイスの場合) または *g:${orgId}:${typeId}:${deviceId}* (ゲートウェイの場合) という形式の URL エンコード・クライアント ID です。
+
+    PUT /api/v0002/authorization/devices/${clientId}
+    
+要求の本文で、状況値 0 を使用するとデバイスが無効になり、状況値 1 を使用するとデバイスが有効になります。例えば、以下の状況値はデバイスが無効になることを示しています。
+
+    { "status": 0 }
+
+成功時の応答コードは 200 です。 
+
+無効化されたデバイスに対してゲートウェイがパブリッシュすると、応答コード 180 のエラー通知を受け取ります。詳しくは、[ゲートウェイ通知](../../gateways/mqtt.html#notification)を参照してください。 
+
+この API について詳しくは、[Device Security Beta APIs ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){:new_window} を参照し、**Authorization - Device Management** に移動してください。
 
 ## IoT デバイス間のデータ・リークを回避する方法
 {: #prevent-leak-devices}

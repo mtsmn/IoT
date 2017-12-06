@@ -271,7 +271,7 @@ Un gateway può scegliere di inviare notifiche a {{site.data.keyword.iot_short}}
 
 - Stringa messaggio
 - Data/ora
-- Severità
+- Gravità
 - Facoltativamente, i dati di diagnostica codificati base64
 
 I gateway possono richiamare il metodo `addGatewayLog()` per inviare i messaggi di log, come illustrato nel seguente esempio:

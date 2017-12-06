@@ -76,14 +76,14 @@ Siga estos pasos para conectar un {{site.data.keyword.cloudant_short_notm}}:
 
   b. Seleccione un huso horario. La hora del huso horario seleccionado se utilizará para determinar qué datos de dispositivo de receptáculo se deben colocar, no la hora local en el dispositivo. Las indicaciones de fecha y hora en los datos de dispositivo que se envían al {{site.data.keyword.cloudant_short_notm}} se convertirán en el huso horario seleccionado a la hora de decidir en qué base de datos se especificarán los datos.
 
-  c. Elija opciones que determinen el nombre de base de datos. El nombre de la base de datos será `iotp_<orgID>_<dbname>_<bucket_name>`, donde:
+  c. Elija opciones que determinen el nombre de base de datos. El nombre de la base de datos será `iotp_<orgID>_<dbname>_<bucket_name>` donde:
 
- +  * `<orgID>` es el ID de organización.
+ +  * `<orgID>` es su identificador de organización.
  +  * `<dbname>` es su opción para esta parte de nombre de base de datos controlados por el campo `Nombre de base de datos`.
  +  * `<bucket_name>` es una serie determinada por la selección para el campo `Intervalo de receptáculo`:
- +    * Para los intervalos de receptáculo `day`, `<bucket_name>` será `aaaa-mm-dd`.  Por ejemplo, `2016-07-06` para sucesos el 6 de julio de 2016.
- +    * Para intervalos de receptáculo `week`, `<bucket_name>` será `aaaa-'w'ww` donde `'w'ww` indica un número de semana.  Por ejemplo, `2016-w03` para sucesos en la tercera semana de 2016.
- +    * Para intervalos de receptáculos `month`, `<bucket_name>` será `aaaa-mm`.  Por ejemplo, `2016-07` para sucesos en julio de 2016.
+ +    * Para intervalos de receptáculo de `día`, el `<bucket_name>` será `yyyy-mm-dd`. Por ejemplo, `2016-07-06` para sucesos el 6 de julio de 2016.
+ +    * Para intervalos de receptáculo de `semana`, `<bucket_name>` será `yyyy-'w'ww` donde `'w'ww` indica un número de semana. Por ejemplo, `2016-w03` para sucesos en la tercera semana de 2016.
+ +    * Para intervalos de receptáculo de `mes`, `<bucket_name>` será `yyyy-mm`. Por ejemplo, `2016-07` para sucesos en julio de 2016.
 
 5. Pulse en **Autorizar**.
 6. Pulse **Confirmar** en el recuadro de diálogo de la autorización.

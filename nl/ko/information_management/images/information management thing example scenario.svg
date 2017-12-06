@@ -19,9 +19,9 @@
    sodipodi:docname="information management thing example scenario.svg"
    width="940.88141"
    height="336.1886"
-   inkscape:export-filename="V:\PUB\ABD142\ART\WORK\ship5\iot\information_management\images\information management thing example scenario.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90"><metadata
+   inkscape:export-filename="T:\PUB\ABD142\ART\WORK\ship8\information_management\images\information management thing example scenario.png"
+   inkscape:export-xdpi="299.98099"
+   inkscape:export-ydpi="299.98099"><metadata
      id="metadata71"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
@@ -205,7 +205,7 @@
      showgrid="false"
      inkscape:zoom="1.4040027"
      inkscape:cx="470.4407"
-     inkscape:cy="197.34599"
+     inkscape:cy="168.85601"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -415,13 +415,13 @@
      transform="matrix(0,-1,1,0,0,0)" /><text
      sodipodi:linespacing="125%"
      id="text44235-7-0-2-7-3"
-     y="398.98184"
-     x="-144.55165"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.64182949px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     y="397.73859"
+     x="-144.99525"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.60866833px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      xml:space="preserve"
-     transform="matrix(0,-0.967439,1.0336569,0,0,0)"><tspan
-       y="398.98184"
-       x="-144.55165"
+     transform="matrix(0,-0.9644244,1.0368879,0,0,0)"><tspan
+       y="397.73859"
+       x="-144.99525"
        sodipodi:role="line"
        id="tspan6445-3-0-1-4-7">애플리케이션 인터페이스</tspan></text>
 <rect
@@ -453,10 +453,10 @@
        x="292.68042"
        sodipodi:role="line"
        id="tspan4738"><tspan
-         style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-         id="tspan4403">맵핑:</tspan><tspan
-         style="font-style:italic"
-         id="tspan4736"> tevent</tspan></tspan></text>
+   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   id="tspan4405">맵핑</tspan>: <tspan
+   style="font-style:italic"
+   id="tspan4736">tevent</tspan></tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -467,7 +467,7 @@
      id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9-5-0"
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" /><text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000048px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
      x="249.21837"
      y="183.17638"
      id="text266398-1-0"
@@ -513,13 +513,13 @@
      transform="matrix(0,-1,1,0,0,0)" /><text
      sodipodi:linespacing="125%"
      id="text44235-7-0-2-7-3-6"
-     y="397.73859"
-     x="-325.90335"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.60866833px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     y="396.49146"
+     x="-326.9202"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.57540417px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      xml:space="preserve"
-     transform="matrix(0,-0.9644244,1.0368879,0,0,0)"><tspan
-       y="397.73859"
-       x="-325.90335"
+     transform="matrix(0,-0.96140035,1.0401494,0,0,0)"><tspan
+       y="396.49146"
+       x="-326.9202"
        sodipodi:role="line"
        id="tspan6445-3-0-1-4-7-0">애플리케이션 인터페이스</tspan></text>
 <rect
@@ -578,13 +578,13 @@
      transform="matrix(0,-1,1,0,0,0)" /><text
      sodipodi:linespacing="125%"
      id="text44235-7-0-2-7-3-4"
-     y="665.38501"
-     x="-234.77505"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.57540417px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     y="669.56439"
+     x="-233.32603"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.64182949px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      xml:space="preserve"
-     transform="matrix(0,-0.96140035,1.0401494,0,0,0)"><tspan
-       y="665.38501"
-       x="-234.77505"
+     transform="matrix(0,-0.967439,1.0336569,0,0,0)"><tspan
+       y="669.56439"
+       x="-233.32603"
        sodipodi:role="line"
        id="tspan6445-3-0-1-4-7-3">애플리케이션 인터페이스</tspan></text>
 <g
@@ -718,12 +718,10 @@
        sodipodi:role="line"
        id="tspan5272-7"
        style="font-weight:bold;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"><tspan
-   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
-   id="tspan4411"><tspan
-     style="stroke:#000000;stroke-opacity:1"
-     id="tspan4413">룸</tspan></tspan>ID R1<tspan
+   style="stroke:#000000;stroke-opacity:1;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   id="tspan4397">룸</tspan> ID R1<tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
-   id="tspan4409"> 의 등록된 디바이스</tspan></tspan></text>
+   id="tspan4395">의 등록된 디바이스</tspan></tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -756,7 +754,7 @@
        y="300.63867"
        id="tspan5620-3"><tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4405">룸</tspan> 1</tspan><tspan
+   id="tspan4413">룸</tspan> 1</tspan><tspan
        sodipodi:role="line"
        x="591.09735"
        y="314.38867"
@@ -780,7 +778,7 @@
        inkscape:connector-curvature="0"
        style="fill:none;stroke:#ffffff;stroke-miterlimit:10" /></g><text
      sodipodi:linespacing="125%"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000048px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr;text-anchor:start;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000024px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr;text-anchor:start;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke:#000000;stroke-opacity:1;"
      y="275.68393"
      x="536.29211"
      id="text52-6-4-5-1"><tspan
@@ -788,7 +786,7 @@
        x="536.29211"
        sodipodi:role="line"
        id="tspan5272-7-5"
-       style="font-weight:normal;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.00000048px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none">룸 유형 사물 인스턴스</tspan></text>
+       style="font-weight:normal;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke:#000000;stroke-opacity:1;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;">룸 유형 사물 인스턴스</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -800,7 +798,7 @@
        id="tspan3435-3"
        sodipodi:role="line"><tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4395">이벤트</tspan>: <tspan
+   id="tspan4401">이벤트</tspan>: <tspan
    style="font-style:italic"
    id="tspan5274">tevent</tspan></tspan></text>
 <text
@@ -814,7 +812,7 @@
        id="tspan3435-3-3"
        sodipodi:role="line"><tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4399">이벤트</tspan>: <tspan
+   id="tspan4403">이벤트</tspan>: <tspan
    style="font-style:italic"
    id="tspan4581">hevent</tspan></tspan></text>
 <text
@@ -826,9 +824,8 @@
        y="85.570496"
        x="712.1286"
        id="tspan3435-3-9-6"
-       sodipodi:role="line"><tspan
-   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4407">상태 요청</tspan>: </tspan><tspan
+       sodipodi:role="line"
+       style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.00000048px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">상태 요청: </tspan><tspan
        y="99.320496"
        x="712.1286"
        sodipodi:role="line"
@@ -867,7 +864,7 @@
        sodipodi:role="line"
        id="tspan4738-8"><tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4401">맵핑</tspan>: <tspan
+   id="tspan4407">맵핑</tspan>: <tspan
    style="font-style:italic"
    id="tspan4771">hevent</tspan></tspan></text>
 <rect

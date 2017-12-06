@@ -153,7 +153,7 @@ Nach dem Initialisieren der Embedded C-Clientbibliothekt von {{site.data.keyword
 
 Wenn der Geräteclient eine Verbindung herstellt, subskribiert er automatisch alle für dieses Gerät geltenden Befehle. Zum Verarbeiten bestimmter Befehle müssen Sie eine Callback-Funktion für Befehle registrieren, indem Sie die Funktion `setCommandHandler` aufrufen. Die Callback-Funktion weist folgende Eigenschaften auf:
 
-|Eigenschaft |Beschreibung|
+|Eigenschaft|Beschreibung|
 |:---|:---|
 |`commandName`  |Der Name des aufgerufenen Befehls. |  
 |`format`  |Das Format des Ereignisses. Das Format kann eine beliebige Zeichenfolge sein, zum Beispiel 'JSON'.|
@@ -179,14 +179,14 @@ Wenn der Geräteclient eine Verbindung herstellt, subskribiert er automatisch al
 	....
 
 ```
-**Hinweis:** Die Funktion `yield()` ermöglicht es dem Gerät, Befehle von Watson IoT Platform zu empfangen und die Verbindung aufrecht zu erhalten. Wenn die Funktion `yield()` nicht innerhalb des durch das Keepalive-Intervall vorgegebenen Zeitrahmens aufgerufen wird, werden von Watson IoT Platform gesendete Befehle nicht vom Gerät empfangen. Der der Funktion `yield()` zugeordnete Wert gibt die Länge der Zeit (in Millisekunden) an, während der Daten aus dem Socket gelesen werden können, bevor die Steuerung an die Anwendung zurückgegeben wird.
+**Hinweis:** Die Funktion ``yield()`` ermöglicht es dem Gerät, Befehle von Watson IoT Platform zu empfangen und die Verbindung aufrecht zu erhalten. Wenn die Funktion ``yield()`` nicht innerhalb des durch das Keepalive-Intervall vorgegebenen Zeitrahmens aufgerufen wird, werden von Watson IoT Platform gesendete Befehle nicht vom Gerät empfangen. Der der Funktion ``yield()`` zugeordnete Wert gibt die Länge der Zeit (in Millisekunden) an, während der Daten aus dem Socket gelesen werden können, bevor die Steuerung an die Anwendung zurückgegeben wird.
 
 ## Ereignisse publizieren
 {: #publishing_events}
 
 Ereignisse können mit folgenden Eigenschaften publiziert werden:
 
-|Eigenschaft |Beschreibung|
+|Eigenschaft|Beschreibung|
 |:---|:---|
 |eventType  |Der Typ des zu publizierenden Ereignisses, beispielsweise 'status' oder 'gps'. |  
 |eventFormat  |Das Format kann eine beliebige Zeichenfolge sein, zum Beispiel `json`. |

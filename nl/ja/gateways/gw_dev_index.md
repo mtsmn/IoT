@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
-
----
+lastupdated: "2017-03-14"---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -25,7 +23,7 @@ lastupdated: "2017-03-14"
 ## クライアント・ライブラリー
 {{site.data.keyword.iot_short_notm}} に接続できるゲートウェイを開発するためのクライアント・ライブラリーが以下の言語で用意されています。
 
-|クライアント・ライブラリー |ライブラリーや詳細情報のリンク
+|クライアント・ライブラリー|ライブラリーや詳細情報のリンク
 |:---|:---
 |C++|[https://github.com/ibm-watson-iot/iot-cpp ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-cpp){: new_window}
 |C#|[https://github.com/ibm-watson-iot/iot-csharp ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-csharp){: new_window}

@@ -39,7 +39,7 @@ Vous pouvez générer et gérer des applications dans {{site.data.keyword.iot_sh
 - Protocole de messagerie MQTT
 - Python
 - Node.js
-- Java
+- Java™
 - C#
 
 ## Développement de terminaux

@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-05"
-
----
+lastupdated: "2017-04-05"---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
@@ -31,7 +29,7 @@ lastupdated: "2017-04-05"
 
 ### HTTP REST API 接続 URL
 
-<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 **注**
@@ -43,7 +41,7 @@ lastupdated: "2017-04-05"
 
 必須のポートが開いており、通信に使用可能であることを確認してください。ポート 8883 と 443 は、TLS と MQTT プロトコルと HTTP プロトコルを使用したセキュア接続をサポートします。ポート 1883 は、MQTT プロトコルと HTTP プロトコルを使用した非セキュア接続をサポートします。次の表に、接続タイプとそれに関連するポート番号に関する情報の要約を示します。   
 
-|接続タイプ |ポート番号|
+|接続タイプ|ポート番号|
 |:---|:---|
 |非セキュア|1883|
 |セキュア|8883|
@@ -109,7 +107,7 @@ TLS 要件は、MQTT プロトコルと HTTP プロトコルのどちらを使�
 
 デバイス、アプリケーション、ゲートウェイが正常に認証されるようにするため、次のクライアント ID と形式を使用して各 MQTT クライアントを定義します。
 
-|クライアント・タイプ |ID|MQTT ID 形式|
+|クライアント・タイプ|ID|MQTT ID 形式|
 |:---|:---|:---|
 |アプリケーション|a|<pre class="pre">a:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
 |スケーラブルなアプリケーション|A|<pre class="pre">A:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>

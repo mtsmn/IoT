@@ -28,9 +28,9 @@ lastupdated: "2017-03-14"
 
 생성자는 게이트웨이 클라이언트 인스턴스를 빌드하며, 다음 정의가 포함된 `Properties` 오브젝트를 허용합니다. 
 
-|정의 |설명  |
+|정의 |설명 |
 |:----|:----|
-|`org`|조직 ID로 설정해야 하는 필수 값입니다. Quickstart 플로우를 사용 중인 경우 `quickstart`를 지정하십시오.|
+|`org`|조직 ID로 설정해야 하는 필수 값입니다. Quickstart 플로우를 사용 중인 경우 `quickstart`를 지정하십시오. |
 |`domain`|메시징 엔드포인트 URL이며, 이는 선택사항입니다. 도메인의 값을 지정하지 않으면 URL의 기본값은 `internetofthings.ibmcloud.com`이며, 이는 {{site.data.keyword.iot_short_notm}} 프로덕션 서버입니다. |
 |`type`|게이트웨이의 유형을 지정하는 필수 값입니다. |
 |`id` |게이트웨이의 고유 ID를 지정하는 필수 값입니다. |
@@ -269,7 +269,7 @@ gwClient.subscribeToDeviceCommands(DEVICE_TYPE, DEVICE_ID);
 특정 명령을 처리하려면 `Command` 콜백 메소드를 등록해야 합니다. 메시지는 `Command` 클래스의 인스턴스로서 리턴되며 다음 특성을 포함하고 있습니다. 
 
 
-| 특성     |데이터 유형     | 설명 |
+| 특성     |데이터 유형     | 설명|
 |----------------|----------------|---------------
 |`deviceType`|문자열| 명령이 수신되는 디바이스 유형입니다. |
 |`deviceId`|문자열| 명령이 수신되는 디바이스 ID이며, 이는 게이트웨이 또는 게이트웨이를 통해 연결된 디바이스일 수 있습니다. |
@@ -347,7 +347,7 @@ gwClient.api().getDevicesConnectedThroughGateway(gatewayType, gatewayId);
 ## 레시피
 {: #recipes}
 
-| 레시피     | 설명 |
+| 레시피| 설명 |
 |----------------|----------------
-|[게이트웨이로 {{site.data.keyword.iot_short_notm}}에 디바이스 연결 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/){: new_window}| Raspberry Pi 게이트웨이 및 게이트웨이 뒤의 Arduino Uno 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하는 방법을 설명하는 GitHub 프로젝트 및 세부 지시사항입니다.
-|[{{site.data.keyword.iot_short_notm}}에서 관리 게이트웨이 역할의 Raspberry Pi ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}|{{site.data.keyword.iot_short_notm}}에서 관리 디바이스로서 Raspberry Pi를 연결하는 방법과 디바이스 관리 오퍼레이션을 수행하는 방법을 설명하는 이전 게이트웨이 레시피의 확장판입니다.
+|[{{site.data.keyword.iot_short_notm}}에 게이트웨이로 디바이스 연결 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/){: new_window}| Raspberry Pi 게이트웨이 및 게이트웨이 뒤의 Arduino Uno 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하는 방법을 설명하는 GitHub 프로젝트 및 세부 지시사항입니다.
+|[{{site.data.keyword.iot_short_notm}}의 관리 게이트웨이 역할의 Raspberry Pi ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}|{{site.data.keyword.iot_short_notm}}에서 관리 디바이스로서 Raspberry Pi를 연결하는 방법과 디바이스 관리 오퍼레이션을 수행하는 방법을 설명하는 이전 게이트웨이 레시피의 확장판입니다.

@@ -309,7 +309,7 @@ boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, Co
 
 Per visualizzare il codice completo, consulta l'esempio del dispositivo [HttpDeviceEventPublish ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")].{: new_window}
 
-In base alle impostazioni nel file delle proprietà, il metodo `publishEventOverHTTP()` pubblica l'evento in modalità Quickstart o nella modalità del flusso registrato. Quando l'ID dell'organizzazione nel file delle proprietà è impostato su `quickstart`, il metodo `publishEventOverHTTP()` pubblica l'evento nel servizio quickstart di esempio del dispositivo e lo pubblica nel formato HTTP semplice. Quando viene specificata un'organizzazione registrata valida nel file delle proprietà, gli eventi sono pubblicati in modo sicuro tramite HTTPS.
+In base alle impostazioni nel file delle proprietà, il metodo ``publishEventOverHTTP()`` pubblica l'evento in modalità Quickstart o nella modalità del flusso registrato. Quando l'ID dell'organizzazione nel file delle proprietà è impostato su ``quickstart``, il metodo ``publishEventOverHTTP()`` pubblica l'evento nel servizio quickstart di esempio del dispositivo e lo pubblica nel formato HTTP semplice. Quando viene specificata un'organizzazione registrata valida nel file delle proprietà, gli eventi sono pubblicati in modo sicuro tramite HTTPS.
 
 Il protocollo HTTP fornisce la distribuzione 'at most once', che è simile al livello di QOS (quality of service) 'at most once' del protocollo MQTT. Quando utilizzi la distribuzione 'at most once' per pubblicare gli eventi, l'applicazione deve implementare la logica del nuovo tentativo se si verifica un errore.
 

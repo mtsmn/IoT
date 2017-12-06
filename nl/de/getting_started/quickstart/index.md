@@ -62,7 +62,7 @@ Die Werte für *Anwendungs-ID*, *Typ-ID*, *Geräte-Typ* und *Geräte-ID* dürfen
 - Unterstreichungszeichen (_)
 - Punkte (.)
 
-Nach dem Definieren der Anwendungs-ID und der Geräte-ID erstellen Sie mithilfe von `mosquitto_sub` eine Verbindung, die Ihre Anwendung darstellt. Verwenden Sie für `<Anwendungs-ID>` und `<Geräte-ID>` die Beispiele 'myApplicationId' bzw. 'myDeviceId':
+Nach dem Definieren der Anwendungs-ID und der Geräte-ID erstellen Sie mithilfe von `mosquitto_sub` eine Verbindung, die Ihre Anwendung darstellt. Verwenden Sie die folgenden Beispiele für `<applicationId>` = myApplicationId und `<deviceId>` = myDeviceId:
 ```
     [user@host ~]$ mosquitto_sub -h quickstart.messaging.internetofthings.ibmcloud.com -p 1883 -i "a:quickstart:myApplicationId" -t iot-2/type/mosquitto/id/myDeviceId/evt/helloworld/fmt/json
 

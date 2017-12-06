@@ -1,8 +1,6 @@
 ---
 
-copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+copyright: years: 2016, 2017 lastupdated: "2017-11-03"
 
 ---
 
@@ -70,23 +68,3 @@ Pode ser que ao conectar-se você esteja usando um valor para uma opção de pin
 É possível corrigir este problema, confirmando se você configurou corretamente o ping e os parâmetros de KeepAlive para sua conexão.   
 {: tsResolve}
 
-
-## Obtendo ajuda e suporte para o {{site.data.keyword.iot_short_notm}}
-{: #gettinghelp}
-
-Se você tiver problemas ou perguntas ao usar o
-{{site.data.keyword.iot_short_notm}},
-será possível obter ajuda procurando informações ou fazendo perguntas
-por meio de um fórum. Também é possível abrir um chamado de suporte.
-
-Ao usar os fóruns para fazer uma pergunta, marque a sua pergunta para que ela possa ser vista pelas equipes de desenvolvimento do {{site.data.keyword.Bluemix_notm}}.
-
-* Se você tiver questões técnicas sobre como desenvolver ou implementar um app com o {{site.data.keyword.iot_short_notm}}, poste sua pergunta no [Stack Overflow ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} e identifique-a com "ibm-bluemix" e "watson-iot".
-<!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* Para questões sobre o serviço e instruções de introdução, use o fórum [IBM developerWorks dW Answers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Inclua as identificações "watson-iot" e "bluemix".
-
-Consulte
-[Obtendo
-ajuda](https://www.{DomainName}/docs/support/index.html#getting-help) para obter mais detalhes sobre o uso dos fóruns.
-
-Para obter informações sobre abrir um chamado de suporte IBM ou sobre níveis de suporte e severidades de chamado, consulte [Entrando em contato com o suporte![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.{DomainName}/docs/support/index.html#contacting-support).

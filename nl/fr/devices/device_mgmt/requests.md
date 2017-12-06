@@ -50,7 +50,7 @@ Pour lancer une opération de réamorçage de terminaux à l'aide de l'API REST,
 
 Fournissez les informations suivantes :
 
-- L'action `device/reboot`
+- L'action ``device/reboot``
 - Une liste de terminaux à réamorcer (5 000 terminaux au maximum)
 
 Exemple de demande de réamorçage de terminaux :
@@ -117,7 +117,7 @@ Pour lancer une réinitialisation avec les paramètres d'usine à l'aide de l'AP
 
 Les informations suivantes sont fournies :
 
-- L'action `device/factoryReset`
+- L'action ``device/factoryReset``
 - Une liste de terminaux à réinitialiser avec les paramètres d'usine (5 000 terminaux au maximum)
 
 L'exemple suivant illustre une demande de réinitialisation de terminal :
@@ -134,7 +134,7 @@ L'exemple suivant illustre une demande de réinitialisation de terminal :
 }
 ```
 
-Lorsqu'une demande de réinitialisation de terminal est lancée, un message MQTT est publié sur tous les terminaux qui sont spécifiés dans le corps de la demande. Pour chaque terminal, une réponse doit être renvoyée pour indiquer si l'action de réinitialisation avec les paramètres d'usine peut être lancée. Le code de réponse a pour valeur `202` si cette action peut être lancée immédiatement. Si la tentative de réinitialisation avec les paramètres d'usine échoue, affectez au paramètre `rc` la valeur `500` et définissez le paramètre `message` en conséquence. Si l'action de réinitialisation avec les paramètres d'usine n'est pas prise en charge, affectez au paramètre `rc` la valeur `501` et, le cas échéant, définissez le paramètre `message` en conséquence.
+Lorsqu'une demande de réinitialisation de terminal est lancée, un message MQTT est publié sur tous les terminaux qui sont spécifiés dans le corps de la demande. Pour chaque terminal, une réponse doit être renvoyée pour indiquer si l'action de réinitialisation avec les paramètres d'usine peut être lancée. Le code de réponse a pour valeur ``202`` si cette action peut être lancée immédiatement. Si la tentative de réinitialisation avec les paramètres d'usine échoue, affectez au paramètre ``rc`` la valeur ``500`` et définissez le paramètre ``message`` en conséquence. Si l'action de réinitialisation avec les paramètres d'usine n'est pas prise en charge, affectez au paramètre ``rc`` la valeur ``501`` et, le cas échéant, définissez le paramètre ``message`` en conséquence.
 
 L'action de réinitialisation avec les paramètres d'usine est terminée lorsque le terminal envoie une demande Gérer le terminal après avoir été réinitialisé avec les paramètres d'usine.
 
@@ -178,15 +178,15 @@ Topic: iotdevice-1/response
 ## Actions sur le microprogramme
 {: #firmware-actions}
 
-Le niveau de microprogramme identifié sur un terminal est stocké dans l'attribut `deviceInfo.fwVersion`. Les attributs `mgmt.firmware` sont utilisés pour effectuer une mise à jour de microprogramme et observer son statut.
+Le niveau de microprogramme identifié sur un terminal est stocké dans l'attribut ``deviceInfo.fwVersion``. Les attributs ``mgmt.firmware`` sont utilisés pour effectuer une mise à jour de microprogramme et observer son statut.
 
-**Important :** Le terminal géré doit prendre en charge l'observation de l'attribut `mgmt.firmware` afin de prendre en charge les actions sur le microprogramme.
+**Important :** Le terminal géré doit prendre en charge l'observation de l'attribut ``mgmt.firmware`` afin de prendre en charge les actions sur le microprogramme.
 
 Le processus de mise à jour du microprogramme est scindé en deux actions distinctes :
 - Téléchargement du microprogramme
 - Mise à jour du microprogramme
 
-Le statut de chacune des actions sur le microprogramme est stocké dans un attribut distinct sur le terminal. L'attribut `mgmt.firmware.state` décrit le statut du téléchargement de microprogramme. Le tableau suivant décrit les valeurs possibles que vous pouvez définir pour l'attribut `mgmt.firmware.state` :
+Le statut de chacune des actions sur le microprogramme est stocké dans un attribut distinct sur le terminal. L'attribut ``mgmt.firmware.state`` décrit le statut du téléchargement de microprogramme. Le tableau suivant décrit les valeurs possibles que vous pouvez définir pour l'attribut ``mgmt.firmware.state`` :
 
  |Valeur |Etat  | Signification |
  |:---|:---|:---|
@@ -195,7 +195,7 @@ Le statut de chacune des actions sur le microprogramme est stocké dans un attri
  |2  | Téléchargé  | Le terminal a téléchargé une mise à jour de microprogramme et est prêt à l'installer. |
 
 
-L'attribut `mgmt.firmware.updateStatus` décrit le statut de la mise à jour de microprogramme. Les valeurs possibles pour l'attribut `mgmt.firmware.updateStatus` sont les suivantes :
+L'attribut ``mgmt.firmware.updateStatus`` décrit le statut de la mise à jour de microprogramme. Les valeurs possibles pour l'attribut ``mgmt.firmware.updateStatus`` sont les suivantes :
 
 |Valeur |Etat | Signification |  
 |:---|:---|:---|
@@ -218,7 +218,7 @@ Pour lancer un téléchargement de microprogramme à l'aide de l'API REST, exéc
 
 Les informations suivantes sont fournies :
 
-- L'action `firmware/download`
+- L'action ``firmware/download``
 - Une liste de terminaux qui doivent recevoir l'image (5 000 terminaux au maximum)
 - L'URI de l'image de microprogramme (facultatif)
 - La chaîne de vérification permettant de valider l'image (facultatif)
@@ -256,8 +256,8 @@ Si aucun des paramètres facultatifs n'est défini, la première étape du proce
 
 Le serveur de gestion des terminaux dans {{site.data.keyword.iot_short_notm}} utilise le protocole de gestion des terminaux pour envoyer une demande aux terminaux, ce qui lance le téléchargement de microprogramme. Le processus de téléchargement se décompose comme suit :
 
-1. Une demande de mise à jour des détails de microprogramme est envoyée au sujet `iotdm-1/device/update`.
-La demande de mise à jour permet au terminal de vérifier si le microprogramme demandé est différent de celui actuellement installé. En cas de différence, affectez au paramètre `rc` la valeur `204`, ce qui permet le passage au statut `Modifié`.  
+1. Une demande de mise à jour des détails de microprogramme est envoyée au sujet ``iotdm-1/device/update``.
+La demande de mise à jour permet au terminal de vérifier si le microprogramme demandé est différent de celui actuellement installé. En cas de différence, affectez au paramètre ``rc`` la valeur ``204``, ce qui permet le passage au statut ``Modifié``.  
 L'exemple suivant illustre le message qui doit s'afficher pour l'exemple de demande de téléchargement de microprogramme envoyée précédente, ainsi que la réponse envoyée lorsqu'une différence est détectée :
 ```
    Demande entrante depuis {{site.data.keyword.iot_short_notm}} :
@@ -293,8 +293,8 @@ L'exemple suivant illustre le message qui doit s'afficher pour l'exemple de dema
    }
    ```
    Cette réponse déclenche la demande suivante.
-2. La demande d'observation du statut de téléchargement du microprogramme `iotdm-1/observe` est envoyée.
-Elle vérifie que le terminal est prêt à lancer le téléchargement de microprogramme. Si le téléchargement peut être lancé immédiatement, affectez au paramètre `rc` la valeur `200` (`Ok`), à l'attribut `mgmt.firmware.state` la valeur `0` (`Inactif`) et à l'attribut `mgmt.firmware.updateStatus` la valeur `0` (`Inactif`). Le code suivant est un exemple d'échange entre {{site.data.keyword.iot_short_notm}} et le terminal :
+2. La demande d'observation du statut de téléchargement du microprogramme ``iotdm-1/observe`` est envoyée.
+Elle vérifie que le terminal est prêt à lancer le téléchargement de microprogramme. Si le téléchargement peut être lancé immédiatement, affectez au paramètre ``rc`` la valeur ``200`` (``Ok``), à l'attribut ``mgmt.firmware.state`` la valeur ``0`` (``Inactif``) et à l'attribut ``mgmt.firmware.updateStatus`` la valeur ``0`` (``Inactif``). Le code suivant est un exemple d'échange entre {{site.data.keyword.iot_short_notm}} et le terminal :
    ```
    Demande entrante depuis {{site.data.keyword.iot_short_notm}} :
 
@@ -321,9 +321,9 @@ Elle vérifie que le terminal est prêt à lancer le téléchargement de micropr
    ```
 Cet échange déclenche la dernière étape.  
 
-3. La demande de téléchargement est envoyée au sujet `iotdm-1/mgmt/initiate/firmware/download` :
+3. La demande de téléchargement est envoyée au sujet ``iotdm-1/mgmt/initiate/firmware/download`` :
 
-   La demande de téléchargement indique à un terminal qu'il peut lancer le téléchargement de microprogramme. Si l'action peut être lancée immédiatement, affectez au paramètre `rc` la valeur `202`. Le code suivant illustre un exemple de lancement d'une demande de téléchargement :
+   La demande de téléchargement indique à un terminal qu'il peut lancer le téléchargement de microprogramme. Si l'action peut être lancée immédiatement, affectez au paramètre ``rc`` la valeur ``202``. Le code suivant illustre un exemple de lancement d'une demande de téléchargement :
 
    ```
    Demande entrante depuis {{site.data.keyword.iot_short_notm}} :
@@ -344,7 +344,7 @@ Cet échange déclenche la dernière étape.
    }
    ```
 
-Une fois qu'un téléchargement de microprogramme est lancé de cette façon, le terminal doit envoyer un rapport sur le statut du téléchargement à {{site.data.keyword.iot_short_notm}}. Le terminal envoie un rapport sur le statut en publiant un message au sujet `iotdevice-1/notify`, où l'attribut `mgmt.firmware.state` a pour valeur `1` (`Téléchargement en cours`) ou `2` (`Téléchargé`).
+Une fois qu'un téléchargement de microprogramme est lancé de cette façon, le terminal doit envoyer un rapport sur le statut du téléchargement à {{site.data.keyword.iot_short_notm}}. Le terminal envoie un rapport sur le statut en publiant un message au sujet ``iotdevice-1/notify``, où l'attribut ``mgmt.firmware.state`` a pour valeur ``1`` (``Téléchargement en cours``) ou ``2`` (``Téléchargé``).
 Les exemples suivants illustrent le lancement du téléchargement de microprogramme :
 
 ```
@@ -387,8 +387,8 @@ Message:
 
 
 
-Une fois la notification publiée avec la valeur  `2` affectée à l'attribut `mgmt.firmware.state`, une demande est déclenchée sur le sujet `iotdm-1/cancel`. Cette demande annule l'observation de l'attribut `mgmt.firmware`.
-Lorsqu'une réponse pour laquelle la valeur `200` est affectée au paramètre `rc` est envoyée, le téléchargement de microprogramme est terminé. Le code suivant fournit un exemple :
+Une fois la notification publiée avec la valeur  ``2`` affectée à l'attribut ``mgmt.firmware.state``, une demande est déclenchée sur le sujet ``iotdm-1/cancel``. Cette demande annule l'observation de l'attribut ``mgmt.firmware``.
+Lorsqu'une réponse pour laquelle la valeur ``200`` est affectée au paramètre ``rc`` est envoyée, le téléchargement de microprogramme est terminé. Le code suivant fournit un exemple :
 
 ```
 Demande entrante depuis {{site.data.keyword.iot_short_notm}} :
@@ -418,17 +418,17 @@ Message:
 
 Les informations suivantes sont utiles pour le traitement des erreurs :
 
-- Si l'attribut `mgmt.firmware.state` n'a pas pour valeur `0` ("Inactif"), envoyez une erreur avec le code de réponse `400` et un texte de message facultatif.
-- Si l'attribut `mgmt.firmware.uri` n'est pas défini ou ne correspond pas à un URI valide, affectez au paramètre `rc` la valeur `400`.
-- Si la tentative de téléchargement de microprogramme échoue, affectez au paramètre `rc` la valeur `500` et, le cas échéant, définissez le paramètre `message` en conséquence.
-- Si le téléchargement de microprogramme n'est pas pris en charge, affectez au paramètre `rc` la valeur `500` et, le cas échéant, définissez le paramètre `message` en conséquence.
-- Lorsqu'une demande d'exécution est reçue par le terminal, remplacez la valeur `0` (Inactif) de l'attribut `mgmt.firmware.state` par `1` Téléchargement en cours).
-- Lorsque le téléchargement a abouti, affectez au paramètre `mgmt.firmware.state` la valeur `2` (Téléchargé).
-- Si une erreur se produit pendant le téléchargement, affectez à l'attribut `mgmt.firmware.state` la valeur `0` (Inactif) et affectez à l'attribut `mgmt.firmware.updateStatus` l'une des valeurs de statut d'erreur suivantes :
+- Si l'attribut ``mgmt.firmware.state`` n'a pas pour valeur ``0`` ("Inactif"), envoyez une erreur avec le code de réponse ``400`` et un texte de message facultatif.
+- Si l'attribut ``mgmt.firmware.uri`` n'est pas défini ou ne correspond pas à un URI valide, affectez au paramètre ``rc`` la valeur ``400``.
+- Si la tentative de téléchargement de microprogramme échoue, affectez au paramètre ``rc`` la valeur ``500`` et, le cas échéant, définissez le paramètre ``message`` en conséquence.
+- Si le téléchargement de microprogramme n'est pas pris en charge, affectez au paramètre ``rc`` la valeur ``500`` et, le cas échéant, définissez le paramètre ``message`` en conséquence.
+- Lorsqu'une demande d'exécution est reçue par le terminal, remplacez la valeur ``0`` (Inactif) de l'attribut ``mgmt.firmware.state`` par ``1`` Téléchargement en cours).
+- Lorsque le téléchargement a abouti, affectez au paramètre ``mgmt.firmware.state`` la valeur ``2`` (Téléchargé).
+- Si une erreur se produit pendant le téléchargement, affectez à l'attribut ``mgmt.firmware.state`` la valeur ``0`` (Inactif) et affectez à l'attribut ``mgmt.firmware.updateStatus`` l'une des valeurs de statut d'erreur suivantes :
   - 2 (Mémoire insuffisante)
   - 3 (Connexion perdue)
   - 6 (URI non valide)
-- Si un vérificateur de microprogramme a été défini, le terminal tente de vérifier l'image du microprogramme. Si la vérification de l'image échoue, affectez à l'attribut `mgmt.firmware.state` la valeur `0` (Inactif) et affectez à l'attribut `mgmt.firmware.updateStatus` la  valeur de statut d'erreur `4` (Echec de la vérification).
+- Si un vérificateur de microprogramme a été défini, le terminal tente de vérifier l'image du microprogramme. Si la vérification de l'image échoue, affectez à l'attribut ``mgmt.firmware.state`` la valeur ``0`` (Inactif) et affectez à l'attribut ``mgmt.firmware.updateStatus`` la  valeur de statut d'erreur ``4`` (Echec de la vérification).
 
 ## Actions sur le microprogramme - mise à jour
 {: #firmware-actions-update}
@@ -439,7 +439,7 @@ L'installation du microprogramme téléchargé est lancée à l'aide de l'API RE
 
 Les informations suivantes sont fournies :
 
-- L'action `firmware/update`
+- L'action ``firmware/update``
 - La liste des terminaux qui doivent recevoir l'image, tous du même type
 - L'URI de l'image de microprogramme (facultatif)
 - La chaîne de vérification permettant de valider l'image (facultatif)
@@ -462,7 +462,7 @@ Le code suivant est un exemple de demande :
 
 Si aucun des paramètres facultatifs n'est défini, le premier message reçu par le terminal est une demande de mise à jour de terminal. Cette demande de mise à jour de terminal est semblable au premier message de la demande de téléchargement de microcode.
 
-Pour surveiller le statut de la mise à jour de microprogramme, {{site.data.keyword.iot_short_notm}} commence par déclencher une demande d'observation sur le sujet`iotdm-1/observe`. Lorsque le terminal est prêt à lancer le processus de mise à jour, il envoie une réponse pour laquelle le paramètre `rc` a pour valeur `200`, l'attribut`mgmt.firmware.state` a pour valeur `0` et l'attribut `mgmt.firmware.updateStatus` a pour valeur `0`.
+Pour surveiller le statut de la mise à jour de microprogramme, {{site.data.keyword.iot_short_notm}} commence par déclencher une demande d'observation sur le sujet``iotdm-1/observe``. Lorsque le terminal est prêt à lancer le processus de mise à jour, il envoie une réponse pour laquelle le paramètre ``rc`` a pour valeur ``200``, l'attribut``mgmt.firmware.state`` a pour valeur ``0`` et l'attribut ``mgmt.firmware.updateStatus`` a pour valeur ``0``.
 
 Le code suivant fournit un exemple :
 
@@ -504,9 +504,9 @@ Message:
 
 
 
-Une fois la mise à jour de microprogramme téléchargée, le serveur de gestion des terminaux dans {{site.data.keyword.iot_short_notm}} utilise le protocole de gestion des terminaux pour demander aux terminaux spécifiés de lancer l'installation du microprogramme à l'aide du sujet `iotdm-1/mgmt/initiate/firmware/update`.
-Si cette opération peut être lancée immédiatement, affectez au paramètre `rc` la valeur `202`.
-Si le téléchargement du microprogramme n'a pas abouti, affectez au paramètre `rc` la valeur `400`.
+Une fois la mise à jour de microprogramme téléchargée, le serveur de gestion des terminaux dans {{site.data.keyword.iot_short_notm}} utilise le protocole de gestion des terminaux pour demander aux terminaux spécifiés de lancer l'installation du microprogramme à l'aide du sujet ``iotdm-1/mgmt/initiate/firmware/update``.
+Si cette opération peut être lancée immédiatement, affectez au paramètre ``rc`` la valeur ``202``.
+Si le téléchargement du microprogramme n'a pas abouti, affectez au paramètre ``rc`` la valeur ``400``.
 
 Le code suivant fournit un exemple :
 
@@ -529,8 +529,8 @@ Message:
 }
 ```
 
-Pour terminer la demande de mise à jour de microprogramme, le terminal envoie un rapport sur le statut de la mise à jour à {{site.data.keyword.iot_short_notm}} en utilisant un message de statut publié sur son sujet `iotdevice-1/notify`.
-Lorsque la mise à jour d'un microprogramme est terminée, l'attribut `mgmt.firmware.updateStatus` prend la valeur `0` (réussite) et l'attribut `mgmt.firmware.state` prend la valeur `0` (Inactif). A ce stade, l'image de microprogramme téléchargée peut être supprimée du terminal, et l'attribut `deviceInfo.fwVersion` prend la valeur de l'attribut `mgmt.firmware.version`.
+Pour terminer la demande de mise à jour de microprogramme, le terminal envoie un rapport sur le statut de la mise à jour à {{site.data.keyword.iot_short_notm}} en utilisant un message de statut publié sur son sujet ``iotdevice-1/notify``.
+Lorsque la mise à jour d'un microprogramme est terminée, l'attribut ``mgmt.firmware.updateStatus`` prend la valeur ``0`` (réussite) et l'attribut ``mgmt.firmware.state`` prend la valeur ``0`` (Inactif). A ce stade, l'image de microprogramme téléchargée peut être supprimée du terminal, et l'attribut ``deviceInfo.fwVersion`` prend la valeur de l'attribut ``mgmt.firmware.version``.
 
 Le code suivant fournit un exemple de message de notification :
 
@@ -554,10 +554,10 @@ Message:
 }
 ```
 
-Lorsque {{site.data.keyword.iot_short_notm}} reçoit une notification lui indiquant que la mise à jour de microprogramme est terminée, il déclenche une dernière demande sur le sujet `iotdm-1/cancel` pour annuler l'observation de l'attribut `mgmt.firmware`.
+Lorsque {{site.data.keyword.iot_short_notm}} reçoit une notification lui indiquant que la mise à jour de microprogramme est terminée, il déclenche une dernière demande sur le sujet ``iotdm-1/cancel`` pour annuler l'observation de l'attribut ``mgmt.firmware``.
 
 
-Lorsqu'une réponse pour laquelle la valeur `200` est affectée au paramètre `rc` est envoyée, la demande de mise à jour de microprogramme est terminée, comme illustré dans l'exemple suivant :
+Lorsqu'une réponse pour laquelle la valeur ``200`` est affectée au paramètre ``rc`` est envoyée, la demande de mise à jour de microprogramme est terminée, comme illustré dans l'exemple suivant :
 
 ```
 Demande entrante depuis {{site.data.keyword.iot_short_notm}} :
@@ -588,16 +588,16 @@ Message:
 
 La liste suivante fournit des informations utiles pour le traitement du processus et des erreurs :
 
-- Si la tentative de mise à jour de microprogramme échoue, affectez au paramètre `rc` la valeur `500` et, le cas échéant, définissez le paramètre `message` en conséquence.
-- Si la mise à jour de microprogramme n'est pas prise en charge, affectez au paramètre `rc` la valeur `501` et, le cas échéant, définissez le paramètre `message` en conséquence.
-- Si l'attribut `mgmt.firmware.state` n'a pas pour valeur `2` (Téléchargé), envoyez une erreur avec la valeur `400` affectée au paramètre `rc` et un texte de message facultatif.
-- Sinon, affectez à l'attribut `mgmt.firmware.updateStatus` la valeur `1` (En cours), et l'installation du microprogramme démarrera.
-- Si l'installation du microprogramme échoue, affectez à l'attribut `mgmt.firmware.updateStatus` l'une des valeurs suivantes :
-  - `2` (Mémoire insuffisante)
-  - `5` (Image non prise en charge)
+- Si la tentative de mise à jour de microprogramme échoue, affectez au paramètre ``rc`` la valeur ``500`` et, le cas échéant, définissez le paramètre ``message`` en conséquence.
+- Si la mise à jour de microprogramme n'est pas prise en charge, affectez au paramètre ``rc`` la valeur ``501`` et, le cas échéant, définissez le paramètre ``message`` en conséquence.
+- Si l'attribut ``mgmt.firmware.state`` n'a pas pour valeur ``2`` (Téléchargé), envoyez une erreur avec la valeur ``400`` affectée au paramètre ``rc`` et un texte de message facultatif.
+- Sinon, affectez à l'attribut ``mgmt.firmware.updateStatus`` la valeur ``1`` (En cours), et l'installation du microprogramme démarrera.
+- Si l'installation du microprogramme échoue, affectez à l'attribut ``mgmt.firmware.updateStatus`` l'une des valeurs suivantes :
+  - ``2`` (Mémoire insuffisante)
+  - ``5`` (Image non prise en charge)
 
 
-**Important :** Tous les paramètres répertoriés avec l'attribut `mgmt.firmware` doivent être définis en même temps de sorte que s'il existe une observation en cours pour `mgmt.firmware`, un seul message de notification soit envoyé.
+**Important :** Tous les paramètres répertoriés avec l'attribut ``mgmt.firmware`` doivent être définis en même temps de sorte que s'il existe une observation en cours pour ``mgmt.firmware``, un seul message de notification soit envoyé.
 
 ## Recettes relatives aux actions sur les terminaux et aux actions sur un microprogramme
 

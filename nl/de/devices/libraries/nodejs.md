@@ -151,7 +151,7 @@ Sie können die Servicequalitätsstufe für zu publizierende Ereignisse erhöhen
 
 Ereignisse können mit folgenden Eigenschaften publiziert werden:
 
-|Eigenschaft |Beschreibung|
+|Eigenschaft|Beschreibung|
 |:---|:---|
 |`eventType`  | Der Typ des zu publizierenden Ereignisses, beispielsweise 'status' oder 'GPS'. |  
 |`eventFormat`  |Das Format des Ereignisses, zum Beispiel 'JSON'. |
@@ -180,7 +180,7 @@ Ereignisse können mit folgenden Eigenschaften publiziert werden:
 
 Wenn der Geräteclient eine Verbindung herstellt, subskribiert er automatisch alle für dieses Gerät geltenden Befehle. Zum Verarbeiten bestimmter Befehle müssen Sie eine Callback-Funktion für Befehle registrieren. Der Geräteclient ruft die Callback-Funktion für Befehle auf, wenn ein Befehl empfangen wird. Die Callback-Funktion weist folgende Eigenschaften auf:
 
-|Eigenschaft |Beschreibung|
+|Eigenschaft|Beschreibung|
 |:---|:---|
 |`commandName`  | Zeichenfolge, die den Namen des aufgerufenen Befehls angibt. |  
 |`format`  | Zeichenfolge, die das Format des Ereignisses (beispielsweise JSON) angibt. |

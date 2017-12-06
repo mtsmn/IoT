@@ -34,10 +34,10 @@ Le tabelle mostrano i livelli di accesso per:
 Operazioni del dispositivo ||| Ruoli utente|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Amministratore** | **Operatore** | **Sviluppatore** | **Analista** | **Lettore**
-Creazione, aggiornamento o eliminazione dispositivi | X | X | X | - | -
+Creazione, aggiornamento o eliminazione dei dispositivi | X | X | X | - | -
 Visualizzazione dispositivi | X | X | X | X | X
 Attivazione dispositivo | X | X | X | - | -
-Pubblicazione di un evento | - | - | - | - | -
+Pubblicazione evento | - | - | - | - | -
 Sottoscrizione a un evento | X | X | X | X | X
 Pubblicazione di un comando | X | X | X | - | -
 Sottoscrizione a un comando | - | - | - | - | -
@@ -70,37 +70,37 @@ Gestione dei dati live (cache evento) | X	| X | X |	X	| -
 Operazioni dell'organizzazione ||| Ruoli utente|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Amministratore** | **Operatore** | **Sviluppatore** | **Analista** | **Lettore**
-Configurazione dei parametri di archiviazione|	X| - |-|-|-
+Configurazione dei parametri di archiviazione|	X| - |-|-|-				
 Configurazione del provider di autenticazione|	X|-|-|-|-				
 Creazione, visualizzazione, aggiornamento, eliminazione della configurazione email	|X|-|-|-|-				
 Visualizzazione dei provider di posta IoTP disponibili	|X|	X|-|-|-			
 Creazione, visualizzazione, aggiornamento, eliminazione dei template dell'email	|X	|X	|-|-|-		
-Creazione, aggiornamento, eliminazione degli utenti	|X|	X|-|-|-
-Visualizzazione utenti	|X|	X|	X|	X|-
-Creazione, aggiornamento, eliminazione degli inviti utente|	X	|X	| -|-|-
-Visualizzazione degli inviti utente	|X	|X	|- |- |-
-Completamento dell'invito	|X|	X|	X|	X|	X
-Creazione, aggiornamento, eliminazione delle chiavi API	|X	|X	| -|-|-
+Creazione, aggiornamento, eliminazione degli utenti |X|	X|-|-|-			
+Visualizzazione utenti |X|	X|	X|	X|-
+Creazione, aggiornamento, eliminazione degli inviti utente|	X	|X	| -|-|-		
+Visualizzazione degli inviti utente	|X	|X	|- |- |-		
+Completamento invito |X|	X|	X|	X|	X
+Creazione, aggiornamento, eliminazione delle chiavi API |X	|X	| -|-|-		
 Visualizzazione delle chiavi API	|X	|X	|- |- |-		
-Visualizzazione delle informazioni sull'utilizzo dell'organizzazione	|X	|X	| -|-|-		
+Visualizzazione delle informazioni sull'utilizzo dell'organizzazione |X	|X	| -|-|-		
 
 ### Operazioni di controllo dell'accesso {: #user-access-ops}
 
 Operazioni di controllo dell'accesso ||| Ruoli utente|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Amministratore** | **Operatore** | **Sviluppatore** | **Analista** | **Lettore**
-Visualizzazione delle proprietà degli utenti, inclusi i diritti di accesso	|X|	X|	X|	X| -
+Visualizzazione delle proprietà degli utenti, inclusi i diritti di accesso |X|	X|	X|	X| -
 Visualizzazione delle proprie proprietà utente, inclusi i diritti di accesso	|X|	X|	X|	X|	X
-Gestione degli utenti, inclusi i diritti di accesso	|X	|X	|-|-|-
+Gestione degli utenti, inclusi i diritti di accesso	|X	|X	|-|-|-		
 Visualizzazione delle proprietà della chiave API, inclusi i diritti di accesso|	X|	X|	X|	X|-
 Visualizzazione delle proprie proprietà della chiave API, inclusi i diritti di accesso	|-|	-|	-| -| -		
-Creazione, aggiornamento, eliminazione della chiave API, inclusi i diritti di accesso	|X	|X	|-|-|-
+Creazione, aggiornamento, eliminazione della chiave API, inclusi i diritti di accesso |X	|X	|-|-|-		
 Visualizzazione delle proprietà del dispositivo, inclusi i diritti di accesso	|X|	X|	X|	X|	X
 Visualizzazione delle proprie proprietà del dispositivo, inclusi i diritti di accesso	|-	|- |- |- |-
 Creazione, aggiornamento, eliminazione del dispositivo, inclusi i diritti di accesso	|X|	X|	X|	-| -
-Visualizzazione dei ruoli	|X	|X	|X	|X	|X
+Visualizzazione dei ruoli |X	|X	|X	|X	|X
 Creazione, aggiornamento, eliminazione dei ruoli personalizzati	|X	|X |- |- |-
-Visualizzazione delle operazioni*	|X	|X	|X	|X	|X
+Visualizzazione delle operazioni* |X	|X	|X	|X	|X
 
 ### Operazioni di analisi {: #user-analytics-ops}
 
@@ -121,10 +121,10 @@ Operazioni del servizio di terze parti ||| Ruoli utente|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Amministratore** | **Operatore** | **Sviluppatore** | **Analista** | **Lettore**
 Elaborazione delle notifiche batch da una piattaforma esterna	|X|	X	|X |-|-
-Elaborazione delle notifiche batch e loro invio alla piattaforma esterna	|X|	X	|X| -| -
+Elaborazione notifiche batch e invio alla piattaforma esterna	|X|	X	|X| -| -		
 Pubblicazione di un evento per un dispositivo	|X|	X	|X|	- |-
-Sottoscrizione a eventi da un dispositivo	|X	|X	|X |-| -
-Configurazione di un URL di callback per la piattaforma esterna	|X	|X	|X|	-| -
-Configurazione del livello di sottoscrizione della piattaforma esterna|	X|	X|	X |- |-
+Sottoscrizione agli eventi da un dispositivo	|X	|X	|X |-| -		
+Configurazione URL di callback per la piattaforma esterna	|X	|X	|X|	-| -
+Configurazione del livello di sottoscrizione della piattaforma esterna|	X|	X|	X |- |-		
 Ottenimento dello stato di integrità dal connector	|X|	X	|X	|- |-
 Verifica se un sistema esterno è attivo e convalida delle credenziali	|X	|X|	X	|- |-

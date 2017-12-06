@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-12"
+lastupdated: "2017-07-20"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-01-12"
 {{site.data.keyword.iot_full}}은 다음 키 영역에서 빌드됩니다.
 
   1. 연결 - 디바이스를 연결하고 애플리케이션을 개발합니다.
-  2. 정보 관리 - 디바이스 데이터를 저장하고 검토하며 {{site.data.keyword.iot_short_notm}}을 다른 서비스와 통합합니다.
+  2. 정보 관리 - 디바이스 데이터를 저장하고 정규화하고 변환하고 검토하며 {{site.data.keyword.iot_short_notm}}을 다른 서비스와 통합합니다.
   3. 분석 - {{site.data.keyword.iot_short_notm}} 대시보드를 사용하여 실시간 디바이스 데이터를 시각화합니다.
   4. 위험 관리 - 사용자와 애플리케이션에 대한 액세스 제어를 사용하여 보안 연결과 아키텍처를 구성합니다.
 
@@ -39,6 +39,7 @@ lastupdated: "2017-01-12"
 
 확장기능 및 서비스 통합을 통해 외부 서비스와 코어 서비스의 사용자 정의 확장기능을 모두 {{site.data.keyword.iot_short_notm}}의 인스턴스에 추가할 수 있습니다. {{site.data.keyword.iot_short_notm}}과 통합할 수 있는 외부 서비스에는 디바이스 위치에서 현재 날씨를 찾을 수 있는 The Weather Company 날씨 위치 서비스, Jasper SIM 데이터 및 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}이 포함됩니다. 써드파티 서비스 통합 및 확장기능에 대한 자세한 정보는 [외부 서비스 통합](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)을 참조하십시오.
 
+
 ---
 
 ## 정보 관리
@@ -54,8 +55,13 @@ lastupdated: "2017-01-12"
 
 {{site.data.keyword.iot_short_notm}} 서비스의 디바이스 이벤트 데이터는 나중에 사용하도록 저장할 수 있습니다. 데이터 저장은 해당 데이터를 통해 이해하기 위해 통찰력 있는 분석을 수행하는 데 중요한 첫 번째 단계입니다. 예를 들어, 오랜 기간 동안 변경사항을 추적하고 Watson API 및 코그너티브 컴퓨팅 사용 등의 강력한 분석 도구와 사용하도록 데이터 세트를 저장할 수 있습니다.자세한 정보는 [{{site.data.keyword.cloudant_short_notm}} 히스토리언 서비스 연결](https://console.ng.bluemix.net/docs/services/IoT/cloudant_connector.html) 또는 [{{site.data.keyword.messagehub}} 히스토리언 서비스 연결](https://console.ng.bluemix.net/docs/services/IoT/message_hub.html)을 참조하십시오. 
 
----
+### 데이터 관리
 
+디바이스의 여러 제조업체 및 모델은 서로 다른 형식의 데이터를 공개합니다. 데이터 관리 기능을 사용하면 이 데이터를 단일 논리 보기 *디바이스 상태*로 변환하고 정규화할 수 있으며, 애플리케이션에서 이 보기를 이해하고 처리할 수 있습니다. 데이터 관리 기능을 사용하면 애플리케이션이 각 디바이스에서 전송된 여러 형식의 이벤트 데이터를 더 이상 이해하지 않아도 되므로 애플리케이션 개발이 크게 단순화됩니다. 디바이스가 이벤트를 {{site.data.keyword.iot_short_notm}}에 공개할 때 맵핑을 사용하여 이벤트의 컨텐츠를 사용자 정의 상태 특성에 맵핑할 수 있습니다. 인바운드 이벤트로 인해 디바이스 상태가 변경되면 디바이스 상태 특성 값이 업데이트되고 {{site.data.keyword.iot_short_notm}}에 저장됩니다. HTTP API를 사용하거나 주제를 구독하여 요청 시 애플리케이션에서 값을 사용할 수 있습니다.
+
+이 기능 사용에 대한 자세한 정보는 [데이터 관리 소개](GA_information_management/ga_im_device_twin.html)를 참조하십시오.
+
+---
 ## 분석
 {: #analytics}
 

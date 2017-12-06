@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-08"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -31,7 +31,7 @@ Le document suivant répond à certaines questions courantes relatives à la fa�
 
 {{site.data.keyword.iot_short_notm}} s'exécute dans la plateforme {{site.data.keyword.Bluemix_notm}} et s'appuie donc à la fois sur {{site.data.keyword.Bluemix_notm}} et sur {{site.data.keyword.BluSoftlayer_full}} pour l'accès et la connectivité. La dépendance à {{site.data.keyword.Bluemix_notm}} et à {{site.data.keyword.BluSoftlayer_notm}} rend la sécurité et la fiabilité de {{site.data.keyword.Bluemix_notm}} et d'{{site.data.keyword.BluSoftlayer_notm}} essentielles pour les utilisateurs de {{site.data.keyword.iot_short_notm}}.
 
-Pour plus d'informations sur la sécurité de {{site.data.keyword.Bluemix_notm}}, voir [Sécurité de la plateforme {{site.data.keyword.Bluemix_notm}}](index.html#platform-security).
+Pour plus d'informations sur la sécurité de {{site.data.keyword.Bluemix_notm}}, voir [Sécurité de la plateforme {{site.data.keyword.Bluemix_notm}}](index.html#platform-security). 
 
 ## Conformité à la sécurité {{site.data.keyword.iot_short_notm}}
 {: #compliance}  
@@ -67,7 +67,11 @@ Les données d'identification de terminal et les clés d'API peuvent être révo
 ## Comment vérifions-nous que vos terminaux se connectent en toute sécurité à {{site.data.keyword.iot_short_notm}} ?
 {: #secure-device-connection}
 
-Les terminaux se connectent à l'aide d'un ID client et/ou du jeton d'authentification généré lorsqu'ils sont ajoutés à votre plateforme. MQTT permet une interopérabilité simple entre plusieurs plateformes et plusieurs langues. {{site.data.keyword.iot_short_notm}} prend en charge la connectivité via TLS v1.2.
+Les terminaux se connectent à l'aide d'un ID client et du jeton d'authentification généré lorsqu'ils sont ajoutés à votre plateforme. MQTT permet une interopérabilité simple entre plusieurs plateformes et plusieurs langues. {{site.data.keyword.iot_short_notm}} prend en charge la connectivité via TLS v1.2.
+
+**Important :** Les nouvelles organisations sont automatiquement configurées de manière à forcer les terminaux à se connecter à l'aide de la sécurité TLS par défaut, ce qui permet de vérifier que les terminaux se connectent uniquement par le biais d'un canal chiffré sécurisé. Toutefois, {{site.data.keyword.iot_short_notm}} prend également en charge les situations dans lesquelles les organisations doivent permettre aux périphériques de se connecter sans le protocole TLS. Par exemple, une organisation peut utiliser des terminaux dépourvus de prise en charge TLS ou des terminaux IoT de faible puissance qui ne parviennent pas à économiser la puissance de traitement nécessaire au chiffrement ou au déchiffrement des transmissions. Le plan de l'organisation détermine les paramètres à utiliser dans ces situations.
+
+Pour plus d'informations sur la configuration de la sécurité de connexion, voir [Configuration des politiques de sécurité](set_up_policies.html).
 
 ![image](connectivity_platform.svg)
 
@@ -77,10 +81,28 @@ Pour plus d'informations sur les exigences relatives à TLS et aux suites de chi
 Vous pouvez utiliser des certificats et des politiques de sécurité pour améliorer la sécurité de connexion des terminaux. Les
 politiques de sécurité peuvent être définies pour autoriser des connexions non chiffrées,
 pour imposer l'emploi de connexions sécurisées par TLS et pour
-permettre aux terminaux de s'authentifier avec un certificat côté client et sans jeton.
-Des listes noires peuvent être utilisées pour spécifier les terminaux qui ne sont pas
+permettre aux terminaux de s'authentifier avec un certificat côté client et sans jeton. Des listes noires peuvent être utilisées pour spécifier les terminaux qui ne sont pas
 autorisés à se connecter, ou des listes blanches peuvent être utilisées pour autoriser
 certains terminaux à se connecter. Pour plus d'informations sur la sécurité avancée, consultez [Gestion des risques et de la sécurité](RM_security.html).
+
+### Désactivation et activation de terminaux et de passerelles
+{: #disable-devices}
+
+Vous pouvez utiliser l'API HTTP **Autorisation - Gestion des terminaux** pour empêcher un terminal de se connecter directement à la plateforme ou de se connecter derrière une passerelle. Par exemple, vous pouvez obliger un terminal à se déconnecter d'un utilisateur malveillant ou d'un terminal qui ne se comporte pas correctement et qui engendre des problèmes, tels qu'une utilisation indésirable des données à cause de spam. L'API est utilisée pour déconnecter le terminal de sa connexion actuelle et l'empêcher de se reconnecter à la plateforme.
+
+Pour activer ou désactiver un terminal, utilisez l'API suivante, où *${clientId}* est l'ID client avec codage d'URL au format *d:${orgId}:${typeId}:${deviceId}* pour les terminaux ou *g:${orgId}:${typeId}:${deviceId}* pour les passerelles :
+
+    PUT /api/v0002/authorization/devices/${clientId}
+    
+Dans le corps de la demande, utilisez la valeur de statut 0 pour désactiver le terminal ou 1 pour l'activer. Par exemple, la valeur de statut suivante indique que le terminal est désactivé :
+
+    { "status": 0 }
+
+Le code de réponse de réussite est 200. 
+
+Lorsqu'une passerelle effectue une publication pour un terminal qui est désactivé, elle reçoit une notification d'erreur avec un code de réponse de 180. Pour plus d'informations, voir [Notifications de la passerelle](../../gateways/mqtt.html#notification). 
+
+Pour en savoir plus sur l'API, voir [Device Security Beta APIs ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){:new_window} et accédez à **Autorisation - Gestion des terminaux**.
 
 ## Comment évitons-nous les fuites de données entre terminaux IoT ?
 {: #prevent-leak-devices}
@@ -113,8 +135,8 @@ L'espace de sujet dans lequel les terminaux et les applications fonctionnent est
 ## Liens connexes
 {: #general}
 * [Initiation à {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Sécurité {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [Sécurité de plateforme {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [Sécurité {{site.data.keyword.Bluemix_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
+* [Sécurité de plateforme {{site.data.keyword.Bluemix_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [Conformité {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Sécurité {{site.data.keyword.BluSoftlayer_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](http://www.softlayer.com/security){:new_window}
-* [Conformité {{site.data.keyword.BluSoftlayer_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](http://www.softlayer.com/compliance){:new_window}
+* [Sécurité {{site.data.keyword.BluSoftlayer_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/security){:new_window}
+* [Conformité {{site.data.keyword.BluSoftlayer_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/compliance){:new_window}

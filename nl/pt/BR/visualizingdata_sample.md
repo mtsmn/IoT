@@ -34,9 +34,9 @@ Antes que seja possível visualizar seus dados, deve-se executar as ações a se
 1. Crie um aplicativo no {{site.data.keyword.Bluemix_notm}} usando o SDK (kit de desenvolvimento de software) do Node.js. Tome nota do nome do aplicativo e do nome do host do aplicativo, essas informações são necessárias para fazer upload do aplicativo para o {{site.data.keyword.Bluemix_notm}}.
 2. Ligue o aplicativo node.JS à sua instância do {{site.data.keyword.iot_short_notm}} no painel do {{site.data.keyword.Bluemix_notm}} concluindo as etapas a seguir:
 
-  a. No painel {{site.data.keyword.Bluemix_notm}}, clique no aplicativo Node.JS que você criou.
+  a. Em seu painel do {{site.data.keyword.Bluemix_notm}}, clique no aplicativo Node.JS que você criou.
 
-  b. Clique em **Ligar um serviço ou uma API (interface de programação de aplicativos)** e, em seguida, selecione o serviço do {{site.data.keyword.iot_short_notm}} e clique em **Incluir**.
+  b. Clique em **Ligar um serviço ou API** e, em seguida, selecione seu serviço {{site.data.keyword.iot_short_notm}} e clique em **Incluir**.
 3. Usando a ferramenta de linha de comandos cf, mude seu diretório para o pacote de amostra de visualização extraído e execute o comando a seguir para se conectar ao {{site.data.keyword.Bluemix_notm}}.
 ```
 cf api https://api.ng.bluemix.net
@@ -47,7 +47,7 @@ cf login -u <your_bluemix_login_id>
 ```
 Se você não estiver usando a organização e o espaço padrão, será possível usar:
 ```
-cf target-o <your_bluemix_org> -s dev
+cf target -o <your_bluemix_org> -s dev
 ```
 
 5. Edite o arquivo `manifest.yml` e atualiza os nomes do host e do aplicativo usando o formato a seguir:

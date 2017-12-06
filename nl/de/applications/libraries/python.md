@@ -102,9 +102,9 @@ Damit weitere Informationen dazu zur Verfügung stehen, warum ein API-Aufruf feh
 
 |Eigenschaft|Beschreibung|
 |:---|:---|
-|`httpcode`|Der HTTP-Statuscode.|
-|`message`|Ausnahmebedingungsnachricht, die die Ursache für das Fehlschlagen enthält.|
-|`response`|Das JSON-Element, das die Teilantwort enthält. Falls ein solches nicht vorhanden ist, wird für diesen Wert null eingestellt.|
+|``httpcode``|Der HTTP-Statuscode.|
+|``message``|Ausnahmebedingungsnachricht, die die Ursache für das Fehlschlagen enthält.|
+|``response``|Das JSON-Element, das die Teilantwort enthält. Falls ein solches nicht vorhanden ist, wird für diesen Wert null eingestellt.|
 
 ## Geräteereignisse subskribieren
 {: #subscribe_device_events}
@@ -191,13 +191,13 @@ Zum Verarbeiten der Ereignisse, die über Ihre Subskriptionen empfangen werden, 
 
 |Eigenschaft|Datentyp|Beschreibung|
 |:---|:---|
-|`event.device`|Zeichenfolge|Gibt das Gerät unter allen Gerätetypen der Organisation eindeutig an.|
-|`event.deviceType`|Zeichenfolge|Gibt den Gerätetyp an. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'.|
-|`event.deviceId`|Zeichenfolge|Stellt die ID des Geräts dar. In der Regel ist 'deviceId' bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse.|
-|`event.event`|Zeichenfolge|In der Regel zum Gruppieren bestimmter Ereignisse verwendet, beispielsweise 'Status', 'Warnung' und 'Daten'.
-|`event.format`|Zeichenfolge|Das Format kann eine beliebige Zeichenfolge sein, zum Beispiel 'JSON'.
-|`event.data`|Wörterverzeichnis|Die Angaben für die Nachrichtennutzdaten. Die maximale Länge beträgt 131072 Byte.
-|`event.timestamp`|Datum und Uhrzeit|Datum und Uhrzeit des Ereignisses.|
+|``event.device``|Zeichenfolge|Gibt das Gerät unter allen Gerätetypen der Organisation eindeutig an.|
+|``event.deviceType``|Zeichenfolge|Gibt den Gerätetyp an. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'.|
+|``event.deviceId``|Zeichenfolge|Stellt die ID des Geräts dar. In der Regel ist 'deviceId' bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse.|
+|``event.event``|Zeichenfolge|In der Regel zum Gruppieren bestimmter Ereignisse verwendet, beispielsweise 'Status', 'Warnung' und 'Daten'.
+|``event.format``|Zeichenfolge|Das Format kann eine beliebige Zeichenfolge sein, zum Beispiel 'JSON'.
+|``event.data``|Wörterverzeichnis|Die Angaben für die Nachrichtennutzdaten. Die maximale Länge beträgt 131072 Byte.
+|``event.timestamp``|Datum und Uhrzeit|Datum und Uhrzeit des Ereignisses.|
 
 ```python
 
@@ -273,31 +273,31 @@ Statusereignisse
 
 Zum Verarbeiten der Statusaktualisierungen, die über Ihre Subskriptionen empfangen werden, müssen Sie eine Callback-Methode für Ereignisse registrieren. Die Nachrichten werden als Instanz der Statusklasse zurückgegeben.
 
-Es gibt zwei Typen von Statusereignissen, `Connect`-Ereignisse und `Disconnect`-Ereignisse. Alle Statusereignisse enthalten folgende Eigenschaften:
+Es gibt zwei Typen von Statusereignissen, ``Connect``-Ereignisse und ``Disconnect``-Ereignisse. Alle Statusereignisse enthalten folgende Eigenschaften:
 
 |Eigenschaft|Datentyp|
 |:---|:---|
-|`status.clientAddr`|Zeichenfolge|
-|`status.protocol`|Zeichenfolge|
-|`status.clientId`|Zeichenfolge|
-|`status.user`|Zeichenfolge|
-|`status.time`|Datum und Uhrzeit|
-|`status.action`|Zeichenfolge|
-|`status.connectTime`|Datum und Uhrzeit|
-|`status.port`|Ganze Zahl|
+|``status.clientAddr``|Zeichenfolge|
+|``status.protocol``|Zeichenfolge|
+|``status.clientId``|Zeichenfolge|
+|``status.user``|Zeichenfolge|
+|``status.time``|Datum und Uhrzeit|
+|``status.action``|Zeichenfolge|
+|``status.connectTime``|Datum und Uhrzeit|
+|``status.port``|Ganze Zahl|
 
 
-Mit der Eigenschaft `status.action` wird festgelegt, ob ein Statusereignis den Typ `Connect` oder `Disconnect` aufweist.
+Mit der Eigenschaft ``status.action`` wird festgelegt, ob ein Statusereignis den Typ ``Connect`` oder ``Disconnect`` aufweist.
 
-`Disconnect`-Statusereignisse enthalten zusätzlich folgende Eigenschaften:
+``Disconnect``-Statusereignisse enthalten zusätzlich folgende Eigenschaften:
 
 |Eigenschaft|Datentyp|
 |:---|:---|
-|`status.writeMsg`|Ganze Zahl|
-|`status.readMsg`|Ganze Zahl|
-|`status.reason`|Zeichenfolge|
-|`status.readBytes`|Ganze Zahl|
-|`status.writeBytes`|Ganze Zahl|
+|``status.writeMsg``|Ganze Zahl|
+|``status.readMsg``|Ganze Zahl|
+|``status.reason``|Zeichenfolge|
+|``status.readBytes``|Ganze Zahl|
+|``status.writeBytes``|Ganze Zahl|
 
 ```python
 
@@ -360,7 +360,7 @@ client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", commandData)
 ## Organisationsdetails
 {: #org_details}
 
-Anwendungen können mithilfe der Methode `getOrganizationDetails()` Details zur Konfiguration der Organisation abrufen.
+Anwendungen können mithilfe der Methode ``getOrganizationDetails()`` Details zur Konfiguration der Organisation abrufen.
 
 ```python
 
@@ -388,9 +388,9 @@ Der Abschnitt zu den Massenoperationen in der [{{site.data.keyword.iot_short_not
 
 ### Geräteinformationen abrufen
 
-Massendaten zu Geräten können mithilfe der Methode `getAllDevices()` abgerufen werden. Mit dieser Methode werden Informationen zu allen in der Organisation registrierten Geräten abgerufen. Jede Anforderung kann maximal 512 KB enthalten.
+Massendaten zu Geräten können mithilfe der Methode ``getAllDevices()`` abgerufen werden. Mit dieser Methode werden Informationen zu allen in der Organisation registrierten Geräten abgerufen. Jede Anforderung kann maximal 512 KB enthalten.
 
-Die Antwort enthält Parameter, die für die Anwendung erforderlich sind. Verwenden Sie die Wörterverzeichnisergebnisse aus der Antwort, um die zurückgegebene Gruppe von Geräten abzurufen. Andere Parameter in der Antwort sind erforderlich, um weitere Aufrufe vorzunehmen; beispielsweise kann das Element `_bookmark` verwendet werden, um durch Ergebnisse zu blättern. Übergeben Sie die erste Anforderung, ohne ein Lesezeichen anzugeben, und verwenden Sie das in der Antwort zurückgegebene Lesezeichen anschließend in der Anforderung für die nächste Seite. Wiederholen Sie diesen Vorgang, bis das Ende der Ergebnismenge erreicht ist. Dies wird dadurch angegeben, dass kein Lesezeichen vorhanden ist. Für die übrigen Parameter müssen alle Anforderungen dieselben Werte verwenden, andernfalls sind die Ergebnisse nicht definiert.
+Die Antwort enthält Parameter, die für die Anwendung erforderlich sind. Verwenden Sie die Wörterverzeichnisergebnisse aus der Antwort, um die zurückgegebene Gruppe von Geräten abzurufen. Andere Parameter in der Antwort sind erforderlich, um weitere Aufrufe vorzunehmen; beispielsweise kann das Element ``_bookmark`` verwendet werden, um durch Ergebnisse zu blättern. Übergeben Sie die erste Anforderung, ohne ein Lesezeichen anzugeben, und verwenden Sie das in der Antwort zurückgegebene Lesezeichen anschließend in der Anforderung für die nächste Seite. Wiederholen Sie diesen Vorgang, bis das Ende der Ergebnismenge erreicht ist. Dies wird dadurch angegeben, dass kein Lesezeichen vorhanden ist. Für die übrigen Parameter müssen alle Anforderungen dieselben Werte verwenden, andernfalls sind die Ergebnisse nicht definiert.
 
 
 ```python
@@ -408,7 +408,7 @@ except IoTFCReSTException as e:
 ### Mehrere Geräte hinzufügen
 
 
-Mit der Methode `addMultipleDevices()` können Sie Ihrer {{site.data.keyword.iot_short_notm}}-Organisation mindestens ein Gerät hinzufügen. Eine Anforderung darf nicht größer als 512 KB sein. Die Antwort enthält die Authentifizierungstokens, die für das jeweilige Gerät generiert wurden. Stellen Sie sicher, dass Sie eine Kopie der Authentifizierungstokens machen; wenn die Authentifizierungstokens verloren gehen, können sie nicht mehr abgerufen werden.
+Mit der Methode ``addMultipleDevices()`` können Sie Ihrer {{site.data.keyword.iot_short_notm}}-Organisation mindestens ein Gerät hinzufügen. Eine Anforderung darf nicht größer als 512 KB sein. Die Antwort enthält die Authentifizierungstokens, die für das jeweilige Gerät generiert wurden. Stellen Sie sicher, dass Sie eine Kopie der Authentifizierungstokens machen; wenn die Authentifizierungstokens verloren gehen, können sie nicht mehr abgerufen werden.
 
 
 ```python
@@ -432,7 +432,7 @@ except IoTFCReSTException as e:
 ### Mehrere Geräte löschen
 
 
-Mit der Methode `deleteMultipleDevices()` können Sie mehrere Geräte aus einer {{site.data.keyword.iot_short_notm}}-Organisation löschen. Eine Anforderung darf nicht größer als 512 KB sein.
+Mit der Methode ``deleteMultipleDevices()`` können Sie mehrere Geräte aus einer {{site.data.keyword.iot_short_notm}}-Organisation löschen. Eine Anforderung darf nicht größer als 512 KB sein.
 
 ```python
 
@@ -463,8 +463,8 @@ Der Abschnitt 'Gerätetypen' der Dokumentation zur [{{site.data.keyword.iot_shor
 
 ### Alle Gerätetypen abrufen
 
-Mithilfe der Methode `getAllDeviceTypes()` können Sie alle Gerätetypen abrufen, die in Ihrer {{site.data.keyword.iot_short_notm}}-Organisation vorhanden sind.
-Verwenden Sie die Wörterverzeichnisergebnisse aus der Antwort, um die zurückgegebene Gruppe von Geräten abzurufen. Andere Parameter in der Antwort sind erforderlich, um weitere Aufrufe vorzunehmen; beispielsweise kann das Element `_bookmark` verwendet werden, um durch Ergebnisse zu blättern. Übergeben Sie die erste Anforderung, ohne ein Lesezeichen anzugeben, und verwenden Sie das in der Antwort zurückgegebene Lesezeichen anschließend in der Anforderung für die nächste Seite. Wiederholen Sie diesen Prozess, bis das Ende der Ergebnismenge erreicht ist. Dies wird dadurch gekennzeichnet, dass kein Lesezeichen vorhanden ist. Für die übrigen Parameter müssen alle Anforderungen dieselben Werte verwenden, andernfalls sind die Ergebnisse nicht definiert.
+Mithilfe der Methode ``getAllDeviceTypes()`` können Sie alle Gerätetypen abrufen, die in Ihrer {{site.data.keyword.iot_short_notm}}-Organisation vorhanden sind.
+Verwenden Sie die Wörterverzeichnisergebnisse aus der Antwort, um die zurückgegebene Gruppe von Geräten abzurufen. Andere Parameter in der Antwort sind erforderlich, um weitere Aufrufe vorzunehmen; beispielsweise kann das Element ``_bookmark`` verwendet werden, um durch Ergebnisse zu blättern. Übergeben Sie die erste Anforderung, ohne ein Lesezeichen anzugeben, und verwenden Sie das in der Antwort zurückgegebene Lesezeichen anschließend in der Anforderung für die nächste Seite. Wiederholen Sie diesen Prozess, bis das Ende der Ergebnismenge erreicht ist. Dies wird dadurch gekennzeichnet, dass kein Lesezeichen vorhanden ist. Für die übrigen Parameter müssen alle Anforderungen dieselben Werte verwenden, andernfalls sind die Ergebnisse nicht definiert.
 
 ```python
 
@@ -488,7 +488,7 @@ except IoTFCReSTException as e:
 
 ### Gerätetyp hinzufügen
 
-Mit der Methode `addDeviceType()` können Sie in Ihrer {{site.data.keyword.iot_short_notm}}-Instanz einen Gerätetyp registrieren. In den einzelnen Anforderungen müssen Sie zunächst die Gerätedaten und die Metadatenelemente des Geräts definieren, die auf alle Geräte dieses Typs angewendet werden sollen. Das Element mit den Gerätedaten besteht aus mehreren Variablen, die Seriennummer, Hersteller, Modell, Klasse, Beschreibung, Firmware- und Hardwareversionen und den beschreibenden Standort umfassen. Das Metadatenelement besteht aus angepassten Variablen und Werten, die vom Benutzer definiert werden können.
+Mit der Methode ``addDeviceType()`` können Sie in Ihrer {{site.data.keyword.iot_short_notm}}-Instanz einen Gerätetyp registrieren. In den einzelnen Anforderungen müssen Sie zunächst die Gerätedaten und die Metadatenelemente des Geräts definieren, die auf alle Geräte dieses Typs angewendet werden sollen. Das Element mit den Gerätedaten besteht aus mehreren Variablen, die Seriennummer, Hersteller, Modell, Klasse, Beschreibung, Firmware- und Hardwareversionen und den beschreibenden Standort umfassen. Das Metadatenelement besteht aus angepassten Variablen und Werten, die vom Benutzer definiert werden können.
 
 
 ```python
@@ -522,7 +522,7 @@ except IoTFCReSTException as e:
 ### Gerätetyp löschen
 
 
-Mit der Methode `deleteDeviceType()` können Sie in Ihrer {{site.data.keyword.iot_short_notm}}-Organisation einen Gerätetyp löschen.
+Mit der Methode ``deleteDeviceType()`` können Sie in Ihrer {{site.data.keyword.iot_short_notm}}-Organisation einen Gerätetyp löschen.
 
 ```python
 
@@ -540,7 +540,7 @@ except IoTFCReSTException as e:
 ### Informationen zu bestimmten Gerätetypen abrufen
 
 
-Mit der Methode `getDeviceType()` können Sie Informationen zu einem bestimmten Gerätetyp abrufen. Die Typ-ID (`typeId`) des Gerätetyps, den Sie abrufen wollen, muss als Parameter angegeben werden.
+Mit der Methode ``getDeviceType()`` können Sie Informationen zu einem bestimmten Gerätetyp abrufen. Die Typ-ID (``typeId``) des Gerätetyps, den Sie abrufen wollen, muss als Parameter angegeben werden.
 
 ```python
 
@@ -558,11 +558,11 @@ except IoTFCReSTException as e:
 ### Gerätetyp aktualisieren
 
 
-Mit der Methode `updateDeviceType()` können Sie die Eigenschaften eines Gerätetyps ändern. Wenn Sie die Methode `updateDeviceType()` verwenden, geben Sie zuerst die Typ-ID (`typeId`) des Gerätetyps an, der aktualisiert werden soll, und geben Sie anschließend folgende Elemente an:
+Mit der Methode ``updateDeviceType()`` können Sie die Eigenschaften eines Gerätetyps ändern. Wenn Sie die Methode ``updateDeviceType()`` verwenden, geben Sie zuerst die Typ-ID (``typeId``) des Gerätetyps an, der aktualisiert werden soll, und geben Sie anschließend folgende Elemente an:
 
-- `description`
-- `deviceInfo`
-- `metadata`
+- ``description``
+- ``deviceInfo``
+- ``metadata``
 
 ```python
 
@@ -604,7 +604,7 @@ Der Abschnitt über Geräte in der [{{site.data.keyword.iot_short_notm}}-API-Dok
 
 ### Geräte eines bestimmten Gerätetyps abrufen
 
-Mit der Methode `retrieveDevices()` können Sie alle Geräte eines bestimmten in einer Organisation vorhandenen Gerätetyps in einer {{site.data.keyword.iot_short_notm}}-Instanz wie im folgenden Beispiel gezeigt abrufen:
+Mit der Methode ``retrieveDevices()`` können Sie alle Geräte eines bestimmten in einer Organisation vorhandenen Gerätetyps in einer {{site.data.keyword.iot_short_notm}}-Instanz wie im folgenden Beispiel gezeigt abrufen:
 
 
 ```python
@@ -626,20 +626,20 @@ Im vorherigen Codebeispiel wird die Antwort auf der Basis der Geräte-ID sortier
 ### Gerät hinzufügen
 
 
-Verwenden Sie zum Hinzufügen eines Geräts zu einer {{site.data.keyword.iot_short_notm}}-Organisation die Methode `registerDevice()`. Mit der Methode `registerDevice()` wird Ihrer {{site.data.keyword.iot_short_notm}}-Organisation ein einzelnes Gerät hinzugefügt. Beim Hinzufügen eines Geräts können Sie folgende Parameter angeben:
+Verwenden Sie zum Hinzufügen eines Geräts zu einer {{site.data.keyword.iot_short_notm}}-Organisation die Methode ``registerDevice()``. Mit der Methode ``registerDevice()`` wird Ihrer {{site.data.keyword.iot_short_notm}}-Organisation ein einzelnes Gerät hinzugefügt. Beim Hinzufügen eines Geräts können Sie folgende Parameter angeben:
 
 |Parameter|Anforderung|Beschreibung
 |:---|:---|
-|`deviceTypeId`|Optional|Ordnet dem Gerät einen Gerätetyp zu. Wenn zwischen den Variablen, die durch den Gerätetyp definiert sind, und den Variablen, die durch die Variable `deviceInfo` definiert sind, ein Konflikt besteht, haben die gerätespezifischen Variablen Vorrang.|
-|`deviceId`|Obligatorisch||
-|`authToken`|Optional|Falls nicht angegeben, wird ein Authentifizierungstoken generiert und in die Antwort eingeschlossen.|
-|`deviceInfo`|Optional|Enthält einige Variablen, zu denen Seriennummer, Hersteller, Modell, Geräteklasse, Beschreibung, beschreibender Standort sowie Firmware- und Hardwareversionen gehören.|
-|`metadata`|Optional|Zeichenfolgepaare aus angepassten Feldern und Werten, wie in [Beispielcode zum Hinzufügen eines Gerätetyps](#sample_device_type) dargestellt.|
-|`location`|Optional|Enthält die Variablen 'longitude', 'latitude', 'elevation', 'accuracy' und 'measuredDateTime'.|
+|``deviceTypeId``|Optional|Ordnet dem Gerät einen Gerätetyp zu. Wenn zwischen den Variablen, die durch den Gerätetyp definiert sind, und den Variablen, die durch die Variable ``deviceInfo`` definiert sind, ein Konflikt besteht, haben die gerätespezifischen Variablen Vorrang.|
+|``deviceId``|Obligatorisch||
+|``authToken``|Optional|Falls nicht angegeben, wird ein Authentifizierungstoken generiert und in die Antwort eingeschlossen.|
+|``deviceInfo``|Optional|Enthält einige Variablen, zu denen Seriennummer, Hersteller, Modell, Geräteklasse, Beschreibung, beschreibender Standort sowie Firmware- und Hardwareversionen gehören.|
+|``metadata``|Optional|Zeichenfolgepaare aus angepassten Feldern und Werten, wie in [Beispielcode zum Hinzufügen eines Gerätetyps](#sample_device_type) dargestellt.|
+|``location``|Optional|Enthält die Variablen 'longitude', 'latitude', 'elevation', 'accuracy' und 'measuredDateTime'.|
 
 In der [API-Dokumentation ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices){: new_window} finden Sie weitere Informationen zu diesen Parametern und zum Antwortformat sowie den Codes.
 
-Wenn Sie die Methode `registerDevice()` verwenden, müssen Sie den obligatorischen Parameter 'deviceID' und die optionalen Parameter definieren, die für Ihr Gerät erforderlich sind, und Sie müssen die Methode anschließend mithilfe der von Ihnen ausgewählten Parameter aufrufen.
+Wenn Sie die Methode ``registerDevice()`` verwenden, müssen Sie den obligatorischen Parameter 'deviceID' und die optionalen Parameter definieren, die für Ihr Gerät erforderlich sind, und Sie müssen die Methode anschließend mithilfe der von Ihnen ausgewählten Parameter aufrufen.
 
 ### Beispielcode zum Hinzufügen eines Gerätetyps
 {: #sample_device_type}
@@ -658,7 +658,7 @@ apiCli.registerDevice(deviceTypeId, deviceId, metadata, deviceInfo, location)
 ```
 ### Gerät löschen
 
-Mit der Methode `deleteDevice()` können Sie in der {{site.data.keyword.iot_short_notm}}-Organisation ein Gerät aus einer Organisation entfernen. Wenn Sie ein Gerät mithilfe der Methode `deleteDevice()` löschen, müssen Sie die Parameter 'deviceTypeId' und 'deviceId' angeben.
+Mit der Methode ``deleteDevice()`` können Sie in der {{site.data.keyword.iot_short_notm}}-Organisation ein Gerät aus einer Organisation entfernen. Wenn Sie ein Gerät mithilfe der Methode ``deleteDevice()`` löschen, müssen Sie die Parameter 'deviceTypeId' und 'deviceId' angeben.
 
 Das folgende Codebeispiel zeigt das für diese Methode erforderliche Format:
 
@@ -668,7 +668,7 @@ apiCli.deleteDevice(deviceTypeId, deviceId)
 
 ### Gerät abrufen
 
-Mit der Methode `getDevice()` können Sie in {{site.data.keyword.iot_short_notm}} ein Gerät aus einer Organisation abrufen. Wenn Sie Gerätedetails mithilfe der Methode `getDevice()` abrufen, müssen Sie die Parameter 'deviceTypeId' und 'deviceId' angeben.
+Mit der Methode ``getDevice()`` können Sie in {{site.data.keyword.iot_short_notm}} ein Gerät aus einer Organisation abrufen. Wenn Sie Gerätedetails mithilfe der Methode ``getDevice()`` abrufen, müssen Sie die Parameter 'deviceTypeId' und 'deviceId' angeben.
 
 Das folgende Codebeispiel veranschaulicht das Format, das für diese Methode erforderlich ist.
 
@@ -678,7 +678,7 @@ apiCli.getDevice(deviceTypeId, deviceId)
 
 ### Alle Geräte abrufen
 
-Mit der Methode `getAllDevices()` können Sie in {{site.data.keyword.iot_short_notm}} alle Geräte einer Organisation abrufen.
+Mit der Methode ``getAllDevices()`` können Sie in {{site.data.keyword.iot_short_notm}} alle Geräte einer Organisation abrufen.
 
 ```python
 apiCli.getAllDevices({'typeId' : deviceTypeId})
@@ -686,9 +686,9 @@ apiCli.getAllDevices({'typeId' : deviceTypeId})
 
 ### Gerät aktualisieren
 
-Zum Ändern mindestens einer Eigenschaft eines Geräts verwenden Sie die Methode `updateDevice()`.
+Zum Ändern mindestens einer Eigenschaft eines Geräts verwenden Sie die Methode ``updateDevice()``.
 
-Sie können in den Parametern 'deviceInfo' oder 'metadata' beliebige Eigenschaften aktualisieren. Zum Aktualisieren einer Geräteeigenschaft definieren Sie vor dem Aufrufen der Methode `updateDevice()` den Parameter 'deviceInfo'. Der Statusparameter muss '`alert`: True' enthalten. Die Eigenschaft 'alert' steuert, ob ein Gerät in der {{site.data.keyword.iot_short_notm}}-Benutzerschnittstelle Fehlercodes anzeigt, und für sie muss standardmäßig '`enabled`: True' eingestellt sein, wie im folgenden Codebeispiel dargestellt:
+Sie können in den Parametern 'deviceInfo' oder 'metadata' beliebige Eigenschaften aktualisieren. Zum Aktualisieren einer Geräteeigenschaft definieren Sie vor dem Aufrufen der Methode ``updateDevice()`` den Parameter 'deviceInfo'. Der Statusparameter muss '``alert``: True' enthalten. Die Eigenschaft 'alert' steuert, ob ein Gerät in der {{site.data.keyword.iot_short_notm}}-Benutzerschnittstelle Fehlercodes anzeigt, und für sie muss standardmäßig '``enabled``: True' eingestellt sein, wie im folgenden Codebeispiel dargestellt:
 
 ```python
 status = { "alert": { "enabled": True }  }
@@ -708,7 +708,7 @@ apiCli.updateDevice("MyDeviceType", "200020002000", deviceInfo, status)
 ### Positionsinformationen abrufen
 
 
-Mit der Methode `getDeviceLocation()` können Sie die Positionsinformationen eines Geräts abrufen. Zum Abrufen der Positionsdaten sind die Parameter 'deviceTypeId' und 'deviceId' erforderlich.
+Mit der Methode ``getDeviceLocation()`` können Sie die Positionsinformationen eines Geräts abrufen. Zum Abrufen der Positionsdaten sind die Parameter 'deviceTypeId' und 'deviceId' erforderlich.
 
 ```python
 apiClient.getDeviceLocation("iotsample-arduino", "arduino01")
@@ -719,7 +719,7 @@ Die Antwort auf diese Methode enthält die Eigenschaften 'longitude', 'latitude'
 ### Positionsinformationen aktualisieren
 
 
-Mit der Methode `updateDeviceLocation()` können Sie die Positionsinformationen für ein Gerät ändern. Wie beim Aktualisieren der Geräteeigenschaften muss zusammen mit den Änderungen, die Sie anwenden möchten, der Parameter 'deviceLocation' definiert werden. Das folgende Codebeispiel veranschaulicht die Standortdaten für ein bestimmtes Gerät:
+Mit der Methode ``updateDeviceLocation()`` können Sie die Positionsinformationen für ein Gerät ändern. Wie beim Aktualisieren der Geräteeigenschaften muss zusammen mit den Änderungen, die Sie anwenden möchten, der Parameter 'deviceLocation' definiert werden. Das folgende Codebeispiel veranschaulicht die Standortdaten für ein bestimmtes Gerät:
 
 ```python
 deviceLocation = { "longitude": 0, "latitude": 0, "elevation": 0, "accuracy": 0, "measuredDateTime": "2015-10-28T08:45:11.673Z"}
@@ -732,7 +732,7 @@ Wenn kein Datum angegeben ist, werden das aktuelle Datum und die zugehörige Zei
 ### Managementinformationen abrufen
 
 
-Mit der Methode `getDeviceManagementInformation()` können Sie die Gerätemanagementinformationen zu einem Gerät abrufen. Die Antwort enthält Datum und Uhrzeit der letzten Aktivität, die Einstellungen für den ruhenden Status (true/false), Unterstützung für Geräte- und Firmwareaktionen sowie Firmwaredaten. In der entsprechenden API-Dokumentation finden Sie eine umfassende Liste des Antwortinhalts.
+Mit der Methode ``getDeviceManagementInformation()`` können Sie die Gerätemanagementinformationen zu einem Gerät abrufen. Die Antwort enthält Datum und Uhrzeit der letzten Aktivität, die Einstellungen für den ruhenden Status (true/false), Unterstützung für Geräte- und Firmwareaktionen sowie Firmwaredaten. In der entsprechenden API-Dokumentation finden Sie eine umfassende Liste des Antwortinhalts.
 
 Mit dem folgenden Codebeispiel werden die Gerätemanagementinformationen für ein Gerät zurückgegeben, dessen Geräte-ID (deviceId) den Wert '00aabbccde03' aufweist und dessen Gerätetypen-ID (deviceTypeId) auf 'iotsample-arduino' eingestellt ist:
 
@@ -757,7 +757,7 @@ In der [{{site.data.keyword.iot_short_notm}}-API-Dokumentation ![Symbol für ext
 ### Diagnoseprotokolle abrufen
 
 
-Mit der Methode `getAllDiagnosticLogs()` können Sie alle Diagnoseprotokolle für ein bestimmtes Gerät abrufen. Für die Methode `getAllDiagnosticLogs()` sind die Parameter 'deviceTypeId' und 'deviceId' erforderlich.
+Mit der Methode ``getAllDiagnosticLogs()`` können Sie alle Diagnoseprotokolle für ein bestimmtes Gerät abrufen. Für die Methode ``getAllDiagnosticLogs()`` sind die Parameter 'deviceTypeId' und 'deviceId' erforderlich.
 
 ```python
 apiCli.getAllDiagnosticLogs(deviceTypeId, deviceId)
@@ -768,7 +768,7 @@ Das Antwortmodell für diese Methode enthält die Eigenschaften 'Protokoll-ID', 
 ### Diagnoseprotokolle für ein Gerät löschen
 
 
-Mit der Methode `clearAllDiagnosticLogs()` können Sie alle Diagnoseprotokolle für ein bestimmtes Gerät löschen. Die erforderlichen Parameter sind 'deviceTypeId' und 'deviceId'. Seien Sie sorgfältig beim Löschen von Protokolldateien, da diese nach dem Löschen nicht mehr wiederhergestellt werden können.
+Mit der Methode ``clearAllDiagnosticLogs()`` können Sie alle Diagnoseprotokolle für ein bestimmtes Gerät löschen. Die erforderlichen Parameter sind 'deviceTypeId' und 'deviceId'. Seien Sie sorgfältig beim Löschen von Protokolldateien, da diese nach dem Löschen nicht mehr wiederhergestellt werden können.
 
 ```python
 apiCli.clearAllDiagnosticLogs(deviceTypeId, deviceId)
@@ -777,20 +777,20 @@ apiCli.clearAllDiagnosticLogs(deviceTypeId, deviceId)
 ### Diagnoseprotokoll hinzufügen
 
 
-Mit der Methode `addDiagnosticLog()` können Sie dem Diagnoseprotokoll des Geräts einen Eintrag hinzufügen. Das Protokoll kann beim Hinzufügen des neuen Eintrags bereinigt werden. Wird kein Datum angegeben, so werden dem Eintrag das aktuelle Datum und die zugehörige Uhrzeit hinzugefügt. Um diese Methode zu verwenden, müssen Sie mithilfe der folgenden Variablen den Parameter 'logs' definieren:
+Mit der Methode ``addDiagnosticLog()`` können Sie dem Diagnoseprotokoll des Geräts einen Eintrag hinzufügen. Das Protokoll kann beim Hinzufügen des neuen Eintrags bereinigt werden. Wird kein Datum angegeben, so werden dem Eintrag das aktuelle Datum und die zugehörige Uhrzeit hinzugefügt. Um diese Methode zu verwenden, müssen Sie mithilfe der folgenden Variablen den Parameter 'logs' definieren:
 
 
 |Variable|Anforderung|Beschreibung|
 |:---|:---|:---|
-|`message`|Obligatorisch|Enthält die Diagnosenachricht, die hinzugefügt werden soll.|
-|`severity`|Optional|Entspricht dem Schweregrad des Diagnoseprotokolls und kann die Einstellung '0' (Informationsnachricht), '1' (Warnung) oder '2' (Fehler) aufweisen.|
-|`data`|Optional|Enthält Diagnosedaten.|
-|`timestamp`|Optional|Enthält das Datum und die Uhrzeit des Protokolleintrags im Format ISO8601; erfolgt keine Angabe, werden das aktuelle Datum und die zugehörige Uhrzeit verwendet.|
+|``message``|Obligatorisch|Enthält die Diagnosenachricht, die hinzugefügt werden soll.|
+|``severity``|Optional|Entspricht dem Schweregrad des Diagnoseprotokolls und kann die Einstellung '0' (Informationsnachricht), '1' (Warnung) oder '2' (Fehler) aufweisen.|
+|``data``|Optional|Enthält Diagnosedaten.|
+|``timestamp``|Optional|Enthält das Datum und die Uhrzeit des Protokolleintrags im Format ISO8601; erfolgt keine Angabe, werden das aktuelle Datum und die zugehörige Uhrzeit verwendet.|
 
 
 Die übrigen in der Methode erforderlichen Parameter sind die für das Gerät geltenden Werte für 'deviceTypeId' und 'deviceId'.
 
-Das folgende Codebeispiel enthält ein Beispiel für die Methode `addDiagnosticLog()`:
+Das folgende Codebeispiel enthält ein Beispiel für die Methode ``addDiagnosticLog()``:
 
 ```python
 logs = { "message": "MessageContent", "severity": 0, "data": "LogData"}
@@ -800,7 +800,7 @@ apiCli.addDiagnosticLog(deviceTypeId, deviceId, logs)
 ### Bestimmtes Diagnoseprotokoll abrufen
 
 
-Mit der Methode `getDiagnosticLog()` können Sie auf der Basis der Protokoll-ID ein bestimmtes Diagnoseprotokoll für ein angegebenes Gerät abrufen. Die erforderlichen Parameter für diese Methode lauten 'deviceTypeId', 'deviceId' und 'logId'.
+Mit der Methode ``getDiagnosticLog()`` können Sie auf der Basis der Protokoll-ID ein bestimmtes Diagnoseprotokoll für ein angegebenes Gerät abrufen. Die erforderlichen Parameter für diese Methode lauten 'deviceTypeId', 'deviceId' und 'logId'.
 
 ```python
 apiCli.getDiagnosticLog(deviceTypeId, deviceId, logId)
@@ -809,7 +809,7 @@ apiCli.getDiagnosticLog(deviceTypeId, deviceId, logId)
 ### Diagnoseprotokoll löschen
 
 
-Mit der Methode `deleteDiagnosticLog()` können Sie ein bestimmtes Diagnoseprotokoll löschen. Um das Diagnoseprotokoll anzugeben, müssen die Parameter 'deviceTypeId', 'deviceId' und 'logID' angegeben werden.
+Mit der Methode ``deleteDiagnosticLog()`` können Sie ein bestimmtes Diagnoseprotokoll löschen. Um das Diagnoseprotokoll anzugeben, müssen die Parameter 'deviceTypeId', 'deviceId' und 'logID' angegeben werden.
 
 ```python
 apiCli.deleteDiagnosticLog(deviceTypeId, deviceId, logId)
@@ -818,7 +818,7 @@ apiCli.deleteDiagnosticLog(deviceTypeId, deviceId, logId)
 ### Fehlercodes zu einem Gerät abrufen
 
 
-Mit der Methode `getAllDiagnosticErrorCodes()` können Sie alle Diagnosefehlercodes abrufen, die einem bestimmten Gerät zugeordnet sind.
+Mit der Methode ``getAllDiagnosticErrorCodes()`` können Sie alle Diagnosefehlercodes abrufen, die einem bestimmten Gerät zugeordnet sind.
 
 ```python
 apiCli.getAllDiagnosticErrorCodes(deviceTypeId, deviceId)
@@ -827,7 +827,7 @@ apiCli.getAllDiagnosticErrorCodes(deviceTypeId, deviceId)
 ### Diagnosefehlercodes löschen
 
 
-Mit der Methode `clearAllErrorCodes()` können Sie die Liste der Fehlercodes löschen, die dem Gerät zugeordnet sind. Die Liste wird durch einen einzigen Fehlercode mit dem Wert 'null' ersetzt.
+Mit der Methode ``clearAllErrorCodes()`` können Sie die Liste der Fehlercodes löschen, die dem Gerät zugeordnet sind. Die Liste wird durch einen einzigen Fehlercode mit dem Wert 'null' ersetzt.
 
 ```python
 apiCli.clearAllErrorCodes(deviceTypeId, deviceId)
@@ -836,7 +836,7 @@ apiCli.clearAllErrorCodes(deviceTypeId, deviceId)
 ### Einzelnen Diagnosefehlercode hinzufügen
 
 
-Mit der Methode `addErrorCode()` können Sie der Liste der Fehlercodes, die dem Gerät zugeordnet sind, einen Fehlercode hinzufügen. Die Liste kann beim Hinzufügen des neuen Eintrags bereinigt werden. Die erforderlichen Parameter für die Methode lauten 'deviceTypeId', 'deviceId' und 'errorCode'. Der Parameter 'errorCode' enthält folgende Variablen:
+Mit der Methode ``addErrorCode()`` können Sie der Liste der Fehlercodes, die dem Gerät zugeordnet sind, einen Fehlercode hinzufügen. Die Liste kann beim Hinzufügen des neuen Eintrags bereinigt werden. Die erforderlichen Parameter für die Methode lauten 'deviceTypeId', 'deviceId' und 'errorCode'. Der Parameter 'errorCode' enthält folgende Variablen:
 
 - errorCode: Diese Variable ist obligatorisch und muss als ganze Zahl festgelegt werden. Mit dieser Variablen wird die Nummer des zu erstellenden Fehlercodes festgelegt.
 - timestamp: Diese Variable ist optional und enthält das Datum und die Uhrzeit des Protokolleintrags im Format ISO8601. Wenn diese Variable nicht enthalten ist, wird sie zusammen mit dem aktuellen Datum und der zugehörigen Uhrzeit automatisch hinzugefügt.
@@ -849,7 +849,7 @@ apiCli.addErrorCode(deviceTypeId, deviceId, errorCode)
 ## Problembestimmung bei Verbindungsproblemen
 {: #connection_problem_determination}
 
-Mit der Methode `getDeviceConnectionLogs()` können Sie Verbindungsprotokollereignisse aufzulisten. Verbindungsprotokollereignisse sind bei der Diagnose von Konnektivitätsproblemen bei der Verbindung zwischen dem Gerät und dem {{site.data.keyword.iot_short_notm}}-Service hilfreich. In den Einträgen werden erfolgreiche Verbindungen, nicht erfolgreiche Verbindungsversuche, absichtliche Verbindungstrennungsereignisse und vom Server initiierte Verbindungstrennungsereignisse aufgezeichnet.
+Mit der Methode ``getDeviceConnectionLogs()`` können Sie Verbindungsprotokollereignisse aufzulisten. Verbindungsprotokollereignisse sind bei der Diagnose von Konnektivitätsproblemen bei der Verbindung zwischen dem Gerät und dem {{site.data.keyword.iot_short_notm}}-Service hilfreich. In den Einträgen werden erfolgreiche Verbindungen, nicht erfolgreiche Verbindungsversuche, absichtliche Verbindungstrennungsereignisse und vom Server initiierte Verbindungstrennungsereignisse aufgezeichnet.
 
 ```
 apiCli.getDeviceConnectionLogs(deviceTypeId, deviceId)

@@ -83,31 +83,31 @@ lastupdated: "2017-03-14"
 
 |属性|描述|必需
 |:---|:---|:---|
-|`bundleId`|设备管理扩展的唯一标识。|是|
-|`version`|设备管理扩展的版本字符串。|否|
-|`provider`|设备管理扩展的提供者字符串，限制为 1024 个字符。|否|
-|`displayName`|`locale` 的映射：在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 `String` 键/值对。必须指定至少一个条目。|是|
-|`描述`|`locale` 的映射：用于在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 `String` 键/值对。如果定义，必须指定至少一个条目。|否|
-|`actions`| `actionId` 的映射：`<action>` 键/值对，用于定义设备管理扩展中包含的操作。必须指定至少一个条目。|是|
+|``bundleId``|设备管理扩展的唯一标识。|是|
+|``version``|设备管理扩展的版本字符串。|否|
+|``provider``|设备管理扩展的提供者字符串，限制为 1024 个字符。|否|
+|``displayName``|``locale`` 的映射：在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 ``String`` 键/值对。必须指定至少一个条目。|是|
+|``描述``|``locale`` 的映射：用于在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 ``String`` 键/值对。如果定义，必须指定至少一个条目。|否|
+|``actions``| ``actionId`` 的映射：``<action>`` 键值对，用于定义设备管理扩展中包含的操作。必须指定至少一个条目。|是|
 
 ### 每个操作的属性：
 
 |属性|描述|必需
 |:---|:---|
-|`actionDisplayName`|`locale` 的映射：在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 `String` 键/值对。必须指定至少一个条目。|是|
-|`描述`|`locale` 的映射：用于在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 `String` 键/值对。可选。必须指定至少一个条目。|否|
-|`parameters`|针对特定操作允许的参数的数组。如果定义，必须指定至少一个条目。|否|
+|``actionDisplayName``|``locale`` 的映射：在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 ``String`` 键/值对。必须指定至少一个条目。|是|
+|``描述``|``locale`` 的映射：用于在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 ``String`` 键/值对。可选。必须指定至少一个条目。|否|
+|``parameters``|针对特定操作允许的参数的数组。如果定义，必须指定至少一个条目。|否|
 
 ### 每个操作参数的属性：
 
 |属性|描述|必需
 |:---|:---|
-|`name`|操作中参数的唯一标识|是|
-|`value`|正则表达式，用于在启动请求时验证参数值。如果未指定，那么不会执行验证。|否|
-|`required`|布尔值，用于确定参数是否必需。缺省情况下，此值设置为 false。 |否|
-|`defaultValue`|在发起请求时未提供参数的情况下要使用的值|否|
+|``name``|操作中参数的唯一标识|是|
+|``value``|正则表达式，用于在启动请求时验证参数值。如果未指定，那么不会执行验证。|否|
+|``required``|布尔值，用于确定参数是否必需。缺省情况下，此值设置为 false。|否|
+|``defaultValue``|在发起请求时未提供参数的情况下要使用的值|否|
 
-**注：**值可以包含的 `bundleId`、`version`、`actionId` 和 `parameterId` 限制为 255 个字符，并且只能由字母数字字符（a-z、A-Z 和 0-9）和以下特殊字符组成：
+**注：**值可以包含的 ``bundleId``、``version``、``actionId`` 和 ``parameterId`` 限制为 255 个字符，并且只能由字母数字字符（a-z、A-Z 和 0-9）和以下特殊字符组成：
  - 短划线 (-)
  - 下划线 (\_)
  - 点 (.)
@@ -117,15 +117,15 @@ lastupdated: "2017-03-14"
 
 使用以下 {{site.data.keyword.iot_short_notm}} REST API 命令来管理扩展包：
 
-- 获取所有设备管理扩展包的列表：
-  `GET https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
-- 创建新的设备管理扩展包：
+- 要获取所有设备管理扩展包的列表：
+`GET https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
+- 要创建新的设备管理扩展包：
   `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
-- 获取特定设备管理扩展包：
+- 要获取特定设备管理扩展包：
   `GET https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
-- 更新设备管理扩展包：
+- 要更新设备管理扩展包：
   `PUT https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
-- 删除设备管理扩展包：
+- 要删除设备管理扩展包：
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
 有关设备管理扩展包的 REST API 的更多信息，请参阅 [{{site.data.keyword.iot_short_notm}} API V2 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 文档。
@@ -174,7 +174,7 @@ lastupdated: "2017-03-14"
 
 启动请求时，必须提供以下信息：
 
-- 操作 `<bundleId>/<actionId>`
+- 操作 ``<bundleId>/<actionId>``
 - 要在其上启动操作的设备的列表，最多 5000 台设备
 - 在定制操作定义中定义的参数列表
 
@@ -205,7 +205,7 @@ lastupdated: "2017-03-14"
 
 在设备上启动定制操作时，将向该设备发布一条 MQTT 消息。该 MQTT 消息包含指定为请求一部分的任何参数。设备收到该 MQTT 消息时，将运行该操作，或者使用错误代码进行响应，以指示为什么当前无法完成该操作。
 
-设备操作成功完成时，设备会发布响应，其中 `rc` 值会设置为 `200`。
+设备操作成功完成时，设备会发布响应，其中 ``rc`` 值会设置为 ``200``。
 
 以下摘录是服务器与设备之间发生的交换的示例。
 
@@ -242,7 +242,7 @@ lastupdated: "2017-03-14"
 
 以下示例演示了可以如何定义新的设备管理扩展，并执行该扩展中定义的操作。
 
-某些公司制造 `exampleDeviceType` 设备。您可以安装并管理要在 `exampleDeviceType` 设备上运行的插件。为了方便远程管理 `exampleDeviceType` 设备上的插件，制造商通常会提供设备管理扩展，您可以将其导入您的 {{site.data.keyword.iot_short_notm}} 组织。
+某些公司制造 ``exampleDeviceType`` 设备。您可以安装并管理要在 ``exampleDeviceType`` 设备上运行的插件。为了方便远程管理 ``exampleDeviceType`` 设备上的插件，制造商通常会提供设备管理扩展，您可以将其导入您的 {{site.data.keyword.iot_short_notm}} 组织。
 
 此示例中使用了以下扩展 JSON 文档：
 
@@ -338,7 +338,7 @@ lastupdated: "2017-03-14"
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 
-注册到组织 `<orgID>` 的设备可以在发布管理请求时，指定其支持 `exampleDeviceType-actions-v1` 操作，如以下示例中所示：
+注册到组织 ``<orgID>`` 的设备可以在发布管理请求时，指定其支持 ``exampleDeviceType-actions-v1`` 操作，如以下示例中所示：
 
 ```
 	来自设备的出局消息：
@@ -366,9 +366,9 @@ lastupdated: "2017-03-14"
 	}
 
 ```
-此时，可以启动在 `exampleIoT-exampleDeviceType-v1` 扩展中定义的设备操作。
+此时，可以启动在 ``exampleIoT-exampleDeviceType-v1`` 扩展中定义的设备操作。
 
-以下有效内容用于启动 `installPlugin` 操作：
+以下有效内容用于启动 ``installPlugin`` 操作：
 
 ```
 	{
@@ -400,7 +400,7 @@ lastupdated: "2017-03-14"
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-提交此命令时，类型为 `exampleDeviceType` 的设备 `device0` 和 `device1` 会收到以下 MQTT 消息：
+提交此命令时，类型为 ``exampleDeviceType`` 的设备 ``device0`` 和 ``device1`` 会收到以下 MQTT 消息：
 
 ```
 	来自服务器的入局消息：
@@ -437,7 +437,7 @@ lastupdated: "2017-03-14"
 
 ```
 
-此时，`installPlugin` 设备管理操作已完成。
+此时，``installPlugin`` 设备管理操作已完成。
 
 ## API 示例
 {: #api_examples}

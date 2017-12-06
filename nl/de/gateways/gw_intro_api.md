@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -13,10 +13,8 @@ lastupdated: "2017-05-24"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# HTTP-Messaging-APIs für Gateway-Geräte (Beta)
+# HTTP-Messaging-APIs für Gateway-Geräte
 {: #api}
-
-**Wichtig:** Die {{site.data.keyword.iot_full}}-Funktion 'HTTP-API für Gateway-Geräte' steht nur als Bestandteil des eingeschränkten Beta-Programms zur Verfügung. Zukünftige Aktualisierungen enthalten möglicherweise Änderungen, die mit der aktuellen Version dieser Funktion nicht kompatibel sind. Starten Sie einen Versuch und [senden Sie uns Ihren Erfahrungsbericht ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Zugriff auf die Dokumentation der HTTP-Messaging-API für Gateway-Geräte
 {: #rest_messaging_api}
@@ -35,7 +33,7 @@ Informationen zur Clientsicherheit und zur Vorgehensweise beim Herstellen von Ve
 
 Zusätzlich zum MQTT-Nachrichtenprotokoll können Sie Ihre Gateway-Geräte auch so konfigurieren, dass Ereignisse in {{site.data.keyword.iot_short_notm}} über HTTP mithilfe von HTTP-Messaging-API-Befehlen publiziert werden.
 
-Verwenden Sie eine der folgenden URLs, um eine `POST`-Anforderung von einem Gerät zu übergeben, das mit {{site.data.keyword.iot_short_notm}} verbunden ist:
+Verwenden Sie eine der folgenden URLs, um eine ``POST``-Anforderung von einem Gerät zu übergeben, das mit {{site.data.keyword.iot_short_notm}} verbunden ist:
 
 ### Nicht sichere POST-Anforderung
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
@@ -78,7 +76,7 @@ Dabei gilt:
 
 ### Anforderungsheader des Typs 'Content-Type'
 
-Zusammen mit der Anforderung muss ein Anforderungsheader des Typs `Content-Type` ('Inhaltstyp') angegeben werden. Die folgende Tabelle zeigt die Zuordnung der unterstützten Typen zu den internen {{site.data.keyword.iot_short_notm}}-Formaten:
+Zusammen mit der Anforderung muss ein Anforderungsheader des Typs `Content-Type` ('Inhaltstyp') angegeben werden, wenn es sich nicht um JSON-Inhalt handelt. Die folgende Tabelle zeigt die Zuordnung der unterstützten Typen zu den internen {{site.data.keyword.iot_short_notm}}-Formaten:
 
 |Header des Typs 'Content-Type'|Format in {{site.data.keyword.iot_short_notm}}|
 |:---|:---|
@@ -100,7 +98,7 @@ Weitere Informationen zum Verwalten von Gateway-Geräten mithilfe von APIs finde
 
 Zusätzlich zur Verwendung des MQTT-Nachrichtenprotokolls können Sie Ihre Gateway-Geräte auch so konfigurieren, dass Befehle von {{site.data.keyword.iot_short_notm}} über HTTP mithilfe von HTTP-Messaging-API-Befehlen empfangen werden. Ein Gateway-Gerät kann Befehle empfangen, die an Geräte innerhalb der zugehörigen Ressourcengruppe gerichtet sind. Weitere Informationen zu Gateway-Ressourcengruppen finden Sie unter [Gateway-Zugriffssteuerung (Beta)](../gateways/gateway-access-control.html).
 
-Verwenden Sie eine der folgenden URLs, um eine `POST`-Anforderung von einem Gateway zu übergeben, das mit {{site.data.keyword.iot_short_notm}} verbunden ist:
+Verwenden Sie eine der folgenden URLs, um eine ``POST``-Anforderung von einem Gateway zu übergeben, das mit {{site.data.keyword.iot_short_notm}} verbunden ist:
 
 ### Nicht sichere POST-Anforderung
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/commands/<var class="keyword varname">Befehl</var>/request</code></pre>

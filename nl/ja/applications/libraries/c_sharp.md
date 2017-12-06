@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
-
----
+lastupdated: "2017-03-14"---
 
   {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -31,7 +29,8 @@ C# を使用して、{{site.data.keyword.iot_full}} の組織と対話するア�
 
 コンストラクターはクライアント・インスタンスを作成し、以下の定義を格納する引数を受け入れます。
 
-|定義 |説明 |
+|定義|説明
+|
 |:---|:---|
 |`orgId`   |組織 ID。|
 |`appId`   |組織内のアプリケーション固有の ID。|
@@ -108,7 +107,7 @@ applicationClient.subscribeToDeviceEvents();
 
 |パラメーター|データ・タイプ|説明|
 |:---|:---|
-|`eventName`|ストリング|イベントを識別します。 |
+|`eventName`|ストリング|イベントを識別します。|
 |`eventFormat`|ストリング| 形式は任意のストリング (JSON など) となります。|
 |`eventData`|辞書| メッセージ・ペイロードのデータ。最大長は 131072 バイトです。|
 
@@ -170,7 +169,7 @@ applicationClient.publishEvent(deviceType, deviceId, evt, data, 0);
 |`evt`|ストリング| イベントの名前。|
 |`format`|ストリング| 形式は任意のストリング (JSON など) となります。|
 |`data`|辞書| メッセージ・ペイロードのデータ。最大長は 131072 バイトです。|
-|`QoS`|整数| サービス品質。有効な値は `0`、`1`、`2` です。 |
+|`QoS`|整数| サービス品質。有効な値は `0`、`1`、`2` です。|
 
 
 ## デバイスへのコマンドのパブリッシュ
@@ -191,4 +190,4 @@ applicationClient.publishCommand(deviceType, deviceId, "testcmd", "json", data, 
 |`command`|ストリング| コマンドの名前。|
 |`format`|ストリング| 形式は任意のストリング (JSON など) となります。|
 |`data`|辞書| メッセージ・ペイロードのデータ。最大長は 131072 バイトです。|
-|`QoS`|整数| サービス品質。有効な値は `0`、`1`、`2` です。 |
+|`QoS`|整数| サービス品質。有効な値は `0`、`1`、`2` です。|

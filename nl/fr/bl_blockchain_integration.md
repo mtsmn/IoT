@@ -130,7 +130,7 @@ Pour établir une connexion à une matrice de chaîne de blocs :
 Pour écrire des données sur le grand livre de chaîne de blocs, vous devez d'abord mapper les propriétés de terminal pour un type de terminal aux paramètres qui sont définis par le contrat intelligent.
 
 Pour mapper des données de terminal à un contrat :
- 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur ![Blockchain.](blockchain/images/platform_blockchain.png "Blockchain") dans la barre latérale de menus.
+ 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur ![Blockchain.](blockchain/images/platform_blockchain.png "Blockchain") dans la barre de latérale de menus.
  3. Cliquez sur **Mapper les données de terminal**.
  4. Sélectionnez le type de terminal pour lequel vous souhaitez stocker des données de terminal dans la chaîne de blocs.
  5. Entrez le nom des événements que vous souhaitez stocker.  

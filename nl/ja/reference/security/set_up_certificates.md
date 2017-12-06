@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-06-13"
+
 ---
 
 {:new_window: target="\_blank"}
@@ -18,7 +19,7 @@ lastupdated: "2017-05-15"
 
 デバイスの証明書やサーバーへのアクセスを構成するには、システム・オペレーターが、関連する認証局 (CA) 証明書とオプションでメッセージ・サーバー証明書を {{site.data.keyword.iot_short_notm}} プラットフォームに登録します。
 
-API を使用して CA 証明書とメッセージング・サーバー証明書を管理する方法については、[IBM Watson IoT Platform Authentication and Authorization APIs ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)"外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} を参照してください。
+API を使用して CA 証明書とメッセージング・サーバー証明書を管理する方法については、[IBM Watson IoT Platform Authentication and Authorization APIs ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} を参照してください。
 
 ## CA 証明書
 CA 証明書を使用すると、組織は、デバイス上のクライアント証明書を信頼されたものとして認識できるので、デバイスをサーバーに接続できます。
@@ -39,7 +40,7 @@ CA 証明書を使用して署名する個々のデバイスまたはゲート�
 
 注: デバイスまたはゲートウェイの証明書の **CN** または **SubjectAltName** フィールドに、「`orgId`」を含めないでください。「`orgId`」は、メッセージング・サーバーへの接続時に、クライアント実装により提供される SNI 情報の一部として指定される必要があります。
 
-クライアント証明書について詳しくは、[the Connect Raspberry Pi to IBM Watson IoT Platform using Client side Certificates recipe ![外部リンク・アイコン](../../../../icons/launch-glyph.svg) "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window} を参照してください。
+クライアント証明書について詳しくは、[Connect Raspberry Pi to IBM Watson IoT Platform using Client side Certificates recipe ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window} を参照してください
 
 ## メッセージング・サーバー証明書
 
@@ -51,7 +52,7 @@ CA 証明書を使用して署名する個々のデバイスまたはゲート�
 
 `mtxpd0.messaging.internetofthings.ibmcloud.com`
 
-メッセージング・サーバー証明書について詳しくは、[the Connect Raspberry Pi to IBM Watson IoT Platform using Self-Signed Server Certificate recipe ![外部リンク・アイコン](../../../../icons/launch-glyph.svg) "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window} を参照してください。
+メッセージング・サーバー証明書について詳しくは、[Connect Raspberry Pi to IBM Watson IoT Platform using Self-Signed Server Certificate recipe ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window} を参照してください
 
 ### カスタム・ドメイン (ベータ)
 {: #custom_domains}
@@ -60,11 +61,11 @@ CA 証明書を使用して署名する個々のデバイスまたはゲート�
 
 ベータ機能の一部として、メッセージング・サーバー証明書はカスタム・ドメインを受け入れます。証明書の CN または SubjectAltName は、以下の形式に従っている必要があります。
 
-- `orgId.messaging<custom domain>`
+- `orgId.messaging.<custom domain>`
 
 **CN** フィールドは、以下の例に示すように、カスタム・ドメインについてワイルドカード文字を受け入れます。
 
-- `CN=*.messaging.fab-iot.com`
+- `CN=*.messaging.mywiotpcustomdomain.com`
 
 **重要**: カスタム・ドメインの場合、カスタム・ドメインを {{site.data.keyword.iot_full}} メッセージング・サーバーに解決するために、外部 DNS サービスが必要になります。この DNS サービスは、プラットフォームによって提供されません。
 

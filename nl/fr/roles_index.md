@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-09-16"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -64,7 +64,7 @@ les rôles de passerelle standard suivants sont disponibles :
 
 Rôle de passerelle | Description
 ------------- | -------------
-Standard | Rôle de passerelle par défaut. Accorde un accès limité aux opérations.
-Privilégié | Destiné aux passerelles sécurisées et permet aux passerelles privilégiées d'ajouter des terminaux à {{site.data.keyword.iot_short_notm}}. Il accorde un accès aux opérations pertinentes relatives à l'ajout, la mise à jour et la gestion des terminaux et des propriétés de terminal, mais refuse tout accès aux autres opérations.  
+Standard | Accorde un accès limité aux opérations. Les passerelles standard sont limitées à agir pour le compte des terminaux contenus dans le groupe de ressources affecté aux passerelles.
+Privilégié | Rôle de passerelle par défaut. Destiné aux passerelles sécurisées et permet aux passerelles privilégiées d'ajouter des terminaux à {{site.data.keyword.iot_short_notm}}. Il accorde un accès aux opérations pertinentes relatives à l'ajout, la mise à jour et la gestion des terminaux et des propriétés de terminal, mais refuse tout accès aux autres opérations.  
 
 Pour plus d'informations sur l'accès aux opérations de rôles de passerelle, voir [Rôles de passerelle](reference/gateway_roles_access.html).

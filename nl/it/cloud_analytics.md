@@ -54,11 +54,9 @@ Per creare una regola:
 3. Per configurare la logica della regola, aggiungi una o più condizioni IF da utilizzare come trigger per la regola.  
 Puoi aggiungere condizioni in righe parallele per applicarle come condizioni OR o puoi aggiungere le condizioni in colonne sequenziali per applicarle come condizioni AND.  
 **Importante:** per attivare una condizione che confronta due proprietà o per attivare due o più condizioni della proprietà combinate sequenzialmente utilizzando AND, i punti dei dati di attivazione devono essere inclusi nello stesso messaggio del dispositivo. Se i dati sono ricevuti in più di un messaggio, la condizione o le condizioni in sequenza non vengono attivate.  
-**Esempi:**  
-Una regola semplice può attivare una avviso se un valore del parametro è maggiore di un valore specificato:
-Condizione = `temp_cpu>80`  
-Una regola più complessa può essere attivata quando viene soddisfatta una combinazione di soglie:
-Condizione = `temp_cpu>60 AND cpu_load>90`   
+**Esempi:**   
+Una semplice regola potrebbe attivare un avviso se un valore di parametro è più grande di un valore specificato: Condition = `temp_cpu>80`  
+Una regola più complessa potrebbe essere attivata quando viene raggiunta una combinazione di soglie: Condition = `temp_cpu>60 AND cpu_load>90`   
 
 4. Configura i requisiti di attivazione condizionali per la tua regola.  
 Per controllare il numero di avvisi che vengono attivati per un regola in un intervallo di tempo, puoi configurare i requisiti di attivazione condizionali per la tua regola.  
@@ -92,7 +90,7 @@ A seconda della frequenza del messaggio e delle condizioni della regola, una reg
 Condizione | Descrizione
 ------------- | -------------
 Attiva ogni volta che le condizioni sono soddisfatte | La regola viene attivata ogni volta che vengono soddisfatte le condizioni della regola.
-Attiva se le condizioni sono soddisfatte *N* volte in *M* *giorni/ore/minuti/intervallo personalizzato* | La regola viene attivata quando vengono soddisfatte le condizioni *N* volte nell'intervallo di tempo selezionato e non viene riattivata nuovamente finché non trascorre l'intervallo di tempo selezionato. </br>Esempio: il requisito di attivazione condizionale =`Trigger only once if conditions are met 4 times in 30 minutes`. Il dispositivo invia un nuovo messaggio ogni cinque minuti. A mezzogiorno, la temperatura iniziale supera i 90 gradi, che soddisfa la condizione. Il contatore di attivazione condizionale viene avviato ma la regola non è ancora stata attivata.  Dopo 15 minuti e tre ulteriori messaggi che indicano che è stato ricevuto `temp > 90`, la regola viene attivata. La regola non viene quindi attivata per altri 15 minuti indipendentemente dalla temperatura.
+Attiva se le condizioni sono soddisfatte *N* volte in *M* *days/hours/minutes/custom* | La regola viene attivata quando vengono soddisfatte le condizioni *N* volte nell'intervallo di tempo selezionato e non viene riattivata nuovamente finché non trascorre l'intervallo di tempo selezionato. </br>Esempio: il requisito di attivazione condizionale =`Trigger only once if conditions are met 4 times in 30 minutes`. Il dispositivo invia un nuovo messaggio ogni cinque minuti. A mezzogiorno, la temperatura iniziale supera i 90 gradi, che soddisfa la condizione. Il contatore di attivazione condizionale viene avviato ma la regola non è ancora stata attivata.  Dopo 15 minuti e tre ulteriori messaggi che indicano che è stato ricevuto `temp > 90`, la regola viene attivata. La regola non viene quindi attivata per altri 15 minuti indipendentemente dalla temperatura.
 Attiva solo la prima volta che vengono soddisfatte le condizioni e reimposta quando le condizioni non vengono più soddisfatte. | La regola viene attivata quando vengono soddisfatte le condizioni ma non viene attivata dei successivi messaggi che soddisfano le stesse condizioni. I criteri di attivazione sono reimpostati dal primo messaggio che non soddisfa le condizioni della regola.
 Attiva se le condizioni sono soddisfatte per *M* *days/hours/minutes/custom*. | La regola viene attivata dopo l'intervallo di tempo selezionato se tutti i punti dati ricevuti durante l'intervallo di tempo soddisfano le condizioni o se non viene ricevuto alcun altro punto dati. L'intervallo di tempo avvia le condizioni inizialmente soddisfatte.
 
@@ -312,14 +310,14 @@ Includi le seguenti sostituzioni della variabile per includere dinamicamente i d
 
 Variabile | Descrizione
 ---|---
-**URL, intestazione e corpo** |
+**URL, Intestazione e Corpo**|
 `{{timestamp}}` | La data/ora dal messaggio.
 `{{orgId}}` | L'ID dell'organizzazione del servizio {{site.data.keyword.iot_short_notm}}.
 `{{tenantId}}` | Obsoleto: l'ID del servizio {{site.data.keyword.iotrtinsights_full}}.
 `{{deviceId}}` | L'ID del dispositivo.
 `{{ruleName}}` | Il nome della regola che include l'azione.
 `{{ruleID}}` | L'ID della regola che include l'azione.
-**Solo il corpo** |
+**Solo corpo** |
 `{{ruleDescription}}`| La descrizione della regola che include l'azione.
 `{{ruleCondition}}` | La condizione della regola che attiva l'azione.
 `{{message}}` | Il messaggio del dispositivo non elaborato che include il valore del punto dati che attiva la regola.

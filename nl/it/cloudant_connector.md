@@ -22,7 +22,8 @@ Quando inizi ad utilizzare un {{site.data.keyword.cloudant_short_notm}} per arch
 Quando i dati del dispositivo sono inviati a un database, possono essere archiviati in due modi. Se i dati sono JSON validi e il formato dell'evento del dispositivo è impostato su `JSON`, i dati del dispositivo saranno archiviati nel seguente formato:
 
 ```json
-   {
+
+{
   "_id": "78bf4380-3311-11e6-a747-d7b140d1a70a",
   "_rev": "2-d13912b7c089f060a4ba7369fa86e46f",
   "typeId": "t",
@@ -40,7 +41,8 @@ Quando i dati del dispositivo sono inviati a un database, possono essere archivi
 Se i dati del dispositivo non sono JSON validi o se il formato non è impostato su `JSON` i dati del dispositivo saranno archiviati come una stringa codificata base64 nel campo `payload` nel seguente formato:
 
 ```json
-   {
+
+{
   "_id": "80f1ce10-3311-11e6-a747-d7b140d1a70a",
   "_rev": "1-bfcbf1e74389fe4188a9425c0cd2575a",
   "payload": "eHh4eHg=",
@@ -80,8 +82,8 @@ Completa la seguente procedura per collegarti a {{site.data.keyword.cloudant_sho
  +  * `<dbname>` è la tua scelta per questa parte di nome del database controllata dal campo `Database Name`.
  +  * `<bucket_name>` è una stringa determinata dalla tua scelta per il campo `Bucket Interval`:
  +    * Per gli intervalli di bucket `day`, `<bucket_name>` sarà `yyyy-mm-dd`.  Ad esempio, `2016-07-06` per gli eventi del 6 luglio 2016.
- +    * Per gli intervalli di bucket `week`, `<bucket_name>` sarà `yyyy-'w'ww` dove `'w'ww` indica un numero della settimana.  Ad esempio, `2016-w03` per gli eventi nella terza settimana del 2016.
- +    * Per gli intervalli di bucket `month`, `<bucket_name>` sarà `yyyy-mm`.  Ad esempio, `2016-07` per gli eventi di luglio 2016.
+ +    * Per gli intervalli di bucket `week`  `<bucket_name>` sarà `yyyy-'w'ww` dove `'w'ww` indica un numero della settimana.  Ad esempio, `2016-w03` per gli eventi nella terza settimana del 2016.
+ +    * Per gli intervalli di bucket `month`  `<bucket_name>` sarà `yyyy-mm`.  Ad esempio, `2016-07` per gli eventi di luglio 2016.
 
 5. Fai clic su **Authorize**.
 6. Fai clic su **Confirm** nella casella di dialogo dell'autorizzazione.

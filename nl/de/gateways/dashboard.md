@@ -157,7 +157,7 @@ Beispiel:
  <dt>MonitorInterval</dt>
  <dd>INTEGER (in Millisekunden)</br>
  Die Zeit in Millisekunden, die verstreicht, bis eine neue Überwachungsnachricht an {{site.data.keyword.iot_short_notm}} gesendet wird. </br>
- Legen Sie einen niedrigen Wert fest, sodass Überwachungsmesswerte häufiger berichtet werden. Legen Sie einen hohen Wert fest, um zu {{site.data.keyword.iot_short_notm}} detailliertere Überwachungsdaten zu erhalten. </br>
+ Legen Sie einen niedrigen Wert fest, sodass Überwachungsmesswerte häufiger gemeldet werden. Legen Sie einen hohen Wert fest, um zu {{site.data.keyword.iot_short_notm}} detailliertere Überwachungsdaten zu erhalten. </br>
  DEFAULT: 60000    </br>
  RECOMMENDED RANGE: [1000, 360000]</dd>
  <dt>MonitorLogDesample</dt>
@@ -194,7 +194,7 @@ DataDirectSendEnable=true
 # MonitorInterval    - INTEGER Zeitintervall in Millisekunden bevor
 #                      eine neue Überwachungsnachricht generiert
 #                      wird. Legen Sie einen niedrigen Wert fest, um
-#                      Überwachungsmesswerte häufiger zu berichten.
+#                      Überwachungsmesswerte häufiger zu melden.
 # Legen Sie einen hohen Wert fest, um zu IoTP
 #                      detaillierte Überwachungsdaten zu erhalten.
 #                      DEFAULT: 60000    RECOMMEND: [1000, 360000]

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-10"
+lastupdated: "2017-08-25"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-05-10"
 # ゲートウェイ・アクセス制御 (ベータ)
 {: #gateway-access-control}
 
-ゲートウェイ・デバイスは他のデバイスの代理として動作する権限を持ちます。ゲートウェイ・リソース・グループは、各ゲートウェイが組織内のどのデバイスの代理として動作するのかを定義します。ゲートウェイには*標準ゲートウェイ*役割を割り当てることができます。標準ゲートウェイは、リソース・グループ内のデバイスの代理としてメッセージのパブリッシュまたはサブスクライブのみを行うことができます。
+ゲートウェイ・デバイスはデバイスの特殊なクラスであり、他のデバイスの代理として動作する権限を持ちます。ゲートウェイ・リソース・グループは、各ゲートウェイが組織内のどのデバイスの代理として動作するのかを定義します。ゲートウェイには*標準ゲートウェイ*役割を割り当てることができます。標準ゲートウェイは、リソース・グループ内のデバイスの代理としてメッセージのパブリッシュまたはサブスクライブのみを行うことができます。
 {: #shortdesc}
 
 **重要:** {{site.data.keyword.iot_full}} ゲートウェイ・アクセス制御機能は、限定されたベータ・プログラムの一部としてのみ使用できます。今後の更新によって、この機能の現行バージョンと互換性のない変更が行われる可能性があります。この機能を試して、[ご意見をお寄せください ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
@@ -25,12 +25,35 @@ API を使用してゲートウェイ・デバイスからイベントをパブ�
 ## ゲートウェイへの役割の割り当て
 {: #gw_roles}
 
-ゲートウェイがリソース・グループを持つためには、ゲートウェイに役割を割り当てる必要があります。リソース・グループを持たないゲートウェイは、組織内のすべてのデバイスの代理として動作することができます。*標準ゲートウェイ*役割を割り当てると、そのゲートウェイの新しいリソース・グループが自動的に作成されます。ゲートウェイがリソース・グループに割り当てられると、その役割が変更されても、ゲートウェイ自体とそのリソース・グループ内のデバイスの代理としてのみ動作できます。
+ゲートウェイがリソース・グループを持つためには、ゲートウェイに役割を割り当てる必要があります。リソース・グループを持たないゲートウェイは、組織内のすべてのデバイスの代理として動作することができます。*標準ゲートウェイ*役割を割り当てると、そのゲートウェイの新しいリソース・グループが自動的に作成されます。ゲートウェイにリソース・グループが割り当てられると、その役割が変更されても、ゲートウェイ自体とそのリソース・グループ内のデバイスの代理としてのみ動作できます。
 
-ゲートウェイに役割を割り当てるには、以下の API を使用します。
+ゲートウェイに役割を割り当てるには、以下の API を使用します。ここで、*${clientID}* は、*d:${orgId}:${typeId}:${deviceId}* (デバイスの場合) または *g:${orgId}:${typeId}:${deviceId}* (ゲートウェイの場合) という形式の URL エンコード・クライアント ID です。
 
 ```
-PUT /authorization/devices/{deviceId}/roles
+PUT /authorization/devices/${clientID}/roles
+
+Request Body:
+{
+    "roles": [
+        {
+            "roleId": "PD_STANDARD_GW_DEVICE",
+            "roleStatus": 1
+        }
+    ]
+}
+
+Request Response: 200
+{
+    "roles": [
+        {
+            "roleId": "PD_STANDARD_GW_DEVICE",
+            "roleStatus": 1
+        }
+    ],
+    "rolesToGroups": {
+        "PD_STANDARD_GW_DEVICE": ["gw_def_res_grp:abcdef:gatewayTypeId:gatewayDeviceId"]
+    }
+}
 ```
 
 要求スキーマの詳細については、[{{site.data.keyword.iot_full}} 限定版ゲートウェイ API の資料![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}を参照してください。
@@ -65,13 +88,13 @@ GET /groups
 
 この API によって、使用された検索タグに関連付けられたリソース・グループが返されます。検索タグを指定しない場合は、すべてのリソース・グループが返されます。 <!-- For more information about the request schema, response, and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-リソース・グループの ID を検索するには、以下の API を使用します。
+ゲートウェイに割り当てられているリソース・グループの ID は、以下の API を使用して検索できます。ここで、*${clientID}* は、*d:${orgId}:${typeId}:${deviceId}* (デバイスの場合) または *g:${orgId}:${typeId}:${deviceId}* (ゲートウェイの場合) という形式の URL エンコード・クライアント ID です。
 
 ```
-GET /authorization/devices/{deviceId}
+GET /authorization/devices/${clientId}
 ```
 
-この API によって、このデバイスが所属するリソース・グループの固有 ID が返されます。この API の詳細については、[{{site.data.keyword.iot_short_notm}} 限定版ゲートウェイ API の資料![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}を参照してください。
+この API によって、このデバイスに割り当てられたリソース・グループの固有 ID が返されます。この API の詳細については、[{{site.data.keyword.iot_short_notm}} 限定版ゲートウェイ API の資料![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}を参照してください。
 
 
 ## リソース・グループの照会
@@ -131,45 +154,45 @@ DELETE /groups/{groupId}
 ## デバイス・プロパティーの取得と更新
 {: #fdevice_group_props}
 
-API を使用してデバイス・プロパティーを取得する方法はいくつかあります。API によって返される情報が異なります。{{site.data.keyword.iot_short_notm}} 組織に接続されたすべてのデバイスのデバイス・プロパティーを取得するには、以下の API を使用します。
+API を使用してデバイス・プロパティーを取得する方法はいくつかあります。API によって返される情報が異なります。{{site.data.keyword.iot_short_notm}} 組織内の既存の全デバイスのデバイス・プロパティーを取得するには、以下の API を使用します。
 
 ```
 GET /authorization/devices
 
 ```
 
-この API によって、アクセス制御関連のプロパティー (役割、状況、有効期限) など、組織に接続されたすべてのデバイスのプロパティーが返されます。<!-- For more information on responses and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
+この API によって、アクセス制御関連のプロパティー (役割、状況、有効期限) など、組織内の既存の全デバイスのプロパティーが返されます。<!-- For more information on responses and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-アクセス制御関連の情報を取得せずにデバイス・プロパティーを取得するには、以下の API を使用します。
-
-```
-GET /authorization/devices/{deviceId}
-```
-
-この API によって、指定されたデバイスのすべてのデバイス・プロパティーが返され、アクセス制御情報は返されません。<!-- For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API). -->
-
-指定のデバイスのアクセス制御情報を取得するには、以下の API を使用します。
+組織内の単一のデバイスのデバイス・プロパティーを取得するには、以下の API を使用します。ここで、*${clientID}* は、*d:${orgId}:${typeId}:${deviceId}* (デバイスの場合) または *g:${orgId}:${typeId}:${deviceId}* (ゲートウェイの場合) という形式の URL エンコード・クライアント ID です。
 
 ```
-GET /authorization/devices/{deviceId}/roles
+GET /authorization/devices/${clientId}
+```
+
+この API によって、指定されたデバイスのすべてのデバイス・プロパティーが返されます。<!-- For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API). -->
+
+特定のデバイスのアクセス制御情報のみを取得するには、以下の API を使用します。ここで、*${clientID}* は、*d:${orgId}:${typeId}:${deviceId}* (デバイスの場合) または *g:${orgId}:${typeId}:${deviceId}* (ゲートウェイの場合) という形式の URL エンコード・クライアント ID です。
+
+```
+GET /authorization/devices/${clientId}/roles
 ```
 
 この API によって、指定のデバイスのアクセス制御関連の情報が返され、他のデバイス・プロパティーは返されません。<!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
 デバイス・プロパティーを更新する方法は 2 つあります。アクセス制御プロパティーを変更せずにプロパティーを更新する方法と、アクセス制御プロパティーを直接更新する方法です。
 
-アクセス制御プロパティーに影響を与えずにデバイス・プロパティーを更新するには、以下の API を使用します。
+アクセス制御プロパティーに影響を及ぼさずにデバイス・プロパティーを更新するには、以下の API を使用します。ここで、*${clientID}* は、*d:${orgId}:${typeId}:${deviceId}* (デバイスの場合) または *g:${orgId}:${typeId}:${deviceId}* (ゲートウェイの場合) という形式の URL エンコード・クライアント ID です。
 
 ```
-PUT /authorization/devices/{deviceId}
+PUT /authorization/devices/${clientId}
 ```
 
 この API によって、アクセス制御に関連付けられていないデバイス・プロパティーのみ更新されます。<!-- For more information on request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-指定のデバイスのアクセス制御プロパティーのみを更新するには、以下の API を使用します。
+指定されたデバイスのアクセス制御プロパティーのみを更新するには、以下の API を使用します。ここで、*${clientID}* は、*d:${orgId}:${typeId}:${deviceId}* (デバイスの場合) または *g:${orgId}:${typeId}:${deviceId}* (ゲートウェイの場合) という形式の URL エンコード・クライアント ID です。
 
 ```
-PUT /authorization/devices/{deviceId}/withroles
+PUT /authorization/devices/${clientId}/withroles
 ```
 
 この API によって、指定のデバイスのアクセス制御プロパティーのみ更新されます。<!-- For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->

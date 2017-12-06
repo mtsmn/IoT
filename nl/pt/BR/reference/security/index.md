@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-08"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -29,10 +29,9 @@ O documento a seguir responde a algumas perguntas comuns sobre como os dados de 
 ## {{site.data.keyword.iot_short_notm}} e {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-O {{site.data.keyword.iot_short_notm}} é executado na plataforma do {{site.data.keyword.Bluemix_notm}} e, por isso, depende do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_full}} para acesso e conectividade. A reliance do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_notm}} torna a segurança e a confiabilidade do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_notm}} importantes para os
-usuários do {{site.data.keyword.iot_short_notm}}
+O {{site.data.keyword.iot_short_notm}} é executado na plataforma do {{site.data.keyword.Bluemix_notm}} e, por isso, depende do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_full}} para acesso e conectividade. A reliance do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_notm}} torna a segurança e a confiabilidade do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_notm}} importantes para os usuários do {{site.data.keyword.iot_short_notm}}
 
-Para obter mais detalhes sobre a segurança do {{site.data.keyword.Bluemix_notm}}, veja [Segurança da plataforma do {{site.data.keyword.Bluemix_notm}}](index.html#platform-security).
+Para obter mais detalhes sobre a segurança do {{site.data.keyword.Bluemix_notm}}, veja [Segurança da plataforma do {{site.data.keyword.Bluemix_notm}}](index.html#platform-security). 
 
 ## Conformidade de segurança do {{site.data.keyword.iot_short_notm}}
 {: #compliance}  
@@ -68,15 +67,37 @@ As credenciais de dispositivo e as chaves API podem ser individualmente revogada
 ## Como podemos assegurar que seus dispositivos se conectem de forma segura ao {{site.data.keyword.iot_short_notm}}?
 {: #secure-device-connection}
 
-Os dispositivos são conectados usando um clientID e o token de autenticação que é gerado quando os dispositivos são incluídos em sua plataforma ou ambos. O MQTT é usado para permitir interoperabilidade simples em várias plataformas e linguagens. O {{site.data.keyword.iot_short_notm}} suporta a conectividade por TLS v1.2.
+Os dispositivos se conectam usando um clientID e o token de autenticação que é gerado quando os dispositivos são incluídos em sua plataforma. O MQTT é usado para permitir interoperabilidade simples em várias plataformas e linguagens. O {{site.data.keyword.iot_short_notm}} suporta a conectividade por TLS v1.2.
+
+**Importante:** as novas organizações são configuradas automaticamente para forçar os dispositivos a se conectarem usando a segurança TLS por padrão, o que garante que os dispositivos possam se conectar apenas usando um canal seguro, criptografado. No entanto, o {{site.data.keyword.iot_short_notm}} também suporta casos em que as organizações devem permitir que os dispositivos se conectam sem TLS. Por exemplo, uma organização pode usar dispositivos que não dispõem de suporte TLS ou dispositivos IoT de baixo consumo que não podem economizar a energia de processamento necessária para criptografar ou decriptografar transmissões. O plano da organização determina quais configurações podem ser usadas nesses casos.
+
+Para obter mais informações sobre como configurar a segurança de conexão, consulte [Configurando políticas de segurança](set_up_policies.html).
 
 ![imagem](connectivity_platform.svg)
 
 
-Para obter mais informações sobre os requisitos de TLS e do conjunto de criptografia, consulte a seção [Requisitos
-de TLS Requisitos](connect_devices_apps_gw.html#tls_requirements) na documentação Application, device, and gateway connections to Watson IoT Platform .
+Para obter mais informações sobre os requisitos de TLS e do conjunto de criptografia, consulte a seção [Requisitos de TLS Requisitos](connect_devices_apps_gw.html#tls_requirements) na documentação `Application, device, and gateway connections to Watson IoT Platform `.
 
 É possível usar certificados e políticas de segurança para aprimorar a segurança de conexão de dispositivo. As políticas de segurança podem ser configuradas para permitir conexões não criptografadas, para impingir somente conexões de segurança da camada de transporte (TLS) e para permitir que os dispositivos sejam autenticados com certificados do lado do cliente e nenhum token. As listas de bloqueio podem ser usadas para especificar dispositivos que não têm permissão para se conectar ou as listas de desbloqueio podem ser usadas para permitir que dispositivos específicos se conectem. Para obter mais informações sobre segurança aprimorada, veja [Gerenciamento de risco e segurança](RM_security.html).
+
+### Desativando e ativando dispositivos e gateways
+{: #disable-devices}
+
+É possível usar a API HTTP **Autorização - Gerenciamento de dispositivo** para desativar um dispositivo de se conectar diretamente à plataforma ou de se conectar sob um gateway. Por exemplo, você pode forçar a desconexão do dispositivo de um usuário malicioso ou um dispositivo que não está se comportando corretamente e está causando problemas como uso de dados indesejados devido a spam. A API é usada para desconectar o dispositivo de sua conexão atual e evitar que ele se reconecte à plataforma.
+
+Para ativar ou desativar um dispositivo, use a API a seguir, em que *${clientId}* é o identificador de cliente codificado pela URL no formato *d:${orgId}:${typeId}:${deviceId}* para dispositivos ou *g:${orgId}:${typeId}:${deviceId}* para gateways:
+
+    PUT /api/v0002/authorization/devices/${clientId}
+    
+No corpo da solicitação, use um valor de status 0 para desativar o dispositivo ou use um valor de status 1 para ativar o dispositivo. Por exemplo, o valor do status a seguir indica que o dispositivo está desativado:
+
+    { "status": 0 }
+
+O código de resposta de sucesso é 200. 
+
+Quando um gateway publica para um dispositivo que está desativado, ele recebe uma notificação de erro com um código de resposta 180. Para obter mais informações, consulte [Notificações de gateway](../../gateways/mqtt.html#notification). 
+
+Para obter mais informações sobre a API, consulte [APIs beta de segurança de dispositiv ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){:new_window} e navegue para **Autorização - gerenciamento de dispositivo**.
 
 ## Como podemos evitar fuga de dados entre dispositivos IoT?
 {: #prevent-leak-devices}
@@ -110,7 +131,7 @@ O espaço de tópico no qual os dispositivos e aplicativos operam terá escopo d
 {: #general}
 * [Introdução ao {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [Segurança do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [Segurança da plataforma do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [Segurança da plataforma {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [Conformidade do {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
 * [Segurança do {{site.data.keyword.BluSoftlayer_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.softlayer.com/security){:new_window}
 * [Conformidade do {{site.data.keyword.BluSoftlayer_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.softlayer.com/compliance){:new_window}

@@ -22,7 +22,7 @@ Con le analisi edge, puoi spostare il processo di attivazione della regola di an
 I dispositivi inviano i loro dati a un gateway abilitato per l'analisi edge in cui le regole di analisi edge analizzano i dati. In base alla tua regola e alle relative azioni, i dati critici e gli avvisi possono essere inviati a {{site.data.keyword.iot_full}}, possono essere attivati nel gateway o essere scritti in un file di testo locale nel gateway.
 
 Il seguente diagramma illustra l'architettura generale di un ambiente di analisi edge {{site.data.keyword.iot_full}}.
-![IBM Watson IoT Platform con l'architettura di analisi edge](images/architecture_platform_edge.svg "IBM Watson IoT Platform con l'architettura di analisi edge")
+![IBM Watson IoT Platform per l'architettura di analisi edge](images/architecture_platform_edge.svg "IBM Watson IoT Platform con l'architettura di analisi edge")
 
 ## Prima di cominciare
 {: #byb}
@@ -70,12 +70,10 @@ Puoi aggiungere condizioni in righe parallele per applicarle come condizioni OR 
 
 **Importante:** per attivare una condizione che confronta due proprietà o per attivare due o più condizioni della proprietà combinate sequenzialmente utilizzando AND, i punti dei dati di attivazione devono essere inclusi nello stesso messaggio del dispositivo. Se i dati sono ricevuti in più di un messaggio, la condizione o le condizioni in sequenza non vengono attivate.  
 
-**Esempi:**  
-Una regola semplice può attivare una avviso se un valore del parametro è maggiore di un valore specificato:
-  
+**Esempi:**   
+Una semplice regola potrebbe attivare un avviso se un valore di parametro è più grande di un valore specificato:  
 `temp>80`  
-Una regola più complessa può essere attivata quando viene soddisfatta una combinazione di soglie:
-  
+Una regola più complessa potrebbe essere attivata quando viene raggiunta una combinazione di soglie:  
 `temp>60 AND capacity>50`   
 
 4. Configura i requisiti di attivazione condizionali per la tua regola.  
@@ -208,10 +206,10 @@ Per visualizzare le informazioni sullo stato del gateway:
  `MsgOutCount` | Il numero di messaggi che sono stati inviati da EAA a {{site.data.keyword.iot_short}}.
  `MsgOutRate` | Il numero stimato di byte dei messaggi al secondo inviati da EAA a {{site.data.keyword.iot_short}} durante l'ultimo minuto.
  `MsgReducePercent` | La differenza percentuale tra i messaggi in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(msgIn - msgOut) / msgIn`
-`BytesReducePercent` | La differenza percentuale tra i byte in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(bytesIn - bytesOut) / bytesIn`
-`MsgRateReduce` | La differenza percentuale tra la frequenza dl messaggio in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(msgInRate - msgOutRate) / msgInRate`
-`BytesRateReduce` | La differenza percentuale tra i byte dei messaggi in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | Il carico di sistema corrente per il sistema in cui è in esecuzione EAA. **Nota:** la velocità della CPU sarà inviata solo se il comando `mpstat` è disponibile nel sistema in cui è in esecuzione EAA. Altrimenti, viene inviato il carico del sistema medio per l'ultimo minuto. </br>“Il carico del sistema medio è la somma del numero di entità eseguibili accodato ai processori disponibili e il numero di entità eseguibili in esecuzione sui processori disponibili come media in un periodo di tempo. Il modo in cui viene calcolato il carico medio è il sistema operativo specifico ma è normalmente una media moderata dipendente dal tempo. Se il carico medio non è disponibile, viene restituito un valore negativo. ” - javadoc per *ManagementFactory.getOperatingSystemMXBean*.
+ `BytesReducePercent` | La differenza percentuale tra i byte in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(bytesIn - bytesOut) / bytesIn`
+ `MsgRateReduce` | La differenza percentuale tra la frequenza dl messaggio in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(msgInRate - msgOutRate) / msgInRate`
+ `BytesRateReduce` | La differenza percentuale tra i byte dei messaggi in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(bytesInRate - bytesOutRate) / bytesInRate`
+ `SystemLoad` | Il carico di sistema corrente per il sistema in cui è in esecuzione EAA. **Nota:** la velocità della CPU sarà inviata solo se il comando `mpstat` è disponibile nel sistema in cui è in esecuzione EAA. Altrimenti, viene inviato il carico del sistema medio per l'ultimo minuto. </br>“Il carico del sistema medio è la somma del numero di entità eseguibili accodato ai processori disponibili e il numero di entità eseguibili in esecuzione sui processori disponibili come media in un periodo di tempo. Il modo in cui viene calcolato il carico medio è il sistema operativo specifico ma è normalmente una media moderata dipendente dal tempo. Se il carico medio non è disponibile, viene restituito un valore negativo. ” - javadoc per _ManagementFactory.getOperatingSystemMXBean_.
  `FreeMemory` | Il numero di byte di memoria libera per la JVM (Java™ Virtual Machine) dove è in esecuzione EAA.
  `MemoryUsed` | Il numero di byte di memoria JVM utilizzato da EAA.
  `InQueueSize` | Il numero di messaggi in coda per l'elaborazione EAA.

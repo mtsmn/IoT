@@ -83,31 +83,31 @@ Un paquete de ampliación de gestión de dispositivos contiene las siguientes pr
 
 |Propiedad|Descripción|Obligatorio
 |:---|:---|:---|
-|`bundleId`|Identificador exclusivo para una ampliación de gestión de dispositivos.|Yes|
-|`version`|Cadena de la versión para una ampliación de gestión de dispositivos.|No|
-|`provider`|Cadena del proveedor para una extensión de gestión de dispositivos, limitada a 1024 caracteres.|No|
-|`displayName`|Correlación de `locale`: Pares key-value de `Serie` que se muestran en el panel de instrumentos de {{site.data.keyword.iot_short_notm}}. Debe especificar al menos una entrada.|Yes|
-|`description`|Correlación de `locale`: Pares key-value de `Serie` que se utilizan para visualizarse en el panel de instrumentos de {{site.data.keyword.iot_short_notm}}. Si se define, debe especificar al menos una entrada.|No|
-|`actions`| Correlación de `actionId`: Los pares key-value de `<action>` que definen las acciones contenidas en una ampliación de gestión de dispositivos. Debe especificar al menos una entrada.|Yes|
+|``bundleId``|Identificador exclusivo para una ampliación de gestión de dispositivos.|Yes|
+|``version``|Cadena de la versión para una ampliación de gestión de dispositivos.|No|
+|``provider``|Cadena del proveedor para una extensión de gestión de dispositivos, limitada a 1024 caracteres.|No|
+|``displayName``|Correlación de ``locale``: Pares key-value de ``Serie`` que se muestran en el panel de instrumentos de {{site.data.keyword.iot_short_notm}}. Debe especificar al menos una entrada.|Yes|
+|``description``|Correlación de ``locale``: Pares key-value de ``Serie`` que se utilizan para visualizarse en el panel de instrumentos de {{site.data.keyword.iot_short_notm}}. Si se define, debe especificar al menos una entrada.|No|
+|``actions``| Correlación de ``actionId``: Los pares key-value de ``<action>`` que definen las acciones contenidas en una ampliación de gestión de dispositivos. Debe especificar al menos una entrada.|Yes|
 
 ### Propiedades para cada acción:
 
 |Propiedad|Descripción|Obligatorio
 |:---|:---|
-|`actionDisplayName`|Correlación de `locale`: Pares key-value de `Serie` que se muestran en el panel de instrumentos de {{site.data.keyword.iot_short_notm}}. Debe especificar al menos una entrada.|Yes|
-|`description`|Correlación de `locale`: Pares key-value de `Serie` que se utilizan para visualizarse en el panel de instrumentos de {{site.data.keyword.iot_short_notm}}. Opcional. Debe especificar al menos una entrada.|No|
-|`parameters`|Matriz de parámetros que se permiten para una acción determinada. Si se define, debe especificar al menos una entrada.|No|
+|``actionDisplayName``|Correlación de ``locale``: Pares key-value de ``Serie`` que se muestran en el panel de instrumentos de {{site.data.keyword.iot_short_notm}}. Debe especificar al menos una entrada.|Yes|
+|``description``|Correlación de ``locale``: Pares key-value de ``Serie`` que se utilizan para visualizarse en el panel de instrumentos de {{site.data.keyword.iot_short_notm}}. Opcional. Debe especificar al menos una entrada.|No|
+|``parameters``|Matriz de parámetros que se permiten para una acción determinada. Si se define, debe especificar al menos una entrada.|No|
 
 ### Propiedades para cada parámetro de acción:
 
 |Propiedad|Descripción|Obligatorio
 |:---|:---|
-|`name`|Identificador exclusivo para un parámetro en una acción|Yes|
-|`value`|Expresión regular que se utiliza para validar valores de parámetro cuando se inicia una solicitud. Si no se especifica, no se produce la validación.|No|
-|`required`|Valor booleano que determina si el parámetro es necesario. El valor se establece de forma predeterminada en false. |No|
-|`defaultValue`|Valor que se utilizará si no se proporciona el parámetro al iniciar una solicitud|No|
+|``name``|Identificador exclusivo para un parámetro en una acción|Yes|
+|``value``|Expresión regular que se utiliza para validar valores de parámetro cuando se inicia una solicitud. Si no se especifica, no se produce la validación.|No|
+|``required``|Valor booleano que determina si el parámetro es necesario. El valor se establece de forma predeterminada en false. |No|
+|``defaultValue``|Valor que se utilizará si no se proporciona el parámetro al iniciar una solicitud|No|
 
-**Nota:** Los valores `bundleId`, `version`, `actionId` y `parameterId` están limitados a 255 caracteres y pueden constar de sólo caracteres alfanuméricos (a-z, A-Z, 0-9) y de los siguientes caracteres especiales:
+**Nota:** Los valores ``bundleId``, ``version``, ``actionId`` y ``parameterId`` están limitados a 255 caracteres y pueden constar de sólo caracteres alfanuméricos (a-z, A-Z, 0-9) y de los siguientes caracteres especiales:
  - guión (-)
  - signo de subrayado (_)
  - punto (.)
@@ -125,7 +125,7 @@ Utilice los siguientes mandatos de la API REST de {{site.data.keyword.iot_short_
   `GET https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 - Para actualizar un paquete de ampliación de gestión de dispositivos:
   `PUT https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
-- Para suprimir un paquete de ampliación de gestión de dispositivos:
+- Para suprimir un paquete de ampliación de gestión de dispositivos::
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
 Para obtener más información sobre las API REST para los paquetes de ampliación de gestión de dispositivos, consulte la documentación de [{{site.data.keyword.iot_short_notm}} API V2 ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
@@ -174,7 +174,7 @@ Para iniciar acciones de gestión de dispositivos personalizadas, utilice el sig
 
 Debe proporcionar la información siguiente al iniciar una solicitud:
 
-- La acción `<bundleId>/<actionId>`
+- La acción ``<bundleId>/<actionId>``
 - Una lista de dispositivos en la que iniciar la acción, hasta un máximo de 5000 dispositivos
 - Una lista de parámetros, definidos en la definición de acciones personalizada
 
@@ -205,7 +205,7 @@ La carga útil para iniciar una solicitud se encuentra en el siguiente formato:
 
 Cuando se inicia una acción personalizada en un dispositivo, se publicará un mensaje MQTT en el dispositivo. El mensaje MQTT contiene los parámetros especificados como parte de la solicitud. Cuando el dispositivo recibe el mensaje MQTT, éste ejecuta la acción o responde con un código de error que indica el motivo por el que no puede completar la acción en este momento.
 
-Cuando se completa correctamente una acción de dispositivo, el dispositivo publica una respuesta en la que el valor `rc` se establece en `200`.
+Cuando se completa correctamente una acción de dispositivo, el dispositivo publica una respuesta en la que el valor ``rc`` se establece en ``200``.
 
 El siguiente extracto proporciona un ejemplo del intercambio que se produce entre un servidor y un dispositivo.
 
@@ -242,7 +242,7 @@ El siguiente extracto proporciona un ejemplo del intercambio que se produce entr
 
 El siguiente ejemplo demuestra cómo puede definir una nueva ampliación de gestión de dispositivos y ejecutar una acción definida en dicha ampliación.
 
-Algunas empresas fabrican dispositivos `exampleDeviceType`. Puede instalar y gestionar plug-ins para que se ejecuten en dispositivos `exampleDeviceType`. Para facilitar la gestión remota de plug-ins en dispositivos `exampleDeviceType`, el fabricante normalmente proporciona una ampliación de gestión de dispositivos que puede importar en la organización de {{site.data.keyword.iot_short_notm}}.
+Algunas empresas fabrican dispositivos ``exampleDeviceType``. Puede instalar y gestionar plug-ins para que se ejecuten en dispositivos ``exampleDeviceType``. Para facilitar la gestión remota de plug-ins en dispositivos ``exampleDeviceType``, el fabricante normalmente proporciona una ampliación de gestión de dispositivos que puede importar en la organización de {{site.data.keyword.iot_short_notm}}.
 
 Se utiliza el siguiente documento JSON de ampliación en este ejemplo:
 
@@ -338,7 +338,7 @@ Para añadir la ampliación, utilice el siguiente mandato API REST:
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 
-Los dispositivos registrados en la organización `<orgID>` pueden especificar que dan soporte a acciones `exampleDeviceType-actions-v1` cuando publican una solicitud de gestión, que se muestra en el ejemplo siguiente:
+Los dispositivos registrados en la organización ``<orgID>`` pueden especificar que dan soporte a acciones ``exampleDeviceType-actions-v1`` cuando publican una solicitud de gestión, que se muestra en el ejemplo siguiente:
 
 ```
 	Mensaje saliente del dispositivo:
@@ -366,9 +366,9 @@ El dispositivo recibe la respuesta siguiente desde el {{site.data.keyword.iot_sh
 	}
 
 ```
-En este punto, puede iniciar las acciones de dispositivos definidas en la ampliación `exampleIoT-exampleDeviceType-v1`.
+En este punto, puede iniciar las acciones de dispositivos definidas en la ampliación ``exampleIoT-exampleDeviceType-v1``.
 
-La siguiente carga útil se utiliza para iniciar una acción `installPlugin`:
+La siguiente carga útil se utiliza para iniciar una acción ``installPlugin``:
 
 ```
 	{
@@ -400,7 +400,7 @@ Inicie la solicitud utilizando el siguiente mandato API REST:
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-Cuando se envía el mandato, los dispositivos `device0` y `device1` de tipo `exampleDeviceType` reciben el siguiente mensaje MQTT:
+Cuando se envía el mandato, los dispositivos ``device0`` y ``device1`` de tipo ``exampleDeviceType`` reciben el siguiente mensaje MQTT:
 
 ```
 	Mensaje entrante del servidor:
@@ -437,7 +437,7 @@ Cada dispositivo toma una acción en el mensaje e instala el plug-in especificad
 
 ```
 
-En este punto, se completa la acción de gestión de dispositivos `installPlugin`.
+En este punto, se completa la acción de gestión de dispositivos ``installPlugin``.
 
 ## Ejemplos de la API
 {: #api_examples}

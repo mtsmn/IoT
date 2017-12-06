@@ -18,7 +18,7 @@ lastupdated: "2017-03-13"
 Le librerie client forniscono gli strumenti e i file necessari per creare e sviluppare il codice per l'integrazione e la connettività dei tuoi dispositivi e applicazioni su {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
-Le librerie client vengono fornite per tutti i linguaggi di programmazione supportati e puoi accedervi dal repository GitHub [{{site.data.keyword.iot_short_notm}} ![icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot){:new_window} o dai seguenti link diretti:
+Le librerie client vengono fornite per tutti i linguaggi di programmazione supportati e puoi accedervi dal repository GitHub [{{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot){:new_window} o dai seguenti link diretti:
 
 ## C++
 

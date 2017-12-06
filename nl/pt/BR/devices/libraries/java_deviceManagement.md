@@ -92,11 +92,11 @@ O Constructor um constrói uma instância de `ManagedDevice` no {{site.data.keyw
 
 |Propriedade |Descrição |
 |:---|:---|
-|`Organization-ID` |O ID de sua organização|
-|`Device-Type` |O tipo de seu dispositivo. Normalmente, o deviceType é um agrupamento de dispositivos que executam uma tarefa específica, por exemplo, "weatherballoon".|
-|`Device-ID` |O ID de seu dispositivo. Normalmente, para um tipo de dispositivo especificado, o deviceId é um identificador exclusivo desse dispositivo, por exemplo, um número de série ou um endereço de Controle de Acesso à Mídia.|
+|``Organization-ID`` |O ID de sua organização|
+|``Device-Type`` |O tipo de seu dispositivo. Normalmente, o deviceType é um agrupamento de dispositivos que executam uma tarefa específica, por exemplo, "weatherballoon".|
+|``Device-ID`` |O ID de seu dispositivo. Normalmente, para um tipo de dispositivo especificado, o deviceId é um identificador exclusivo desse dispositivo, por exemplo, um número de série ou um endereço de Controle de Acesso à Mídia.|
 |`Authentication-Method` |O método de autenticação a ser usado. O único valor atualmente suportado é `token`.|
-|`Authentication-Token` |Um token de autenticação para conectar seu dispositivo de forma segura ao Watson IoT Platform.|
+|``Authentication-Token`` |Um token de autenticação para conectar seu dispositivo de forma segura ao Watson IoT Platform.|
 
 
 O código a seguir descreve como é possível criar uma instância de `ManagedDevice`:
@@ -162,7 +162,7 @@ managedDevice.manage(3600);
 
 Para obter mais informações sobre a operação `Manage`, consulte a [documentação].
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## Cancelar Gerenciamento
 
@@ -174,7 +174,7 @@ managedDevice.unmanage();
 
 Para obter mais informações sobre a operação `Unmanage`, consulte a [documentação].
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## Atualização de localização
 {: #construct_location_update}

@@ -48,7 +48,7 @@ Der Konstruktor erstellt die Clientinstanz und akzeptiert folgende Parameter:
 |Parameter |Beschreibung |
 |:---|:---|
 |`org` |Die ID Ihrer Organisation. Dieser Wert ist erforderlich. Wenn Sie einen Quickstart-Ablauf verwenden, geben Sie `quickstart` an.|
-|`type`   |Der Typ Ihres Geräts. Dieses Feld ist erforderlich.|
+|`type`  |Der Typ Ihres Geräts. Dieses Feld ist erforderlich.|
 |`id`   |Die ID Ihres Geräts. Dieses Feld ist erforderlich.|
 |`auth-method`   |Die Authentifizierungsmethode; hier handelt es sich um ein optionales Feld, das nur für den registrierten Ablauf erforderlich ist. Der einzige Wert, der aktuell unterstützt ist, lautet `token`.|
 |`auth-token`   |Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und Watson IoT Platform. Dies ist ein optionales Feld, das nur für einen registrierten Ablauf erforderlich ist.|
@@ -71,7 +71,7 @@ Das folgende Codebeispiel zeigt, wie eine DeviceClient-Instanz mit dem Quickstar
   IoTF::DeviceClient client(organization, deviceType, deviceId);
 
   // Rufen Sie im Quickstart-Modus und falls die Geräte-ID nicht angegeben ist 'DeviceID(MAC Address)' ab
-  if((strcmp(organization, QUICKSTART) == 0) && (strcmp("", deviceId) == 0))
+  if((strcmp(organization, QUICKSTART) == 0) &&  (strcmp("", deviceId) == 0))
   {
   	char tmpBuf[50];
   	client.getDeviceId(tmpBuf, sizeof(tmpBuf));
@@ -145,7 +145,7 @@ Das folgende Beispiel zeigt, wie folgende Datenpunkte im JSON-Format in {{site.d
 
 - LPC1768, wie beispielsweise die X-, Y- und Z-Achse
 - Joystickposition
-- Aktuell gemessener Temperaturwert
+- Aktueller Temperaturmesswert
 
 ```
 	boolean status = client.connect();
@@ -217,7 +217,7 @@ Die Bibliothek speichert keine Ereignisse, die während der Verbindungsunterbrec
 Wenn der Geräteclient eine Verbindung herstellt, subskribiert er automatisch alle für dieses Geräte geltenden Befehle. Zum Verarbeiten bestimmter Befehle müssen Sie eine Callback-Methode für Befehle registrieren.
 Die Nachrichten werden als Instanz der Befehlsklasse zurückgegeben, die folgende Eigenschaften aufweist:
 
-|Eigenschaft |Beschreibung|
+|Eigenschaft|Beschreibung|
 |:---|:---|
 |`command` | Der Name des aufgerufenen Befehls.|  
 |`format`  |Das Format des Ereignisses. Das Format kann eine beliebige Zeichenfolge sein, zum Beispiel 'JSON'. |
@@ -230,7 +230,7 @@ Mit dem folgenden Code wird eine Callback-Beispielfunktion für Befehle definier
     #include "DeviceClient.h"
     #include "Command.h"
 
-    // Befehl verarbeiten und LED-Blinkintervall festlegen
+    // Process the command and set the LED blink interval
     void processCommand(IoTF::Command &cmd)
     {
         if (strcmp(cmd.getCommand(), "blink") == 0)

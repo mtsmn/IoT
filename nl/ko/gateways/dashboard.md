@@ -43,7 +43,7 @@ lastupdated: "2017-03-16"
 게이트웨이를 등록하려면 게이트웨이 유형으로 디바이스를 분류하고 게이트웨이에 이름을 제공하며 게이트웨이 정보를 제공해야 합니다. 그런 다음 연결 토큰을 제공하거나 {{site.data.keyword.iot_short_notm}}에서 생성된 토큰을 승인합니다.
 
 
-**팁:** {{site.data.keyword.iot_short_notm}} 대시보드에서 한 번에 하나씩 게이트웨이를 추가하거나 [조직 관리 API ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window}를 사용하여 하나 이상의 게이트웨이를 한 번에 추가할 수 있습니다. 
+**팁:** {{site.data.keyword.iot_short_notm}} 대시보드에서 한 번에 하나씩 게이트웨이를 추가하거나 [조직 관리 API(![외부 링크 아이콘](../../../icons/launch-glyph.svg))](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window}를 사용하여 한 번에 하나 이상의 게이트웨이를 추가할 수 있습니다.
 
 {{site.data.keyword.iot_short_notm}} 대시보드에서 게이트웨이를 추가하려면 다음을 수행하십시오.
 
@@ -127,7 +127,7 @@ EAA(Edge Analytics Agent)는 스트리밍 엔진 위에서 구축된 소프트�
 {: #eaa_install}
 
 게이트웨이에 EAA를 설치하려면 다음을 수행하십시오.
-1. {{site.data.keyword.iot_short}} 대시보드에서 **규칙**으로 이동하십시오. 
+1. {{site.data.keyword.iot_short}} 대시보드에서 **규칙**으로 이동하십시오.
 2. **Edge Agent 다운로드**를 클릭하여 [IBM Edge Analytics 커뮤니티 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}로 이동하십시오. 
 3. **파일** 섹션으로 이동하여 게이트웨이 유형에 적합한 압축 디렉토리를 다운로드하십시오.   
 Edge Analytics 솔루션은 Java를 지원하는 디바이스에 대한 SDK로 또는 Cisco 게이트웨이 디바이스에 대한 DSLink로 사용 가능합니다. 

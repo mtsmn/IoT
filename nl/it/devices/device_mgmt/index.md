@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -84,11 +84,11 @@ iotdm-1/response
 ### Il formato del messaggio per una richiesta di gestione del dispositivo
 
 
-In una richiesta di gestione del dispositivo, il campo `d` e tutti i campi secondari relativi sono facoltativi. I valori del campo `metadata` e `deviceInfo` sostituiscono gli attributi corrispondenti per l'invio del dispositivo se sono stati inviati.
+In una richiesta di gestione del dispositivo, il campo ``d`` e tutti i campi secondari relativi sono facoltativi. I valori del campo ``metadata`` e ``deviceInfo`` sostituiscono gli attributi corrispondenti per l'invio del dispositivo se sono stati inviati.
 
-Il campo `lifetime` facoltativo specifica l'arco di tempo in secondi in cui il dispositivo deve inviare un'altra richiesta di gestione del dispositivo per evitare di essere classificato come inattivo e diventare un dispositivo non gestito. Se il campo `lifetime` viene omesso o impostato su `0`, il dispositivo gestito non diventa inattivo. L'impostazione supportata minima per il campo `lifetime` è `3600` secondi, che corrisponde a 1 ora.
+Il campo ``lifetime`` facoltativo specifica l'arco di tempo in secondi in cui il dispositivo deve inviare un'altra richiesta di gestione del dispositivo per evitare di essere classificato come inattivo e diventare un dispositivo non gestito. Se il campo ``lifetime`` viene omesso o impostato su ``0``, il dispositivo gestito non diventa inattivo. L'impostazione supportata minima per il campo ``lifetime`` è ``3600`` secondi, che corrisponde a 1 ora.
 
-I campi facoltativi `supports.deviceActions` e `supports.firmwareActions` indicano le funzionalità dell'agent di gestione del dispositivo. Se `supports.deviceActions` è impostato, l'agent supporta le azioni di reimpostazione dei valori predefiniti e di riavvio. Per un dispositivo che non distingue un riavvio da una reimpostazione dei valori predefiniti, è accettabile utilizzare lo stesso comportamento per entrambe le azioni. Se `supports.firmwareActions` è impostato, l'agent supporta le azioni di aggiornamento e scaricamento firmware.
+I campi facoltativi ``supports.deviceActions`` e ``supports.firmwareActions`` indicano le funzionalità dell'agent di gestione del dispositivo. Se ``supports.deviceActions`` è impostato, l'agent supporta le azioni di reimpostazione dei valori predefiniti e di riavvio. Per un dispositivo che non distingue un riavvio da una reimpostazione dei valori predefiniti, è accettabile utilizzare lo stesso comportamento per entrambe le azioni. Se ``supports.firmwareActions`` è impostato, l'agent supporta le azioni di aggiornamento e scaricamento firmware.
 
 Il seguente esempio mostra il formato della richiesta:
 
@@ -249,7 +249,7 @@ iotdm-1/device/update
 ### Il formato del messaggio per una richiesta di aggiornamento dell'ubicazione
 
 
-Il campo `measuredDateTime` è la data della misurazione dell'ubicazione. Il campo `updatedDateTime` è la data dell'aggiornamento delle informazioni del dispositivo. Per motivi di efficacia, {{site.data.keyword.iot_short_notm}} alcune volte raggruppa gli aggiornamenti delle informazioni di ubicazione in modo che gli aggiornamenti siano leggermente differiti. La latitudine e la longitudine devono essere specificate in gradi decimali utilizzando il World Geodetic System 1984 (WGS84).
+Il campo ``measuredDateTime`` è la data della misurazione dell'ubicazione. Il campo ``updatedDateTime`` è la data dell'aggiornamento delle informazioni del dispositivo. Per motivi di efficacia, {{site.data.keyword.iot_short_notm}} alcune volte raggruppa gli aggiornamenti delle informazioni di ubicazione in modo che gli aggiornamenti siano leggermente differiti. La latitudine e la longitudine devono essere specificate in gradi decimali utilizzando il World Geodetic System 1984 (WGS84).
 
 Se viene aggiornata l'ubicazione, i valori forniti per latitudine, longitudine, altitudine e incertezza sono considerati un solo aggiornamento con più valori. La latitudine e la longitudine sono obbligatorie e devono essere entrambe fornite con ogni aggiornamento.  L'altitudine e l'incertezza sono facoltative e possono essere omesse.
 
@@ -327,7 +327,7 @@ Topic: iotdm-1/device/update
 }
 ```
 
-**Nota:** il parametro `reqID` non viene utilizzato perché il dispositivo non è richiesto nella risposta.
+**Nota:** il parametro ``reqID`` non viene utilizzato perché il dispositivo non è richiesto nella risposta.
 
 ## Richieste di aggiornamento dell'attributo del dispositivo
 {: #update-attributes}
@@ -597,7 +597,7 @@ Topic: iotdm-1/response
 
 {{site.data.keyword.iot_short_notm}} può inviare una richiesta di osservazione delle modifiche dell'attributo a un dispositivo per osservare le modifiche ad uno o più attributi utilizzando il tipo di richiesta di osservazione delle modifiche dell'attributo. Quando il dispositivo riceve la richiesta, deve inviare una richiesta di notifica a {{site.data.keyword.iot_short_notm}} ogni volta che i valori degli attributi osservati vengono modificati.
 
-**Importante:** i dispositivi devono implementare, osservare, inviare notifiche e annullare le operazioni per supportare i tipi di richiesta [Azioni firmware - Aggiornamento](requests.html#firmware-actions-update).
+**Importante:** i dispositivi devono implementare, osservare, inviare notifiche e annullare le operazioni per supportare i tipi di richiesta [Azioni firmware - Aggiornamento](requests.html#firmware-actions-update). Le richieste di osservazione delle modifiche dell'attributo sono utilizzate solo nel contesto delle richieste firmware.
 
 ### Argomento per una richiesta di osservazione delle modifiche dell'attributo
 
@@ -624,7 +624,9 @@ Topic: iotdm-1/observe
 {
     "d": {
         "fields": [
-            "string"
+				{
+                "field": "field_name"
+            }
         ]
     },
     "reqId": "string"
@@ -660,7 +662,7 @@ Topic: iotdevice-1/response
 
 Il parametro `message` deve essere specificato nella risposta se il valore del parametro `rc` non è `200`.
 
-**Importante:** i dispositivi devono implementare, osservare, inviare notifiche e annullare le operazioni per supportare i tipi di richiesta [Azioni firmware - Aggiornamento](requests.html#firmware-actions-update).
+**Importante:** i dispositivi devono implementare, osservare, inviare notifiche e annullare le operazioni per supportare i tipi di richiesta [Azioni firmware - Aggiornamento](requests.html#firmware-actions-update). Le richieste di annullamento dell'osservazione dell'attributo sono utilizzate solo nel contesto delle richieste firmware.
 
 ### Argomento per una richiesta di annullamento dell'osservazione dell'attributo
 
@@ -684,7 +686,9 @@ Topic: iotdm-1/cancel
 {
     "d": {
         "fields": [
-            "string"
+				{
+                "field": "field_name"
+            }
         ]
     },
     "reqId": "string"
@@ -715,7 +719,7 @@ Il valore del parametro `field_name` è il nome dell'attributo modificato e `fie
 
 Quando la richiesta di notifica viene elaborata positivamente, il valore del parametro `rc` viene impostato su `200`. Se la richiesta non è corretta, il valore del parametro `rc` viene impostato su `400`. Se il parametro specificato nella richiesta di notifica non è osservato, il valore del parametro `rc` viene impostato su `404`.
 
-**Importante:** i dispositivi devono implementare, osservare, inviare notifiche e annullare le operazioni per supportare i tipi di richiesta [Azioni firmware - Aggiornamento](requests.html#firmware-actions-update).
+**Importante:** i dispositivi devono implementare, osservare, inviare notifiche e annullare le operazioni per supportare i tipi di richiesta [Azioni firmware - Aggiornamento](requests.html#firmware-actions-update). Le r ichieste di notifica delle modifiche dell'attributo sono utilizzate solo nel contesto delle richieste firmware.
 
 
 ### Argomento per una richiesta di notifica delle modifiche dell'attributo
@@ -739,8 +743,12 @@ Outgoing message from the device:
 Topic: iotdevice-1/notify
 {
     "d": {
-        "field": "field_name",
-        "value": "field_value"
+        "fields": [
+				{
+                "field": "field_name",
+                "value": "field_value"
+            }
+        ]
     }
     "reqId": "string"
 }

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -33,7 +33,7 @@ MQTT 認証を有効にするには、MQTT 接続を行う際にユーザー名�
 ### ユーザー名
 {: #username}
 
-ユーザー名は、すべてのゲートウェイで同じ値 `use-token-auth` です。この値により、{{site.data.keyword.iot_short_notm}} はゲートウェイの認証トークンを使用するようになります。これは、パスワードとして指定されます。
+ユーザー名は、すべてのゲートウェイで同じ値 ``use-token-auth`` です。この値により、{{site.data.keyword.iot_short_notm}} はゲートウェイの認証トークンを使用するようになります。これは、パスワードとして指定されます。
 
 ### パスワード
 {: #password}
@@ -54,15 +54,15 @@ MQTT 認証を有効にするには、MQTT 接続を行う際にユーザー名�
 
 |    |'typeID'|'deviceID'|
 |:---|:---|:---|
-|ゲートウェイ 1 |mygateway |gateway1 |
-|デバイス 1 |mydevice |device1 |
+|ゲートウェイ 1|mygateway|gateway1|
+|デバイス 1|mydevice|device1|
 
 -   ゲートウェイ 1 は、それ自体の状況イベントをパブリッシュすることができます。
       
-    `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
+    ``iot-2/type/mygateway/id/gateway1/evt/status/fmt/json``
 -   ゲートウェイ 1 は、デバイス 1 に代わって状況イベントをパブリッシュすることができます。
       
-    `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
+    ``iot-2/type/mydevice/id/device1/evt/status/fmt/json``
 
 **重要:** メッセージ・ペイロードは最大 131072 バイトに制限されます。この制限を超えるメッセージは拒否されます。
 
@@ -81,10 +81,10 @@ MQTT 認証を有効にするには、MQTT 接続を行う際にユーザー名�
 
 **例:**
 
-|デバイス |`typeId`|`deviceId`|
+|デバイス|`typeId`|`deviceId`|
 |:---|:---|
-|ゲートウェイ 1| mygateway   | gateway1   |
-|デバイス 1 | mydevice    | device1    |
+|ゲートウェイ 1| mygateway| gateway1|
+|デバイス 1| mydevice| device1|
 
 
 -   ゲートウェイ 1 は、ゲートウェイで指定されたコマンドにサブスクライブすることができます。
@@ -164,38 +164,43 @@ iot-2/type/**typeId**/id/**deviceId**/notify
 
 管理対象ゲートウェイは、サービス品質 (QoS) レベルが 0 か 1 のメッセージをパブリッシュできます。
 
-QoS=0 のメッセージは破棄される可能性があり、メッセージ・サーバーを再始動した後には保持されません。QoS=1 のメッセージはキューに入れられる可能性があり、メッセージ・サーバーを再始動した後にも残ります。要求がキューに入れられるかどうかは、サブスクリプションの耐久性によって異なります。サブスクリプションの耐久性は、サブスクリプションを作成した接続の `cleansession` パラメーターによって決まります。  
+QoS=0 のメッセージは破棄される可能性があり、メッセージ・サーバーを再始動した後には保持されません。QoS=1 のメッセージはキューに入れられる可能性があり、メッセージ・サーバーを再始動した後にも残ります。要求がキューに入れられるかどうかは、サブスクリプションの耐久性によって異なります。サブスクリプションの耐久性は、サブスクリプションを作成した接続の ``cleansession`` パラメーターによって決まります。  
 
-{{site.data.keyword.iot_short_notm}} は、メッセージのキューイングをサポートするために QoS レベルが 1 の要求をパブリッシュします。管理対象ゲートウェイが接続されていなかった間に送信されるメッセージをキューに入れるには、`cleansession` パラメーターを false に設定することにより、デバイスがクリーン・セッションを使用しないようデバイスを構成します。
+{{site.data.keyword.iot_short_notm}} は、メッセージのキューイングをサポートするために QoS レベルが 1 の要求をパブリッシュします。管理対象ゲートウェイが接続されていなかった間に送信されるメッセージをキューに入れるには、``cleansession`` パラメーターを false に設定することにより、デバイスがクリーン・セッションを使用しないようデバイスを構成します。
 
 **警告**
 
-管理対象ゲートウェイが永続サブスクリプションを使用する場合、要求がタイムアウトになる前にデバイスがサービスに再接続しなければ、オフラインの間にゲートウェイに送信されるデバイス管理コマンドは、失敗した操作として報告されます。ゲートウェイが再接続すると、それらの要求はゲートウェイによって処理されます。永続サブスクリプションは、`cleansession=false` パラメーターによって指定されます。
+管理対象ゲートウェイが永続サブスクリプションを使用する場合、要求がタイムアウトになる前にデバイスがサービスに再接続しなければ、オフラインの間にゲートウェイに送信されるデバイス管理コマンドは、失敗した操作として報告されます。ゲートウェイが再接続すると、それらの要求はゲートウェイによって処理されます。永続サブスクリプションは、``cleansession=false`` パラメーターによって指定されます。
 
-ゲートウェイは、その背後にあるデバイスに関係なく、MQTT セッションを所有します。デバイスがゲートウェイを経由してサブスクリプション要求を送信する際、`cleansession=false` オプションが設定されているかどうかに関係なく、要求はその他のゲートウェイにローミングしません。
+ゲートウェイは、その背後にあるデバイスに関係なく、MQTT セッションを所有します。デバイスがゲートウェイを経由してサブスクリプション要求を送信する際、``cleansession=false`` オプションが設定されているかどうかに関係なく、要求はその他のゲートウェイにローミングしません。
 
 ### トピック
 {: #topics}
 
-管理対象ゲートウェイは、{{site.data.keyword.iot_short_notm}} からの要求と応答を処理するために、以下のトピックにサブスクライブする必要があります。
+管理対象ゲートウェイは、{{site.data.keyword.iot_short_notm}} との間での独自の要求と応答を処理するために、以下のトピックにサブスクライブする必要があります。
 
--   管理対象ゲートウェイは、以下のデバイス管理応答にサブスクライブします。  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/+</pre>
-{: codeblock}
--   管理対象ゲートウェイは、以下のデバイス管理要求にサブスクライブします。  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/+</pre>
+-   管理対象ゲートウェイは、独自のデバイス管理要求と応答に、次の場所でサブスクライブします。  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">gatewayTypeId</var>/id/<var class="keyword varname">gatewayDeviceId</var>/#</pre>
 {: codeblock}
 
-管理対象ゲートウェイは、以下の応答と要求をパブリッシュします。
+管理対象ゲートウェイは、そこに接続されたデバイスに関して {{site.data.keyword.iot_short_notm}} からの要求と応答を処理するために、以下のトピックにサブスクライブする必要があります。
 
-- デバイス管理応答は、以下でパブリッシュされます。  
-<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/</pre>
+-   管理対象ゲートウェイは、その接続されたデバイスのデバイス管理要求と応答に、次の場所でサブスクライブします。  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/#</pre>
 {: codeblock}
-- デバイス管理要求は、以下でパブリッシュされます。  
+
+ゲートウェイは、適切な **typeId** と **deviceId** を使用して、ゲートウェイ自体のデバイス管理プロトコル・メッセージを処理することも、接続している他のデバイスの代わりにデバイス管理プロトコル・メッセージを処理することもできます。**typeId** と **deviceId** の代わりに MQTT ワイルドカード **+** を使用することもできます。
+
+管理対象ゲートウェイは、実行されている管理要求のタイプに固有のトピックにパブリッシュします。
+
+- 管理対象ゲートウェイは、デバイス管理応答を次の場所でパブリッシュします。
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
+{: codeblock}
+
+管理対象ゲートウェイのパブリッシュ先となる可能性があるその他のトピックについては、[デバイス管理プロトコル](device_mgmt/index.html)と[デバイス管理要求](../devices/device_mgmt/requests.html)を参照してください。 
+- **iotdevice-1/** で始まるトピックが代わりに以下で始まることを除き、どのゲートウェイでもプロトコルは同じです。
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}
-
-ゲートウェイは、適切な **typeId** と **deviceId** を使用して、ゲートウェイ自体のデバイス管理プロトコル・メッセージを処理することも、接続している他のデバイスの代わりにデバイス管理プロトコル・メッセージを処理することもできます。
 
 ### メッセージ形式
 {: #msg_format}

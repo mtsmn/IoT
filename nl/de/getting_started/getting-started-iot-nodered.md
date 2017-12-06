@@ -44,7 +44,7 @@ Um das Wechseln zwischen den verschiedenen Aufgaben im folgenden Prozess zu vere
 <dd>Hier können Sie den Status Ihrer Bereitstellung ermitteln, die Dokumentation lesen und Dashboards starten.</dd>
 <dt>*{{site.data.keyword.iot_short_notm}}-Dashboard*</dt>
 <dd>Hier haben Sie die Möglichkeit, Gerätetypen zu definieren, Geräte zu registrieren, eingehende Sensordaten zu überwachen, Datenvisualisierungskarten zu erstellen
-und Datenvisualisierungen live anzuzeigen.</dd>
+und Livedatenvisualisierungen anzuzeigen.</dd>
 <dt>*Node-RED*</dt>
 <dd>Hier können Sie den Ablauf des Gerätesimulators konfigurieren und ausführen und Sie können mit anderen Abläufen arbeiten, um Daten von {{site.data.keyword.iot_short_notm}} zu verarbeiten.</dd>
 </dl>
@@ -143,7 +143,7 @@ Die Nutzdaten beinhalten Datenpunkte (z. B. diejenigen im folgenden Beispiel):
   8. Prüfen Sie auf der Seite "{{site.data.keyword.iot_short_notm}}-Geräteinformationen", dass Datenpunkte von dem Gerät im Abschnitt "Sensorinformationen" angezeigt werden.
 
 
-## Schritt 4: Karten in {{site.data.keyword.iot_short_notm}} erstellen, um Live-Daten anzuzeigen.  
+## Schritt 4: Karten in {{site.data.keyword.iot_short_notm}} erstellen, um Livedaten anzuzeigen.  
 {: #createcards}  
 Sie können ein Board sowie Karten erstellen, um Gerätedaten im {{site.data.keyword.iot_short_notm}}-Dashboard anzuzeigen. Weitere Informationen zu Boards und Karten finden Sie in [Echtzeitdaten mithilfe von Boards und Karten visualisieren](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
 
@@ -170,7 +170,7 @@ Sie können ein Board sowie Karten erstellen, um Gerätedaten im {{site.data.key
     - Max.: 50
   5. Wählen Sie auf der Seite "Kartenvorschau" den Wert **L** für die Kurvendiagrammgröße aus und klicken Sie auf **Weiter**.
   6. Ändern Sie den Namen der Karte auf der Seite "Karteninformationen" in **Temperature** (Temperatur) und klicken Sie auf **Übergeben**.   
-Die Karte für die Temperatur wird auf dem Dashboard angezeigt und sie enthält ein Kurvendiagramm mit Live-Temperaturdaten.
+Die Karte für die Temperatur wird auf dem Dashboard angezeigt. Sie enthält ein Kurvendiagramm mit Livedaten zur Temperatur.
 3. Karte erstellen, um die Feuchtigkeit anzuzeigen.
   1. Klicken Sie auf **Neue Karte hinzufügen** und wählen Sie anschließend den Kartentyp **Messanzeige** im Abschnitt "Geräte" aus.
   2. Wählen Sie Ihr Gerät aus der Liste aus und klicken Sie anschließend auf **Weiter**.

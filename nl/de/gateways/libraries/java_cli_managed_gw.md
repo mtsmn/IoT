@@ -40,7 +40,7 @@ Der Gerätemanagementagent in dem Gateway konvertiert und verarbeitet das Verbin
 
 Wenn das Gerät später ein Upgrade anfordert, kann der Gerätemanagementagent im Gateway die Firmware mit einer Push-Operation an das Gerät übermitteln und das Update durchführen.
 
-## Erstellen des Gerätemodells
+## Gerätemodell erstellen
 {: #create_device_model}
 
 In {{site.data.keyword.iot_short}} beschreibt das Gerätemodell die Metadaten und die Managementmerkmale für Geräte und Gateways. Die Gerätedatenbank ist die Masterquelle für Geräte- und Gateway-Informationen. Anwendungen und verwaltete Geräte können Positionsaktualisierungen, Fortschrittsaktualisierungen für Firmware-Upgrades und andere Aktualisierungstypen senden. Sobald Aktualisierungen von {{site.data.keyword.iot_short}} empfangen werden, wird die Gerätedatenbank aktualisiert, um die Informationen für verbundene Anwendungen verfügbar zu machen.
@@ -139,7 +139,7 @@ ManagedGateway ManagedGateway = new ManagedGateway(options, deviceData);
 Konstruktor 2 erstellt eine Instanz `ManagedGateway`, indem ein Objekt `DeviceData` und die MQTT-Clientinstanz akzeptiert wird. Konstruktor 2 setzt außerdem voraus, dass das Ojekt `DeviceData` in der Instanz den Gerätetyp und die Geräte-ID enthält, wie im folgenden Codebeispiel dargestellt:
 
 ```java
-// Code zum Erstellen einer synchronen oder asynchronen MQTT-Clientinstanz von mqttClient.
+// Code, mit dem eine synchrone oder asynchrone MQTT-Clientinstanz von mqttClient erstellt wird.
 .....
 
 // Code zum Erstellen des Objekts 'DeviceData'
@@ -220,7 +220,7 @@ managedGateway.sendDeviceUnmanageRequet();
 Für Gateways, die ihre Position bestimmen können, kann ausgewählt werden, dass {{site.data.keyword.iot_short}} über Positionsänderungen benachrichtigt wird. Das Gateway kann eine der überladenen Methoden `updateLocation()` aufrufen, um die Position des Geräts zu aktualisieren.
 
 ```java
-    // Position mit Längengrad, Breitengrad und Höhenangabe aktualisieren.
+    // update the location with latitude, longitude, and elevation.
 int rc = managedGateway.updateGatewayLocation(30.28565, -97.73921, 10);
 if(rc == 200) {
     System.out.println("Location updated successfully!");
@@ -234,7 +234,7 @@ System.err.println("Failed to update the location!");
 Das Gateway kann die entsprechende Methode `updateDeviceLocation()` für Geräte aufrufen, um die Position der angeschlossenen Geräte zu aktualisieren. Die überladene Methode kann verwendet werden, um die Methode `measuredDateTime` anzugeben.
 
 ```java
-// Position des angeschlossenen Geräts mit Längengrad, Breitengrad und Höhe aktualisieren.
+// update the location of the attached device with latitude, longitude, and elevation
 int rc = managedGateway.updateDeviceLocation(typeId, deviceId, 30.28565, -97.73921, 10);
 ```
 Weitere Informationen zu Positionsaktualisierungen finden Sie in [Gerätemanagementanforderungen](../../devices/device_mgmt/index.html#/update-location#update-location).
@@ -277,7 +277,7 @@ Für ein Gateway kann ausgewählt werden, dass {{site.data.keyword.iot_short}} d
 Gateways können die Methode `addGatewayLog()` aufrufen, um Protokollnachrichten zu senden, wie im folgenden Beispiel gezeigt:
 
 ```java
-// Beispiel für ein Protokollereignis
+// An example Log event
 String message = "Firmware Download Progress (%): " + 50;
 Date timestamp = new Date();
 LogSeverity severity = LogSeverity.informational;
@@ -357,7 +357,7 @@ Das erstellte Objekt `DeviceData` für die angeschlossenen Geräte kann beim Sen
 managedGateway.sendDeviceManageRequest(typeId, deviceId, deviceData, lifetime, supportFirmwareActions, supportDeviceActions);
 ```
 
-Das Objekt `DeviceFirmware` stellt die aktuelle Firmware des Gateways oder des angeschlossenen Geräts dar und wird zum Berichten des Status für die Aktionen 'Firmware-Download' und 'Firmware-Update' an {{site.data.keyword.iot_short}} verwendet. Wenn das Objekt `DeviceFirmware` nicht vom Gateway erstellt wird, erstellt die Bibliothek ein leeres Objekt und berichtet den Status an {{site.data.keyword.iot_short}}.
+Das Objekt `DeviceFirmware` stellt die aktuelle Firmware des Gateways oder des angeschlossenen Geräts dar und wird zum Berichten des Status für die Aktionen 'Firmware-Download' und 'Firmware-Update' an {{site.data.keyword.iot_short}} verwendet. Wenn das Objekt `DeviceFirmware` nicht vom Gateway erstellt wird, erstellt die Bibliothek ein leeres Objekt und meldet den Status an {{site.data.keyword.iot_short}}.
 
 ### Schritt 2: Den Server über die Firmwareaktionsunterstützung informieren
 
@@ -391,7 +391,7 @@ Eine Beispielimplementierung für einen Thread-Pool-Handler finden Sie im [GitHu
 
 ### Beispielimplementierung von `downloadFirmware`
 
-Durch die Implementierung muss Logik hinzugefügt werden, um die Firmware herunterzuladen und den Status des Downloads mithilfe eines Objekts `DeviceFirmware` zu berichten. Wenn die Downloadoperation für die Firmware erfolgreich ist, sollte der Status der Firmware auf 'DOWNLOADED' und die Eigenschaft `UpdateStatus` auf 'SUCCESS' festgelegt werden.
+Durch die Implementierung muss Logik hinzugefügt werden, um die Firmware herunterzuladen und den Status des Downloads mithilfe eines Objekts `DeviceFirmware` zu melden. Wenn die Downloadoperation für die Firmware erfolgreich ist, sollte der Status der Firmware auf 'DOWNLOADED' und die Eigenschaft `UpdateStatus` auf 'SUCCESS' festgelegt werden.
 
 Wenn während des Firmware-Downloads ein Fehler auftritt, muss der Status auf 'IDLE' und die Eigenschaft `updateStatus` auf einen der folgenden Fehlerstatuswerte festgelegt werden:
 
@@ -460,7 +460,7 @@ public void downloadFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-Ein verwaltetes Gateway kann die Integrität des heruntergeladenen Firmware-Image mithilfe der Verifizierung prüfen und den Status zurück an {{site.data.keyword.iot_short}} berichten. Die Verifizierung kann in den folgenden Phasen vom Gateway festgelegt werden:
+Ein verwaltetes Gateway kann die Integrität des heruntergeladenen Firmware-Image mithilfe der Verifizierung prüfen und den Status zurück an {{site.data.keyword.iot_short}} melden. Die Verifizierung kann in den folgenden Phasen vom Gateway festgelegt werden:
 
 - Beim Start während der Erstellung des Objekts 'DeviceFirmware'
 - Beim Übermitteln einer Anforderung 'downloadFirmware' durch eine Anwendung
@@ -496,7 +496,7 @@ Sie finden den vollständigen Code im Gatewaymanagementbeispiel [GatewayFirmware
 
 ### Beispielimplementierung von `updateFirmware`
 
-Durch die Implementierung muss ein separater Thread erstellt und Logik hinzugefügt werden, um die heruntergeladene Firmware zu installieren und den Status der Aktualisierung mithilfe des Objekts `DeviceFirmware` zu berichten. Wenn die Updateoperation für die Firmware erfolgreich ist, muss der Status auf 'IDLE' und die Eigenschaft `updateStatus` auf 'SUCCESS' festgelegt werden.
+Durch die Implementierung muss ein separater Thread erstellt und Logik hinzugefügt werden, um die heruntergeladene Firmware zu installieren und den Status der Aktualisierung mithilfe des Objekts `DeviceFirmware` zu melden. Wenn die Updateoperation für die Firmware erfolgreich ist, muss der Status auf 'IDLE' und die Eigenschaft `updateStatus` auf 'SUCCESS' festgelegt werden.
 
 Wenn während eines Firmware-Updates ein Fehler auftritt muss der Wert `updateStatus` auf einen der folgenden Fehlerstatuswerte festgelegt werden:
 
@@ -596,7 +596,7 @@ public abstract void handleFactoryReset(DeviceAction action);
 
 ### Beispielimplementierung von `handleReboot`
 
-Durch die Implementierung muss ein separater Thread erstellt und Logik hinzugefügt werden, um das Gateway und das angeschlossene Gerät neu zu starten und den Status des Neustarts mithilfe eines Objekts `DeviceAction` zu berichten. Nachdem die Anforderung empfangen wurde, muss das Gateway zunächst den Server über die Unterstützung oder den Fehler informieren, bevor der Neustart durchgeführt wird. Wenn das Beispiel keinen Neustart für das Gerät durchführen kann oder beim Neustart ein anderer Fehler auftritt, kann das Gateway den Status in einer optionalen Nachricht aktualisieren. Das folgende Codebeispiel stellt eine Beispielimplementierung für den Neustart eines Raspberry Pi-Geräts bereit:
+Durch die Implementierung muss ein separater Thread erstellt und Logik hinzugefügt werden, um das Gateway und das angeschlossene Gerät neu zu starten und den Status des Neustarts mithilfe eines Objekts `DeviceAction` zu melden. Nachdem die Anforderung empfangen wurde, muss das Gateway zunächst den Server über die Unterstützung oder den Fehler informieren, bevor der Neustart durchgeführt wird. Wenn das Beispiel keinen Neustart für das Gerät durchführen kann oder beim Neustart ein anderer Fehler auftritt, kann das Gateway den Status in einer optionalen Nachricht aktualisieren. Das folgende Codebeispiel stellt eine Beispielimplementierung für den Neustart eines Raspberry Pi-Geräts bereit:
 
 ```java
 public void handleReboot(DeviceAction action) {
@@ -624,7 +624,7 @@ Die vollständige Beispielimplementierung mit einem Thread-Pool finden Sie im [G
 
 ### Beispielimplementierung von `handleFactoryReset`
 
-Durch die Implementierung muss ein separater Thread erstellt und Logik hinzugefügt werden, um das Gateway und das angeschlossene Gerät auf die Werkseinstellungen zurückzusetzen und den Status der Zurücksetzung mithilfe des Objekts 'DeviceAction' zu berichten. Nachdem die Anforderung empfangen wurde, muss das Gateway zunächst den Server über die Unterstützung oder den Fehler informieren, bevor das Zurücksetzen durchgeführt wird. Der allgemeine Ablauf der Implementierung für das Zurücksetzen wird im folgenden Codebeispiel gezeigt:
+Durch die Implementierung muss ein separater Thread erstellt und Logik hinzugefügt werden, um das Gateway und das angeschlossene Gerät auf die Werkseinstellungen zurückzusetzen und den Status der Zurücksetzung mithilfe des Objekts 'DeviceAction' zu melden. Nachdem die Anforderung empfangen wurde, muss das Gateway zunächst den Server über die Unterstützung oder den Fehler informieren, bevor das Zurücksetzen durchgeführt wird. Der allgemeine Ablauf der Implementierung für das Zurücksetzen wird im folgenden Codebeispiel gezeigt:
 
 ```java
 public void handleFactoryReset(DeviceAction action) {

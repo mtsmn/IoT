@@ -42,7 +42,8 @@ lastupdated: "2017-03-14"
 
 构造方法用于构建应用程序客户机实例，并接受包含以下属性的 JSON 配置文件：
 
-| 属性     |描述     |
+| 属性|描述
+|
 |----------------|----------------|
 |`org` |组织标识。这是必需值。|
 |`id`  |组织中应用程序的唯一标识。|
@@ -273,7 +274,7 @@ lastupdated: "2017-03-14"
 ### 处理来自设备的事件
 
 
-要处理您的预订接收到的事件，请实现设备事件回调方法。{{site.data.keyword.iot_short_notm}} 应用程序客户机会发送事件 `deviceEvent`。此函数具有以下属性：
+要处理您的预订接收到的事件，请实现设备事件回调方法。{{site.data.keyword.iot_short_notm}} 应用程序客户机会发送事件 ``deviceEvent``。此函数具有以下属性：
 
 - deviceType
 - deviceId
@@ -469,7 +470,8 @@ lastupdated: "2017-03-14"
 |`deviceType`|字符串|设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
 |`deviceId`|字符串|设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
 |`eventType`|字符串|特定事件组，例如“status”、“warning”和“data”。|
-|`format`|字符串|格式可以为任意字符串，例如 JSON。  |
+|`format`|字符串|格式可以为任意字符串，例如 JSON。
+|
 |`data`|字典|消息有效内容的数据。最大长度为 131072 字节。|
 |`payload`|字符串|消息有效内容的数据。最大长度为 131072 字节。|
 |`topic`|字符串|发布为设备时，topic 字符串不包含设备类型或设备标识；这两个值取自客户机标识。例如，`iot-2/evt/event_id/fmt/format_string`。代表设备发布为应用程序或网关时，topic 必须包含设备类型和设备标识。例如，`iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`。|

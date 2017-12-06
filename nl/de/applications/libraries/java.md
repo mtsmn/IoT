@@ -310,7 +310,7 @@ Zum Verarbeiten der Statusaktualisierungen, die über Ihre Subskriptionen empfan
 |`status.connectTime`   |java.util.Date|
 |`status.port`|Ganze Zahl|
 
-Folgende Eigenschaften werden nur festgelegt, wenn das Statusereignis `Disconnect` lautet:
+Folgende Eigenschaften werden nur festgelegt, wenn das Statusereignis ``Disconnect`` lautet:
 
 | Eigenschaft     |Datentyp     |
 |----------------|----------------|
@@ -346,7 +346,7 @@ Das folgende Codebeispiel zeigt die Beispielimplementierung für den Status-Call
   }
 ```
 
-Ist das Status-Callback zum Anwendungsclient hinzugefügt, wird stets die Methode `processDeviceStatus()` aufgerufen, wenn für ein Gerät, das mit den Kriterien übereinstimmt, eine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wird bzw. diese getrennt wird. Das folgende Codebeispiel zeigt, wie Sie die Callback-Instanz für den Status dem Anwendungsclient hinzufügen können:
+Ist das Status-Callback zum Anwendungsclient hinzugefügt, wird stets die Methode ``processDeviceStatus()`` aufgerufen, wenn für ein Gerät, das mit den Kriterien übereinstimmt, eine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wird bzw. diese getrennt wird. Das folgende Codebeispiel zeigt, wie Sie die Callback-Instanz für den Status dem Anwendungsclient hinzufügen können:
 
 ```
 
@@ -361,7 +361,7 @@ Anwendungen können beliebige andere Anwendungsstatus subskribieren, wie beispie
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-Mit der überladenen Methode kann die Subskription des Status einer bestimmten Anwendung gesteuert werden. Die Methode `processApplicationStatus()` wird stets aufgerufen, wenn für eine Anwendung, die den Kriterien entspricht, eine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wird bzw. diese getrennt wird.
+Mit der überladenen Methode kann die Subskription des Status einer bestimmten Anwendung gesteuert werden. Die Methode ``processApplicationStatus()`` wird stets aufgerufen, wenn für eine Anwendung, die den Kriterien entspricht, eine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wird bzw. diese getrennt wird.
 
 
 ## Ereignisse von Geräten publizieren
@@ -399,7 +399,7 @@ Alle XML-Daten können in das Zeichenfolgeformat konvertiert und wie folgt publi
     status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
 ```
 
-Verwenden Sie ähnlich dazu wie im folgenden Beispiel gezeigt die Bytefeldgruppe, um Ereignisse im Binärformat zu publizieren:
+Verwenden Sie ähnlich dazu wie im folgenden Beispiel gezeigt das Byte-Array, um Ereignisse im Binärformat zu publizieren:
 
 ```
     myClient.connect();

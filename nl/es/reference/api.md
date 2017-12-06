@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-07-20"
 
 ---
 
@@ -42,10 +42,12 @@ API                     | Utilícela para...
 ------------- | -------------
 [Administración de la organización ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | Configurar una organización (incluyendo crear y suprimir dispositivos), comprobar el uso, el estado del servicio y diagnosticar problemas de conexión del dispositivo.
 [Seguridad ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Gestionar la autenticación y las invitaciones de usuarios, y la autorización de usuarios, claves de API y dispositivos.
-[Gestión de la información ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Acceder a los datos de sucesos del dispositivo, así como para obtener y actualizar la ubicación del dispositivo y obtener información meteorológica para dicha ubicación. **Nota:** la información meteorológica depende de la integración de los datos de The Weather Company.
+[Gestión de la información ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Acceder a los datos de sucesos del dispositivo, así como para obtener y actualizar la ubicación del dispositivo y obtener información meteorológica para dicha ubicación. 
+[Gestión de datos ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window} |   Organizar e integrar datos entrantes y salientes de {{site.data.keyword.iot_short_notm}}.
 [Gestión de dispositivos ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | Interactuar con dispositivos gestionados utilizando el protocolo de gestión de dispositivos.
 [Mensajería ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | Publicar sucesos y enviar mandatos utilizando HTTP.
 [Gestión de riesgos ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | Gestión de los informes y las políticas de gestión de riesgos.
+
 ## API HTTP de extensión
 {: #api_extension}
 
@@ -61,5 +63,5 @@ API                     | Utilícela para...
 API                     | Utilícela para...       
 ------------- | -------------
 [Seguridad de pasarela ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html){: new_window}   | Comprobar y asignar roles a dispositivos de pasarela.
-[Seguridad de dispositivos ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-devices-beta.html){: new_window} | Comprobar y asignar roles a dispositivos.
-[Correlación de interfaces ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window}   |   Correlacionar y acceder a datos del dispositivo mediante interfaces.
+[Seguridad de dispositivo ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-devices-beta.html){: new_window} | Comprobar y asignar roles a dispositivos.
+[Control de acceso ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window} | Limitar el acceso de usuario.

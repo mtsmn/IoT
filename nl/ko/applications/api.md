@@ -91,7 +91,7 @@ password = Authentication token
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml | "xml"
+|application/xml| "xml"
 |application/octet-stream|"bin"
 
 ### 서비스 품질(QoS)

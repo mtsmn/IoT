@@ -77,7 +77,7 @@ Siga estos pasos para desplegar la aplicación de ejemplo del iniciador:
 ## Paso 2: Definición de un dispositivo simulado en {{site.data.keyword.iot_short_notm}}
 {: #definingsimdev}
 
-Siga los pasos siguientes para simular un escenario que utilice un termostato para supervisar la temperatura, la humedad y la ubicación de una sala de estar.
+Siga los pasos siguientes para simular un caso de ejemplo que utilice un termostato para supervisar la temperatura, la humedad y la ubicación de una sala de estar.
 
 1.	Inicie el panel de control de {{site.data.keyword.iot_short_notm}}.
   1. En el panel de control de Bluemix, bajo *Todos los servicios*, pulse el nombre de la instancia de {{site.data.keyword.iot_short_notm}}.

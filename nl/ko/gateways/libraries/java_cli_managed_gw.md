@@ -103,7 +103,7 @@ DeviceData deviceData = new DeviceData.Builder().
 
 생성자 1은 다음의 모든 특성이 포함된 `DeviceData` 클래스를 허용하여 `ManagedGateway` 인스턴스를 생성합니다. 
 
-| 특성     |설명      |
+| 특성     |설명     |
 |----------------|----------------|
 |`Organization-ID` |조직 ID입니다. |
 |`Gateway-Type` |게이트웨이 디바이스의 유형입니다.|
@@ -111,7 +111,7 @@ DeviceData deviceData = new DeviceData.Builder().
 |`Authentication-Method`|인증 메소드입니다. 지원되는 유일한 메소드는 "token"입니다. |
 |`Authentication-Token`|API 키 토큰입니다. |
 |`auth-key`   |auth-method의 값을 `apikey`로 설정할 때 지정해야 하는 선택적 API 키입니다.|
-|`auth-token`   |auth-method의 값을 `apikey`로 설정할 때 필수인 API 키 토큰입니다. |
+|`auth-token`   |auth-method의 값을 `apikey`로 설정할 때 필수인 API 키 토큰입니다.|
 |`clean-session`|지속 가능한 구독 모드로 게이트웨이 연결을 원하는 경우에만 필요한 true 또는 false 값입니다. 기본적으로 `clean-session`은 `true`로 설정됩니다. |
 |`Port`|연결할 포트 번호입니다. 8883 또는 443을 지정하십시오. 포트 번호를 지정하지 않으면 기본적으로 클라이언트가 포트 번호 8883의 {{site.data.keyword.iot_short_notm}}에 연결됩니다.|
 |`WebSocket`|WebSocket을 사용한 게이트웨이 연결을 원하는 경우에만 필요한 true 또는 false 값입니다. |
@@ -171,7 +171,7 @@ managedGateway.sendGatewayManageRequest(0, true, true);
 
 `sendGatewayManageRequest()` 메소드는 다음 매개변수를 허용합니다. 
 
-| 매개변수     |설명      |
+| 매개변수     |설명     |
 |----------------|----------------|
 |`lifetime`|휴면 상태로 분류되어 비관리 디바이스가 되지 않도록 게이트웨이가 다른 관리 디바이스 유형 요청을 전송해야 하는 시간의 길이(초)입니다. `lifetime` 필드가 생략되거나 0으로 으로 설정된 경우에는 관리 게이트웨이가 휴면 상태가 되지 않습니다. `lifetime` 필드의 최소 지원 설정은 3600초(1시간)입니다. |
 |`supportFirmwareActions`|게이트웨이가 펌웨어 조치를 지원하는지 여부를 판별하는 true 또는 false 값입니다. 게이트웨이는 또한 펌웨어 요청을 처리하기 위한 펌웨어 핸들러를 추가해야 합니다. |
@@ -271,7 +271,7 @@ rc = managedGateway.clearDeviceErrorCodes(typeId, deviceId);
 
 - 메시지 문자열
 - 시간소인
-- 심각도
+- 심각도(Severity)
 - base64 인코딩된 2진 진단 데이터(선택사항)
 
 게이트웨이는 `addGatewayLog()` 메소드를 호출하여 로그 메시지를 전송할 수 있으며, 이는 다음 샘플에서 간략하게 설명되어 있습니다. 
@@ -689,9 +689,9 @@ mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds)
 
 {{site.data.keyword.iot_short}}에 연결된 디바이스 또는 게이트웨이에서 사용자 정의 조치가 시작되면 MQTT 메시지가 게이트웨이에 공개됩니다. 메시지에는 요청의 일부로서 지정된 매개변수가 포함됩니다. 게이트웨이는 메시지의 수신과 처리를 위해 CustomActionHandler를 추가해야 합니다. 메시지는 다음 특성을 보유하는 `CustomAction` 클래스의 인스턴스로서 리턴됩니다. 
 
-| 특성     | 데이터 유형     | 설명  |
+| 특성     | 데이터 유형     | 설명 |
 |----------------|----------------|----------------|
-|`bundleId` |문자열 | DME에 대한 고유 ID입니다. |
+|`bundleId` |문자열| DME에 대한 고유 ID입니다. |
 |`actionId` |문자열|시작된 사용자 정의 조치입니다. |
 |`typeId` |문자열|사용자 정의 조치가 시작된 디바이스 유형입니다. |
 |`deviceId` |문자열|사용자 정의 조치가 시작된 디바이스입니다. |
@@ -825,7 +825,7 @@ public void propertyChange(PropertyChangeEvent evt) {
 			case "mgmt.firmware":
 			DeviceFirmware firmware = (DeviceFirmware) value;
 			System.out.println("Received an updated device firmware -- "+ firmware);
-			break;		
+			break;
 	}
 }
 ```
@@ -840,6 +840,6 @@ public void propertyChange(PropertyChangeEvent evt) {
 ## 레시피
 {: #recipes}
 
-관리 게이트웨이로 Rasberry Pi 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하고 연결된 디바이스를 관리하는 방법을 보여주는 레시피는 [{{site.data.keyword.iot_short_notm}}에서 관리 게이트웨이 역할의 Raspberry Pi ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}를 참조하십시오. 
+관리 게이트웨이로 Rasberry Pi 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하고 연결된 디바이스를 관리하는 방법을 보여주는 레시피는 [{{site.data.keyword.iot_short_notm}}에서 관리 게이트웨이 역할을 하는 Raspberry Pi(![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}를 참조하십시오.
 
 이 레시피는 {{site.data.keyword.iot_short_notm}}의 디바이스 관리 프로토콜을 사용하여 게이트웨이 역할을 하는 Raspberry Pi 디바이스에서 Arduino Uno 디바이스를 관리하고 디바이스 관리 오퍼레이션(예: 디바이스 재부팅 또는 스케치 프로그램 추가)을 수행할 수 있는 방법을 설명합니다. 

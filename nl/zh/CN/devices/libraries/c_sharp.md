@@ -30,7 +30,8 @@ lastupdated: "2017-03-14"
 
 构造方法用于构建客户机实例，并接受包含以下定义的自变量：
 
-|定义 |描述 |
+|定义|描述
+|
 |:---|:---|
 |`orgId`|组织标识。|
 |`deviceType`|设备类型。|
@@ -101,6 +102,6 @@ deviceClient.commandCallback += processCommand;
 
 |参数|数据类型|描述|
 |:---|:---|
-|`cmdName`|字符串|标识命令。 |
+|`cmdName`|字符串|标识命令。|
 |`cmdFormat`|字符串|格式可以为任意字符串，例如 JSON。|
 |`cmdData`|字典|有效内容的数据。最大长度为 131072 字节。|

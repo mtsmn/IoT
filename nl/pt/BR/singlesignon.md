@@ -37,7 +37,7 @@ O serviço {{site.data.keyword.ssoshort}} não pode ser ligado diretamente a out
 5. Clique no aplicativo {{site.data.keyword.sdk4nodefull}} no painel {{site.data.keyword.Bluemix_notm}}.
 6. Selecione o serviço {{site.data.keyword.ssoshort}} e clique em **Integrar**.
 7. Insira o retorno para URL:
-`https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token` em que `<orgid>` é o ID da sua organização {{site.data.keyword.iot_short_notm}}.
+`https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token` em que `<orgid>` é seu ID da organização de {{site.data.keyword.iot_short_notm}}.
 
 ## Configurando o {{site.data.keyword.iot_short_notm}} for {{site.data.keyword.ssoshort}}
 
@@ -77,8 +77,9 @@ Após ligar e configurar o aplicativo {{site.data.keyword.sdk4nodefull}} e o ser
 
 ### Configurando o {{site.data.keyword.iot_short_notm}} for {{site.data.keyword.ssoshort}} usando a API
 
-Para configurar o {{site.data.keyword.iot_short_notm}} for {{site.data.keyword.ssoshort}} usando a API, o método deve ser `POST`, a URL deve ser
-`https://<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig`, em que `<orgID>` é o ID da sua organização {{site.data.keyword.iot_short_notm}}. A autorização deve ser Sem Autorização ou Autorização básica, usando o ID e o token de chave API. O corpo deve conter os dados de configuração `secret`, `clientId`e `issuerIdentifier` como JSON no formato a seguir:
+Para configurar o {{site.data.keyword.iot_short_notm}} para
+{{site.data.keyword.ssoshort}} usando a API, o método deve ser
+`POST`, a URL deve ser `https://<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig` where `<orgID>` é seu ID da organização de {{site.data.keyword.iot_short_notm}}. A autorização deve ser Sem Autorização ou Autorização básica, usando o ID e o token de chave API. O corpo deve conter os dados de configuração `secret`, `clientId`e `issuerIdentifier` como JSON no formato a seguir:
 ```
 {
  "secret": "myclientpwd",

@@ -129,7 +129,7 @@ IBM 제공 기본 {{site.data.keyword.iot_short_notm}} 블록체인 통합 환�
 디바이스 데이터를 블록체인 원장에 쓰려면, 우선 디바이스 유형의 디바이스 특성을 스마트 계약에서 정의한 매개변수로 맵핑해야 합니다. 
 
 계약에 디바이스 데이터를 맵핑하려면 다음을 수행하십시오. 
- 1. {{site.data.keyword.iot_short_notm}} 대시보드의 메뉴 사이드바에서 ![블록체인](blockchain/images/platform_blockchain.png "블록체인")을 클릭하십시오. 
+ 1. {{site.data.keyword.iot_short_notm}} 대시보드의 메뉴 사이드바에서 ![블록체인](blockchain/images/platform_blockchain.png "블록체인")을 클릭하십시오.
  3. **디바이스 데이터 맵핑**을 클릭하십시오. 
  4. 블록체인에 디바이스 데이터를 저장할 대상 디바이스 유형을 선택하십시오. 
  5. 저장할 이벤트에 대한 이벤트 이름을 입력하십시오.   

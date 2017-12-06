@@ -45,7 +45,7 @@ L'unica versione dell'API REST HTTP {{site.data.keyword.iot_short_notm}} support
 # API di messaggistica HTTP per le applicazioni
 {: #rest_messaging_api}
 
-Per accedere alla documentazione dell'API di messaggistica HTTP {{site.data.keyword.iot_short_notm}} e trovare più informazioni sulla pubblicazione degli eventi e sull'invio dei comandi utilizzando HTTP, consulta [API di messaggistica HTTP {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
+Per accedere alla documentazione dell'API di messaggistica HTTP {{site.data.keyword.iot_short_notm}} e trovare più informazioni sulla pubblicazione degli eventi e sull'invio dei comandi utilizzando HTTP, consulta [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
 ## Pubblicazione di eventi e comandi
 {: #event_command_publication}

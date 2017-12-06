@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -33,7 +33,7 @@ Zum Aktivieren der MQTT-Authentifizierung übergeben Sie beim Herstellen der MQT
 ### Benutzername
 {: #username}
 
-Der Benutzername ist für alle Gateways gleich: `use-token-auth`. Dieser Wert bewirkt, dass {{site.data.keyword.iot_short_notm}} das Authentifizierungstoken des Gateways verwendet, das als Kennwort angegeben ist.
+Der Benutzername ist für alle Gateways gleich: ``use-token-auth``. Dieser Wert bewirkt, dass {{site.data.keyword.iot_short_notm}} das Authentifizierungstoken des Gateways verwendet, das als Kennwort angegeben ist.
 
 ### Kennwort
 {: #password}
@@ -59,10 +59,10 @@ Ein Gateway kann Ereignisse von sich aus und im Namen eines beliebigen anderen G
 
 -   Gateway 1 kann eigene Statusereignisse publizieren:
       
-    `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
+    ``iot-2/type/mygateway/id/gateway1/evt/status/fmt/json``
 -   Gateway 1 kann Statusereignisse im Namen von Gerät 1 publizieren:
       
-    `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
+    ``iot-2/type/mydevice/id/device1/evt/status/fmt/json``
 
 **Wichtig:** Der Umfang der Nachrichtennutzdaten ist auf maximal 131072 Byte begrenzt. Nachrichten, die größer sind als dieser Wert, werden abgelehnt.
 
@@ -81,7 +81,7 @@ Das MQTT-Platzhalterzeichen `+` kann als `Typ-ID`, `Geräte-ID`, `Befehls-ID` un
 
 **Beispiel:**
 
-|Gerät |`Typ-ID`|`Geräte-ID`|
+|Gerät |`typeId`|`deviceId`|
 |:---|:---|
 |Gateway 1| mygateway   | gateway1   |
 |Gerät 1 | mydevice    | device1    |
@@ -164,38 +164,43 @@ Die Unterstützung für das Lebenszyklusmanagement von Geräten ist optional. Da
 
 Verwaltete Gateways können Nachrichten publizieren, deren Servicequalitätsstufe (QoS) '0' oder '1' ist.
 
-Nachrichten, für die 'QoS=0' gilt, können verworfen werden; sie bleiben nach dem Neustart des Nachrichtenservers nicht bestehen. Nachrichten, für die 'QoS=1' gilt, können in die Warteschlange gestellt werden; sie bleiben nach dem Neustart des Nachrichtenservers bestehen. Durch die für eine Subskription geltende Permanenz ist festgelegt, ob eine Anforderung in die Warteschlange gestellt wird. Durch den Parameter `cleansession` der Verbindung, die die Subskription vorgenommen hat, wird die Permanenz der Subskription festgelegt.  
+Nachrichten, für die 'QoS=0' gilt, können verworfen werden; sie bleiben nach dem Neustart des Nachrichtenservers nicht bestehen. Nachrichten, für die 'QoS=1' gilt, können in die Warteschlange gestellt werden; sie bleiben nach dem Neustart des Nachrichtenservers bestehen. Durch die für eine Subskription geltende Permanenz ist festgelegt, ob eine Anforderung in die Warteschlange gestellt wird. Durch den Parameter ``cleansession`` der Verbindung, die die Subskription vorgenommen hat, wird die Permanenz der Subskription festgelegt.  
 
-{{site.data.keyword.iot_short_notm}} publiziert Anforderungen, die die Servicequalitätsstufe '1' aufweisen, um das Einreihen von Nachrichten in die Warteschlange zu unterstützen. Um Nachrichten in die Warteschlange einzureihen, die gesendet werden, während ein verwaltetes Gateway nicht verbunden ist, konfigurieren Sie das Gerät mithilfe der Einstellung 'false' für den Parameter `cleansession` so, dass keine bereinigten Sitzungen verwendet werden.
+{{site.data.keyword.iot_short_notm}} publiziert Anforderungen, die die Servicequalitätsstufe '1' aufweisen, um das Einreihen von Nachrichten in die Warteschlange zu unterstützen. Um Nachrichten in die Warteschlange einzureihen, die gesendet werden, während ein verwaltetes Gateway nicht verbunden ist, konfigurieren Sie das Gerät mithilfe der Einstellung 'false' für den Parameter ``cleansession`` so, dass keine bereinigten Sitzungen verwendet werden.
 
 **Warnung**
 
-Wenn Ihr verwaltetes Gateway eine permanente Subskription verwendet, werden Gerätemanagementbefehle, die an das Gateway gesendet werden, während dies offline ist, als fehlgeschlagene Operationen berichtet, wenn das Gateway nicht vor dem Überschreiten des Zeitlimitwerts für die Anforderung erneut eine Verbindung zum Service herstellt. Wenn das Gateway die Verbindung wiederherstellt, werden diese Anforderungen vom Gateway verarbeitet. Die Permanenz von Subskriptionen wird durch den Parameter `cleansession=false` angegeben.
+Wenn Ihr verwaltetes Gateway eine permanente Subskription verwendet, werden Gerätemanagementbefehle, die an das Gateway gesendet werden, während dies offline ist, als fehlgeschlagene Operationen gemeldet, wenn das Gateway nicht vor dem Überschreiten des Zeitlimitwerts für die Anforderung erneut eine Verbindung zum Service herstellt. Wenn das Gateway die Verbindung wiederherstellt, werden diese Anforderungen vom Gateway verarbeitet. Die Permanenz von Subskriptionen wird durch den Parameter ``cleansession=false`` angegeben.
 
-Das Gateway ist Eigner der MQTT-Sitzung; dabei ist unerheblich, welche Geräte hinter dem Gateway stehen. Wenn ein Gerät über ein Gateway eine Subskriptionsanforderung übergibt, navigiert die Anforderung ungeachtet der Einstellung für die Option `cleansession=false` nicht zu anderen Gateways.
+Das Gateway ist Eigner der MQTT-Sitzung; dabei ist unerheblich, welche Geräte hinter dem Gateway stehen. Wenn ein Gerät über ein Gateway eine Subskriptionsanforderung übergibt, navigiert die Anforderung ungeachtet der Einstellung für die Option ``cleansession=false`` nicht zu anderen Gateways.
 
 ### Topics
 {: #topics}
 
-Ein verwaltetes Gerät muss folgende Topics subskribieren, um Anforderungen und Antworten von {{site.data.keyword.iot_short_notm}} handhaben zu können:
+Ein verwaltetes Gateway muss folgende Topics subskribieren, um eigene Anforderungen und Antworten an und von {{site.data.keyword.iot_short_notm}} handhaben zu können:
 
--   Das verwaltete Gateway subskribiert Gerätemanagementantworten von:  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">Typ-ID</var>/id/<var class="keyword varname">Geräte-ID</var>/response/+</pre>
-{: codeblock}
--   Das verwaltete Gateway subskribiert Gerätemanagementanforderungen von:  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">Geräte-ID</var>/id/<var class="keyword varname">Geräte-ID</var>/+</pre>
+-   Das verwaltete Gateway subskribiert für die eigenen Anforderungen und Antworten zum Gerätemanagement wie folgt:  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">gatewayTypeId</var>/id/<var class="keyword varname">gatewayDeviceId</var>/#</pre>
 {: codeblock}
 
-Ein verwaltetes Gateway publiziert folgende Antworten und Anforderungen:
+Ein verwaltetes Gateway muss folgende Topics subskribieren, um Anforderungen und Antworten von {{site.data.keyword.iot_short_notm}} für die verbundenen Geräte handhaben zu können:
 
-- Gerätemanagementantworten werden publiziert in:  
-<pre class="pre">iotdevice-1/type/<var class="keyword varname">Typ-ID</var>/id/<var class="keyword varname">Geräte-ID</var>/response/</pre>
+-   Das verwaltete Gateway subskribiert Gerätemanagementanforderungen und -antworten für die verbundenen Geräte von:  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/#</pre>
 {: codeblock}
-- Gerätemanagementanforderungen werden publiziert in:  
+
+Das Gateway kann Gerätemanagementprotokollnachrichten für sich selbst und im Namen anderer verbundener Geräte verarbeiten, indem die entsprechenden Werte für **Typ-ID** und **Geräte-ID** verwendet werden. Der MQTT-Platzhalter **+** kann auch anstelle von **typeId** und **deviceId** verwendet werden.
+
+Ein verwaltetes Gateway publiziert in Topics, die für den ausgeführten Typ von Managementanforderung spezifisch sind:
+
+- Verwaltete Gateways publizieren Gerätemanagementantworten von:
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
+{: codeblock}
+
+Weitere Themen, für die ein verwaltetes Gateway publizieren kann, finden Sie im [Gerätemanagementprotokoll](device_mgmt/index.html) und in den [Gerätemanagementanforderungen](../devices/device_mgmt/requests.html). 
+- Das Protokoll bleibt für die Gateways gleich. Eine Ausnahme stellt hierbei die Tatsache dar, dass alle Themen, die mit der Zeichenfolge **iotdevice-1/** beginnen, stattdessen wie folgt beginnen:
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">Typ-ID</var>/id/<var class="keyword varname">Geräte-ID</var>/</pre>
 {: codeblock}
-
-Das Gateway kann Gerätemanagementprotokollnachrichten für sich selbst und im Namen anderer verbundener Geräte verarbeiten, indem die entsprechenden Werte für **Typ-ID** und **Geräte-ID** verwendet werden.
 
 ### Nachrichtenformat
 {: #msg_format}

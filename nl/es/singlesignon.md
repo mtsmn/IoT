@@ -36,8 +36,8 @@ El servicio de {{site.data.keyword.ssoshort}} no se puede enlazar directamente a
 4. Se debe volver a transferir ahora la aplicación {{site.data.keyword.sdk4nodefull}}.
 5. Pulse la aplicación {{site.data.keyword.sdk4nodefull}} desde el panel de control de {{site.data.keyword.Bluemix_notm}}.
 6. Seleccione el servicio de {{site.data.keyword.ssoshort}} y pulse **Integrar**.
-7. Especifique el URL de retorno:
-`https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token`, donde `<orgid>` es el ID de la organización de {{site.data.keyword.iot_short_notm}}.
+7. Introduzca el URL de retorno:
+`https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token` donde `<orgid>` es su identificador de organización de {{site.data.keyword.iot_short_notm}}.
 
 ## Configuración del {{site.data.keyword.iot_short_notm}} para {{site.data.keyword.ssoshort}}
 

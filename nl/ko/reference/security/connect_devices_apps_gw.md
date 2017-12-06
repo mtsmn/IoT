@@ -31,7 +31,7 @@ MQTT 프로토콜을 통해 {{site.data.keyword.iot_full}}에 애플리케이션
 
 ### HTTP REST API 연결 URL
 
-<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 **참고**
@@ -43,7 +43,7 @@ MQTT 프로토콜을 통해 {{site.data.keyword.iot_full}}에 애플리케이션
 
 필수 포트가 열리고 통신에 사용 가능한지 확인하십시오. 8883 및 443 포트는 MQTT 및 HTTP 프로토콜의 TLS를 사용한 보안 연결을 지원합니다. 1883 포트는 MQTT 및 HTTP 프로토콜의 비보안 연결을 지원합니다. 연결 유형 및 연관된 포트 번호에 대한 정보는 다음 표에 요약되어 있습니다.    
 
-|연결 유형 |포트 번호|
+|연결 유형|포트 번호|
 |:---|:---|
 |비보안|1883|
 |보안|8883|
@@ -110,7 +110,7 @@ TLS 요구사항은 MQTT 또는 HTTP 프로토콜로 {{site.data.keyword.iot_sho
 
 디바이스, 애플리케이션 및 게이트웨이가 성공적으로 인증되도록 다음 클라이언트 ID와 형식을 사용하여 각 MQTT 클라이언트를 정의하십시오.
 
-|클라이언트 유형 |ID|MQTT ID 형식|
+|클라이언트 유형|ID|MQTT ID 형식|
 |:---|:---|:---|
 |애플리케이션|a|<pre class="pre">a:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
 |확장 가능 애플리케이션|A|<pre class="pre">A:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>

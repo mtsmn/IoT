@@ -17,7 +17,7 @@ lastupdated: "2017-03-13"
 Le service {{site.data.keyword.ssofull}} peut être configuré afin de prendre en charge des fournisseurs d'authentification d'utilisateur alternatifs pour votre instance {{site.data.keyword.iot_full}}.
 {: .shortdesc}
 
-{{site.data.keyword.ssoshort}} prend en charge SAML 2.0, IBM Cloud Directory, des fournisseurs sociaux (Facebook, LinkedIn, Google+) et Github. Pour plus d'informations sur le service SSO dans {{site.data.keyword.Bluemix_notm}}, voir [Single Sign On - Mise en route ![ ](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window}.
+{{site.data.keyword.ssoshort}} prend en charge SAML 2.0, IBM Cloud Directory, des fournisseurs sociaux (Facebook, LinkedIn, Google+) et Github. Pour plus d'informations sur le service SSO dans {{site.data.keyword.Bluemix_notm}}, voir [Initiation à Single Sign On ![External link icon](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window}.
 
 ## Configuration de {{site.data.keyword.ssoshort}}
 
@@ -36,7 +36,7 @@ Le service {{site.data.keyword.ssoshort}} ne peut pas être lié directement à 
 4. L'application {{site.data.keyword.sdk4nodefull}} doit à présent être reconstituée.
 5. Cliquez sur l'application {{site.data.keyword.sdk4nodefull}} dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 6. Sélectionnez le service {{site.data.keyword.ssoshort}} et cliquez sur **Intégrer**.
-7. Entrez l'URL Return-to-URL :
+7. Entrez l'adresse Return-to-URL :
 `https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token` où `<orgid>` est l'ID de votre organisation {{site.data.keyword.iot_short_notm}}.
 
 ## Configuration de {{site.data.keyword.iot_short_notm}} pour {{site.data.keyword.ssoshort}}
@@ -77,7 +77,7 @@ Après avoir lié et configuré l'application {{site.data.keyword.sdk4nodefull}}
 
 ### Configuration de {{site.data.keyword.iot_short_notm}} pour {{site.data.keyword.ssoshort}} à l'aide de l'API
 
-Pour configurer votre instance {{site.data.keyword.iot_short_notm}} pour {{site.data.keyword.ssoshort}} à l'aide de l'API, vous devez utiliser la méthode `POST` et l'URL `https://<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig` où `<orgID>` est l'ID de votre organisation {{site.data.keyword.iot_short_notm}}. Vous devez utiliser l'autorisation No Auth ou Basic Auth à l'aide de l'ID et du jeton de votre clé d'API. Le corps doit contenir les données de configuration `secret`, `clientId` et `issuerIdentifier` comme les données JSON au format suivant :
+Pour configurer votre instance {{site.data.keyword.iot_short_notm}} for {{site.data.keyword.ssoshort}} à l'aide de l'API, vous devez utiliser la méthode `POST` et l'URL `https://<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig` où `<orgID>` est l'ID de votre organisation {{site.data.keyword.iot_short_notm}}.Vous devez utiliser l'autorisation No Auth ou Basic Auth à l'aide de l'ID et du jeton de votre clé d'API. Le corps doit contenir les données de configuration `secret`, `clientId` et `issuerIdentifier` comme les données JSON au format suivant :
 ```
 {
  "secret": "myclientpwd",

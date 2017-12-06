@@ -92,11 +92,11 @@ Il constructor uno crea un'istanza `ManagedDevice` in {{site.data.keyword.iot_sh
 
 |Proprietà |Descrizione |
 |:---|:---|
-|`Organization-ID` |Il tuo ID dell'organizzazione|
-|`Device-Type` |Il tipo del tuo dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
-|`Device-ID` |L'ID del tuo dispositivo. Generalmente, per un determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
+|``Organization-ID`` |Il tuo ID dell'organizzazione|
+|``Device-Type`` |Il tipo del tuo dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
+|``Device-ID`` |L'ID del tuo dispositivo. Generalmente, per un determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`Authentication-Method` |Il metodo di autenticazione da utilizzare. L'unico valore al momento supportato è `token`.|
-|`Authentication-Token` |Un token di autenticazione per la connessione sicura al tuo dispositivo su Watson IoT Platform.|
+|``Authentication-Token`` |Un token di autenticazione per la connessione sicura al tuo dispositivo su Watson IoT Platform.|
 
 
 Il seguente codice illustra come puoi creare un'istanza `ManagedDevice`:
@@ -162,7 +162,7 @@ managedDevice.manage(3600);
 
 Per ulteriori informazioni sull'operazione `Manage`, consulta la [documentazione].
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## Annulla gestione
 
@@ -174,7 +174,7 @@ managedDevice.unmanage();
 
 Per ulteriori informazioni sull'operazione `Unmanage`, consulta la [documentazione].
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## Aggiornamento dell'ubicazione
 {: #construct_location_update}
@@ -268,7 +268,7 @@ if(rc == 200) {
 I dispositivi possono scegliere di inviare notifiche a {{site.data.keyword.iot_short_notm}} sulle modifiche aggiungendo una nuova voce di log. Una voce di log include le seguenti informazioni:
 - Messaggio di log
 - Data/ora
-- Severità
+- Gravità
 - Dati di diagnostica binari basati su base64 (facoltativo)
 
 Per inviare i messaggi di log, il dispositivo ha bisogno di creare un oggetto `DiagnosticLog` come descritto nel seguente esempio:

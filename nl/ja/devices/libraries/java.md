@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-21"
-
----
+lastupdated: "2017-03-21"---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
@@ -28,12 +26,13 @@ Java™ を使用して、{{site.data.keyword.iot_full}} の組織と対話す�
 
 コンストラクターは、クライアント・インスタンスを作成し、以下の定義を格納する `Properties` オブジェクトを受け入れます。
 
-|定義 |説明 |
+|定義|説明
+|
 |:----|:----|
 |`org` |組織 ID に設定する必要がある必須の値。Quickstart フローを使用する場合は、`quickstart` を指定します。|
-|`type`  |デバイスのタイプを指定する必須の値。|
-|`id`  |デバイスの固有の ID を指定する必須の値。|
-|`auth-method`  |使用する認証の方式。サポートされている唯一の方式は `token` です。|
+|`type` |デバイスのタイプを指定する必須の値。|
+|`id` |デバイスの固有の ID を指定する必須の値。|
+|`auth-method` |使用する認証の方式。サポートされている唯一の方式は `token` です。|
 |`auth-token`   |デバイスを {{site.data.keyword.iot_short_notm}} に安全に接続するための認証トークン。|
 |`clean-session`|true または false の値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は true に設定されます。|
 |`Port`|接続先のポート番号。8883 か 443 のいずれかを指定してください。ポート番号を指定しない場合、クライアントは、デフォルトのポート番号 8883 で {{site.data.keyword.iot_short_notm}} に接続します。|
@@ -309,7 +308,7 @@ boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, Co
 
 コード全体を見たい場合は、[HttpDeviceEventPublish ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")] というデバイスのサンプルを参照してください。{: new_window}
 
-`publishEventOverHTTP()` メソッドは、プロパティー・ファイルの設定に基づいて、Quickstart モードまたは登録済みフロー・モードでイベントをパブリッシュします。プロパティー・ファイルで組織 ID を `quickstart` に設定すると、`publishEventOverHTTP()` メソッドは、デバイス用サンプル Quickstart サービスにプレーン HTTP 形式でイベントをパブリッシュします。登録されている有効な組織をプロパティー・ファイルで指定した場合は、イベントが HTTPS で安全にパブリッシュされます。
+``publishEventOverHTTP()`` メソッドは、プロパティー・ファイルの設定に基づいて、Quickstart モードまたは登録済みフロー・モードでイベントをパブリッシュします。プロパティー・ファイルで組織 ID を ``quickstart`` に設定すると、``publishEventOverHTTP()`` メソッドは、デバイス用サンプル Quickstart サービスにプレーン HTTP 形式でイベントをパブリッシュします。登録されている有効な組織をプロパティー・ファイルで指定した場合は、イベントが HTTPS で安全にパブリッシュされます。
 
 HTTP プロトコルによる配信は「最高 1 回」の送信です。これは、MQTT プロトコルのサービス品質レベル「最高 1 回」(QoS 0) に似ています。「最高 1 回」の送信を使用してイベントをパブリッシュする場合、アプリケーションはエラー発生時の再試行ロジックを実装する必要があります。
 
@@ -321,9 +320,9 @@ HTTP プロトコルによる配信は「最高 1 回」の送信です。これ
 デバイス・クライアントは、接続時に、このデバイスに対するコマンドに自動的にサブスクライブします。特定のコマンドを処理するには、コマンド・コールバック・メソッドを登録する必要があります。
 メッセージは、以下のプロパティーがある `Command` クラスのインスタンスとして返されます。
 
-| プロパティー     |データ・タイプ     | 説明|
+| プロパティー|データ・タイプ| 説明|
 |----------------|----------------|
-|`payload` |java.lang.String| メッセージ・ペイロードのデータ。|
+|`payload`  |java.lang.String| メッセージ・ペイロードのデータ。|
 |`format`  |java.lang.String| 形式は任意のストリング (JSON など) となります。|
 |`command`   |java.lang.String|コマンドを識別します。|
 |`timestamp`   |org.joda.time.DateTime|イベントの日時。|
@@ -345,7 +344,7 @@ import com.ibm.iotf.client.device.DeviceClient;
 //Implement the CommandCallback class to provide the way in which you want the command to be handled
 class MyNewCommandCallback implements CommandCallback, Runnable {
 
-    // A queue to hold & process the commands for smooth handling of MQTT messages
+    // A queue to hold &  process the commands for smooth handling of MQTT messages
     private BlockingQueue<Command> queue = new LinkedBlockingQueue<Command>();
 
     /**

@@ -108,12 +108,12 @@ Gehen Sie wie folgt vor, um ein Gerät über das {{site.data.keyword.iot_short_n
       * 1883
       * 8883 (verschlüsselt)
       * 443 (Websockets)
-    * Geräte-ID: d:*org_id:device_type:device_id*
+    * Geräte-ID: d:_org_id:device_type:device_id_
     * Benutzername: use-token-auth
-    * Kennwort: *Authentication token*
-    * Format des Ereignisthemas: iot-2/evt/*event_id/fmt/format_string*
+    * Kennwort: _Authentication token_
+    * Format des Ereignisthemas: iot-2/evt/_event_id/fmt/format_string_
 
-      Hierbei gibt *event_id* den Ereignisnamen an, der in {{site.data.keyword.iot_short_notm}} angezeigt wird, und *format_string* das Format des Ereignisses, z. B. JSON.
+      Hierbei gibt _event_id_ den Ereignisnamen an, der in {{site.data.keyword.iot_short_notm}} angezeigt wird, und _format_string_ das Format des Ereignisses, z. B. JSON.
 
     * Nachrichtenformat: JSON
 
@@ -141,7 +141,7 @@ Mithilfe von Boards und Karten können Sie Grafiken anzeigen, die Dataset-Werte 
 | Messanzeige | Als Messanzeige angezeigter Wert eines Datasets. Mit dem Menü 'Einstellungen' können Sie für die Messanzeige optional Schwellenwerte für den unteren, mittleren und oberen Datenbereich festlegen. |
 | Geräteeigenschaften | Bestimmte Eigenschaften für mindestens ein Gerät. |
 | Alle Geräteeigenschaften | Alle Eigenschaften für mindestens ein Gerät. |
-| Geräteliste | Eine Liste für die Überwachung mehrerer Geräte. Eine Liste kann als Datenquelle für andere Karten verwendet werden.  |
+| Geräteliste | Eine Liste für die Überwachung mehrerer Geräte. Eine Liste kann als Datenquelle für andere Karten verwendet werden. |
 | Geräteinformationen | Basisinformationen für ein einzelnes Gerät. |
 | Gerätezuordnung | Position von Geräten in einer Geräteliste. |
 
@@ -196,18 +196,18 @@ Regeln sind bedingungsbasierte Entscheidungspunkte, die gerätebezogene Echtzeit
       * Eine einfache Regel kann einen Alert auslösen, wenn ein Parameterwert größer ist als ein angegebener Wert: Bedingung = `temp_cpu>80`
       * Eine komplexere Regel kann zu einem Auslösen führen, wenn eine Übereinstimmung mit einer Kombination aus Schwellenwerten auftritt: Bedingung = `temp_cpu>60 AND cpu_load>90`
 
-    Um eine Bedingung auszulösen, die zwei Eigenschaften vergleicht, oder um mindestens zwei Eigenschaftsbedingungen auszulösen, die sequenziell durch AND verbunden sind, schließen Sie die auslösenden Datenpunkte in dieselbe Gerätenachricht ein. Wenn die Daten in mehr als einer Nachricht empfangen werden, werden die Bedingung oder die sequenziellen Bedingungen nicht ausgelöst.{: tip}
+    Um eine Bedingung auszulösen, die zwei Eigenschaften vergleicht, oder um mindestens zwei Eigenschaftsbedingungen auszulösen, die sequenziell durch AND verbunden sind, schließen Sie die auslösenden Datenpunkte in dieselbe Gerätenachricht ein. Wenn die Daten in mehr als einer Nachricht empfangen werden, werden die Bedingung oder die sequenziellen Bedingungen nicht ausgelöst.
+    {: tip}
 
 4. Konfigurieren Sie für Ihre Regel Anforderungen für bedingte Auslöser.
 
     Sie können Anforderungen für bedingte Trigger verwenden, um die Anzahl der Alerts, die für eine Regel über einen Zeitraum ausgelöst werden, zu steuern. Das bedingte Auslösen gilt für jede Bedingung in der Regel. Wenn beispielsweise für eine Regel mithilfe von OR fünf parallele Bedingungen festgelegt wurden, wird für den Zähler des bedingten Auslösers jede Bedingung, die als 'true' erkannt wird, gezählt.
 
-
       1. Klicken Sie im Regeleditor auf den Standardlink **Jedes Mal auslösen, wenn Bedingungen erfüllt sind**, um das Dialogfeld 'Anforderung für Häufigkeit festlegen' zu öffnen.
       2. Wählen Sie den bedingten Auslöser, den Sie in Ihrer Regel verwenden wollen, aus und konfigurieren Sie ihn.
 
         * Jedes Mal auslösen, wenn Bedingungen erfüllt sind
-        * Auslösen, wenn Bedingungen N-mal in M *Zeiteinheit* erfüllt sind
+        * Auslösen, wenn Bedingungen N-mal in M _Zeiteinheit_ erfüllt sind
 
 5. Erstellen Sie mindestens eine Aktion, die auftritt, wenn die Regelbedingungen erfüllt sind, oder wählen Sie eine Aktion aus.
 

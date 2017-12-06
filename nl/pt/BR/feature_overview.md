@@ -1,8 +1,6 @@
 ---
 
-copyright:
-  years: 2016, 2017
-lastupdated: "2017-01-12"
+copyright: years: 2016, 2017 lastupdated: "2017-07-20"
 
 ---
 
@@ -18,7 +16,7 @@ lastupdated: "2017-01-12"
 O {{site.data.keyword.iot_full}} é construído com base nas áreas-chave a seguir:
 
   1. Connect - Conecte dispositivos e desenvolva aplicativos.
-  2. Information Management - Armazene e revise dados do dispositivo e integre seu {{site.data.keyword.iot_short_notm}} a outros serviços.
+  2. Gerenciamento de informações - armazene, normalize, transforme e revise dados do dispositivo e integre seu {{site.data.keyword.iot_short_notm}} com outros serviços.
   3. Analytics - Visualize dados do dispositivo de tempo real usando o painel do {{site.data.keyword.iot_short_notm}}.
   4. Risk Management - Configure conectividade e arquitetura seguras com controle de acesso para usuários e aplicativos.
 
@@ -39,6 +37,7 @@ Os recursos de gerenciamento de dispositivo são fornecidos por meio de uma API 
 
 Extensões e integrações de serviço permitem que serviços externos e extensões definidas pelo usuário de serviços principais sejam incluídos em uma instância do {{site.data.keyword.iot_short_notm}}. Os serviços externos que podem ser integrados ao {{site.data.keyword.iot_short_notm}} incluem os serviços de localização meteorológica da The Weather Company, permitindo localizar o clima atual em um local do dispositivo, dados Jasper SIM e {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. Para obter mais informações sobre extensões e integrações de serviços de terceiros, consulte [integrando serviços externos](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
 
+
 ---
 
 ## Gerenciamento das informações
@@ -54,8 +53,27 @@ Usando a API (interface de programação de aplicativos) de cache do último eve
 
 Os dados de evento de dispositivo de seu serviço do {{site.data.keyword.iot_short_notm}} podem ser armazenados para uso posterior. O armazenamento de dados é uma primeira etapa essencial para realizar análises de dados criteriosas para obter insights a partir desses dados.  Por exemplo, é possível rastrear mudanças por períodos de tempo mais longos e armazenar conjuntos de dados para uso com ferramentas de análise de dados poderosas, incluindo uso com APIs (interfaces de programação de aplicativos) do Watson e computação cognitiva. Para obter mais informações, consulte [conectando um {{site.data.keyword.cloudant_short_notm}} serviço historiador](https://console.ng.bluemix.net/docs/services/IoT/cloudant_connector.html) ou [conectando um {{site.data.keyword.messagehub}} serviço historiador](https://console.ng.bluemix.net/docs/services/IoT/message_hub.html).
 
----
+### Gerenciamento de dados
 
+Diferentes marcas e modelos de dispositivos publicam dados em formatos diferentes. O
+recurso de gerenciamento de dados permite transformar e normalizar esses dados em uma
+única visualização lógica chamada *estado do dispositivo*, que pode ser
+entendida e processada por aplicativos. O uso do recurso de gerenciamento de dados
+simplifica muito o desenvolvimento de aplicativos porque o aplicativo não precisa mais
+entender os diferentes formatos dos dados do evento que são enviados de cada dispositivo. Quando
+os dispositivos publicam eventos no {{site.data.keyword.iot_short_notm}}, o
+conteúdo dos eventos pode ser mapeado para as propriedades do estado definido pelo
+usuário usando mapeamentos. Se o evento de entrada resultar em uma mudança no estado do
+dispositivo, os valores das propriedades de estado do dispositivo serão atualizados e
+armazenados no {{site.data.keyword.iot_short_notm}}. Os valores são
+disponibilizados ao aplicativo na solicitação usando uma API HTTP ou assinando um
+tópico.
+
+Para obter mais informações sobre como usar esse recurso, consulte
+[Introdução ao gerenciamento
+de dados](GA_information_management/ga_im_device_twin.html).
+
+---
 ## Analytics
 {: #analytics}
 

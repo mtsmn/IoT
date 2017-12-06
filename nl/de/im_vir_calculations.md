@@ -21,7 +21,7 @@ Erweitern Sie die Basisberechnungen für virtuelle Eigenschaften durch vordefini
 **Wichtig:** Die erweiterten Berechnungen geben Eigenschaftsdatenpunkte nur zurück, wenn die Daten für die ausgewählte Eigenschaft von einem Gerät stammen, das mit einem Gateway verbunden ist, auf dem ein Edge Analytics-Agent installiert ist. Eine Edge-Regel kann diese virtuelle Eigenschaft direkt verwenden. Um die Eigenschaft mit einer Cloud-Regel zu verwenden, muss eine Edge-Regel den Datenpunkt mithilfe der Aktion 'An Cloud weiterleiten' an die Cloud senden. Weitere Informationen finden Sie in [Edge Analytics-Agent installieren](gateways/dashboard.html#edge).
 
 Beispiel: Verwenden Sie die erweiterten virtuellen Datenpunkte in einer Kurvendiagrammkarte, um Datentrends ohne Spitzenwerte darzustellen.  
- ![Tatsächliche Datenpunkte vs. durchschnittliche Datenpunkte](images/vir_adv_avg_card.svg "Vergleich zwischen tatsächlichen und durchschnittlichen Datenpunkten")
+ ![Tatsächliche Datenpunkte vs. durchschnittliche Datenpunkte.](images/vir_adv_avg_card.svg "Vergleich zwischen tatsächlichen und durchschnittlichen Datenpunkten.")
 
 ## Erweiterte Formeln
 {: #advanced}

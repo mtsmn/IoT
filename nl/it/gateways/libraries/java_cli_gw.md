@@ -322,7 +322,7 @@ Il seguente codice di esempio descrive come aggiungere il metodo di callback `Co
 gwClient.connect()
 GatewayCommandCallback callback = new GatewayCommandCallback();
 gwClient.setGatewayCallback(callback);
-//Sottoscrizione a un dispositivo collegato al gateway
+//Subscribe to a device that is connected to the gateway
 gwClient.subscribeToDeviceCommands(DEVICE_TYPE, DEVICE_ID);
 ```
 

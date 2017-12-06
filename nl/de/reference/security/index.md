@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-08"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -31,7 +31,7 @@ Im folgenden Dokument werden einige häufig gestellte Fragen zum Schutz der Date
 
 {{site.data.keyword.iot_short_notm}} wird innerhalb der {{site.data.keyword.Bluemix_notm}}-Plattform ausgeführt und gründet sich in Bezug auf Zugriff und Konnektivität daher sowohl auf {{site.data.keyword.Bluemix_notm}} als auch auf {{site.data.keyword.BluSoftlayer_full}}. Durch die Abhängigkeit von {{site.data.keyword.Bluemix_notm}} und {{site.data.keyword.BluSoftlayer_notm}} ist die Sicherheit und Zuverlässigkeit von {{site.data.keyword.Bluemix_notm}} und {{site.data.keyword.BluSoftlayer_notm}} wichtig für Benutzer von {{site.data.keyword.iot_short_notm}}.
 
-Weitere Details zur Sicherheit von {{site.data.keyword.Bluemix_notm}} finden Sie in [Sicherheit der {{site.data.keyword.Bluemix_notm}}-Plattform](index.html#platform-security).
+Weitere Details zur Sicherheit von {{site.data.keyword.Bluemix_notm}} finden Sie in [Sicherheit der {{site.data.keyword.Bluemix_notm}}-Plattform](index.html#platform-security). 
 
 ## Einhaltung von Sicherheitsbestimmungen in {{site.data.keyword.iot_short_notm}}
 {: #compliance}  
@@ -69,12 +69,35 @@ Die Identifikationsdaten von Geräten und API-Schlüssel können einzeln widerru
 
 Geräte werden über eine Client-ID und das Authentifizierungstoken verbunden, das generiert wird, wenn die Geräte zu Ihrer Plattform hinzugefügt werden. MQTT wird verwendet, um plattform- und sprachübergreifend eine einfache Interoperabilität zu ermöglichen. {{site.data.keyword.iot_short_notm}} unterstützt Konnektivität über TLS Version 1.2.
 
+**Wichtig:** Neue Organisationen werden automatisch so konfiguriert, dass Geräte gezwungen werden, standardmäßig zum Verbindungsaufbau die TLS-Sicherheit zu verwenden. Dadurch wird sichergestellt, dass Geräte nur mithilfe eines sicheren, verschlüsselten Kanals Verbindungen herstellen können. Allerdings unterstützt {{site.data.keyword.iot_short_notm}} auch Fälle, in denen Organisationen Geräten auch die Verbindungsherstellung ohne TLS ermöglichen müssen. Beispiel: Eine Organisation kann Geräte verwenden, denen die TLS-Unterstützung fehlt, oder IoT-Geräte mit niedriger Leistung können die Verarbeitungskapazität für die Verschlüsselung oder Entschlüsselung der Übertragung nicht bereitstellen. Der Plan der Organisation legt fest, welche Einstellungen in diesem Fall verwendet werden können.
+
+Weitere Informationen zur Vorgehensweise bei der Konfiguration der Verbindungssicherheit finden Sie in [Sicherheitsrichtlinien konfigurieren](set_up_policies.html).
+
 ![Abbildung](connectivity_platform.svg)
 
 
 Weitere Informationen zu den Anforderungen für TLS und Cipher-Suite finden Sie im Abschnitt [TLS-Anforderungen](connect_devices_apps_gw.html#tls_requirements) in der Dokumentation `Verbindungen für Anwendungen, Geräte und Gateways in Watson IoT Platform`.
 
 Sie können Zertifikate und Sicherheitsrichtlinien verwenden, um die Geräteverbindungssicherheit zu verbessern. Sicherheitsrichtlinien können so eingerichtet werden, dass unverschlüsselte Verbindungen möglich sind, nur TLS-Verbindungen zulässig sind oder Geräte sich mit clientseitigen Zertifikaten und ohne Tokens authentifizieren können. Mit Blacklists können Geräte angegeben werden, mit denen eine Verbindung nicht zulässig ist. Mit Whitelists können Sie bestimmte Geräte für die Verbindung zulassen. Weitere Informationen zur erweiterten Sicherheit finden Sie in [Risiko- und Sicherheitsmanagement](RM_security.html).
+
+### Geräte und Gateways aktivieren und inaktivieren
+{: #disable-devices}
+
+Sie können die HTTP-API **Berechtigung - Gerätemanagement** verwenden, um für ein Gerät die direkte Verbindung zur Plattform oder die Verbindungsherstellung hinter einem Gateway zu inaktivieren. Sie können beispielsweise die Trennung der Verbindung des Geräts eines böswilligen Benutzers oder eines Geräts erzwingen, das Fehlfunktionen aufweist und zu Problemen wie beispielsweise nicht erwünschte Datennutzung aufgrund von Spam verursacht. Die API wird verwendet, um die aktuelle Verbindung des Geräts zu trennen und zu verhindern, dass das Gerät erneut eine Verbindung zur Plattform herstellen kann.
+
+Zum Aktivieren oder Inaktivieren eines Geräts verwenden Sie die folgende API. Dabei ist *${clientId}* die URL-codierte Client-ID im Format *d:${orgId}:${typeId}:${deviceId}* (für Geräte) oder *g:${orgId}:${typeId}:${deviceId}* (für Gateways):
+
+    PUT /api/v0002/authorization/devices/${clientId}
+    
+Im Anforderungshauptteil verwenden Sie den Statuswert '0', um das Gerät zu inaktivieren, oder den Statuswert '1', um das Gerät zu aktivieren. Der folgende Statuswert gibt z. B. an, dass das Gerät inaktiviert ist:
+
+    { "status": 0 }
+
+Der Antwortcode bei Erfolg ist '200'. 
+
+Wenn ein Gateway für ein inaktiviertes Gerät publiziert, dann erhält es eine Fehlerbenachrichtigung mit dem Antwortcode '180'. Weitere Informationen hierzu finden Sie in [Gateway-Benachrichtigungen](../../gateways/mqtt.html#notification). 
+
+Weitere Informationen zur API finden Sie im Abschnitt zu den [Beta-APIs für die Gerätesicherheit ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){:new_window}. Navigieren Sie dort zu **Berechtigung - Gerätemanagement**.
 
 ## Wie verhindern wir, dass es zwischen Geräten Datenlecks gibt?
 {: #prevent-leak-devices}

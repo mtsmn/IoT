@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-09-16"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -64,7 +64,7 @@ I seguenti ruoli gateway standard sono disponibili:
 
 Ruolo gateway | Descrizione
 ------------- | -------------
-Standard | Il ruolo gateway predefinito. Concede accesso limitato alle operazioni.
-Privilegiato | Pensato per i gateway attendibili e consente ai gateway privilegiati di aggiungere i dispositivi a {{site.data.keyword.iot_short_notm}}. Concede l'accesso a operazioni rilevanti per aggiungere, aggiornare e gestire i dispositivi e le proprietà del dispositivo, ma non l'accesso ad altre operazioni.  
+Standard | Concede accesso limitato alle operazioni. I gateway standard sono limitati ad agire per conto dei dispositivi contenuti nei gateway assegnati al gruppo di risorse. 
+Privilegiato | Il ruolo gateway predefinito. Pensato per i gateway attendibili e consente ai gateway privilegiati di aggiungere i dispositivi a {{site.data.keyword.iot_short_notm}}. Concede l'accesso a operazioni rilevanti per aggiungere, aggiornare e gestire i dispositivi e le proprietà del dispositivo, ma non l'accesso ad altre operazioni.  
 
 Per ulteriori informazioni sull'accesso alle operazioni dei ruoli del gateway, vedi [Ruoli del gateway](reference/gateway_roles_access.html).

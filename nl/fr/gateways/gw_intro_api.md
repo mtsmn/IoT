@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -13,15 +13,13 @@ lastupdated: "2017-05-24"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# API de messagerie HTTP pour les terminaux passerelle (bêta)
+# API de messagerie HTTP pour les terminaux passerelle
 {: #api}
-
-**Important :** L'API HTTP {{site.data.keyword.iot_full}} pour les terminaux passerelle est disponible uniquement dans le cadre d'un programme bêta limité. Il est possible que des mises à jour ultérieures incluent des modifications incompatibles avec la version en cours de cette fonction. Essayez-la et [dites-nous ce que vous en pensez ![ ](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Accès à la documentation de l'API de messagerie HTTP pour les terminaux passerelle
 {: #rest_messaging_api}
 
-Pour accéder à la documentation de l'API de messagerie HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur l'envoi d'événements à partir de terminaux passerelle, voir [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![ ](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
+Pour accéder à la documentation de l'API de messagerie HTTP {{site.data.keyword.iot_short_notm}} HTTP et obtenir davantage d'informations sur l'envoi d'événements à partir de terminaux passerelle, voir [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
 
 ## Connexions client
@@ -35,7 +33,7 @@ Pour plus d'informations sur la sécurité du client et pour savoir comment conn
 
 Outre l'utilisation du protocole de messagerie MQTT, vous pouvez également configurer vos terminaux passerelle pour qu'ils publient des événements sur {{site.data.keyword.iot_short_notm}} via HTTP en exécutant des commandes d'API de messagerie HTTP.
 
-Pour soumettre une demande `POST` à partir d'un terminal connecté à {{site.data.keyword.iot_short_notm}}, utilisez l'une des URL suivantes :
+Pour soumettre une demande ``POST`` à partir d'un terminal connecté à {{site.data.keyword.iot_short_notm}}, utilisez l'une des URL suivantes :
 
 ### Demande POST non sécurisée
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
@@ -78,7 +76,7 @@ Où :
 
 ### En-têtes de demande Content-Type
 
-Un en-tête de demande `Content-Type` doit être fourni avec la demande. Le tableau suivant présente le mappage entre les types pris en charge et les formats internes de {{site.data.keyword.iot_short_notm}} :
+Un en-tête de requête `Content-Type` doit être fourni avec la demande si le contenu n'est pas JSON. Le tableau suivant présente le mappage entre les types pris en charge et les formats internes de {{site.data.keyword.iot_short_notm}} :
 
 |En-tête Content-Type|Format dans {{site.data.keyword.iot_short_notm}}|
 |:---|:---|
@@ -101,12 +99,10 @@ Pour plus d'informations sur la gestion d'événements de passerelle à l'aide d
 Outre l'utilisation du protocole de messagerie MQTT, vous pouvez également
 configurer vos terminaux passerelle pour qu'ils reçoivent des commandes
 de {{site.data.keyword.iot_short_notm}} sur HTTP en utilisant des commandes de l'API de
-messagerie HTTP.
-Un terminal passerelle peut recevoir les commandes destinées à des terminaux de son groupe de ressources associé.
-Pour plus d'informations sur les groupes de ressources des passerelles, consultez
+messagerie HTTP. Un terminal passerelle peut recevoir les commandes destinées à des terminaux de son groupe de ressources associé. Pour plus d'informations sur les groupes de ressources des passerelles, consultez
 [Contrôle d'accès des passerelles (bêta)](../gateways/gateway-access-control.html).
 
-Utilisez l'une des URL suivantes pour soumettre une demande `POST` à partir d'une passerelle
+Utilisez l'une des URL suivantes pour soumettre une demande ``POST`` à partir d'une passerelle
 connectée à {{site.data.keyword.iot_short_notm}} :
 
 ### Demande POST non sécurisée
@@ -126,13 +122,10 @@ spécifier un entier représentant le nombre maximum de secondes d'attente d'une
 **Remarques importantes :**
 - La valeur de *waitTimeSecs* doit être un entier compris entre 0 et 3600 (secondes). La valeur par défaut est 0.
 - Pour recevoir les commandes de tout type de terminal, utilisez le caractère générique
-"any" (+) en guise de composant `typeId`.
-Si le caractère générique est utilisé, le type de terminal est contenu dans le champ d'en-tête de réponse *X-deviceType*.
+"any" (+) en guise de composant `typeId`. Si le caractère générique est utilisé, le type de terminal est contenu dans le champ d'en-tête de réponse *X-deviceType*.
 - Pour recevoir les commandes de n'importe quel terminal, utilisez le caractère générique
-"any" (+) en guise de composant `deviceId`.
-Si le caractère générique est utilisé, l'identificateur du terminal est contenu dans le champ d'en-tête de réponse *X-deviceId*.
+"any" (+) en guise de composant `deviceId`. Si le caractère générique est utilisé, l'identificateur du terminal est contenu dans le champ d'en-tête de réponse *X-deviceId*.
 - Pour recevoir toute commande, utilisez le caractère générique
-"any" (+) en guise de composant `command`.
-Si le caractère générique est utilisé, l'identificateur de la commande est contenu dans le champ d'en-tête de réponse *X-commandId*.
+"any" (+) en guise de composant `command`. Si le caractère générique est utilisé, l'identificateur de la commande est contenu dans le champ d'en-tête de réponse *X-commandId*.
 - Si le code d'état de la réponse HTTP est 200, les données de la commande sont contenues dans le corps de la réponse. Examinez le champ d'en-tête de réponse *Content-Type* pour identifier le type de contenu.
-- Si le code d'état de la réponse HTTP est 204, aucune donnée de commande n'est disponible. 
+- Si le code d'état de la réponse HTTP est 204, aucune donnée de commande n'est disponible.

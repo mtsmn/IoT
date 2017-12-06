@@ -81,33 +81,33 @@ API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하�
 
 디바이스 관리 확장 패키지에는 다음 특성이 포함되어 있습니다. 
 
-|특성|설명|필수
+|특성|설명 |필수
 |:---|:---|:---|
-|`bundleId`|디바이스 관리 확장의 고유 ID입니다. |예|
-|`version`|디바이스 관리 확장의 버전 문자열입니다. |아니오|
-|`provider`|디바이스 관리 확장의 제공자 문자열이며, 길이는 1024자로 제한됩니다. |아니오|
-|`displayName`|{{site.data.keyword.iot_short_notm}} 대시보드에 표시되는 `locale`: `String` 키-값 쌍의 맵입니다. 최소한 하나의 항목을 지정해야 합니다. |예|
-|`description`|{{site.data.keyword.iot_short_notm}} 대시보드에 표시하기 위해 사용되는 `locale`: `String` 키-값 쌍의 맵입니다. 정의된 경우, 최소한 하나의 항목을 지정해야 합니다. |아니오|
-|`actions`| 디바이스 관리 확장에 포함된 조치를 정의하는 `actionId`: `<action>` 키-값 쌍의 맵입니다. 최소한 하나의 항목을 지정해야 합니다. |예|
+|``bundleId``|디바이스 관리 확장의 고유 ID입니다. |예|
+|``version``|디바이스 관리 확장의 버전 문자열입니다. |아니오|
+|``provider``|디바이스 관리 확장의 제공자 문자열이며, 길이는 1024자로 제한됩니다. |아니오|
+|``displayName``|{{site.data.keyword.iot_short_notm}} 대시보드에 표시되는 ``locale``: ``String`` 키-값 쌍의 맵입니다. 최소한 하나의 항목을 지정해야 합니다. |예|
+|``description``|{{site.data.keyword.iot_short_notm}} 대시보드에 표시하기 위해 사용되는 ``locale``: ``String`` 키-값 쌍의 맵입니다. 정의된 경우, 최소한 하나의 항목을 지정해야 합니다. |아니오|
+|``actions``| ``actionId``의 맵: 디바이스 관리 확장에 포함된 조치를 정의하는 ``<action>`` 키-값 쌍입니다. 최소한 하나의 항목을 지정해야 합니다. |예|
 
 ### 각 조치의 특성:
 
-|특성|설명|필수
+|특성|설명 |필수
 |:---|:---|
-|`actionDisplayName`|{{site.data.keyword.iot_short_notm}} 대시보드에 표시되는 `locale`: `String` 키-값 쌍의 맵입니다. 최소한 하나의 항목을 지정해야 합니다. |예|
-|`description`|{{site.data.keyword.iot_short_notm}} 대시보드에 표시하기 위해 사용되는 `locale`: `String` 키-값 쌍의 맵입니다. 선택사항입니다. 최소한 하나의 항목을 지정해야 합니다. |아니오|
-|`parameters`|특정 조치에 대해 허용되는 매개변수의 배열입니다. 정의된 경우, 최소한 하나의 항목을 지정해야 합니다. |아니오|
+|``actionDisplayName``|{{site.data.keyword.iot_short_notm}} 대시보드에 표시되는 ``locale``: ``String`` 키-값 쌍의 맵입니다. 최소한 하나의 항목을 지정해야 합니다. |예|
+|``description``|{{site.data.keyword.iot_short_notm}} 대시보드에 표시하기 위해 사용되는 ``locale``: ``String`` 키-값 쌍의 맵입니다. 선택사항입니다. 최소한 하나의 항목을 지정해야 합니다. |아니오|
+|``parameters``|특정 조치에 대해 허용되는 매개변수의 배열입니다. 정의된 경우, 최소한 하나의 항목을 지정해야 합니다. |아니오|
 
 ### 각 조치 매개변수의 특성:
 
-|특성|설명|필수
+|특성|설명 |필수
 |:---|:---|
-|`name`|조치의 매개변수에 대한 고유 ID입니다. |예|
-|`value`|요청이 시작될 때 매개변수값을 유효성 검증하는 데 사용되는 정규식입니다. 지정되지 않은 경우, 유효성 검증이 발생하지 않습니다. |아니오|
-|`required`|매개변수가 필수인지 여부를 판별하는 부울 값입니다. 값은 기본적으로 false로 설정됩니다.  |아니오|
-|`defaultValue`|요청이 시작될 때 매개변수가 제공되지 않는 경우에 사용되는 값입니다. |아니오|
+|``name``|조치의 매개변수에 대한 고유 ID입니다. |예|
+|``value``|요청이 시작될 때 매개변수값을 유효성 검증하는 데 사용되는 정규식입니다. 지정되지 않은 경우, 유효성 검증이 발생하지 않습니다. |아니오|
+|``required``|매개변수가 필수인지 여부를 판별하는 부울 값입니다. 값은 기본적으로 false로 설정됩니다. |아니오|
+|``defaultValue``|요청이 시작될 때 매개변수가 제공되지 않는 경우에 사용되는 값입니다. |아니오|
 
-**참고:** `bundleId`, `version`, `actionId` 및 `parameterId` 값에는 최대 255자까지 포함될 수 있으며, 영숫자 문자(a-z, A-Z, 0-9) 및 다음의 특수 문자로만 구성될 수 있습니다. 
+**참고:** 값에 포함될 수 있는 ``bundleId``, ``version``, ``actionId`` 및 ``parameterId``는 255자로 제한되며 영숫자 문자(a - z, A - Z, 0 - 9) 및 다음 특수 문자로만 구성될 수 있습니다.
  - 대시(-)
  - 밑줄(\_)
  - 점(.)
@@ -174,7 +174,7 @@ API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하�
 
 요청을 시작할 때는 다음 정보를 제공해야 합니다. 
 
-- 조치 `<bundleId>/<actionId>`
+- 조치 ``<bundleId>/<actionId>``
 - 조치가 시작되는 디바이스의 목록(최대 5000개 디바이스)
 - 사용자 정의 조치 정의에 정의된 매개변수의 목록
 
@@ -205,7 +205,7 @@ API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하�
 
 사용자 정의 조치가 디바이스에서 시작되면 MQTT 메시지가 디바이스에 공개됩니다. MQTT 메시지에는 요청의 일부로서 지정된 매개변수가 포함되어 있습니다. 디바이스가 MQTT 메시지를 수신하는 경우, 이는 조치를 실행하거나 조치를 현재 완료할 수 없는 이유를 표시하는 오류 코드로 응답합니다. 
 
-디바이스 조치가 성공적으로 완료된 경우, 디바이스는 `rc` 값이 `200`으로 설정된 응답을 공개합니다. 
+디바이스 조치가 성공적으로 완료된 경우, 디바이스는 ``rc`` 값이 ``200``으로 설정된 응답을 공개합니다. 
 
 다음 추출은 서버 및 디바이스 간에 발생하는 교환의 예제를 제공합니다. 
 
@@ -242,7 +242,7 @@ API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하�
 
 다음 예제는 새 디바이스 관리 확장을 정의하고 해당 확장에 정의된 조치를 실행하는 방법을 예시합니다. 
 
-일부 회사는 `exampleDeviceType` 디바이스를 제조합니다. `exampleDeviceType` 디바이스에서 실행할 수 있도록 플러그인을 설치하고 관리할 수 있습니다. `exampleDeviceType` 디바이스에서 플러그인의 원격 관리가 용이하도록, 제조업체는 일반적으로 {{site.data.keyword.iot_short_notm}} 조직으로 가져올 수 있는 디바이스 관리 확장을 제공합니다. 
+일부 회사는 ``exampleDeviceType`` 디바이스를 제조합니다. ``exampleDeviceType`` 디바이스에서 실행할 수 있도록 플러그인을 설치하고 관리할 수 있습니다. ``exampleDeviceType`` 디바이스에서 플러그인의 원격 관리가 용이하도록, 제조업체는 일반적으로 {{site.data.keyword.iot_short_notm}} 조직으로 가져올 수 있는 디바이스 관리 확장을 제공합니다. 
 
 다음의 확장 JSON 문서가 이 예제에서 사용됩니다. 
 
@@ -338,7 +338,7 @@ API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하�
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 
-`<orgID>` 조직에 등록된 디바이스는 관리 요청을 공개할 때 `exampleDeviceType-actions-v1` 조치를 지원함을 지정할 수 있으며, 이는 다음 예제에 표시되어 있습니다. 
+조직 ``<orgID>``에 등록된 디바이스는 다음 예제에 표시된 관리 요청을 공개할 때 ``exampleDeviceType-actions-v1`` 조치를 지원하도록 지정할 수 있습니다.
 
 ```
 	Outgoing message from device:
@@ -366,9 +366,9 @@ API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하�
 	}
 
 ```
-이 시점에서 `exampleIoT-exampleDeviceType-v1` 확장에 정의된 디바이스 조치를 시작할 수 있습니다.
+이 시점에서 ``exampleIoT-exampleDeviceType-v1`` 확장에 정의된 디바이스 조치를 시작할 수 있습니다.
 
-다음 페이로드가 `installPlugin` 조치를 시작하는 데 사용됩니다. 
+다음 페이로드가 ``installPlugin`` 조치를 시작하는 데 사용됩니다. 
 
 ```
 	{
@@ -400,7 +400,7 @@ API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하�
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-명령이 제출되면 `exampleDeviceType` 유형의 `device0` 및 `device1` 디바이스에서 다음 MQTT 메시지를 수신합니다. 
+명령이 제출되면 ``exampleDeviceType`` 유형의 ``device0`` 및 ``device1`` 디바이스에서 다음 MQTT 메시지를 수신합니다. 
 
 ```
 	Incoming message from server:
@@ -437,7 +437,7 @@ API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하�
 
 ```
 
-이 시점에 `installPlugin` 디바이스 관리 조치가 완료됩니다. 
+이 시점에 ``installPlugin`` 디바이스 관리 조치가 완료됩니다. 
 
 ## API 예제
 {: #api_examples}

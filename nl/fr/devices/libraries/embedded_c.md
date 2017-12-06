@@ -30,7 +30,7 @@ Pour accéder aux bibliothèques et exemples client Embedded C pour {{site.data.
 
 |Dépendance |Description|
 |:---|:---|
-|[Bibliothèque Eclipse Paho Embedded C ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Fournit une bibliothèque client MQTT C. Pour plus d'informations, voir [MQTT Client Package -  C for embedded devices ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
+|[Bibliothèque Eclipse Paho Embedded C ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Fournit une bibliothèque client MQTT C. Pour plus d'informations, voir [MQTT Client Package -  C for embedded devices ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
 
 
 ## Installation
@@ -179,7 +179,7 @@ Lorsque le client du terminal se connecte, il s'abonne automatiquement aux comma
 	....
 
 ```
-**Remarque :** La fonction `yield()` permet au terminal de recevoir des commandes de la part de Watson IoT Platform et maintient la connexion active. Si la fonction `yield()` n'est pas appelée dans le délai spécifié par l'intervalle de signal de présence, les commandes envoyées à la plateforme ne seront pas reçues par le terminal. La valeur affectée à la fonction `yield()` spécifie la durée (en millisecondes) pendant laquelle les données peuvent être lues à partir du socket avant que l'application ne reprenne la main.
+**Remarque :** La fonction ``yield()`` permet au terminal de recevoir des commandes de la part de Watson IoT Platform et maintient la connexion active. Si la fonction ``yield()`` n'est pas appelée dans le délai spécifié par l'intervalle de signal de présence, les commandes envoyées à la plateforme ne seront pas reçues par le terminal. La valeur affectée à la fonction ``yield()`` spécifie la durée (en millisecondes) pendant laquelle les données peuvent être lues à partir du socket avant que l'application ne reprenne la main.
 
 ## Publication d'événements
 {: #publishing_events}

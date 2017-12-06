@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-06-13"
 ---
 
 {:new_window: target="\_blank"}
@@ -18,62 +18,62 @@ Los certificados se utilizan para la autenticación de dispositivos o para susti
 
 Para configurar certificados y el acceso al servidor de los dispositivos, el operador del sistema registra los certificados de la entidad emisora de certificados (CA) asociada y, opcionalmente, registra los certificados del servidor de mensajes en la plataforma {{site.data.keyword.iot_short_notm}}.
 
-Para obtener información sobre la utilización de API para gestionar certificados de servidor de mensajería y certificados de CA, consulte las [API de autorización y autenticación de IBM Watson IoT Platform ![Icono de enlace externo](../../../../icons/launch-glyph.svg)"Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
+Para obtener información sobre la utilización de API para gestionar certificados de servidor de mensajería y certificados de CA, consulte las [API de autorización y autenticación de IBM Watson IoT Platform ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
 
 ## Certificados de CA
 Los certificados de CA permiten a la organización reconocer los certificados de clientes en dispositivos como fiables de modo que los dispositivos puedan conectarse al servidor.
 
-Si añade un certificado de CA o sustituye el certificado del servidor de mensajería, todos los dispositivos se deben conectar utilizando un cliente MQTT que admita la indicación de nombre de servidor (SNI). 
+Si añade un certificado de CA o sustituye el certificado del servidor de mensajería, todos los dispositivos se deben conectar utilizando un cliente MQTT que admita la indicación de nombre de servidor (SNI).
 
 Puede establecer el nivel de seguridad de la conexión configurando la política de seguridad de conexión. Para obtener más información sobre cómo hacer esto, consulte [Configuración de políticas de seguridad](set_up_policies.html).
 
 ## Certificados de cliente
 
-Los certificados de cliente (dispositivo o pasarela) permanecen en los dispositivos y no se cargan en la plataforma. El certificado firmado por la CA que se utiliza para firmar todos los certificados de dispositivo y pasarela es el único certificado que se carga en la plataforma. Si utiliza certificados de servidor de mensajería autofirmados, debe cargar los certificados raíz e intermedios que se utilizan para firmar el certificado cliente (cert.pem). 
+Los certificados de cliente (dispositivo o pasarela) permanecen en los dispositivos y no se cargan en la plataforma. El certificado firmado por la CA que se utiliza para firmar todos los certificados de dispositivo y pasarela es el único certificado que se carga en la plataforma. Si utiliza certificados de servidor de mensajería autofirmados, debe cargar los certificados raíz e intermedios que se utilizan para firmar el certificado cliente (cert.pem).
 
-El certificado de dispositivo individual o de pasarela que firma con el certificado de CA debe tener el ID de dispositivo especificado como valor de Nombre común (CN) o de SubjectAltName en el certificado. 
+El certificado de dispositivo individual o de pasarela que firma con el certificado de CA debe tener el ID de dispositivo especificado como valor de Nombre común (CN) o de SubjectAltName en el certificado.
 
-Para los dispositivos, el formato del campo **CN** es `CN=d:devtype:devid` y formato del campo **SubjectAltName** es `SubjectAltName=email:d:*devtype:devid*` donde `email:d` es constante y `*devtype*` es el tipo de dispositivo y `*devid*` es el ID de dispositivo en la plataforma. 
+Para los dispositivos, el formato del campo **CN** es `CN=d:devtype:devid` y formato del campo **SubjectAltName** es `SubjectAltName=email:d:*devtype:devid*` donde `email:d` es constante y `*devtype*` es el tipo de dispositivo y `*devid*` es el ID de dispositivo en la plataforma.
 
 Para pasarelas, el formato del campo **CN** es `CN=g:typeId:deviceId`y el formato del campo **SubjectAltName** es SubjectAltName=email:g:*devtype:devid*
 
-Nota: No incluya el `orgId` en los campos **CN** o **SubjectAltName** para certificados de dispositivo o de pasarela. `orgId` se debería proporcionar como parte de la información SNI que la implementación de cliente proporciona al conectarse al servidor de mensajería. 
+Nota: No incluya el `orgId` en los campos **CN** o **SubjectAltName** para certificados de dispositivo o de pasarela. `orgId` se debería proporcionar como parte de la información SNI que la implementación de cliente proporciona al conectarse al servidor de mensajería.
 
-Para obtener más información sobre los certificados de cliente, consulte la [receta para conectar Raspberry Pi a IBM Watson IoT Platform utilizando certificados del lado del cliente ![Icono de enlace externo](../../../../icons/launch-glyph.svg) "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
+Para obtener más información sobre los certificados de cliente, consulte la [receta para conectar Raspberry Pi a IBM Watson IoT Platform utilizando certificados del lado del cliente ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
 
 ## Gestión de certificados de mensajería
 
-Los certificados de servidor de mensajería aceptan el dominio predeterminado, internetofthings.ibmcloud.com. El certificado de CN o SubjectAltName deben seguir el siguiente formato: 
+Los certificados de servidor de mensajería aceptan el dominio predeterminado, internetofthings.ibmcloud.com. El certificado de CN o SubjectAltName deben seguir el siguiente formato:
 
 - `orgId.messaging.internetofthings.ibmcloud.com` (dominio IoTP)
 
-En el siguiente ejemplo se muestra un CN válido para el certificado de servidor: 
+En el siguiente ejemplo se muestra un CN válido para el certificado de servidor:
 
 `mtxpd0.messaging.internetofthings.ibmcloud.com`
 
-Para obtener más información sobre los certificados de servidor de mensajería, consulte la [receta para conectar Connect Raspberry Pi a IBM Watson IoT Platform utilizando certificados de servidor autofirmados ![Icono de enlace externo](../../../../icons/launch-glyph.svg) "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
+Para obtener más información sobre los certificados de cliente, consulte la [receta para conectar Raspberry Pi a IBM Watson IoT Platform utilizando certificados del lado del cliente ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
 
 ### Dominios personalizados (Beta)
 {: #custom_domains}
 
-**Importante**: La característica de dominios personalizados para certificados de servidor de mensajería únicamente está disponible como parte de un programa Beta limitado. Si desea habilitar los dominios personalizados, active **Características experimentales** en la página **Valores**. 
+**Importante**: La característica de dominios personalizados para certificados de servidor de mensajería únicamente está disponible como parte de un programa Beta limitado. Si desea habilitar los dominios personalizados, active **Características experimentales** en la página **Valores**.
 
-Como parte de la característica Beta, el certificado de servidor de mensajería acepta dominios personalizados. El certificado de CN o SubjectAltName deben seguir el siguiente formato: 
+Como parte de la característica Beta, el certificado de servidor de mensajería acepta dominios personalizados. El certificado de CN o SubjectAltName deben seguir el siguiente formato:
 
-- `orgId.messaging<dominio_personalizado>`
+- `orgId.messaging.<custom domain>`
 
-El campo **CN** acepta caracteres comodín, tal como se muestra en el ejemplo siguiente: 
+El campo **CN** acepta caracteres comodín, tal como se muestra en el ejemplo siguiente:
 
-- `CN=*.messaging.fab-iot.com`
+- `CN=*.messaging.mywiotpcustomdomain.com`
 
-**Importante**: Para dominios personalizados, se necesita un servicio DNS externo para resolver el dominio personalizado para el servidor de mensajería {{site.data.keyword.iot_full}}. Este servicio de DNS no lo proporciona la plataforma. 
+**Importante**: Para dominios personalizados, se necesita un servicio DNS externo para resolver el dominio personalizado para el servidor de mensajería {{site.data.keyword.iot_full}}. Este servicio de DNS no lo proporciona la plataforma.
 
 ## Registro de certificados de la entidad emisora de certificados (CA) para la autenticación de dispositivos
 {: #reg_ca_cert}
 
 1. Inicie una sesión en {{site.data.keyword.iot_short_notm}} y vaya a **Valores generales**.
 2. En la sección **Seguridad**, bajo **Certificados CA**, pulse **Añadir certificado**.
-3. Navegue hasta el archivo de certificado que desea cargar o arrástrelo en la ventana **Añadir certificado**.El archivo sólo puede contener un certificado y las fechas del certificado deben ser válidas. Solo se aceptan certificados en formato .pem o .der. Puede obtener una vista previa de la información del certificado del archivo seleccionado.
+3. Navegue hasta el archivo de certificado que desea cargar o arrástrelo en la ventana **Añadir certificado**. El archivo sólo puede contener un certificado y las fechas del certificado deben ser válidas. Solo se aceptan certificados en formato .pem o .der. Puede obtener una vista previa de la información del certificado del archivo seleccionado.
 4. Especifique una descripción para el archivo de certificado.
 5. Confirme que se ha seleccionado el archivo correcto y pulse **Guardar**. El certificado seleccionado aparece en la tabla y está activo de forma predeterminada.
 

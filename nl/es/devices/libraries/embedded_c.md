@@ -179,7 +179,7 @@ Cuando el cliente de dispositivo se conecta, se suscribe automáticamente a cual
 	....
 
 ```
-**Nota:** La función `yield()` permite al dispositivo recibir mandatos desde la Watson IoT Platform y mantiene la conexión activa. Si la función `yield()` no se invoca dentro del intervalo de tiempo especificado por el intervalo de keepAlive, el dispositivo no recibirá ningún mandato enviado desde la plataforma. El valor que se asigna a la función `yield()` especifica la longitud de tiempo (en milisegundos) que se pueden leer los datos desde el socket antes de que se devuelva el control a la aplicación.
+**Nota:** La función ``yield()`` permite al dispositivo recibir mandatos desde la Watson IoT Platform y mantiene la conexión activa. Si la función ``yield()`` no se invoca dentro del intervalo de tiempo especificado por el intervalo de keepAlive, el dispositivo no recibirá ningún mandato enviado desde la plataforma. El valor que se asigna a la función ``yield()`` especifica la longitud de tiempo (en milisegundos) que se pueden leer los datos desde el socket antes de que se devuelva el control a la aplicación.
 
 ## Publicación de sucesos
 {: #publishing_events}
@@ -189,7 +189,7 @@ Los sucesos se pueden publicar con las siguientes propiedades:
 |Propiedad |Descripción|
 |:---|:---|
 |eventType  |El tipo de suceso que se publica, por ejemplo status o gps. |  
-|eventFormat  |El formato puede ser cualquier cadena, por ejemplo `json`. |
+|eventFormat  |El formato puede ser una serie, como por ejemplo `json`. |
 |data  |Los datos para la carga útil. La longitud máxima es 131072 bytes. |
 |QoS  |El nivel de Calidad de servicio para el suceso publicado. Los valores soportados son `0`, `1`, `2`.|
 

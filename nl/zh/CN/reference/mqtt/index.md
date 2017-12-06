@@ -89,11 +89,17 @@ MQTT 协议不要求服务器以服务质量级别“0”将发布内容转发�
 
 下表概述了不同格式类型的消息有效内容限制：
 
-有效内容格式  | 特定用例的准则
+有效内容格式| 特定用例的准则
+
 --------- | ----------  
-JSON | JSON 是 {{site.data.keyword.iot_short_notm}} 的标准格式。如果计划使用内置 {{site.data.keyword.iot_short_notm}} 仪表板、板和卡以及分析，请确保消息有效内容格式符合格式正确的 JSON 文本。
-文本 | 使用有效 UTF-8 字符编码。
-二进制 | 无限制。
+JSON| JSON 是 {{site.data.keyword.iot_short_notm}} 的标准格式。如果计划使用内置 {{site.data.keyword.iot_short_notm}} 仪表板、板和卡以及分析，请确保消息有效内容格式符合格式正确的 JSON 文本。
+
+文本| 使用有效 UTF-8 字符编码。
+
+二进制| 无限制。
+
+
+
 
 
 ### 最大消息有效内容大小

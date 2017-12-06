@@ -15,8 +15,7 @@ lastupdated: "2017-05-11"
 # Configuration des politiques de sécurité
 {: #set_up_policies.md}
 
-Lorsqu'un plan de sécurité avancée est utilisé pour une organisation, un analyste de sécurité peut configurer des politiques de sécurité de connexion et des listes noires ou des listes blanches. 
-Lorsqu'un plan standard est utilisé, l'analyste bénéficie d'un nombre plus restreint d'options.
+Lorsqu'un plan de sécurité avancée est utilisé pour une organisation, un analyste de sécurité peut configurer des politiques de sécurité de connexion et des listes noires ou des listes blanches. Lorsqu'un plan standard est utilisé, l'analyste bénéficie d'un nombre plus restreint d'options.
 Il ne peut pas non plus configurer de listes noires ni de listes blanches.
 
 Pour des informations sur l'utilisation des API
@@ -29,10 +28,8 @@ de gestion des politiques, consultez
 Vous pouvez définir le niveau de sécurité par défaut qui est appliqué à tous les terminaux. Vous pouvez ensuite ajouter des paramètres de sécurité personnalisés pour des terminaux spécifiques.
 
 1. Sur la page **Politiques**, cliquez sur **Configurer** en regard de **Sécurité de connexion**.
-2. Sous **Sécurité d connexion par défaut**, sélectionnez le niveau de sécurité de connexion par défaut dans la liste déroulante. La valeur que vous sélectionnez ici s'applique à tous les terminaux, à l'exception des terminaux dotés de paramètres de connexion personnalisés. 
-Ces politiques affectent la façon dont les terminaux se connectent au serveur. Elles ne changent
-aucun réglage sur le terminal même et n'envoient aucun message à celui-ci.
-Vous pouvez sélectionner l'un des niveaux de sécurité suivants comme niveau par défaut :
+2. Sous **Sécurité d connexion par défaut**, sélectionnez le niveau de sécurité de connexion par défaut dans la liste déroulante. La valeur que vous sélectionnez ici s'applique à tous les terminaux, à l'exception des terminaux dotés de paramètres de connexion personnalisés. Ces politiques affectent la façon dont les terminaux se connectent au serveur. Elles ne changent
+aucun réglage sur le terminal même et n'envoient aucun message à celui-ci. Vous pouvez sélectionner l'un des niveaux de sécurité suivants comme niveau par défaut :
     - TLS optionnel
     - TLS avec authentification par jeton
     - TLS avec authentification par certificat de client
@@ -52,10 +49,8 @@ concernés et le niveau de conformité prévu au niveau de sécurité défini.
 Pour les organisations qui utilisent une sécurité standard, vous modifiez les paramètres de sécurité sur la page **Général** sous **Paramètres**. Vous pouvez définir le niveau de sécurité par défaut qui est appliqué à tous les terminaux.
 
 1. Sous **Paramètres**, sélectionnez **Général**.
-2. Sous **Sécurité de connexion**, sélectionnez le niveau de sécurité de connexion par défaut dans la liste déroulante. La valeur que vous sélectionnez ici s'applique à tous les terminaux. 
-Ces politiques affectent la façon dont les terminaux se connectent au serveur. Elles ne changent
-aucun réglage sur le terminal même et n'envoient aucun message à celui-ci.
-Vous pouvez sélectionner l'un des niveaux de sécurité suivants comme niveau par défaut :
+2. Sous **Sécurité de connexion**, sélectionnez le niveau de sécurité de connexion par défaut dans la liste déroulante. La valeur que vous sélectionnez ici s'applique à tous les terminaux. Ces politiques affectent la façon dont les terminaux se connectent au serveur. Elles ne changent
+aucun réglage sur le terminal même et n'envoient aucun message à celui-ci. Vous pouvez sélectionner l'un des niveaux de sécurité suivants comme niveau par défaut :
     - TLS optionnel
     - TLS avec authentification par jeton
     - TLS avec authentification par jeton et par certificat de client
@@ -66,9 +61,7 @@ Vous pouvez sélectionner l'un des niveaux de sécurité suivants comme niveau p
 
 Les organisations utilisant une sécurité avancée peuvent empêcher l'accès au serveur par certains terminaux en
 mettant en place une liste noire. Elles peuvent sinon opter pour une liste blanche désignant spécifiquement
-les terminaux autorisés à accéder au serveur.
-Vous pouvez utiliser soit une liste noire, soit une liste blanche, mais pas les deux ensemble.
-
+les terminaux autorisés à accéder au serveur. Vous pouvez utiliser soit une liste noire, soit une liste blanche, mais pas les deux ensemble.
 
 ### Configuration d'une liste noire
 {: #config_blacklist}

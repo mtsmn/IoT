@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-10"
-
----
+lastupdated: "2017-05-10"---
 
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}
@@ -91,7 +89,7 @@ Quickstart サービスにデバイスまたはアプリケーションを接続
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml | "xml"
+|application/xml| "xml"
 |application/octet-stream|"bin"
 
 ### サービス品質
