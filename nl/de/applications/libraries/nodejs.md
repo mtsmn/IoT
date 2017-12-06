@@ -273,7 +273,7 @@ Anwendungen subskribieren standardmäßig alle Ereignisse von allen verbundenen 
 ### Ereignisse von Geräten verarbeiten
 
 
-Zum Verarbeiten der Ereignisse, die über Ihre Subskriptionen empfangen werden, implementieren Sie eine Callback-Methode für Geräteereignisse. Der {{site.data.keyword.iot_short_notm}}-Anwendungsclient sendet das Ereignis `deviceEvent`. Diese Funktion weist folgende Eigenschaften auf:
+Zum Verarbeiten der Ereignisse, die über Ihre Subskriptionen empfangen werden, implementieren Sie eine Callback-Methode für Geräteereignisse. Der {{site.data.keyword.iot_short_notm}}-Anwendungsclient sendet das Ereignis ``deviceEvent``. Diese Funktion weist folgende Eigenschaften auf:
 
 - deviceType
 - deviceId

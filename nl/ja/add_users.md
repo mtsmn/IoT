@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -139,6 +139,10 @@ user3@sample.com,PD_ADMIN_USER,1489505652152
 1. {{site.data.keyword.iot_short_notm}} ダッシュボードから、左側のナビゲーション・バーの**「メンバー」**をクリックしてください。
 2. {{site.data.keyword.iot_short_notm}} 組織へのアクセスをブロックするユーザーの横にあるトグルをクリックします。
 
+## ユーザー・アクセスの制限 (ベータ)
+{: #limiting-users}
+
+リソース・レベル・アクセス制御を行うことによって、組織内のデバイスへのアクセスを制限することができます。リソース・グループを使用して、各ユーザーまたは API キーが管理できるデバイスを指定できます。リソース・レベル・アクセス制御を構成する方法については、[リソース・レベル・アクセス制御の構成](reference/rlac.html#configure_RLAC)を参照してください。
 
 ## ユーザーの削除
 {: #removing-users}

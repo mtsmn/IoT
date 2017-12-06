@@ -17,8 +17,7 @@ lastupdated: "2017-03-13"
 {{site.data.keyword.ssofull}} 服务可配置为支持将替代用户认证服务提供者用于 {{site.data.keyword.iot_full}}。
 {: .shortdesc}
 
-{{site.data.keyword.ssoshort}} 支持 SAML 2.0、IBM Cloud Directory、社交提供者（Facebook、LinkedIn 和 Google+）以及 Github。
-有关 {{site.data.keyword.Bluemix_notm}} SSO 服务的更多信息，请参阅[单点登录入门 ![外部链接图标](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window}。
+{{site.data.keyword.ssoshort}} 支持 SAML 2.0、IBM Cloud Directory、社交提供者（Facebook、LinkedIn 和 Google+）以及 Github。有关 {{site.data.keyword.Bluemix_notm}} SSO 服务的更多信息，请参阅[单点登录入门 ![外部链接图标](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window}。
 
 ## 设置 {{site.data.keyword.ssoshort}}
 
@@ -37,7 +36,8 @@ lastupdated: "2017-03-13"
 4. 现在，{{site.data.keyword.sdk4nodefull}} 应用程序必须重新编译打包。
 5. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击 {{site.data.keyword.sdk4nodefull}} 应用程序。
 6. 选择 {{site.data.keyword.ssoshort}} 服务，然后单击**集成**。
-7. 输入 Return-to-URL：`https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token`，其中 `<orgid>` 是您的 {{site.data.keyword.iot_short_notm}} 组织标识。
+7. 输入“返回到 URL”：
+`https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token`，其中 `<orgid>` 是 {{site.data.keyword.iot_short_notm}} 组织标识。
 
 ## 针对 {{site.data.keyword.ssoshort}} 配置 {{site.data.keyword.iot_short_notm}}
 
@@ -77,7 +77,7 @@ lastupdated: "2017-03-13"
 
 ### 使用 API 针对 {{site.data.keyword.ssoshort}} 配置 {{site.data.keyword.iot_short_notm}}
 
-要使用 API 针对 {{site.data.keyword.ssoshort}} 配置 {{site.data.keyword.iot_short_notm}}，方法必须为 `POST`，URL 必须为 `https://<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig`，其中 `<orgID>` 是您的 {{site.data.keyword.iot_short_notm}} 组织标识。授权必须为“无授权”或使用 API 密钥的标识和令牌的“基本授权”。主体必须将 `secret`、`clientId` 和 `issuerIdentifier` 配置数据包含为以下格式的 JSON：
+要使用 API 针对 {{site.data.keyword.ssoshort}} 配置 {{site.data.keyword.iot_short_notm}}，该方法必须为 `POST`，且 URL 必须为 `https:/⁄<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig` 其中 `<orgID>` 是 {{site.data.keyword.iot_short_notm}} 组织标识。授权必须为“无授权”或使用 API 密钥的标识和令牌的“基本授权”。主体必须将 `secret`、`clientId` 和 `issuerIdentifier` 配置数据包含为以下格式的 JSON：
 ```
 {
  "secret": "myclientpwd",

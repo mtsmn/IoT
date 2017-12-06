@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-11-03"
 
 ---
 
@@ -68,18 +68,3 @@ lastupdated: "2017-03-13"
 您可以通过确认为连接正确设置 ping 和 KeepAlive 参数来解决此问题。   
 {: tsResolve}
 
-
-## 获取 {{site.data.keyword.iot_short_notm}} 的帮助和支持
-{: #gettinghelp}
-
-如果在使用 {{site.data.keyword.iot_short_notm}} 时遇到问题或疑问，可通过搜索信息或在论坛中进行提问来获取帮助。还可开具支持凭单。
-
-使用论坛进行提问时，请合适地标注您的提问，以方便 {{site.data.keyword.Bluemix_notm}} 开发团队识别。
-
-* 如果您有关于使用 {{site.data.keyword.iot_short_notm}} 开发或部署应用程序的技术疑问，请将您的疑问发布到 [Stack Overflow ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} 上，并使用“ibm-bluemix”和“watson-iot”标注您的疑问。
-<!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* 有关服务的疑问和入门指示信息，请使用 [IBM developerWorks dW Answers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} 论坛。请加上“watson-iot”和“bluemix”标记。
-
-有关使用论坛的更多详细信息，请参阅[获取帮助](https://www.{DomainName}/docs/support/index.html#getting-help)。
-
-有关开具 IBM 支持凭单或者有关支持级别和凭单严重性的信息，请参阅[联系支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.{DomainName}/docs/support/index.html#contacting-support)。

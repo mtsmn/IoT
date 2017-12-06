@@ -73,7 +73,7 @@ créer une nouvelle chaîne d'outils de distribution continue dans Bluemix (via 
 l'organisation IBM Watson IoT du site GitHub).
  2. Lorsque vous y êtes invité, connectez-vous à IBM Bluemix.
  3. Si nécessaire, sélectionnez l'organisation Bluemix où vous voulez déployer l'application Starter.
- 4. Conservez le nom Toolchain ou changez-le selon nécessité. Il est utilisé comme nom d'application par défaut et comme racine de l'URL de votre application : `<nom-app>.mybluemix.net`
+ 4. Conservez le nom Toolchain ou changez-le selon nécessité. Il est utilisé comme nom d'application par défaut et comme racine de l'URL de votre application : `<app-name>.mybluemix.net`
  5. Cliquez sur **Créer**.  
 **Astuce :** Cliquez sur la vignette **Delivery Pipeline** pour suivre la progression de votre premier déploiement.
  6. Une fois le déploiement achevé, cliquez sur **Afficher l'application** pour ouvrir votre nouvelle

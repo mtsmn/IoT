@@ -273,7 +273,7 @@ Par défaut, les applications s'abonnent à tous les événements depuis tous le
 ### Traitement des événements provenant des terminaux
 
 
-Pour traiter les événements reçus par vos abonnements, implémentez une méthode de rappel d'événement de terminal. Le client d'application {{site.data.keyword.iot_short_notm}} envoie l'événement `deviceEvent`. Cette fonction possède les propriétés suivantes :
+Pour traiter les événements reçus par vos abonnements, implémentez une méthode de rappel d'événement de terminal. Le client d'application {{site.data.keyword.iot_short_notm}} envoie l'événement ``deviceEvent``. Cette fonction possède les propriétés suivantes :
 
 - deviceType
 - deviceId

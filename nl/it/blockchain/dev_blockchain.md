@@ -97,7 +97,7 @@ L'integrazione blockchain {{site.data.keyword.iot_short_notm}} richiede il fabri
 
       Esempio di credenziali del servizio:
      ```json
-     {
+  {
       "peers": [
       {
         "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
@@ -277,7 +277,7 @@ Per scaricare i contratti di esempio:
    2. Seleziona lo spazio nel quale hai distribuito {{site.data.keyword.iot_short_notm}}.
    3. Fai clic sul servizio **{{site.data.keyword.iot_short_notm}}**.
    4. Fai clic su **Launch** per aprire il dashboard {{site.data.keyword.iot_short_notm}}.
-   5. Seleziona **Blockchain**  facendo clic su ![Blockchain.](images/platform_blockchain.png "Blockchain") nella barra laterale del menu.
+   5. Seleziona **Blockchain** facendo clic su ![Blockchain.](images/platform_blockchain.png "Blockchain") nella barra laterale del menu.
    6. Fai clic su **Map Device Data**.
    7. Seleziona il tipo dispositivo per cui desideri archiviare i dati nel blockchain e il nome dell'evento che desideri archiviare. Fai clic su **Avanti**.
    8. Seleziona il nome del fabric per il fabric che hai precedentemente creato. Fai clic su **Avanti**.
@@ -358,7 +358,7 @@ Utilizza i componenti della IU di monitoraggio per interagire con il tuo contrat
  - Blockchain  
 Verifica che i blocchi siano aggiunti alla catena quando trasmetti i dati da un dispositivo collegato o quando utilizzi il componente Chaincode Operations.    
 
-## Passo successivo
+## Fasi successive
 {: #next_steps}
 
 Hai ora distribuito e esaminato gli smart contract forniti da IBM di esempio. Tuttavia, i contratti di base e commerciali forniscono pochi esempi delle varie possibilità per cui è stato progettato il chaincode del smart contract. È giunto il momento di provare e associare i tuoi scenari di business ai contratti chaincode in {{site.data.keyword.blockchainfull_notm}}. Ora puoi quindi utilizzare {{site.data.keyword.iot_short_notm}} con l'integrazione blockchain IoT per scrivere i dati del dispositivo nel ledger blockchain ed eseguire la logica di business archiviata come smart contract nella risposta ai dati.     

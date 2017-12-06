@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -33,7 +33,7 @@ Para ativar a autenticação MQTT, envie um nome de usuário e uma senha ao faze
 ### User name
 {: #username}
 
-O nome do usuário é o mesmo valor para todos os gateways: `use-token-auth`. Esse valor faz com que o {{site.data.keyword.iot_short_notm}} use o token de autenticação do gateway, que é especificado como a senha.
+O nome do usuário é o mesmo valor para todos os gateways: ``use-token-auth``. Esse valor faz com que o {{site.data.keyword.iot_short_notm}} use o token de autenticação do gateway, que é especificado como a senha.
 
 ### Password
 {: #password}
@@ -58,9 +58,9 @@ Um gateway pode publicar eventos a partir dele mesmo e em nome de qualquer dispo
 |Dispositivo 1 |mydevice |device1 |
 
 -   O Gateway 1 pode publicar seus próprios eventos de status:  
-    `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
+    ``iot-2/type/mygateway/id/gateway1/evt/status/fmt/json``
 -   O Gateway 1 pode publicar eventos de status em nome do Dispositivo 1:  
-    `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
+    ``iot-2/type/mydevice/id/device1/evt/status/fmt/json``
 
 **Importante:** a carga útil da mensagem limita-se a no máximo 131072 bytes. Mensagens maiores que esse limite são rejeitadas.
 
@@ -159,38 +159,56 @@ Suporte para gerenciamento de ciclo de vida de dispositivo é opcional. O protoc
 
 Os gateways gerenciados podem publicar mensagens que tenham um nível de qualidade de serviço (QoS) 0 ou 1.
 
-As mensagens com QoS=0 podem ser descartadas e não persistem após a reinicialização do servidor de sistema de mensagens. As mensagens com QoS=1 podem ser enfileiradas e persistem após a reinicialização do servidor de sistema de mensagens. A durabilidade da assinatura determina se uma solicitação será enfileirada. O parâmetro `cleansession` da conexão que fez a assinatura determina a durabilidade da assinatura.  
+As mensagens com QoS=0 podem ser descartadas e não persistem após a reinicialização do servidor de sistema de mensagens. As mensagens com QoS=1 podem ser enfileiradas e persistem após a reinicialização do servidor de sistema de mensagens. A durabilidade da assinatura determina se uma solicitação será enfileirada. O parâmetro ``cleansession`` da conexão que fez a assinatura determina a durabilidade da assinatura.  
 
-O {{site.data.keyword.iot_short_notm}} publica solicitações que têm um nível de QoS (qualidade de serviço) igual a 1 para suportar o enfileiramento de mensagens. Para enfileirar mensagens enviadas enquanto um gateway gerenciado não está conectado, configure o dispositivo para não usar sessões limpas, configurando o parâmetro `cleansession` como false.
+O {{site.data.keyword.iot_short_notm}} publica solicitações que têm um nível de QoS (qualidade de serviço) igual a 1 para suportar o enfileiramento de mensagens. Para enfileirar mensagens enviadas enquanto um gateway gerenciado não está conectado, configure o dispositivo para não usar sessões limpas, configurando o parâmetro ``cleansession`` como false.
 
 **Aviso**
 
-Quando um gateway gerenciado usa uma assinatura durável, comandos de gerenciamento de dispositivo que são enviados ao gateway enquanto ele está off-line são relatados como operações com falha se o gateway não se reconectar ao serviço antes que a solicitação atinja o tempo limite. Quando o gateway se reconectar, essas solicitações serão processadas pelo gateway. Assinaturas duráveis são especificadas pelo parâmetro `cleansession=false`.
+Quando um gateway gerenciado usa uma assinatura durável, comandos de gerenciamento de dispositivo que são enviados ao gateway enquanto ele está off-line são relatados como operações com falha se o gateway não se reconectar ao serviço antes que a solicitação atinja o tempo limite. Quando o gateway se reconectar, essas solicitações serão processadas pelo gateway. Assinaturas duráveis são especificadas pelo parâmetro ``cleansession=false``.
 
-O gateway é proprietário da sessão MQTT, independentemente dos dispositivos que estão por trás dela. Quando um dispositivo envia uma solicitação de assinatura por meio de um gateway, a solicitação não se move para outros gateways, independentemente de se a opção `cleansession=false` está configurada.
+O gateway é proprietário da sessão MQTT, independentemente dos dispositivos que estão por trás dela. 
+Quando um dispositivo envia uma solicitação de assinatura por meio de um gateway, a
+solicitação não se move para outros gateways, independentemente de se a opção
+``cleansession=false`` está configurada.
 
 ### Tópicos
 {: #topics}
 
-Um gateway gerenciado deve assinar os tópicos a seguir para manipular solicitações e respostas do {{site.data.keyword.iot_short_notm}}:
+Um gateway gerenciado deve assinar os tópicos a seguir para manipular suas próprias
+solicitações e respostas para e do {{site.data.keyword.iot_short_notm}}:
 
--   O gateway gerenciado assina respostas de gerenciamento de dispositivo em:  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/+</pre>
-{: codeblock}
--   O gateway gerenciado assina solicitações de gerenciamento de dispositivo em:  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/+</pre>
+-   O gateway gerenciado assina suas próprias solicitações e respostas do
+gerenciamento de dispositivo em:  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">gatewayTypeId</var>/id/<var class="keyword varname">gatewayDeviceId</var>/#</pre>
 {: codeblock}
 
-Um gateway gerenciado publica as respostas e solicitações a seguir:
+Um gateway gerenciado deve assinar os tópicos a seguir para manipular solicitações
+e respostas do {{site.data.keyword.iot_short_notm}} para seus dispositivos
+conectados:
 
-- Respostas de gerenciamento de dispositivo são publicadas em:  
-<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/</pre>
+-   O gateway gerenciado assina solicitações e respostas de gerenciamento de
+dispositivo para seus dispositivos conectados em:  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/#</pre>
 {: codeblock}
-- Solicitações de gerenciamento de dispositivo são publicadas em:  
+
+O gateway pode processar mensagens do Protocolo de gerenciamento de dispositivo para ele mesmo e em nome de outros dispositivos conectados usando **typeId** e **deviceId** relevantes. 
+O curinga **+** do MQTT também pode ser usado no lugar de **typeId** e **deviceId**.
+
+Um gateway gerenciado publica em tópicos que são específicos do tipo de solicitação de gerenciamento que está sendo executada:
+
+- Os gateways gerenciados publicam respostas de gerenciamento de dispositivo em:
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
+{: codeblock}
+
+Para outros tópicos nos quais um gateway gerenciado pode publicar, consulte
+[Protocolo de gerenciamento de dispositivo](device_mgmt/index.html) e
+[Solicitações de gerenciamento de
+dispositivo](../devices/device_mgmt/requests.html). 
+- O protocolo permanece o mesmo para gateways, exceto que qualquer tópico que
+começa com **iotdevice-1 /** em vez disso começará com:
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}
-
-O gateway pode processar mensagens do Protocolo de gerenciamento de dispositivo para ele mesmo e em nome de outros dispositivos conectados usando **typeId** e **deviceId** relevantes.
 
 ### Formato da Mensagem
 {: #msg_format}

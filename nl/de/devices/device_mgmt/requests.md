@@ -29,7 +29,7 @@ Anforderungen können über das Dashboard durch Verwenden der Registerkarte **Ak
 
 Anforderungen können mithilfe des folgenden REST-API-Beispiels initiiert werden:  
 
-`POST https://<Organisation>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
+`POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
 ere Informationen zum Hauptteil einer Gerätemanagementanforderung finden Sie in der [API-Dokumentation ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
 
@@ -46,11 +46,11 @@ Sie können die Aktion für den Geräteneustart mithilfe des {{site.data.keyword
 
 Zum Initiieren eines Geräteneustarts mithilfe der REST-API setzen Sie eine POST-Anforderung an die folgende Adresse ab:
 
-`https://<Organisation>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
+`https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
 Geben Sie folgende Informationen an:
 
-- Die Aktion `device/reboot`.
+- Die Aktion ``device/reboot``.
 - Eine Liste der Geräte, für die ein Neustart ausgeführt werden soll, mit maximal 5000 Geräten.
 
 Beispielanforderung für einen Geräteneustart:
@@ -85,7 +85,7 @@ iotdm-1/mgmt/initiate/device/reboot
 Anforderungsformat:
 
 ```
-Incoming message from the server:
+Eingehende Nachricht vom Server:
 
 Topic: iotdm-1/mgmt/initiate/device/reboot
 {
@@ -96,7 +96,7 @@ Topic: iotdm-1/mgmt/initiate/device/reboot
 Antwortformat:
 
 ```
-Outgoing message from the device:
+Ausgehende Nachricht vom Gerät:
 
 Topic: iotdevice-1/response
 {
@@ -113,11 +113,11 @@ Sie können die Aktion für das Zurücksetzen auf Werkseinstellungen mithilfe de
 
 Zum Initiieren des Zurücksetzens von Geräten auf Werkseinstellungen mithilfe der REST-API setzen Sie eine POST-Anforderung an folgende Adresse ab:
 
-`https://<Organisation>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
+`https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
 Folgende Informationen werden angegeben:
 
-- Die Aktion `device/factoryReset`.
+- Die Aktion ``device/factoryReset``.
 - Eine Liste der Geräte, die zurückgesetzt werden sollen, mit maximal 5000 Geräten.
 
 Das folgende Beispiel zeigt eine Beispielanforderung für das Zurücksetzen von Geräten:
@@ -134,7 +134,7 @@ Das folgende Beispiel zeigt eine Beispielanforderung für das Zurücksetzen von 
 }
 ```
 
-Nach dem Initiieren einer Anforderung für das Zurücksetzen von Geräten wird an alle Geräte, die im Hauptteil der Anforderung angegeben sind, eine MQTT-Nachricht publiziert. Von jedem Gerät muss eine Antwort zurückgegeben werden, um anzugeben, ob die Aktion zum Zurücksetzen auf Werkseinstellungen initiiert werden kann. Der Antwortcode wird auf `202` festgelegt, wenn diese Aktion sofort ausgeführt werden kann. Wenn der Versuch des Zurücksetzens auf Werkseinstellungen fehlschlägt, legen Sie für den Parameter `rc` den Wert `500` fest und stellen Sie den Parameter `message` entsprechend ein. Wenn die Aktion zum Zurücksetzen auf Werkseinstellungen nicht unterstützt ist, legen Sie für den Parameter `rc` den Wert `501` fest und stellen Sie den Parameter `message` optional entsprechend ein.
+Nach dem Initiieren einer Anforderung für das Zurücksetzen von Geräten wird an alle Geräte, die im Hauptteil der Anforderung angegeben sind, eine MQTT-Nachricht publiziert. Von jedem Gerät muss eine Antwort zurückgegeben werden, um anzugeben, ob die Aktion zum Zurücksetzen auf Werkseinstellungen initiiert werden kann. Der Antwortcode wird auf ``202`` festgelegt, wenn diese Aktion sofort ausgeführt werden kann. Wenn der Versuch des Zurücksetzens auf Werkseinstellungen fehlschlägt, legen Sie für den Parameter ``rc`` den Wert ``500`` fest und stellen Sie den Parameter ``message`` entsprechend ein. Wenn die Aktion zum Zurücksetzen auf Werkseinstellungen nicht unterstützt ist, legen Sie für den Parameter ``rc`` den Wert ``501`` fest und stellen Sie den Parameter ``message`` optional entsprechend ein.
 
 Die Aktion zum Zurücksetzen auf Werkseinstellungen ist abgeschlossen, wenn das Gerät nach dem Zurücksetzen auf Werkseinstellungen die Anforderung 'Gerät verwalten' sendet.
 
@@ -178,15 +178,15 @@ Topic: iotdevice-1/response
 ## Firmwareaktionen
 {: #firmware-actions}
 
-Die Firmwareversion, die ein Gerät aktuell aufweist, ist im Attribut `deviceInfo.fwVersion` gespeichert. Die `mgmt.firmware`-Attribute werden zum Ausführen eines Firmware-Updates und zum Beobachten seines Status verwendet.
+Die Firmwareversion, die ein Gerät aktuell aufweist, ist im Attribut ``deviceInfo.fwVersion`` gespeichert. Die ``mgmt.firmware``-Attribute werden zum Ausführen eines Firmware-Updates und zum Beobachten seines Status verwendet.
 
-**Wichtig:** Das verwaltete Gerät muss die Beobachtung der `mgmt.firmware`-Attribute unterstützen, damit Firmwareaktionen unterstützt sind.
+**Wichtig:** Das verwaltete Gerät muss die Beobachtung der ``mgmt.firmware``-Attribute unterstützen, damit Firmwareaktionen unterstützt sind.
 
 Der Prozess für das Firmware-Update ist in unterschiedliche Aktionen aufgeteilt:
 - Herunterladen der Firmware
 - Aktualisieren der Firmware
 
-Der Status der einzelnen Firmwareaktionen wird in einem separaten Attribut auf dem Gerät gespeichert. Das Attribut `mgmt.firmware.state` beschreibt den Status des Herunterladens der Firmware. In der folgenden Tabelle werden die möglichen Werte beschrieben, die für das Attribut `mgmt.firmware.state` eingestellt werden können:
+Der Status der einzelnen Firmwareaktionen wird in einem separaten Attribut auf dem Gerät gespeichert. Das Attribut ``mgmt.firmware.state`` beschreibt den Status des Herunterladens der Firmware. In der folgenden Tabelle werden die möglichen Werte beschrieben, die für das Attribut ``mgmt.firmware.state`` eingestellt werden können:
 
  |Wert |Status  | Bedeutung |
  |:---|:---|:---|
@@ -195,7 +195,7 @@ Der Status der einzelnen Firmwareaktionen wird in einem separaten Attribut auf d
  |2  | Heruntergeladen  | Das Firmware-Update wurde von dem Gerät erfolgreich heruntergeladen und kann jetzt installiert werden. |
 
 
-Das Attribut `mgmt.firmware.updateStatus` beschreibt den Status des Firmware-Updates. Folgende Werte sind für das Attribut `mgmt.firmware.updateStatus` möglich:
+Das Attribut ``mgmt.firmware.updateStatus`` beschreibt den Status des Firmware-Updates. Folgende Werte sind für das Attribut ``mgmt.firmware.updateStatus`` möglich:
 
 |Wert |Status | Bedeutung |  
 |:---|:---|:---|
@@ -214,11 +214,11 @@ Sie können die Aktion zum Herunterladen von Firmware mithilfe des {{site.data.k
 
 Zum Initiieren des Herunterladens von Firmware mithilfe der REST-API setzen Sie eine POST-Anforderung an die folgende Adresse ab:
 
-`https://<Organisation>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
+`https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
 Folgende Informationen werden angegeben:
 
-- Die Aktion `firmware/download`
+- Die Aktion ``firmware/download``
 - Eine Liste der Geräte, die das Image erhalten sollen, mit maximal 5000 Geräten
 - Die URI für das Firmware-Image (optional)
 - Verifizierungszeichenfolge zum Überprüfen des Image (optional)
@@ -256,8 +256,8 @@ Wenn keine optionalen Parameter angegeben sind, wird der erste Schritt im folgen
 
 Der Gerätemanagementserver in {{site.data.keyword.iot_short_notm}} verwendet das Gerätemanagementprotokoll, um eine Anforderung an die Geräte zu senden, mit der der Download von Firmware initiiert wird. Der Prozess zum Herunterladen besteht aus den folgenden Schritten:
 
-1. An das Topic `iotdm-1/device/update` wird eine Anforderung zum Aktualisieren von Firmwaredetails gesendet.
-Die Aktualisierungsanforderung veranlasst das Gerät zu prüfen, ob sich die angeforderte Firmware von der aktuell installierten Firmware unterscheidet. Falls ein Unterschied besteht, müssen Sie den Parameter `rc` auf den Wert `204` festlegen, wodurch der Status in 'Geändert' (`Changed`) umgesetzt wird.  
+1. An das Topic ``iotdm-1/device/update`` wird eine Anforderung zum Aktualisieren von Firmwaredetails gesendet.
+Die Aktualisierungsanforderung veranlasst das Gerät zu prüfen, ob sich die angeforderte Firmware von der aktuell installierten Firmware unterscheidet. Falls ein Unterschied besteht, müssen Sie den Parameter ``rc`` auf den Wert ``204`` festlegen, wodurch der Status in 'Geändert' (``Changed``) umgesetzt wird.  
 Das folgende Beispiel zeigt, welche Nachricht für die zuvor gesendete Beispielanforderung zum Herunterladen von Firmware zu erwarten ist und welche Antwort gesendet wird, wenn ein Unterschied festgestellt wird:
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -293,8 +293,8 @@ Das folgende Beispiel zeigt, welche Nachricht für die zuvor gesendete Beispiela
    }
    ```
    Diese Antwort löst die nächste Anforderung aus.
-2. Die Beobachtungsanforderung `iotdm-1/observe` für den Downloadstatus der Firmware wird gesendet.
-Die Beobachtungsanforderung prüft, ob das Gerät zum Starten des Firmware-Downloads bereit ist. Wenn der Download sofort gestartet werden kann, legen Sie für den Parameter `rc` den Wert `200` (`Ok`), für das Attribut `mgmt.firmware.state` die Einstellung `0` (`Idle`) und für das Attribut `mgmt.firmware.updateStatus` die Einstellung `0` (`Idle`) fest. Der folgende Code zeigt eine Beispielkommunikation zwischen {{site.data.keyword.iot_short_notm}} und einem Gerät:
+2. Die Beobachtungsanforderung ``iotdm-1/observe`` für den Downloadstatus der Firmware wird gesendet.
+Die Beobachtungsanforderung prüft, ob das Gerät zum Starten des Firmware-Downloads bereit ist. Wenn der Download sofort gestartet werden kann, legen Sie für den Parameter ``rc`` den Wert ``200`` (``Ok``), für das Attribut ``mgmt.firmware.state`` die Einstellung ``0`` (``Idle``) und für das Attribut ``mgmt.firmware.updateStatus`` die Einstellung ``0`` (``Idle``) fest. Der folgende Code zeigt eine Beispielkommunikation zwischen {{site.data.keyword.iot_short_notm}} und einem Gerät:
    ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
 
@@ -321,9 +321,9 @@ Die Beobachtungsanforderung prüft, ob das Gerät zum Starten des Firmware-Downl
    ```
 Dieser Austausch löst den letzten Schritt aus.  
 
-3. Die Anforderung zum Herunterladen wird im Topic `iotdm-1/mgmt/initiate/firmware/download` gesendet:
+3. Die Anforderung zum Herunterladen wird im Topic ``iotdm-1/mgmt/initiate/firmware/download`` gesendet:
 
-   Die Anforderung zum Herunterladen weist ein Gerät an, den Download der Firmware zu starten. Wenn die Aktion sofort initiiert werden kann, legen Sie für den Parameter `rc` den Wert `202` fest. Der folgende Code zeigt ein Beispiel für die Initiierung einer Downloadanforderung:
+   Die Anforderung zum Herunterladen weist ein Gerät an, den Download der Firmware zu starten. Wenn die Aktion sofort initiiert werden kann, legen Sie für den Parameter ``rc`` den Wert ``202`` fest. Der folgende Code zeigt ein Beispiel für die Initiierung einer Downloadanforderung:
 
    ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -344,7 +344,7 @@ Dieser Austausch löst den letzten Schritt aus.
    }
    ```
 
-Nachdem ein Firmware-Download auf diese Weise initiiert wurde, muss das Gerät den Status des Downloads an {{site.data.keyword.iot_short_notm}} berichten. Das Gerät berichtet den Status, indem es eine Nachricht im Topic `iotdevice-1/notify` publiziert, wobei für das Attribut `mgmt.firmware.state` entweder `1` (`Downloading` - Download läuft) oder `2` (`Downloaded` - Heruntergeladen) festgelegt wird.
+Nachdem ein Firmware-Download auf diese Weise initiiert wurde, muss das Gerät den Status des Downloads an {{site.data.keyword.iot_short_notm}} melden. Das Gerät meldet den Status, indem es eine Nachricht im Topic ``iotdevice-1/notify`` publiziert, wobei für das Attribut ``mgmt.firmware.state`` entweder ``1`` (``Downloading`` - Download läuft) oder ``2`` (``Downloaded`` - Heruntergeladen) festgelegt wird.
 An den folgenden Beispielen sehen Sie die Initiierung des Downloads von Firmware:
 
 ```
@@ -387,8 +387,8 @@ Message:
 
 
 
-Nachdem die Benachrichtigung publiziert wurde, wobei für das Attribut `mgmt.firmware.state` die Einstellung `2` festgelegt war, wird im Topic `iotdm-1/cancel` eine Anforderung ausgelöst. Mit dieser Anforderung wird die Beobachtung des Attributs `mgmt.firmware` abgebrochen.
-Nachdem eine Antwort gesendet wurde, bei der der Parameter `rc` auf `200` eingestellt war, ist der Download der Firmware abgeschlossen. Der folgende Code zeigt ein Beispiel:
+Nachdem die Benachrichtigung publiziert wurde, wobei für das Attribut ``mgmt.firmware.state`` die Einstellung ``2`` festgelegt war, wird im Topic ``iotdm-1/cancel`` eine Anforderung ausgelöst. Mit dieser Anforderung wird die Beobachtung des Attributs ``mgmt.firmware`` abgebrochen.
+Nachdem eine Antwort gesendet wurde, bei der der Parameter ``rc`` auf ``200`` eingestellt war, ist der Download der Firmware abgeschlossen. Der folgende Code zeigt ein Beispiel:
 
 ```
 Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -418,28 +418,28 @@ Message:
 
 Folgende Informationen sind bei der Fehlerbehandlung nützlich:
 
-- Wenn für das Attribut `mgmt.firmware.state` nicht die Einstellung `0` ('Idle' - 'Inaktiv') festgelegt ist, senden Sie einen Fehler, der den Antwortcode `400` und einen optionalen Nachrichtentext aufweist.
-- Wenn das Attribut `mgmt.firmware.uri` nicht festgelegt ist oder kein gültiger URI ist, legen Sie für den Parameter `rc` die Einstellung `400` fest.
-- Wenn der Versuch, die Firmware herunterzuladen, fehlschlägt, legen Sie für den Parameter `rc` den Wert `500` fest und stellen Sie den Parameter `message` entsprechend ein.
-- Wenn der Download von Firmware nicht unterstützt wird, legen Sie für den Parameter `rc` den Wert `500` fest und stellen Sie den Parameter `message` entsprechend ein.
-- Wenn vom Gerät eine Anforderung zum Ausführen empfangen wird, ändern Sie für das Attribut `mgmt.firmware.state` die Einstellung von `0` (Idle - Inaktiv) in `1` (Downloading - Download läuft).
-- Wenn der Download erfolgreich abgeschlossen ist, legen Sie für das Attribut `mgmt.firmware.state` die Einstellung `2` (Downloaded - Heruntergeladen).
-- Wenn während des Herunterladens ein Fehler auftritt, legen Sie für das Attribut `mgmt.firmware.state` die Einstellung `0` (Idle - Inaktiv) und für das Attribut `mgmt.firmware.updateStatus` einen der folgenden Werte für den Fehlerstatus fest:
+- Wenn für das Attribut ``mgmt.firmware.state`` nicht die Einstellung ``0`` ('Idle' - 'Inaktiv') festgelegt ist, senden Sie einen Fehler, der den Antwortcode ``400`` und einen optionalen Nachrichtentext aufweist.
+- Wenn das Attribut ``mgmt.firmware.uri`` nicht festgelegt ist oder kein gültiger URI ist, legen Sie für den Parameter ``rc`` die Einstellung ``400`` fest.
+- Wenn der Versuch, die Firmware herunterzuladen, fehlschlägt, legen Sie für den Parameter ``rc`` den Wert ``500`` fest und stellen Sie den Parameter ``message`` entsprechend ein.
+- Wenn der Download von Firmware nicht unterstützt wird, legen Sie für den Parameter ``rc`` den Wert ``500`` fest und stellen Sie den Parameter ``message`` entsprechend ein.
+- Wenn vom Gerät eine Anforderung zum Ausführen empfangen wird, ändern Sie für das Attribut ``mgmt.firmware.state`` die Einstellung von ``0`` (Idle - Inaktiv) in ``1`` (Downloading - Download läuft).
+- Wenn der Download erfolgreich abgeschlossen ist, legen Sie für das Attribut ``mgmt.firmware.state`` die Einstellung ``2`` (Downloaded - Heruntergeladen).
+- Wenn während des Herunterladens ein Fehler auftritt, legen Sie für das Attribut ``mgmt.firmware.state`` die Einstellung ``0`` (Idle - Inaktiv) und für das Attribut ``mgmt.firmware.updateStatus`` einen der folgenden Werte für den Fehlerstatus fest:
   - 2 (Speicherkapazität erschöpft)
   - 3 (Verbindung unterbrochen)
   - 6 (Ungültiger URI)
-- Wenn eine Firmware-Verifizierung festgelegt wurde, versucht das Gerät, das Firmware-Image zu verifizieren. Wenn die Verifizierung des Image fehlschlägt, legen Sie für das Attribut `mgmt.firmware.state` die Einstellung `0` (Inaktiv) und für das Attribut `mgmt.firmware.updateStatus` den Fehlerstatuswert `4` (Überprüfung fehlgeschlagen) fest.
+- Wenn eine Firmware-Verifizierung festgelegt wurde, versucht das Gerät, das Firmware-Image zu verifizieren. Wenn die Verifizierung des Image fehlschlägt, legen Sie für das Attribut ``mgmt.firmware.state`` die Einstellung ``0`` (Inaktiv) und für das Attribut ``mgmt.firmware.updateStatus`` den Fehlerstatuswert ``4`` (Überprüfung fehlgeschlagen) fest.
 
 ## Firmwareaktionen - Update
 {: #firmware-actions-update}
 
 Die Installation der heruntergeladenen Firmware wird mithilfe der REST-API durch Absetzen einer POST-Anforderung an die folgende Adresse initiiert:
 
-`https://<Organisation>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
+`https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
 Folgende Informationen werden angegeben:
 
-- Die Aktion `firmware/update`
+- Die Aktion ``firmware/update``
 - Eine Liste der Geräte, die das Image erhalten sollen und die alle denselben Gerätetyp aufweisen müssen.
 - Die URI für das Firmware-Image (optional)
 - Verifizierungszeichenfolge zum Überprüfen des Image (optional)
@@ -462,7 +462,7 @@ Der folgende Code ist eine Beispielanforderung:
 
 Ist ein optionaler Parameter angegeben, ist die erste Nachricht, die vom Gerät empfangen wird, eine Anforderung des Typs 'Geräteattribute aktualisieren'. Diese Anforderung entspricht der ersten Nachricht bei einer Anforderung zum Herunterladen von Firmware.
 
-Zum Überwachen des Status des Firmware-Updates löst {{site.data.keyword.iot_short_notm}} zunächst eine Beobachtungsanforderung im Topic `iotdm-1/observe` aus. Wenn das Gerät für den Start des Aktualisierungsprozesses bereit ist, sendet es eine Antwort, bei der für den Parameter `rc` der Wert `200`, für das Attribut `mgmt.firmware.state` die Einstellung `0` und für das Attribut `mgmt.firmware.updateStatus` die Einstellung `0` festgelegt ist.
+Zum Überwachen des Status des Firmware-Updates löst {{site.data.keyword.iot_short_notm}} zunächst eine Beobachtungsanforderung im Topic ``iotdm-1/observe`` aus. Wenn das Gerät für den Start des Aktualisierungsprozesses bereit ist, sendet es eine Antwort, bei der für den Parameter ``rc`` der Wert ``200``, für das Attribut ``mgmt.firmware.state`` die Einstellung ``0`` und für das Attribut ``mgmt.firmware.updateStatus`` die Einstellung ``0`` festgelegt ist.
 
 Der folgende Code zeigt ein Beispiel:
 
@@ -504,9 +504,9 @@ Message:
 
 
 
-Nach dem erfolgreichen Herunterladen des Firmware-Updates verwendet der Gerätemanagementserver in {{site.data.keyword.iot_short_notm}} das Gerätemanagementprotokoll, um anzufordern, dass die angegebenen Geräte die Firmwareinstallation mithilfe des Topics `iotdm-1/mgmt/initiate/firmware/update` auslösen.
-Wenn diese Operation sofort initiiert werden kann, legen Sie den Parameter `rc` auf `202` fest.
-Wenn die Firmware zuvor nicht erfolgreich heruntergeladen wurde, legen Sie für den Parameter `rc` den Wert `400` fest.
+Nach dem erfolgreichen Herunterladen des Firmware-Updates verwendet der Gerätemanagementserver in {{site.data.keyword.iot_short_notm}} das Gerätemanagementprotokoll, um anzufordern, dass die angegebenen Geräte die Firmwareinstallation mithilfe des Topics ``iotdm-1/mgmt/initiate/firmware/update`` auslösen.
+Wenn diese Operation sofort initiiert werden kann, legen Sie den Parameter ``rc`` auf ``202`` fest.
+Wenn die Firmware zuvor nicht erfolgreich heruntergeladen wurde, legen Sie für den Parameter ``rc`` den Wert ``400`` fest.
 
 Der folgende Code zeigt ein Beispiel:
 
@@ -529,8 +529,8 @@ Message:
 }
 ```
 
-Zum Abschließen der Anforderung zum Aktualisieren von Firmware berichtet das Gerät seinen Aktualisierungsstatus mithilfe einer Statusnachricht, die im zugehörigen Topic `iotdevice-1/notify` publiziert wird, an {{site.data.keyword.iot_short_notm}}.
-Wenn ein Firmware-Update abgeschlossen wird, wird das Attribut `mgmt.firmware.updateStatus` auf die Einstellung `0` (Erfolg) gesetzt und für das Attribut `mgmt.firmware.state` wird die Einstellung `0` (Inaktiv) festgelegt. Das heruntergeladene Firmware-Image kann anschließend im Gerät gelöscht werden und für das Attribut `deviceInfo.fwVersion` wird der Wert des Attributs `mgmt.firmware.version` festgelegt.
+Zum Abschließen der Anforderung zum Aktualisieren von Firmware meldet das Gerät seinen Aktualisierungsstatus mithilfe einer Statusnachricht, die im zugehörigen Topic ``iotdevice-1/notify`` publiziert wird, an {{site.data.keyword.iot_short_notm}}.
+Wenn ein Firmware-Update abgeschlossen wird, wird das Attribut ``mgmt.firmware.updateStatus`` auf die Einstellung ``0`` (Erfolg) gesetzt und für das Attribut ``mgmt.firmware.state`` wird die Einstellung ``0`` (Inaktiv) festgelegt. Das heruntergeladene Firmware-Image kann anschließend im Gerät gelöscht werden und für das Attribut ``deviceInfo.fwVersion`` wird der Wert des Attributs ``mgmt.firmware.version`` festgelegt.
 
 Der folgende Code zeigt ein Beispiel einer Hinweisnachricht:
 
@@ -554,10 +554,10 @@ Message:
 }
 ```
 
-Wenn {{site.data.keyword.iot_short_notm}} eine Benachrichtigung über ein abgeschlossenes Firmware-Update empfängt, wird im Topic `iotdm-1/cancel` eine letzte Anforderung zum Abbrechen der Beobachtung des Attributs `mgmt.firmware` ausgelöst.
+Wenn {{site.data.keyword.iot_short_notm}} eine Benachrichtigung über ein abgeschlossenes Firmware-Update empfängt, wird im Topic ``iotdm-1/cancel`` eine letzte Anforderung zum Abbrechen der Beobachtung des Attributs ``mgmt.firmware`` ausgelöst.
 
 
-Bei Senden einer Antwort, bei der für den Parameter `rc` der Wert `200` festgelegt wurde, wird die Anforderung zum Aktualisieren der Firmware abgeschlossen, wie im folgenden Beispiel gezeigt:
+Bei Senden einer Antwort, bei der für den Parameter ``rc`` der Wert ``200`` festgelegt wurde, wird die Anforderung zum Aktualisieren der Firmware abgeschlossen, wie im folgenden Beispiel gezeigt:
 
 ```
 Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -588,16 +588,16 @@ Message:
 
 Die folgende Liste bietet einige nützliche Informationen zur Fehler- und Prozessbehandlung:
 
-- Wenn der Versuch, die Firmware zu aktualisieren, fehlschlägt, legen Sie für den Parameter `rc` den Wert `500` fest und stellen Sie optional den Parameter `message` ein, der relevante Informationen enthalten kann.
-- Wenn das Firmware-Update nicht unterstützt ist, legen Sie für den Parameter `rc` den Wert `501` fest und stellen Sie optional den Parameter `message` ein, der relevante Informationen enthalten kann.
-- Wenn für das Attribut `mgmt.firmware.state` nicht die Einstellung `2` (Heruntergeladen) festgelegt ist, senden Sie einen Fehler, bei dem der Parameter `rc` auf den Wert `400` festgelegt ist, sowie einen optionalen Nachrichtentext.
-- Legen Sie andernfalls für das Attribut `mgmt.firmware.updateStatus` die Einstellung `1` (In Bearbeitung) fest und die Firmwareinstallation wird in der Regel gestartet.
-- Wenn die Installation der Firmware fehlschlägt, legen Sie für das Attribut `mgmt.firmware.updateStatus` einen der folgenden Werte fest:
-  - `2` (Speicherkapazität erschöpft)
-  - `5` (Nicht unterstütztes Image)
+- Wenn der Versuch, die Firmware zu aktualisieren, fehlschlägt, legen Sie für den Parameter ``rc`` den Wert ``500`` fest und stellen Sie optional den Parameter ``message`` ein, der relevante Informationen enthalten kann.
+- Wenn das Firmware-Update nicht unterstützt ist, legen Sie für den Parameter ``rc`` den Wert ``501`` fest und stellen Sie optional den Parameter ``message`` ein, der relevante Informationen enthalten kann.
+- Wenn für das Attribut ``mgmt.firmware.state`` nicht die Einstellung ``2`` (Heruntergeladen) festgelegt ist, senden Sie einen Fehler, bei dem der Parameter ``rc`` auf den Wert ``400`` festgelegt ist, sowie einen optionalen Nachrichtentext.
+- Legen Sie andernfalls für das Attribut ``mgmt.firmware.updateStatus`` die Einstellung ``1`` (In Bearbeitung) fest und die Firmwareinstallation wird in der Regel gestartet.
+- Wenn die Installation der Firmware fehlschlägt, legen Sie für das Attribut ``mgmt.firmware.updateStatus`` einen der folgenden Werte fest:
+  - ``2`` (Speicherkapazität erschöpft)
+  - ``5`` (Nicht unterstütztes Image)
 
 
-**Wichtig:** Alle Parameter, die als Bestandteil des Attributs `mgmt.firmware` aufgelistet sind, müssen gleichzeitig festgelegt werden, damit nur eine einzige Hinweisnachricht gesendet wird, falls eine aktuelle Beobachtung für `mgmt.firmware` besteht.
+**Wichtig:** Alle Parameter, die als Bestandteil des Attributs ``mgmt.firmware`` aufgelistet sind, müssen gleichzeitig festgelegt werden, damit nur eine einzige Hinweisnachricht gesendet wird, falls eine aktuelle Beobachtung für ``mgmt.firmware`` besteht.
 
 ## Anleitungen zu Geräteaktionen und Firmwareaktionen
 

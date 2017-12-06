@@ -28,7 +28,8 @@ lastupdated: "2017-03-14"
 
 构造方法用于构建网关客户机实例，并接受包含以下定义的 `Properties` 对象：
 
-|定义 |描述 |
+|定义|描述
+|
 |:----|:----|
 |`org`|必需值，必须设置为组织标识。如果使用的是 Quickstart 流，请指定 `quickstart`。|
 |`domain`|消息传递端点 URL，这是可选项。如果未指定 domain 的值，那么 URL 将缺省为 `internetofthings.ibmcloud.com`，这是 {{site.data.keyword.iot_short_notm}} 生产服务器。|
@@ -193,8 +194,6 @@ boolean status = gwClient.publishGatewayEvent("load", data, "text", 2);
 
 **注：**在先前的代码示例中，事件的有效内容必须为字符串格式。
 
-
-
 XML 数据可以转换为字符串格式并发布，如以下代码样本中所概述：
 
 ```java
@@ -270,7 +269,7 @@ gwClient.subscribeToDeviceCommands(DEVICE_TYPE, DEVICE_ID);
 要处理特定命令，需要注册 `Command` 回调方法。消息将作为 `Command` 类的实例返回，并包含以下属性：
 
 
-| 属性     |数据类型     | 描述|
+| 属性|数据类型| 描述|
 |----------------|----------------|---------------
 |`deviceType`|字符串| 为其接收命令的设备类型。|
 |`deviceId`|字符串| 为其接收命令的设备标识，可以为网关或通过网关连接的设备。|
@@ -348,7 +347,7 @@ gwClient.api().getDevicesConnectedThroughGateway(gatewayType, gatewayId);
 ## 诀窍
 {: #recipes}
 
-| 诀窍     | 描述|
+| 诀窍| 描述|
 |----------------|----------------
 |[Connecting your device as a gateway to {{site.data.keyword.iot_short_notm}} ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/){: new_window}| 一个 GitHub 项目和详细指示信息，说明了如何将 Raspberry Pi 网关和位于该网关后面的 Arduino Uno 设备连接到 {{site.data.keyword.iot_short_notm}}。
 |[RaspberryPi as a managed gateway in {{site.data.keyword.iot_short_notm}} ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}|上一个网关诀窍的扩展，说明了如何将 Raspberry Pi 网关作为 {{site.data.keyword.iot_short_notm}} 中的受管设备进行连接以及如何执行设备管理操作。

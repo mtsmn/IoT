@@ -129,7 +129,8 @@ Para se conectar a uma malha de blockchain:
 Para gravar dados do dispositivo no livro razão de blockchain, deve-se primeiramente mapear as propriedades do dispositivo de um tipo de dispositivo para os parâmetros definidos pelo contrato inteligente.
 
 Para mapear dados do dispositivo para um contrato:
- 1. No painel do {{site.data.keyword.iot_short_notm}}, clique em ![Blockchain.](blockchain/images/platform_blockchain.png "Blockchain") na barra lateral de menus.
+ 1. No painel do {{site.data.keyword.iot_short_notm}}, clique em ![Blockchain.](blockchain/images/platform_blockchain.png "Blockchain")
+na barra lateral de menus.
  3. Clique em **Mapear dados do dispositivo**.
  4. Selecione o tipo de dispositivo no qual você deseja armazenar dados do dispositivo no blockchain.
  5. Insira o nome do evento para os eventos que você deseja armazenar.  

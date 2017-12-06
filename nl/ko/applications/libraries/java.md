@@ -40,7 +40,7 @@ Java™를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작
 |`id` |조직 내에서 애플리케이션의 고유 ID입니다. |
 |`auth-method`  |인증 메소드입니다. 지원되는 유일한 메소드는 `apikey`입니다.|
 |`auth-key`   |auth-method의 값을 `apikey`로 설정할 때 지정해야 하는 선택적 API 키입니다.|
-|`auth-token`   |auth-method의 값을 `apikey`로 설정할 때 필수인 API 키 토큰입니다. |
+|`auth-token`   |auth-method의 값을 `apikey`로 설정할 때 필수인 API 키 토큰입니다.|
 |`clean-session`|지속 가능한 구독 모드로 애플리케이션에 연결을 원하는 경우에만 필요한 true 또는 false 값입니다. 기본적으로 `clean-session`은 `true`로 설정됩니다. |
 |`Port`|연결할 포트 번호입니다. 8883 또는 443을 지정하십시오. 포트 번호를 지정하지 않으면 기본적으로 클라이언트가 포트 번호 8883의 {{site.data.keyword.iot_short_notm}}에 연결됩니다.|
 |`MaxInflightMessages`  |연결을 위한 인플라이트 메시지의 최대 수를 설정합니다. 기본값은 100입니다.|
@@ -123,7 +123,7 @@ MQTT에 대한 '활성 유지' 간격을 설정하기 위해 `connect()` 함수�
 ## 디바이스 이벤트 구독
 {: #subscribing_device_events}
 
-이벤트는 디바이스가 {{site.data.keyword.iot_short_notm}}에 데이터를 공개하는 메커니즘입니다. 디바이스에서 이벤트의 컨텐츠를 제어하고 전송하는 각 이벤트의 이름을 지정합니다.
+이벤트는 디바이스가 {{site.data.keyword.iot_short_notm}}에 데이터를 공개하는 메커니즘입니다. 디바이스에서 이벤트의 컨텐츠를 제어하고 전송하는 각 이벤트의 이름을 지정합니다. 
 
 {{site.data.keyword.iot_short_notm}} 인스턴스에서 이벤트를 수신할 때 수신된 이벤트의 신임 정보는 전송 중인 디바이스를 식별하며, 이는 디바이스가 다른 디바이스로 위장할 수 없음을 의미합니다. 
 
@@ -178,15 +178,15 @@ MQTT에 대한 '활성 유지' 간격을 설정하기 위해 `connect()` 함수�
 
 구독으로 수신된 이벤트를 처리하려면 이벤트 콜백 메소드를 등록하십시오. 메시지는 이벤트 클래스의 인스턴스로 리턴되며, 해당 매개변수는 다음과 같습니다. 
 
-|매개변수|데이터 유형|설명|
+|매개변수|데이터 유형|설명 |
 |:---|:---|
 |`event.device`|문자열|조직의 모든 유형의 디바이스 간에 디바이스를 고유하게 식별합니다. |
 |`event.deviceType`|문자열|디바이스 유형을 식별합니다. 일반적으로, deviceType은 특정 태스크를 수행하는 디바이스의 그룹화입니다. 예를 들어, "weatherballoon"이 디바이스 유형일 수 있습니다.|
 |`event.deviceId`|문자열|디바이스의 ID를 표시합니다. 일반적으로, 특정 디바이스 유형의 경우 deviceId는 해당 디바이스의 고유 ID입니다(예: 일련 번호 또는 MAC 주소).|
 |`event.event`|문자열|일반적으로, 특정 이벤트를 그룹화하는 데 사용됩니다(예: "상태", "경고" 및 "데이터"). |
-|`event.format`|문자열|형식은 임의의 문자열일 수 있습니다(예: JSON).   |
-|`event.data`|사전|메시지 페이로드의 데이터입니다. 최대 길이는 131072바이트입니다. |
-|`event.timestamp`|날짜 및 시간 |이벤트의 날짜 및 시간입니다. |
+|`event.format`|문자열|형식은 임의의 문자열일 수 있습니다(예: JSON).  |
+|`event.data`|사전|메시지 페이로드의 데이터입니다. 최대 길이는 131072바이트입니다.|
+|`event.timestamp`|날짜 및 시간|이벤트의 날짜 및 시간입니다. |
 
 
 다음 코드는 이벤트 콜백의 샘플 구현을 제공합니다. 
@@ -299,7 +299,7 @@ ApplicationClient에 이벤트 콜백이 추가되는 경우, `processEvent()` �
 구독으로 수신된 상태 업데이트를 처리하려면 상태 이벤트 콜백 메소드를 등록해야 합니다. `Connect` 및 `Disconnect` 상태 이벤트의 경우에는 메시지가 상태 클래스의 인스턴스로서 리턴되며, 여기에는 다음 매개변수가 포함됩니다. 
 
 
-| 매개변수     |데이터 유형     |
+| 매개변수|데이터 유형|
 |----------------|----------------|
 |`status.clientAddr` |문자열|
 |`status.protocol`  |문자열|
@@ -310,7 +310,7 @@ ApplicationClient에 이벤트 콜백이 추가되는 경우, `processEvent()` �
 |`status.connectTime`   |java.util.Date|
 |`status.port`|정수|
 
-다음 특성은 상태 이벤트가 `Disconnect`인 경우에만 설정됩니다. 
+다음 특성은 상태 이벤트가 ``Disconnect``인 경우에만 설정됩니다. 
 
 | 특성     |데이터 유형     |
 |----------------|----------------|
@@ -346,7 +346,7 @@ ApplicationClient에 이벤트 콜백이 추가되는 경우, `processEvent()` �
   }
 ```
 
-상태 콜백이 애플리케이션 클라이언트에 추가되는 경우, `processDeviceStatus()` 메소드는 기준과 일치하는 디바이스가 {{site.data.keyword.iot_short_notm}}에 연결되거나 연결이 끊어질 때마다 호출됩니다. 다음 코드 샘플은 상태 콜백 인스턴스를 애플리케이션 클라이언트에 추가하는 방법을 표시합니다.
+상태 콜백이 애플리케이션 클라이언트에 추가되는 경우, ``processDeviceStatus()`` 메소드는 기준과 일치하는 디바이스가 {{site.data.keyword.iot_short_notm}}에 연결되거나 연결이 끊어질 때마다 호출됩니다. 다음 코드 샘플은 상태 콜백 인스턴스를 애플리케이션 클라이언트에 추가하는 방법을 표시합니다.
 
 ```
 
@@ -361,7 +361,7 @@ ApplicationClient에 이벤트 콜백이 추가되는 경우, `processEvent()` �
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-오버로드된 메소드를 특정 애플리케이션에 대한 상태 구독을 제어하는 데 사용할 수 있습니다. `processApplicationStatus()` 메소드는 기준과 일치하는 애플리케이션이 {{site.data.keyword.iot_short_notm}}에 연결되거나 연결이 끊어질 때마다 호출됩니다.
+오버로드된 메소드를 특정 애플리케이션에 대한 상태 구독을 제어하는 데 사용할 수 있습니다. ``processApplicationStatus()`` 메소드는 기준과 일치하는 애플리케이션이 {{site.data.keyword.iot_short_notm}}에 연결되거나 연결이 끊어질 때마다 호출됩니다.
 
 
 ## 디바이스에서 이벤트 공개

@@ -28,6 +28,6 @@ Pour afficher le statut des services Watson IoT sélectionnés qui s'exécutent 
 ## Informations sur Twitter
 {: #twitter_feed}
 
-![Flux Twitter : https://twitter.com/ibmiotf](images/twitter_logo.png "IBM Watson IoT Platform Twitter feed")
+![Flux Twitter https://twitter.com/ibmiotf](images/twitter_logo.png "Flux Twitter IBM Watson IoT Platform")
 
 Vous pouvez également obtenir les dernières informations et mises à jour concernant {{site.data.keyword.iot_short_notm}} et les services qui lui sont associés en suivant votre [flux Twitter ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://twitter.com/ibmiotf).

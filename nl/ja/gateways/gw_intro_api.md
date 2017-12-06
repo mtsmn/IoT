@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -13,10 +13,8 @@ lastupdated: "2017-05-24"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# ゲートウェイ・デバイス用の HTTP Messaging API (ベータ)
+# ゲートウェイ・デバイス用の HTTP Messaging API
 {: #api}
-
-**重要:** ゲートウェイ・デバイス用の {{site.data.keyword.iot_full}} HTTP API 機能は、限定されたベータ・プログラムの一部としてのみ使用できます。今後の更新によって、この機能の現行バージョンと互換性のない変更が行われる可能性があります。この機能を試して、[ご意見をお寄せください ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
 
 ## ゲートウェイ・デバイス用の HTTP Messaging API 資料へのアクセス
 {: #rest_messaging_api}
@@ -35,7 +33,7 @@ lastupdated: "2017-05-24"
 
 MQTT メッセージング・プロトコルの使用に加えて、HTTP Messaging API コマンドを使用することで、HTTP を介してイベントを {{site.data.keyword.iot_short_notm}} にパブリッシュするようにゲートウェイ・デバイスを構成することもできます。
 
-{{site.data.keyword.iot_short_notm}} に接続されているデバイスから `POST` 要求を送信するには、以下のいずれかの URL を使用します。
+{{site.data.keyword.iot_short_notm}} に接続されているデバイスから ``POST`` 要求を送信するには、以下のいずれかの URL を使用します。
 
 ### 非セキュアな POST 要求
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
@@ -78,13 +76,13 @@ MQTT メッセージング・プロトコルの使用に加えて、HTTP Messagi
 
 ### Content-Type 要求ヘッダー
 
-`Content-Type` 要求ヘッダーを要求に含める必要があります。以下の表に、サポート対象タイプがどのように {{site.data.keyword.iot_short_notm}} 内部フォーマットにマップされるかを示します。
+コンテンツが JSON でない場合、`Content-Type` 要求ヘッダーを要求に含める必要があります。以下の表に、サポート対象タイプがどのように {{site.data.keyword.iot_short_notm}} 内部フォーマットにマップされるかを示します。
 
 |Content-Type ヘッダー|{{site.data.keyword.iot_short_notm}} での形式 |
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml | "xml"
+|application/xml| "xml"
 |application/octet-stream|"bin"
 
 ### サービス品質
@@ -100,7 +98,7 @@ API を使用したゲートウェイ・デバイスの管理について詳し�
 
 MQTT メッセージング・プロトコルの使用に加えて、HTTP Messaging API コマンドを使用することで、HTTP を介してコマンドを {{site.data.keyword.iot_short_notm}} から受信するようにゲートウェイ・デバイスを構成することもできます。ゲートウェイ・デバイスは、関連するリソース・グループ内のデバイスに対するコマンドを受信することができます。ゲートウェイ・リソース・グループについて詳しくは、[ゲートウェイ・アクセス制御 (ベータ)](../gateways/gateway-access-control.html) を参照してください。
 
-{{site.data.keyword.iot_short_notm}} に接続されているゲートウェイから `POST` 要求を送信するには、以下のいずれかの URL を使用します。
+{{site.data.keyword.iot_short_notm}} に接続されているゲートウェイから ``POST`` 要求を送信するには、以下のいずれかの URL を使用します。
 
 ### 非セキュアな POST 要求
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>

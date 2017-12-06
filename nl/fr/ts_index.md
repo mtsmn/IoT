@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-11-03"
 
 ---
 
@@ -68,18 +68,3 @@ Il se peut que lorsque vous vous connectez, vous utilisiez une valeur trop faibl
 Pour résoudre ce problème, vous pouvez vérifier que vous avez correctement défini les paramètres ping et KeepAlive pour votre connexion.   
 {: tsResolve}
 
-
-## Aide et support pour {{site.data.keyword.iot_short_notm}}
-{: #gettinghelp}
-
-Si vous avez des problèmes ou de questions quand vous utilisez {{site.data.keyword.iot_short_notm}}, vous pouvez obtenir de l'aide en recherchant des informations précises ou en posant des questions via un forum. Vous pouvez également ouvrir un ticket de demande de service.
-
-Si vous utilisez les forums pour poser une question, libellez votre question de sorte qu'elle soit vue par les équipes de développement {{site.data.keyword.Bluemix_notm}}.
-
-* Si vous avez des questions techniques concernant le développement ou le déploiement d'une application avec {{site.data.keyword.iot_short_notm}}, publiez-les sur [Stack Overflow ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} et ajoutez les étiquettes "ibm-bluemix" et "watson-iot".
-<!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* Pour des questions relatives au service et aux instructions de mise en route, utilisez le forum [IBM developerWorks dW Answers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Ajoutez les étiquettes "watson-iot" et "bluemix".
-
-Pour plus d'informations sur l'utilisation des forums, voir la rubrique décrivant [comment obtenir de l'aide](https://www.{DomainName}/docs/support/index.html#getting-help).
-
-Pour plus d'informations sur l'ouverture d'un ticket de demande de service IBM, sur les niveaux de support disponibles ou les niveaux de gravité des tickets, voir la rubrique décrivant [Comment contacter le support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.{DomainName}/docs/support/index.html#contacting-support).

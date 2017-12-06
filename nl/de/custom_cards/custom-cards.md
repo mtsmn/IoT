@@ -38,7 +38,7 @@ Zum Erstellen Ihrer Karten müssen Sie eine auf Node.js basierende lokale Entwic
 ## Sicherheit
 {: #security}
 
-Für den JavaScript-Code, mit dem Sie Ihre Karten auf Ihrem Server für angepasste Karten implementieren möchten, bestehen keine Einschränkungen. Mit Javascript-Code in angepassten Karten kann auf alle in einem Browser enthaltenen Informationen zugegriffen werden, genau wie dies bei allen anderen Karten möglich ist, die im Dashboard ausgeführt werden.  Stellen Sie sicher, dass der Code für den Browser zum Anzeigen und Verarbeiten der angepassten Karten vom richtigen Server für angepasste Karten bereitgestellt wird.
+Für den JavaScript-Code, mit dem Sie Ihre Karten auf Ihrem Server für angepasste Karten implementieren möchten, bestehen keine Einschränkungen. Mit Javascript-Code in angepassten Karten kann auf alle im Browser enthaltenen Informationen zugegriffen werden, genau wie dies bei allen anderen Karten möglich ist, die im Dashboard ausgeführt werden. Stellen Sie sicher, dass der Code für den Browser zum Anzeigen und Verarbeiten der angepassten Karten vom richtigen Server für angepasste Karten bereitgestellt wird.
 
 Der Code der Karten wird in Ihrer {{site.data.keyword.iot_short_notm}}-Browsersitzung genau so ausgeführt, wie er geschrieben wurde. Darüber hinaus wird die Verbindung zum Server für angepasste Karten hergestellt, ohne dass für den Server für angepasste Karten Berechtigungsnachweise bereitgestellt werden. Der Browser eines Benutzers kann eine Verbindung zu jedem konfigurierten Server für angepasste Karten herstellen.
 
@@ -105,7 +105,7 @@ Spalten Sie das Beispielrepository für angepasste Karten unter https://github.c
 4. Erstellen Sie Ihr eigenes Framework aus Modulen und Karten.
 Angepasste Karten sind in Modulen organisiert. Richten Sie für die HelloWorld-Karte ein neues Modul ein.
 5. Referenzieren Sie die neue Karte.
-Das Paket mit angepassten Karten kann mehrere Module enthalten. Sie müssen in der Haupt-Paketdatei auf Ihr neues Modul verweisen.
+Das Paket mit angepassten Karten kann mehrere Module enthalten. Sie müssen in der Haupt-Paketdatei Ihr neues Modul referenzieren.
 6. Registrieren Sie Ihr Modul.
 Damit Ihre Karte in den Boards Ihrer {{site.data.keyword.iot_short_notm}}-Organisation zur Verfügung steht, müssen Sie die Konfigurationsdetails zur Karte in der Datei `DashboardConfig.json` hinzufügen.
 7. Erstellen Sie Ihr Kartenpaket.

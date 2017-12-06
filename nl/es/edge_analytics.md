@@ -21,8 +21,7 @@ Con las analíticas de extremo, mueva el proceso de desencadenamiento de reglas 
 
 Los dispositivos envían sus datos a una pasarela habilitada para analíticas de extremo donde las reglas de analíticas de extremo analizan los datos. En función de la regla y de su acción, los datos esenciales y las alertas se podrían enviar a {{site.data.keyword.iot_full}}, desencadenar una alerta en la pasarela, o grabarse en un archivo de texto local para la pasarela.
 
-El diagrama siguiente ilustra la arquitectura general de un entorno de análisis de extremo de {{site.data.keyword.iot_full}}.
-![IBM Watson IoT Platform para la arquitectura de analíticas de extremo](images/architecture_platform_edge.svg "IBM Watson IoT Platform con la arquitectura de analíticas de extremo")
+El diagrama siguiente ilustra la arquitectura general de un entorno de análisis de extremo de {{site.data.keyword.iot_full}}. ![IBM Watson IoT Platform para la arquitectura de analíticas de extremo](images/architecture_platform_edge.svg "IBM Watson IoT Platform para la arquitectura de analíticas de extremo")
 
 ## Antes de empezar
 {: #byb}
@@ -206,10 +205,10 @@ Para ver información sobre el estado de la pasarela:
  `MsgOutCount` | El número de mensajes que se enviado el EAA a {{site.data.keyword.iot_short}}.
  `MsgOutRate` | El número estimado de bytes de mensajes por segundos que ha enviado el EAA a {{site.data.keyword.iot_short}} durante el último minuto.
  `MsgReducePercent` | La diferencia de porcentaje entre los mensajes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(msgIn - msgOut) / msgIn`
-`BytesReducePercent` | La diferencia de porcentaje entre los bytes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(bytesIn - bytesOut) / bytesIn`
-`MsgRateReduce` | La diferencia de porcentaje entre el promedio de mensajes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(msgInRate - msgOutRate) / msgInRate`
-`BytesRateReduce` | La diferencia de porcentaje entre los bytes de mensajes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | La carga del sistema actual para el sistema donde se está ejecutando el EAA. **Nota:** La tasa de CPU que sólo se enviará si el mandato `mpstat` está disponible en el sistema donde se está ejecutando el EAA. De lo contrario, se enviará el promedio de carga del sistema para el último minuto. </br>“El promedio de carga del sistema es la suma del número de entidades ejecutables en cola para los procesadores disponibles y el número de entidades ejecutables que se ejecutan en el promedio de los procesadores disponibles durante un periodo de tiempo. El modo en que se calcula el promedio de carga es específico del sistema operativo, pero es normalmente un promedio amortiguado dependiente del tiempo. Si el promedio de carga no está disponible, se devolverá un valor negativo. ” - javadoc for *ManagementFactory.getOperatingSystemMXBean*.
+ `BytesReducePercent` | La diferencia de porcentaje entre los bytes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(bytesIn - bytesOut) / bytesIn`
+ `MsgRateReduce` | La diferencia de porcentaje entre el promedio de mensajes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(msgInRate - msgOutRate) / msgInRate`
+ `BytesRateReduce` | La diferencia de porcentaje entre los bytes de mensajes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(bytesInRate - bytesOutRate) / bytesInRate`
+ `SystemLoad` | La carga del sistema actual para el sistema donde se está ejecutando el EAA. **Nota:** La tasa de CPU que sólo se enviará si el mandato `mpstat` está disponible en el sistema donde se está ejecutando el EAA. De lo contrario, se enviará el promedio de carga del sistema para el último minuto. </br>“El promedio de carga del sistema es la suma del número de entidades ejecutables en cola para los procesadores disponibles y el número de entidades ejecutables que se ejecutan en el promedio de los procesadores disponibles durante un periodo de tiempo. El modo en que se calcula el promedio de carga es específico del sistema operativo, pero es normalmente un promedio amortiguado dependiente del tiempo. Si el promedio de carga no está disponible, se devolverá un valor negativo. ” - javadoc for _ManagementFactory.getOperatingSystemMXBean_.
  `FreeMemory` | El número de bytes de memoria libre para la máquina virtual Java™ (JVM) donde EAA se encuentra en ejecución.
  `MemoryUsed` | El número de bytes de memoria de JVM que utiliza EAA.
  `InQueueSize` | El número de mensajes que se ponen en cola para el proceso de EAA.

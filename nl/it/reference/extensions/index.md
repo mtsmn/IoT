@@ -39,7 +39,7 @@ L'integrazione Jasper integrata fornita dalla nostra piattaforma fornisce suppor
 Puoi accedere alle operazioni supportate nel drilldown del dispositivo di un dispositivo collegato a Jasper dopo che sono state completate le seguenti istruzioni di configurazione:
 
 ### API REST per Jasper
-Per accedere all'API REST per Jasper, consulta la sezione dell'estensione Jasper nella [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
+Per accedere all'API REST per Jasper, consulta la sezione dell'estensione Jasper nella documentazione [{{site.data.keyword.iot_short_notm}} HTTP REST API ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
 
 ### Configurazione di Jasper
 
@@ -62,8 +62,8 @@ Per configurare i tuoi dispositivi collegati a Jasper, completa la seguente proc
  3. Scorri verso il basso fino a *Extension Configuration*.
  4. Immetti la configurazione dell'estensione utilizzando il seguente formato JSON e quindi fai clic su **Confirm changes** per salvare la tua configurazione.  
 
-```json
-   {
+```json  
+    {
         "jasper": {
             "iccid": "string"
         }
@@ -91,7 +91,7 @@ L'estensione AT&T abilita le seguenti operazioni AT&T:
 - Modificare il piano tariffario
 
 ### API REST per AT&T
-Per accedere all'API REST per AT&T, consulta la sezione dell'estensione AT&T nella [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
+Per accedere all'API REST per AT&T, consulta la sezione dell'estensione AT&T nella documentazione [{{site.data.keyword.iot_short_notm}} HTTP REST API ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
 
 ### Configurazione di AT&T
 
@@ -118,8 +118,8 @@ Per configurare i tuoi dispositivi collegati a AT&T, completa la seguente proced
  3. Scorri verso il basso fino a *Extension Configuration*.
  4. Immetti la configurazione dell'estensione utilizzando il seguente formato JSON e quindi fai clic su **Confirm changes** per salvare la tua configurazione.  
 
-```json
-   {
+```json  
+    {
         "atnt": {
             "iccid": "string"
         }
@@ -149,7 +149,7 @@ Il connettore ARM mbed ti consente di collegare il tuo dispositivo ARM mbed a {{
 
 Esistono due tipi di messaggi in entrata dalla piattaforma ARM mbed, le notifiche e le risposte asincrone. {{site.data.keyword.iot_short_notm}} può inviare i comandi ai dispositivi collegati alla piattaforma ARM mbed.
 
-#### Notifiche
+#### Notifications
 
 Le notifiche vengono generate dalle modifiche nel dispositivo e nei dati del sensore. Dopo che {{site.data.keyword.iot_short_notm}} elabora il messaggio, è presente sull'argomento evento del dispositivo nello stesso modo di un dispositivo direttamente collegato a {{site.data.keyword.iot_short_notm}}. Il tipo di evento utilizzato per le notifiche generate nei dispositivi collegati alla piattaforma ARM mbed è `notify`.
 
@@ -167,7 +167,7 @@ Il seguente esempio di codice mostra il formato del payload per una notifica inv
 
 #### Risposte asincrone
 
-Quando {{site.data.keyword.iot_short_notm}} invia un comando a un dispositivo collegato alla piattaforma ARM mbed, il dispositivo restituisce un messaggio di conferma a {{site.data.keyword.iot_short_notm}}. Questo messaggio di conferma viene denominato *risposta asincrona* e utilizza il tipo di evento `asyncResponse`.
+Quando {{site.data.keyword.iot_short_notm}} invia un comando a un dispositivo collegato alla piattaforma ARM mbed, il dispositivo restituisce un messaggio di conferma a {{site.data.keyword.iot_short_notm}}. Questo messaggio di conferma viene denominato _risposta asincrona_ e utilizza il tipo di evento `asyncResponse`.
 
 Il seguente esempio di codice mostra il formato del payload per una risposta asincrona inviata dal servizio cloud ARM mbed:
 
@@ -223,7 +223,7 @@ Se hai un dispositivo collegato al tuo servizio {{site.data.keyword.iot_short_no
 - Stato ubicazione
 
 ### API REST per Orange
-Per accedere all'API REST per Orange, consulta la sezione dell'estensione Orange nella [Documentazione della API REST HTTP {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
+Per accedere all'API REST per Orange, consulta la sezione dell'estensione Orange nella documentazione [{{site.data.keyword.iot_short_notm}} HTTP REST API ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
 
 ### Configurazione di Orange
 
@@ -274,7 +274,7 @@ Per aggiungere un pacchetto di gestione personalizzato utilizzando il dashboard 
 3. Fai clic sul pulsante **Aggiungi pacchetto**.
 4. Selezione il tuo file pacchetto e fai clic su **Apri**.
 
-Per aggiungere un pacchetto di gestione personalizzato utilizzando l'API, consulta la [Documentazione API {{site.data.keyword.iot_short_notm}}![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Per aggiungere un pacchetto di gestione personalizzato utilizzando l'API, consulta la [Documentazione API {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Blockchain
 {: #blockchain}

@@ -1,11 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
-
-lastupdated: "2017-04-03"
-
----
+  years: 2015, 2017lastupdated: "2017-04-03"---
 
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}

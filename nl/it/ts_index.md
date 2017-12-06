@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-11-03"
 
 ---
 
@@ -68,18 +68,3 @@ Potrebbe essere che quando ti colleghi, stai utilizzando un valore per un opzion
 Puoi risolvere questo problema confermando di aver correttamente impostato i parametri ping e KeepAlive per la tua connessione.   
 {: tsResolve}
 
-
-## Come ottenere aiuto e supporto per {{site.data.keyword.iot_short_notm}}
-{: #gettinghelp}
-
-Se hai dei problemi o delle domande quando utilizzi {{site.data.keyword.iot_short_notm}}, puoi ottenere aiuto ricercando le informazioni o facendo delle domande in un forum. Inoltre puoi aprire un ticket di supporto.
-
-Quando utilizzi i forum per fare una domanda, contrassegnala con una tag in modo che sia visualizzabile dai team di sviluppo {{site.data.keyword.Bluemix_notm}}.
-
-* Se hai domande tecniche sullo sviluppo o la distribuzione di un'applicazione con {{site.data.keyword.iot_short_notm}}, inserisci la tua domanda in [Stack Overflow ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} e contrassegnala con le tag "ibm-bluemix" e "watson-iot".
-<!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum [IBM developerWorks dW Answers ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Includi le tag  "watson-iot" e "bluemix".
-
-Consulta [Come ottenere supporto](https://www.{DomainName}/docs/support/index.html#getting-help) per ulteriori dettagli sull'utilizzo dei forum.
-
-Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta [Come contattare il supporto ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.{DomainName}/docs/support/index.html#contacting-support).

@@ -76,13 +76,13 @@ Procédez comme suit pour connecter un service {{site.data.keyword.cloudant_shor
 
   b. Sélectionnez un fuseau horaire. L'heure définie dans le fuseau horaire sélectionné sera utilisée pour identifier les données de terminal d'intervalle à insérer et non l'heure locale sur le terminal. Les valeurs d'horodatage sur les données de terminal envoyées au service {{site.data.keyword.cloudant_short_notm}} seront converties dans le fuseau horaire sélectionné au moment de définir la base de données dans laquelle les données seront saisies.
 
-  c. Choisissez des options qui déterminent le nom de base de données. Le nom de base de données sera `iotp_<orgID>_<dbname>_<bucket_name>`, où :
+  c. Choisissez les options qui déterminent le nom de base de données. Le nom de base de données sera `iotp_<orgID>_<dbname>_<bucket_name>` où :
 
  +  * `<orgID>` est l'ID de votre organisation.
- +  * `<dbname>` est ce que vous avez choisi pour cette partie du nom de base de données contrôlé par la zone `Nom de base de données`.
+ +  * `<dbname>` est ce que vous avez choisi pour cette partie du nom de base de données contrôlé par la zone `Nom de la base de données`.
  +  * `<bucket_name>` est une chaîne déterminée par ce que vous avez choisi pour la zone `Intervalle` :
  +    * Pour les intervalles `quotidiens`, `<bucket_name>` est `aaaa-mm-jj`.  Par exemple, `2016-07-06` pour les événements qui se sont produits le 6 juillet 2016.
- +    * Pour les intervalles `hebdomadaires`, `<bucket_name>` est `yyyy-'w'ww`, où `'w'ww` indique un numéro de semaine.  Par exemple, `2016-w03` pour les événements qui se sont produits au cours de la troisième semaine de 2016.
+ +    * Pour les intervalles `hebdomadaires`, `<bucket_name>` est `aaaa-'w'ww` où `'w'ww` indique un numéro de semaine.  Par exemple, `2016-w03` pour les événements qui se sont produits au cours de la troisième semaine de 2016.
  +    * Pour les intervalles `mensuels`, `<bucket_name>` est `aaaa-mm`.  Par exemple, `2016-07` pour les événements qui se sont produits en juillet 2016.
 
 5. Cliquez sur **Autoriser**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-10-02"
 
 ---
 
@@ -130,13 +130,12 @@ Dabei ist *Organisations-ID* die ID Ihrer {{site.data.keyword.iot_short_notm}}-O
 Mit dieser Kombination von Parametern wird Ihr Gerät eindeutig angegeben.
 - Benutzername: use-token-auth  
 Dieser Wert gibt an, dass Sie zur Autorisierung ein Token verwenden.
-- Kennwort: *Authentifizierungstoken*  
-Dieser Wert ist das eindeutige Token, das Sie definiert haben oder dass Ihrem Gerät bei der Registrierung zugewiesen wurde.
+- Kennwort: *Authentication token*  
+Dieser Wert ist das eindeutige Token, das Sie definiert haben oder das Ihrem Gerät bei der Registrierung zugewiesen wurde.
 - Format des Ereignistopics: iot-2/evt/*Ereignis-ID*/fmt/*Format_Zeichenfolge*  
 Dabei gibt *Ereignis-ID* den in {{site.data.keyword.iot_short_notm}} angezeigten Ereignisnamen an und *Format_Zeichenfolge* ist das Format des Ereignisses, zum Beispiel 'JSON'.
-- Nachrichtenformat: JSON
-   
- {{site.data.keyword.iot_short_notm}} unterstützt mehrere Formate wie beispielsweise JSON und 'text'.
+- Nachrichtenformat: JSON  
+ {{site.data.keyword.iot_short_notm}} unterstützt mehrere Formate wie beispielsweise das JSON-Format und das Textformat.
 
 Weitere Informationen zum Herstellen einer Verbindung für Ihr Gerät finden Sie in der technischen Dokumentation in [MQTT-Konnektivität für Geräte](devices/mqtt.html).
 

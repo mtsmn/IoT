@@ -45,7 +45,7 @@ A única versão da API (interface de programação de aplicativos) REST HTTP (P
 # APIs de sistema de mensagens HTTP para aplicativos
 {: #rest_messaging_api}
 
-Para acessar a documentação da API de sistema de mensagens HTTP do {{site.data.keyword.iot_short_notm}} e localizar mais informações sobre a publicação de eventos e o envio de comandos usando HTTP, veja [API de sistema de mensagens HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
+Para acessar a documentação da API do sistema de mensagens HTTP do {{site.data.keyword.iot_short_notm}} e encontrar mais informações sobre a publicação de eventos e o envio de comandos usando HTTP, consulte [API do sistema de mensagens HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
 ## Publicando eventos e comandos
 {: #event_command_publication}

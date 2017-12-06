@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -84,11 +84,11 @@ iotdm-1/response
 ### Format de message pour une demande Gérer le terminal
 
 
-Dans une demande Gérer le terminal, la zone `d` et tous ses sous-ensembles sont facultatifs. Les valeurs de zone `metadata` et `deviceInfo` remplacent les attributs correspondants pour le terminal émetteur, s'ils sont envoyés.
+Dans une demande Gérer le terminal, la zone ``d`` et tous ses sous-ensembles sont facultatifs. Les valeurs de zone ``metadata`` et ``deviceInfo`` remplacent les attributs correspondants pour le terminal émetteur, s'ils sont envoyés.
 
-La zone `lifetime` facultative spécifie le nombre de secondes durant lesquelles le terminal doit envoyer une autre demande Gérer le terminal afin d'éviter d'être classé comme en veille et devenir un terminal non géré. Si la zone `lifetime` est omise ou définie avec la valeur `0`, le terminal géré n'est pas classé comme en veille. La valeur minimale prise en charge pour la zone `lifetime` est `3600` secondes, autrement dit, 1 heure.
+La zone ``lifetime`` facultative spécifie le nombre de secondes durant lesquelles le terminal doit envoyer une autre demande Gérer le terminal afin d'éviter d'être classé comme en veille et devenir un terminal non géré. Si la zone ``lifetime`` est omise ou définie avec la valeur ``0``, le terminal géré n'est pas classé comme en veille. La valeur minimale prise en charge pour la zone ``lifetime`` est ``3600`` secondes, autrement dit, 1 heure.
 
-Les zones facultatives `supports.deviceActions` et `supports.firmwareActions` indiquent les fonctions de l'agent de gestion des terminaux. Si `supports.deviceActions` est défini, l'agent prend en charge les actions de redémarrage et de réinitialisation avec les paramètres d'usine. Pour un terminal qui ne fait pas la distinction entre un redémarrage et une réinitialisation avec les paramètres d'usine, il est acceptable d'utiliser le même comportement pour les deux actions. Si `supports.firmwareActions` est défini, l'agent prend en charge les actions de téléchargement de microprogramme et de mise à jour de microprogramme.
+Les zones facultatives ``supports.deviceActions`` et ``supports.firmwareActions`` indiquent les fonctions de l'agent de gestion des terminaux. Si ``supports.deviceActions`` est défini, l'agent prend en charge les actions de redémarrage et de réinitialisation avec les paramètres d'usine. Pour un terminal qui ne fait pas la distinction entre un redémarrage et une réinitialisation avec les paramètres d'usine, il est acceptable d'utiliser le même comportement pour les deux actions. Si ``supports.firmwareActions`` est défini, l'agent prend en charge les actions de téléchargement de microprogramme et de mise à jour de microprogramme.
 
 L'exemple suivant illustre le format de demande :
 
@@ -249,7 +249,7 @@ iotdm-1/device/update
 ### Format de message pour une demande Mettre à jour l'emplacement
 
 
-La zone `measuredDateTime` contient la date à laquelle l'emplacement a été mesuré. La zone `updatedDateTime` contient la date à laquelle les informations de terminal ont été mises à jour. Pour des raisons d'efficacité, {{site.data.keyword.iot_short_notm}} effectue parfois des mises à jour par lots des informations d'emplacement, de sorte que les mises à jour soient légèrement retardées. La latitude et la longitude doivent être spécifiés en degrés décimaux à l'aide de World Geodetic System 1984 (WGS84).
+La zone ``measuredDateTime`` contient la date à laquelle l'emplacement a été mesuré. La zone ``updatedDateTime`` contient la date à laquelle les informations de terminal ont été mises à jour. Pour des raisons d'efficacité, {{site.data.keyword.iot_short_notm}} effectue parfois des mises à jour par lots des informations d'emplacement, de sorte que les mises à jour soient légèrement retardées. La latitude et la longitude doivent être spécifiés en degrés décimaux à l'aide de World Geodetic System 1984 (WGS84).
 
 Chaque fois qu'un emplacement est mis à jour, les valeurs fournies pour latitude, longitude, elevation et uncertainty sont considérées comme une seule mise à jour de valeurs multiples. Les valeurs définies pour latitude et longitude sont obligatoires et doivent être indiquées pour chaque mise à jour.  Les valeurs définies pour elevation et uncertainty sont facultatives et peuvent être omises.
 
@@ -327,7 +327,7 @@ Topic: iotdm-1/device/update
 }
 ```
 
-**Remarque :** Le paramètre `reqID` n'est pas utilisé, car le terminal n'est pas tenu de répondre.
+**Remarque :** Le paramètre ``reqID`` n'est pas utilisé, car le terminal n'est pas tenu de répondre.
 
 ## Demandes Mettre à jour les attributs du terminal
 {: #update-attributes}
@@ -597,7 +597,7 @@ Topic: iotdm-1/response
 
 {{site.data.keyword.iot_short_notm}} peut envoyer une demande Observer les modifications d'attributs à un terminal afin d'observer les modifications apportées à un ou plusieurs attributs de terminal. Lorsque le terminal reçoit la demande, il doit envoyer une demande de notification à {{site.data.keyword.iot_short_notm}} chaque fois que les valeurs des attributs observés sont modifiées.
 
-**Important :** Les terminaux doivent implémenter des opérations d'observation, de notification et d'annulation afin d'assurer la prise en charge des demandes de type [Actions sur le microprogramme - mettre à jour](requests.html#firmware-actions-update).
+**Important :** Les terminaux doivent implémenter des opérations d'observation, de notification et d'annulation afin d'assurer la prise en charge des demandes de type [Actions sur le microprogramme - mettre à jour](requests.html#firmware-actions-update). Les demandes Observer les modifications d'attributs ne sont utilisées que dans le contexte des demandes de microprogramme.
 
 ### Sujet pour une demande Observer les modifications d'attributs
 
@@ -624,7 +624,9 @@ Topic: iotdm-1/observe
 {
     "d": {
         "fields": [
-            "string"
+            {
+                "field": "field_name"
+            }
         ]
     },
     "reqId": "string"
@@ -660,7 +662,7 @@ Topic: iotdevice-1/response
 
 Le paramètre `message` doit être spécifié si la valeur du paramètre `rc` est différente de `200`.
 
-**Important :** Les terminaux doivent implémenter des opérations d'observation, de notification et d'annulation afin d'assurer la prise en charge des demandes de type [Actions sur le microprogramme - mettre à jour](requests.html#firmware-actions-update).
+**Important :** Les terminaux doivent implémenter des opérations d'observation, de notification et d'annulation afin d'assurer la prise en charge des demandes de type [Actions sur le microprogramme - mettre à jour](requests.html#firmware-actions-update). Les demandes Annuler l'observation d'attributs ne sont utilisées que dans le contexte des demandes de microprogramme.
 
 ### Sujet pour une demande Annuler l'observation d'attributs
 
@@ -684,7 +686,9 @@ Topic: iotdm-1/cancel
 {
     "d": {
         "fields": [
-            "string"
+            {
+                "field": "field_name"
+            }
         ]
     },
     "reqId": "string"
@@ -715,7 +719,7 @@ La valeur du paramètre `field_name` correspond au nom de l'attribut qui a été
 
 Lorsque le traitement de la demande de notification aboutit, la valeur du paramètre `rc` est `200`. Si la demande est incorrecte, la valeur du paramètre `rc` est `400`. Si le paramètre spécifié dans la demande de notification n'est pas observé, la valeur du paramètre `rc` est `404`.
 
-**Important :** Les terminaux doivent implémenter des opérations d'observation, de notification et d'annulation afin d'assurer la prise en charge des demandes de type [Actions sur le microprogramme - mettre à jour](requests.html#firmware-actions-update).
+**Important :** Les terminaux doivent implémenter des opérations d'observation, de notification et d'annulation afin d'assurer la prise en charge des demandes de type [Actions sur le microprogramme - mettre à jour](requests.html#firmware-actions-update). Les demandes Notifier les modifications d'attributs ne sont utilisées que dans le contexte des demandes de microprogramme.
 
 
 ### Sujet pour une demande Notifier les modifications d'attributs
@@ -739,8 +743,12 @@ Message sortant depuis le terminal :
 Topic: iotdevice-1/notify
 {
     "d": {
-        "field": "field_name",
-        "value": "field_value"
+        "fields": [
+            {
+                "field": "field_name",
+                "value": "field_value"
+            }
+        ]
     }
     "reqId": "string"
 }

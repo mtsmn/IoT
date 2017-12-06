@@ -310,7 +310,7 @@ boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, Co
 
 Para visualizar o código inteiro, veja o exemplo de dispositivo [HttpDeviceEventPublish ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")].{: new_window}
 
-Com base nas configurações no arquivo de propriedades, o método `publishEventOverHTTP()` publica o evento no modo de iniciação rápida ou no modo de fluxo registrado. Quando o ID da organização no arquivo de propriedades é configurado como `quickstart`, o método `publishEventOverHTTP()` publica o evento para o serviço de iniciação rápida de exemplo do
+Com base nas configurações no arquivo de propriedades, o método ``publishEventOverHTTP()`` publica o evento no modo de iniciação rápida ou no modo de fluxo registrado. Quando o ID da organização no arquivo de propriedades é configurado como ``quickstart``, o método ``publishEventOverHTTP()`` publica o evento para o serviço de iniciação rápida de exemplo do
 dispositivo e publica o evento em formato HTTP simples. Quando uma organização registrada válida é especificada no arquivo de propriedades, os eventos são publicados de forma segura por meio de HTTPS.
 
 O protocolo HTTP (Protocolo de Transporte de Hipertexto) fornece entrega 'no máximo uma vez', o que é semelhante ao nível de qualidade de serviço 'no máximo uma vez' (QoS 0) do protocolo MQTT. Ao usar a entrega 'no máximo uma vez' para publicar eventos, o aplicativo deverá implementar a lógica de nova tentativa sempre que houver um erro.
@@ -347,7 +347,7 @@ import com.ibm.iotf.client.device.DeviceClient;
 //Implement the CommandCallback class to provide the way in which you want the command to be handled
 class MyNewCommandCallback implements CommandCallback, Runnable {
 
-    // A queue to hold & process the commands for smooth handling of MQTT messages
+    // A queue to hold &  process the commands for smooth handling of MQTT messages
     private BlockingQueue<Command> queue = new LinkedBlockingQueue<Command>();
 
     /**

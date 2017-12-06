@@ -15,7 +15,7 @@
    viewBox="0 0 645.38815 354.92773"
    id="svg5645"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.1 r15371"
    sodipodi:docname="architecture_generic.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
@@ -462,15 +462,16 @@
    fit-margin-left="0"
    fit-margin-right="0"
    fit-margin-bottom="0"
-   inkscape:zoom="1.36"
-   inkscape:cx="417.2305"
-   inkscape:cy="206.17199"
+   inkscape:zoom="1.3880716"
+   inkscape:cx="402.75302"
+   inkscape:cy="305.45976"
    inkscape:window-width="1920"
-   inkscape:window-height="1019"
-   inkscape:window-x="-9"
-   inkscape:window-y="1041"
+   inkscape:window-height="1017"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg5645" />
+
 
 
 
@@ -507,7 +508,7 @@
       <dc:format>image/svg+xml</dc:format>
       <dc:type
          rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      <dc:title></dc:title>
+      <dc:title />
     </cc:Work>
   </rdf:RDF>
 </metadata>
@@ -563,7 +564,7 @@
 <flowRoot
    xml:space="preserve"
    id="flowRoot7250"
-   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
    transform="translate(0,287.3622)"><flowRegion
      id="flowRegion7252"><rect
        id="rect7254"
@@ -571,10 +572,11 @@
        height="181.5571"
        x="701.39276"
        y="252.01556" /></flowRegion><flowPara
-     id="flowPara7256" /></flowRoot><flowRoot
+     id="flowPara7256"
+     style="font-size:40px;line-height:1.25"> </flowPara></flowRoot><flowRoot
    xml:space="preserve"
    id="flowRoot7455"
-   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
    transform="translate(0,287.3622)"><flowRegion
      id="flowRegion7457"><rect
        id="rect7459"
@@ -582,10 +584,11 @@
        height="131.02942"
        x="26.548443"
        y="637.39618" /></flowRegion><flowPara
-     id="flowPara7461" /></flowRoot><flowRoot
+     id="flowPara7461"
+     style="font-size:40px;line-height:1.25"> </flowPara></flowRoot><flowRoot
    xml:space="preserve"
    id="flowRoot6413"
-   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
    transform="translate(16.120655,362.60083)"><flowRegion
      id="flowRegion6415"><rect
        id="rect6417"
@@ -593,10 +596,11 @@
        height="118.18339"
        x="360.54498"
        y="137.15674" /></flowRegion><flowPara
-     id="flowPara6419" /></flowRoot><flowRoot
+     id="flowPara6419"
+     style="font-size:40px;line-height:1.25"> </flowPara></flowRoot><flowRoot
    xml:space="preserve"
    id="flowRoot6453"
-   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
    transform="translate(16.120655,362.60083)"><flowRegion
      id="flowRegion6455"><rect
        id="rect6457"
@@ -604,7 +608,8 @@
        height="357.11935"
        x="388.80621"
        y="143.15155" /></flowRegion><flowPara
-     id="flowPara6459" /></flowRoot>
+     id="flowPara6459"
+     style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>
 
 
 
@@ -631,15 +636,18 @@
 <flowRoot
    xml:space="preserve"
    id="flowRoot6802"
-   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:'MS UI Gothic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'MS UI Gothic, Normal';font-stretch:normal;font-variant:normal;font-size:11.18500079px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    transform="translate(42.796348,-9.2906045)"><flowRegion
-     id="flowRegion6804"><rect
+     id="flowRegion6804"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.18500079px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"><rect
        id="rect6806"
        width="334.85294"
        height="108.76297"
        x="638.87543"
-       y="193.67924" /></flowRegion><flowPara
-     id="flowPara6808" /></flowRoot><rect
+       y="193.67924"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.18500079px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;" /></flowRegion><flowPara
+     id="flowPara6808"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"> </flowPara></flowRoot><rect
    ry="0"
    rx="0"
    y="12.299622"
@@ -672,15 +680,15 @@
    id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
    style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
 <text
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.18500079px;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text44191"
    font-size="11"
    x="282.80798"
-   y="86.347168"
-   sodipodi:linespacing="125%">IoT Platform</text>
+   y="86.347168">IoT Platform</text>
 <g
    id="g6574"
-   transform="translate(389.96176,64.919575)">
+   transform="translate(389.96176,64.919575)"
+   style="">
   <circle
      style="fill:#264a60"
      cx="-133"
@@ -719,7 +727,8 @@
      d="m -135.6,22.8 -0.3,-0.3 c 0.1,0.2 0.2,0.3 0.3,0.3 z"
      id="path6587" />
   <g
-     id="g6589">
+     id="g6589"
+     style="">
     <defs
        id="defs6591">
       <circle
@@ -776,27 +785,27 @@
      id="path6606" />
 </g>
 <text
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.18500079px;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text44191-6"
    font-size="11"
    x="507.91364"
-   y="85.198486"
-   sodipodi:linespacing="125%">IBM Blockchain</text>
+   y="85.198486">IBM Blockchain</text>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;font-size:12.50000094px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke-opacity:1;stroke-width:0.34406253;stroke-miterlimit:4;stroke-dasharray:none"
    x="464.91357"
    y="44.784241"
-   id="text266398-3-9"
-   sodipodi:linespacing="125%"><tspan
+   id="text266398-3-9"><tspan
      sodipodi:role="line"
      x="464.91357"
      y="44.784241"
-     id="tspan6717-0">IBM Blockchain ファブリック </tspan><tspan
+     id="tspan6717-0"
+     style="font-size:12.50000094px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.34406253;stroke-miterlimit:4;stroke-dasharray:none">IBM Blockchain ファブリック </tspan><tspan
      sodipodi:role="line"
      x="464.91357"
      y="59.784241"
-     id="tspan266402-8-8" /></text>
+     id="tspan266402-8-8"
+     style="font-size:12.50000094px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.34406253;stroke-miterlimit:4;stroke-dasharray:none"> </tspan></text>
 <image
    y="64.350403"
    x="466.2005"
@@ -804,7 +813,8 @@
    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAABDlBMVEX///8/eLs/eLs/eLs/eLs/ eLs/eLs/eLs/eLs/eLs/eLs/eLs/eLsrP0otQEwtQUwtQk8vQ08vQ1AwRVUzRE8zSFY0Slg0Slk0 TWE2TFs2UGg4Tl44VG47W3s8VGU9XoM+Yoo/TVc/V2g/eLtAWmxAZpJBaZlBcKlBdLJCbaBEX3RE er1GY3hIZXtJbZtMbIRNWWZOhcVPfr9Qco1QiMZUeJZVXWdWYW5We5pWjcpYf59bhMJbk81chqpf jbVilcBinNRkn9Vlnc1misZnbnlppdlqcHpsi8BwkcqGn9KNkJiQp9aanaSbpb2br9qvs7uywOK3 uL29yebK0+vW3vDY2dzj6fXr7O7x9Pv///8O4LkEAAAADXRSTlMAECAwQFBggKCwwNDw0fJA6AAA Av9JREFUWMO9l31/0jAQx+ko0NJFkVlFt3XTKCA459iY4oY8GWU+TDamwvt/I7ZNUpLm+oDl4/1D 2bhvc5fc7y65XITpJdPCzCyzpOfWMa1oYsXMopbSXTdwhBn5NO5lHGPlpFA0AyeYERtIYRsn2nYh 2l95/cmIkNGJsoio5VuKP/FNIVhaOn88ooARTkPYAsInzIBEaCneHwdQ1wD5R4fgERLyH5tEdS8K EXsObOMkeBLOg8YSeDYkZHgWd4ouZsvfV2oiWQCXdMWXke6d2dKzu2koCJ29n5Beu90jJGINnevF ktmcInhlsfobkp730SND0P9b4O7Z7MKrTeqfD3a97X20wX3Ht9RxcT1niEmwBCMGUK9V9pv+05y6 dzCe3vmAKc+Cxn+shtCoIdcqhxxw26F/v1owAPY2osh/Hk5iY8/1bnVthHZeUsCU/zT4UnQBK/2U trG5X0HoxcD9flpFqFaHAaYLEBIlHKQD193pU+L42EW8+wUBcHAIZDvcQcj+QAIbtNxoPv8BAHqu BPi7wVe7RLKBg9DDH0oScSkHtBBcQ/dfD2QA6T66h27C2+glwQIB71uo9XHlPT617a6DbsIHyZMF DAL6ZHBc5Ulkjz5AOsp+FqMA7LV+AuliHPQzVEwJAC/wXXu3esTS4aA3cjmDgIkEcE/R4zF/dFBd EhQIwP4vAPoOEQGipKmAQHDiADgSIAjO238BiIJzvg7AAgRnDYDFj7IkOOfoaKwA+jYEMHkxSYLz aVVMHOAVU+WVCijxcpb14vszXs4U4JfzXhNIgc4FJSw4Xx9QQfEAvqA8bYBiH0iaolhfqKS5ACpp cPMzA1EFJM8X1edPmKjCza8YyDqo2qKsw81PCxoL2DfExgJ2DmPVW8HOpY48od6VF5or0DsTAWWp vavdW7FwCHpowOgAgiNZKImGMuIAgiObtI3irFgAZihwyBIPUmGTY172QTP7qLtKZLphe2vz4372 C0f2K88GLl3Zr33ZL57+6Bt99dX/z+V7vev/XwE/OHJS69EMAAAAAElFTkSuQmCC "
    preserveAspectRatio="none"
    height="33.169552"
-   width="32.313148" />
+   width="32.313148"
+   style="" />
 <rect
    x="525.24353"
    y="278.35999"
@@ -818,19 +828,17 @@
    id="path146449"
    inkscape:connector-curvature="0" />
 <text
-   sodipodi:linespacing="125%"
    y="194.8121"
    x="542.29352"
    font-size="11"
    id="text56834-0-3"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">検証</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.18500079px;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">検証</text>
 <text
-   sodipodi:linespacing="125%"
    y="289.89551"
    x="523.62494"
    font-size="11"
    id="text56834-0-2-2"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">REST</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.18500079px;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">REST</text>
 <path
    inkscape:connector-curvature="0"
    id="path13589"
@@ -871,23 +879,25 @@
    style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-size:11.18500079px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    x="517.93188"
    y="324.27954"
-   id="text18189-6-6"
-   sodipodi:linespacing="125%"><tspan
+   id="text18189-6-6"><tspan
      sodipodi:role="line"
      x="517.93188"
      y="324.27954"
-     id="tspan5855">IoT Blockchain</tspan><tspan
+     id="tspan5855"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">IoT Blockchain</tspan><tspan
      sodipodi:role="line"
      x="517.93188"
      y="338.02954"
-     id="tspan6878-4-2">Monitoring UI</tspan><tspan
+     id="tspan6878-4-2"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">Monitoring UI</tspan><tspan
      sodipodi:role="line"
      x="517.93188"
      y="351.77954"
-     id="tspan18193-1-8" /></text>
+     id="tspan18193-1-8"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"> </tspan></text>
 <g
    id="g18195-6"
    transform="translate(-726.78827,189.31799)"
@@ -913,12 +923,11 @@
    id="rect56941-0-3-9"
    style="fill:#ffffff" />
 <text
-   sodipodi:linespacing="125%"
    y="100.77094"
    x="177.79199"
    font-size="11"
    id="text56834-0-4"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">HTTP</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.18500079px;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">HTTP</text>
 <rect
    ry="0"
    rx="0"
@@ -929,15 +938,14 @@
    id="rect79371-1-6-6-9-8-7-3-5-2-48"
    style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none" />
 <text
-   sodipodi:linespacing="125%"
    y="172.62276"
-   x="547.18237"
+   x="527.45703"
    font-size="11"
    id="text59612"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.50000048px;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
    transform="scale(1.0456227,0.95636791)">
   <tspan
-     style="font-size:4.94800615px"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.50000048px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
      id="tspan6509">スマート・コントラクト</tspan>
 </text>
 <g
@@ -972,20 +980,21 @@
      style="fill:#66d1f5;fill-opacity:1" />
 </g>
 <text
-   sodipodi:linespacing="125%"
    id="text44235-49"
    y="146.08774"
    x="526.43842"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-size:11.18500079px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    xml:space="preserve"><tspan
      id="tspan44239-5"
      y="146.08774"
      x="526.43842"
-     sodipodi:role="line">ピア A</tspan><tspan
+     sodipodi:role="line"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">ピア A</tspan><tspan
      y="159.83774"
      x="526.43842"
      sodipodi:role="line"
-     id="tspan6445" /></text>
+     id="tspan6445"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"> </tspan></text>
 <path
    inkscape:connector-curvature="0"
    id="path13579"
@@ -1001,35 +1010,35 @@
    id="rect79371-1-6-6-9-8-7-3-5-2-2"
    style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none" />
 <text
-   sodipodi:linespacing="125%"
    id="text44235-7"
    y="229.48593"
    x="526.98096"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-size:11.18500079px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    xml:space="preserve"><tspan
      id="tspan44239-7"
      y="229.48593"
      x="526.98096"
-     sodipodi:role="line">ピア B</tspan><tspan
+     sodipodi:role="line"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">ピア B</tspan><tspan
      y="243.23593"
      x="526.98096"
      sodipodi:role="line"
-     id="tspan6445-3" /></text>
+     id="tspan6445-3"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"> </tspan></text>
 <path
    inkscape:connector-curvature="0"
    id="path13579-3"
    d="m 473.84471,214.24371 0,5.867 0,29.133 44,0 0,-29.133 0,-5.867 -44,0 z m 42,33 -40,0 0,-25 40,0 0,25 z"
    style="fill:#66d1f5;fill-opacity:1" />
 <text
-   sodipodi:linespacing="125%"
    y="260.681"
-   x="547.41492"
+   x="529.48279"
    font-size="11"
    id="text59612-2"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.50000048px;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
    transform="scale(1.0456227,0.95636791)">
   <tspan
-     style="font-size:4.94800615px"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.50000048px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
      id="tspan6509-5">スマート・コントラクト</tspan>
 </text>
 <g
@@ -1085,12 +1094,12 @@
    id="rect56941-0-9"
    style="fill:#f2f2f2" />
 <text
-   sodipodi:linespacing="125%"
    y="146.88394"
    x="409.65216"
    font-size="11"
    id="text56834-0-2-2-3"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">REST</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.18500079px;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">REST</text>
+
 
 
 
@@ -1108,30 +1117,31 @@
        width=&quot;50&quot; /&gt;
     <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000095px;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.34406254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    x="235.86133"
    y="39.842865"
-   id="text266398"
-   sodipodi:linespacing="125%"><tspan
+   id="text266398"><tspan
      sodipodi:role="line"
      id="tspan266400"
      x="235.86133"
-     y="39.842865">Watson™ IoT Platform </tspan><tspan
+     y="39.842865"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000095px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke:#000000;stroke-width:0.34406254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Watson™ IoT Platform</tspan><tspan
      sodipodi:role="line"
      x="235.86133"
-     y="54.842865"
-     id="tspan4323">と IoT Blockchain</tspan><tspan
+     y="55.467865"
+     id="tspan4323"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000095px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke:#000000;stroke-width:0.34406254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">と IoT Blockchain</tspan><tspan
      sodipodi:role="line"
      x="235.86133"
-     y="69.842865"
-     id="tspan266402" /></text>
+     y="71.092865"
+     id="tspan266402"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000095px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke:#000000;stroke-width:0.34406254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"> </tspan></text>
 <text
-   sodipodi:linespacing="125%"
    y="9.4960632"
    x="215.65582"
    font-size="13"
    id="text56812"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Bluemix</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000094px;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.34406253;stroke-miterlimit:4;stroke-dasharray:none">IBM® Bluemix</text>
 <g
    id="g5722"
    transform="matrix(0.10411489,0,0,0.1041149,14.523878,72.208945)"
@@ -1162,23 +1172,26 @@
 </g>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-size:11.18500079px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    x="71.955322"
    y="87.296356"
-   id="text44241"
-   sodipodi:linespacing="125%"><tspan
+   id="text44241"><tspan
      sodipodi:role="line"
      x="71.955322"
      y="87.296356"
-     id="tspan44245">Watson IoT </tspan><tspan
+     id="tspan44245"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">Watson IoT </tspan><tspan
      sodipodi:role="line"
      x="71.955322"
      y="101.04636"
-     id="tspan5792">Platform</tspan><tspan
+     id="tspan5792"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">Platform</tspan><tspan
      sodipodi:role="line"
      x="71.955322"
-     y="114.79636"
-     id="tspan9810">ダッシュボード</tspan></text>
+     y="115.71618"
+     id="tspan9810"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">ダッシュボード</tspan></text>
+
 
 
 
@@ -1216,29 +1229,30 @@
    style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-size:11.18500079px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    x="69.512451"
    y="152.5499"
-   id="text18189-1"
-   sodipodi:linespacing="125%"><tspan
+   id="text18189-1"><tspan
      sodipodi:role="line"
      id="tspan18191-0"
      x="69.512451"
-     y="152.5499" /><tspan
+     y="152.5499"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"> </tspan><tspan
      sodipodi:role="line"
      x="69.512451"
-     y="166.2999"
-     id="tspan8202">IoT デバイス</tspan><tspan
+     y="167.21973"
+     id="tspan8202"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">IoT デバイス</tspan><tspan
      sodipodi:role="line"
      x="69.512451"
-     y="180.0499"
+     y="180.96973"
      id="tspan6878-8"
-     style="font-size:7.5px;stroke:none" /><tspan
+     style="font-size:11.18500079px;line-height:1.25;stroke:none;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"> </tspan><tspan
      sodipodi:role="line"
      x="69.512451"
-     y="193.7999"
+     y="194.71973"
      id="tspan18193-4"
-     style="font-size:7.5px;stroke:none" /></text>
+     style="font-size:11.18500079px;line-height:1.25;stroke:none;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"> </tspan></text>
 <path
    inkscape:connector-curvature="0"
    id="path8199-4-4"
@@ -1252,26 +1266,28 @@
    id="rect56941-0-3-9-6-6"
    style="opacity:1;fill:#ffffff" />
 <text
-   sodipodi:linespacing="125%"
    y="158.16129"
    x="179.88013"
    font-size="11"
    id="text56834-0-4-80-3"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000191px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.18500079px;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">
   <tspan
      sodipodi:role="line"
      id="tspan5794"
      x="179.88013"
-     y="158.16129">MQTT</tspan>
+     y="158.16129"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">MQTT</tspan>
   <tspan
      sodipodi:role="line"
      id="tspan5796"
      x="179.88013"
-     y="171.91129">HTTP</tspan>
+     y="171.91129"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">HTTP</tspan>
 </text>
 <g
    id="g5278"
-   transform="translate(16.965878,138.79471)">
+   transform="translate(16.965878,138.79471)"
+   style="">
   <path
      id="path5280"
      d="M 40,12 35.33,12 9.67,12 5,12 5,33 9.67,33 35.34,33 40,33 40,12 Z m -9.22,8.06 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -18.57,-4.88 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -0.02,1.5 7.87,0 0,-7.87 -7.87,0 0,7.87 z m -10.98,-2.5 c 1.1,0 2,0.9 2,2 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 0,-1.11 0.9,-2 2,-2 z m 1.98,-2.88 -4,0 0,-4 4,0 0,4 z"
@@ -1281,19 +1297,21 @@
 </g>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-size:11.18500079px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    x="301.34351"
    y="140.62759"
-   id="text18189-6-6-7"
-   sodipodi:linespacing="125%"><tspan
+   id="text18189-6-6-7"><tspan
      sodipodi:role="line"
      x="301.34351"
      y="140.62759"
-     id="tspan18193-1-8-5">ブロック・チェーン・</tspan><tspan
+     id="tspan18193-1-8-5"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">ブロック・チェーン・</tspan><tspan
      sodipodi:role="line"
      x="301.34351"
      y="154.37759"
-     id="tspan5893">プロキシー</tspan></text>
+     id="tspan5893"
+     style="font-size:11.18500079px;line-height:1.25;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">プロキシー</tspan></text>
+
 
 
 

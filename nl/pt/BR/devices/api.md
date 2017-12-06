@@ -32,14 +32,14 @@ Para obter informações sobre segurança do cliente e como conectar clientes a 
 # API (interface de programação de aplicativos) do sistema de mensagens REST HTTP (Protocolo de Transporte de Hipertexto) para dispositivos
 {: #rest_messaging_api}
 
-Para acessar a documentação da API de sistema de mensagens HTTP do {{site.data.keyword.iot_short_notm}} e localizar mais informações sobre a publicação de eventos usando HTTP, veja [API de sistema de mensagens HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
+Para acessar a documentação da API do sistema de mensagens HTTP do {{site.data.keyword.iot_short_notm}} e encontrar mais informações sobre a publicação de eventos usando HTTP, consulte [API do sistema de mensagens HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
 ## Publicando eventos
 {: #event_publication}
 
 Além de usar o protocolo de sistema de mensagens MQTT, também é possível configurar seus dispositivos para publicar eventos no {{site.data.keyword.iot_short_notm}} por HTTP (Protocolo de Transporte de Hipertexto) usando comandos da API (interface de programação de aplicativos) REST HTTP (Protocolo de Transporte de Hipertexto).
 
-Use uma das URLs (Localizadores Uniformes de Recursos) a seguir para enviar uma solicitação de `POST` de um dispositivo que está conectado ao {{site.data.keyword.iot_short_notm}}:
+Use uma das URLs (Localizadores Uniformes de Recursos) a seguir para enviar uma solicitação de ``POST`` de um dispositivo que está conectado ao {{site.data.keyword.iot_short_notm}}:
 
 ### Solicitação de POST não segura
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>

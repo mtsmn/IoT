@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-06-13"
 ---
 
 {:new_window: target="\_blank"}
@@ -18,7 +18,7 @@ I certificati sono utilizzati per l'autenticazione del dispositivo o per sostitu
 
 Per configurare i certificati e l'accesso al server per i dispositivi, l'operatore di sistema registra i certificati dell'autorità di certificazione (CA, Certificate Authority) e i certificati del server di messaggistica nella piattaforma {{site.data.keyword.iot_short_notm}}.
 
-Per informazioni sull'utilizzo delle API per gestire i certificati CA e i certificati dei server di messaggistica, consulta [IBM Watson IoT Platform Authentication and Authorization APIs ![Icona link esterno](../../../../icons/launch-glyph.svg)"Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
+Per informazioni sull'utilizzo delle API per gestire i certificati CA e i certificati dei server di messaggistica, consulta [IBM Watson IoT Platform Authentication and Authorization APIs ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
 
 ## Certificati CA
 I certificati CA consentono all'organizzazione di riconoscere i certificati client sui dispositivi come attendibili in modo che i dispositivi possano collegarsi al server.
@@ -37,9 +37,9 @@ Per i dispositivi, il formato del campo **CN** è `CN=d:tipodispositivo:iddispos
 
 Per i gateway, il formato del campo **CN** è `CN=g:Idtipo:Iddispositivo` e il formato del campo **SubjectAltName** è SubjectAltName=email:g:*tipodispositivo:iddispositivo*
 
-Nota: non includere `orgId` nei campi **CN** o **SubjectAltName** per i certificati dispositivo o gateway.  `orgId` deve essere fornito come parte delle informazioni SNI fornite dall'implementazione client quando si stabilisce una connessione al server di messaggistica.
+Nota: non includere `orgId` nei campi **CN** o **SubjectAltName** per i certificati dispositivo o gateway. `orgId` deve essere fornito come parte delle informazioni SNI fornite dall'implementazione client quando si stabilisce una connessione al server di messaggistica.
 
-Per ulteriori informazioni sui certificati client, consulta [la ricetta Connect Raspberry Pi to IBM Watson IoT Platform using Client side Certificates ![Icona link esterno](../../../../icons/launch-glyph.svg) "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
+Per ulteriori informazioni sui certificati client, consulta [the Connect Raspberry Pi to IBM Watson IoT Platform using Client side Certificates recipe ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
 
 ## Certificati del server di messaggistica
 
@@ -51,7 +51,7 @@ Il seguente esempio mostra un CN valido per il certificato server:
 
 `mtxpd0.messaging.internetofthings.ibmcloud.com`
 
-Per ulteriori informazioni sui certificati del server di messaggistica, consulta [la ricetta Connect Raspberry Pi to IBM Watson IoT Platform using Self-Signed Server Certificate ![Icona link esterno](../../../../icons/launch-glyph.svg) "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
+Per ulteriori informazioni sui certificati del server di messaggistica, consulta [the Connect Raspberry Pi to IBM Watson IoT Platform using Self-Signed Server Certificate recipe ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
 
 ### Custom domains (Beta)
 {: #custom_domains}
@@ -60,11 +60,11 @@ Per ulteriori informazioni sui certificati del server di messaggistica, consulta
 
 Come parte della funzione Beta, i certificati del server di messaggistica accettano i domini personalizzati. È necessario rispettare il seguente formato per il CN certificato o perSubjectAltName:
 
-- `orgId.messaging<dominio personalizzato>`
+- `orgId.messaging.<custom domain>`
 
 Il campo **CN** accetta i caratteri jolly per i domini personalizzati, come mostrato nel seguente esempio:
 
-- `CN=*.messaging.fab-iot.com`
+- `CN=*.messaging.mywiotpcustomdomain.com`
 
 **Importante**: per i domini personalizzati, è richiesto un servizio DNS esterno per risolvere il dominio personalizzato al server di messaggistica {{site.data.keyword.iot_full}}. Questo servizio DNS non è fornito dalla piattaforma.
 
@@ -73,7 +73,7 @@ Il campo **CN** accetta i caratteri jolly per i domini personalizzati, come most
 
 1. Accedi a {{site.data.keyword.iot_short_notm}} e passa a **General Settings**.
 2. Nella sezione **Security**, in **CA Certificates**, fai clic su **Add Certificate**.
-3. Individua e seleziona un file del certificato da caricare o trascina un file nella finestra **Add Certificate**.Il file può avere solo un certificato al suo interno e le date del certificato devono essere valide. Sono accettati solo i certificati nel formato .pem o. der. Puoi visualizzare in anteprima le informazioni del certificato nel file selezionato.
+3. Individua e seleziona un file del certificato da caricare o trascina un file nella finestra **Add Certificate**. Il file può avere solo un certificato al suo interno e le date del certificato devono essere valide. Sono accettati solo i certificati nel formato .pem o. der. Puoi visualizzare in anteprima le informazioni del certificato nel file selezionato.
 4. Immetti una descrizione del file del certificato.
 5. Conferma che il file corretto sia selezionato e fai clic su **Save**. Il certificato selezionato viene elencato nella tabella ed è attivo per impostazione predefinita.
 
@@ -94,7 +94,7 @@ Viene fornito un certificato server predefinito con la piattaforma. Puoi utilizz
 
 ## Attivazione di un certificato del server di messaggistica
 
-Per attivare il certificato predefinito o un altro certificato che è già stato caricato, seleziona il certificato che desideri utilizzare dall'elenco a discesa **Default messaging server certificate** nella tabella in **Messaging Server Certificates**.Il certificato selezionato viene elencato nella tabella come un certificato attivo.
+Per attivare il certificato predefinito o un altro certificato che è già stato caricato, seleziona il certificato che desideri utilizzare dall'elenco a discesa **Default messaging server certificate** nella tabella in **Messaging Server Certificates**. Il certificato selezionato viene elencato nella tabella come un certificato attivo.
 
 ## Richiesta di un nuovo certificato del server di messaggistica
 {: #request_cert}

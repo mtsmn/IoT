@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-22"
-
----
+lastupdated: "2016-11-22"---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -90,13 +88,14 @@ DeviceMetadata metadata = new DeviceMetadata(data);
 
 コンストラクター 1 は、`DeviceData` と以下のすべての必須プロパティーを受け入れて、`ManagedDevice` インスタンスを {{site.data.keyword.iot_short_notm}} に作成します。
 
-|プロパティー |説明 |
+|プロパティー|説明
+|
 |:---|:---|
-|`Organization-ID` |組織 ID|
-|`Device-Type` |デバイスのタイプ。通常、deviceType は、特定のタスクを実行するデバイスのグループです (例えば "weatherballoon")。|
-|`Device-ID` |デバイスの ID。通常、特定のデバイス・タイプにおいて、deviceId はそのデバイスの固有 ID です (シリアル番号や MAC アドレスなど)。|
+|``Organization-ID`` |組織 ID|
+|``Device-Type`` |デバイスのタイプ。通常、deviceType は、特定のタスクを実行するデバイスのグループです (例えば "weatherballoon")。|
+|``Device-ID`` |デバイスの ID。通常、特定のデバイス・タイプにおいて、deviceId はそのデバイスの固有 ID です (シリアル番号や MAC アドレスなど)。|
 |`Authentication-Method` |使用する認証の方式。現在サポートされている値は、`token` のみです。|
-|`Authentication-Token` |デバイスを Watson IoT Platform に安全に接続するための認証トークン。|
+|``Authentication-Token`` |デバイスを Watson IoT Platform に安全に接続するための認証トークン。|
 
 
 次のコードでは、`ManagedDevice` インスタンスの作成方法の概要を示します。
@@ -138,7 +137,7 @@ DeviceData deviceData = new DeviceData.Builder().
              deviceId("Device-ID").
              deviceInfo(deviceInfo).
              metadata(metadata).
-             build();
+            build();
 
 ....
 ManagedDevice managedDevice = new ManagedDevice(mqttClient, deviceData);
@@ -162,7 +161,7 @@ managedDevice.manage(3600);
 
 `管理`操作について詳しくは、[documentation] を参照してください。
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## 管理解除
 
@@ -174,7 +173,7 @@ managedDevice.unmanage();
 
 `管理解除`操作について詳しくは、[documentation] を参照してください。
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## ロケーションの更新
 {: #construct_location_update}
@@ -189,7 +188,7 @@ DeviceData deviceData = new DeviceData.Builder().
              deviceInfo(deviceInfo).
              deviceLocation(deviceLocation).
              metadata(metadata).
-             build();
+            build();
 ```
 
 デバイスが {{site.data.keyword.iot_short_notm}} に接続されると、次のメソッドを使用してロケーションを更新できます。
@@ -232,7 +231,7 @@ DeviceData deviceData = new DeviceData.Builder().
              deviceInfo(deviceInfo).
              deviceErrorCode(errorCode).
              metadata(metadata).
-             build();
+            build();
 ```
 
 デバイスが {{site.data.keyword.iot_short_notm}} に接続されるとすぐ、次のように send() メソッドを呼び出すことで `ErrorCode` を送信できます。
@@ -283,7 +282,7 @@ DeviceData deviceData = new DeviceData.Builder().
              deviceInfo(deviceInfo).
              deviceLog(log).
              metadata(metadata).
-             build();
+            build();
 ```
 
 デバイスが {{site.data.keyword.iot_short_notm}} に接続されるとすぐ、次のサンプルに示すように send() メソッドを呼び出すことでログ・メッセージを送信できます。

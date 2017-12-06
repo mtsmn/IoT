@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-06-13"
 ---
 
 {:new_window: target="\_blank"}
@@ -18,7 +18,7 @@ lastupdated: "2017-05-15"
 
 디바이스에 대해 인증서 및 서버 액세스 권한을 구성하기 위해 시스템 운영자는 연관된 인증 기관(CA) 인증서를 등록하며, 선택적으로 메시지 서버 인증서를 {{site.data.keyword.iot_short_notm}} 플랫폼에 등록합니다. 
 
-API를 사용하여 CA 인증서 및 메시징 서버 인증서 관리에 대한 정보는 [IBM Watson IoT Platform 인증 및 권한부여 API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)"외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}의 내용을 참조하십시오.
+API를 사용하여 CA 인증서 및 메시징 서버 인증서를 관리하는 데 대한 정보는 [IBM Watson IoT Platform 인증 및 권한 API(![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}를 참조하십시오.
 
 ## CA 인증서
 조직은 CA 인증서를 사용하여 해당 디바이스가 서버에 연결될 수 있도록 디바이스의 클라이언트 인증서가 신뢰 가능하다고 인식할 수 있습니다. 
@@ -39,11 +39,11 @@ CA 인증서로 서명하는 개별 디바이스 또는 게이트웨이 인증�
 
 참고: `orgId`를 디바이스 또는 게이트웨이 인증서에 대한 **CN** 또는 **SubjectAltName** 필드에 포함하지 마십시오. `orgId`를 메시징 서버에 연결할 때 클라이언트 구현으로 제공되는 SNI 정보의 일부로 제공해야 합니다. 
 
-클라이언트 인증서에 대한 자세한 정보는 [클라이언트 측 인증서를 사용하여 IBM Watson IoT Platform에 Raspberry Pi 연결 레시피 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg) "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}의 내용을 참조하십시오. 
+클라이언트 인증서에 대한 자세한 정보는 [클라이언트 측 인증서를 사용하여 IBM Watson IoT Platform에 Raspberry Pi 연결 레시피(![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}를 참조하십시오.
 
 ## 메시징 서버 인증서
 
-메시징 서버 인증서는 기본 도메인, internetofthings.ibmcloud.com으르 허용합니다. 인증서 CN 또는 SubjectAltName 다음에 다음 형식이 와야 합니다. 
+메시징 서버 인증서는 기본 도메인, internetofthings.ibmcloud.com을 허용합니다. 인증서 CN 또는 SubjectAltName 다음에 다음 형식이 와야 합니다. 
 
 - `orgId.messaging.internetofthings.ibmcloud.com`(IoTP 도메인)
 
@@ -51,7 +51,7 @@ CA 인증서로 서명하는 개별 디바이스 또는 게이트웨이 인증�
 
 `mtxpd0.messaging.internetofthings.ibmcloud.com`
 
-메시징 서버 인증서에 대한 자세한 정보는 [자체 서명 서버 인증서를 사용하여 IBM Watson IoT Platform에 Raspberry Pi 연결 레시피 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg) "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}의 내용을 참조하십시오. 
+메시징 서버 인증서에 대한 자세한 정보는 [자체 서명 서버 인증서를 사용하여 IBM Watson IoT Platform에 Raspberry Pi 연결 레시피(![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}를 참조하십시오.
 
 ### 사용자 정의 도메인(베타)
 {: #custom_domains}
@@ -60,11 +60,11 @@ CA 인증서로 서명하는 개별 디바이스 또는 게이트웨이 인증�
 
 베타 기능의 일부로서 메시징 서버 인증서는 사용자 정의 도메인을 허용합니다. 인증서 CN 또는 SubjectAltName 다음에 다음 형식이 와야 합니다. 
 
-- `orgId.messaging<custom domain>`
+- `orgId.messaging.<custom domain>`
 
 **CN** 필드는 다음 예에 표시된 대로 사용자 정의 도메인에 와일드카드 문자를 허용합니다.
 
-- `CN=*.messaging.fab-iot.com`
+- `CN=*.messaging.mywiotpcustomdomain.com`
 
 **중요**: 사용자 정의 도메인의 경우, {{site.data.keyword.iot_full}} 메시징 서버에 사용자 정의 도메인을 해석하려면 외부 DNS 서비스가 필요합니다. 플랫폼에서 DNS 서비스가 제공되지 않습니다. 
 

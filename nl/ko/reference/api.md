@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-07-20"
 
 ---
 
@@ -42,25 +42,26 @@ API                     | 용도
 ------------- | -------------
 [조직 관리 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | 조직을 구성하고(디바이스 작성 및 삭제 포함), 사용법 및 서비스 상태를 확인하고, 디바이스 연결 문제점을 진단합니다.
 [보안 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | 사용자 초대 및 인증, 사용자 권한, API 키 및 디바이스를 관리합니다.
-[정보 관리 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  디바이스 위치를 가져오고 업데이트할 뿐만 아니라 디바이스 이벤트 데이터에 액세스하고 해당 위치에 대한 날씨 정보를 가져옵니다. **참고:** 날씨 정보는 The Weather Company 데이터 통합에 따라 다릅니다.
+[정보 관리 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  디바이스 위치를 가져오고 업데이트할 뿐만 아니라 디바이스 이벤트 데이터에 액세스하고 해당 위치에 대한 날씨 정보를 가져옵니다. 
+[데이터 관리 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window}   |   {{site.data.keyword.iot_short_notm}}에서 나가고 들어오는 데이터를 구성하고 통합합니다.
 [디바이스 관리 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | 디바이스 관리 프로토콜을 사용하여 관리 디바이스와 상호작용합니다.
-[메시징 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | HTTP를 사용하여 이벤트를 공개하고 명령을 전송합니다.
-[위험성 관리 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | 위험성 관리 정책 및 보고서를 관리합니다.
+[메시징 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | HTTP를 사용하여 이벤트를 공개하고 명령을 전송합니다. 
+[위험 관리 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | 위험성 관리 정책 및 보고서를 관리합니다.
 
 ## 확장 HTTP API
 {: #api_extension}
 
 API                     | 용도       
 ------------- | -------------
-[AT&T Extension ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window} | AT&T 디바이스를 관리합니다.
-[Jasper Extension ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} | Jasper 디바이스를 관리합니다.
-[Orange Extension ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} | {{site.data.keyword.iot_short_notm}} 조직에 연결되어 있고 Orange SIM 카드가 설치된 디바이스에서 SIM 카드 데이터를 확인합니다.
+[AT&T 확장 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window} | AT&T 디바이스를 관리합니다.
+[Jasper 확장 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} | Jasper 디바이스를 관리합니다.
+[Orange 확장 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} | {{site.data.keyword.iot_short_notm}} 조직에 연결되어 있고 Orange SIM 카드가 설치된 디바이스에서 SIM 카드 데이터를 확인합니다.
 
 ## 베타 HTTP API
 {: #api_beta}
 
 API                     | 용도       
 ------------- | -------------
-[게이트웨이 보안 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html){: new_window}   | 역할을 확인하고 게이트웨이 디바이스에 지정합니다.
+[Gateway 보안 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html){: new_window}   | 역할을 확인하고 게이트웨이 디바이스에 지정합니다.
 [디바이스 보안 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-devices-beta.html){: new_window} | 역할을 확인하고 디바이스에 지정합니다.
-[인터페이스 맵핑 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window}   |   인터페이스를 사용하여 디바이스 데이터를 맵핑하고 액세스합니다.
+[액세스 제어 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window} | 사용자 액세스를 제한합니다.

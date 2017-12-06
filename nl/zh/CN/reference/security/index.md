@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-08"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -31,9 +31,9 @@ lastupdated: "2017-05-08"
 
 {{site.data.keyword.iot_short_notm}} 在 {{site.data.keyword.Bluemix_notm}} 平台内运行，因此依赖于 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer_full}} 来进行访问和连接。对 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer_notm}} 的依赖性使得 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer_notm}} 安全性和可靠性对于 {{site.data.keyword.iot_short_notm}} 的用户至关重要
 
-有关 {{site.data.keyword.Bluemix_notm}} 的安全性的更多详细信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 平台安全性](index.html#platform-security)。
+有关 {{site.data.keyword.Bluemix_notm}} 的安全性的更多详细信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 平台安全性](index.html#platform-security)。 
 
-## {{site.data.keyword.iot_short_notm}} 安全合规性
+## {{site.data.keyword.iot_short_notm}} 安全性合规
 {: #compliance}  
 ![ISO 27K 图标](../../images/icon_iso27k1.png "ISO 27K 图标")   
 {{site.data.keyword.iot_short_notm}} 已通过国际标准化组织 (ISO) 27001 标准的认证，该标准定义了信息安全管理过程的最佳做法。ISO 27001 标准根据不同组织的需求规定了应如何建立、实施和记录信息安全管理系统 (ISMS)，以及应如何实施安全性控制。ISO 27000 系列标准中包含了一个确定风险规模和评估资产价值的过程，旨在保护书面、口头和电子信息的机密性、完整性和可用性。
@@ -69,12 +69,35 @@ lastupdated: "2017-05-08"
 
 使用用户端标识和设备添加到平台时生成的认证令牌连接设备。MQTT 用于在很多平台和语言之间实现简单的互操作性。{{site.data.keyword.iot_short_notm}} 支持通过 TLS V1.2 连接。
 
+**重要信息：**缺省情况下，新组织会自动配置为强制设备使用 TLS 安全性来进行连接，这将确保设备只能使用安全的加密通道进行连接。但是，{{site.data.keyword.iot_short_notm}} 还支持组织必须允许设备在不使用 TLS 的情况下进行连接。例如，组织可能使用缺少 TLS 支持的设备，或者使用不可备用处理加密或解密传输所需的处理能力的低功率设备。组织的计划可确定在这些情况下使用的设置。
+
+有关如何配置连接安全性的更多信息，请参阅[配置安全策略](set_up_policies.html)。
+
 ![图像](connectivity_platform.svg)
 
 
 有关 TLS 和密码套件需求的更多信息，请参阅`与 Watson IoT Platform 的应用程序、设备和网关连接`文档中的 [TLS 需求](connect_devices_apps_gw.html#tls_requirements)部分。
 
 可以使用证书和安全策略来增强设备连接安全。可以将安全策略设置为允许无加密连接，以仅实施传输层安全 (TLS) 连接，以及支持设备通过客户机端证书且无令牌的情况下进行认证。可以使用黑名单来指定不允许连接的设备，或者使用白名单来允许特定设备连接。有关增强的安全的更多信息，请参阅[风险和安全管理](RM_security.html)。
+
+### 禁用和启用设备和网关
+{: #disable-devices}
+
+您可以使用**授权 - 设备管理** HTTP API 来禁用设备直接连接到平台或从网关背后进行连接。例如，您可以强行断开恶意用户的设备或行为不正确并导致问题的设备（如由于垃圾邮件而导致的不需要的数据使用）。该 API 用于从当前连接断开设备连接，并阻止设备重新连接到平台。
+
+要启用或禁用设备，请使用以下 API，其中 *${clientId}* 是 URL 编码客户机标识，对于设备，格式为 *d:${orgId}:${typeId}:${deviceId}*；对于网关，格式为 *g:${orgId}:${typeId}:${deviceId}*：
+
+    PUT /api/v0002/authorization/devices/${clientId}
+    
+在请求主体中，使用状态值 0 可以禁用设备，或者使用状态值 1 可以启用设备。例如，以下状态值指示设备已禁用：
+
+    { "status": 0 }
+
+成功的响应代码为 200。 
+
+当网关针对已禁用的设备发布时，它将接收到响应代码为 180 的错误通知。有关更多信息，请参阅[网关通知](../../gateways/mqtt.html#notification)。 
+
+有关 API 的更多信息，请参阅[设备安全性 Beta API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){:new_window}，并浏览至**授权 - 设备管理**。
 
 ## 如何阻止 IoT 设备之间出现数据泄漏？
 {: #prevent-leak-devices}

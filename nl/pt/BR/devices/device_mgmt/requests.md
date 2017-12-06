@@ -50,7 +50,7 @@ Para iniciar uma reinicialização de dispositivo usando a API (interface de pro
 
 Forneça as seguintes informações:
 
-- A ação `device/reboot`
+- A ação ``device/reboot``
 - Uma lista de dispositivos para reinicializar, com no máximo 5000 dispositivos
 
 Solicitação de reinicialização de dispositivo de exemplo:
@@ -117,7 +117,7 @@ Para iniciar uma reconfiguração de fábrica de dispositivo usando a API (inter
 
 São fornecidas as seguintes informações:
 
-- A ação `device/factoryReset`
+- A ação ``device/factoryReset``
 - Uma lista de dispositivos para reconfigurar, com no máximo 5000 dispositivos
 
 A amostra a seguir fornece uma solicitação de reconfiguração de dispositivo de exemplo:
@@ -134,7 +134,7 @@ A amostra a seguir fornece uma solicitação de reconfiguração de dispositivo 
 }
 ```
 
-Quando uma solicitação de dispositivo é iniciada, uma mensagem MQTT é publicada em todos os dispositivos especificados no corpo da solicitação. Para cada dispositivo, uma resposta deve ser retornada para indicar se a ação de reconfiguração de fábrica pode ser iniciada. O código de resposta será configurado como `202` se essa ação puder ser iniciada imediatamente. Se a tentativa de reconfiguração de fábrica falhar, configure o parâmetro `rc` como `500` e configure o parâmetro `message` conforme necessário. Se a ação de reconfiguração de fábrica não for suportada, configure o parâmetro `rc` como `501` e, como opção, configure o parâmetro `message` conforme necessário.
+Quando uma solicitação de dispositivo é iniciada, uma mensagem MQTT é publicada em todos os dispositivos especificados no corpo da solicitação. Para cada dispositivo, uma resposta deve ser retornada para indicar se a ação de reconfiguração de fábrica pode ser iniciada. O código de resposta será configurado como ``202`` se essa ação puder ser iniciada imediatamente. Se a tentativa de reconfiguração de fábrica falhar, configure o parâmetro ``rc`` como ``500`` e configure o parâmetro ``message`` conforme necessário. Se a ação de reconfiguração de fábrica não for suportada, configure o parâmetro ``rc`` como ``501`` e, como opção, configure o parâmetro ``message`` conforme necessário.
 
 A ação de reconfiguração de fábrica estará concluída quando o dispositivo enviar uma solicitação Gerenciar dispositivo após a reconfiguração de fábrica.
 
@@ -178,15 +178,15 @@ Topic: iotdevice-1/response
 ## Ações de firmware
 {: #firmware-actions}
 
-O nível de firmware conhecido como estando em um dispositivo é armazenado no atributo `deviceInfo.fwVersion`. Os atributos `mgmt.firmware` são usados para executar uma atualização de firmware e observar seu status.
+O nível de firmware conhecido como estando em um dispositivo é armazenado no atributo ``deviceInfo.fwVersion``. Os atributos ``mgmt.firmware`` são usados para executar uma atualização de firmware e observar seu status.
 
-**Importante:** o dispositivo gerenciado deve suportar a observação do atributo `mgmt.firmware` para suportar ações de firmware.
+**Importante:** o dispositivo gerenciado deve suportar a observação do atributo ``mgmt.firmware`` para suportar ações de firmware.
 
 O processo de atualização de firmware é separado em ações distintas:
 - Fazendo download de firmware
 - Atualizando o Firmware
 
-O status de cada ação de firmware é armazenado em um atributo separado no dispositivo. O atributo `mgmt.firmware.state` descreve o status do download de firmware. A tabela a seguir descreve os possíveis valores que podem ser configurados para o atributo `mgmt.firmware.state`:
+O status de cada ação de firmware é armazenado em um atributo separado no dispositivo. O atributo ``mgmt.firmware.state`` descreve o status do download de firmware. A tabela a seguir descreve os possíveis valores que podem ser configurados para o atributo ``mgmt.firmware.state``:
 
  |Value |Status  | Significado |
  |:---|:---|:---|
@@ -195,7 +195,7 @@ O status de cada ação de firmware é armazenado em um atributo separado no dis
  |2  | Transferido por Download  | O dispositivo transferiu por download uma atualização de firmware com sucesso e está pronto para instalá-la. |
 
 
-O atributo `mgmt.firmware.updateStatus` descreve o status da atualização de firmware. Os possíveis valores para o atributo `mgmt.firmware.updateStatus` são:
+O atributo ``mgmt.firmware.updateStatus`` descreve o status da atualização de firmware. Os possíveis valores para o atributo ``mgmt.firmware.updateStatus`` são:
 
 |Value |Status | Significado |  
 |:---|:---|:---|
@@ -218,7 +218,7 @@ Para iniciar um download de firmware usando a API (interface de programação de
 
 São fornecidas as seguintes informações:
 
-- A ação `firmware/download`
+- A ação ``firmware/download``
 - Uma lista de dispositivos que receberão a imagem, com no máximo 5.000 dispositivos
 - O URI para a imagem de firmware (opcional)
 - Sequência de verificação para validar a imagem (opcional)
@@ -256,8 +256,8 @@ Se nenhum dos parâmetros opcionais for especificado, a primeira etapa no proces
 
 O servidor de gerenciamento de dispositivo no {{site.data.keyword.iot_short_notm}} usa o Protocolo de gerenciamento de dispositivo para enviar uma solicitação aos dispositivos, o que inicia o download de firmware. O processo de download consiste nas etapas a seguir:
 
-1. Uma solicitação de atualização de detalhes de firmware é enviada no tópico `iotdm-1/device/update`.
-A solicitação de atualização permite que o dispositivo valide se o firmware solicitado difere do firmware atualmente instalado. Se houver uma diferença, configure o parâmetro `rc` como `204`, o que se traduz no status `Changed`.  
+1. Uma solicitação de atualização de detalhes de firmware é enviada no tópico ``iotdm-1/device/update``.
+A solicitação de atualização permite que o dispositivo valide se o firmware solicitado difere do firmware atualmente instalado. Se houver uma diferença, configure o parâmetro ``rc`` como ``204``, o que se traduz no status ``Changed``.  
 O exemplo a seguir mostra qual mensagem esperar para a solicitação de download de firmware de exemplo enviada anteriormente e qual resposta será enviada quando uma diferença for detectada:
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -293,8 +293,8 @@ O exemplo a seguir mostra qual mensagem esperar para a solicitação de download
    }
    ```
    Essa resposta aciona a próxima solicitação.
-2. É enviada a solicitação de observação para o status de download de firmware `iotdm-1/observe`.
-A solicitação de observação verificar se o dispositivo está pronto para iniciar o download de firmware. Quando o download pode ser iniciado imediatamente, configure o parâmetro `rc` como `200` (`Ok`), o atributo `mgmt.firmware.state` como `0` (`Idle`) e o atributo `mgmt.firmware.updateStatus` como `0` (`Idle`). O código a seguir é uma troca de exemplo entre o {{site.data.keyword.iot_short_notm}} e o dispositivo:
+2. É enviada a solicitação de observação para o status de download de firmware ``iotdm-1/observe``.
+A solicitação de observação verificar se o dispositivo está pronto para iniciar o download de firmware. Quando o download pode ser iniciado imediatamente, configure o parâmetro ``rc`` como ``200`` (``Ok``), o atributo ``mgmt.firmware.state`` como ``0`` (``Idle``) e o atributo ``mgmt.firmware.updateStatus`` como ``0`` (``Idle``). O código a seguir é uma troca de exemplo entre o {{site.data.keyword.iot_short_notm}} e o dispositivo:
    ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
 
@@ -321,9 +321,9 @@ A solicitação de observação verificar se o dispositivo está pronto para ini
    ```
 Essa troca aciona a última etapa.  
 
-3. A solicitação de download é enviada no tópico `iotdm-1/mgmt/initiate/firmware/download`:
+3. A solicitação de download é enviada no tópico ``iotdm-1/mgmt/initiate/firmware/download``:
 
-   A solicitação de download informa um dispositivo para iniciar o download de firmware. Se a ação puder ser iniciada imediatamente, configure o parâmetro `rc` como `202`. O código a seguir fornece um
+   A solicitação de download informa um dispositivo para iniciar o download de firmware. Se a ação puder ser iniciada imediatamente, configure o parâmetro ``rc`` como ``202``. O código a seguir fornece um
 exemplo da iniciação de uma solicitação de download:
 
    ```
@@ -345,7 +345,7 @@ exemplo da iniciação de uma solicitação de download:
    }
    ```
 
-Após um download de firmware ser iniciado dessa maneira, o dispositivo precisa relatar o status do download para o {{site.data.keyword.iot_short_notm}}. O dispositivo relata o status publicando uma mensagem no tópico `iotdevice-1/notify`, em que o atributo `mgmt.firmware.state` está configurado para atributo `1` (`Downloading`) ou `2` (`Downloaded`).
+Após um download de firmware ser iniciado dessa maneira, o dispositivo precisa relatar o status do download para o {{site.data.keyword.iot_short_notm}}. O dispositivo relata o status publicando uma mensagem no tópico ``iotdevice-1/notify``, em que o atributo ``mgmt.firmware.state`` está configurado para atributo ``1`` (``Downloading``) ou ``2`` (``Downloaded``).
 As amostras a seguir mostram um exemplo da iniciação do download de firmware:
 
 ```
@@ -388,8 +388,8 @@ Message:
 
 
 
-Após a notificação ser publicada com o atributo `mgmt.firmware.state` configurado como `2`, uma solicitação é acionada no tópico `iotdm-1/cancel`. Essa solicitação cancela a observação do atributo `mgmt.firmware`.
-Após uma resposta que tenha o parâmetro `rc` configurado como `200` ser enviada, o download de firmware estará concluído. O
+Após a notificação ser publicada com o atributo ``mgmt.firmware.state`` configurado como ``2``, uma solicitação é acionada no tópico ``iotdm-1/cancel``. Essa solicitação cancela a observação do atributo ``mgmt.firmware``.
+Após uma resposta que tenha o parâmetro ``rc`` configurado como ``200`` ser enviada, o download de firmware estará concluído. O
 seguinte código fornece um exemplo:
 
 ```
@@ -420,17 +420,17 @@ Message:
 
 As informações a seguir são úteis para manipulação de erros:
 
-- Se o atributo `mgmt.firmware.state` não for `0` ("Idle"), envie um erro que possua o código de resposta `400` e um texto de mensagem opcional.
-- Se o atributo `mgmt.firmware.uri` não estiver configurado ou não for um URI válido, configure o parâmetro `rc` como `400`.
-- Se a tentativa de download de firmware falhar, configure o parâmetro `rc` como `500` e, como opção, configure o parâmetro `message` conforme necessário.
-- Se o download de firmware não for suportado, configure o parâmetro `rc` como `500` e, como opção, configure o parâmetro `message` conforme necessário.
-- Quando uma solicitação de execução for recebida pelo dispositivo, mude o atributo `mgmt.firmware.state` de `0` (Idle) para `1` (Downloading).
-- Quando o download tiver sido concluído com sucesso, configure o atributo `mgmt.firmware.state` como `2` (Transferido por download).
-- Se ocorrer um erro durante o download, configure o atributo `mgmt.firmware.state` como `0` (Idle) e configure o atributo `mgmt.firmware.updateStatus` como um dos valores de status de erro a seguir:
+- Se o atributo ``mgmt.firmware.state`` não for ``0`` ("Idle"), envie um erro que possua o código de resposta ``400`` e um texto de mensagem opcional.
+- Se o atributo ``mgmt.firmware.uri`` não estiver configurado ou não for um URI válido, configure o parâmetro ``rc`` como ``400``.
+- Se a tentativa de download de firmware falhar, configure o parâmetro ``rc`` como ``500`` e, como opção, configure o parâmetro ``message`` conforme necessário.
+- Se o download de firmware não for suportado, configure o parâmetro ``rc`` como ``500`` e, como opção, configure o parâmetro ``message`` conforme necessário.
+- Quando uma solicitação de execução for recebida pelo dispositivo, mude o atributo ``mgmt.firmware.state`` de ``0`` (Idle) para ``1`` (Downloading).
+- Quando o download tiver sido concluído com sucesso, configure o atributo ``mgmt.firmware.state`` como ``2`` (Transferido por download).
+- Se ocorrer um erro durante o download, configure o atributo ``mgmt.firmware.state`` como ``0`` (Idle) e configure o atributo ``mgmt.firmware.updateStatus`` como um dos valores de status de erro a seguir:
   - 2 (Falta de Memória)
   - 3 (Perda de Conexão)
   - 6 (URI Inválido)
-- Se um verificador de firmware tiver sido configurado, o dispositivo tenta verificar a imagem de firmware. Se a verificação de imagem falhar, configure o atributo `mgmt.firmware.state` como `0` (Idle) e configure o atributo `mgmt.firmware.updateStatus` como o valor de status de erro `4` (Verification Failed).
+- Se um verificador de firmware tiver sido configurado, o dispositivo tenta verificar a imagem de firmware. Se a verificação de imagem falhar, configure o atributo ``mgmt.firmware.state`` como ``0`` (Idle) e configure o atributo ``mgmt.firmware.updateStatus`` como o valor de status de erro ``4`` (Verification Failed).
 
 ## Ações de Firmware - Atualizar
 {: #firmware-actions-update}
@@ -441,7 +441,7 @@ A instalação do firmware transferido por download é iniciada usando a API (in
 
 São fornecidas as seguintes informações:
 
-- A ação `firmware/update`
+- A ação ``firmware/update``
 - A lista de dispositivos que receberão a imagem, todos do mesmo tipo de dispositivo.
 - O URI para a imagem de firmware (opcional)
 - Sequência de verificação para validar a imagem (opcional)
@@ -464,7 +464,7 @@ O código a seguir é uma solicitação de exemplo:
 
 Se algum dos parâmetros opcionais for especificado, a primeira mensagem recebida pelo dispositivo será uma solicitação de atualização de dispositivo. Essa solicitação de atualização de dispositivo é semelhante à primeira mensagem da solicitação de download de firmware.
 
-Para monitorar o status da atualização de firmware, o {{site.data.keyword.iot_short_notm}} primeiro aciona uma solicitação de observador no tópico `iotdm-1/observe`. Quando o dispositivo estiver pronto para iniciar o processo de atualização, ele envia uma resposta que tem o parâmetro `rc` configurado como `200`, o atributo `mgmt.firmware.state` configurado como `0` e o atributo `mgmt.firmware.updateStatus` configurado como `0`.
+Para monitorar o status da atualização de firmware, o {{site.data.keyword.iot_short_notm}} primeiro aciona uma solicitação de observador no tópico ``iotdm-1/observe``. Quando o dispositivo estiver pronto para iniciar o processo de atualização, ele envia uma resposta que tem o parâmetro ``rc`` configurado como ``200``, o atributo ``mgmt.firmware.state`` configurado como ``0`` e o atributo ``mgmt.firmware.updateStatus`` configurado como ``0``.
 
 O
 seguinte código fornece um exemplo:
@@ -507,9 +507,9 @@ Message:
 
 
 
-Após a atualização de firmware ser transferida por download com sucesso, o servidor de gerenciamento de dispositivo no {{site.data.keyword.iot_short_notm}} usa o Protocolo de gerenciamento de dispositivo para solicitar que os dispositivos especificados iniciem a instalação de firmware usando o tópico `iotdm-1/mgmt/initiate/firmware/update`.
-Se esta operação puder ser iniciada imediatamente, configure o parâmetro `rc` como `202`.
-Se o firmware não tiver sido transferido por download anteriormente com sucesso, configure o parâmetro `rc` como `400`.
+Após a atualização de firmware ser transferida por download com sucesso, o servidor de gerenciamento de dispositivo no {{site.data.keyword.iot_short_notm}} usa o Protocolo de gerenciamento de dispositivo para solicitar que os dispositivos especificados iniciem a instalação de firmware usando o tópico ``iotdm-1/mgmt/initiate/firmware/update``.
+Se esta operação puder ser iniciada imediatamente, configure o parâmetro ``rc`` como ``202``.
+Se o firmware não tiver sido transferido por download anteriormente com sucesso, configure o parâmetro ``rc`` como ``400``.
 
 O código a seguir mostra um exemplo:
 
@@ -532,8 +532,8 @@ Message:
 }
 ```
 
-Para concluir a solicitação de atualização de firmware, o dispositivo relata seu status de atualização para o {{site.data.keyword.iot_short_notm}} usando uma mensagem de status publicada em seu tópico`iotdevice-1/notify`.
-Quando uma atualização de firmware for concluída, o atributo `mgmt.firmware.updateStatus` será configurado como `0` (Success), o atributo `mgmt.firmware.state` será configurado como `0` (Idle). A imagem de firmware transferida por download poderá então ser excluída do dispositivo e o atributo `deviceInfo.fwVersion` será configurado para o valor do atributo `mgmt.firmware.version`.
+Para concluir a solicitação de atualização de firmware, o dispositivo relata seu status de atualização para o {{site.data.keyword.iot_short_notm}} usando uma mensagem de status publicada em seu tópico``iotdevice-1/notify``.
+Quando uma atualização de firmware for concluída, o atributo ``mgmt.firmware.updateStatus`` será configurado como ``0`` (Success), o atributo ``mgmt.firmware.state`` será configurado como ``0`` (Idle). A imagem de firmware transferida por download poderá então ser excluída do dispositivo e o atributo ``deviceInfo.fwVersion`` será configurado para o valor do atributo ``mgmt.firmware.version``.
 
 O código a seguir fornece um exemplo de uma mensagem de notificação:
 
@@ -557,10 +557,10 @@ Message:
 }
 ```
 
-Quando o {{site.data.keyword.iot_short_notm}} recebe notificação de uma atualização de firmware concluída, ele aciona uma última solicitação no tópico `iotdm-1/cancel` para cancelar a observação do atributo `mgmt.firmware`.
+Quando o {{site.data.keyword.iot_short_notm}} recebe notificação de uma atualização de firmware concluída, ele aciona uma última solicitação no tópico ``iotdm-1/cancel`` para cancelar a observação do atributo ``mgmt.firmware``.
 
 
-Quando uma resposta que tem o parâmetro `rc` configurado como `200` é enviada, a solicitação de atualização de firmware estará concluída, conforme mostrado no exemplo a seguir:
+Quando uma resposta que tem o parâmetro ``rc`` configurado como ``200`` é enviada, a solicitação de atualização de firmware estará concluída, conforme mostrado no exemplo a seguir:
 
 ```
 Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -591,22 +591,22 @@ Message:
 
 A lista a seguir fornece algumas informações úteis para manipulação de erros e processos:
 
-- Se a tentativa de atualização de firmware falhar, configure o parâmetro `rc` como `500` e, opcionalmente, configure o parâmetro `message` para conter informações relevantes.
-- Se a atualização de firmware não for suportada, configure o parâmetro `rc` como `501` e, opcionalmente, configure o parâmetro `message` para conter informações relevantes.
-- Se o atributo `mgmt.firmware.state` não for igual a `2` (transferido por download), envie um erro que tenha o parâmetro `rc` configurado como `400` e um texto da mensagem opcional.
-- Caso contrário, configure o atributo `mgmt.firmware.updateStatus` como `1` (em andamento) e a instalação de firmware geralmente será iniciada.
-- Se a instalação do firmware falhar, configure o atributo `mgmt.firmware.updateStatus` como um dos valores a seguir:
-  - `2` (sem memória)
-  - `5` (imagem não suportada)
+- Se a tentativa de atualização de firmware falhar, configure o parâmetro ``rc`` como ``500`` e, opcionalmente, configure o parâmetro ``message`` para conter informações relevantes.
+- Se a atualização de firmware não for suportada, configure o parâmetro ``rc`` como ``501`` e, opcionalmente, configure o parâmetro ``message`` para conter informações relevantes.
+- Se o atributo ``mgmt.firmware.state`` não for igual a ``2`` (transferido por download), envie um erro que tenha o parâmetro ``rc`` configurado como ``400`` e um texto da mensagem opcional.
+- Caso contrário, configure o atributo ``mgmt.firmware.updateStatus`` como ``1`` (em andamento) e a instalação de firmware geralmente será iniciada.
+- Se a instalação do firmware falhar, configure o atributo ``mgmt.firmware.updateStatus`` como um dos valores a seguir:
+  - ``2`` (sem memória)
+  - ``5`` (imagem não suportada)
 
 
-**Importante:** todos os parâmetros listados como parte do atributo `mgmt.firmware` devem ser configurados ao mesmo tempo para que se houver uma observação atual para `mgmt.firmware`, apenas uma única mensagem de notificação será enviada.
+**Importante:** todos os parâmetros listados como parte do atributo ``mgmt.firmware`` devem ser configurados ao mesmo tempo para que se houver uma observação atual para ``mgmt.firmware``, apenas uma única mensagem de notificação será enviada.
 
 ## Orientações sobre ações de dispositivo e ações de firmware
 
 As orientações a seguir demonstram o fluxo completo que é necessário para executar ações de dispositivo e de firmware.
 
-- [Gerenciamento de dispositivo no WIoT Platform – Recuperação e Reconfiguração do factory ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
+- [Gerenciamento de dispositivo no WIoT Platform – Recuperação e reconfiguração do factory ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
 
 - [Atualização de firmware iniciada pelo dispositivo ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/){: new_window}
 
@@ -614,4 +614,4 @@ As orientações a seguir demonstram o fluxo completo que é necessário para ex
 
 - [Atualização de firmware iniciada pela plataforma com execução de plano de fundo ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
 
-- [Recuperação de firmware e Reconfiguração do factory ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
+- [Recuperação de firmware e reconfiguração do factory ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}

@@ -35,9 +35,9 @@ Les tableaux répertorient les niveaux d'accès pour :
 Opérations de terminal || Rôles de passerelle|
 :--------: | ---------------------|------------------------
            | **Passerelle standard** | **Passerelle privilégiée**
-Créer, mettre à jour ou supprimer de terminaux|-|X
-Afficher les terminaux|X|X
-Activer un terminal|-|X
+Créer, mettre à jour ou supprimer des terminaux|-|X
+Voir les terminaux|X|X
+Activer le terminal|-|X
 Publier un événement|X|X
 S'abonner à un événement|-|-
 Publier une commande|-|-
@@ -79,9 +79,9 @@ Afficher les fournisseurs de messagerie disponibles|-|-
 Créer, afficher, mettre à jour ou supprimer des modèles de courrier|-|-
 Créer, mettre à jour ou supprimer des utilisateurs|-|-
 Afficher les utilisateurs|-|-
-Créer, mettre à jour, supprimer des invitations d'utilisateur|-|-
+Créer, mettre à jour, supprimer des invitations utilisateur|-|-
 Afficher les invitations d'utilisateur|-|-
-Terminer une invitation|-|-
+Terminer l'invitation|-|-
 Créer, mettre à jour ou supprimer des clés d'API|-|-
 Afficher les clés d'API|-|-
 Afficher les informations d'utilisation de l'organisation|-|-
@@ -91,14 +91,14 @@ Afficher les informations d'utilisation de l'organisation|-|-
 Opérations de contrôle d'accès || Rôles de passerelle|
 :--------: | ---------------------|------------------------
            | **Passerelle standard** | **Passerelle privilégiée**
-Afficher les propriétés utilisateur (y compris les droits d'accès)|-|-
 Afficher les propriétés des utilisateurs (y compris les droits d'accès)|-|-
-Gérer les utilisateurs( y compris les droits d'accès)|-|-
+Afficher les propriétés propres aux utilisateurs (y compris les droits d'accès)|-|-
+Gérer les utilisateurs (y compris les droits d'accès)|-|-
 Afficher les propriétés de clé d'API (y compris les droits d'accès)|-|-
 Afficher les propriétés des clés d'API (y compris les droits d'accès)|-|-
 Créer, mettre à jour ou supprimer des clés d'API (y compris les droits d'accès)|-|-
 Afficher les propriétés de terminal (y compris les droits d'accès)|X|X
-Afficher les propriétés des terminaux (y compris les droits d'accès)|X|X
+Afficher les propriétés propres au terminal (y compris les droits d'accès)|X|X
 Créer, mettre à jour, supprimer un terminal (y compris les droits d'accès)|-|X
 Afficher les rôles|-|-
 Créer, mettre à jour, supprimer des rôles personnalisés|-|-
@@ -123,10 +123,10 @@ Opérations de service de tiers || Rôles de passerelle|
 :--------: | ---------------------|------------------------
            | **Passerelle standard** | **Passerelle privilégiée**
 Traiter des notifications par lots depuis une plateforme externe|-|-
-Traiter des notifications par lots et les envoyer à une plateforme externe|-|-
+Traiter des notifications par lot pour envoi à une plateforme externe|-|-
 Publier un événement pour un terminal|-|-
 S'abonner à des événements depuis un terminal|-|-
 Définir une URL de rappel pour la plateforme externe|-|-
 Définir le niveau d'abonnement de la plateforme externe|-|-
 Obtenir l'état de santé du connecteur|-|-
-Vérifier si un système externe est opérationnel et valider les données d'identification|-|-
+Vérifier l'état d'un système externe, valider les données d'identification|-|-

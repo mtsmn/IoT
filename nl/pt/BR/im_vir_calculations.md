@@ -21,7 +21,7 @@ Amplie os cálculos básicos de propriedade virtual com fórmulas pré-executada
 **Importante:** os cálculos avançados somente retornarão pontos de dados da propriedade se os dados para a propriedade selecionada vierem de um dispositivo conectado a um gateway que tenha um Edge Analytics Agent instalado. Uma regra do Edge pode usar essa propriedade virtual diretamente. Para usar a propriedade com uma regra de nuvem, uma regra do Edge deve enviar o ponto de dados para a nuvem usando a ação Encaminhar para a nuvem. Para obter mais informações, consulte [Instalando o Edge Analytics Agent](gateways/dashboard.html#edge).
 
 Exemplo: use os pontos de dados virtuais avançados em um cartão de gráfico de linhas para visualizar as tendências de dados com aumentos de dados removidos.  
- ![Pontos de dados reais versus Média de pontos de dados.](images/vir_adv_avg_card.svg "Comparação entre os pontos de dados reais e a média de pontos de dados.")
+ ![Pontos de dados reais versus pontos de dados médios.](images/vir_adv_avg_card.svg "Comparação entre pontos de dados reais e ponderados.")
 
 ## Fórmulas avançadas
 {: #advanced}

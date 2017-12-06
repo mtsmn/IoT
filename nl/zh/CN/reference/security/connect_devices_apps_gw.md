@@ -31,7 +31,7 @@ lastupdated: "2017-04-05"
 
 ### HTTP REST API 连接 URL
 
-<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 **注释**
@@ -43,7 +43,7 @@ lastupdated: "2017-04-05"
 
 确保所需端口已打开并启用以进行通信。端口 8883 和 443 支持将 TLS 与 MQTT 和 HTTP 协议配合使用的安全连接。端口 1883 支持使用 MQTT 和 HTTP 协议的非安全连接。下表中总结了有关连接类型和关联端口号的信息：   
 
-|连接类型 |端口号|
+|连接类型|端口号|
 |:---|:---|
 |非安全|1883|
 |安全|8883|
@@ -109,7 +109,7 @@ TLS 需求取决于是要通过 MQTT 还是通过 HTTP 协议连接到 {{site.da
 
 要使设备、应用程序和网关可成功认证，请通过使用以下客户机标识和格式定义每个 MQTT 客户机：
 
-|客户机类型 |标识|MQTT 标识格式|
+|客户机类型|标识|MQTT 标识格式|
 |:---|:---|:---|
 |应用程序|a|<pre class="pre">a:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
 |可扩展应用程序|A|<pre class="pre">A:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
@@ -127,7 +127,7 @@ TLS 需求取决于是要通过 MQTT 还是通过 HTTP 协议连接到 {{site.da
 - 字母数字字符（a-z、A-Z 和 0-9）
 - 连字符 (-)
 - 下划线 (_)
-- 点 (.)
+- 点 ( . )
 
 **注：**
 - 连接到 Quickstart 服务时，不需要进行认证。

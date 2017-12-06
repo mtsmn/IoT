@@ -45,8 +45,7 @@ lastupdated: "2017-03-13"
 
 - 从 IBM.com 上的 [{{site.data.keyword.iot_short_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.ibm.com/blockchain/){: new_window} 中获取 {{site.data.keyword.iot_short_notm}} 的概述、其与一般区块链概念的联系及其具体用途。
 - 为您的组织[启用 {{site.data.keyword.iot_short_notm}} 区块链集成](reference/extensions/index.html#blockchain)。
-- 连接用于生成要写入区块链分类帐的数据的设备。
-  
+- 连接用于生成要写入区块链分类帐的数据的设备。  
 按照[连接设备](iotplatform_task.html)主题中的指示信息来连接设备。
 - 安装“监视 UI”。
 “监视 UI”用于验证 {{site.data.keyword.iot_short_notm}} 和区块链光纤网之间的连接。按照[区块链监视 UI ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub 目录中提供的“监视 UI”自述文件文档中的指示信息进行操作。
@@ -59,8 +58,7 @@ lastupdated: "2017-03-13"
 IBM 提供的基本 {{site.data.keyword.iot_short_notm}} 区块链集成环境由以下组件组成：
 - {{site.data.keyword.Bluemix_notm}}:
  - 启用了 IoT 区块链集成的 {{site.data.keyword.iot_short_notm}} 服务
- - 可选：运行 IoT 设备模拟器的 Node-RED 应用程序
-   
+ - 可选：运行 IoT 设备模拟器的 Node-RED 应用程序  
  **注：**设备模拟器还可以部署在本地 Node-RED 环境中。
 - 本地环境：
  - Node.js
@@ -122,8 +120,7 @@ IBM 提供的基本 {{site.data.keyword.iot_short_notm}} 区块链集成环境�
 3. 在“配置区块链”部分中，单击**完成**以保存光纤网信息。
 
 
-**IBM 基本场景：**要连接到 IBM 提供的光纤网，请使用 Watson IoT Blockchain 社区的 [IoTBlockchain Connection Info ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} Wiki 页面中提供的针对样本合同的连接详细信息。
-如果需要，请联系 IBM 区块链联系人以获取对社区的访问权。
+**IBM 基本场景：**要连接到 IBM 提供的光纤网，请使用 Watson IoT Blockchain 社区的 [IoTBlockchain Connection Info ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} Wiki 页面中提供的针对样本合同的连接详细信息。如果需要，请联系 IBM 区块链联系人以获取对社区的访问权。
 
 
 ## 将设备数据映射到智能合同
@@ -132,11 +129,10 @@ IBM 提供的基本 {{site.data.keyword.iot_short_notm}} 区块链集成环境�
 要将设备数据写入区块链分类帐，必须首先将设备类型的设备属性映射到智能合同定义的参数。
 
 要将设备数据映射到合同，请执行以下操作：
- 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板中，单击菜单侧边栏中的 ![区块链](blockchain/images/platform_blockchain.png "区块链")。
+ 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的菜单侧边栏中，单击 ![区块链](blockchain/images/platform_blockchain.png "区块链")。
  3. 单击**映射设备数据**。
  4. 选择要在区块链中存储其设备数据的设备类型。
- 5. 输入要存储的事件的事件名称。
-   
+ 5. 输入要存储的事件的事件名称。  
  **提示：**样本 Node-RED 区块链设备的缺省事件名称为 obc。要查找设备的事件类型，请在 {{site.data.keyword.iot_short_notm}} 仪表板中，选择**设备**，然后单击设备名称以打开设备详细信息页面。向下滚动到**传感器信息**部分，以查看设备的可用事件和数据点的列表。可以通过更新“发布到 IoT”MQTT 输出节点中的“主题”字段来更改 Node-RED 设备发布的事件名称。  
  6. 单击**下一步**。
  6. 选择您先前创建的光纤网实例。
@@ -157,19 +153,17 @@ IBM 提供的基本 {{site.data.keyword.iot_short_notm}} 区块链集成环境�
 <td>合同标识</td>
 <td>所映射合同的由 128 个字符组成的唯一标识。</br> **重要信息：**映射的合同必须至少支持以下方法：
 - updateAsset
-- readAssetSchemas</td>
+- readAssetSchemas  </td>
 </tr>
 </tbody>
 </table>
 **IBM 基本场景：**通过样本预部署智能合同，可将设备数据点映射到特定合同属性，以在区块链分类帐中存储数据点值。使用样本合同，可在尝试更高级的贸易航线合同或编写自己的合同之前，对设备数据映射进行测试。合同标识在 Watson IoT Blockchain 社区的 [IoT Blockchain Connection Info ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} Wiki 页面中提供。如果需要，请联系 IBM 区块链联系人以获取对社区的访问权。
 
 
- 8. 创建路径，用于将设备属性映射到合同参数。
-   
-这将导入合同中可用的参数。对于每个参数，输入对应的事件属性。
-   
- **重要信息：**请勿在设备消息中包含附加到数据点前面的 `d.`。**IBM 基本场景：**如果要使用 IBM 提供的合同，请映射 Watson IoT Blockchain 社区的 [Datamapping ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} Wiki 页面中列出的以下参数。
-如果需要，请联系 IBM 区块链联系人以获取对社区的访问权。
+ 8. 创建路径，用于将设备属性映射到合同参数。  
+这将导入合同中可用的参数。对于每个参数，输入对应的事件属性。  
+ **重要信息：**请勿在设备消息中包含附加到数据点前面的 `d.`。
+ **IBM 基本场景：**如果要使用 IBM 提供的合同，请映射 Watson IoT Blockchain 社区的 [Datamapping ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} Wiki 页面中列出的以下参数。如果需要，请联系 IBM 区块链联系人以获取对社区的访问权。
  9. 在摘要页面中，验证输入的所有信息是否都正确。
  10. 设备数据到合同的映射会显示在“区块链”页面中。
 
@@ -180,8 +174,7 @@ IBM 提供的基本 {{site.data.keyword.iot_short_notm}} 区块链集成环境�
 
 如果已连接到 IBM 提供的光纤网，并已将设备数据映射到样本合同，那么可以测试设备到区块链分类帐的端到端数据流。使用“IoT 区块链监视 UI”可查看您资产的区块链活动和数据。  
 **提示：**如果尚未在本地环境中安装“监视 UI”，那么现在可以进行安装。按照[区块链监视 UI ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub 目录中提供的“监视 UI”自述文件文档中的指示信息进行操作。  
-1. 配置“监视 UI”以连接到 {{site.data.keyword.iot_short_notm}}。
-   
+1. 配置“监视 UI”以连接到 {{site.data.keyword.iot_short_notm}}。  
 在“监视 UI”中，单击**配置**以配置“监视 UI”连接：
  <table>
 <thead>
@@ -209,18 +202,14 @@ IBM 提供的基本 {{site.data.keyword.iot_short_notm}} 区块链集成环境�
 </tr>
 </tbody>
 </table>
-**IBM 基本场景：**要配置“监视 UI”以连接到基本或贸易航线合同，请使用 Watson IoT Blockchain 社区的 [IoT Blockchain Connection Info ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} Wiki 页面中提供的连接详细信息。
-如果需要，请联系 IBM 区块链联系人以获取对社区的访问权。
-2. 在 Node-RED 流编辑器中，单击 CON123 节点上的按钮以注入设备数据，使其作为消息发送到 {{site.data.keyword.iot_short_notm}}，并通过简单合同写入 {{site.data.keyword.iot_short_notm}} 分类帐。
-   
+**IBM 基本场景：**要配置“监视 UI”以连接到基本或贸易航线合同，请使用 Watson IoT Blockchain 社区的 [IoT Blockchain Connection Info ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} Wiki 页面中提供的连接详细信息。如果需要，请联系 IBM 区块链联系人以获取对社区的访问权。
+2. 在 Node-RED 流编辑器中，单击 CON123 节点上的按钮以注入设备数据，使其作为消息发送到 {{site.data.keyword.iot_short_notm}}，并通过简单合同写入 {{site.data.keyword.iot_short_notm}} 分类帐。   
 **提示：**要获取持续数据流，请双击注入节点，将 Repeat 参数设置为 `interval`，然后配置相应的时间间隔，例如每 1 分钟。
 3. 在“监视 UI”中，验证设备数据是否在区块链区块中按预期显示。  
-  1. 验证区块是否在您从设备注入数据时添加到链。
-    
+  1. 验证区块是否在您从设备注入数据时添加到链。  
   **重要信息：**请勿使用浏览器的“刷新”按钮来刷新“监视 UI”。该 UI 会每几秒自动刷新一次。使用浏览器的“刷新”按钮会将 UI 设置重置为其缺省值，这样就必须重新配置“监视 UI”才能查看合同区块链。
   2. 要查看资产的最新分类帐信息，请在“资产标识”搜索字段中，输入资产的标识，然后单击**提交**。示例：`CON123`  
-  要查看使用同一合同的多个资产的区块链数据，请输入资产名称，然后单击**提交**。单击**重置**可重新开始。
-    
+要查看使用同一合同的多个资产的区块链数据，请输入资产名称，然后单击**提交**。单击**重置**可重新开始。  
   **提示：**
     - 开启“轮询更改”功能将确保 UI 持续轮询对被观察/受监视资产的任何更改，并在更改落实到区块链时立即刷新数据。
     - 区块链设备的缺省 assetID 为“CON123”。如果在 Node-RED 设备模拟器中修改了设备消息或更新了 assetID，那么可以在 {{site.data.keyword.iot_short_notm}} 中查找 assetID。转至**设备**页面，然后单击您的设备以打开设备详细信息页面。向下滚动到**传感器信息**部分，以查看设备的数据点的列表。将 `d.assetID` 数据点的值用作您的 assetID。

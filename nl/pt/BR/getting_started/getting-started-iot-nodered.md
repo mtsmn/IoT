@@ -67,8 +67,7 @@ Execute as etapas a seguir para implementar o aplicativo de amostra Starter:
  **Dica:** se você preferir implementar por meio da linha de comandos, será possível [localizar o iniciador do {{site.data.keyword.iot_short_notm}}](https://github.com/ibm-watson-iot/iot-platform-bluemix-starter) na organização do IBM Watson IoT no GitHub.
  2. Quando solicitado, efetue login no IBM Bluemix.
  3. Se necessário, selecione o Bluemix Organization no qual você deseja implementar o aplicativo iniciador.
- 4. Mantenha o nome da Cadeia de ferramentas ou o atualize conforme necessário. Ele é usado como o nome do app padrão e a raiz de URL do seu app:
-`<app-name>.mybluemix.net`
+ 4. Mantenha o nome da Cadeia de ferramentas ou o atualize conforme necessário. Ele é usado como nome do app padrão e a raiz da URL do seu app: `<app-name>.mybluemix.net`
  5. Clique em **Criar**.  
 **Dica:** clique no azulejo **Delivery Pipeline** para monitorar o progresso para a sua primeira implementação.
  6. Quando a implementação estiver concluída, clique em **Visualizar app** para abrir o novo aplicativo Node-RED em uma nova guia.

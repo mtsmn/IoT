@@ -1,8 +1,6 @@
 ---
 
-copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-12"
+copyright: years: 2016, 2017 lastupdated: "2017-06-13"
 
 ---
 
@@ -15,7 +13,7 @@ lastupdated: "2017-05-12"
 # Gerenciamento de risco e segurança
 {: #RM_security}
 
-É possível aprimorar a segurança para permitir criar, reforçar e relatar sobre a segurança de conexão de dispositivo. Com essa segurança aprimorada, os certificados e a autenticação de segurança da camada de transporte (TLS) são usados além dos IDs de usuário e tokens usados pelo {{site.data.keyword.iot_short_notm}} para determinar como e onde os dispositivos se conectarão à plataforma. 
+É possível aprimorar a segurança para permitir criar, reforçar e relatar sobre a segurança de conexão de dispositivo. Com essa segurança aprimorada, os certificados e a autenticação de segurança da camada de transporte (TLS) são usados além dos IDs de usuário e tokens usados pelo {{site.data.keyword.iot_short_notm}} para determinar como e onde os dispositivos se conectarão à plataforma.
 
 ## Certificados
 {: #certificates}
@@ -23,7 +21,8 @@ lastupdated: "2017-05-12"
 Quando os certificados estiverem ativados, durante a comunicação entre dispositivos e o servidor, quaisquer dispositivos que não tenham certificados válidos configurados nas configurações de segurança terão o acesso negado, mesmo se usarem IDs de usuário e senhas válidos.
 
 Para configurar certificados e acesso ao servidor para dispositivos, o operador do sistema registra os certificados de autoridade de certificação (CA) associados e registra opcionalmente os certificados do servidor de mensagens na plataforma Watson IoT Platform.
-Para configurar os certificados de cliente e o acesso ao servidor para dispositivos, o operador do sistema importa os certificados de autoridade de certificação (CA) associados e os certificados do servidor do sistema de mensagens para o {{site.data.keyword.iot_short_notm}}. O analista de segurança configura, então, as políticas de segurança de conexão para conexões padrão entre os dispositivos e a plataforma. O analista pode incluir diferentes políticas para diferentes tipos de dispositivos.
+Para configurar os certificados de cliente e o acesso ao servidor para dispositivos, o operador do sistema importa os certificados de autoridade de certificação (CA) associados e os certificados do servidor do sistema de mensagens para o {{site.data.keyword.iot_short_notm}}. 
+O analista de segurança então configura as políticas de segurança padrão para conexões entre dispositivos e a plataforma. O analista pode incluir diferentes políticas para diferentes tipos de dispositivos.
 
 Para obter informações sobre como configurar certificados, veja [Configurando certificados](set_up_certificates.html).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-12"
+lastupdated: "2017-07-20"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-01-12"
 {{site.data.keyword.iot_full}} は、以下の重要な分野に構築されます。
 
   1. 接続 - デバイスを接続し、アプリケーションを開発します。
-  2. 情報管理 - デバイス・データを保管/検討し、{{site.data.keyword.iot_short_notm}} を他のサービスに統合します。
+  2. 情報管理 - デバイス・データの保管、正規化、変換、検討を行い、{{site.data.keyword.iot_short_notm}} を他のサービスに統合します。
   3. 分析 - {{site.data.keyword.iot_short_notm}} ダッシュボードを使用して、リアルタイム・デバイス・データを視覚化します。
   4. リスク管理 - ユーザーとアプリケーションに対するアクセス制御により、セキュアな接続とアーキテクチャーを構成します。
 
@@ -39,6 +39,7 @@ lastupdated: "2017-01-12"
 
 拡張とサービス統合によって、外部サービスと、コア・サービスのユーザー定義拡張との両方を {{site.data.keyword.iot_short_notm}} のインスタンスに追加できます。{{site.data.keyword.iot_short_notm}} に統合できる外部サービスとしては、デバイスの場所の現在の気象情報を確認できる The Weather Company の気象と位置のサービスがあります。また、Jasper SIM データや、{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}} もあります。 サード・パーティーのサービスの統合や拡張の詳細については、[外部サービスの統合](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)を参照してください。
 
+
 ---
 
 ## 情報管理
@@ -54,8 +55,13 @@ lastupdated: "2017-01-12"
 
 {{site.data.keyword.iot_short_notm}} サービスからのデバイス・イベント・データは、後で使用するために保管することができます。データ保管は、そのデータからの洞察を得るための洞察力に富んだ分析を行ううえで重要な最初のステップです。例えば、長期間に渡って変更を追跡し、強力な分析ツールで使用するため (Watson API やコグニティブ・コンピューティングでの使用を含む) にデータのセットを保管することができます。詳細については、[{{site.data.keyword.cloudant_short_notm}} 履歴サービスの接続](https://console.ng.bluemix.net/docs/services/IoT/cloudant_connector.html)や [{{site.data.keyword.messagehub}} 履歴サービスの接続](https://console.ng.bluemix.net/docs/services/IoT/message_hub.html)を参照してください。
 
----
+### データ管理
 
+さまざまなメーカーやモデルのデバイスが、さまざまな形式でデータをパブリッシュします。データ管理フィーチャーを利用すると、そうしたデータの変換と正規化を行って、*デバイス状態* という単一の論理ビューにまとめることができます。このビューをアプリケーションで認識して処理することができます。データ管理フィーチャーを利用すると、各デバイスから送信されるさまざまな形式のイベント・データをアプリケーションで認識しなくてもよくなるため、アプリケーション開発を大幅に簡略化できます。デバイスによってイベントが {{site.data.keyword.iot_short_notm}} にパブリッシュされたときに、そのイベントの内容を、マッピングを使用してユーザー定義の状態プロパティーにマップすることができます。インバウンド・イベントの結果としてデバイスの状態が変更される場合は、デバイス状態プロパティーの値が更新されて {{site.data.keyword.iot_short_notm}} に格納されます。それらの値は、HTTP API の使用またはトピックのサブスクライブによる要求時に、アプリケーションで取得できます。
+
+このフィーチャーの使用について詳しくは、[データ管理の概要](GA_information_management/ga_im_device_twin.html)を参照してください。
+
+---
 ## 分析
 {: #analytics}
 

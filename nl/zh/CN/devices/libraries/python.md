@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-06-14"
 
 ---
 
@@ -31,13 +31,14 @@ lastupdated: "2017-03-14"
 
 选项字典创建用于与 {{site.data.keyword.iot_short_notm}} 模块进行交互的定义。构造方法用于构建客户机实例，并接受包含以下定义的选项字典：
 
-|定义|描述 |
+|定义|描述
+|
 |:---|:---|
 |`orgId`|组织标识。|
 |`type`|设备的类型。设备类型是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
 |`id`|用于识别设备的唯一标识。通常，对于给定设备类型，设备标识是该设备的唯一标识，例如，序列号或 MAC 地址。|
-|`auth-method`|认证方法。支持的唯一方法是 `apikey`。|
-|`auth-token`|API 密钥令牌，将 auth-method 的值设置为 `apikey` 时，此参数也是必需的。|
+|`auth-method`|认证方法。支持的唯一方法是 `token`。|
+|`auth-token`|用于将设备安全连接到 {{site.data.keyword.iot_short_notm}} 的认证令牌。|
 |`clean-session`|true 或 false 值，仅当要以持久预订方式连接应用程序时是必需的。缺省情况下，`clean-session` 设置为 true。|
 
 如果未提供选项字典，那么客户机将作为未注册的设备连接到 {{site.data.keyword.iot_short_notm}} Quickstart 服务。
@@ -151,7 +152,7 @@ client.commandCallback = myCommandCallback
 ## 定制消息格式支持
 {: #custom_message_format}
 
-缺省情况下，消息格式设置为 `json`，这意味着库支持对 JSON 格式的 Python 字典对象进行编码和解码。消息格式设置为 `json-iotf` 时，会根据 {{site.data.keyword.iot_short_notm}} JSON 有效内容规范对消息编码。要添加对自己的定制消息格式的支持，请参阅 GitHub 中的 [Custom Message Format sample ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window}。
+缺省情况下，消息格式设置为 ``json``，这意味着库支持对 JSON 格式的 Python 字典对象进行编码和解码。消息格式设置为 ``json-iotf`` 时，会根据 {{site.data.keyword.iot_short_notm}} JSON 有效内容规范对消息编码。要添加对自己的定制消息格式的支持，请参阅 GitHub 中的 [Custom Message Format sample ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window}。
 
 创建定制编码器模块后，必须在设备客户机中注册该模块，如以下示例中所概述：
 
@@ -162,4 +163,4 @@ import myCustomCodec
 client.setMessageEncoderModule("custom", myCustomCodec)
 client.publishEvent("status", "custom", myData)
 ```
-如果事件以未知格式发送，或者设备无法识别其格式，那么设备库会返回 `MissingMessageDecoderException` 条件。
+如果事件以未知格式发送，或者设备无法识别其格式，那么设备库会返回 ``MissingMessageDecoderException`` 条件。

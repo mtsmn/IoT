@@ -43,7 +43,7 @@ Pour obtenir plus d'informations sur les identificateurs, ainsi que des descript
 
 Chaque terminal qui est connecté à {{site.data.keyword.iot_short_notm}} est associé à un type de terminal. Les types de terminaux sont des groupes de terminaux ayant des caractéristiques ou des comportements communs.
 
-Un type de terminal possède un ensemble d'attributs. Lorsqu'un terminal est ajouté à {{site.data.keyword.iot_short_notm}}, les attributs définis dans son type de terminal sont utilisés en tant que modèle. Si une valeur est associée au terminal, elle est utilisée. Si aucune valeur n'est associée au terminal, la valeur de type de terminal est utilisée. Par exemple, le type de terminal peut inclure une valeur pour l'attribut `deviceInfo.fwVersion` indiquant la version du microprogramme installé au moment de la fabrication du terminal. Cette valeur est copiée à partir du type de terminal sur les terminaux au moment de leur ajout. Lorsqu'un terminal est ajouté, si l'attribut `deviceInfo.fwVersion` possède déjà une valeur, celle-ci n'est pas remplacée.
+Un type de terminal possède un ensemble d'attributs. Lorsqu'un terminal est ajouté à {{site.data.keyword.iot_short_notm}}, les attributs définis dans son type de terminal sont utilisés en tant que modèle. Si une valeur est associée au terminal, elle est utilisée. Si aucune valeur n'est associée au terminal, la valeur de type de terminal est utilisée. Par exemple, le type de terminal peut inclure une valeur pour l'attribut ``deviceInfo.fwVersion`` indiquant la version du microprogramme installé au moment de la fabrication du terminal. Cette valeur est copiée à partir du type de terminal sur les terminaux au moment de leur ajout. Lorsqu'un terminal est ajouté, si l'attribut ``deviceInfo.fwVersion`` possède déjà une valeur, celle-ci n'est pas remplacée.
 
 Lorsqu'un attribut de type de terminal est mis à jour, seuls les nouveaux terminaux enregistrés héritent des modifications apportées au modèle de type de terminal.
 
@@ -95,7 +95,7 @@ Outre les attributs principaux répertoriés précédemment dans la section Attr
 Nom d'extension    | Préfixe des attributs | Objet      
 ------------- | ------------- | -------------                                         
  Diagnostics       | diag                 | Journaux des erreurs et informations de diagnostic                 
- Emplacement          | location             | Emplacement du terminal, pouvant être régulièrement mis à jour
+ Emplacement          | location             | Emplacement du terminal qui peut être mis à jour régulièrement
  Gestion des terminaux | mgmt                 | Actions de gestion des terminaux, par exemple la mise à jour du microprogramme       
 
 
@@ -137,9 +137,9 @@ Attribut                 | Type   | Description                                 
 ### Extension Gestion des terminaux
 {: #devicemanagementextension}
 
-Les attributs de gestion ne sont présents que pour les terminaux gérés. Lorsqu'un terminal géré passe en mode veille, il devient non géré et les attributs `mgmt.` sont supprimés. Les attributs `mgmt.` sont définis par {{site.data.keyword.iot_short_notm}} suite au traitement des demandes de gestion des terminaux. Ces attributs ne peuvent pas être directement écrits à l'aide de l'API.
+Les attributs de gestion ne sont présents que pour les terminaux gérés. Lorsqu'un terminal géré passe en mode veille, il devient non géré et les attributs ``mgmt.`` sont supprimés. Les attributs ``mgmt.`` sont définis par {{site.data.keyword.iot_short_notm}} suite au traitement des demandes de gestion des terminaux. Ces attributs ne peuvent pas être directement écrits à l'aide de l'API.
 
-Les terminaux possèdent un cycle de vie de gestion défini par leur statut de terminaux gérés. Sur le terminal, l'agent de gestion des terminaux est chargé d'envoyer une demande Gérer le terminal à l'aide du protocole de gestion des terminaux. Pour traiter les terminaux obsolètes dans des parcs de terminaux importants, vous pouvez contraindre un terminal géré à envoyer régulièrement une demande Gérer le terminal. Un terminal géré passe en mode veille si cette demande n'est pas envoyée à {{site.data.keyword.iot_short_notm}} pendant une période spécifiée. Pour faciliter l'utilisation de cette fonction, un paramètre de durée de vie facultatif peut être associé à la demande Gérer le terminal. Lorsque {{site.data.keyword.iot_short_notm}} reçoit une demande Gérer le terminal avec le paramètre de durée de vie défini, il calcule la date et l'heure avant lesquelles une autre demande Gérer le terminal doit être émise et il stocke ces informations dans l'attribut `mgmt.dormantDateTime`.
+Les terminaux possèdent un cycle de vie de gestion défini par leur statut de terminaux gérés. Sur le terminal, l'agent de gestion des terminaux est chargé d'envoyer une demande Gérer le terminal à l'aide du protocole de gestion des terminaux. Pour traiter les terminaux obsolètes dans des parcs de terminaux importants, vous pouvez contraindre un terminal géré à envoyer régulièrement une demande Gérer le terminal. Un terminal géré passe en mode veille si cette demande n'est pas envoyée à {{site.data.keyword.iot_short_notm}} pendant une période spécifiée. Pour faciliter l'utilisation de cette fonction, un paramètre de durée de vie facultatif peut être associé à la demande Gérer le terminal. Lorsque {{site.data.keyword.iot_short_notm}} reçoit une demande Gérer le terminal avec le paramètre de durée de vie défini, il calcule la date et l'heure avant lesquelles une autre demande Gérer le terminal doit être émise et il stocke ces informations dans l'attribut ``mgmt.dormantDateTime``.
 
 
 Attribut                     | Type    | Description                             | API | AGT

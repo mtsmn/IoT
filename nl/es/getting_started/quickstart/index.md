@@ -90,7 +90,7 @@ Eso es todo. Al completar el procedimiento de ejemplo de Inicio rápido, habrá:
 
 ## Enlaces relacionados
 
-- [Quickstart ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [Inicio rápido ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://quickstart.internetofthings.ibmcloud.com){: new_window}
 - [Recetas de DeveloperWorks ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes){: new_window}
 - [OpenBlocks IoT BX1G ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
 - [Reactive Blocks ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}

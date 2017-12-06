@@ -220,7 +220,7 @@ managedGateway.sendDeviceUnmanageRequet();
 Las pasarelas que pueden determinar su ubicación pueden optar por notificar a {{site.data.keyword.iot_short}} sobre los cambios de ubicación. La pasarela puede invocar uno de los métodos `updateLocation()` sobrecargados para actualizar la ubicación del dispositivo.
 
 ```java
-    // actualizar la ubicación con latitud, longitud y elevación.
+// actualizar la ubicación con latitud, longitud y elevación.
 int rc = managedGateway.updateGatewayLocation(30.28565, -97.73921, 10);
 if(rc == 200) {
     System.out.println("Location updated successfully!");
@@ -536,7 +536,7 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-Encontrará el código completo en el ejemplo `GatewayFirmwareHandlerSample` del [Repositorio de  GitHub de ejemplos de pasarela ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
+Encontrará el código completo en el ejemplo `GatewayFirmwareHandlerSample` del [Repositorio de GitHub de ejemplos de pasarela ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ### Paso 4: Adición del manejador a `ManagedGateway`
 
@@ -606,16 +606,16 @@ public void handleReboot(DeviceAction action) {
 	boolean status = false;
 	try {
 		p = processBuilder.start();
-        // espere unos 2 minutos antes de abandonar
-        status = waitForCompletion(p, 2);
-    } catch (IOException e) {
+		// espere unos 2 minutos antes de abandonar
+		status = waitForCompletion(p, 2);
+	} catch (IOException e) {
 		action.setMessage(e.getMessage());
-    } catch (InterruptedException e) {
+	} catch (InterruptedException e) {
 		action.setMessage(e.getMessage());
-    }
-    if(status == false) {
+	}
+	if(status == false) {
 		action.setStatus(DeviceAction.Status.FAILED);
-    }
+	}
 }
 ```
 
@@ -630,12 +630,12 @@ La implementación debe crear una hebra separada y añadir lógica para restable
 public void handleFactoryReset(DeviceAction action) {
 	try {
 		// código para realizar el Restablecimiento de fábrica
-    } catch (IOException e) {
+	} catch (IOException e) {
 		action.setMessage(e.getMessage());
-    }
-    if(status == false) {
+	}
+	if(status == false) {
 		action.setStatus(DeviceAction.Status.FAILED);
-    }
+	}
 }
 ```
 
@@ -780,7 +780,7 @@ Cuando la pasarela recibe el mensaje de acción personalizada, la pasarela compl
 action.setStatus(Status.OK);
 ```
 
-Para obtener más información sobre DME, consulte [Ampliación de solicitudes de gestión de dispositivos![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](../../devices/device_mgmt/custom_actions.html){: new_window}.
+Para obtener más información sobre DME, consulte [Ampliación de solicitudes de gestión de dispositivos ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
 ## Escucha de los cambios de atributos de dispositivos
 {: #listen_device_attributes}
@@ -808,25 +808,25 @@ public void propertyChange(PropertyChangeEvent evt) {
 	Object value = (Object) evt.getNewValue();
 		switch(evt.getPropertyName()) {
 		case "metadata":
-            DeviceMetadata metadata = (DeviceMetadata) value;
-            System.out.println("Received an updated metadata -- "+ metadata);
-            break;
+			DeviceMetadata metadata = (DeviceMetadata) value;
+			System.out.println("Received an updated metadata -- "+ metadata);
+			break;
 
 			case "location":
-            DeviceLocation location = (DeviceLocation) value;
-            System.out.println("Received an updated location -- "+ location);
-            break;
+			DeviceLocation location = (DeviceLocation) value;
+			System.out.println("Received an updated location -- "+ location);
+			break;
 
 			case "deviceInfo":
-            DeviceInfo info = (DeviceInfo) value;
-            System.out.println("Received an updated device info -- "+ info);
-            break;
+			DeviceInfo info = (DeviceInfo) value;
+			System.out.println("Received an updated device info -- "+ info);
+			break;
 
 			case "mgmt.firmware":
-            DeviceFirmware firmware = (DeviceFirmware) value;
-            System.out.println("Received an updated device firmware -- "+ firmware);
-            break;
-    }
+			DeviceFirmware firmware = (DeviceFirmware) value;
+			System.out.println("Received an updated device firmware -- "+ firmware);
+			break;
+	}
 }
 ```
 

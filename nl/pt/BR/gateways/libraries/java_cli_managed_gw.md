@@ -676,8 +676,7 @@ O fragmento de código a seguir é usado para publicar uma solicitação de gere
 gateway suporta uma Ação do DME:
 
 ```java
-List<String> bundleIds = new ArrayList<String>();
-bundleIds.add("example-dme-actions-v1");
+List<String> bundleIds = new ArrayList<String>(); bundleIds.add("example-dme-actions-v1");
 
 mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
 ```
@@ -687,8 +686,7 @@ O último parâmetro especifica a ação customizada que o dispositivo suporta.
 Da mesma forma, um gateway pode chamar o método de dispositivo correspondente para comunicar o suporte de ação do DME dos dispositivos conectados:
 
 ```java
-List<String> bundleIds = new ArrayList<String>();
-bundleIds.add("example-dme-actions-v1");
+List<String> bundleIds = new ArrayList<String>(); bundleIds.add("example-dme-actions-v1");
 
 mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds);
 ```
@@ -725,7 +723,7 @@ import com.ibm.iotf.devicemgmt.CustomActionHandler;
 
 public class MyCustomActionHandler extends CustomActionHandler implements Runnable {
 
-	// A queue to hold & process the commands for smooth handling of MQTT messages
+	// A queue to hold &  process the commands for smooth handling of MQTT messages
 	private BlockingQueue<CustomAction> queue = new LinkedBlockingQueue<CustomAction>();
 	// A map to hold the publish interval time for each device
 	private Map<String, Long> intervalMap = new HashMap<String, Long>();

@@ -34,13 +34,14 @@ lastupdated: "2017-03-14"
 
 构造方法用于构建客户机实例，并接受包含以下定义的 `Properties` 对象：
 
-| 定义     |描述     |
+| 定义|描述
+|
 |----------------|----------------|
 |`org` |必需值，必须设置为组织标识。如果使用的是 Quickstart 流，请指定 `quickstart`。|
 |`id` |组织中应用程序的唯一标识。|
 |`auth-method`  |认证方法。支持的唯一方法是 `apikey`。|
 |`auth-key`   |可选的 API 密钥，将 auth-method 的值设置为 `apikey` 时必须指定。|
-|`auth-token`   |API 密钥令牌，将 auth-method 的值设置为 `apikey` 时，此参数也是必需的。 |
+|`auth-token`   |API 密钥令牌，将 auth-method 的值设置为 `apikey` 时，此参数也是必需的。|
 |`clean-session`|true 或 false 值，仅当要以持久预订方式连接应用程序时是必需的。缺省情况下，`clean-session` 设置为 `true`。|
 |`Port`|要连接到的端口号。指定 8883 或 443。如果未指定端口号，缺省情况下客户机将通过端口号 8883 连接到 {{site.data.keyword.iot_short_notm}}。|
 |`MaxInflightMessages`  |设置连接的最大未完成消息数。缺省值为 100。|
@@ -182,7 +183,8 @@ lastupdated: "2017-03-14"
 |`event.deviceType`|字符串|标识设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如，“weatherballoon”可能是一种设备类型。|
 |`event.deviceId`|字符串|表示设备的标识。通常，对于特定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
 |`event.event`|字符串|通常用于对特定事件分组，例如“status”、“warning”和“data”。|
-|`event.format`|字符串|格式可以为任意字符串，例如 JSON。  |
+|`event.format`|字符串|格式可以为任意字符串，例如 JSON。
+|
 |`event.data`|字典|消息有效内容的数据。最大长度为 131072 字节。|
 |`event.timestamp`|日期和时间|事件的日期和时间|
 
@@ -297,7 +299,7 @@ lastupdated: "2017-03-14"
 要处理预订接收到的状态更新，需要注册状态事件回调方法。对于 `Connect` 和 `Disconnect` 状态事件，消息将作为 Status 类的实例返回，此类包含以下参数：
 
 
-| 参数     |数据类型     |
+| 参数|数据类型|
 |----------------|----------------|
 |`status.clientAddr` |字符串|
 |`status.protocol`  |字符串|
@@ -308,9 +310,9 @@ lastupdated: "2017-03-14"
 |`status.connectTime`   |java.util.Date|
 |`status.port`|整数|
 
-仅当状态事件为 `Disconnect` 时，才可设置以下属性：
+仅当状态事件为 ``Disconnect`` 时，才可设置以下属性：
 
-| 属性     |数据类型     |
+| 属性|数据类型|
 |----------------|----------------|
 |`status.writeMsg` |整数|
 |`status.readMsg`  |整数|
@@ -344,7 +346,7 @@ lastupdated: "2017-03-14"
   }
 ```
 
-将状态回调添加到应用程序客户机后，每当匹配条件的设备与 {{site.data.keyword.iot_short_notm}} 建立或断开连接时，都会调用 `processDeviceStatus()` 方法。以下代码样本显示了可以如何将状态回调实例添加到应用程序客户机：
+将状态回调添加到应用程序客户机后，每当匹配条件的设备与 {{site.data.keyword.iot_short_notm}} 建立或断开连接时，都会调用 ``processDeviceStatus()`` 方法。以下代码样本显示了可以如何将状态回调实例添加到应用程序客户机：
 
 ```
 
@@ -359,7 +361,7 @@ lastupdated: "2017-03-14"
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-重载方法可用于控制对特定应用程序的状态预订。每当匹配条件的应用程序与 {{site.data.keyword.iot_short_notm}} 建立或断开连接时，都会调用 `processApplicationStatus()` 方法。
+重载方法可用于控制对特定应用程序的状态预订。每当匹配条件的应用程序与 {{site.data.keyword.iot_short_notm}} 建立或断开连接时，都会调用 ``processApplicationStatus()`` 方法。
 
 
 ## 发布来自设备的事件

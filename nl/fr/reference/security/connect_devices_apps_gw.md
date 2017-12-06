@@ -31,7 +31,7 @@ Pour connecter des clients de terminal, d'application et de passerelle à votre 
 
 ### URL de connexion de l'API REST HTTP
 
-<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 **Remarques**
@@ -59,8 +59,7 @@ Lorsque vous utilisez la messagerie MQTT sécurisée sur les ports 8883 ou 443, 
 
 Certaines bibliothèques client TLS (Transport Layer Security) ne prennent pas en charge les domaines qui incluent un caractère générique. Si vous ne pouvez pas changer de bibliothèques, désactivez la vérification des certificats.
 
-Les exigences TLS varient selon que vous vous connectez à {{site.data.keyword.iot_short_notm}} à l'aide du protocole MQTT ou HTTP. 
-Les sections ci-après montrent les suites de chiffrement prises en charge si le
+Les exigences TLS varient selon que vous vous connectez à {{site.data.keyword.iot_short_notm}} à l'aide du protocole MQTT ou HTTP. Les sections ci-après montrent les suites de chiffrement prises en charge si le
 certificat de serveur par défaut est utilisé. Si vous utilisez votre propre certificat de client, les suites de chiffrement utilisables varieront en fonction du certificat utilisé.
 
 ### Exigences TLS pour les connexions MQTT

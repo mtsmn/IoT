@@ -62,7 +62,7 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 - 밑줄(_)
 - 점( . )
 
-애플리케이션 ID와 디바이스 ID를 정의한 후 `mosquitto_sub`를 사용하여 애플리케이션을 표시하는 연결을 작성하십시오. 다음 `<applicationId>` = myApplicationId and `<deviceId>` = myDeviceId 예를 사용하십시오.
+애플리케이션 ID와 디바이스 ID를 정의한 후 `mosquitto_sub`를 사용하여 애플리케이션을 표시하는 연결을 작성하십시오. `<applicationId>` = myApplicationId 및 `<deviceId>` = myDeviceId:의 다음 예제를 사용하십시오.
 ```
     [user@host ~]$ mosquitto_sub -h quickstart.messaging.internetofthings.ibmcloud.com -p 1883 -i "a:quickstart:myApplicationId" -t iot-2/type/mosquitto/id/myDeviceId/evt/helloworld/fmt/json
 

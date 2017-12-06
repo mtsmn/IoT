@@ -62,7 +62,7 @@ Os valores de *appId*, *type_id*, *device_type* e *device_id* devem ter no máxi
 - Sublinhados (_)
 - Pontos (. )
 
-Após definir o ID do aplicativo e o ID do dispositivo, crie uma conexão que represente seu aplicativo usando `mosquitto_sub`. Use os exemplos a seguir de `<applicationId>` = myApplicationId e `<deviceId>` = myDeviceId:
+Após definir o ID do aplicativo e o ID do dispositivo, crie uma conexão que represente seu aplicativo usando `mosquitto_sub`. Use os seguintes exemplos de `<applicationId>` = myApplicationId e `<deviceId>` = myDeviceId:
 ```
     [user@host ~]$ mosquitto_sub -h quickstart.messaging.internetofthings.ibmcloud.com -p 1883 -i "a:quickstart:myApplicationId" -t iot-2/type/mosquitto/id/myDeviceId/evt/helloworld/fmt/json
 

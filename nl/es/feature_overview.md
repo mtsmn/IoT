@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-12"
+lastupdated: "2017-07-20"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2017-01-12"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Visión general de característica de {{site.data.keyword.iot_short_notm}}
+# Visión general de las características de {{site.data.keyword.iot_short_notm}}
 {: #feature_overview}
 
 El {{site.data.keyword.iot_full}} se crea en las siguientes áreas clave:
 
   1. Conexión: Conectar dispositivos y desarrollar aplicaciones.
-  2. Gestión de información: Almacenar y revisar datos de dispositivos e integrar el {{site.data.keyword.iot_short_notm}} con otros servicios.
+  2. Gestión de información: Almacenar, normalizar, transformar y revisar datos de dispositivos e integrar el {{site.data.keyword.iot_short_notm}} con otros servicios.
   3. Analíticas: Visualizar datos de dispositivos en tiempo real utilizando el panel de instrumentos {{site.data.keyword.iot_short_notm}}.
   4. Gestión de riesgos: Configurar la conectividad y la arquitectura seguras con control de acceso para usuarios y aplicaciones.
 
@@ -39,6 +39,7 @@ Las funciones de gestión de dispositivos se proporcionan a través de una API d
 
 La integración de extensiones y servicios permite añadir servicios externos y extensiones definidas por el usuario de servicios principales a una instancia de {{site.data.keyword.iot_short_notm}}. Los servicios externos que se pueden integrar con {{site.data.keyword.iot_short_notm}} incluyen los servicios de información meteorológica de The Weather Company, que le permiten consultar información meteorológica actual en la ubicación del dispositivo, datos de Jasper SIM y {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. Para obtener más información sobre integraciones y extensiones de servicios de terceros, consulte [integración de servicios externos](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
 
+
 ---
 
 ## Gestión de la información
@@ -54,8 +55,13 @@ Al utilizar la {{site.data.keyword.iot_short_notm}} Last Event Cache API, puede 
 
 Los datos de sucesos de dispositivo del servicio de {{site.data.keyword.iot_short_notm}} se pueden almacenar para su uso posterior. El almacenamiento de datos es un primer paso esencial para realizar un análisis detallado de dichos datos.  Por ejemplo, puede realizar un seguimiento de los cambios durante periodos de tiempo más largos y almacenar conjuntos de datos que se utilizan con unas potentes herramientas de análisis, incluido el uso con las API de Watson y la informática cognitiva. Para obtener más información, consulte [conexión de un servicio historian de {{site.data.keyword.cloudant_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/cloudant_connector.html) o [conexión de un servicio historian de {{site.data.keyword.messagehub}}](https://console.ng.bluemix.net/docs/services/IoT/message_hub.html).
 
----
+### Gestión de datos
 
+Diferentes marcas y modelos de dispositivos publican datos en formatos diferentes. La característica de gestión de datos le permite transformar y normalizar estos datos en una única vista lógica llamada *estado del dispositivo*, que las aplicaciones pueden entender y procesar. Utilizando la característica de gestión de datos se simplifica ampliamente el desarrollo de aplicaciones puesto que la aplicación ya no necesita entender diferentes formatos de estos de sucesos que se envían desde cada dispositivo. Cuando los dispositivos publican sucesos en {{site.data.keyword.iot_short_notm}}, el contenido de los sucesos se puede asignar a propiedades de estado definidas por el usuario utilizando asignaciones. Si el suceso de entrada da como resultado el cambio del estado del dispositivo, los valores de las propiedades de estado del dispositivo se actualizan y almacenan en {{site.data.keyword.iot_short_notm}}. Los valores se ponen a disponibilidad de la aplicación según demanda utilizando una API HTTP o suscribiéndose a un tema.
+
+Para obtener más información acerca del uso de esta característica, consulte [Introducción a la gestión de datos](GA_information_management/ga_im_device_twin.html).
+
+---
 ## Análisis
 {: #analytics}
 

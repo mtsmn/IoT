@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-12"
+lastupdated: "2017-06-13"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-05-12"
 # Gestione della sicurezza e del rischio
 {: #RM_security}
 
-Puoi migliorare la sicurezza per abilitare la creazione, la definizione e l'invio di notifiche sulla sicurezza della connessione del dispositivo. Con questa sicurezza migliorata, vengono utilizzati i certificati e l'autenticazione TLS (transport layer security) in aggiunta all'utilizzo di token e ID utente utilizzati da {{site.data.keyword.iot_short_notm}} per determinare come e dove i dispositivi si connettono alla piattaforma. 
+Puoi migliorare la sicurezza per abilitare la creazione, la definizione e l'invio di notifiche sulla sicurezza della connessione del dispositivo. Con questa sicurezza migliorata, vengono utilizzati i certificati e l'autenticazione TLS (transport layer security) in aggiunta all'utilizzo di token e ID utente utilizzati da {{site.data.keyword.iot_short_notm}} per determinare come e dove i dispositivi si connettono alla piattaforma.
 
 ## Certificati
 {: #certificates}

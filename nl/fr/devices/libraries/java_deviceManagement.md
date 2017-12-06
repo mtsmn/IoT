@@ -1,4 +1,4 @@
----
+﻿---
 
 copyright:
   years: 2015, 2017
@@ -92,11 +92,11 @@ Le constructeur 1 construit une instance `ManagedDevice` dans {{site.data.keywor
 
 |Propriété |Description |
 |:---|:---|
-|`Organization-ID` |ID de votre organisation|
-|`Device-Type` |Type de votre terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
-|`Device-ID` |ID de votre terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
+|``Organization-ID`` |ID de votre organisation|
+|``Device-Type`` |Type de votre terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
+|``Device-ID`` |ID de votre terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
 |`Authentication-Method` |Méthode d'authentification à utiliser. La seule valeur actuellement prise en charge est `token`.|
-|`Authentication-Token` |Jeton d'authentification permettant d'établir une connexion sécurisée entre votre terminal et Watson IoT Platform.|
+|``Authentication-Token`` |Jeton d'authentification permettant d'établir une connexion sécurisée entre votre terminal et Watson IoT Platform.|
 
 
 Le code suivant montre comment créer une instance `ManagedDevice` :

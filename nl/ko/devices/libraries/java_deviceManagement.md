@@ -90,13 +90,13 @@ DeviceMetadata metadata = new DeviceMetadata(data);
 
 Constructor One은 `DeviceData`와 다음 필수 특성을 모두 승인하여 {{site.data.keyword.iot_short_notm}}에 `ManagedDevice` 인스턴스를 생성합니다.
 
-|특성 |설명  |
+|특성 |설명 |
 |:---|:---|
-|`Organization-ID` |조직 ID|
-|`Device-Type` |디바이스 유형입니다. 일반적으로, deviceType은 특정 태스크를 수행하는 디바이스의 그룹화입니다(예: "weatherballoon"). |
-|`Device-ID` |디바이스 ID입니다. 일반적으로, 제공된 디바이스 유형의 경우 deviceId는 해당 디바이스의 고유 ID입니다(예: 일련 번호 또는 MAC 주소). |
+|``Organization-ID`` |조직 ID|
+|``Device-Type`` |디바이스 유형입니다. 일반적으로, deviceType은 특정 태스크를 수행하는 디바이스의 그룹화입니다(예: "weatherballoon"). |
+|``Device-ID`` |디바이스 ID입니다. 일반적으로, 제공된 디바이스 유형의 경우 deviceId는 해당 디바이스의 고유 ID입니다(예: 일련 번호 또는 MAC 주소). |
 |`Authentication-Method` |사용할 인증 메소드입니다. 현재 지원되는 값은 `token`입니다.|
-|`Authentication-Token` |디바이스를 Watson IoT Platform에 안전하게 연결하기 위한 인증 토큰입니다.|
+|``Authentication-Token`` |디바이스를 Watson IoT Platform에 안전하게 연결하기 위한 인증 토큰입니다.|
 
 
 다음 코드는 `ManagedDevice` 인스턴스 작성 방법을 간략하게 설명합니다.
@@ -162,7 +162,7 @@ managedDevice.manage(3600);
 
 `관리` 오퍼레이션에 대한 자세한 정보는 [문서]를 참조하십시오.
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## 비관리
 
@@ -174,7 +174,7 @@ managedDevice.unmanage();
 
 `비관리` 오퍼레이션에 대한 자세한 정보는 [문서]를 참조하십시오.
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## 위치 업데이트
 {: #construct_location_update}
@@ -268,7 +268,7 @@ if(rc == 200) {
 새 로그 항목을 추가하여 디바이스에서 {{site.data.keyword.iot_short_notm}}에 변경을 알리도록 선택할 수 있습니다. 로그 항목에는 다음 정보가 포함되어 있습니다.
 - 로그 메시지
 - 시간소인
-- 심각도
+- 심각도(Severity)
 - Base64 인코딩된 2진 진단 데이터(선택사항)
 
 로그 메시지를 보내려면 디바이스가 다음 샘플에 개요된 대로 `DiagnosticLog` 오브젝트를 생성해야 합니다.

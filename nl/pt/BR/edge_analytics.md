@@ -21,8 +21,10 @@ Com Edge Analytics, você move o processo de acionamento da regra de análise de
 
 Os dispositivos enviam seus dados a um gateway ativado por Edge Analytics em que as regras de Edge Analytics analisam os dados. Dependendo da função e sua ação, dados críticos e alertas podem ser enviados ao {{site.data.keyword.iot_full}}, acionarem um alerta no gateway ou serem gravados em um arquivo de texto que é local para o gateway.
 
-O diagrama a seguir ilustra a arquitetura geral de um ambiente de Edge Analytics do {{site.data.keyword.iot_full}}.
-![IBM Watson IoT Platform para arquitetura de Edge Analytics](images/architecture_platform_edge.svg "IBM Watson IoT Platform com arquitetura de Edge Analytics")
+O diagrama a seguir ilustra a arquitetura geral de um ambiente de análise de ponta do {{site.data.keyword.iot_full}}
+![IBM Watson IoT Platform para arquitetura de análise
+de ponta](images/architecture_platform_edge.svg "IBM Watson IoT Platform comarquitetura de análise de ponta")
+
 
 ## Antes de iniciar
 {: #byb}
@@ -205,8 +207,11 @@ Para ver informações sobre o estado do gateway:
  `RuleBytesInRate` | O número estimado de bytes de mensagens por segundo que foram enviados ao núcleo do mecanismo de regras do EAA durante o último minuto.
  `MsgOutCount` | O número de mensagens que foram enviadas pelo EAA ao {{site.data.keyword.iot_short}}.
  `MsgOutRate` | O número estimado de bytes de mensagens por segundo que são enviados pelo EAA ao {{site.data.keyword.iot_short}} durante o último minuto.
- `MsgReducePercent` | A diferença de porcentagem entre mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgIn - msgOut) / msgIn` `BytesReducePercent` | A diferença de porcentagem entre bytes recebidos e de saída. </br>A fórmula a seguir é usada para o cálculo: `(bytesIn - bytesOut) / bytesIn`
-`MsgRateReduce` | A diferença de porcentagem entre a taxa de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgInRate - msgOutRate) / msgInRate` `BytesRateReduce` | A diferença de porcentagem entre bytes de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(bytesInRate - bytesOutRate) / bytesInRate` `SystemLoad` | O carregamento do sistema atual para o sistema no qual o EAA está em execução. **Nota:** a taxa da CPU (unidade central de processamento) será enviada apenas se o comando `mpstat` estiver disponível no sistema no qual o EAA está em execução. Caso contrário, a média de carregamento do sistema para o último minuto será enviada. </br>“A média de carregamento do sistema é a soma do número de entidades executáveis enfileiradas para os processadores disponíveis e o número de entidades executáveis em execução nos processadores disponíveis em média durante um período de tempo. A maneira na qual a média de carregamento é calculada é específica do sistema operacional, mas geralmente é uma média controlada dependente de tempo. Se a média de carregamento não estiver disponível, um valor negativo será retornado. ” - javadoc para *ManagementFactory.getOperatingSystemMXBean*.
+ `MsgReducePercent` | A diferença de porcentagem entre mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgIn - msgOut) / msgIn`
+ `BytesReducePercent` | A diferença de porcentagem entre bytes recebidos e de saída. </br>A fórmula a seguir é usada para o cálculo: `(bytesIn - bytesOut) / bytesIn`
+ `MsgRateReduce` | A diferença de porcentagem entre a taxa de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgInRate - msgOutRate) / msgInRate`
+ `BytesRateReduce` | A diferença de porcentagem entre bytes de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(bytesInRate - bytesOutRate) / bytesInRate`
+ `SystemLoad` | O carregamento do sistema atual para o sistema no qual o EAA está em execução. **Nota:** a taxa da CPU (unidade central de processamento) será enviada apenas se o comando `mpstat` estiver disponível no sistema no qual o EAA está em execução. Caso contrário, a média de carregamento do sistema para o último minuto será enviada. </br>“A média de carregamento do sistema é a soma do número de entidades executáveis enfileiradas para os processadores disponíveis e o número de entidades executáveis em execução nos processadores disponíveis em média durante um período de tempo. A maneira na qual a média de carregamento é calculada é específica do sistema operacional, mas geralmente é uma média controlada dependente de tempo. Se a média de carregamento não estiver disponível, um valor negativo será retornado. ” - javadoc para _ManagementFactory.getOperatingSystemMXBean_.
  `FreeMemory` | O número de bytes de memória livre para a Java™ Virtual Machine (JVM) na qual o EAA está em execução.
  `MemoryUsed` | O número de bytes de memória da JVM usado pelo EAA.
  `InQueueSize` | O número de mensagens que são enfileiradas para processamento pelo EAA.

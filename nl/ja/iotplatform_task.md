@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-10-02"
 
 ---
 
@@ -137,13 +137,12 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
 デバイスは、このパラメーターの組み合わせで一意的に識別されます。
 - ユーザー名: use-token-auth  
 この値の場合は、トークンによる許可を使用しています。
-- パスワード: *認証トークン*  
+- パスワード: *Authentication token*  
 この値は、デバイスの登録時に自分で定義した固有のトークンか、デバイスに割り当てられたトークンです。
 - イベント・トピック形式: iot-2/evt/*event_id*/fmt/*format_string*  
 *event_id* では、{{site.data.keyword.iot_short_notm}} に表示されるイベント名を指定します。*format_string* は、イベントの形式 (JSON など) です。
-- メッセージ形式: JSON
-  
- {{site.data.keyword.iot_short_notm}} は、いくつかの形式 (JSON やテキストなど) をサポートします。
+- メッセージ形式: JSON  
+ {{site.data.keyword.iot_short_notm}} は、いくつかの形式 (JSON やテキストなど) に対応しています。
 
 デバイスを接続するための詳細については、技術資料にある[デバイスの MQTT 接続](devices/mqtt.html)を参照してください。
 

@@ -257,7 +257,7 @@ où le premier noeud est un noeud HTTP et le second noeud est un noeud Twilio.
  - URL - `http://mynodered.mybluemix.net/RTI-alert`
  - CORPS   
  ```json
- {"text":"*Un terminal nécessite votre attention*\n Heure : {{timestamp}}\n {{site.data.keyword.iot_short}} instance : {{tenantId}}\n Terminal : {{deviceId}}\n Règle : {{ruleName}}\n Description : {{ruleDescription}}\n Condition : {{ruleCondition}}\n Message de terminal brut : \n{{message}}"}
+ {"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iot_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}
  ```  
 5. Cliquez sur **Terminer** pour sauvegarder l'action.
 
@@ -299,7 +299,7 @@ Pour créer l'action de publication sur Slack :
  - Type de contenu - `application/json`
  - Corps   
  ```json
- {"text":"*Un terminal nécessite votre attention*\n Heure : {{timestamp}}\n {{site.data.keyword.iot_short}} instance : {{tenantId}}\n Terminal : {{deviceId}}\n Règle : {{ruleName}}\n Description : {{ruleDescription}}\n Condition : {{ruleCondition}}\n Message de terminal brut : \n{{message}}"}
+ {"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iot_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}
  ```  
   **Important :** Le Webhook Slack doit au moins contenir la zone "text". Pour plus d'informations, voir la rubrique [Incoming Webhooks ![Icône de lien externe](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks "Slack documentation"){: new_window} dans la documentation Slack.
 11. Cliquez sur **Terminer** pour sauvegarder l'action.

@@ -35,7 +35,7 @@ Para incluir um esquema:
     **Dica:** as propriedades disponíveis são definidas na carga útil das mensagens que são enviadas por um dispositivo. Para obter informações sobre o formato da carga útil do {{site.data.keyword.iot_short}}, consulte o tópico [Carga útil da mensagem](reference/mqtt/index.html#message-payloadl "Carga útil da carga útil da mensagem.").   
   <dl>
   <dt>Incluir uma propriedade manualmente</dt>
-  <p><b>Dica:</b> para criar uma estrutura de propriedade aninhada, primeiro inclua uma propriedade que tenha o tipo de dados Parent. Na tabela de propriedades, é possível clicar então no ícone ![Incluir filho.](images/add_child.png "Incluir filho") para incluir uma ou mais propriedades-filhas.</p>
+  <p><b>Dica:</b> para criar uma estrutura de propriedade aninhada, primeiro inclua uma propriedade que tenha o tipo de dados Parent. Na tabela de propriedades, você pode clicar em ![ícone Incluir filho.](images/add_child.png "Incluir filho") para incluir uma ou mais propriedades-filhas.</p>
   <dd>
   <ol>
     <li>Selecione a guia **Manual**.</li>

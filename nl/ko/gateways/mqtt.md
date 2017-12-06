@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -33,7 +33,7 @@ MQTT 인증을 사용하려면 MQTT 연결 시 사용자 이름과 비밀번호�
 ### 사용자 이름
 {: #username}
 
-`use-token-auth` 사용자 이름은 모든 게이트웨이에 동일한 값입니다. 이 값을 사용하면 {{site.data.keyword.iot_short_notm}}에서 비밀번호로 지정된 게이트웨이의 인증 토큰을 사용합니다.
+``use-token-auth`` 사용자 이름은 모든 게이트웨이에 동일한 값입니다. 이 값을 사용하면 {{site.data.keyword.iot_short_notm}}에서 비밀번호로 지정된 게이트웨이의 인증 토큰을 사용합니다.
 
 ### 비밀번호
 {: #password}
@@ -54,13 +54,13 @@ MQTT 인증을 사용하려면 MQTT 연결 시 사용자 이름과 비밀번호�
 
 |    |'typeID'|'deviceID'|
 |:---|:---|:---|
-|게이트웨이 1 |mygateway |gateway1 |
-|디바이스 1 |mydevice |device1 |
+|게이트웨이 1|mygateway|gateway1|
+|디바이스 1|mydevice|device1|
 
 -   게이트웨이 1은 고유 상태 이벤트를 공개할 수 있습니다.  
-    `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
+    ``iot-2/type/mygateway/id/gateway1/evt/status/fmt/json``
 -   게이트웨이 1은 디바이스 1 대신 상태 이벤트를 공개할 수 있습니다.  
-    `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
+    ``iot-2/type/mydevice/id/device1/evt/status/fmt/json``
 
 **중요:** 메시지 페이로드는 최대 131072바이트로 제한됩니다. 이 한계보다 큰 메시지는 거부됩니다.
 
@@ -79,10 +79,10 @@ MQTT `+` 와일드카드는 여러 명령 소스를 구독하기 위해 `typeId`
 
 **예:**
 
-|디바이스 |`typeId`|`deviceId`|
+|디바이스|`typeId`|`deviceId`|
 |:---|:---|
-|게이트웨이 1| mygateway   | gateway1   |
-|디바이스 1 | mydevice    | device1    |
+|게이트웨이 1| mygateway| gateway1|
+|디바이스 1| mydevice| device1|
 
 
 -   게이트웨이 1은 게이트웨이에서 지시하는 명령을 구독할 수 있습니다.  
@@ -159,38 +159,43 @@ iot-2/type/**typeId**/id/**deviceId**/notify
 
 관리 게이트웨이는 서비스 품질(QoS) 레벨이 0 또는 1인 메시지를 공개할 수 있습니다. 
 
-QoS=0인 메시지는 버릴 수 있으며 메시징 서버가 다시 시작된 후 유지되지 않습니다. QoS=1인 메시지는 큐에 넣을 수 있으며 메시징 서버가 다시 시작된 후 유지됩니다. 구독 지속성에 따라 요청을 큐에 넣을지가 판별됩니다. 구독한 연결의 `cleansession` 매개변수에 따라 구독 지속성이 판별됩니다.  
+QoS=0인 메시지는 버릴 수 있으며 메시징 서버가 다시 시작된 후 유지되지 않습니다. QoS=1인 메시지는 큐에 넣을 수 있으며 메시징 서버가 다시 시작된 후 유지됩니다. 구독 지속성에 따라 요청을 큐에 넣을지가 판별됩니다. 구독한 연결의 ``cleansession`` 매개변수에 따라 구독 지속성이 판별됩니다.  
 
-메시지 큐에 넣기를 지원하기 위해 {{site.data.keyword.iot_short_notm}}에서 QoS 레벨이 1인 요청을 공개합니다. 관리 게이트웨이가 연결되지 않은 동안 전송된 메시지를 큐에 넣으려면 `cleansession` 매개변수를 false로 설정하여 디바이스에서 정리 세션을 사용하지 않게 구성하십시오.
+메시지 큐에 넣기를 지원하기 위해 {{site.data.keyword.iot_short_notm}}에서 QoS 레벨이 1인 요청을 공개합니다. 관리 게이트웨이가 연결되지 않은 동안 전송된 메시지를 큐에 넣으려면 ``cleansession`` 매개변수를 false로 설정하여 디바이스에서 정리 세션을 사용하지 않게 구성하십시오.
 
 **경고**
 
-관리 게이트웨이에서 지속 가능한 구독을 사용하는 경우, 요청 제한시간이 초과되기 전에 게이트웨이에서 서비스에 다시 연결하지 않으면 오프라인인 동안 게이트웨이에 전송된 디바이스 관리 명령은 실패한 오퍼레이션으로 보고됩니다. 게이트웨이가 다시 연결되면 게이트웨이에서 해당 요청을 처리합니다. 지속 가능한 구독은 `cleansession=false` 매개변수를 사용하여 지정합니다.
+관리 게이트웨이에서 지속 가능한 구독을 사용하는 경우, 요청 제한시간이 초과되기 전에 게이트웨이에서 서비스에 다시 연결하지 않으면 오프라인인 동안 게이트웨이에 전송된 디바이스 관리 명령은 실패한 오퍼레이션으로 보고됩니다. 게이트웨이가 다시 연결되면 게이트웨이에서 해당 요청을 처리합니다. 지속 가능한 구독은 ``cleansession=false`` 매개변수를 사용하여 지정합니다.
 
-관련된 디바이스와 상관없이 게이트웨이에서 MQTT 세션을 소유합니다. 디바이스에서 게이트웨이를 통해 구독 요청을 제출하면 `cleansession=false` 옵션 설정 여부와 상관없이 요청이 다른 게이트웨이로 로밍되지 않습니다.
+관련된 디바이스와 상관없이 게이트웨이에서 MQTT 세션을 소유합니다. 디바이스가 게이트웨이를 통해 구독 요청을 제출하면 ``cleansession=false`` 옵션 설정 여부와 관계없이 요청이 다른 게이트웨이로 로밍되지 않습니다.
 
 ### 주제
 {: #topics}
 
-관리 게이트웨이에서 {{site.data.keyword.iot_short_notm}}의 요청과 응답을 처리하려면 다음 주제를 구독해야 합니다.
+관리 게이트웨이가 {{site.data.keyword.iot_short_notm}}의 고유 요청과 응답을 처리하려면 다음 주제를 구독해야 합니다.
 
--   관리 게이트웨이가 다음에서 디바이스 관리 응답을 구독합니다.  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/+</pre>
-{: codeblock}
--   관리 게이트웨이가 다음에서 디바이스 관리 요청을 구독합니다.  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/+</pre>
+-   관리 게이트웨이는 고유 디바이스 관리 요청 및 응답을 구독합니다.  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">gatewayTypeId</var>/id/<var class="keyword varname">gatewayDeviceId</var>/#</pre>
 {: codeblock}
 
-관리 게이트웨이에서 다음 응답과 요청을 공개합니다.
+관리 게이트웨이가 연결된 디바이스에 대해 {{site.data.keyword.iot_short_notm}}의 요청과 응답을 처리하려면 다음 주제를 구독해야 합니다.
 
-- 디바이스 관리 응답은 다음에서 공개됩니다.  
-<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/</pre>
+-   관리 게이트웨이가 다음에서 연결된 디바이스에 대해 디바이스 관리 요청 및 응답을 구독합니다.  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/#</pre>
 {: codeblock}
-- 디바이스 관리 요청은 다음에서 공개됩니다.  
+
+게이트웨이는 자체적으로뿐 아니라 관련 **typeId** 및 **deviceId**를 사용하여 연결된 다른 디바이스 대신 디바이스 관리 프로토콜 메시지를 처리할 수 있습니다. MQTT 와일드카드 **+**를 **typeId** 및 **deviceId** 대신 사용할 수도 있습니다.
+
+관리 게이트웨이는 수행 중인 관리 요청 유형에 고유한 주제에 공개됩니다.
+
+- 관리 게이트웨이가 다음에서 디바이스 관리 응답을 공개합니다.
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
+{: codeblock}
+
+관리 디바이스가 공개할 수 있는 다른 주제는 [디바이스 관리 프로토콜](device_mgmt/index.html) 및 [디바이스 관리 요청](../devices/device_mgmt/requests.html)을 참조하십시오. 
+- **iotdevice-1/**으로 시작되는 주제가 다음으로 시작될 경우를 제외하고, 게이트웨이에 대해 프로토콜이 동일하게 유지됩니다.
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}
-
-게이트웨이는 자체적으로뿐 아니라 관련 **typeId** 및 **deviceId**를 사용하여 연결된 다른 디바이스 대신 디바이스 관리 프로토콜 메시지를 처리할 수 있습니다.
 
 ### 메시지 형식
 {: #msg_format}

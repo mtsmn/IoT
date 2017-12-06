@@ -21,8 +21,7 @@ Créez des tableaux et des cartes afin de créer et partager vos propres tableau
 
 En utilisant des tableaux et des cartes, vous pouvez visualiser, sous forme
 graphique, les valeurs de jeux de données d'un ou de plusieurs terminaux afin de bénéficier
-d'un aperçu rapide et d'une meilleure compréhension des données.
-Créez des tableaux et ajoutez des cartes qui affichent les données sous forme de nombres bruts, de graphiques en temps réel, de jauges, etc. Ajoutez des membres à vos tableaux pour les partager avec d'autres utilisateurs dans votre organisation. Organisez les cartes et ajoutez des diviseurs de texte explicatif pour peaufiner votre présentation  
+d'un aperçu rapide et d'une meilleure compréhension des données. Créez des tableaux et ajoutez des cartes qui affichent les données sous forme de nombres bruts, de graphiques en temps réel, de jauges, etc. Ajoutez des membres à vos tableaux pour les partager avec d'autres utilisateurs dans votre organisation. Organisez les cartes et ajoutez des diviseurs de texte explicatif pour peaufiner votre présentation  
 
 Vous pouvez également développer l'ensemble par défaut de cartes [en créant vos propres cartes personnalisées](custom_cards/custom-cards.html).
 
@@ -37,7 +36,7 @@ Le tableau de bord {{site.data.keyword.iot_full}} comporte les tableaux par déf
 |Présentation de l'utilisation  | Statistiques d'utilisation pour votre organisation. Répertorie les types de terminaux, ainsi que les données consommées. | <ul><li>Types de terminaux<li>Données transférées</ul>
 |Analyse centrée sur la règle | Règles pour votre organisation. Des cartes supplémentaires recensent les alertes déclenchées, les terminaux associés, les propriétés de terminal et les informations d'alerte. | <ul><li>Règles que je gère<li>Alertes de règle<li>Informations sur l'alerte de règle<li>Terminaux associés<li>Informations sur le terminal<li>Propriétés de terminal</ul>  
 |Analyse centrée sur le terminal | Les terminaux connectés à votre organisation. Des cartes supplémentaires affichent des alertes pour un terminal sélectionné, des informations relatives à un terminal sélectionné, et des informations d'alerte. | <ul><li>Terminaux qui m'intéressent<li>Informations sur le terminal<li>Alertes de règle pour ce terminal<li>Informations sur l'alerte de règle<li>Propriétés de terminal</ul>
-|Présentation de la sécurité et des risques (bêta) | L'état général de la sécurité de votre organisation. Les opérateurs système et les analystes de sécurité peuvent afficher des détails sur la conformité, l'état de connexion des terminaux, les causes des échecs de connexion et les terminaux bloqués par liste noire ou autorisés par liste blanche. À partir de la carte Conformité à la sécurité de connexion, l'utilisateur peut obtenir un rapport détaillé sur les terminaux non conformes et exporter le rapport vers Excel. | <ul><li>Conformité à la politique<li>Sécurité de connexion<li>Conformité liste noire/liste blanche</ul>
+|Présentation de la sécurité et des risques (bêta) | L'état général de la sécurité de votre organisation. Les opérateurs système et les analystes de sécurité peuvent afficher des détails sur la conformité, l'état de connexion des terminaux, les causes des échecs de connexion et les terminaux bloqués par liste noire ou autorisés par liste blanche.  À partir de la carte Conformité à la sécurité de connexion, l'utilisateur peut obtenir un rapport détaillé sur les terminaux non conformes et exporter le rapport vers Excel. | <ul><li>Conformité à la politique<li>Sécurité de connexion<li>Conformité liste noire/liste blanche</ul>
 
 Vous pouvez mettre à jour ces tableaux en ajoutant, en mettant à jour et en retirant des cartes.
 
@@ -56,7 +55,7 @@ Pour créer un tableau et y ajouter une carte :
 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Tableaux**.
 2. Sélectionnez un tableau sur lequel vous possédez des droits d'édition ou créez un nouveau tableau.
 3. Dans le tableau, cliquez sur **Ajouter une nouvelle carte**.
-3. Sélectionnez un type de carte.   
+3. Sélectionnez un type de carte.  
 **Astuce :** Si vous hésitez quant au choix de visualisation d'une carte de type Terminaux, sélectionnez **Visualisation générique**. Vous pouvez modifier le type de carte ultérieurement.
 <dl>
 <dt>Terminaux</dt>
@@ -101,14 +100,10 @@ Pour créer un tableau et y ajouter une carte :
 </tr>
 <tr>
 <td>Liste de terminaux</td>
-<td>Liste permettant de surveiller plusieurs terminaux. Elle peut être utilisée comme source de données d'autres cartes.</br>Vous pouvez
-filtrer une liste par ID et type de terminal dans les paramètres de la carte.
-Les listes de terminaux de taille L ou plus grande peuvent aussi être filtrées interactivement. Pour cela,
-cliquez sur l'icône de filtre dans la carte.
-Les entrées du filtre peuvent être ajoutées une à une, sous forme de plage
-(x-y) ou de liste d'éléments séparés par une virgule.
-</br> Par défaut, une liste affiche l'ID et le type de chaque terminal.
-Vous pouvez configurer les paramètres de la carte pour qu'elle affiche d'autres métadonnées des terminaux dans la liste. </td>
+<td>Liste permettant de surveiller plusieurs terminaux. Elle peut être utilisée comme source de données d'autres cartes. </br>Vous pouvez
+filtrer une liste par ID et type de terminal dans les paramètres de la carte. Les listes de terminaux de taille L ou plus grande peuvent aussi être filtrées interactivement. Pour cela,
+cliquez sur l'icône de filtre dans la carte. Les entrées du filtre peuvent être ajoutées une à une, sous forme de plage
+(x-y) ou de liste d'éléments séparés par une virgule.</br> Par défaut, une liste affiche l'ID et le type de chaque terminal. Vous pouvez configurer les paramètres de la carte pour qu'elle affiche d'autres métadonnées des terminaux dans la liste.  </td>
 </tr>
 <tr>
 <td>Informations sur le terminal</td>
@@ -212,7 +207,7 @@ Vous pouvez configurer les paramètres de la carte pour qu'elle affiche d'autres
 4.	Sélectionnez la ou les sources de données de la carte.  
 Sélectionnez une ou plusieurs sources de données de carte, puis cliquez sur **Suivant**.  
 Les sources de données peuvent être des terminaux enregistrés ou d'autres cartes. L'utilisation d'une autre carte comme source de données exige la
-présence d'une carte de type liste ou mappe dans le tableau.   
+présence d'une carte de type liste ou mappe dans le tableau.  
 5. Ajoutez un ou plusieurs jeux de données pour chacune de vos sources de données.
  - Terminaux
     2. Sélectionnez un événement qui inclut le point de données que vous souhaitez afficher.
@@ -231,14 +226,12 @@ présence d'une carte de type liste ou mappe dans le tableau.
  7. Sélectionnez la taille de la présentation.  
 Vous pouvez régler la taille de la carte sur votre tableau, mais aussi contrôler
 d'autres variables de présentation telles que le nombre de terminaux à lister ou les
-métadonnées du graphique affiché.
-   
+métadonnées du graphique affiché.   
 **Astuce :** Cliquez sur les différentes étiquettes de taille pour obtenir un aperçu des cartes dans ces différentes tailles.
  8. Configurez les autres réglages.  
 Si la carte le prévoit, cliquez sur **Paramètres** pour accéder aux autres réglages tels que
 les plages de données pour les cartes de type compteur (ou jauge) et les options de filtrage pour les
 cartes de type liste de terminaux.
-
 6. Mettez à jour les informations de la carte.  
  1. Entrez un titre et une description pour la carte et, en option, choisissez une combinaison de couleurs.   
  2. Cliquez sur **Soumettre** pour créer la carte.

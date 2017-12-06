@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -13,15 +13,13 @@ lastupdated: "2017-05-24"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# API di messaggistica HTTP per i dispositivi gateway (Beta)
+# API di messaggistica HTTP per i dispositivi gateway
 {: #api}
-
-**Importante:** l'API HTTP {{site.data.keyword.iot_full}} per la funzione dei dispositivi gateway è disponibile solo come parte di un programma beta limitato. Futuri aggiornamenti possono includere modifiche incompatibili con la versione corrente di questa funzione. Provala e [facci sapere cosa ne pensi ![Icona link esterno](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Accesso alla documentazione dell'API di messaggistica HTTP per i dispositivi gateway
 {: #rest_messaging_api}
 
-Per accedere alla documentazione dell'API di messaggistica HTTP {{site.data.keyword.iot_short_notm}} e trovare più informazioni sull'invio degli eventi dai dispositivi gateway, consulta [API di messaggistica HTTP {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
+Per accedere alla documentazione dell'API di messaggistica HTTP {{site.data.keyword.iot_short_notm}} e trovare più informazioni sull'invio degli eventi da dispositivi gateway, consulta [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
 
 ## Connessioni client
@@ -35,7 +33,7 @@ Per informazioni sulla sicurezza client e su come connettere i client ai disposi
 
 In aggiunta all'utilizzo del protocollo di messaggistica MQTT, puoi anche configurare i tuoi dispositivi a pubblicare eventi {{site.data.keyword.iot_short_notm}} tramite HTTP utilizzando o i comandi dell'API di messaggistica HTTP.
 
-Per inoltrare una richiesta `POST` da un dispositivo collegato a {{site.data.keyword.iot_short_notm}}, utilizza uno dei seguenti URL:
+Per inoltrare una richiesta ``POST`` da un dispositivo collegato a {{site.data.keyword.iot_short_notm}}, utilizza uno dei seguenti URL:
 
 ### Richiesta POST non sicura
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
@@ -78,7 +76,7 @@ Dove:
 
 ### Intestazioni richiesta per tipo di contenuto
 
-Deve essere fornita un'intestazione della richiesta `Content-Type` con la richiesta. La seguente tabella mostra come i tipi supportati sono associati ai formati interni di {{site.data.keyword.iot_short_notm}}:
+Deve essere fornita un'intestazione della richiesta `Content-Type` con la richiesta se il contenuto non è JSON. La seguente tabella mostra come i tipi supportati sono associati ai formati interni di {{site.data.keyword.iot_short_notm}}:
 
 |Intestazione Content-Type|Formato in {{site.data.keyword.iot_short_notm}}|
 |:---|:---|
@@ -100,7 +98,7 @@ Per informazioni sulla gestione dei dispositivi gateway utilizzando le API, cons
 
 Oltre a utilizzare il protocollo di messaggistica MQTT, puoi anche configurare i tuoi dispositivi gateway per ricevere comandi da {{site.data.keyword.iot_short_notm}} su HTTP utilizzando i comandi della API di messaggistica HTTP. Un dispositivo gateway può ricevere i comandi indirizzati ai dispositivi nel suo gruppo di risorse associato. Per ulteriori informazioni sui gruppi di risorse dei gateway, consulta [Controllo dell'accesso al gateway (Beta)](../gateways/gateway-access-control.html).
 
-Usa uno dei seguenti URL per inoltrare una richiesta `POST` da un gateway connesso a {{site.data.keyword.iot_short_notm}}:
+Usa uno dei seguenti URL per inoltrare una richiesta ``POST`` da un gateway connesso a {{site.data.keyword.iot_short_notm}}:
 
 ### Richiesta POST non sicura
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-12"
+lastupdated: "2017-07-20"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-01-12"
 {{site.data.keyword.iot_full}} repose sur les fonctionnalités suivantes :
 
   1. Connexion - Connexion de terminaux et développement d'applications.
-  2. Gestion des informations - Stockage et révision de données de terminal et intégration de votre {{site.data.keyword.iot_short_notm}} à d'autres services.
+  2. Gestion des informations - Stockage, normalisation, transformation et révision des données de terminal et intégration de votre {{site.data.keyword.iot_short_notm}} à d'autres services.
   3. Analyse - Visualisation de données de terminal en temps réel à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}}.
   4. Gestion des risques - Configuration de la connectivité et de l'architecture sécurisées avec contrôle d'accès pour les utilisateurs et les applications.
 
@@ -39,6 +39,7 @@ Les fonctions de gestion des terminaux sont fournies via une API de gestion des 
 
 Les extensions et l'intégration de services permettent d'ajouter des services externes et des extensions définies par l'utilisateur de services de base à une instance de {{site.data.keyword.iot_short_notm}}. Les services externes qui peuvent être intégrés à {{site.data.keyword.iot_short_notm}} comprennent les services de localisation météorologiques de The Weather Company, vous permettant de trouver la météo en cours dans la zone géographique d'un terminal, les données Jasper SIM et {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. Pour plus d'informations sur les extensions et les intégrations de services tiers, reportez-vous à la section relative à l'[intégration de services externes](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
 
+
 ---
 
 ## Gestion des informations
@@ -54,8 +55,13 @@ A l'aide de l'API de dernier cache d'événement {{site.data.keyword.iot_short_n
 
 Les données de stockage d'événement de terminal de votre service {{site.data.keyword.iot_short_notm}} peuvent être stockées pour être utilisées ultérieurement. Le stockage de données est une première étape essentielle vers l'exécution d'analyses éclairées destinées à vous permettre d'obtenir des informations à partir de ces données.  Par exemple, vous pouvez effectuer le suivi de modifications sur des périodes plus longues et stocker des ensembles de données destinés à être utilisés avec des outils d'analyse puissants, y compris pour une utilisation avec l'API Watson et l'informatique cognitive. Pour plus d'informations, voir la rubrique relative à la [connexion d'un service historique {{site.data.keyword.cloudant_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/cloudant_connector.html) ou à la [connexion d'un service historique {{site.data.keyword.messagehub}}](https://console.ng.bluemix.net/docs/services/IoT/message_hub.html).
 
----
+### Gestion des données
 
+Différents modèles et marques publient des données dans différents formats. La fonction de gestion des données vous permet de transformer et de normaliser ces données en une seule vue logique appelée *état du terminal*, facilement comprise et traitée par les applications. Cette fonction facilite grandement le développement d'applications puisque l'application n'a plus besoin de connaître les différents formats des données d'événements qui sont envoyées à partir de chaque terminal. Lorsque les terminaux publient des événements sur {{site.data.keyword.iot_short_notm}}, le contenu des événements peut être mappé ver les propriétés de l'état défini par l'utilisateur en utilisant des mappages. Si l'événement entrant a pour effet de modifier l'état du terminal, les valeurs des propriétés de l'état du terminal sont mises à jour et stockées dans {{site.data.keyword.iot_short_notm}}. Les valeurs sont ensuite mises à disposition de l'application, qui peut en faire la demande via une API HTTP ou en s'abonnant à un sujet.
+
+Pour plus d'informations sur l'utilisation de cette fonction, voir [Introduction à la gestion des données](GA_information_management/ga_im_device_twin.html).
+
+---
 ## Analyse
 {: #analytics}
 

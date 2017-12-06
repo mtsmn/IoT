@@ -90,13 +90,13 @@ Erstellen Sie mithilfe des folgenden Codebeispiels ein `DeviceData`-Objekt, in d
 
 Konstruktor 1 erstellt eine `ManagedDevice`-Instanz in {{site.data.keyword.iot_short_notm}}, indem `DeviceData` und alle folgenden erforderlichen Eigenschaften akzeptiert werden:
 
-|Eigenschaft |Beschreibung |
+|Eigenschaft|Beschreibung |
 |:---|:---|
-|`Organization-ID` |Die ID Ihrer Organisation.|
-|`Device-Type` |Der Typ Ihres Geräts. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'.|
-|`Device-ID` |Die ID Ihres Geräts. In der Regel ist 'deviceId' bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse.|
+|``Organization-ID`` |Die ID Ihrer Organisation.|
+|``Device-Type`` |Der Typ Ihres Geräts. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'.|
+|``Device-ID`` |Die ID Ihres Geräts. In der Regel ist 'deviceId' bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse.|
 |`Authentication-Method` |Die zu verwendende Authentifizierungsmethode. Der einzige Wert, der aktuell unterstützt ist, lautet `token`.|
-|`Authentication-Token` |Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und Watson IoT Platform.|
+|``Authentication-Token`` |Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und Watson IoT Platform.|
 
 
 Der folgende Code umreisst, wie Sie eine `ManagedDevice`-Instanz erstellen können:
@@ -162,7 +162,7 @@ managedDevice.manage(3600);
 
 Weitere Informationen zur Operation `Manage` finden Sie in der [Dokumentation].
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## Nicht verwalten
 
@@ -174,7 +174,7 @@ managedDevice.unmanage();
 
 Weitere Informationen zur Operation `Unmanage` finden Sie in der [Dokumentation].
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## Positionsaktualisierung
 {: #construct_location_update}
@@ -376,7 +376,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 **3.1 Beispielimplementierung von downloadFirmware**
 
-Durch die Implementierung muss Logik hinzugefügt werden, um die Firmware herunterzuladen und den Status des Downloads mithilfe eines `DeviceFirmware`-Objekts zu berichten. Wenn die Operation für den Download der Firmware erfolgreich ist, wird der Status auf `DOWNLOADED` festgelegt und für `UpdateStatus` wird anschließend `SUCCESS` eingestellt.
+Durch die Implementierung muss Logik hinzugefügt werden, um die Firmware herunterzuladen und den Status des Downloads mithilfe eines `DeviceFirmware`-Objekts zu melden. Wenn die Operation für den Download der Firmware erfolgreich ist, wird der Status auf `DOWNLOADED` festgelegt und für `UpdateStatus` wird anschließend `SUCCESS` eingestellt.
 
 Wenn während des Firmware-Downloads ein Fehler auftritt, wird für den Status die Einstellung `IDLE` festgelegt und für `updateStatus` wird anschließend einer der folgenden Werte für den Fehlerstatus eingestellt:
 
@@ -443,7 +443,7 @@ public void downloadFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-Ein Gerät kann die Integrität des heruntergeladenen Firmware-Image mithilfe der Verifizierung prüfen und den Status zurück an {{site.data.keyword.iot_short_notm}} berichten. Die Verifizierung kann während des Starts (während der Erstellung des DeviceFirmware-Objekts) vom Gerät oder im Rahmen der Anforderung 'Firmware herunterladen' von der Anwendung festgelegt werden. Nachfolgend finden Sie einen Beispielcode, mit dem dies überprüft werden kann:
+Ein Gerät kann die Integrität des heruntergeladenen Firmware-Image mithilfe der Verifizierung prüfen und den Status zurück an {{site.data.keyword.iot_short_notm}} melden. Die Verifizierung kann während des Starts (während der Erstellung des DeviceFirmware-Objekts) vom Gerät oder im Rahmen der Anforderung 'Firmware herunterladen' von der Anwendung festgelegt werden. Nachfolgend finden Sie einen Beispielcode, mit dem dies überprüft werden kann:
 
 ```
 private boolean verifyFirmware(File file, String verifier) throws IOException {
@@ -476,7 +476,7 @@ Sie finden den vollständigen Code im Gerätemanagementbeispiel [RasPiFirmwareHa
 
 **3.2 Beispielimplementierung von updateFirmware**
 
-Durch die Implementierung muss Logik hinzugefügt werden, um die heruntergeladene Firmware zu installieren und den Status der Aktualisierung mithilfe des `DeviceFirmware`-Objekts zu berichten. Wenn die Operation für das Firmware-Update erfolgreich ist, sollte als Status der Firmware die Einstellung IDLE (inaktiv) und als `updateStatus` sollte `SUCCESS` (Erfolg) festgelegt sein.
+Durch die Implementierung muss Logik hinzugefügt werden, um die heruntergeladene Firmware zu installieren und den Status der Aktualisierung mithilfe des `DeviceFirmware`-Objekts zu melden. Wenn die Operation für das Firmware-Update erfolgreich ist, sollte als Status der Firmware die Einstellung IDLE (inaktiv) und als `updateStatus` sollte `SUCCESS` (Erfolg) festgelegt sein.
 
 Wenn während des Firmware-Updates ein Fehler auftritt, sollte für `updateStatus` einer der Werte des Fehlerstatus eingestellt werden:
 
@@ -561,7 +561,7 @@ public abstract void handleFactoryReset(DeviceAction action);
 
 **2.1 Beispielimplementierung von handleReboot**
 
-Durch die Implementierung muss Logik hinzugefügt werden, um das Gerät neu zu starten und den Status von 'Neu starten' über das DeviceAction-Objekt berichten. Das Gerät muss den Status (zusammen mit der Ausgabe einer optionalen Nachricht) nur aktualisieren, falls ein Fehler auftritt (da das Gerät durch eine erfolgreiche Operation neu gestartet wird und der Gerätecode keine Steuerungsmöglichkeit für die Aktualisierung von {{site.data.keyword.iot_short_notm}} hat. Nachfolgend wird eine Beispielimplementierung von 'Neu starten' für ein Raspberry Pi-Gerät gezeigt:
+Durch die Implementierung muss Logik hinzugefügt werden, um das Gerät neu zu starten und den Status von 'Neu starten' über das DeviceAction-Objekt zu melden. Das Gerät muss den Status (zusammen mit der Ausgabe einer optionalen Nachricht) nur aktualisieren, falls ein Fehler auftritt (da das Gerät durch eine erfolgreiche Operation neu gestartet wird und der Gerätecode keine Steuerungsmöglichkeit für die Aktualisierung von {{site.data.keyword.iot_short_notm}} hat. Nachfolgend wird eine Beispielimplementierung von 'Neu starten' für ein Raspberry Pi-Gerät gezeigt:
 
 ```
 public void handleReboot(DeviceAction action) {
@@ -590,7 +590,7 @@ Sie finden den vollständigen Code im Gerätemanagementbeispiel [DeviceActionHan
 
 **2.2 Beispielimplementierung von handleFactoryReset**
 
-Durch die Implementierung muss Logik hinzugefügt werden, um das Gerät auf die Werkseinstellungen zurückzusetzen und den Status über das DeviceAction-Objekt zu berichten. Das Gerät muss den Status (zusammen mit der Ausgabe einer optionalen Nachricht nur aktualisieren, falls ein Fehler vorliegt (da das Gerät im Rahmen dieses Prozesses neu gestartet wird und das Gerät keine Steuerungsmöglichkeit hat, den Status von {{site.data.keyword.iot_short_notm}} zu aktualisieren). Das Gerüst für die Implementierung von 'Zurücksetzen auf Werkseinstellungen' wird nachfolgend gezeigt:
+Durch die Implementierung muss Logik hinzugefügt werden, um das Gerät auf die Werkseinstellungen zurückzusetzen und den Status über das DeviceAction-Objekt zu melden. Das Gerät muss den Status (zusammen mit der Ausgabe einer optionalen Nachricht nur aktualisieren, falls ein Fehler vorliegt (da das Gerät im Rahmen dieses Prozesses neu gestartet wird und das Gerät keine Steuerungsmöglichkeit hat, den Status von {{site.data.keyword.iot_short_notm}} zu aktualisieren). Das Gerüst für die Implementierung von 'Zurücksetzen auf Werkseinstellungen' wird nachfolgend gezeigt:
 
 ```
 public void handleFactoryReset(DeviceAction action) {

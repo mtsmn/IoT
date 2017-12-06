@@ -39,7 +39,7 @@ La integración incorporada de Jasper que proporciona nuestra plataforma proporc
 Puede acceder a las operaciones soportadas en los detalles de dispositivo de un dispositivo conectado a Jasper una vez que finalicen los siguientes pasos de configuración.
 
 ### API REST para Jasper
-Para acceder a la API REST para Jasper, consulte la sección sobre la extensión Jasper en la [documentación de la API REST HTTP de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
+Para acceder a la API REST para Jasper, consulte la sección sobre la extensión Jasper en la [{{site.data.keyword.iot_short_notm}} documentación de la API REST HTTP de ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
 
 ### Configuración para Jasper
 
@@ -91,7 +91,7 @@ La ampliación de AT&T permite realizar las siguientes operaciones de AT&T:
 - Cambiar el plan de tarifas
 
 ### API REST para AT&T
-Para acceder a la API REST para AT&T, consulte la sección sobre la extensión AT&T en la [documentación de la API REST HTTP de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
+Para acceder a la API REST para AT&T, consulte la sección sobre la extensión AT&T en la [{{site.data.keyword.iot_short_notm}} documentación de la API REST HTTP de ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
 
 ### Configuración para AT&T
 
@@ -167,7 +167,7 @@ El ejemplo de código siguiente muestra el formato de carga útil para una notif
 
 #### Respuestas asíncronas
 
-Cuando el {{site.data.keyword.iot_short_notm}} envía un mandato a un dispositivo conectado a la plataforma ARM mbed, el dispositivo envía un mensaje de confirmación al {{site.data.keyword.iot_short_notm}}. Este mensaje de confirmación se denomina *respuesta asíncrona* y utiliza el tipo de suceso `asyncResponse`.
+Cuando el {{site.data.keyword.iot_short_notm}} envía un mandato a un dispositivo conectado a la plataforma ARM mbed, el dispositivo envía un mensaje de confirmación al {{site.data.keyword.iot_short_notm}}. Este mensaje de confirmación se denomina _respuesta asíncrona_ y utiliza el tipo de suceso `asyncResponse`.
 
 El ejemplo de código siguiente muestra el formato de carga útil para una respuesta asíncrona enviada por el servicio de nube de ARM mbed:
 
@@ -223,7 +223,7 @@ Si tiene un dispositivo que está conectado a su servicio de {{site.data.keyword
 - Estado de la ubicación
 
 ### API REST para Orange
-Para acceder a la API REST para Orange, consulte la sección sobre la extensión Orange en la [documentación de la API REST HTTP de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
+Para acceder a la API REST para Orange, consulte la sección sobre la extensión Orange en la [{{site.data.keyword.iot_short_notm}} documentación de la API REST HTTP de ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
 
 ### Configuración para Orange
 

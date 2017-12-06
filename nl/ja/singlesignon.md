@@ -2,9 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
-
----
+lastupdated: "2017-03-13"---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
@@ -36,8 +34,8 @@ lastupdated: "2017-03-13"
 4. ここで、{{site.data.keyword.sdk4nodefull}} アプリケーションを再ステージングする必要があります。
 5. {{site.data.keyword.Bluemix_notm}} ダッシュボードから、{{site.data.keyword.sdk4nodefull}} アプリケーションをクリックします。
 6. {{site.data.keyword.ssoshort}} サービスを選択し、**「インテグレーション (Integrate)」**をクリックします。
-7. 戻り先 URL: `https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token` を入力します。`<orgid>` は {{site.data.keyword.iot_short_notm}} 組織 ID です。
-
+7. 戻り先 URL:
+`https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token` を入力します。`<orgid>` は、{{site.data.keyword.iot_short_notm}} 組織 ID です。
 
 ## {{site.data.keyword.ssoshort}} 用の {{site.data.keyword.iot_short_notm}} の構成
 

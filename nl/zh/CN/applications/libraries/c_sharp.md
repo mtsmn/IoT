@@ -31,7 +31,8 @@ lastupdated: "2017-03-14"
 
 构造方法用于构建客户机实例，并接受包含以下定义的自变量：
 
-|定义 |描述 |
+|定义|描述
+|
 |:---|:---|
 |`orgId`   |组织标识。|
 |`appId`   |组织中应用程序的唯一标识。|
@@ -108,7 +109,7 @@ applicationClient.subscribeToDeviceEvents();
 
 |参数|数据类型|描述|
 |:---|:---|
-|`eventName`|字符串|标识事件。 |
+|`eventName`|字符串|标识事件。|
 |`eventFormat`|字符串| 格式可以为任意字符串，例如 JSON。|
 |`eventData`|字典| 消息有效内容的数据。最大长度为 131072 字节。|
 
@@ -170,7 +171,7 @@ applicationClient.publishEvent(deviceType, deviceId, evt, data, 0);
 |`evt`|字符串| 事件的名称。|
 |`format`|字符串| 格式可以为任意字符串，例如 JSON。|
 |`data`|字典| 消息有效内容的数据。最大长度为 131072 字节。|
-|`QoS`|整数| 服务质量。有效值为 `0`、`1` 和 `2`。 |
+|`QoS`|整数| 服务质量。有效值为 `0`、`1` 和 `2`。|
 
 
 ## 将命令发布到设备
@@ -191,4 +192,4 @@ applicationClient.publishCommand(deviceType, deviceId, "testcmd", "json", data, 
 |`command`|字符串| 命令的名称。|
 |`format`|字符串| 格式可以为任意字符串，例如 JSON。|
 |`data`|字典| 消息有效内容的数据。最大长度为 131072 字节。|
-|`QoS`|整数| 服务质量。有效值为 `0`、`1` 和 `2`。 |
+|`QoS`|整数| 服务质量。有效值为 `0`、`1` 和 `2`。|

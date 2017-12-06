@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -84,11 +84,11 @@ iotdm-1/response
 ### Formato de mensajes para una solicitud Manage Device
 
 
-En una solicitud Manage Device, el campo `d` y todos sus subcampos son opcionales. Los valores de campos `metadata` y `deviceInfo` sustituyen los atributos correspondientes para el dispositivo de envío si se han enviado.
+En una solicitud Manage Device, el campo ``d`` y todos sus subcampos son opcionales. Los valores de campos ``metadata`` y ``deviceInfo`` sustituyen los atributos correspondientes para el dispositivo de envío si se han enviado.
 
-El campo opcional `lifetime` especifica la longitud de tiempo en segundos en la que el dispositivo debe enviar otra solicitud Manage Device para evitar que se clasifique como inactivo y que se convierta en un dispositivo no gestionado. Si se omite el campo `lifetime` o se establece en `0`, el dispositivo gestionado no se convierte en inactivo. El valor soportado mínimo para el campo `lifetime` es `3600` segundos, que es 1 hora.
+El campo opcional ``lifetime`` especifica la longitud de tiempo en segundos en la que el dispositivo debe enviar otra solicitud Manage Device para evitar que se clasifique como inactivo y que se convierta en un dispositivo no gestionado. Si se omite el campo ``lifetime`` o se establece en ``0``, el dispositivo gestionado no se convierte en inactivo. El valor soportado mínimo para el campo ``lifetime`` es ``3600`` segundos, que es 1 hora.
 
-Los campos opcionales `supports.deviceActions` y `supports.firmwareActions` indican las funciones del agente de gestión de dispositivos. Si se establece `supports.deviceActions`, el agente dará soporte a las acciones de reinicio y de restablecimiento de fábrica. Para un dispositivo que no distingue entre un reinicio y un restablecimiento de fábrica, es aceptable utilizar el mismo comportamiento para las dos acciones. Si se establece `supports.firmwareActions`, el agente da soporte a las acciones de descarga y de actualización de firmware.
+Los campos opcionales ``supports.deviceActions`` y ``supports.firmwareActions`` indican las funciones del agente de gestión de dispositivos. Si se establece ``supports.deviceActions``, el agente dará soporte a las acciones de reinicio y de restablecimiento de fábrica. Para un dispositivo que no distingue entre un reinicio y un restablecimiento de fábrica, es aceptable utilizar el mismo comportamiento para las dos acciones. Si se establece ``supports.firmwareActions``, el agente da soporte a las acciones de descarga y de actualización de firmware.
 
 El ejemplo siguiente muestra el formato de la solicitud:
 
@@ -249,7 +249,7 @@ iotdm-1/device/update
 ### Formato de mensaje para una solicitud Update location
 
 
-El campo `measuredDateTime` es la fecha de medida de ubicación. El campo `updatedDateTime` es la fecha de la actualización a la información de dispositivo. Por motivos de eficiencia, {{site.data.keyword.iot_short_notm}} a veces procesa actualizaciones a la información de ubicación de modo que las actualizaciones se retrasan ligeramente. La latitud y longitud deben especificarse en grados decimales utilizando World Geodetic System 1984 (WGS84).
+El campo ``measuredDateTime`` es la fecha de medida de ubicación. El campo ``updatedDateTime`` es la fecha de la actualización a la información de dispositivo. Por motivos de eficiencia, {{site.data.keyword.iot_short_notm}} a veces procesa actualizaciones a la información de ubicación de modo que las actualizaciones se retrasan ligeramente. La latitud y longitud deben especificarse en grados decimales utilizando World Geodetic System 1984 (WGS84).
 
 Siempre que se actualiza la ubicación, los valores que se proporcionan para latitud, longitud, elevación e incertidumbre se consideran una sola actualización de varios valores. La latitud y la longitud son obligatorios y ambos deben proporcionarse con cada actualización.  La elevación y la incertidumbre son opcionales y se pueden omitir.
 
@@ -327,7 +327,7 @@ Topic: iotdm-1/device/update
 }
 ```
 
-**Nota:** No se utiliza el parámetro `reqID`, porque el dispositivo no es necesario para responder.
+**Nota:** No se utiliza el parámetro ``reqID``, porque el dispositivo no es necesario para responder.
 
 ## Solicitudes Update Device Attribute
 {: #update-attributes}
@@ -597,7 +597,7 @@ Tema: iotdm-1/response
 
 {{site.data.keyword.iot_short_notm}} puede enviar una solicitud Observe Attribute Change a un dispositivo para observar los cambios de uno o varios atributos de dispositivos utilizando el tipo de solicitud Observe Attribute Changes. Cuando el dispositivo reciba la solicitud, debe enviar una solicitud de notificación a {{site.data.keyword.iot_short_notm}} siempre que los valores de los atributos observados cambien.
 
-**Importante:** Los dispositivos deben implementar, observar, notificar y cancelar operaciones para dar soporte a los tipos de solicitud [Firmware Actions- Update](requests.html#firmware-actions-update).
+**Importante:** Los dispositivos deben implementar, observar, notificar y cancelar operaciones para dar soporte a los tipos de solicitud [Firmware Actions- Update](requests.html#firmware-actions-update). Las solicitudes Observe Attribute Changes solo se utilizan en el contexto de solicitudes de firmware.
 
 ### Tema para una solicitud Observe Attribute Changes
 
@@ -624,7 +624,9 @@ Topic: iotdm-1/observe
 {
     "d": {
         "fields": [
-            "string"
+            {
+                "field": "field_name"
+            }
         ]
     },
     "reqId": "string"
@@ -660,7 +662,7 @@ Tema: iotdevice-1/response
 
 El parámetro `message` debe especificarse si el valor del parámetro `rc` no es `200`.
 
-**Importante:** Los dispositivos deben implementar, observar, notificar y cancelar operaciones para dar soporte a los tipos de solicitud [Firmware Actions- Update](requests.html#firmware-actions-update).
+**Importante:** Los dispositivos deben implementar, observar, notificar y cancelar operaciones para dar soporte a los tipos de solicitud [Firmware Actions- Update](requests.html#firmware-actions-update). Las solicitudes Cancel Attribute Observation solo se utilizan en el contexto de solicitudes de firmware.
 
 ### Tema para una solicitud Cancel Attribute Observation
 
@@ -684,7 +686,9 @@ Topic: iotdm-1/cancel
 {
     "d": {
         "fields": [
-            "string"
+            {
+                "field": "field_name"
+            }
         ]
     },
     "reqId": "string"
@@ -715,7 +719,7 @@ El valor del parámetro `field_name` es el nombre del atributo que ha cambiado, 
 
 Cuando la solicitud de notificación se haya procesado correctamente, el valor del parámetro `rc` se establece en `200`. Si la solicitud no es correcta, el valor del parámetro `rc` se establece en `400`. Si el parámetro que se especifica en la solicitud de notificación no se observa, el valor del parámetro `rc` se establece en `404`.
 
-**Importante:** Los dispositivos deben implementar, observar, notificar y cancelar operaciones para dar soporte a los tipos de solicitud [Firmware Actions- Update](requests.html#firmware-actions-update).
+**Importante:** Los dispositivos deben implementar, observar, notificar y cancelar operaciones para dar soporte a los tipos de solicitud [Firmware Actions- Update](requests.html#firmware-actions-update). Las solicitudes Notify Attribute Observation solo se utilizan en el contexto de solicitudes de firmware.
 
 
 ### Tema para una solicitud Notify Attribute Change
@@ -739,8 +743,12 @@ Mensaje saliente del dispositivo:
 Topic: iotdevice-1/notify
 {
     "d": {
-        "field": "field_name",
-        "value": "field_value"
+        "fields": [
+            {
+                "field": "field_name",
+                "value": "field_value"
+            }
+        ]
     }
     "reqId": "string"
 }

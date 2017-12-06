@@ -310,7 +310,7 @@ Pour traiter les mises à jour de statut reçues par vos abonnements, vous devez
 |`status.connectTime`   |java.util.Date|
 |`status.port`|Entier|
 
-Les propriétés suivantes ne sont définies que lorsque l'événement de statut est `Disconnect` :
+Les propriétés suivantes ne sont définies que lorsque l'événement de statut est ``Disconnect`` :
 
 | Propriété     |Type de données     |
 |----------------|----------------|
@@ -346,7 +346,7 @@ L'exemple de code suivant fournit un exemple d'implémentation du rappel de stat
   }
 ```
 
-Lorsque le rappel de statut est ajouté au client d'application, la méthode `processDeviceStatus()` est appelée chaque fois qu'un terminal correspondant aux critères est connecté ou déconnecté avec {{site.data.keyword.iot_short_notm}}. L'exemple de code suivant vous montre comment ajouter l'instance de rappel de statut au client d'application :
+Lorsque le rappel de statut est ajouté au client d'application, la méthode ``processDeviceStatus()`` est appelée chaque fois qu'un terminal correspondant aux critères est connecté ou déconnecté avec {{site.data.keyword.iot_short_notm}}. L'exemple de code suivant vous montre comment ajouter l'instance de rappel de statut au client d'application :
 
 ```
 
@@ -361,7 +361,7 @@ Les applications peuvent s'abonner à n'importe quel autre statut d'application,
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-La méthode surchargée permet de contrôler l'abonnement aux statuts d'une application donnée. La méthode `processApplicationStatus()` est appelée chaque fois qu'une application correspondant aux critères est connectée ou déconnectée de {{site.data.keyword.iot_short_notm}}.
+La méthode surchargée permet de contrôler l'abonnement aux statuts d'une application donnée. La méthode ``processApplicationStatus()`` est appelée chaque fois qu'une application correspondant aux critères est connectée ou déconnectée de {{site.data.keyword.iot_short_notm}}.
 
 
 ## Publication des événements à partir de terminaux

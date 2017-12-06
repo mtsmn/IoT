@@ -19,7 +19,7 @@ lastupdated: "2017-03-07"
 
 Weitere Informationen zum Zugriff auf die Dokumentation der {{site.data.keyword.iot_short_notm}}-HTTP-REST-API und zur Vorgehensweise beim Erstellen, Aktualisieren, Löschen und Auflisten von Geräten finden Sie in [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
 
-Die einzige unterstützte {{site.data.keyword.iot_short_notm}}-HTTP-REST-API ist Version 2. Stellen Sie sicher, dass Ihre {{site.data.keyword.iot_short_notm}}-Lösungen Version 2 verwenden.
+Die einzige unterstützte Version der {{site.data.keyword.iot_short_notm}}-HTTP-REST-API ist Version 2. Stellen Sie sicher, dass Ihre {{site.data.keyword.iot_short_notm}}-Lösungen Version 2 verwenden.
 
 ## Clientverbindungen
 {: #client_connections}
@@ -55,7 +55,7 @@ Dabei gilt:
 
 Zusammen mit der Anforderung muss ein Anforderungsheader des Typs `Content-Type` ('Inhaltstyp') angegeben werden. Die folgende Tabelle zeigt die Zuordnung der unterstützten Typen zu den internen {{site.data.keyword.iot_short_notm}}-Formaten:
 
-|Header vom Typ 'Content-Type'|Format in {{site.data.keyword.iot_short_notm}}|
+|Header des Typs 'Content-Type'|Format in {{site.data.keyword.iot_short_notm}}|
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"

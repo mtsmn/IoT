@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-06-13"
 ---
 
 {:new_window: target="\_blank"}
@@ -18,7 +18,7 @@ Zertifikate werden für die Geräeteauthentifizierung oder zum Ersetzen des {{si
 
 Um Zertifikate und den Serverzugriff für Geräte zu konfigurieren, registriert der Systembediener die zugehörigen Zertifikate der Zertifizierungsstelle (CA-Zertifikate) und optional die Zertifikate des Messaging-Servers in {{site.data.keyword.iot_short_notm}}.
 
-Informationen zur Verwendung von APIs für die Verwaltung von CA-Zertifikaten und Messaging-Server-Zertifikaten finden Sie unter [Authentifizierungs- und Autorisierungs-APIs für IBM Watson IoT Platform ![Symbol für externen Link](../../../../icons/launch-glyph.svg)"Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
+Informationen zur Verwendung der APIs für die Verwaltung von CA-Zertifikaten und Zertifikaten des Messaging-Servers finden Sie in der Dokumentation zu den [Authentifizierungs- und Autorisierungs-APIs für IBM Watson IoT Platform ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
 
 ## Zertifikate einer Zertifizierungsstelle
 Zertifikate einer Zertifizierungsstelle (CA-Zertifikate) ermöglichen der Organisation das Erkennen vertrauenswürdiger Clientzertifikate für Geräte und damit den betreffenden Geräten das Herstellen einer Verbindung zu dem Server.
@@ -39,7 +39,7 @@ Für Gateways ist das **CN**-Feldformat `CN=g:typeId:deviceId` und das **Subject
 
 Hinweis: Schließen Sie die `Organisations-ID` nicht in die Felder **CN** oder **SubjectAltName** für Geräte- oder Gateway-Zertifikate ein. Die `Organisations-ID` sollte als Teil der SNI-Informationen angegeben werden, die bei der Verbindungsherstellung zum Messaging-Server durch die Clientimplementierung bereitgestellt werden.
 
-Weitere Informationen zu Clientzertifikaten finden Sie in der [Anleitung für die Verbindung eines Raspberry Pi-Geräts mit IBM Watson IoT Platform unter Verwendung von Zertifikaten auf Clientseite ![Symbol für externen Link](../../../../icons/launch-glyph.svg) "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
+Weitere Informationen zu Clientzertifikaten finden Sie in der [Anleitung zum Verbinden von Raspberry Pi mit IBM Watson IoT Platform mit clientseitigen Zertifikaten![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}.
 
 ## Messaging-Server-Zertifikate
 
@@ -51,7 +51,7 @@ Das folgende Beispiel zeigt einen gültigen CN für das Serverzertifikat:
 
 `mtxpd0.messaging.internetofthings.ibmcloud.com`
 
-Weitere Informationen zu Messaging-Server-Zertifikaten finden Sie in der [Anleitung für die Verbindung eines Raspberry Pi-Geräts mit IBM Watson IoT Platform unter Verwendung eines selbst signierten Serverzertifikats ![Symbol für externen Link](../../../../icons/launch-glyph.svg) "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
+Weitere Informationen zu Messaging-Server-Zertifikaten finden Sie in der [Anleitung zum Verbinden von Raspberry Pi mit IBM Watson IoT Platform mit selbst signierten Serverzertifikaten ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}.
 
 ### Angepasste Domänen (Beta)
 {: #custom_domains}
@@ -60,11 +60,11 @@ Weitere Informationen zu Messaging-Server-Zertifikaten finden Sie in der [Anleit
 
 Als Teil der Beta-Funktion akzeptieren Messaging-Server-Zertifikate angepasste Domänen. Folgendes Format muss für den Zertifikats-CN oder 'SubjectAltName' befolgt werden:
 
-- `orgId.messaging<angepasste Domäne>`
+- `orgId.messaging.<custom domain>`
 
 Das Feld **CN** akzeptiert Platzhalterzeichen für angepasste Domänen, wie im folgenden Beispiel gezeigt:
 
-- `CN=*.messaging.fab-iot.com`
+- `CN=*.messaging.mywiotpcustomdomain.com`
 
 **Wichtig**: Für angepasste Domänen ist ein externer DNS-Service erforderlich, um die angepasste Domäne in den {{site.data.keyword.iot_full}}-Messaging-Server aufzulösen. Dieser DNS-Service wird nicht von der Plattform bereitgestellt.
 
@@ -87,8 +87,8 @@ Mit der Plattform wird ein Standardserverzertifikat bereitgestellt. Sie können 
 ## Messaging-Server-Zertifikat aus Ihrer Organisation hochladen
 {: #upload_cert}
 1. Klicken Sie unter **Allgemeine Einstellungen** im Abschnitt **Sicherheit** unter **Messaging-Serverzertifikate** auf **Zertifikat hinzufügen**.
-2. Navigieren Sie zu der Zertifikatsdatei, die hochgeladen werden soll, oder legen Sie eine Datei mithilfe der Drag-und-Drop-Funktion im Fenster **Zertifikat hinzufügen** ab. 
-3. Navigieren Sie zu der Datei mit privatem Schlüssel, die hochgeladen werden soll, oder legen Sie eine Datei mithilfe der Drag-und-Drop-Funktion im Fenster **Zertifikat hinzufügen** ab. 
+2. Navigieren Sie zu der Zertifikatsdatei, die hochgeladen werden soll, oder legen Sie eine Datei mithilfe der Drag-und-Drop-Funktion im Fenster **Zertifikat hinzufügen** ab.
+3. Navigieren Sie zu der Datei mit privatem Schlüssel, die hochgeladen werden soll, oder legen Sie eine Datei mithilfe der Drag-und-Drop-Funktion im Fenster **Zertifikat hinzufügen** ab.
 4. Geben Sie die Kennphrase des privaten Schlüssels ein, wenn der private Schlüssel mit einer Kennphrase verschlüsselt wurde.
 5. Stellen Sie sicher, dass die richtige Datei ausgewählt ist, und klicken Sie auf **Speichern**.
 

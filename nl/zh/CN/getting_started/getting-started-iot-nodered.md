@@ -24,8 +24,7 @@ lastupdated: "2017-04-24"
 该入门模板会自动部署并连接这些服务：
 <dl>
 <dt>**{{site.data.keyword.iot_short_notm}}**</dt>
-<dd>包含网关管理、设备管理和应用程序访问在内的 IoT Web 服务。通过使用 {{site.data.keyword.iot_short_notm}}，您可以从组织收集已连接的设备数据，并运行实时数据分析。
-</dd>
+<dd>包含网关管理、设备管理和应用程序访问在内的 IoT Web 服务。通过使用 {{site.data.keyword.iot_short_notm}}，您可以从组织收集已连接的设备数据，并运行实时数据分析。</dd>
 <dt>**{{site.data.keyword.sdk4nodefull}}**</dt>
 <dd>Node-RED 在其中运行的运行时环境。</br>有关更多信息，请参阅 [{{site.data.keyword.sdk4nodefull}} 入门模板文档](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html)。</dd>
 <dd>Node-RED 这款工具以全新的有趣方式将硬件设备、API 和在线服务连接在一起。您可以使用 Node-RED 来创建模拟温度调节装置，该装置将模拟数据发送到 {{site.data.keyword.iot_short_notm}} 服务。您可以创建用于在 {{site.data.keyword.iot_short_notm}} 仪表板中显示实时数据的卡。</br>有关更多信息，请参阅 [Node-RED 文档](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered)。</dd>

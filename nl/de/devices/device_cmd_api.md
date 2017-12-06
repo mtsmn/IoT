@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-06-08"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -13,10 +13,8 @@ lastupdated: "2017-06-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# HTTP-Messaging-APIs für Geräte (Beta)
+# HTTP-Messaging-APIs für Geräte
 {: #api}
-
-**Wichtig:** Die {{site.data.keyword.iot_full}}-Funktion 'HTTP-Messaging-API für Geräte' steht nur als Bestandteil des eingeschränkten Beta-Programms zur Verfügung. Zukünftige Aktualisierungen enthalten möglicherweise Änderungen, die mit der aktuellen Version dieser Funktion nicht kompatibel sind. Starten Sie einen Versuch und [senden Sie uns Ihren Erfahrungsbericht ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 
 ## Zugriff auf die Dokumentation für 'HTTP-Messaging-API für Geräte'
@@ -35,7 +33,7 @@ Informationen zur Clientsicherheit und zur Vorgehensweise beim Herstellen von Ve
 
 Zusätzlich zum MQTT-Nachrichtenprotokoll können Sie Ihre Geräte auch so konfigurieren, dass Ereignisse in {{site.data.keyword.iot_short_notm}} über HTTP mithilfe von HTTP-REST-API-Befehlen publiziert werden.
 
-Verwenden Sie eine der folgenden URLs, um eine `POST`-Anforderung von einem Gerät zu übergeben, das mit {{site.data.keyword.iot_short_notm}} verbunden ist:
+Verwenden Sie eine der folgenden URLs, um eine ``POST``-Anforderung von einem Gerät zu übergeben, das mit {{site.data.keyword.iot_short_notm}} verbunden ist:
 
 ### Nicht sichere POST-Anforderung
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
@@ -58,9 +56,9 @@ Alle Anforderungen müssen einen Berechtigungsheader enthalten. Die Basisauthent
 
 ### Anforderungsheader des Typs 'Content-Type'
 
-Zusammen mit der Anforderung muss ein Anforderungsheader des Typs `Content-Type` ('Inhaltstyp') angegeben werden. Die folgende Tabelle zeigt die Zuordnung der unterstützten Typen zu den internen {{site.data.keyword.iot_short_notm}}-Formaten.
+Zusammen mit der Anforderung muss ein Anforderungsheader des Typs `Content-Type` ('Inhaltstyp') angegeben werden, wenn es sich nicht um JSON-Inhalt handelt. Die folgende Tabelle zeigt die Zuordnung der unterstützten Typen zu den internen {{site.data.keyword.iot_short_notm}}-Formaten.
 
-|Header 'Content-Type'|Format in {{site.data.keyword.iot_short_notm}}|
+|Header des Typs 'Content-Type'|Format in {{site.data.keyword.iot_short_notm}}|
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
@@ -73,7 +71,7 @@ Zusammen mit der Anforderung muss ein Anforderungsheader des Typs `Content-Type`
 
 Zusätzlich zur Verwendung des MQTT-Nachrichtenprotokolls können Sie Ihre Geräte auch so konfigurieren, dass Befehle von {{site.data.keyword.iot_short_notm}} über HTTP mithilfe von HTTP-Messaging-API-Befehlen empfangen werden. Ein Gerät kann Befehle empfangen, die an das Gerät selbst gerichtet sind.
 
-Verwenden Sie eine der folgenden URLs, um eine `POST`-Anforderung von einem Gerät zu übergeben, das mit {{site.data.keyword.iot_short_notm}} verbunden ist:
+Verwenden Sie eine der folgenden URLs, um eine ``POST``-Anforderung von einem Gerät zu übergeben, das mit {{site.data.keyword.iot_short_notm}} verbunden ist:
 
 ### Nicht sichere POST-Anforderung
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/commands/<var class="keyword varname">Befehl</var>/request</code></pre>
@@ -83,10 +81,6 @@ Verwenden Sie eine der folgenden URLs, um eine `POST`-Anforderung von einem Ger�
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/commands/<var class="keyword varname">Befehl</var>/request</code></pre>
 
 **Hinweis:** Port 443, der SSL-Standardport, kann auch für sichere HTTP-API-Aufrufe angegeben werden.
-
-Verwenden Sie die folgende API, um einen Befehl von {{site.data.keyword.iot_short_notm}} empfangen zu können:
-
-<pre class="pre"><code class="hljs">/device/types/{deviceType}/devices/{Geräte-ID}/commands/{Befehl}/request</code></pre>
 
 Optional können Sie den Parameter *waitTimeSecs* in den Hauptteil der HTTP-Anforderung einschließen, um eine Ganzzahl für die maximale Anzahl Sekunden anzugeben, für die auf einen Befehl gewartet werden soll:
 <pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>

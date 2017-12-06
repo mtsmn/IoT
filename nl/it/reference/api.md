@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-07-20"
 
 ---
 
@@ -42,7 +42,8 @@ API                     | Utilizzata per ...
 ------------- | -------------
 [Organization Administration ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | Configura un'organizzazione (incluse la creazione e l'eliminazione dei dispositivi), controlla l'utilizzo, lo stato del servizio ed esegue la diagnostica dei problemi di connessione del dispositivo.
 [Security ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Gestisce l'autenticazione egli inviti utente e l'autorizzazione degli utenti, delle chiavi API e dei dispositivi.
-[Information Management ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Accede ai dati evento del dispositivo, così come all'ubicazione del dispositivo e ottiene le informazioni sul meteo per tale ubicazione. **Nota:** le informazioni meteo dipendono dall'integrazione dei dati di The Weather Company.
+[Information Management ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Accede ai dati evento del dispositivo, così come all'ubicazione del dispositivo e ottiene le informazioni sul meteo per tale ubicazione. 
+[Data Management  ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window}   |   Organizza e integra i dati in entrata e in uscita di {{site.data.keyword.iot_short_notm}}.
 [Device Management ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | Interagisce con i dispositivi gestiti utilizzando il protocollo di gestione del dispositivo.
 [Messaging ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | Pubblica gli eventi e invia i comandi utilizzando HTTP.
 [Risk Management ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | Gestisce le politiche e i report Risk Management.
@@ -63,4 +64,4 @@ API                     | Utilizzata per ...
 ------------- | -------------
 [Gateway Security  ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html){: new_window}   | Controlla e assegna i ruoli ai dispositivi gateway.
 [Device Security  ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-devices-beta.html){: new_window} | Controlla e assegna i ruoli ai dispositivi.
-[Interface Mapping  ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window}   |   Associa ed accede ai dati del dispositivo utilizzando le interfacce.
+[Access Control ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window} | Limita l'accesso utente. 

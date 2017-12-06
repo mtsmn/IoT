@@ -36,8 +36,8 @@ lastupdated: "2017-03-13"
 4. 이제 {{site.data.keyword.sdk4nodefull}} 애플리케이션을 다시 스테이징해야 합니다.
 5. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.sdk4nodefull}} 애플리케이션을 클릭하십시오.
 6. {{site.data.keyword.ssoshort}} 서비스를 선택하고 **통합**을 클릭하십시오.
-7. Return-to-URL `https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token`을 입력하십시오.
-여기서 `<orgid>`는 {{site.data.keyword.iot_short_notm}} 조직 ID입니다.
+7. 다음 Return-to-URL을 입력하십시오.
+`https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token`. 여기서 `<orgid>`는 {{site.data.keyword.iot_short_notm}} 조직 ID입니다.
 
 ## {{site.data.keyword.ssoshort}}에 대한 {{site.data.keyword.iot_short_notm}} 구성
 
@@ -77,7 +77,7 @@ lastupdated: "2017-03-13"
 
 ### API를 사용하여 {{site.data.keyword.ssoshort}}를 위한 {{site.data.keyword.iot_short_notm}} 구성
 
-API를 사용하여 {{site.data.keyword.ssoshort}}를 위한 {{site.data.keyword.iot_short_notm}}을 구성하려면 메소드가 `POST`여야 하고 URL이 `https://<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig`여야 하며, 여기서 `<orgID>`는 {{site.data.keyword.iot_short_notm}} 조직 ID입니다. 권한 부여는 인증 없음 또는 API 키의 ID와 토큰을 사용하는 기본 인증이어야 합니다. 본문에 `secret`, `clientId` 및 `issuerIdentifier` 구성 데이터가 다음 형식의 JSON으로 포함되어 있어야 합니다.
+API를 사용하여 {{site.data.keyword.ssoshort}}를 위한 {{site.data.keyword.iot_short_notm}}을 구성하려면 메소드가 `POST`이고 URL이 `https://<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig`여야 하며, 여기서 `<orgID>`는 {{site.data.keyword.iot_short_notm}} 조직 ID입니다. 권한 부여는 인증 없음 또는 API 키의 ID와 토큰을 사용하는 기본 인증이어야 합니다. 본문에 `secret`, `clientId` 및 `issuerIdentifier` 구성 데이터가 다음 형식의 JSON으로 포함되어 있어야 합니다.
 ```
 {
  "secret": "myclientpwd",

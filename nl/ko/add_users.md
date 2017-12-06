@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -139,6 +139,10 @@ user3@sample.com,PD_ADMIN_USER,1489505652152
 1. {{site.data.keyword.iot_short_notm}} 대시보드의 왼쪽에 있는 탐색줄에서 **구성원**을 클릭하십시오. 
 2. {{site.data.keyword.iot_short_notm}} 조직에 액세스하지 못하도록 차단할 사용자 옆의 토글 단추를 클릭하십시오. 
 
+## 사용자 액세스 제한(베타)
+{: #limiting-users}
+
+리소스 레벨 액세스 제어는 조직 내에서 디바이스에 대한 액세스를 제한할 수 있습니다. 리소스 그룹을 사용하여 각 사용자 또는 API 키가 관리할 수 있는 디바이스를 지정할 수 있습니다. 리소스 레벨 액세스 제어 구성 방법에 대한 정보는 [리소스 레벨 액세스 제어 구성](reference/rlac.html#configure_RLAC)을 참조하십시오.
 
 ## 사용자 제거
 {: #removing-users}

@@ -59,7 +59,7 @@ lastupdated: "2017-03-07"
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml | "xml"
+|application/xml| "xml"
 |application/octet-stream|"bin"
 
 ## 上次事件高速缓存

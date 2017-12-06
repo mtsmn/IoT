@@ -2,9 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-09-16"
-
----
+lastupdated: "2016-09-16"---
 
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}

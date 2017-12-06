@@ -167,7 +167,7 @@ AT&T 扩展支持以下 AT&T 操作：
 
 #### 异步响应
 
-{{site.data.keyword.iot_short_notm}} 向连接到 ARM mbed 平台的设备发送命令时，设备会将确认消息发回 {{site.data.keyword.iot_short_notm}}。此确认消息称为*异步响应*，并使用事件类型 `asyncResponse`。
+{{site.data.keyword.iot_short_notm}} 向连接到 ARM mbed 平台的设备发送命令时，设备会将确认消息发回 {{site.data.keyword.iot_short_notm}}。此确认消息称为_异步响应_，并使用事件类型 `asyncResponse`。
 
 以下代码样本显示了 ARM mbed 云服务发送的异步响应的有效内容格式：
 

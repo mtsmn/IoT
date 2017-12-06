@@ -135,7 +135,7 @@ Per associare i dati del dispositivo a un contratto:
  4. Seleziona il tipo dispositivo per cui desideri archiviare i dati nel blockchain.
  5. Immetti il nome dell'evento che desideri archiviare.  
  **Suggerimento:** il nome dell'evento predefinito per il dispositivo Node-RED di esempio è obc. Per trovare i tipi di evento per un dispositivo, dal dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Devices** e fai clic sul nome del dispositivo per aprirne la pagina dei dettagli. Scorri verso il basso fino alla sezione **Sensor Information** per visualizzare un elenco dei punti dati e degli eventi disponibili per il dispositivo. Puoi modificare il nome dell'evento che il servizio Node-RED pubblica aggiornando il campo dell'argomento in Publish to IoT mqtt out node.  
- 6. Fai clic su **Next**.
+ 6. Fai clic su **Avanti**.
  6. Seleziona l'istanza fabric che hai precedentemente creato.
  7. Immetti un nome e l'ID del contratto.  
 <table>
@@ -215,7 +215,7 @@ Se sei collegato al fabric fornito da IBM e hai associato i tuoi dati del dispos
     - L'attivazione del polling della funzione delle modifiche ti assicurerà che la IU esegue continuativamente il polling di tutte le modifiche all'asset sotto osservazione / monitoraggio e che esegue l'aggiornamento non appena viene applicata una modifica nel blockchain.
     - L'ID dell'asset predefinito per il dispositivo blockchain è "CON123". Se hai modificato il messaggio del dispositivo o hai aggiornato l'ID dell'asset nel simulatore del dispositivo Node-RED, puoi ricercare l'ID dell'asset in {{site.data.keyword.iot_short_notm}}. Vai alla pagina **Devices** e fai clic sul tuo dispositivo per aprire la pagina dei dettagli del dispositivo. Scorri verso il basso fino alla sezione **Sensor Information** per visualizzare un elenco dei punti dati per il dispositivo. Utilizza il valore per il punto dati `d.assetID` per il tuo ID dell'asset.
 
-## Passo successivo  
+## Fasi successive  
 {: #next_steps}  
 Hai ora installato e configurato un blockchain IoT di base integrato con l'ambiente {{site.data.keyword.iot_short_notm}}. In questo piccolo scenario, il smart contract di base ti lascia scrivere i dati del dispositivo nel ledger blockchain per creare una cronologia dei dati del dispositivo indelebile. Ora che hai completato questi passi iniziali e verificato il contratto semplice, puoi tentare con il contratto di esempio commerciale più avanzato e scrivere i tuoi propri contratti.    
 

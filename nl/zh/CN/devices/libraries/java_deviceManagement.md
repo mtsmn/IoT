@@ -89,13 +89,14 @@ DeviceMetadata metadata = new DeviceMetadata(data);
 
 构造方法一用于通过接受 `DeviceData` 和以下所有必需属性，在 {{site.data.keyword.iot_short_notm}} 中构造 `ManagedDevice` 实例：
 
-|属性 |描述 |
+|属性|描述
+|
 |:---|:---|
-|`Organization-ID` |组织的标识|
-|`Device-Type` |设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
-|`Device-ID` |设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
+|``Organization-ID`` |组织的标识|
+|``Device-Type`` |设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
+|``Device-ID`` |设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
 |`Authentication-Method` |要使用的认证方法。当前支持的唯一值是 `token`。|
-|`Authentication-Token` |用于将设备安全连接到 Watson IoT Platform 的认证令牌。|
+|``Authentication-Token`` |用于将设备安全连接到 Watson IoT Platform 的认证令牌。|
 
 
 以下代码概述了可如何创建 `ManagedDevice` 实例：
@@ -159,9 +160,9 @@ managedDevice.manage();
 managedDevice.manage(3600);
 ```
 
-有关 `Manage` 操作的更多信息，请参阅 [文档]。
+有关 `Manage` 操作的更多信息，请参阅[文档]。
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## 取消管理
 
@@ -171,9 +172,9 @@ managedDevice.manage(3600);
 managedDevice.unmanage();
 ```
 
-有关 `Unmanage` 操作的更多信息，请参阅 [文档]。
+有关 `Unmanage` 操作的更多信息，请参阅[文档]。
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## 位置更新
 {: #construct_location_update}

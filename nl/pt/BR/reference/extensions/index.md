@@ -39,7 +39,7 @@ A integração de Jasper integrada fornecida por nossa plataforma fornece suport
 É possível acessar as operações suportadas no drill down de dispositivo de um dispositivo conectado Jasper após a conclusão das etapas de configuração a seguir.
 
 ### APIs de REST para Jasper
-Para acessar a API de REST para Jasper, veja a seção Extensão Jasper na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
+Para acessar a API de REST para Jasper, consulte a seção Extensão Jasper na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
 
 ### Configuração para Jasper
 
@@ -91,7 +91,7 @@ A extensão AT&T permite as operações a seguir da AT&T:
 - Alterar o plano de taxa
 
 ### APIs de REST para AT&T
-Para acessar a API de REST para AT&T, veja a seção Extensão AT&T na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
+Para acessar a API de REST para AT &T, consulte a seção Extensão AT&T na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
 
 ### Configuração para a AT&T
 
@@ -167,7 +167,7 @@ A amostra de código a seguir mostra o formato de carga útil para uma notifica�
 
 #### Respostas assíncronas
 
-Quando o {{site.data.keyword.iot_short_notm}} envia um comando para um dispositivo conectado à plataforma ARM mbed, o dispositivo envia uma mensagem de confirmação de volta ao {{site.data.keyword.iot_short_notm}}. Essa mensagem de confirmação é chamada de *resposta assíncrona* e usa o tipo de evento `asyncResponse`.
+Quando o {{site.data.keyword.iot_short_notm}} envia um comando para um dispositivo conectado à plataforma ARM mbed, o dispositivo envia uma mensagem de confirmação de volta ao {{site.data.keyword.iot_short_notm}}. Essa mensagem de confirmação é chamada de _resposta assíncrona_ e usa o tipo de evento `asyncResponse`.
 
 A amostra de código a seguir mostra o formato de carga útil para uma resposta assíncrona enviada pelo serviço de nuvem ARM mbed:
 
@@ -223,7 +223,7 @@ Se você tiver um dispositivo que esteja conectado ao serviço do {{site.data.ke
 - Status do Local
 
 ### APIs de REST para Orange
-Para acessar a API de REST para Orange, veja a seção Extensão Orange na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
+Para acessar a API de REST para Orange, consulte a seção Extensão Orange na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
 
 ### Configuração para a Orange
 
@@ -274,7 +274,7 @@ Para incluir um pacote de gerenciamento de dispositivo customizado usando o pain
 3. Clique no botão **Incluir pacote**.
 4. Selecione seu arquivo de pacote e clique em **Abrir**.
 
-Para incluir um pacote de gerenciamento de dispositivo customizado usando a API, veja a [documentação da API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para incluir um pacote de gerenciamento de dispositivo customizado usando a API, veja a documentação da API do [{{site.data.keyword.iot_short_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Blockchain
 {: #blockchain}

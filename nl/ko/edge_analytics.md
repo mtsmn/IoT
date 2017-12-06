@@ -21,8 +21,8 @@ lastupdated: "2017-03-13"
 
 디바이스에서 에지 분석 규칙을 통해 데이터를 구문 분석하는 에지 분석 사용 게이트웨이에 해당 데이터를 보냅니다. 규칙 및 해당 조치에 따라 중요한 데이터와 경보가 {{site.data.keyword.iot_full}}에 전송되거나 게이트웨이에서 경보를 트리거하거나 게이트웨이에 로컬인 텍스트 파일에 기록될 수 있습니다.
 
-다음 다이어그램은 {{site.data.keyword.iot_full}} 에지 분석 환경의 일반 아키텍처를 설명합니다.
-![에지 분석 아키텍처용 IBM Watson IoT Platform](images/architecture_platform_edge.svg "에지 분석 아키텍처가 포함된 IBM Watson IoT Platform")
+다음 다이어그램은 {{site.data.keyword.iot_full}} 에지 분석 환경의 일반 아키텍처를 보여줍니다.
+![에지 분석 아키텍처의 IBM Watson IoT Platform](images/architecture_platform_edge.svg "에지 분석 아키텍처의 IBM Watson IoT Platform")
 
 ## 시작하기 전에
 {: #byb}
@@ -45,10 +45,10 @@ lastupdated: "2017-03-13"
 
 게이트웨이에 연결된 디바이스의 트리거된 에지 규칙 및 경보에 대한 개요를 가져오려면 다음 보드를 사용하십시오. 
 
-|보드 이름 | 설명  |  
+|보드 이름 | 설명 |  
  |:---|:---|  
-  |규칙 중심 분석 | 에지 규칙을 포함하여 조직의 규칙을 표시합니다. 추가 카드는 전달된 에지 경보, 연관된 디바이스, 디바이스 특성 및 전달된 에지 경보 정보를 나열합니다. |  
- |디바이스 중심 분석 | 조직에 연결된 디바이스를 표시합니다. 추가 카드는 선택한 에지 디바이스에 대해 전달된 경보, 선택한 디바이스 정보, 디바이스 특성 및 전달된 경보 정보를 표시합니다. |
+  |규칙 중심 분석| 에지 규칙을 포함하여 조직의 규칙을 표시합니다. 추가 카드는 전달된 에지 경보, 연관된 디바이스, 디바이스 특성 및 전달된 에지 경보 정보를 나열합니다.|  
+ |디바이스 중심 분석| 조직에 연결된 디바이스를 표시합니다. 추가 카드는 선택한 에지 디바이스에 대해 전달된 경보, 선택한 디바이스 정보, 디바이스 특성 및 전달된 경보 정보를 표시합니다.|
 
 기본 분석 보드에 대한 자세한 정보는 [보드 및 카드를 사용하여 실시간 데이터 시각화](data_visualization.html#default_boards)를 참조하십시오.
 
@@ -161,9 +161,9 @@ lastupdated: "2017-03-13"
 
 오퍼레이션 | 설명
 --- | ---
-활성화 | 선택한 게이트웨이에서 규칙을 업로드하고 활성화합니다. 규칙 상태는 *활성*으로 설정됩니다.
-비활성화  | 선택한 게이트웨이에서 규칙을 비활성화합니다. 규칙이 게이트웨이에 남아 있으므로 필요한 경우 다시 활성화할 수 있습니다. 규칙 상태는 *비활성*으로 설정됩니다.
-업데이트 | 업데이트된 버전의 규칙을 선택한 게이트웨이에 업로드합니다. 게이트웨이의 규칙 상태가 *활성(이전)*인 경우 이 오퍼레이션을 사용하여 게이트웨이를 최신 상태로 만드십시오. 규칙 상태는 *활성*으로 설정됩니다.
+활성화| 선택한 게이트웨이에서 규칙을 업로드하고 활성화합니다. 규칙 상태는 *활성*으로 설정됩니다.
+비활성화 | 선택한 게이트웨이에서 규칙을 비활성화합니다. 규칙이 게이트웨이에 남아 있으므로 필요한 경우 다시 활성화할 수 있습니다. 규칙 상태는 *비활성*으로 설정됩니다.
+업데이트| 업데이트된 버전의 규칙을 선택한 게이트웨이에 업로드합니다. 게이트웨이의 규칙 상태가 *활성(이전)*인 경우 이 오퍼레이션을 사용하여 게이트웨이를 최신 상태로 만드십시오. 규칙 상태는 *활성*으로 설정됩니다.
 제거 | 선택한 게이트웨이에서 규칙을 제거합니다. 게이트웨이의 규칙 상태를 *없음*으로 되돌립니다.
 
 
@@ -190,32 +190,32 @@ EAA 사용 게이트웨이에서 실행되는 에지 규칙 트리거 조치를 
  - 게이트웨이의 자세한 진단 정보는 **센서 정보** 섹션을 참조하십시오. 다음 표에서는 게이트웨이 디바이스 메시지에 포함될 수 있는 여러 다른 특성에 대해 설명합니다.
 
 
-특성 | 설명
+ 특성 | 설명
  --- | ---
  `MsgInCount` |EAA(Edge Analytics Agent)에 보낸 메시지 수입니다.
-`MsgInRate` | 마지막 기간 동안 EAA에 전송된 것으로 추정되는 초당 메시지 수입니다.  
+ `MsgInRate` | 마지막 기간 동안 EAA에 전송된 것으로 추정되는 초당 메시지 수입니다.
  `LastHeartBeat` | 마지막 하트비트 메시지가 생성된 밀리초 시간소인입니다. 하트비트 메시지는 최소 10초마다 생성됩니다.
-`CurrentTimestamp` | 현재 모니터링 메시지가 생성된 밀리초 시간소인입니다.
-`IsAlive` | `LastHeartBeat`와 `CurrentTimestamp` 사이의 차이가 20초보다 큰 경우 이 특성은 0입니다.
-`BytesOutCount` | EAA에서 {{site.data.keyword.iot_short}}로 보낸 메시지 바이트 수입니다.
-`BytesOutRate` | 마지막 기간 동안 EAA에서 {{site.data.keyword.iot_short}}에 전송한 것으로 추정되는 초당 메시지 바이트 수입니다.
-`BytesInCount` | {{site.data.keyword.iot_short}}에서 EAA에 보낸 메시지 바이트 수입니다.
-`BytesInRate` | 마지막 기간 동안 {{site.data.keyword.iot_short}}에서 EAA에 전송한 것으로 추정되는 초당 메시지 바이트 수입니다.
-`RuleBytesInCount` |EAA 규칙 엔진 코어에 전송된 메시지 바이트 수입니다. </br> **참고:** 디바이스 유형에 대해 규칙이 설정되지 않은 경우 해당 디바이스 유형의 메시지가 규칙 엔진 코어에 전송되지 않습니다.
-`RuleBytesInRate` | 마지막 기간 동안 EAA 규칙 엔진 코어에 전송된 것으로 추정되는 초당 메시지 바이트 수입니다.
-`MsgOutCount` | EAA에서 {{site.data.keyword.iot_short}}에 보낸 메시지 수입니다.
-`MsgOutRate` | 마지막 기간 동안 EAA에서 {{site.data.keyword.iot_short}}에 전송하는 것으로 추정되는 초당 메시지 바이트 수입니다.
-`MsgReducePercent` | 입력 메시지와 출력 메시지 사이의 차이(백분율)입니다. </br>다음 공식을 사용하여 계산합니다. `(msgIn - msgOut) / msgIn`
-`BytesReducePercent` | 입력 바이트와 출력 바이트 사이의 차이(백분율)입니다. </br>다음 공식을 사용하여 계산합니다. `(bytesIn - bytesOut) / bytesIn`
-`MsgRateReduce` | 입력 메시지 비율과 출력 메시지 비율 사이의 차이(백분율)입니다. </br>다음 공식을 사용하여 계산합니다. `(msgInRate - msgOutRate) / msgInRate`
-`BytesRateReduce` | 입력 메시지 바이트와 출력 메시지 바이트 사이의 차이(백분율)입니다. </br>다음 공식을 사용하여 계산합니다. `(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | EAA가 실행 중인 시스템의 현재 시스템 로드입니다. **참고:** EAA가 실행 중인 시스템에서 `mpstat` 명령을 사용할 수 있는 경우에만 CPU 비율이 전송됩니다. 그렇지 않으면 마지막 순간의 시스템 로드 평균이 전송됩니다. </br>“시스템 로드 평균은 사용 가능한 프로세서에 큐된 실행 가능한 엔티티 수와 일정 기간 동안 평균을 낸 사용 가능한 프로세서에서 실행되는 실행 가능 엔티티 수의 합계입니다. 로드 평균을 계산하는 방법은 운영 체제별로 다르지만 일반적으로 감쇠 시간 종속 평균입니다. 로드 평균을 사용할 수 없으면 음수 값이 리턴됩니다. ” - *ManagementFactory.getOperatingSystemMXBean*에 대한 javadoc.
+ `CurrentTimestamp` | 현재 모니터링 메시지가 생성된 밀리초 시간소인입니다.
+ `IsAlive` | `LastHeartBeat`와 `CurrentTimestamp` 사이의 차이가 20초보다 큰 경우 이 특성은 0입니다.
+ `BytesOutCount` | EAA에서 {{site.data.keyword.iot_short}}로 보낸 메시지 바이트 수입니다.
+ `BytesOutRate` | 마지막 기간 동안 EAA에서 {{site.data.keyword.iot_short}}에 전송한 것으로 추정되는 초당 메시지 바이트 수입니다.
+ `BytesInCount` | {{site.data.keyword.iot_short}}에서 EAA에 보낸 메시지 바이트 수입니다.
+ `BytesInRate` | 마지막 기간 동안 {{site.data.keyword.iot_short}}에서 EAA에 전송한 것으로 추정되는 초당 메시지 바이트 수입니다.
+ `RuleBytesInCount` |EAA 규칙 엔진 코어에 전송된 메시지 바이트 수입니다. </br> **참고:** 디바이스 유형에 대해 규칙이 설정되지 않은 경우 해당 디바이스 유형의 메시지가 규칙 엔진 코어에 전송되지 않습니다.
+ `RuleBytesInRate` | 마지막 기간 동안 EAA 규칙 엔진 코어에 전송된 것으로 추정되는 초당 메시지 바이트 수입니다.
+ `MsgOutCount` | EAA에서 {{site.data.keyword.iot_short}}에 보낸 메시지 수입니다.
+ `MsgOutRate` | 마지막 기간 동안 EAA에서 {{site.data.keyword.iot_short}}에 전송하는 것으로 추정되는 초당 메시지 바이트 수입니다.
+ `MsgReducePercent` | 입력 메시지와 출력 메시지 사이의 차이(백분율)입니다. </br>다음 공식을 사용하여 계산합니다. `(msgIn - msgOut) / msgIn`
+ `BytesReducePercent` | 입력 바이트와 출력 바이트 사이의 차이(백분율)입니다. </br>다음 공식을 사용하여 계산합니다. `(bytesIn - bytesOut) / bytesIn`
+ `MsgRateReduce` | 입력 메시지 비율과 출력 메시지 비율 사이의 차이(백분율)입니다. </br>다음 공식을 사용하여 계산합니다. `(msgInRate - msgOutRate) / msgInRate`
+ `BytesRateReduce` | 입력 메시지 바이트와 출력 메시지 바이트 사이의 차이(백분율)입니다. </br>다음 공식을 사용하여 계산합니다. `(bytesInRate - bytesOutRate) / bytesInRate`
+ `SystemLoad` | EAA가 실행 중인 시스템의 현재 시스템 로드입니다. **참고:** EAA가 실행 중인 시스템에서 `mpstat` 명령을 사용할 수 있는 경우에만 CPU 비율이 전송됩니다. 그렇지 않으면 마지막 순간의 시스템 로드 평균이 전송됩니다. </br>“시스템 로드 평균은 사용 가능한 프로세서에 큐된 실행 가능한 엔티티 수와 일정 기간 동안 평균을 낸 사용 가능한 프로세서에서 실행되는 실행 가능 엔티티 수의 합계입니다. 로드 평균을 계산하는 방법은 운영 체제별로 다르지만 일반적으로 감쇠 시간 종속 평균입니다. 로드 평균을 사용할 수 없으면 음수 값이 리턴됩니다. ” - _ManagementFactory.getOperatingSystemMXBean_에 대한 javadoc.
  `FreeMemory` | EAA가 실행 중인 JVM(Java™ Virtual Machine)에 대한 여유 메모리의 바이트 수입니다.
  `MemoryUsed` | EAA에서 사용하는 JBM 메모리의 바이트 수입니다.
-`InQueueSize` | EAA 처리를 위해 큐된 메시지 수입니다.
-`RuleNumber` | 규칙 엔진 코어에 정의된 규칙 수입니다.
-`ProcessorNumber` | 디버그용입니다. 규칙 엔진 코어에 정의된 프로세서 수입니다. </br>**참고:** 프로세서는 규칙 엔진 코어의 최소 실행 단위입니다.
-`DataPointsInWindow` | 기간 내에 버퍼링된 데이터 점의 총 수입니다. 데이터 점의 바이트 크기는 해당 데이터 유형에 따라 다릅니다. 예를 들어 float/int 데이터 점 크기는 8바이트인 반면 문자열 데이터 점 크기는 해당 길이에 따라 따릅니다. 대부분의 경우 다음 공식을 사용하여 일정 기간의 메모리 사용을 추정할 수 있습니다. `DataPointsInWindow * 8`.
+ `InQueueSize` | EAA 처리를 위해 큐된 메시지 수입니다.
+ `RuleNumber` | 규칙 엔진 코어에 정의된 규칙 수입니다.
+ `ProcessorNumber` | 디버그용입니다. 규칙 엔진 코어에 정의된 프로세서 수입니다. </br>**참고:** 프로세서는 규칙 엔진 코어의 최소 실행 단위입니다.
+ `DataPointsInWindow` | 기간 내에 버퍼링된 데이터 점의 총 수입니다. 데이터 점의 바이트 크기는 해당 데이터 유형에 따라 다릅니다. 예를 들어 float/int 데이터 점 크기는 8바이트인 반면 문자열 데이터 점 크기는 해당 길이에 따라 따릅니다. 대부분의 경우 다음 공식을 사용하여 일정 기간의 메모리 사용을 추정할 수 있습니다. `DataPointsInWindow * 8`.
 
 ## Edge Analytics 커뮤니티
 {: #eaa_community}

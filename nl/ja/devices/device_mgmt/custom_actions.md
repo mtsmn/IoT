@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
-
----
+lastupdated: "2017-03-14"---
 
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}
@@ -70,7 +68,7 @@ lastupdated: "2017-03-14"
 
 {{site.data.keyword.iot_short_notm}} ダッシュボードを使用してカスタム・デバイス管理パッケージを追加するには、次のようにします。
 
-1. {{site.data.keyword.iot_short_notm}} ダッシュボードのナビゲーション・バーから**「設定」 **をクリックします。
+1. {{site.data.keyword.iot_short_notm}} ダッシュボードで、ナビゲーション・バーから**「設定」**をクリックします。
 2. **「カスタム・デバイス管理パッケージ」**をクリックします。
 3. **「パッケージの追加」**ボタンをクリックします。
 4. パッケージ・ファイルを選択し、**「開く」**をクリックします。
@@ -83,31 +81,31 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 
 |プロパティー|説明|必須
 |:---|:---|:---|
-|`bundleId`|デバイス管理拡張の固有 ID。|はい|
-|`version`|デバイス管理拡張のバージョン・ストリング。|いいえ|
-|`provider`|デバイス管理拡張のプロバイダー・ストリング。1024 文字までに制限されます。|いいえ|
-|`displayName`|{{site.data.keyword.iot_short_notm}} ダッシュボードに表示される `locale`: `String` 形式のキーと値のペアから成るマップ。少なくとも 1 つのエントリーを指定する必要があります。|はい|
-|`description`|{{site.data.keyword.iot_short_notm}} ダッシュボードでの表示に使用される `locale`: `String` 形式のキーと値のペアから成るマップ。定義する場合は、少なくとも 1 つのエントリーを指定する必要があります。|いいえ|
-|`actions`| デバイス管理拡張に含まれるアクションを定義する `actionId`: `<action>` 形式のキーと値のペアから成るマップ。少なくとも 1 つのエントリーを指定する必要があります。|はい|
+|``bundleId``|デバイス管理拡張の固有 ID。|はい|
+|``version``|デバイス管理拡張のバージョン・ストリング。|いいえ|
+|``provider``|デバイス管理拡張のプロバイダー・ストリング。1024 文字までに制限されます。|いいえ|
+|``displayName``|{{site.data.keyword.iot_short_notm}} ダッシュボードに表示される ``locale``: ``String`` 形式のキーと値のペアから成るマップ。少なくとも 1 つのエントリーを指定する必要があります。|はい|
+|``description``|{{site.data.keyword.iot_short_notm}} ダッシュボードでの表示に使用される ``locale``: ``String`` 形式のキーと値のペアから成るマップ。定義する場合は、少なくとも 1 つのエントリーを指定する必要があります。|いいえ|
+|``actions``| デバイス管理拡張に含まれるアクションを定義する ``actionId``: ``<action>`` 形式のキーと値のペアから成るマップ。少なくとも 1 つのエントリーを指定する必要があります。|はい|
 
 ### アクションごとのプロパティー
 
 |プロパティー|説明|必須
 |:---|:---|
-|`actionDisplayName`|{{site.data.keyword.iot_short_notm}} ダッシュボードに表示される `locale`: `String` 形式のキーと値のペアから成るマップ。少なくとも 1 つのエントリーを指定する必要があります。|はい|
-|`description`|{{site.data.keyword.iot_short_notm}} ダッシュボードでの表示に使用される `locale`: `String` 形式のキーと値のペアから成るマップ。オプションです。少なくとも 1 つのエントリーを指定する必要があります。|いいえ|
-|`parameters`|特定のアクションに許可されるパラメーターの配列。定義する場合は、少なくとも 1 つのエントリーを指定する必要があります。|いいえ|
+|``actionDisplayName``|{{site.data.keyword.iot_short_notm}} ダッシュボードに表示される ``locale``: ``String`` 形式のキーと値のペアから成るマップ。少なくとも 1 つのエントリーを指定する必要があります。|はい|
+|``description``|{{site.data.keyword.iot_short_notm}} ダッシュボードでの表示に使用される ``locale``: ``String`` 形式のキーと値のペアから成るマップ。オプションです。少なくとも 1 つのエントリーを指定する必要があります。|いいえ|
+|``parameters``|特定のアクションに許可されるパラメーターの配列。定義する場合は、少なくとも 1 つのエントリーを指定する必要があります。|いいえ|
 
 ### アクション・パラメーターごとのプロパティー
 
 |プロパティー|説明|必須
 |:---|:---|
-|`name`|アクションのパラメーターの固有 ID。|はい|
-|`value`|要求開始時にパラメーター値の検証に使用される正規表現。指定しなければ、検証は行われません。|いいえ|
-|`required`|パラメーターが必須かどうかを決定するブール値。デフォルトでは、値は false に設定されています。 |いいえ|
-|`defaultValue`|要求開始時にパラメーターが指定されていない場合に使用する値。|いいえ|
+|``name``|アクションのパラメーターの固有 ID。|はい|
+|``value``|要求開始時にパラメーター値の検証に使用される正規表現。指定しなければ、検証は行われません。|いいえ|
+|``required``|パラメーターが必須かどうかを決定するブール値。デフォルトでは、値は false に設定されています。|いいえ|
+|``defaultValue``|要求開始時にパラメーターが指定されていない場合に使用する値。|いいえ|
 
-**注:** `bundleId`、`version`、`actionId`、`parameterId` の各値に使用できる文字数は 255 文字までに制限されています。また、英数字 (a-z、A-Z、0-9) と次の特殊文字だけで構成する必要があります。
+**注:** ``bundleId``、``version``、``actionId``、 ``parameterId`` の各値に使用できる文字数は 255 文字までに制限されています。また、英数字 (a-z、A-Z、0-9) と次の特殊文字だけで構成する必要があります。
  - ダッシュ (-)
  - 下線 (\_)
  - ドット (.)
@@ -126,7 +124,7 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 - デバイス管理拡張パッケージを更新する:
   `PUT https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 - デバイス管理拡張パッケージを削除する:
-  `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
+  `DELETE https:<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
 デバイス管理拡張パッケージ用 REST API について詳しくは、[{{site.data.keyword.iot_short_notm}} API V2 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} の資料を参照してください。
 
@@ -144,7 +142,7 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 	Topic: iotdevice-1/mgmt/manage
 	{
 		"d": {
-			"supports": {
+		"supports": {
 				"deviceActions": false,
 				"firmwareActions": false,
 				"<bundleId>": true
@@ -174,7 +172,7 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 
 要求を開始するときに、以下の情報を指定する必要があります。
 
-- `<bundleId>/<actionId>` アクション
+- ``<bundleId>/<actionId>`` アクション
 - アクション開始対象デバイスのリスト (最大 5000 デバイスまで)
 - カスタム・アクション定義で定義されたパラメーターのリスト
 
@@ -205,7 +203,7 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 
 デバイスに対してカスタム・アクションが開始されると、そのデバイスに MQTT メッセージがパブリッシュされます。MQTT メッセージには、要求の一部として指定されたパラメーターが含まれます。デバイスは MQTT メッセージを受け取ると、アクションを実行するか、または現在アクションを完了できない理由を示すエラー・コードで応答します。
 
-デバイス・アクションが正常に完了すると、デバイスは `rc` 値が `200` に設定された応答をパブリッシュします。
+デバイス・アクションが正常に完了すると、デバイスは ``rc`` 値が ``200`` に設定された応答をパブリッシュします。
 
 次の抜粋は、サーバーとデバイスの間で行われる交換の例を示しています。
 
@@ -215,7 +213,7 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 	Topic: iotdm-1/mgmt/custom/<bundleId>/<actionId>
 	{
 		"d": {
-			"fields": [
+		"fields": [
 				{
 					"field": "<parameter0>",
 					"value": "<parameter0 value>"
@@ -242,7 +240,7 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 
 次の例は、新しいデバイス管理拡張を定義して、その拡張で定義されたアクションを実行するための方法を示しています。
 
-何社かが `exampleDeviceType` デバイスを製造しています。`exampleDeviceType` デバイス上で実行するプラグインをインストールして管理できます。`exampleDeviceType` デバイス上のプラグインをリモート管理しやすくするために、製造メーカーは通常、{{site.data.keyword.iot_short_notm}} 組織にインポートできるデバイス管理拡張を提供しています。
+何社かが ``exampleDeviceType`` デバイスを製造しています。``exampleDeviceType`` デバイス上で実行するプラグインをインストールして管理できます。``exampleDeviceType`` デバイス上のプラグインをリモート管理しやすくするために、製造メーカーは通常、{{site.data.keyword.iot_short_notm}} 組織にインポートできるデバイス管理拡張を提供しています。
 
 この例では、次の拡張 JSON 文書が使用されます。
 
@@ -338,7 +336,7 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 
-組織 `<orgID>` に登録されているデバイスは、管理要求をパブリッシュするときに、`exampleDeviceType-actions-v1` アクションをサポートしていることを指定できます。以下に例を示します。
+組織 ``<orgID>`` に登録されているデバイスは、管理要求をパブリッシュするときに、``exampleDeviceType-actions-v1`` アクションをサポートしていることを指定できます。以下に例を示します。
 
 ```
 	デバイスからの出力メッセージ:
@@ -346,7 +344,7 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 	Topic: iotdevice-1/mgmt/manage
 	{
 		"d": {
-			"supports": {
+		"supports": {
 				"exampleDeviceType-actions-v1": true
 			}
 		},
@@ -366,9 +364,9 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 	}
 
 ```
-この時点で、`exampleIoT-exampleDeviceType-v1` 拡張で定義したデバイス・アクションを開始できます。
+この時点で、``exampleIoT-exampleDeviceType-v1`` 拡張で定義したデバイス・アクションを開始できます。
 
-`installPlugin` アクションを開始するために、次のペイロードが使用されます。
+``installPlugin`` アクションを開始するために、次のペイロードが使用されます。
 
 ```
 	{
@@ -400,7 +398,7 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-コマンドが送信されると、`exampleDeviceType` タイプのデバイス `device0` と `device1` が、次の MQTT メッセージを受け取ります。
+コマンドが送信されると、``exampleDeviceType`` タイプのデバイス ``device0`` と ``device1`` が、次の MQTT メッセージを受け取ります。
 
 ```
 	Incoming message from server:
@@ -408,7 +406,7 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 	Topic: iotdm-1/mgmt/custom/exampleDeviceType-actions-v1/installPlugin
 	{
 		"d": {
-			"fields": [
+		"fields": [
 				{
 					"field": "pluginId",
 					"value": "testPluginA"
@@ -437,7 +435,7 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 
 ```
 
-この時点で、`installPlugin` デバイス管理アクションが完了します。
+この時点で、``installPlugin`` デバイス管理アクションが完了します。
 
 ## API の例
 {: #api_examples}

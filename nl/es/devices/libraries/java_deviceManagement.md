@@ -92,11 +92,11 @@ Constructor One construye una instancia `ManagedDevice` en {{site.data.keyword.i
 
 |Propiedad |Descripción |
 |:---|:---|
-|`Organization-ID` |El ID de la organización|
-|`Device-Type` |El tipo del dispositivo. Normalmente, el deviceType es una agrupación para los dispositivos que realizan una tarea específica, como por ejemplo "weatherballoon".|
-|`Device-ID` |El ID del dispositivo. Normalmente, para un determinado tipo de dispositivo, el deviceId es un identificador exclusivo de dicho dispositivo, por ejemplo un número de serie o una dirección MAC.|
+|``Organization-ID`` |El ID de la organización|
+|``Device-Type`` |El tipo del dispositivo. Normalmente, el deviceType es una agrupación para los dispositivos que realizan una tarea específica, como por ejemplo "weatherballoon".|
+|``Device-ID`` |El ID del dispositivo. Normalmente, para un determinado tipo de dispositivo, el deviceId es un identificador exclusivo de dicho dispositivo, por ejemplo un número de serie o una dirección MAC.|
 |`Authentication-Method` |El método de autenticación que debe utilizarse. El único valor al que se da soporte actualmente es `token`.|
-|`Authentication-Token` |Una señal de autenticación para conectar de forma segura el dispositivo a Watson IoT Platform.|
+|``Authentication-Token`` |Una señal de autenticación para conectar de forma segura el dispositivo a Watson IoT Platform.|
 
 
 El código siguiente describe cómo puede crear una instancia `ManagedDevice`:
@@ -162,7 +162,7 @@ managedDevice.manage(3600);
 
 Para obtener más información sobre la operación `Gestionar`, consulte la [documentación].
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## No gestionar
 
@@ -174,7 +174,7 @@ managedDevice.unmanage();
 
 Para obtener más información sobre la operación `Eliminar gestión`, consulte la [documentación].
 
-  [documentation]:../device_mgmt/operations/manage.html
+  [documentation]: ../device_mgmt/operations/manage.html
 
 ## Actualización de la ubicación
 {: #construct_location_update}

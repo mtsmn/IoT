@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -33,7 +33,7 @@ Pour activer l'authentification MQTT, soumettez un nom d'utilisateur et un mot d
 ### Nom d'utilisateur
 {: #username}
 
-La valeur pour le nom d'utilisateur est identique pour toutes les passerelles : `use-token-auth`. Cette valeur indique à {{site.data.keyword.iot_short_notm}} qu'il doit utiliser le jeton d'authentification de la passerelle qui est spécifié comme mot de passe.
+La valeur pour le nom d'utilisateur est identique pour toutes les passerelles : ``use-token-auth``. Cette valeur indique à {{site.data.keyword.iot_short_notm}} qu'il doit utiliser le jeton d'authentification de la passerelle qui est spécifié comme mot de passe.
 
 ### Mot de passe
 {: #password}
@@ -59,10 +59,10 @@ Une passerelle peut publier des événements elle-même ou pour le compte de n'i
 
 -   La passerelle 1 peut publier ses propres événements de statut :
       
-    `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
+    ``iot-2/type/mygateway/id/gateway1/evt/status/fmt/json``
 -   La passerelle 1 peut publier ses propres événements de statut pour le compte du terminal 1 :
       
-    `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
+    ``iot-2/type/mydevice/id/device1/evt/status/fmt/json``
 
 **Important :** La taille du contenu du message ne peut pas être supérieure à 131072 octets. Les messages dont la taille est plus grande sont rejetés.
 
@@ -164,38 +164,43 @@ La prise en charge de la gestion du cycle de vie des terminaux est facultative. 
 
 Les passerelles gérées peuvent publier des messages dotés du niveau de qualité de service (QoS) 0 ou 1.
 
-Les messages dotés du niveau QoS=0 peuvent être supprimés et ne sont pas conservés après le redémarrage du serveur de messagerie. Les messages dotés du niveau QoS=1 peuvent être placés en file d'attente et ne sont pas conservés après le redémarrage du serveur de messagerie. La durabilité de l'abonnement détermine si une demande a été placée en file d'attente. Le paramètre `cleansession` de la connexion qui a effectué l'abonnement détermine la durabilité de l'abonnement.  
+Les messages dotés du niveau QoS=0 peuvent être supprimés et ne sont pas conservés après le redémarrage du serveur de messagerie. Les messages dotés du niveau QoS=1 peuvent être placés en file d'attente et ne sont pas conservés après le redémarrage du serveur de messagerie. La durabilité de l'abonnement détermine si une demande a été placée en file d'attente. Le paramètre ``cleansession`` de la connexion qui a effectué l'abonnement détermine la durabilité de l'abonnement.  
 
-{{site.data.keyword.iot_short_notm}} publie les demandes dotées du niveau QoS 1 pour prendre en charge la mise en file d'attente des messages. Pour placer en file d'attente les messages qui sont envoyés alors qu'une passerelle gérée n'est pas connectée, configurez le terminal pour qu'il n'utilise pas d'options 'clean session' en affectant la valeur false au paramètre `cleansession`.
+{{site.data.keyword.iot_short_notm}} publie les demandes dotées du niveau QoS 1 pour prendre en charge la mise en file d'attente des messages. Pour placer en file d'attente les messages qui sont envoyés alors qu'une passerelle gérée n'est pas connectée, configurez le terminal pour qu'il n'utilise pas d'options 'clean session' en affectant la valeur false au paramètre ``cleansession``.
 
 **Avertissement**
 
-Lorsqu'une passerelle gérée utilise un abonnement durable, les commandes de gestion des terminaux qui sont envoyées à la passerelle alors qu'elle est hors ligne sont signalées comme ayant échoué si la passerelle ne se reconnecte pas au service avant l'expiration de la demande. Lorsque la passerelle se reconnecte, ces demandes sont traitées par la passerelle. Les abonnements durables sont spécifiés par le paramètre `cleansession=false`.
+Lorsqu'une passerelle gérée utilise un abonnement durable, les commandes de gestion des terminaux qui sont envoyées à la passerelle alors qu'elle est hors ligne sont signalées comme ayant échoué si la passerelle ne se reconnecte pas au service avant l'expiration de la demande. Lorsque la passerelle se reconnecte, ces demandes sont traitées par la passerelle. Les abonnements durables sont spécifiés par le paramètre ``cleansession=false``.
 
-La passerelle possède la session MQTT, quels que soient les terminaux qui sont derrière elle. Lorsqu'un terminal soumet une demande d'abonnement via une passerelle, la demande ne passe pas par les autres passerelles, que les options `cleansession=false` soient définies ou non.
+La passerelle possède la session MQTT, quels que soient les terminaux qui sont derrière elle. Lorsqu'un terminal soumet une demande d'abonnement via une passerelle, la demande ne passe pas par les autres passerelles, que l'option ``cleansession=false`` soit définie ou non.
 
 ### Rubriques
 {: #topics}
 
-Une passerelle gérée doit s'abonner aux sujets suivants pour traiter les demandes et les réponses émanant de {{site.data.keyword.iot_short_notm}} :
+Une passerelle gérée doit s'abonner aux sujets suivants pour traiter ses propres demandes et réponses depuis {{site.data.keyword.iot_short_notm}} :
 
--   La passerelle gérée s'abonne aux réponses de gestion des terminaux sur :  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/+</pre>
-{: codeblock}
--   La passerelle gérée s'abonne aux demandes de gestion des terminaux sur :  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/+</pre>
+-   La passerelle gérée s'abonne à ses propres demandes et réponses de gestion des terminaux sur :  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">gatewayTypeId</var>/id/<var class="keyword varname">gatewayDeviceId</var>/#</pre>
 {: codeblock}
 
-Une passerelle gérée publie les réponses et demandes suivantes :
+Une passerelle gérée doit s'abonner aux sujets suivants pour traiter les demandes et les réponses émanant d'{{site.data.keyword.iot_short_notm}} pour ses terminaux connectés :
 
-- Les réponses de gestion des terminaux sont publiées sur :  
-<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/</pre>
+-   La passerelle gérée s'abonne aux demandes et réponses de gestion des terminaux pour ses terminaux connectés sur :  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/#</pre>
 {: codeblock}
-- Les demandes Gérer le terminal sont publiées sur :  
+
+La passerelle peut traiter des messages de protocole de gestion des terminaux à la fois pour elle-même et pour le compte d'autres terminaux connectés en utilisant les attributs **typeId** et **deviceId** appropriés. Le caractère générique MQTT **+** peut également être utilisé à la place de **typeId** et **deviceId**.
+
+Une passerelle gérée effectue des publications sur des sujets qui sont propres au type de demande de gestion effectuée :
+
+- La passerelle gérée s'abonne aux réponses de gestion des terminaux sur :
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
+{: codeblock}
+
+Pour connaître les autres sujets sur lesquels une passerelle gérée peut effectuer des publications, voir [Protocole de gestion des terminaux](device_mgmt/index.html) et [Demandes de gestion des terminaux](../devices/device_mgmt/requests.html). 
+- Le protocole reste le même pour les passerelles, si ce n'est que les sujets dont le nom commence par **iotdevice-1/** sont remplacés par :
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}
-
-La passerelle peut traiter des messages de protocole de gestion des terminaux à la fois pour elle-même et pour le compte d'autres terminaux connectés en utilisant les attributs **typeId** et **deviceId** appropriés.
 
 ### Format de message
 {: #msg_format}

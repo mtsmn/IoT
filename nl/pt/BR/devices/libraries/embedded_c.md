@@ -30,7 +30,8 @@ Para acessar as bibliotecas do cliente Embedded C e as amostras para o {{site.da
 
 |Dependência |Descrição|
 |:---|:---|
-|[Biblioteca Eclipse Paho Embedded C ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Fornece uma biblioteca de MQTT do cliente C. Para obter mais informações, veja [Pacote do cliente MQTT - C para dispositivos integrados ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
+|[Biblioteca C integrada Eclipse Paho ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de linkexterno")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Fornece uma biblioteca de MQTT do cliente C. Para obter mais informações, veja [Pacote do cliente MQTT - C para dispositivos integrados ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
+
 
 
 ## Instalação
@@ -179,7 +180,7 @@ Quando o cliente do dispositivo conecta, ele automaticamente assina qualquer com
 	....
 
 ```
-**Nota:** a função `yield()` permite que o dispositivo receba comandos do Watson IoT Platform e mantém a conexão ativa. Se a função `yield()` não for chamada dentro do prazo especificado pelo intervalo keepAlive, quaisquer comandos que forem enviados da plataforma não serão recebidos pelo dispositivo. O valor designado à função `yield()` especifica a duração (em milissegundos) para leitura de dados do soquete antes que o controle seja retornado ao aplicativo.
+**Nota:** a função ``yield()`` permite que o dispositivo receba comandos do Watson IoT Platform e mantém a conexão ativa. Se a função ``yield()`` não for chamada dentro do prazo especificado pelo intervalo keepAlive, quaisquer comandos que forem enviados da plataforma não serão recebidos pelo dispositivo. O valor designado à função ``yield()`` especifica a duração (em milissegundos) para leitura de dados do soquete antes que o controle seja retornado ao aplicativo.
 
 ## Publicando eventos
 {: #publishing_events}

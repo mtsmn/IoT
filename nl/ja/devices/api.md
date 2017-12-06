@@ -1,10 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
-
-lastupdated: "2017-03-21"
----
+  years: 2015, 2017lastupdated: "2017-03-21"---
 
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}
@@ -39,7 +36,7 @@ lastupdated: "2017-03-21"
 
 MQTT メッセージング・プロトコルの使用に加えて、HTTP REST API コマンドを使用して、HTTP を介してイベントを {{site.data.keyword.iot_short_notm}} にパブリッシュするようにデバイスを構成することもできます。
 
-{{site.data.keyword.iot_short_notm}} に接続されているデバイスから `POST` 要求を送信するには、以下のいずれかの URL を使用します。
+{{site.data.keyword.iot_short_notm}} に接続されているデバイスから ``POST`` 要求を送信するには、以下のいずれかの URL を使用します。
 
 ### 非セキュアな POST 要求
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
@@ -77,11 +74,11 @@ MQTT メッセージング・プロトコルの使用に加えて、HTTP REST AP
 
 `Content-Type` 要求ヘッダーを要求に含める必要があります。以下の表に、サポート対象タイプがどのように {{site.data.keyword.iot_short_notm}} 内部フォーマットにマップされるかを示します。
 
-|Content-Type ヘッダー |{{site.data.keyword.iot_short_notm}} での形式 |
+|Content-Type ヘッダー|{{site.data.keyword.iot_short_notm}} での形式 |
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml | "xml"
+|application/xml| "xml"
 |application/octet-stream|"bin"
 
 ### サービス品質

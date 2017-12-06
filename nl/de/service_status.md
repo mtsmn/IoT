@@ -28,6 +28,6 @@ Klicken Sie auf **Lösungen**, um den Status von ausgewählten Watson IoT-Servic
 ## News in Twitter
 {: #twitter_feed}
 
-![Twitter-Feed 'https://twitter.com/ibmiotf'](images/twitter_logo.png "IBM Watson IoT Platform-Twitter-Feed")
+![Twitter-Feed https://twitter.com/ibmiotf](images/twitter_logo.png "Twitter-Feed von IBM Watson IoT Platform")
 
 Sie können über die aktuellen News und Updates für {{site.data.keyword.iot_short_notm}} und zugehörige Services auch auf dem Laufenden bleiben, indem Sie unserem [Twitter-Feed ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://twitter.com/ibmiotf) folgen.

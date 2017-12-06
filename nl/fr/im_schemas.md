@@ -35,7 +35,7 @@ Pour ajouter un schéma :
     **Astuce : ** Les propriétés disponibles sont définies dans le contenu des messages qui sont envoyés par un terminal. Pour plus d'informations sur le format de contenu {{site.data.keyword.iot_short}} payload format, voir la rubrique [Contenu de message](reference/mqtt/index.html#message-payloadl "Contenu de message.").   
   <dl>
   <dt>Ajouter manuellement une propriété</dt>
-  <p><b>Astuce :</b> Pour créer une structure de propriété imbriquée, commencez par ajouter une propriété dont le type de données est Parent. Dans la table des propriétés, vous pouvez ensuite cliquer sur l'icône ![Ajouter un enfant](images/add_child.png "Ajouter un enfant") pour ajouter une ou plusieurs propriétés enfant.</p>
+  <p><b>Astuce :</b> Pour créer une structure de propriété imbriquée, commencez par ajouter une propriété dont le type de données est Parent. Dans la table des propriétés, vous pouvez ensuite cliquer sur l'icône ![Ajouter un enfant.](images/add_child.png "Ajouter un enfant") pour ajouter une ou plusieurs propriétés enfant.</p>
   <dd>
   <ol>
     <li>Sélectionnez l'onglet **Manuel**.</li>

@@ -21,7 +21,7 @@ Amplíe los cálculos básicos de propiedades virtuales con fórmulas analítica
 **Importante:** Los cálculos avanzados sólo devuelven puntos de datos de propiedades si los datos para la propiedad seleccionada provienen de un dispositivo que está conectado a una pasarela que tiene Edge Analytics Agent instalado. Una regla de extremo puede utilizar esta propiedad virtual directamente. Para utilizar la propiedad con una regla de nube, una regla de extremo debe enviar el punto de datos a la nube utilizado la acción Reenviar a la nube. Para obtener más información, consulte [Instalación de Edge Analytics Agent](gateways/dashboard.html#edge).
 
 Ejemplo: utilice los puntos de datos virtuales avanzados en una tarjeta de gráfico de líneas para visualizar tendencias de datos con los picos de datos eliminados.  
- ![Puntos de datos reales frente a puntos de datos medios. ](images/vir_adv_avg_card.svg "Comparison between actual and averaged datapoints.")
+ ![Puntos de datos reales frente a puntos de datos medios.](images/vir_adv_avg_card.svg "Comparación entre los puntos de datos reales y puntos de datos medios.")
 
 ## Fórmulas avanzadas
 {: #advanced}

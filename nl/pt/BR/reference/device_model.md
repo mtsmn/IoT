@@ -43,7 +43,7 @@ Para obter mais informações sobre os identificadores e descrições de seus id
 
 Cada dispositivo conectado ao {{site.data.keyword.iot_short_notm}} está associado a um tipo de dispositivo. Tipos de dispositivos são grupos de dispositivos que compartilham características ou comportamentos.
 
-Um tipo de dispositivo possui um conjunto de atributos. Quando um dispositivo é incluído no {{site.data.keyword.iot_short_notm}}, os atributos em seu tipo de dispositivo são usados como um modelo. Se o dispositivo tiver um valor, esse valor será usado. Se o dispositivo não tiver um valor, o valor do tipo de dispositivo será usado. Por exemplo, o tipo de dispositivo pode ter um valor para o atributo `deviceInfo.fwVersion`, que reflete a versão de firmware no momento da fabricação. Esse valor é copiado do tipo de dispositivo para os dispositivos quando eles são incluídos. Quando um dispositivo é incluído, se o valor `deviceInfo.fwVersion` já existe, ele não é sobrescrito.
+Um tipo de dispositivo possui um conjunto de atributos. Quando um dispositivo é incluído no {{site.data.keyword.iot_short_notm}}, os atributos em seu tipo de dispositivo são usados como um modelo. Se o dispositivo tiver um valor, esse valor será usado. Se o dispositivo não tiver um valor, o valor do tipo de dispositivo será usado. Por exemplo, o tipo de dispositivo pode ter um valor para o atributo ``deviceInfo.fwVersion``, que reflete a versão de firmware no momento da fabricação. Esse valor é copiado do tipo de dispositivo para os dispositivos quando eles são incluídos. Quando um dispositivo é incluído, se o valor ``deviceInfo.fwVersion`` já existe, ele não é sobrescrito.
 
 Quando um atributo de um tipo de dispositivo é atualizado, somente novos dispositivos que estão registrados herdam as modificações feitas no modelo de tipo de dispositivo.
 
@@ -95,7 +95,7 @@ Além dos atributos principais listados acima na seção Atributos, há atributo
 Nome da extensão    | Prefixo dos atributos | Purpose      
 ------------- | ------------- | -------------                                         
  Diagnósticos       | diag                 | Logs de erro e informações de diagnóstico                 
- Localização          | localização             | Localização do dispositivo, possivelmente atualizado regularmente
+ Localização          | localização             | Local do dispositivo, possivelmente atualizado regularmente
  Gerenciamento de dispositivo | mgmt                 | Ações de gerenciamento de dispositivo, como atualização de firmware       
 
 
@@ -138,9 +138,9 @@ Atributo                 | Tipo   | Descrição                                 
 ### Extensão de gerenciamento de dispositivo
 {: #devicemanagementextension}
 
-Os atributos de gerenciamento estão presentes somente para dispositivos gerenciados. Quando um dispositivo gerenciado se torna inativo, ele se torna não gerenciado e o `mgmt.` é excluído. Os atributos `mgmt.` são configurados pelo {{site.data.keyword.iot_short_notm}} como resultado do processamento de solicitações de gerenciamento de dispositivo. Esses atributos não podem ser diretamente gravados usando a API (interface de programação de aplicativos).
+Os atributos de gerenciamento estão presentes somente para dispositivos gerenciados. Quando um dispositivo gerenciado se torna inativo, ele se torna não gerenciado e o ``mgmt.`` é excluído. Os atributos ``mgmt.`` são configurados pelo {{site.data.keyword.iot_short_notm}} como resultado do processamento de solicitações de gerenciamento de dispositivo. Esses atributos não podem ser diretamente gravados usando a API (interface de programação de aplicativos).
 
-Os dispositivos têm um ciclo de vida de gerenciamento que é definido por seus status como dispositivos gerenciados. O agente de gerenciamento de dispositivo no dispositivo é responsável por enviar uma solicitação Gerenciar dispositivo usando o protocolo de gerenciamento de dispositivo. Para lidar com dispositivos extintos em grandes populações de dispositivos, um dispositivo gerenciado pode ser configurado para enviar uma solicitação Gerenciar dispositivo regularmente. Um dispositivo gerenciado se torna inativo se essa solicitação não é enviada para o {{site.data.keyword.iot_short_notm}} para um período de tempo especificado. Para facilitar essa funcionalidade, a solicitação Gerenciar dispositivo tem um parâmetro de tempo de vida opcional. Quando o {{site.data.keyword.iot_short_notm}} recebe uma solicitação Gerenciar dispositivo que possui o conjunto de parâmetros de tempo de vida, ele calcula o tempo antes de outra solicitação Gerenciar dispositivo que é necessário e armazena-o no atributo `mgmt.dormantDateTime`.
+Os dispositivos têm um ciclo de vida de gerenciamento que é definido por seus status como dispositivos gerenciados. O agente de gerenciamento de dispositivo no dispositivo é responsável por enviar uma solicitação Gerenciar dispositivo usando o protocolo de gerenciamento de dispositivo. Para lidar com dispositivos extintos em grandes populações de dispositivos, um dispositivo gerenciado pode ser configurado para enviar uma solicitação Gerenciar dispositivo regularmente. Um dispositivo gerenciado se torna inativo se essa solicitação não é enviada para o {{site.data.keyword.iot_short_notm}} para um período de tempo especificado. Para facilitar essa funcionalidade, a solicitação Gerenciar dispositivo tem um parâmetro de tempo de vida opcional. Quando o {{site.data.keyword.iot_short_notm}} recebe uma solicitação Gerenciar dispositivo que possui o conjunto de parâmetros de tempo de vida, ele calcula o tempo antes de outra solicitação Gerenciar dispositivo que é necessário e armazena-o no atributo ``mgmt.dormantDateTime``.
 
 
 Atributo                     | Tipo    | Descrição                             | API do | DMA

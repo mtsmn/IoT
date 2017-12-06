@@ -76,14 +76,14 @@ Führen Sie folgende Schritte aus, um für eine {{site.data.keyword.cloudant_sho
 
   b. Wählen Sie eine Zeitzone aus. Um zu bestimmen, in welchen Bucket Gerätedaten platziert werden, wird die Zeit der ausgewählten Zeitzone verwendet, nicht die für das Gerät geltende Ortszeit. Zeitmarken für Gerätedaten, die an die {{site.data.keyword.cloudant_short_notm}}-Datenbank gesendet werden, werden bei der Entscheidung, in welche Datenbank die Daten einzugeben sind, in die ausgewählte Zeitzone konvertiert.
 
-  c. Wählen Sie Optionen aus, mit denen der Datenbankname festgelegt wird. Der Datenbankname lautet `iotp_<Organisations-ID>_<Datenbankname>_<Bucketname>`, wobei Folgendes gilt:
+  c. Wählen Sie Optionen aus, mit denen der Datenbankname festgelegt wird. Der Datenbankname lautet `iotp_<orgID>_<dbname>_<bucket_name>`, wobei Folgendes gilt:
 
- +  * `<Organisations-ID>` ist die ID Ihrer Organisation.
- +  * `<Datenbankname>` ist Ihre Auswahl für diesen Teil des Datenbanknamens, der durch das Feld für den Datenbanknamen (`Database Name`) gesteuert wird.
- +  * `<Bucketname>` ist eine Zeichenfolge, die durch Ihre Auswahl für das Feld für das Bucketintervall (`Bucket Interval`) festgelegt ist:
- +    * Für ein tägliches Bucketintervall (`day`) nimmt `<Bucketname>` den Wert `jjjj-mm-tt` an.  Beispielsweise `2016-07-06` für Ereignisse am 6. Juli 2016.
- +    * Für ein wöchentliches Bucketintervall (`week`) nimmt `<Bucketname>` den Wert `jjjj-'w'ww` an, wobei `'w'ww` die Nummer einer Woche angibt.  Beispielsweise `2016-w03` für Ereignisse in der dritten Kalenderwoche in 2016.
- +    * Für ein monatliches Bucketintervall (`month`) nimmt `<Bucketname>` den Wert `jjjj-mm` an.  Beispielsweise `2016-07` für Ereignisse im Juli 2016.
+ +  * `<orgID>` ist die ID Ihrer Organisation.
+ +  * `<dbname>` ist Ihre Auswahl für diesen Teil des Datenbanknamens, der durch das Feld für den Datenbanknamen (`Database Name`) gesteuert wird.
+ +  * `<bucket_name>` ist eine Zeichenfolge, die durch Ihre Auswahl für das Feld für das Bucketintervall (`Bucket Interval`) festgelegt ist:
+ +    * Für ein tägliches Bucketintervall (`day`) nimmt `<bucket_name>` den Wert `jjjj-mm-tt` an. Beispielsweise `2016-07-06` für Ereignisse am 6. Juli 2016.
+ +    * Für ein wöchentliches Bucketintervall (`week`) nimmt `<bucket_name>` den Wert `jjjj-'w'ww` an, wobei `'w'ww` die Nummer einer Woche angibt. Beispielsweise `2016-w03` für Ereignisse in der dritten Kalenderwoche in 2016.
+ +    * Für ein monatliches Bucketintervall (`month`) nimmt `<bucket_name>` den Wert `jjjj-mm` an. Beispielsweise `2016-07` für Ereignisse im Juli 2016.
 
 5. Klicken Sie auf **Berechtigen**.
 6. Klicken Sie im Dialogfeld 'Berechtigung' auf **Bestätigen**.
@@ -105,7 +105,8 @@ Die folgende Anleitung beschreibt die Vorgehensweise zum Verwenden von {{site.da
 ## Neue Designdokumente erstellen  
 {: #design_docs}
 
-Neue Designdokumente, die in der Konfigurationsdatenbank enthalten sind, werden in jede erstellte Datenbank kopiert. Der Name der Konfigurationsdatenbank lautet 'iotp_<Organisations-ID>_<Auswahl>_configuration', wobei dieselben Parameter wie für die in Schritt 3b des Abschnitts 'Vorbereitende Schritte' beschriebenen Datenbanknamen verwendet werden.
+Neue Designdokumente, die in der Konfigurationsdatenbank enthalten sind, werden in jede erstellte Datenbank kopiert. Der Name der Konfigurationsdatenbank lautet `iotp_<orgid>_<choice>_configuration`,
+wobei dieselben Parameter wie für die in Schritt 3b des Abschnitts 'Vorbereitende Schritte' beschriebenen Datenbanknamen verwendet werden.
 
 Die standardmäßig in {{site.data.keyword.iot_short_notm}} enthaltenen Designdokumente implementieren neben der Zusammenfassungsfunktion Abfragen, die in der aktuellen Archivierungsfunktion zur Verfügung stehen.
 

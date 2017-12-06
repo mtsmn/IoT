@@ -36,7 +36,7 @@ Avant de pouvoir visualiser vos données, vous devez exécuter les actions suiva
 
   a. Dans votre tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur l'application Node.JS que vous avez créée.
 
-  b. Cliquez sur **Lier un service ou une API**, puis sélectionnez votre service {{site.data.keyword.iot_short_notm}}, puis cliquez sur**Ajouter**.
+  b. Cliquez sur **Lier un service ou une API**, sélectionnez votre service {{site.data.keyword.iot_short_notm}}, puis cliquez sur **Ajouter**.
 3. A l'aide de l'outil de ligne de commande cf, passez dans le répertoire contenant l'exemple de package de visualisation extrait et exécutez la commande suivante pour vous connecter à {{site.data.keyword.Bluemix_notm}}.
 ```
 cf api https://api.ng.bluemix.net
@@ -47,7 +47,7 @@ cf login -u <your_bluemix_login_id>
 ```
 Si vous n'utilisez pas l'organisation et l'espace par défaut, vous pouvez utiliser les informations suivantes :
 ```
-cf target-o <your_bluemix_org> -s dev
+cf target -o <your_bluemix_org> -s dev
 ```
 
 5. Editez le fichier `manifest.yml` et mettez à jour les noms d'hôte et d'application à l'aide du format suivant :

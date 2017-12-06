@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -33,7 +33,7 @@ Per abilitare l'autenticazione MQTT, invia una password e un nome utente quando 
 ### Nome utente
 {: #username}
 
-Il nome utente è lo stesso valore per tutti i gateway: `use-token-auth`. Questo valore obbliga {{site.data.keyword.iot_short_notm}} ad utilizzare il token di autenticazione del gateway, specificato come la password.
+Il nome utente è lo stesso valore per tutti i gateway: ``use-token-auth``. Questo valore obbliga {{site.data.keyword.iot_short_notm}} ad utilizzare il token di autenticazione del gateway, specificato come la password.
 
 ### Password
 {: #password}
@@ -59,10 +59,10 @@ Un gateway può pubblicare gli eventi per se stesso o per conto di qualsiasi dis
 
 -   Il Gateway 1 può pubblicare i propri eventi di stato:
       
-    `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
+    ``iot-2/type/mygateway/id/gateway1/evt/status/fmt/json``
 -   Il Gateway 1 può pubblicare gli eventi di stato al posto del Device 1:
       
-    `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
+    ``iot-2/type/mydevice/id/device1/evt/status/fmt/json``
 
 **Importante:** il payload dei messaggi è limitato ad un massimo di 131072 byte. I messaggi che superano questo limite vengono rifiutati.
 
@@ -164,38 +164,43 @@ Il supporto per la gestione del ciclo di vita del dispositivo è facoltativo. Il
 
 I gateway gestiti possono pubblicare i messaggi con un livello di QOS (quality of service) di 0 o 1.
 
-I messaggi con QoS=0 possono essere scartati e non sono conservati dopo il riavvio del server di messaggistica. I messaggi con QoS=1 possono essere accodati e sono conservati dopo il riavvio del server di messaggistica. La durata della sottoscrizione determina se una richiesta viene accodata. Il parametro `cleansession` della connessione che effettua la sottoscrizione determina la durata della sottoscrizione.  
+I messaggi con QoS=0 possono essere scartati e non sono conservati dopo il riavvio del server di messaggistica. I messaggi con QoS=1 possono essere accodati e sono conservati dopo il riavvio del server di messaggistica. La durata della sottoscrizione determina se una richiesta viene accodata. Il parametro ``cleansession`` della connessione che effettua la sottoscrizione determina la durata della sottoscrizione.  
 
-{{site.data.keyword.iot_short_notm}} pubblica le richieste che hanno un livello QoS di 1 per supportare l'accodamento dei messaggi. Per accodare i messaggi inviati mentre un gateway gestito non è collegato, configura il dispositivo per non utilizzare le sessioni di pulitura impostando il parametro `cleansession` su false.
+{{site.data.keyword.iot_short_notm}} pubblica le richieste che hanno un livello QoS di 1 per supportare l'accodamento dei messaggi. Per accodare i messaggi inviati mentre un gateway gestito non è collegato, configura il dispositivo per non utilizzare le sessioni di pulitura impostando il parametro ``cleansession`` su false.
 
 **Avvertenza**
 
-Quando un gateway gestito utilizza una sottoscrizione durevole, i comandi di gestione del dispositivo che vengono inviati al gateway mentre è offline sono riportati come operazioni non riuscite se il gateway non si ricollega al servizio prima del timeout della richiesta. Quando il gateway si ricollega, queste richieste vengono elaborate dal gateway. Le sottoscrizioni durevoli sono specificate dal parametro `cleansession=false`.
+Quando un gateway gestito utilizza una sottoscrizione durevole, i comandi di gestione del dispositivo che vengono inviati al gateway mentre è offline sono riportati come operazioni non riuscite se il gateway non si ricollega al servizio prima del timeout della richiesta. Quando il gateway si ricollega, queste richieste vengono elaborate dal gateway. Le sottoscrizioni durevoli sono specificate dal parametro ``cleansession=false``.
 
-I gateway gestiscono la sessione MQTT, indipendentemente dai dispositivi in essa. Quando un dispositivo invia una richiesta di sottoscrizione a un gateway, la richiesta non viene inoltrata ad altri gateway anche se sono impostate le opzioni `cleansession=false`.
+I gateway gestiscono la sessione MQTT, indipendentemente dai dispositivi in essa. Quando un dispositivo invia una richiesta di sottoscrizione a un gateway, la richiesta non viene inoltrata ad altri gateway anche se è impostata l'opzione ``cleansession=false``.
 
 ### Argomenti
 {: #topics}
 
-Un gateway gestito deve sottoscriversi ai seguenti argomenti per gestire le richieste e le risposte da {{site.data.keyword.iot_short_notm}}:
+Un gateway gestito deve sottoscriversi ai seguenti argomenti per gestire le proprie richieste e risposte per e da {{site.data.keyword.iot_short_notm}}:
 
--   Il gateway gestito si sottoscrive alle risposte di gestione del dispositivo in:  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/+</pre>
-{: codeblock}
--   Il gateway gestito si sottoscrive alle richieste di gestione del dispositivo in:  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/+</pre>
+-   Il gateway gestito si sottoscrive alle proprie risposte e richiesti di gestione del dispositivo in:  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">gatewayTypeId</var>/id/<var class="keyword varname">gatewayDeviceId</var>/#</pre>
 {: codeblock}
 
-Un gateway pubblica le seguenti risposte e richieste:
+Un gateway gestito deve sottoscriversi ai seguenti argomenti per gestire le richieste e le risposte da {{site.data.keyword.iot_short_notm}} per i propri dispositivi collegati:
 
-- Le risposte di gestione del dispositivo sono pubblicate in:  
-<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/</pre>
+-   Il gateway gestito si sottoscrive alle richieste di gestione del dispositivo per i propri dispositivi collegati in:   
+<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/#</pre>
 {: codeblock}
-- Le richieste di gestione del dispositivo sono pubblicate in:  
+
+Il gateway può elaborare i messaggi del protocollo di gestione del dispositivo per se stesso o per conto dei dispositivi collegati utilizzando i valori **typeId** e **deviceId** rilevanti. Il carattere jolly MQTT **+** può anche essere utilizzato al posto di **typeId** e **deviceId**.
+
+Un gateway gestito pubblica in argomenti specificati dal tipo di richiesta di gestione che sta venendo eseguita: 
+
+- I gateway gestiti pubblicano le risposte di gestione dei dispositivi in:
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
+{: codeblock}
+
+Per gli altri argomenti che un gateway gestito può pubblicare, consulta [Protocollo di gestione dispositivo](device_mgmt/index.html) e [Richieste di gestione del dispositivo](../devices/device_mgmt/requests.html). 
+- Il protocollo rimane negli stessi gateway, con l'eccezione degli argomenti che iniziano con **iotdevice-1/** che invece inizieranno con:
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}
-
-Il gateway può elaborare i messaggi del protocollo di gestione del dispositivo per se stesso o per conto dei dispositivi collegati utilizzando i valori **typeId** e **deviceId** rilevanti.
 
 ### Formato del messaggio
 {: #msg_format}

@@ -310,7 +310,7 @@ Para procesar las actualizaciones de estado que han recibido las suscripciones, 
 |`status.connectTime`   |java.util.Date|
 |`status.port`|entero|
 
-Las siguientes propiedades sólo se establecen cuando el suceso de estado es `Desconectar`:
+Las siguientes propiedades sólo se establecen cuando el suceso de estado es ``Desconectar``:
 
 | Propiedad     |Tipos de datos     |
 |----------------|----------------|
@@ -346,7 +346,7 @@ El ejemplo de código siguiente proporciona una implementación de ejemplo del c
   }
 ```
 
-Cuando se añade el callback de estado al cliente de la aplicación, se invocará el método `processDeviceStatus()` siempre que un dispositivo que coincida con los criterios se conecte o se desconecte del {{site.data.keyword.iot_short_notm}}. El ejemplo de código siguiente muestra cómo se puede añadir la instancia de callback de estado al cliente de la aplicación:
+Cuando se añade el callback de estado al cliente de la aplicación, se invocará el método ``processDeviceStatus()`` siempre que un dispositivo que coincida con los criterios se conecte o se desconecte del {{site.data.keyword.iot_short_notm}}. El ejemplo de código siguiente muestra cómo se puede añadir la instancia de callback de estado al cliente de la aplicación:
 
 ```
 
@@ -361,7 +361,7 @@ Las aplicaciones pueden suscribirse a cualquier otro estado de aplicación, como
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-El método sobrecargado está disponible para controlar la suscripción de estado a una aplicación particular. El método `processApplicationStatus()` se invoca siempre que se conecta o se desconecta una aplicación que coincide con los criterios del {{site.data.keyword.iot_short_notm}}.
+El método sobrecargado está disponible para controlar la suscripción de estado a una aplicación particular. El método ``processApplicationStatus()`` se invoca siempre que se conecta o se desconecta una aplicación que coincide con los criterios del {{site.data.keyword.iot_short_notm}}.
 
 
 ## Publicación de sucesos desde dispositivos

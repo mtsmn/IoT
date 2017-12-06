@@ -34,7 +34,7 @@ Die Tabellen zeigen Zugriffsebenen für:
 
 Geräteoperationen ||| Anwendungsrollen||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Backend-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
+           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Back-End-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
 Geräte erstellen, aktualisieren oder löschen|X|X|X|-|-|-
 Geräte anzeigen|X|X|X|X|X|-
 Gerät aktivieren|X|X|X|-|-|-
@@ -55,14 +55,14 @@ Diagnoseprotokolle anzeigen|X|X|X|-|-|-
 
 Protokolloperationen ||| Anwendungsrollen||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Backend-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
+           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Back-End-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
 Serverprotokolle anzeigen|X|X|X|-|-|-
 
 ### Cacheoperationen {: #app-cache-ops}
 
 Cacheoperationen ||| Anwendungsrollen||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Backend-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
+           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Back-End-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
 Livedaten anzeigen (Ereigniscache)|X|X|X|X|X|X
 Livedaten verwalten (Ereigniscache)|X|X|X|X|X|X
 
@@ -70,7 +70,7 @@ Livedaten verwalten (Ereigniscache)|X|X|X|X|X|X
 
 Organisationsoperationen ||| Anwendungsrollen||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Backend-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
+           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Back-End-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
 Speicherparameter konfigurieren|-|-|-|-|-|-
 Authentifizierungsprovider konfigurieren|-|-|-|-|-|-
 Mailkonfiguration erstellen, anzeigen, aktualisieren oder löschen|-|-|-|-|-|-
@@ -89,16 +89,16 @@ ORG-Nutzungsinformationen anzeigen|X|X|-|-|-|-
 
 Zugriffssteuerungsoperationen ||| Anwendungsrollen||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Backend-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
+           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Back-End-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
 Benutzereigenschaften einschließlich Zugriffsrechte anzeigen|X|X|-|-|-|-
 Eigene Eigenschaften des Benutzers einschließlich Zugriffsrechte anzeigen|-|-|-|-|-|-
 Benutzer einschließlich Zugriffsrechte verwalten|-|X|-|-|-|-
-Eigenschaften des API-Schlüssel einschließlich Zugriffsrechte anzeigen|X|X|-|-|-|-
+Eigenschaften des API-Schlüssels einschließlich Zugriffsrechte anzeigen|X|X|-|-|-|-
 Eigene Eigenschaften des API-Schlüssels einschließlich Zugriffsrechte anzeigen|X|X|X|X|X|X
 API-Schlüssel einschließlich Zugriffsrechte erstellen, aktualisieren, löschen|-|X|-|-|-|-
 Geräteeigenschaften einschließlich Zugriffsrechte anzeigen|X|X|X|X|X|-
 Eigene Eigenschaften des Geräts einschließlich Zugriffsrechte anzeigen|-|-|-|-|-|-
-Geräte einschließlich Zugriffsrechte erstellen, aktualisiere, löschen|X|X|X|-|-|-
+Geräte einschließlich Zugriffsrechte erstellen, aktualisieren, löschen|X|X|X|-|-|-
 Rollen anzeigen|X|X|-|-|-|-
 Angepasste Rollen erstellen, aktualisieren, löschen|-|X|-|-|-|-
 Operationen anzeigen*|X|X|-|-|-|-
@@ -107,7 +107,7 @@ Operationen anzeigen*|X|X|-|-|-|-
 
 Analyseoperationen ||| Anwendungsrollen||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Backend-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
+           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Back-End-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
 Analyseregeln anzeigen|X|X|-|X|X|-
 Analyseregeln verwalten|X|X|-|X|-|-
 Analyseaktionen anzeigen|X|X|-|X|X|-
@@ -120,7 +120,7 @@ Nachrichtenschemas der Analyse verwalten|X|X|-|X|-|-
 
 Serviceoperationen von Drittanbietern ||| Anwendungsrollen||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Backend-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
+           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Back-End-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
 Stapelbenachrichtigungen von einer externen Plattform verarbeiten|X|X|-|-|-|-
 Stapelbenachrichtigungen verarbeiten und an eine externe Plattform senden|X|X|-|-|-|-
 Ereignis für ein Gerät publizieren|X|X|-|-|-|-

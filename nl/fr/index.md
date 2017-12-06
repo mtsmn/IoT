@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-03"
+lastupdated: "2017-06-16"
 
 ---
 
@@ -25,7 +25,13 @@ Avant de connecter des terminaux et d'utiliser des données, inscrivez-vous à u
 
 Pour obtenir des informations détaillées sur l'inscription à un compte {{site.data.keyword.Bluemix_notm}}, la configuration de régions et d'autres paramètres de gestion de compte, voir [Gestion de votre compte Bluemix](https://console.ng.bluemix.net/docs/admin/account.html#signup).
 
-Vous pouvez définir et configurer votre instance {{site.data.keyword.iot_short_notm}} à partir du tableau de bord. Pour ouvrir le tableau de bord, accédez à votre instance de service {{site.data.keyword.iot_short_notm}} dans {{site.data.keyword.Bluemix_notm}}, puis cliquez sur **Lancer le tableau de bord**.
+Vous pouvez définir et configurer votre instance {{site.data.keyword.iot_short_notm}} à partir du tableau de bord. Pour ouvrir le tableau de bord, accédez à votre instance de service {{site.data.keyword.iot_short_notm}} dans {{site.data.keyword.Bluemix_notm}}, puis cliquez sur **Lancer**.
+
+## A propos de cette tâche
+
+Les étapes ci-dessous expliquent comment vous familiariser rapidement avec votre service {{site.data.keyword.iot_short_notm}}.
+
+Un ensemble plus détaillé de guides d'initiation et d'exemples d'applications permettant de découvrir les bases du développement d'un prototype Iot de bout-en-bout prêt à être utilisé en production avec {{site.data.keyword.iot_short_notm}} est également disponible. Si vous êtes novice en développement sous {{site.data.keyword.iot_short_notm}}, utilisez les processus détaillés dans la section [Guides d'initiation](getting_started/getting-started-iot-overview.md).
 
 ## Etape 1 : Connecter vos terminaux
 {: #up_and_running}
@@ -34,8 +40,8 @@ Pour être rapidement opérationnel avec le service, examinez les options suivan
 
    |   Le service est déployé | Le service n'est pas déployé
   ------------- | -------------
-  **J'ai un terminal à connecter** | [Connectez votre terminal à {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explorez la connexion de terminal dans la [démonstration Play organization ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  **Je n'ai aucun terminal à connecter** | [Créer et connecter un simulateur de terminal Node-RED](nodereddevice_sample.html){:new_window} | Commencez à utiliser [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html).
+  **J'ai un terminal à connecter** | [Connectez votre terminal à {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Regardez la connexion de terminal dans la démonstration [Play organization demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
+  **Je n'ai aucun terminal à connecter** | [Créez et connectez un simulateur de terminal Node-RED](nodereddevice_sample.html){:new_window}. | Commencez à utiliser [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html).
 Pour plus d'informations sur la connexion de types de terminaux spécifiques à {{site.data.keyword.iot_short_notm}}, voir les [recettes developerWorks ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Pour la documentation du développeur de connexion de terminal, voir :

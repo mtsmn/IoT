@@ -35,7 +35,7 @@ Per aggiungere uno schema:
     **Suggerimento:** le proprietà disponibili sono definite nel payload dei messaggi inviati da un dispositivo. Per informazioni sul formato del payload {{site.data.keyword.iot_short}}, consulta l'argomento [Message payload](reference/mqtt/index.html#message-payloadl "Message payload.").   
   <dl>
   <dt>Aggiungi una proprietà manualmente</dt>
-  <p><b>Suggerimento:</b> per creare una struttura della proprietà nidificata, aggiungi prima una proprietà con il tipo di dati Prent. Nella tabella delle proprietà, puoi quindi fare clic su ![icona Add child.](images/add_child.png "Add child") per aggiungere una o più proprietà child.</p>
+  <p><b>Suggerimento:</b> per creare una struttura della proprietà nidificata, aggiungi prima una proprietà con il tipo di dati Prent. Nella tabella delle proprietà, puoi quindi fare clic su ![icona Aggiungi child.](images/add_child.png "Aggiungi child") per aggiungere una o più proprietà secondarie.</p>
   <dd>
   <ol>
     <li>Seleziona la scheda **Manual**.</li>

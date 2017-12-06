@@ -159,11 +159,7 @@ Eventos podem ser publicados em qualquer um dos três [níveis de qualidade de s
 ### Código para publicar eventos de gateway no nível de QoS padrão
 
 ```java
-gwClient.connect();
-  JsonObject event = new JsonObject();
-  event.addProperty("name", "foo");
-  event.addProperty("cpu",  90);
-  event.addProperty("mem",  70);
+gwClient.connect(); JsonObject event = new JsonObject(); event.addProperty("name", "foo"); event.addProperty("cpu", 90); event.addProperty("mem", 70);
 
 gwClient.publishGatewayEvent("status", event);
 ```
@@ -174,11 +170,7 @@ gwClient.publishGatewayEvent("status", event);
 
 
 ```java
-gwClient.connect();
-  JsonObject event = new JsonObject();
-  event.addProperty("name", "foo");
-  event.addProperty("cpu",  90);
-  event.addProperty("mem",  70);
+gwClient.connect(); JsonObject event = new JsonObject(); event.addProperty("name", "foo"); event.addProperty("cpu", 90); event.addProperty("mem", 70);
 
 gwClient.publishGatewayEvent("status", event, 2);
 ```

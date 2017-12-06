@@ -77,7 +77,7 @@ Dopo aver associato e configurato l'applicazione {{site.data.keyword.sdk4nodeful
 
 ### Configurazione di {{site.data.keyword.iot_short_notm}} per {{site.data.keyword.ssoshort}} utilizzando l'API
 
-Per configurare {{site.data.keyword.iot_short_notm}} per {{site.data.keyword.ssoshort}} utilizzando l'API, il metodo deve essere `POST`, l'URL deve essere `https://<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig` dove `<orgID>` è il tuo ID dell'organizzazione {{site.data.keyword.iot_short_notm}}. L'autorizzazione deve essere nessuna autenticazione o autenticazione di base utilizzando i tuoi token e ID della chiave API. Il corpo deve contenere i dati di configurazione `secret`, `clientId` e `issuerIdentifier` come JSON nel seguente formato:
+Per configurare {{site.data.keyword.iot_short_notm}} per {{site.data.keyword.ssoshort}} utilizzando l'API, il metodo deve essere `POST`, l'URL deve esere `https://<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig` dove `<orgID>` è il tuo ID dell'organizzazione {{site.data.keyword.iot_short_notm}}.L'autorizzazione deve essere nessuna autenticazione o autenticazione di base utilizzando i tuoi token e ID della chiave API. Il corpo deve contenere i dati di configurazione `secret`, `clientId` e `issuerIdentifier` come JSON nel seguente formato:
 ```
 {
  "secret": "myclientpwd",

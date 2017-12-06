@@ -42,7 +42,7 @@ Publicar un suceso|X|X
 Suscribirse a un suceso|-|-
 Publicar un mandato|-|-
 Suscribirse a un mandato|X|X
-Iniciar acción de gestión de dispositivos|X|X
+Iniciar la acción de gestión de dispositivo|X|X
 Ver acciones de gestión de dispositivos|X|X
 Borrar acciones de gestión de dispositivos|-|-
 Gestionar paquetes de acción de gestión de dispositivos|-|X
@@ -115,15 +115,15 @@ Ver acciones analíticas|-|-
 Gestionar acciones analíticas|-|-
 Ver alertas analíticas|-|-
 Ver esquemas de mensajes analíticos|-|-
-Gestionar esquemas de mensajes analíticos|-|-
+Gestionar esquemas de mensaje analítico|-|-
 
 ### Operaciones de servicios de terceros {: #gateway-third-party}
 
 Operaciones de servicios de terceros || Roles de pasarela|
 :--------: | ---------------------|------------------------
            | **Pasarela estándar** | **Pasarela privilegiada**
-Procesar notificaciones por lotes desde la plataforma externa|-|-
-Procesar notificaciones por lotes y enviarlas a la plataforma externa|-|-
+Procesar notificaciones por lotes desde una plataforma externa|-|-
+Procesar notificaciones por lotes y enviarlas a una plataforma externa|-|-
 Publicar un suceso para un dispositivo|-|-
 Suscribirse a sucesos desde un dispositivo|-|-
 Establecer un URL de devolución de llamada para la plataforma externa|-|-

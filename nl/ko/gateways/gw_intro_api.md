@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -13,10 +13,8 @@ lastupdated: "2017-05-24"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 게이트웨이 디바이스용 HTTP Messaging API(베타)
+# 게이트웨이 디바이스용 HTTP 메시징 API
 {: #api}
-
-**중요:** 게이트웨이 디바이스용 {{site.data.keyword.iot_full}} HTTP API 기능은 제한된 베타 프로그램의 일부로서만 사용 가능합니다. 향후 업데이트에는 이 기능의 현재 버전과 호환 가능한 변경사항이 포함될 수 있습니다. 시도해 보고 [의견을 보내주십시오. ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}
 
 ## 게이트웨이 디바이스용 HTTP Messaging API 문서에 액세스
 {: #rest_messaging_api}
@@ -35,7 +33,7 @@ lastupdated: "2017-05-24"
 
 MQTT 메시징 프로토콜 외에도 HTTP 메시징 API 명령을 사용하여 {{site.data.keyword.iot_short_notm}}에 HTTP를 통해 이벤트를 공개하도록 게이트웨이 디바이스를 구성할 수도 있습니다. 
 
-{{site.data.keyword.iot_short_notm}}에 연결되어 있는 디바이스에서 `POST` 요청을 제출하려면 다음 URL 중 하나를 사용하십시오. 
+{{site.data.keyword.iot_short_notm}}에 연결되어 있는 디바이스에서 ``POST`` 요청을 제출하려면 다음 URL 중 하나를 사용하십시오. 
 
 ### 비보안 POST 요청
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
@@ -60,7 +58,7 @@ MQTT 메시징 프로토콜 외에도 HTTP 메시징 API 명령을 사용하여 
 |사용자 이름| `g/{orgId}/{gwType}/{gwDevId}` 또는 `g-{orgId}-{gwType}-{gwDevId}`
 |비밀번호| 게이트웨이 디바이스를 등록할 때 수동으로 지정했거나 자동으로 생성된 인증 토큰입니다.
 
-여기서,
+여기서, 
 
 <dl>
 <dt>orgId</dt>  
@@ -78,13 +76,13 @@ MQTT 메시징 프로토콜 외에도 HTTP 메시징 API 명령을 사용하여 
 
 ### Content-Type 요청 헤더
 
-`Content-Type` 요청 헤더는 요청과 함께 제공되어야 합니다. 다음 표에서는 지원되는 유형이 {{site.data.keyword.iot_short_notm}} 내부 형식에 맵핑되는 방법을 보여줍니다. 
+컨텐츠가 JSON이 아닌 경우 `Content-Type` 요청 헤더는 요청과 함께 제공되어야 합니다. 다음 표에서는 지원되는 유형이 {{site.data.keyword.iot_short_notm}} 내부 형식에 맵핑되는 방법을 보여줍니다. 
 
 |Content-Type 헤더|{{site.data.keyword.iot_short_notm}}의 형식|
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml | "xml"
+|application/xml| "xml"
 |application/octet-stream|"bin"
 
 ### 서비스 품질(QoS)
@@ -100,7 +98,7 @@ API를 사용하여 게이트웨이 디바이스를 관리하는 데 대한 자�
 
 MQTT 메시징 프로토콜 사용 외에도 HTTP 메시징 API 명령을 사용하여 HTTP를 통해 {{site.data.keyword.iot_short_notm}}에서 이벤트를 명령을 수신하도록 게이트웨이 디바이스를 구성할 수도 있습니다. 게이트웨이 디바이스는 연관된 리소스 그룹 내의 디바이스에 전달되는 명령을 수신할 수 있습니다. 게이트웨이 리소스 그룹에 대한 자세한 정보는 [게이트웨이 액세스 제어(베타)](../gateways/gateway-access-control.html)를 참조하십시오. 
 
-다음 URL 중 하나를 사용하여 {{site.data.keyword.iot_short_notm}}에 연결된 게이트웨이에서 `POST` 요청을 제출하십시오. 
+다음 URL 중 하나를 사용하여 {{site.data.keyword.iot_short_notm}}에 연결된 게이트웨이에서 ``POST`` 요청을 제출하십시오. 
 
 ### 비보안 POST 요청
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>

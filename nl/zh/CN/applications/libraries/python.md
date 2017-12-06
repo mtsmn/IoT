@@ -33,7 +33,8 @@ lastupdated: "2017-04-04"
 
 使用选项字典可创建用于与 {{site.data.keyword.iot_short_notm}} 模块进行交互的定义。构造方法用于构建客户机实例，并接受包含以下定义的选项字典：
 
-|定义|描述 |
+|定义|描述
+|
 |:-----|:-----|
 |`orgId`|组织标识。|
 |`appId`|组织中应用程序的唯一标识。|
@@ -102,9 +103,9 @@ API 客户机中的每个方法对应于以下任一项：
 
 |属性|描述|
 |:---|:---|
-|`httpcode`|HTTP 状态码。|
-|`message`|异常消息，其中包含失败的原因。|
-|`response`|包含部分响应的 JSON 元素。如果不存在任何响应，此值设置为空。|
+|``httpcode``|HTTP 状态码。|
+|``message``|异常消息，其中包含失败的原因。|
+|``response``|包含部分响应的 JSON 元素。如果不存在任何响应，此值设置为空。|
 
 ## 预订设备事件
 {: #subscribe_device_events}
@@ -191,13 +192,13 @@ client.subscribeToDeviceEvents(deviceType=myDeviceType, deviceId=myDeviceId, msg
 
 |属性|数据类型|描述|
 |:---|:---|
-|`event.device`|字符串|在组织内所有类型的设备中作为该设备的唯一标识。|
-|`event.deviceType`|字符串|标识设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
-|`event.deviceId`|字符串|表示设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
-|`event.event`|字符串|通常用于对特定事件分组，例如“status”、“warning”和“data”。
-|`event.format`|字符串|格式可以为任意字符串，例如 JSON。
-|`event.data`|字典|消息有效内容的数据。最大长度为 131072 字节。
-|`event.timestamp`|日期和时间|事件的日期和时间|
+|``event.device``|字符串|在组织内所有类型的设备中作为该设备的唯一标识。|
+|``event.deviceType``|字符串|标识设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
+|``event.deviceId``|字符串|表示设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
+|``event.event``|字符串|通常用于对特定事件分组，例如“status”、“warning”和“data”。
+|``event.format``|字符串|格式可以为任意字符串，例如 JSON。
+|``event.data``|字典|消息有效内容的数据。最大长度为 131072 字节。
+|``event.timestamp``|日期和时间|事件的日期和时间|
 
 ```python
 
@@ -273,31 +274,31 @@ client.subscribeToDeviceStatus(deviceType=myOtherDeviceType, deviceId=myOtherDev
 
 要处理预订接收到的状态更新，需要注册事件回调方法。消息将作为 Status 类的实例返回。
 
-有两种类型的状态事件：`Connect` 事件和 `Disconnect` 事件。所有状态事件都包含以下属性：
+有两种类型的状态事件：``Connect`` 事件和 ``Disconnect`` 事件。所有状态事件都包含以下属性：
 
 |属性|数据类型|
 |:---|:---|
-|`status.clientAddr`|字符串|
-|`status.protocol`|字符串|
-|`status.clientId`|字符串|
-|`status.user`|字符串|
-|`status.time`|日期和时间|
-|`status.action`|字符串|
-|`status.connectTime`|日期和时间|
-|`status.port`|整数|
+|``status.clientAddr``|字符串|
+|``status.protocol``|字符串|
+|``status.clientId``|字符串|
+|``status.user``|字符串|
+|``status.time``|日期和时间|
+|``status.action``|字符串|
+|``status.connectTime``|日期和时间|
+|``status.port``|整数|
 
 
-`status.action` 属性确定状态事件的类型是 `Connect` 还是 `Disconnect`。
+``status.action`` 属性确定状态事件的类型是 ``Connect`` 还是 ``Disconnect``。
 
-`Disconnect` 状态事件包含以下额外的属性：
+``Disconnect`` 状态事件包含以下额外的属性：
 
 |属性|数据类型|
 |:---|:---|
-|`status.writeMsg`|整数|
-|`status.readMsg`|整数|
-|`status.reason`|字符串|
-|`status.readBytes`|整数|
-|`status.writeBytes`|整数|
+|``status.writeMsg``|整数|
+|``status.readMsg``|整数|
+|``status.reason``|字符串|
+|``status.readBytes``|整数|
+|``status.writeBytes``|整数|
 
 ```python
 
@@ -360,7 +361,7 @@ client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", commandData)
 ## 组织详细信息
 {: #org_details}
 
-应用程序可以使用 `getOrganizationDetails()` 方法来检索有关组织配置的详细信息。
+应用程序可以使用 ``getOrganizationDetails()`` 方法来检索有关组织配置的详细信息。
 
 ```python
 
@@ -388,9 +389,9 @@ except IoTFCReSTException as e:
 
 ### 检索设备信息
 
-批量设备信息可以使用 `getAllDevices()` 方法进行检索。此方法会检索有关组织中所有已注册设备的信息。每个请求最多可以包含 512 KB。
+批量设备信息可以使用 ``getAllDevices()`` 方法进行检索。此方法会检索有关组织中所有已注册设备的信息。每个请求最多可以包含 512 KB。
 
-响应包含应用程序需要的参数。使用来自响应的字典结果可获取返回的设备数组。响应中的其他参数对于进行更多调用是必需的，例如，`_bookmark` 元素可用于逐页浏览结果。在不指定书签的情况下提交第一个请求，然后获取响应中返回的书签，并在下一页的请求上提供该书签。重复此过程直到结果集末尾，没有书签即指示到达了末尾。每个请求必须对其他参数使用相同的值，否则结果将为“未定义”。
+响应包含应用程序需要的参数。使用来自响应的字典结果可获取返回的设备数组。响应中的其他参数对于进行更多调用是必需的，例如，``_bookmark`` 元素可用于逐页浏览结果。在不指定书签的情况下提交第一个请求，然后获取响应中返回的书签，并在下一页的请求上提供该书签。重复此过程直到结果集末尾，没有书签即指示到达了末尾。每个请求必须对其他参数使用相同的值，否则结果将为“未定义”。
 
 
 ```python
@@ -408,7 +409,7 @@ except IoTFCReSTException as e:
 ### 添加多台设备
 
 
-使用 `addMultipleDevices()` 方法可向 {{site.data.keyword.iot_short_notm}} 组织添加一台或多台设备。请求不能大于 512 KB。响应包含为每台设备生成的认证令牌。请确保生成认证令牌的副本，因为如果认证令牌丢失，将无法取回这些令牌。
+使用 ``addMultipleDevices()`` 方法可向 {{site.data.keyword.iot_short_notm}} 组织添加一台或多台设备。请求不能大于 512 KB。响应包含为每台设备生成的认证令牌。请确保生成认证令牌的副本，因为如果认证令牌丢失，将无法取回这些令牌。
 
 
 ```python
@@ -432,7 +433,7 @@ except IoTFCReSTException as e:
 ### 删除多台设备
 
 
-使用 `deleteMultipleDevices()` 方法可从 {{site.data.keyword.iot_short_notm}} 组织中删除多台设备。请求不能大于 512 KB。
+使用 ``deleteMultipleDevices()`` 方法可从 {{site.data.keyword.iot_short_notm}} 组织中删除多台设备。请求不能大于 512 KB。
 
 ```python
 
@@ -463,8 +464,8 @@ except IoTFCReSTException as e:
 
 ### 检索所有设备类型
 
-使用 `getAllDeviceTypes()` 方法可检索位于 {{site.data.keyword.iot_short_notm}} 组织中的所有设备类型。
-使用来自响应的字典结果可获取返回的设备数组。响应中的其他参数对于进行更多调用是必需的，例如，`_bookmark` 元素可用于逐页浏览结果。在不指定书签的情况下提交第一个请求，然后获取响应中返回的书签，并在下一页的请求上提供该书签。重复此过程直到结果集末尾，没有书签即指示到达了末尾。每个请求必须对其他参数使用相同的值，否则结果将为“未定义”。
+使用 ``getAllDeviceTypes()`` 方法可检索位于 {{site.data.keyword.iot_short_notm}} 组织中的所有设备类型。
+使用来自响应的字典结果可获取返回的设备数组。响应中的其他参数对于进行更多调用是必需的，例如，``_bookmark`` 元素可用于逐页浏览结果。在不指定书签的情况下提交第一个请求，然后获取响应中返回的书签，并在下一页的请求上提供该书签。重复此过程直到结果集末尾，没有书签即指示到达了末尾。每个请求必须对其他参数使用相同的值，否则结果将为“未定义”。
 
 ```python
 
@@ -488,7 +489,7 @@ except IoTFCReSTException as e:
 
 ### 添加设备类型
 
-使用 `addDeviceType()` 方法可向 {{site.data.keyword.iot_short_notm}} 实例注册设备类型。在每个请求中，必须首先定义要应用于此类型的所有设备的设备信息和设备元数据元素。设备信息元素由多个变量组成，变量包括序列号、制造商、型号、类、描述、固件、硬件版本和描述性位置。元数据元素由定制变量和值组成，这些变量和值可以由用户进行定义。
+使用 ``addDeviceType()`` 方法可向 {{site.data.keyword.iot_short_notm}} 实例注册设备类型。在每个请求中，必须首先定义要应用于此类型的所有设备的设备信息和设备元数据元素。设备信息元素由多个变量组成，变量包括序列号、制造商、型号、类、描述、固件、硬件版本和描述性位置。元数据元素由定制变量和值组成，这些变量和值可以由用户进行定义。
 
 
 ```python
@@ -522,7 +523,7 @@ except IoTFCReSTException as e:
 ### 删除设备类型
 
 
-使用 `deleteDeviceType()` 方法可从 {{site.data.keyword.iot_short_notm}} 组织中删除设备类型。
+使用 ``deleteDeviceType()`` 方法可从 {{site.data.keyword.iot_short_notm}} 组织中删除设备类型。
 
 ```python
 
@@ -540,7 +541,7 @@ except IoTFCReSTException as e:
 ### 检索特定设备类型的信息
 
 
-使用 `getDeviceType()` 方法可检索特定设备类型的信息。要检索的设备类型的 `typeId` 必须指定为参数。
+使用 ``getDeviceType()`` 方法可检索特定设备类型的信息。要检索的设备类型的 ``typeId`` 必须指定为参数。
 
 ```python
 
@@ -558,11 +559,11 @@ except IoTFCReSTException as e:
 ### 更新设备类型
 
 
-使用 `updateDeviceType()` 方法可修改设备类型的属性。使用 `updateDeviceType()` 方法时，请先指定要更新的设备类型的 `typeId`，然后指定以下元素：
+使用 ``updateDeviceType()`` 方法可修改设备类型的属性。使用 ``updateDeviceType()`` 方法时，请先指定要更新的设备类型的 ``typeId``，然后指定以下元素：
 
-- `描述`
-- `deviceInfo`
-- `metadata`
+- ``描述``
+- ``deviceInfo``
+- ``metadata``
 
 ```python
 
@@ -604,12 +605,12 @@ except IoTFCReSTException as e:
 
 ### 检索特定设备类型的设备
 
-使用 `retrieveDevices()` 方法可在 {{site.data.keyword.iot_short_notm}} 实例的组织中检索特定设备类型的所有设备，如以下示例中所示：
+使用 ``retrieveDevices()`` 方法可在 {{site.data.keyword.iot_short_notm}} 实例的组织中检索特定设备类型的所有设备，如以下示例中所示：
 
 
 ```python
 
-   print("\nRetrieving All existing devices")
+print("\nRetrieving All existing devices")
    print("Retrieved Devices = ", apiCli.retrieveDevices(deviceTypeId))
 ```
 
@@ -626,20 +627,20 @@ response = apiClient.retrieveDevices("iotsample-arduino", parameters);
 ### 添加设备
 
 
-要向 {{site.data.keyword.iot_short_notm}} 组织添加设备，请使用 `registerDevice()` 方法。`registerDevice()` 方法可向 {{site.data.keyword.iot_short_notm}} 组织添加单个设备。添加设备时，可以指定以下参数：
+要向 {{site.data.keyword.iot_short_notm}} 组织添加设备，请使用 ``registerDevice()`` 方法。``registerDevice()`` 方法可向 {{site.data.keyword.iot_short_notm}} 组织添加单个设备。添加设备时，可以指定以下参数：
 
 |参数|要求|描述
 |:---|:---|
-|`deviceTypeId`|可选|为设备指定设备类型。如果设备类型定义的变量与 `deviceInfo` 变量定义的变量之间存在冲突，那么特定于设备的变量优先。|
-|`deviceId`|必需||
-|`authToken`|可选|如果未提供，将生成认证令牌并包含在响应中。|
-|`deviceInfo`|可选|包含多个变量，其中包括 serialNumber、manufacturer、model、deviceClass、description、descriptiveLocation、firmware 和 hardware versions。|
-|`metadata`|可选|定制字段值字符串对，如[用于添加设备类型的样本代码](#sample_device_type)中所示。|
-|`location`|可选|包含 longitude、latitude、elevation、accuracy 和 measuredDateTime 变量。|
+|``deviceTypeId``|可选|为设备指定设备类型。如果设备类型定义的变量与 ``deviceInfo`` 变量定义的变量之间存在冲突，那么特定于设备的变量优先。|
+|``deviceId``|必需||
+|``authToken``|可选|如果未提供，将生成认证令牌并包含在响应中。|
+|``deviceInfo``|可选|包含多个变量，其中包括 serialNumber、manufacturer、model、deviceClass、description、descriptiveLocation、firmware 和 hardware versions。|
+|``metadata``|可选|定制字段值字符串对，如[用于添加设备类型的样本代码](#sample_device_type)中所示。|
+|``location``|可选|包含 longitude、latitude、elevation、accuracy 和 measuredDateTime 变量。|
 
 有关这些参数以及响应格式和代码的更多信息，请参阅 [API文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices){: new_window}。
 
-使用 `registerDevice()` 方法时，请定义需要用于设备的必需 deviceID 参数和可选参数，然后使用所选参数来调用此方法。
+使用 ``registerDevice()`` 方法时，请定义需要用于设备的必需 deviceID 参数和可选参数，然后使用所选参数来调用此方法。
 
 ### 用于添加设备类型的样本代码
 {: #sample_device_type}
@@ -658,7 +659,7 @@ apiCli.registerDevice(deviceTypeId, deviceId, metadata, deviceInfo, location)
 ```
 ### 删除设备
 
-使用 `deleteDevice()` 方法可从 {{site.data.keyword.iot_short_notm}} 上的某个组织中除去设备。使用 `deleteDevice()` 方法删除设备时，必须指定 deviceTypeId 和 deviceId 参数。
+使用 ``deleteDevice()`` 方法可从 {{site.data.keyword.iot_short_notm}} 上的某个组织中除去设备。使用 ``deleteDevice()`` 方法删除设备时，必须指定 deviceTypeId 和 deviceId 参数。
 
 以下代码样本概述了此方法所需的格式：
 
@@ -668,7 +669,7 @@ apiCli.deleteDevice(deviceTypeId, deviceId)
 
 ### 获取设备
 
-使用 `getDevice()` 方法可在 {{site.data.keyword.iot_short_notm}} 上的组织中检索设备。使用 `getDevice()` 方法检索设备详细信息时，必须指定 deviceTypeId 和 deviceId 参数。
+使用 ``getDevice()`` 方法可在 {{site.data.keyword.iot_short_notm}} 上的组织中检索设备。使用 ``getDevice()`` 方法检索设备详细信息时，必须指定 deviceTypeId 和 deviceId 参数。
 
 以下代码样本概述了此方法所需的格式。
 
@@ -678,7 +679,7 @@ apiCli.getDevice(deviceTypeId, deviceId)
 
 ### 检索所有设备
 
-使用 `getAllDevices()` 方法可在 {{site.data.keyword.iot_short_notm}} 上的组织中检索所有设备。
+使用 ``getAllDevices()`` 方法可在 {{site.data.keyword.iot_short_notm}} 上的组织中检索所有设备。
 
 ```python
 apiCli.getAllDevices({'typeId' : deviceTypeId})
@@ -686,9 +687,9 @@ apiCli.getAllDevices({'typeId' : deviceTypeId})
 
 ### 更新设备
 
-要修改设备的一个或多个属性，请使用 `updateDevice()` 方法。
+要修改设备的一个或多个属性，请使用 ``updateDevice()`` 方法。
 
-可以更新 deviceInfo 或 metadata 参数中的任何属性。要更新设备属性，请在调用 `updateDevice()` 方法之前，先定义 deviceInfo 参数。status 参数必须包含 `alert`: True。alert 属性控制设备是否在 {{site.data.keyword.iot_short_notm}} 用户界面中显示错误代码，并且缺省情况下必须设置为 `enabled`: True，如以下代码示例中所示：
+可以更新 deviceInfo 或 metadata 参数中的任何属性。要更新设备属性，请在调用 ``updateDevice()`` 方法之前，先定义 deviceInfo 参数。status 参数必须包含 ``alert``: True。alert 属性控制设备是否在 {{site.data.keyword.iot_short_notm}} 用户界面中显示错误代码，并且缺省情况下必须设置为 ``enabled``: True，如以下代码示例中所示：
 
 ```python
 status = { "alert": { "enabled": True }  }
@@ -708,7 +709,7 @@ apiCli.updateDevice("MyDeviceType", "200020002000", deviceInfo, status)
 ### 检索位置信息
 
 
-使用 `getDeviceLocation()` 方法可检索设备的位置信息。检索位置数据所必需的参数是 deviceTypeId 和 deviceId。
+使用 ``getDeviceLocation()`` 方法可检索设备的位置信息。检索位置数据所必需的参数是 deviceTypeId 和 deviceId。
 
 ```python
 apiClient.getDeviceLocation("iotsample-arduino", "arduino01")
@@ -719,7 +720,7 @@ apiClient.getDeviceLocation("iotsample-arduino", "arduino01")
 ### 更新位置信息
 
 
-使用 `updateDeviceLocation()` 方法可修改设备的位置信息。与更新设备属性一样，deviceLocation 参数也必须通过要应用的更改进行定义。以下代码样本演示了更改特定设备的位置数据：
+使用 ``updateDeviceLocation()`` 方法可修改设备的位置信息。与更新设备属性一样，deviceLocation 参数也必须通过要应用的更改进行定义。以下代码样本演示了更改特定设备的位置数据：
 
 ```python
 deviceLocation = { "longitude": 0, "latitude": 0, "elevation": 0, "accuracy": 0, "measuredDateTime": "2015-10-28T08:45:11.673Z"}
@@ -732,7 +733,7 @@ apiCli.updateDeviceLocation(deviceTypeId, deviceId, deviceLocation)
 ### 获取管理信息
 
 
-使用 `getDeviceManagementInformation()` 方法可获取设备的设备管理信息。响应包含上次活动日期/时间、设备的休眠状态 (True/False)、对设备和固件操作的支持以及固件数据。有关综合的响应内容列表，请参阅相关的 API 文档。
+使用 ``getDeviceManagementInformation()`` 方法可获取设备的设备管理信息。响应包含上次活动日期/时间、设备的休眠状态 (True/False)、对设备和固件操作的支持以及固件数据。有关综合的响应内容列表，请参阅相关的 API 文档。
 
 以下代码样本将返回 deviceId 设置为“00aabbccde03”且 deviceTypeId 设置为“iotsample-arduino”的设备的设备管理信息。
 
@@ -757,7 +758,7 @@ apiCli.getDeviceManagementInformation("iotsample-arduino", "00aabbccde03")
 ### 获取诊断日志
 
 
-使用 `getAllDiagnosticLogs()` 方法可检索特定设备的所有诊断日志。`getAllDiagnosticLogs()` 方法需要 deviceTypeId 和 deviceId 参数。
+使用 ``getAllDiagnosticLogs()`` 方法可检索特定设备的所有诊断日志。``getAllDiagnosticLogs()`` 方法需要 deviceTypeId 和 deviceId 参数。
 
 ```python
 apiCli.getAllDiagnosticLogs(deviceTypeId, deviceId)
@@ -768,7 +769,7 @@ apiCli.getAllDiagnosticLogs(deviceTypeId, deviceId)
 ### 清除设备的诊断日志
 
 
-使用 `clearAllDiagnosticLogs()` 方法可删除特定设备的所有诊断日志。必需参数为 deviceTypeId 和 deviceId。删除日志文件时请谨慎，因为日志文件一旦删除后即无法恢复。
+使用 ``clearAllDiagnosticLogs()`` 方法可删除特定设备的所有诊断日志。必需参数为 deviceTypeId 和 deviceId。删除日志文件时请谨慎，因为日志文件一旦删除后即无法恢复。
 
 ```python
 apiCli.clearAllDiagnosticLogs(deviceTypeId, deviceId)
@@ -777,20 +778,20 @@ apiCli.clearAllDiagnosticLogs(deviceTypeId, deviceId)
 ### 添加诊断日志
 
 
-使用 `addDiagnosticLog()` 方法可在设备的诊断日志中添加条目。添加新条目时，可以修剪日志。如果未提供日期，那么会将当前日期和时间添加到该条目。要使用此方法，您需要使用以下变量来定义“logs”参数：
+使用 ``addDiagnosticLog()`` 方法可在设备的诊断日志中添加条目。添加新条目时，可以修剪日志。如果未提供日期，那么会将当前日期和时间添加到该条目。要使用此方法，您需要使用以下变量来定义“logs”参数：
 
 
 |变量|要求|描述|
 |:---|:---|:---|
-|`message`|必需|包含要添加的诊断消息|
-|`severity`|可选|对应于诊断日志的严重性，可以设置为 0、1 或 2，分别对应于参考、警告和错误类别|
-|`data`|可选|包含诊断数据|
-|`timestamp`|可选|包含 ISO8601 格式的日志条目日期和时间，但如果未指定，那么将使用当前日期和时间|
+|``message``|必需|包含要添加的诊断消息|
+|``severity``|可选|对应于诊断日志的严重性，可以设置为 0、1 或 2，分别对应于参考、警告和错误类别|
+|``data``|可选|包含诊断数据|
+|``timestamp``|可选|包含 ISO8601 格式的日志条目日期和时间，但如果未指定，那么将使用当前日期和时间|
 
 
 此方法中必需的其他参数为设备的 deviceTypeId 和 deviceId 值。
 
-以下代码样本包含 `addDiagnosticLog()` 方法的示例：
+以下代码样本包含 ``addDiagnosticLog()`` 方法的示例：
 
 ```python
 logs = { "message": "MessageContent", "severity": 0, "data": "LogData"}
@@ -800,7 +801,7 @@ apiCli.addDiagnosticLog(deviceTypeId, deviceId, logs)
 ### 检索特定诊断日志
 
 
-使用 `getDiagnosticLog()` 方法可基于日志标识来检索指定设备的特定诊断日志。此方法的必需参数为 deviceTypeId、deviceId 和 logId。
+使用 ``getDiagnosticLog()`` 方法可基于日志标识来检索指定设备的特定诊断日志。此方法的必需参数为 deviceTypeId、deviceId 和 logId。
 
 ```python
 apiCli.getDiagnosticLog(deviceTypeId, deviceId, logId)
@@ -809,7 +810,7 @@ apiCli.getDiagnosticLog(deviceTypeId, deviceId, logId)
 ### 删除诊断日志
 
 
-使用 `deleteDiagnosticLog()` 方法可删除特定诊断日志。要指定诊断日志，必须提供 deviceTypeId、deviceId 和 logID 参数。
+使用 ``deleteDiagnosticLog()`` 方法可删除特定诊断日志。要指定诊断日志，必须提供 deviceTypeId、deviceId 和 logID 参数。
 
 ```python
 apiCli.deleteDiagnosticLog(deviceTypeId, deviceId, logId)
@@ -818,7 +819,7 @@ apiCli.deleteDiagnosticLog(deviceTypeId, deviceId, logId)
 ### 检索设备错误代码
 
 
-使用 `getAllDiagnosticErrorCodes()` 方法可检索与特定设备关联的所有诊断错误代码。
+使用 ``getAllDiagnosticErrorCodes()`` 方法可检索与特定设备关联的所有诊断错误代码。
 
 ```python
 apiCli.getAllDiagnosticErrorCodes(deviceTypeId, deviceId)
@@ -827,7 +828,7 @@ apiCli.getAllDiagnosticErrorCodes(deviceTypeId, deviceId)
 ### 清除诊断错误代码
 
 
-使用 `clearAllErrorCodes()` 方法可清除与设备关联的错误代码的列表。该列表将替换为单个错误代码 0。
+使用 ``clearAllErrorCodes()`` 方法可清除与设备关联的错误代码的列表。该列表将替换为单个错误代码 0。
 
 ```python
 apiCli.clearAllErrorCodes(deviceTypeId, deviceId)
@@ -836,7 +837,7 @@ apiCli.clearAllErrorCodes(deviceTypeId, deviceId)
 ### 添加单个诊断错误代码
 
 
-使用 `addErrorCode()` 方法可向与设备关联的错误代码的列表添加错误代码。添加新条目时，可以修剪该列表。此方法中的必需参数为 deviceTypeId、deviceId 和 errorCode。errorCode 参数包含以下变量：
+使用 ``addErrorCode()`` 方法可向与设备关联的错误代码的列表添加错误代码。添加新条目时，可以修剪该列表。此方法中的必需参数为 deviceTypeId、deviceId 和 errorCode。errorCode 参数包含以下变量：
 
 - errorCode：此变量为必需变量，应设置为整数。此变量设置创建的错误代码的编号。
 - timestamp：此变量是可选的，包含 ISO8601 格式的日志条目日期和时间。如果未包含此变量，会自动使用当前日期和时间进行添加。
@@ -849,7 +850,7 @@ apiCli.addErrorCode(deviceTypeId, deviceId, errorCode)
 ## 连接问题确定
 {: #connection_problem_determination}
 
-使用 `getDeviceConnectionLogs()` 方法可列出设备的连接日志事件。连接日志事件可用于帮助诊断设备与 {{site.data.keyword.iot_short_notm}} 服务之间的连接问题。这些条目会记录成功连接、失败连接尝试次数、有意断开连接和服务器发出的断开连接事件。
+使用 ``getDeviceConnectionLogs()`` 方法可列出设备的连接日志事件。连接日志事件可用于帮助诊断设备与 {{site.data.keyword.iot_short_notm}} 服务之间的连接问题。这些条目会记录成功连接、失败连接尝试次数、有意断开连接和服务器发出的断开连接事件。
 
 ```
 apiCli.getDeviceConnectionLogs(deviceTypeId, deviceId)

@@ -26,7 +26,7 @@ lastupdated: "2017-03-14"
 ## 종속 항목
 {: #dependencies}
 
-|종속 항목 |설명 |
+|종속 항목|설명 |
 |:---|:---|
 |[Eclipse Paho MQTT 라이브러리 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.mbed.org/teams/mqtt/code/MQTT/){: new_window}|mBed 디바이스의 MQTT 클라이언트 라이브러리를 제공합니다. 자세한 정보는 [임베디드 MQTT C/C++ 클라이언트 라이브러리 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}|
 |[EthernetInterface 라이브러리 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/){: new_window}|이더넷을 통한 mBed IP 라이브러리.|
@@ -45,9 +45,9 @@ ARM mBed NXP LPC 1768 마이크로 컨트롤러를 {{site.data.keyword.iot_short
 
 생성자가 클라이언트 인스턴스를 빌드하고 다음 매개변수를 승인합니다.
 
-|매개변수 |설명  |
+|매개변수 |설명 |
 |:---|:---|
-|`org` |조직 ID입니다. 이 값은 필수입니다. Quickstart 플로우를 사용 중인 경우 `quickstart`를 지정하십시오.|
+|`org` |조직 ID입니다. 이 값은 필수입니다. Quickstart 플로우를 사용 중인 경우 `quickstart`를 지정하십시오. |
 |`type`   |디바이스 유형입니다. 이 필드는 필수입니다. |
 |`id`   |디바이스 ID입니다. 이 필드는 필수입니다. |
 |`auth-method`   |등록된 플로우에만 필요한 선택적 필드인 인증 메소드입니다. 현재 지원되는 값은 `token`입니다.|
@@ -133,7 +133,7 @@ ARM mBed NXP LPC 1768 마이크로 컨트롤러를 {{site.data.keyword.iot_short
 ## 이벤트 공개
 {: #publishing_events}
 
-이벤트는 디바이스가 {{site.data.keyword.iot_short_notm}}에 데이터를 공개하는 데 사용하는 메커니즘입니다. 디바이스에서 이벤트의 컨텐츠를 제어하고 전송하는 각 이벤트의 이름을 지정합니다.
+이벤트는 디바이스가 {{site.data.keyword.iot_short_notm}}에 데이터를 공개하는 데 사용하는 메커니즘입니다. 디바이스에서 이벤트의 컨텐츠를 제어하고 전송하는 각 이벤트의 이름을 지정합니다. 
 
 {{site.data.keyword.iot_short_notm}} 인스턴스에서 이벤트를 수신할 때 수신된 이벤트의 신임 정보는 전송 중인 디바이스를 식별하며, 이는 디바이스가 다른 디바이스로 위장할 수 없음을 의미합니다. 
 
@@ -217,10 +217,10 @@ ARM mBed NXP LPC 1768 마이크로 컨트롤러를 {{site.data.keyword.iot_short
 디바이스 클라이언트가 연결되면 이 디바이스에 대한 명령을 자동으로 구독합니다. 특정 명령을 처리하려면 명령 콜백 메소드를 등록해야 합니다.
 메시지는 명령 클래스의 인스턴스로 리턴되며, 다음과 같은 특성이 있습니다.
 
-|특성 |설명 |
+|특성 |설명|
 |:---|:---|
 |`command` | 호출된 명령의 이름입니다.|  
-|`format`  |이벤트의 형식입니다. 형식은 임의의 문자열일 수 있습니다(예: JSON).  |
+|`format`  |이벤트의 형식입니다. 형식은 임의의 문자열일 수 있습니다(예: JSON). |
 |`payload`  |명령 페이로드의 데이터입니다. 최대 길이는 131072바이트입니다. |
 
 

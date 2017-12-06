@@ -34,7 +34,7 @@ O painel do {{site.data.keyword.iot_full}} têm as placas padrão a seguir:
 |Visão geral da utilização  | As estatísticas de uso para sua organização. Lista os tipos de dispositivo e os dados que são consumidos. | <ul><li>Tipos de dispositivos<li>Dados transferidos</ul>
 |Análise de dados central da regra | As regras para sua organização. Cartões adicionais listam alertas acionados, dispositivos associados, propriedades dos dispositivos e informações de alerta. | <ul><li>Regras gerenciadas por mim<li>Alertas de regra<li>Informações de alerta de regra<li>Dispositivos Associados<li>Informações do Dispositivo<li>Propriedades do Dispositivo</ul>  
 |Análise de dados central do dispositivo | Os dispositivos que estão conectados à sua organização. Cartões adicionais mostram alertas para um dispositivo selecionado, informações para um dispositivo selecionado, propriedades do dispositivo e informações de alerta. | <ul><li>Dispositivos com os quais eu me preocupo<li>Informações do Dispositivo<li>Alertas de regra para esse dispositivo<li>Informações de alerta de regra<li>Propriedades do Dispositivo</ul>
-|Visão geral de risco e segurança (beta) | O status de segurança geral de sua organização. Os operadores do sistema e os analistas de segurança podem visualizar detalhes de conformidade, status de conexão para dispositivos, as causas das falhas de conexão e os dispositivos que estão bloqueados ou permitidos por uma lista de bloqueio ou uma lista de desbloqueio. No cartão Conformidade de conexão, os usuários podem realizar drill down para um relatório detalhado sobre dispositivos fora de conformidade e podem exportar o relatório para o Excel. | <ul><li>Conformidade de Políticas<li>Segurança da Conexão<li>Conformidade de lista de bloqueio/lista de desbloqueio</ul>
+|Visão geral de risco e segurança (beta) | O status de segurança geral de sua organização. Os operadores do sistema e os analistas de segurança podem visualizar detalhes de conformidade, status de conexão para dispositivos, as causas das falhas de conexão e os dispositivos que estão bloqueados ou permitidos por uma lista de bloqueio ou uma lista de desbloqueio.  No cartão Conformidade de conexão, os usuários podem realizar drill down para um relatório detalhado sobre dispositivos fora de conformidade e podem exportar o relatório para o Excel. | <ul><li>Conformidade de Políticas<li>Segurança da Conexão<li>Conformidade de lista de bloqueio/lista de desbloqueio</ul>
 
 É possível atualizar essas placas incluindo, atualizando e removendo cartões.
 
@@ -46,7 +46,7 @@ Para reconfigurar uma placa padrão para seu estado original, é possível exclu
 
 O {{site.data.keyword.iot_short_notm}} fornece um painel integrado que é possível usar para exibir os dados em tempo real que seu dispositivo está retornando. Por padrão, a página Visão geral exibe informações de uso sobre o sua organização do {{site.data.keyword.iot_short_notm}}, como dados e o espaço de armazenamento consumido. Para ver os dados do dispositivo de tempo real conforme fluem para dentro, inclua cartões específicos do dispositivo nesta página.
 
-Para uma orientação passo a passo sobre como exibir dados do dispositivo de tempo real, veja a orientação [Configurando placas e cartões no novo painel do Watson IoT ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}.
+Para uma receita de instruções passo a passo sobre como exibir dados do dispositivo em tempo real, consulte a receita [Configurando placas e cartões no novo painel do Watson IoT ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}.
 {: tip}
 
 Para criar uma placa e incluir um cartão para essa placa:
@@ -98,7 +98,7 @@ Para criar uma placa e incluir um cartão para essa placa:
 </tr>
 <tr>
 <td>Lista de dispositivos</td>
-<td>Uma lista para monitorar vários dispositivos. Uma lista pode ser usada como uma origem de dados para outros cartões. </br>É possível filtrar listas por ID do dispositivo e o tipo nas configurações do cartão. As listas de dispositivos de tamanho L ou maior também podem ser filtradas de forma interativa clicando no ícone de filtro no cartão. As entradas de filtro podem ser incluídas como entradas únicas, intervalos (x-y) ou separadas por vírgula.</br> Por padrão, uma lista exibe o ID do dispositivo e o tipo. É possível definir as configurações de cartão de lista para que o cartão também exiba outros metadados do dispositivo.</td>
+<td>Uma lista para monitorar vários dispositivos. Uma lista pode ser usada como uma origem de dados para outros cartões. </br>É possível filtrar listas por ID do dispositivo e o tipo nas configurações do cartão. As listas de dispositivos de tamanho L ou maior também podem ser filtradas de forma interativa clicando no ícone de filtro no cartão. As entradas de filtro podem ser incluídas como entradas únicas, intervalos (x-y) ou separadas por vírgula.</br> Por padrão, uma lista exibe o ID do dispositivo e o tipo. É possível definir as configurações de cartão de lista para que o cartão também exiba outros metadados do dispositivo.  </td>
 </tr>
 <tr>
 <td>Informações do dispositivo</td>

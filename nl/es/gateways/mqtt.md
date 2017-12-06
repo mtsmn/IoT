@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -26,14 +26,14 @@ Para obtener información sobre la seguridad del cliente y cómo conectar client
 
 ## Autenticación de MQTT
 {: #authentication}
-Para pasarelas y dispositivos, {{site.data.keyword.iot_short_notm}} utiliza la autenticación basada en tokens de MQTT.
+Para pasarelas y dispositivos, {{site.data.keyword.iot_short_notm}} utiliza la autenticación basada en señales de MQTT.
 
 Para habilitar la autenticación MQTT, envíe un nombre de usuario y una contraseña al realizar una conexión MQTT.
 
 ### Nombre de usuario
 {: #username}
 
-El nombre de usuario es el mismo valor para todas las pasarelas: `use-token-auth`. Este valor hace que {{site.data.keyword.iot_short_notm}} utilice la señal de autenticación de la pasarela, que se especifica como la contraseña.
+El nombre de usuario es el mismo valor para todas las pasarelas: ``use-token-auth``. Este valor hace que {{site.data.keyword.iot_short_notm}} utilice la señal de autenticación de la pasarela, que se especifica como la contraseña.
 
 ### Contraseña
 {: #password}
@@ -59,10 +59,10 @@ Una pasarela puede publicar sucesos de sí misma y en nombre de cualquier dispos
 
 -   La Pasarela 1 puede publicar sus propios sucesos de estado:
       
-    `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
+    ``iot-2/type/mygateway/id/gateway1/evt/status/fmt/json``
 -   La Pasarela 1 puede publicar sucesos de estado en nombre del Dispositivo 1:
       
-    `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
+    ``iot-2/type/mydevice/id/device1/evt/status/fmt/json``
 
 **Importante:** La carga útil de mensajes está limitada a un máximo de 131072 bytes. Los mensajes mayores de este límite se rechazarán.
 
@@ -164,38 +164,43 @@ El soporte para la gestión del ciclo de vida de dispositivos es opcional. El pr
 
 Las pasarelas gestionadas pueden publicar mensajes que tienen un nivel de calidad de servicio (QoS) de 0 o 1.
 
-Los mensajes con QoS=0 pueden descartarse y no persisten una vez que se reinicia el servidor de mensajería. Los mensajes con QoS=1 se pueden poner en cola y persisten una vez que se reinicia el servidor de mensajería. La duración de la suscripción determina si se pone en cola una solicitud. El parámetro `cleansession` de la conexión que ha realizado la suscripción determina la duración de la suscripción.  
+Los mensajes con QoS=0 pueden descartarse y no persisten una vez que se reinicia el servidor de mensajería. Los mensajes con QoS=1 se pueden poner en cola y persisten una vez que se reinicia el servidor de mensajería. La duración de la suscripción determina si se pone en cola una solicitud. El parámetro ``cleansession`` de la conexión que ha realizado la suscripción determina la duración de la suscripción.  
 
-{{site.data.keyword.iot_short_notm}} publica solicitudes que tienen un nivel de QoS de 1 para dar soporte a la puesta en cola de mensajes. Para poner en cola mensajes que se envían mientras una pasarela gestionada no está conectada, configure el dispositivo para no utilizar sesiones limpias estableciendo el parámetro `cleansession` en false.
+{{site.data.keyword.iot_short_notm}} publica solicitudes que tienen un nivel de QoS de 1 para dar soporte a la puesta en cola de mensajes. Para poner en cola mensajes que se envían mientras una pasarela gestionada no está conectada, configure el dispositivo para no utilizar sesiones limpias estableciendo el parámetro ``cleansession`` en false.
 
 **Aviso**
 
-Cuando una pasarela gestionada utiliza una suscripción duradera, se informa de los mandatos de gestión de dispositivos que se envían a la pasarela mientras está fuera de línea como operaciones fallidas si la pasarela no se vuelve a conectar al servicio antes de que la solicitud exceda el tiempo de espera. Cuando la pasarela vuelva a conectarse, las solicitudes las procesará la pasarela. Las suscripciones duraderas las especifica el parámetro `cleansession=false`.
+Cuando una pasarela gestionada utiliza una suscripción duradera, se informa de los mandatos de gestión de dispositivos que se envían a la pasarela mientras está fuera de línea como operaciones fallidas si la pasarela no se vuelve a conectar al servicio antes de que la solicitud exceda el tiempo de espera. Cuando la pasarela vuelva a conectarse, las solicitudes las procesará la pasarela. Las suscripciones duraderas las especifica el parámetro ``cleansession=false``.
 
-La pasarela es propietaria de la sesión de MQTT, independientemente de los dispositivos que están detrás de ella. Cuando un dispositivo envía una solicitud de suscripción a través de una pasarela, la solicitud no itinera a otras pasarelas, independientemente de si las opciones `cleansession=false` se han establecido.
+La pasarela es propietaria de la sesión de MQTT, independientemente de los dispositivos que están detrás de ella. Cuando un dispositivo envía una solicitud de suscripción a través de una pasarela, la solicitud no itinera a otras pasarelas, independientemente de si la opción ``cleansession=false`` se ha establecido.
 
 ### Temas
 {: #topics}
 
-Una pasarela gestionada debe suscribirse a los temas siguientes para manejar las solicitudes y las respuestas de {{site.data.keyword.iot_short_notm}}:
+Una pasarela gestionada debe suscribirse a los temas siguientes para gestionar sus propias solicitudes y las respuestas de y para {{site.data.keyword.iot_short_notm}}:
 
--   La pasarela gestionada se suscribe a las respuestas de gestión de dispositivos en:  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/+</pre>
-{: codeblock}
--   La pasarela gestionada se suscribe a las solicitudes de gestión de dispositivos en:  
-<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/+</pre>
+-   La pasarela gestionada se suscribe a sus propias solicitudes y respuestas de gestión de dispositivos en:  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">gatewayTypeId</var>/id/<var class="keyword varname">gatewayDeviceId</var>/#</pre>
 {: codeblock}
 
-Una pasarela gestionada publica las respuestas y solicitudes siguientes:
+Una pasarela gestionada debe suscribirse a los temas siguientes para manejar las solicitudes y las respuestas de {{site.data.keyword.iot_short_notm}} para sus dispositivos conectados:
 
-- Las respuestas de gestión de dispositivos se publican en:  
-<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/</pre>
+-   La pasarela gestionada se suscribe a las solicitudes y respuestas de gestión para sus dispositivos conectados en:  
+<pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/#</pre>
 {: codeblock}
-- Las solicitudes de gestión de dispositivos se publican en:  
+
+La pasarela puede procesar mensajes de Protocolo de gestión de dispositivos para sí misma y en nombre de otros dispositivos conectados utilizando los **typeId** y **deviceId** relevantes. El comodón de MQTT **+** también se puede utilizar en lugar de **typeId** y **deviceId**.
+
+Una pasarela gestionada publica en los temas específicos del tipo de solicitud de gestión que se esté llevando a cabo:
+
+- Las pasarelas gestionadas publican respuestas de gestión de dispositivos en:
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
+{: codeblock}
+
+Para otros temas en los que puede publicar una pasarela gestionada, consulte [Protocolo de gestión de dispositivos](device_mgmt/index.html) y [Solicitudes de gestión de dispositivos](../devices/device_mgmt/requests.html). 
+- El protocolo sigue siendo el mismo para las pasarelas, excepto que cualquier tema que empiece por **iotdevice-1/** en su lugar empezará por:
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}
-
-La pasarela puede procesar mensajes de Protocolo de gestión de dispositivos para sí misma y en nombre de otros dispositivos conectados utilizando los **typeId** y **deviceId** relevantes.
 
 ### Formato de mensajes
 {: #msg_format}

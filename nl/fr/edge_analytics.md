@@ -22,7 +22,7 @@ Avec Edge Analytics, le processus d'analyse déclenché par des règles depuis l
 Les terminaux envoient leurs données à une passerelle sur laquelle un agent Edge Analytics est activé pour une analyse syntaxique des données par les règles de ce dernier. Selon la règle définie et l'action correspondante, des données critiques et des alertes peuvent être envoyées à {{site.data.keyword.iot_full}} ou être écrites dans un fichier texte en local sur la passerelle.
 
 Le diagramme suivant illustre l'architecture générale d'un environnement {{site.data.keyword.iot_full}} Edge Analytics.
-![Architecture d'IBM Watson IoT Platform avec Edge Analytics](images/architecture_platform_edge.svg "Architecture d'IBM Watson IoT Platform avec Edge Analytics")
+![IBM Watson IoT Platform pour architecture Edge Analytics](images/architecture_platform_edge.svg "IBM Watson IoT Platform avec architecture Edge Analytics")
 
 ## Avant de commencer
 {: #byb}
@@ -206,10 +206,10 @@ Pour consulter des informations sur l'état de la passerelle :
  `MsgOutCount` | Nombre de messages ayant été envoyés par l'agent EAA à {{site.data.keyword.iot_short}}.
  `MsgOutRate` | Nombre estimé d'octets de messages par seconde envoyés par l'agent EAA à {{site.data.keyword.iot_short}} durant la minute précédente.
  `MsgReducePercent` | Différence de pourcentage entre les messages entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(msgIn - msgOut) / msgIn`
-`BytesReducePercent` | Différence de pourcentage entre les octets entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(bytesIn - bytesOut) / bytesIn`
-`MsgRateReduce` | Différence de pourcentage entre le débit de message entrant et sortant. </br>La formule suivante est utilisée pour le calcul : `(msgInRate - msgOutRate) / msgInRate`
-`BytesRateReduce` | Différence de pourcentage entre les octets de message entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | Charge de système en cours pour le système sur lequel l'agent EAA est en cours d'exécution. **Remarque :** Le débit de l'unité de centrale est envoyé uniquement si la commande `mpstat` est disponible sur le système sur lequel l'agent EAA est en cours d'exécution. Sinon, la charge de système moyenne pour la dernière minute est envoyée. </br>“La charge de système moyenne totalise le nombre d'entités exécutables placées en file d'attente pour les processeurs disponibles et le nombre d'entités exécutables qui s'exécutent sur les processeurs disponibles en moyenne sur une période. La façon dont est calculée la charge moyenne est spécifique du système d'exploitation mais il s'agit généralement d'une moyenne avec contrainte horaire amortie. Si la charge moyenne n'est pas disponible, une valeur négative est renvoyée. ” - javadoc for *ManagementFactory.getOperatingSystemMXBean*.
+ `BytesReducePercent` | Différence de pourcentage entre les octets entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(bytesIn - bytesOut) / bytesIn`
+ `MsgRateReduce` | Différence de pourcentage entre le débit de message entrant et sortant. </br>La formule suivante est utilisée pour le calcul : `(msgInRate - msgOutRate) / msgInRate`
+ `BytesRateReduce` | Différence de pourcentage entre les octets de message entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(bytesInRate - bytesOutRate) / bytesInRate`
+ `SystemLoad` | Charge de système en cours pour le système sur lequel l'agent EAA est en cours d'exécution. **Remarque :** Le débit de l'unité de centrale est envoyé uniquement si la commande `mpstat` est disponible sur le système sur lequel l'agent EAA est en cours d'exécution. Sinon, la charge de système moyenne pour la dernière minute est envoyée. </br>“La charge de système moyenne totalise le nombre d'entités exécutables placées en file d'attente pour les processeurs disponibles et le nombre d'entités exécutables qui s'exécutent sur les processeurs disponibles en moyenne sur une période. La façon dont est calculée la charge moyenne est spécifique du système d'exploitation mais il s'agit généralement d'une moyenne avec contrainte horaire amortie. Si la charge moyenne n'est pas disponible, une valeur négative est renvoyée. ” - javadoc for _ManagementFactory.getOperatingSystemMXBean_.
  `FreeMemory` | Nombre d'octets de mémoire disponible pour la machine virtuelle Java sur laquelle l'agent EAA est en cours d'exécution.
  `MemoryUsed` | Nombre d'octets de mémoire de machine virtuelle Java utilisés par l'agent EAA.
  `InQueueSize` | Nombre de messages placés en file d'attente pour le traitement par l'agent EAA.

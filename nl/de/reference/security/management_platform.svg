@@ -14,9 +14,9 @@
    viewBox="0 0 478.78044 300.92281"
    id="svg5645"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="management_platform.svg"
-   inkscape:export-filename="C:\2.DTP\_Archive\2016\BM110ABD142 - 2 + 1\ge\iot\reference\security\management_platform.png"
+   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -705,17 +705,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.259953"
-     inkscape:cx="239.39022"
-     inkscape:cy="150.25599"
+     inkscape:zoom="1.2502642"
+     inkscape:cx="86.886382"
+     inkscape:cy="165.60707"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1600"
-     inkscape:window-height="848"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -831,7 +831,7 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot7250"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(0,287.3622)"><flowRegion
          id="flowRegion7252"><rect
            id="rect7254"
@@ -839,10 +839,11 @@
            height="181.5571"
            x="701.39276"
            y="252.01556" /></flowRegion><flowPara
-         id="flowPara7256" /></flowRoot>    <flowRoot
+         id="flowPara7256"
+         style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot7455"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(0,287.3622)"><flowRegion
          id="flowRegion7457"><rect
            id="rect7459"
@@ -850,10 +851,11 @@
            height="131.02942"
            x="26.548443"
            y="637.39618" /></flowRegion><flowPara
-         id="flowPara7461" /></flowRoot>    <flowRoot
+         id="flowPara7461"
+         style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot6413"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(16.120655,362.60083)"><flowRegion
          id="flowRegion6415"><rect
            id="rect6417"
@@ -861,10 +863,11 @@
            height="118.18339"
            x="360.54498"
            y="137.15674" /></flowRegion><flowPara
-         id="flowPara6419" /></flowRoot>    <flowRoot
+         id="flowPara6419"
+         style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot6453"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(16.120655,362.60083)"><flowRegion
          id="flowRegion6455"><rect
            id="rect6457"
@@ -872,10 +875,11 @@
            height="357.11935"
            x="388.80621"
            y="143.15155" /></flowRegion><flowPara
-         id="flowPara6459" /></flowRoot>    <flowRoot
+         id="flowPara6459"
+         style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot6802"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(15.573944,367.73921)"><flowRegion
          id="flowRegion6804"><rect
            id="rect6806"
@@ -883,7 +887,8 @@
            height="108.76297"
            x="638.87543"
            y="193.67924" /></flowRegion><flowPara
-         id="flowPara6808" /></flowRoot>    <rect
+         id="flowPara6808"
+         style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>    <rect
        ry="0"
        rx="0"
        y="389.08173"
@@ -903,29 +908,30 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="42.015415"
        y="450.36569"
-       id="text18189-1"
-       sodipodi:linespacing="125%"><tspan
+       id="text18189-1"><tspan
          sodipodi:role="line"
          id="tspan18191-0"
          x="42.015415"
-         y="450.36569" /><tspan
+         y="450.36569"
+         style="font-size:11px;line-height:1.25"> </tspan><tspan
          sodipodi:role="line"
          x="42.015415"
          y="464.11569"
-         id="tspan8202">IoT-Geräte</tspan><tspan
+         id="tspan8202"
+         style="font-size:11px;line-height:1.25">IoT-Geräte</tspan><tspan
          sodipodi:role="line"
          x="42.015415"
          y="477.86569"
          id="tspan6878-8"
-         style="font-size:7.5px;stroke:none" /><tspan
+         style="font-size:11px;line-height:1.25;stroke:none"> </tspan><tspan
          sodipodi:role="line"
          x="42.015415"
          y="491.61569"
          id="tspan18193-4"
-         style="font-size:7.5px;stroke:none" /></text>
+         style="font-size:11px;line-height:1.25;stroke:none"> </tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -936,24 +942,26 @@
        id="rect79371-1-6-6-9-8-7-3-5-2-2"
        style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
-       sodipodi:linespacing="125%"
        id="text44235-7"
        y="480.93506"
        x="288.40372"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          id="tspan44239-7"
          y="480.93506"
          x="288.40372"
-         sodipodi:role="line">REST-APIs &amp; </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:11px;line-height:1.25">REST-APIs &amp; </tspan><tspan
          y="494.68506"
          x="288.40372"
          sodipodi:role="line"
-         id="tspan7973">Echtzeit-APIs</tspan><tspan
+         id="tspan7973"
+         style="font-size:11px;line-height:1.25">Echtzeit-APIs</tspan><tspan
          y="508.43506"
          x="288.40372"
          sodipodi:role="line"
-         id="tspan6445-3" /></text>
+         id="tspan6445-3"
+         style="font-size:11px;line-height:1.25"> </tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -965,50 +973,71 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="40.151447"
        y="378.21463"
-       id="text18189-1-0"
-       sodipodi:linespacing="125%"><tspan
+       id="text18189-1-0"><tspan
          sodipodi:role="line"
          id="tspan18191-0-3"
          x="40.151447"
-         y="378.21463" /><tspan
+         y="378.21463"
+         style="font-size:11px;line-height:1.25"> </tspan><tspan
          sodipodi:role="line"
          x="40.151447"
          y="391.96463"
-         id="tspan8202-7">IoT-Gateways</tspan><tspan
+         id="tspan8202-7"
+         style="font-size:11px;line-height:1.25">IoT-Gateways</tspan><tspan
          sodipodi:role="line"
          x="40.151447"
          y="405.71463"
          id="tspan6808-9"
-         style="font-size:7.5px" /><tspan
+         style="font-size:11px;line-height:1.25"> </tspan><tspan
          sodipodi:role="line"
          x="40.151447"
          y="419.46463"
          id="tspan6878-8-3"
-         style="font-size:7.5px" /><tspan
+         style="font-size:11px;line-height:1.25"> </tspan><tspan
          sodipodi:role="line"
          x="40.151447"
          y="433.21463"
          id="tspan18193-4-9"
-         style="font-size:7.5px" /></text>
+         style="font-size:11px;line-height:1.25"> </tspan></text>
     <text
-       sodipodi:linespacing="125%"
-       y="348.52588"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="260.63895"
+       y="377.30804"
+       id="text266398"><tspan
+         sodipodi:role="line"
+         id="tspan3630"
+         x="260.63895"
+         y="377.30804"
+         style="font-size:11.25000095px;line-height:1">Watson™ IoT Platform </tspan><tspan
+         sodipodi:role="line"
+         id="tspan3632"
+         x="260.63895"
+         y="388.55804"
+         style="font-size:11.25000095px;line-height:1"> </tspan><tspan
+         sodipodi:role="line"
+         id="tspan3634"
+         x="260.63895"
+         y="399.80804"
+         style="font-size:11.25000095px;line-height:1"> </tspan></text>
+    <text
+       y="350.40088"
        x="206.43343"
        font-size="13"
        id="text56812"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Bluemix</text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Bluemix</text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4"
-       d="m 139.73166,384.71976 61.76647,0"
+       d="m 139.73166,384.71976 h 61.76647"
        style="opacity:1;fill:none;stroke:#000000;stroke-width:1.61312211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-1-5);marker-end:url(#TriangleOutM-3-4)" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot7059"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(-13.005022,369.03027)"><flowRegion
          id="flowRegion7061"><rect
            id="rect7063"
@@ -1016,17 +1045,17 @@
            height="185.48387"
            x="358.06451"
            y="-39.357193" /></flowRegion><flowPara
-         id="flowPara7065" /></flowRoot>    <text
-       sodipodi:linespacing="125%"
+         id="flowPara7065"
+         style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>    <text
        y="599.23334"
        x="149.24741"
        font-size="11"
        id="text66184"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Internet</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Internet</text>
     <path
        inkscape:connector-curvature="0"
        id="path13593"
-       d="m 179.8291,584.20247 -23.895,0 0,-0.088 c -5.456,-0.671 -9.60201,-5.278 -9.60201,-10.884 0,-6.049 4.92101,-10.971 10.97101,-10.971 0.693,0 1.38,0.064 2.054,0.192 0.752,-5.997 5.797,-10.53201 11.979,-10.53201 6.361,0 11.518,4.80201 12.033,11.05601 4.252,1.613 7.063,5.65 7.063,10.255 0,5.605 -4.146,10.213 -9.602,10.884 l 0,0.077 -1.001,0.011 z m -22.581,-2 22.544,-0.01 c 4.844,-0.176 8.638,-4.112 8.638,-8.962 0,-3.959 -2.54,-7.404 -6.32,-8.573 l -0.686,-0.212 -0.019,-0.717 c -0.144,-5.5 -4.568,-9.809 -10.071,-9.809 -5.505,0 -9.929,4.311 -10.072,9.813 l -0.034,1.321 -1.262,-0.393 c -0.858,-0.267 -1.754,-0.402 -2.665,-0.402 -4.946,0 -8.97101,4.024 -8.97101,8.971 0,4.85 3.79401,8.786 8.63801,8.962 l 0.28,0.011 z"
+       d="m 179.8291,584.20247 h -23.895 v -0.088 c -5.456,-0.671 -9.60201,-5.278 -9.60201,-10.884 0,-6.049 4.92101,-10.971 10.97101,-10.971 0.693,0 1.38,0.064 2.054,0.192 0.752,-5.997 5.797,-10.53201 11.979,-10.53201 6.361,0 11.518,4.80201 12.033,11.05601 4.252,1.613 7.063,5.65 7.063,10.255 0,5.605 -4.146,10.213 -9.602,10.884 v 0.077 z m -22.581,-2 22.544,-0.01 c 4.844,-0.176 8.638,-4.112 8.638,-8.962 0,-3.959 -2.54,-7.404 -6.32,-8.573 l -0.686,-0.212 -0.019,-0.717 c -0.144,-5.5 -4.568,-9.809 -10.071,-9.809 -5.505,0 -9.929,4.311 -10.072,9.813 l -0.034,1.321 -1.262,-0.393 c -0.858,-0.267 -1.754,-0.402 -2.665,-0.402 -4.946,0 -8.97101,4.024 -8.97101,8.971 0,4.85 3.79401,8.786 8.63801,8.962 z"
        style="fill:#66d1f5;fill-opacity:1" />
     <rect
        ry="0"
@@ -1039,23 +1068,25 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="299.71616"
        y="592.51544"
-       id="text44241"
-       sodipodi:linespacing="125%"><tspan
+       id="text44241"><tspan
          sodipodi:role="line"
          x="299.71616"
          y="592.51544"
-         id="tspan44245">Watson IoT </tspan><tspan
+         id="tspan44245"
+         style="font-size:11px;line-height:1.25">Watson IoT </tspan><tspan
          sodipodi:role="line"
          x="299.71616"
          y="606.26544"
-         id="tspan5792">Platform-</tspan><tspan
+         id="tspan5792"
+         style="font-size:11px;line-height:1.25">Platform-</tspan><tspan
          sodipodi:role="line"
          x="299.71616"
          y="620.01544"
-         id="tspan9810">Dashboard</tspan></text>
+         id="tspan9810"
+         style="font-size:11px;line-height:1.25">Dashboard</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path11965"
@@ -1091,31 +1122,31 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="43.057407"
        y="536.01312"
-       id="text18189-5-9"
-       sodipodi:linespacing="125%"><tspan
+       id="text18189-5-9"><tspan
          sodipodi:role="line"
          x="43.057407"
          y="536.01312"
-         id="tspan6913-6">Anwendungen</tspan></text>
+         id="tspan6913-6"
+         style="font-size:11px;line-height:1.25">Anwendungen</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path8199"
-       d="m 141.74594,535.39506 61.76647,0"
+       d="m 141.74594,535.39506 h 61.76647"
        style="opacity:1;fill:none;stroke:#000000;stroke-width:1.61312211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-1-8-1);marker-end:url(#TriangleOutM-3-0-1)" />
     <path
        inkscape:connector-curvature="0"
        id="path8199-4-4"
-       d="m 141.69951,458.94619 61.76646,0"
+       d="m 141.69951,458.94619 h 61.76646"
        style="opacity:1;fill:none;stroke:#000000;stroke-width:1.61312211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-1-5-2);marker-end:url(#TriangleOutM-3-4-3)" />
     <g
        id="g5278"
        transform="translate(-10.531131,436.61056)">
       <path
          id="path5280"
-         d="M 40,12 35.33,12 9.67,12 5,12 5,33 9.67,33 35.34,33 40,33 40,12 Z m -9.22,8.06 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -18.57,-4.88 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -0.02,1.5 7.87,0 0,-7.87 -7.87,0 0,7.87 z m -10.98,-2.5 c 1.1,0 2,0.9 2,2 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 0,-1.11 0.9,-2 2,-2 z m 1.98,-2.88 -4,0 0,-4 4,0 0,4 z"
+         d="M 40,12 H 35.33 9.67 5 V 33 H 9.67 35.34 40 Z m -9.22,8.06 h 5.32 m -5.32,2.44 h 5.32 m -5.32,2.44 H 36.1 M 17.53,20.06 h 5.32 m -5.32,2.44 h 5.32 m -5.32,2.44 h 5.32 m -0.02,1.5 h 7.87 v -7.87 h -7.87 z m -10.98,-2.5 c 1.1,0 2,0.9 2,2 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 0,-1.11 0.9,-2 2,-2 z m 1.98,-2.88 h -4 v -4 h 4 z"
          stroke-miterlimit="10"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#ffffff;stroke-miterlimit:10" />
@@ -1217,12 +1248,12 @@
        transform="translate(240.22527,462.99945)">
       <path
          id="path5341"
-         d="m 20.02,24.81 c -0.14,0 -0.24,-0.04 -0.29,-0.12 -0.05,-0.08 -0.07,-0.21 -0.07,-0.4 l 0,-3.59 c 0,-0.37 -0.08,-0.68 -0.24,-0.94 -0.16,-0.26 -0.37,-0.46 -0.64,-0.63 -0.26,-0.16 -0.56,-0.28 -0.9,-0.35 -0.33,-0.07 -0.67,-0.11 -1.01,-0.11 -0.39,0 -0.76,0.04 -1.13,0.11 -0.37,0.07 -0.7,0.2 -0.99,0.38 -0.29,0.18 -0.53,0.42 -0.72,0.71 -0.19,0.3 -0.3,0.67 -0.32,1.12 l 1.53,0 c 0.04,-0.38 0.19,-0.66 0.47,-0.83 0.28,-0.18 0.63,-0.27 1.06,-0.27 0.15,0 0.31,0.01 0.48,0.03 0.17,0.02 0.33,0.07 0.46,0.13 0.14,0.07 0.26,0.16 0.35,0.29 0.09,0.13 0.14,0.29 0.14,0.48 0,0.22 -0.06,0.39 -0.17,0.5 -0.11,0.11 -0.26,0.2 -0.46,0.25 -0.19,0.05 -0.42,0.09 -0.67,0.11 -0.25,0.02 -0.52,0.06 -0.79,0.11 -0.32,0.04 -0.64,0.09 -0.96,0.15 -0.32,0.07 -0.61,0.18 -0.86,0.33 -0.26,0.15 -0.46,0.36 -0.62,0.63 -0.16,0.27 -0.24,0.62 -0.24,1.05 0,0.34 0.07,0.64 0.2,0.9 0.13,0.26 0.31,0.47 0.53,0.63 0.22,0.17 0.47,0.29 0.76,0.38 0.29,0.09 0.59,0.13 0.9,0.13 0.41,0 0.84,-0.07 1.29,-0.2 0.44,-0.13 0.82,-0.35 1.12,-0.65 0.06,0.31 0.2,0.53 0.4,0.66 0.21,0.13 0.47,0.19 0.78,0.19 0.06,0 0.14,0 0.23,-0.01 0.09,-0.01 0.18,-0.02 0.27,-0.04 0.09,-0.02 0.18,-0.04 0.26,-0.06 0.08,-0.02 0.15,-0.04 0.21,-0.06 l 0,-1.06 c -0.08,0.02 -0.15,0.03 -0.22,0.03 -0.04,0.02 -0.09,0.02 -0.14,0.02 z m -1.9,-1.32 c 0,0.24 -0.06,0.45 -0.17,0.61 -0.12,0.17 -0.26,0.3 -0.44,0.41 -0.17,0.11 -0.36,0.18 -0.56,0.23 -0.2,0.05 -0.38,0.07 -0.55,0.07 -0.13,0 -0.28,-0.01 -0.45,-0.04 -0.17,-0.03 -0.32,-0.07 -0.46,-0.14 -0.14,-0.07 -0.26,-0.16 -0.36,-0.28 -0.1,-0.12 -0.15,-0.26 -0.15,-0.43 0,-0.2 0.03,-0.37 0.1,-0.5 0.07,-0.14 0.16,-0.25 0.28,-0.34 0.12,-0.09 0.25,-0.15 0.4,-0.2 0.15,-0.05 0.31,-0.09 0.47,-0.11 0.34,-0.06 0.68,-0.11 1.02,-0.14 0.34,-0.03 0.63,-0.12 0.86,-0.28 l 0,1.14 z"
+         d="m 20.02,24.81 c -0.14,0 -0.24,-0.04 -0.29,-0.12 -0.05,-0.08 -0.07,-0.21 -0.07,-0.4 V 20.7 c 0,-0.37 -0.08,-0.68 -0.24,-0.94 -0.16,-0.26 -0.37,-0.46 -0.64,-0.63 -0.26,-0.16 -0.56,-0.28 -0.9,-0.35 -0.33,-0.07 -0.67,-0.11 -1.01,-0.11 -0.39,0 -0.76,0.04 -1.13,0.11 -0.37,0.07 -0.7,0.2 -0.99,0.38 -0.29,0.18 -0.53,0.42 -0.72,0.71 -0.19,0.3 -0.3,0.67 -0.32,1.12 h 1.53 c 0.04,-0.38 0.19,-0.66 0.47,-0.83 0.28,-0.18 0.63,-0.27 1.06,-0.27 0.15,0 0.31,0.01 0.48,0.03 0.17,0.02 0.33,0.07 0.46,0.13 0.14,0.07 0.26,0.16 0.35,0.29 0.09,0.13 0.14,0.29 0.14,0.48 0,0.22 -0.06,0.39 -0.17,0.5 -0.11,0.11 -0.26,0.2 -0.46,0.25 -0.19,0.05 -0.42,0.09 -0.67,0.11 -0.25,0.02 -0.52,0.06 -0.79,0.11 -0.32,0.04 -0.64,0.09 -0.96,0.15 -0.32,0.07 -0.61,0.18 -0.86,0.33 -0.26,0.15 -0.46,0.36 -0.62,0.63 -0.16,0.27 -0.24,0.62 -0.24,1.05 0,0.34 0.07,0.64 0.2,0.9 0.13,0.26 0.31,0.47 0.53,0.63 0.22,0.17 0.47,0.29 0.76,0.38 0.29,0.09 0.59,0.13 0.9,0.13 0.41,0 0.84,-0.07 1.29,-0.2 0.44,-0.13 0.82,-0.35 1.12,-0.65 0.06,0.31 0.2,0.53 0.4,0.66 0.21,0.13 0.47,0.19 0.78,0.19 0.06,0 0.14,0 0.23,-0.01 0.09,-0.01 0.18,-0.02 0.27,-0.04 0.09,-0.02 0.18,-0.04 0.26,-0.06 0.08,-0.02 0.15,-0.04 0.21,-0.06 v -1.06 c -0.08,0.02 -0.15,0.03 -0.22,0.03 -0.04,0.02 -0.09,0.02 -0.14,0.02 z m -1.9,-1.32 c 0,0.24 -0.06,0.45 -0.17,0.61 -0.12,0.17 -0.26,0.3 -0.44,0.41 -0.17,0.11 -0.36,0.18 -0.56,0.23 -0.2,0.05 -0.38,0.07 -0.55,0.07 -0.13,0 -0.28,-0.01 -0.45,-0.04 -0.17,-0.03 -0.32,-0.07 -0.46,-0.14 -0.14,-0.07 -0.26,-0.16 -0.36,-0.28 -0.1,-0.12 -0.15,-0.26 -0.15,-0.43 0,-0.2 0.03,-0.37 0.1,-0.5 0.07,-0.14 0.16,-0.25 0.28,-0.34 0.12,-0.09 0.25,-0.15 0.4,-0.2 0.15,-0.05 0.31,-0.09 0.47,-0.11 0.34,-0.06 0.68,-0.11 1.02,-0.14 0.34,-0.03 0.63,-0.12 0.86,-0.28 v 1.14 z"
          inkscape:connector-curvature="0"
          style="fill:#ffffff" />
       <path
          id="path5343"
-         d="m 27.44,19.77 c -0.27,-0.34 -0.61,-0.6 -1.02,-0.79 -0.41,-0.19 -0.89,-0.29 -1.43,-0.29 -0.45,0 -0.87,0.09 -1.25,0.26 -0.39,0.18 -0.69,0.46 -0.9,0.87 l -0.03,0 0,-0.94 -1.45,0 0,9.53 1.53,0 0,-3.47 0.03,0 c 0.12,0.19 0.26,0.35 0.44,0.49 0.17,0.14 0.37,0.25 0.57,0.34 0.21,0.09 0.42,0.15 0.65,0.2 0.22,0.04 0.45,0.06 0.67,0.06 0.51,0 0.96,-0.1 1.33,-0.3 0.38,-0.2 0.69,-0.47 0.94,-0.81 0.25,-0.34 0.43,-0.72 0.55,-1.16 0.12,-0.44 0.18,-0.89 0.18,-1.36 0,-0.51 -0.07,-0.99 -0.2,-1.44 -0.14,-0.46 -0.34,-0.86 -0.61,-1.19 z m -0.83,3.48 c -0.07,0.29 -0.18,0.55 -0.34,0.78 -0.16,0.23 -0.36,0.42 -0.6,0.56 -0.24,0.14 -0.54,0.22 -0.89,0.22 -0.31,0 -0.59,-0.06 -0.83,-0.19 -0.24,-0.13 -0.44,-0.3 -0.61,-0.51 -0.17,-0.22 -0.3,-0.47 -0.38,-0.77 -0.09,-0.3 -0.13,-0.63 -0.13,-0.98 0,-0.74 0.16,-1.34 0.49,-1.79 0.33,-0.45 0.81,-0.67 1.46,-0.67 0.31,0 0.59,0.07 0.83,0.21 0.24,0.14 0.44,0.32 0.61,0.55 0.16,0.23 0.28,0.49 0.36,0.79 0.08,0.3 0.12,0.6 0.12,0.91 0.01,0.3 -0.02,0.6 -0.09,0.89 z"
+         d="m 27.44,19.77 c -0.27,-0.34 -0.61,-0.6 -1.02,-0.79 -0.41,-0.19 -0.89,-0.29 -1.43,-0.29 -0.45,0 -0.87,0.09 -1.25,0.26 -0.39,0.18 -0.69,0.46 -0.9,0.87 h -0.03 v -0.94 h -1.45 v 9.53 h 1.53 v -3.47 h 0.03 c 0.12,0.19 0.26,0.35 0.44,0.49 0.17,0.14 0.37,0.25 0.57,0.34 0.21,0.09 0.42,0.15 0.65,0.2 0.22,0.04 0.45,0.06 0.67,0.06 0.51,0 0.96,-0.1 1.33,-0.3 0.38,-0.2 0.69,-0.47 0.94,-0.81 0.25,-0.34 0.43,-0.72 0.55,-1.16 0.12,-0.44 0.18,-0.89 0.18,-1.36 0,-0.51 -0.07,-0.99 -0.2,-1.44 -0.14,-0.46 -0.34,-0.86 -0.61,-1.19 z m -0.83,3.48 c -0.07,0.29 -0.18,0.55 -0.34,0.78 -0.16,0.23 -0.36,0.42 -0.6,0.56 -0.24,0.14 -0.54,0.22 -0.89,0.22 -0.31,0 -0.59,-0.06 -0.83,-0.19 -0.24,-0.13 -0.44,-0.3 -0.61,-0.51 -0.17,-0.22 -0.3,-0.47 -0.38,-0.77 -0.09,-0.3 -0.13,-0.63 -0.13,-0.98 0,-0.74 0.16,-1.34 0.49,-1.79 0.33,-0.45 0.81,-0.67 1.46,-0.67 0.31,0 0.59,0.07 0.83,0.21 0.24,0.14 0.44,0.32 0.61,0.55 0.16,0.23 0.28,0.49 0.36,0.79 0.08,0.3 0.12,0.6 0.12,0.91 0.01,0.3 -0.02,0.6 -0.09,0.89 z"
          inkscape:connector-curvature="0"
          style="fill:#ffffff" />
       <rect
@@ -1241,7 +1272,7 @@
          style="fill:#ffffff" />
       <path
          id="path5349"
-         d="m 5,8.18 35,0 0,28.64 -35,0 0,-28.64 z"
+         d="M 5,8.18 H 40 V 36.82 H 5 Z"
          stroke-miterlimit="10"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#ffffff;stroke-miterlimit:10" />
@@ -1258,54 +1289,54 @@
           <g
              id="IOt-Icon">
             <path
-               d="m 30.25,30.4 -17.48,0 0,-17.66 17.48,0 0,17.66 z"
+               d="M 30.25,30.4 H 12.77 V 12.74 h 17.48 z"
                id="Stroke-1_1_"
                inkscape:connector-curvature="0"
                style="fill:none;stroke:#ffffff;stroke-width:1.04999995" />
             <g
                id="Group-20">
               <path
-                 d="m 24.31,21.55 c 0,-1.54 -1.26,-2.79 -2.81,-2.79 -1.55,0 -2.81,1.25 -2.81,2.79 0,1.54 1.26,2.79 2.81,2.79 1.55,-0.01 2.81,-1.25 2.81,-2.79 l 0,0 z"
+                 d="m 24.31,21.55 c 0,-1.54 -1.26,-2.79 -2.81,-2.79 -1.55,0 -2.81,1.25 -2.81,2.79 0,1.54 1.26,2.79 2.81,2.79 1.55,-0.01 2.81,-1.25 2.81,-2.79 z"
                  id="Stroke-2"
                  inkscape:connector-curvature="0"
                  style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linecap:round;stroke-linejoin:round" />
               <path
-                 d="m 10.64,19.29 -4.77,0 C 4.84,19.29 4,18.46 4,17.43 L 4,16.7 c 0,-1.03 0.84,-1.86 1.87,-1.86 l 4.77,0"
+                 d="M 10.64,19.29 H 5.87 C 4.84,19.29 4,18.46 4,17.43 V 16.7 c 0,-1.03 0.84,-1.86 1.87,-1.86 h 4.77"
                  id="Stroke-4"
                  inkscape:connector-curvature="0"
                  style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
               <path
-                 d="m 10.64,27.31 -4.77,0 C 4.84,27.31 4,26.47 4,25.45 l 0,-0.73 c 0,-1.03 0.84,-1.86 1.87,-1.86 l 4.77,0"
+                 d="M 10.64,27.31 H 5.87 C 4.84,27.31 4,26.47 4,25.45 v -0.73 c 0,-1.03 0.84,-1.86 1.87,-1.86 h 4.77"
                  id="Stroke-6"
                  inkscape:connector-curvature="0"
                  style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
               <path
-                 d="m 32.36,23.35 4.77,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,0.73 c 0,1.03 -0.84,1.86 -1.87,1.86 l -4.77,0"
+                 d="m 32.36,23.35 h 4.77 c 1.03,0 1.87,0.83 1.87,1.86 v 0.73 c 0,1.03 -0.84,1.86 -1.87,1.86 h -4.77"
                  id="Stroke-8"
                  inkscape:connector-curvature="0"
                  style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
               <path
-                 d="m 32.36,15.34 4.77,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,0.73 c 0,1.03 -0.84,1.86 -1.87,1.86 l -4.77,0"
+                 d="m 32.36,15.34 h 4.77 c 1.03,0 1.87,0.83 1.87,1.86 v 0.73 c 0,1.03 -0.84,1.86 -1.87,1.86 h -4.77"
                  id="Stroke-10"
                  inkscape:connector-curvature="0"
                  style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
               <path
-                 d="m 19.72,32.39 0,4.75 c 0,1.03 -0.84,1.86 -1.87,1.86 l -0.73,0 c -1.03,0 -1.87,-0.83 -1.87,-1.86 l 0,-4.75"
+                 d="m 19.72,32.39 v 4.75 c 0,1.03 -0.84,1.86 -1.87,1.86 h -0.73 c -1.03,0 -1.87,-0.83 -1.87,-1.86 v -4.75"
                  id="Stroke-12"
                  inkscape:connector-curvature="0"
                  style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
               <path
-                 d="m 27.76,32.39 0,4.75 c 0,1.03 -0.84,1.86 -1.87,1.86 l -0.73,0 c -1.03,0 -1.87,-0.83 -1.87,-1.86 l 0,-4.75"
+                 d="m 27.76,32.39 v 4.75 c 0,1.03 -0.84,1.86 -1.87,1.86 h -0.73 c -1.03,0 -1.87,-0.83 -1.87,-1.86 v -4.75"
                  id="Stroke-14"
                  inkscape:connector-curvature="0"
                  style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
               <path
-                 d="m 23.3,10.61 0,-4.75 C 23.3,4.83 24.13,4 25.16,4 l 0.73,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,4.75"
+                 d="M 23.3,10.61 V 5.86 C 23.3,4.83 24.13,4 25.16,4 h 0.73 c 1.03,0 1.87,0.83 1.87,1.86 v 4.75"
                  id="Stroke-16"
                  inkscape:connector-curvature="0"
                  style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
               <path
-                 d="m 15.25,10.61 0,-4.75 C 15.25,4.83 16.09,4 17.12,4 l 0.73,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,4.75"
+                 d="M 15.25,10.61 V 5.86 C 15.25,4.83 16.09,4 17.12,4 h 0.73 c 1.03,0 1.87,0.83 1.87,1.86 v 4.75"
                  id="Stroke-18"
                  inkscape:connector-curvature="0"
                  style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
@@ -1331,7 +1362,7 @@
          style="stroke-width:9.60477543;stroke-miterlimit:4;stroke-dasharray:none">
         <polygon
            id="polygon5712"
-           points="237.7,334 259.9,334 248.8,233.7 "
+           points="248.8,233.7 237.7,334 259.9,334 "
            stroke-miterlimit="10"
            style="fill:none;stroke:#ffffff;stroke-width:9.60477543;stroke-miterlimit:4;stroke-dasharray:none" />
         <path
@@ -1395,7 +1426,7 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot5802"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(-27.496986,351.02977)"><flowRegion
          id="flowRegion5804"><rect
            id="rect5806"
@@ -1403,7 +1434,8 @@
            height="286.11111"
            x="30.555555"
            y="-62.752552" /></flowRegion><flowPara
-         id="flowPara5808" /></flowRoot>    <rect
+         id="flowPara5808"
+         style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>    <rect
        x="152.64145"
        y="527.10138"
        width="41.552429"
@@ -1411,67 +1443,64 @@
        id="rect56941-0-3-9-9"
        style="fill:#ffffff" />
     <text
-       sodipodi:linespacing="125%"
        y="537.84131"
        x="160.19467"
        font-size="11"
        id="text56834-0-4-8"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">REST</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">REST</text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-27.538048"
-       y="590.55298"
-       id="text4681-6"
-       sodipodi:linespacing="125%"><tspan
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-23.788048"
+       y="584.92798"
+       id="text4681-6"><tspan
          sodipodi:role="line"
-         x="-27.538048"
-         y="590.55298"
-         style="font-size:12.50000191px"
-         id="tspan4687-8">Verwenden Sie </tspan><tspan
-         sodipodi:role="line"
-         x="-27.538048"
-         y="606.17798"
-         style="font-size:12.50000191px"
-         id="tspan5834"><tspan
+         x="-23.788048"
+         y="584.92798"
+         style="font-size:12.50000191px;line-height:1.25"
+         id="tspan4687-8">Verwenden Sie <tspan
    style="font-weight:bold"
-   id="tspan3604">API-Schlüssel, </tspan>um </tspan><tspan
+   id="tspan5838"></tspan></tspan><tspan
          sodipodi:role="line"
-         x="-27.538048"
-         y="621.80298"
-         style="font-size:12.50000191px"
-         id="tspan11042">authentifizierte REST-</tspan><tspan
+         x="-23.788048"
+         y="600.55298"
+         style="font-size:12.50000191px;line-height:1.25"
+         id="tspan278"><tspan
+           style="font-weight:bold"
+           id="tspan280">API-Schlüssel,</tspan></tspan><tspan
          sodipodi:role="line"
-         x="-27.538048"
-         y="637.42798"
-         style="font-size:12.50000191px"
-         id="tspan3614">Aufrufe auszuführen </tspan><tspan
+         x="-23.788048"
+         y="616.17798"
+         style="font-size:12.50000191px;line-height:1.25"
+         id="tspan5834">um authentifizierte </tspan><tspan
          sodipodi:role="line"
-         x="-27.538048"
-         y="653.05298"
-         style="font-size:12.50000191px"
-         id="tspan5836" /><tspan
+         x="-23.788048"
+         y="631.80298"
+         style="font-size:12.50000191px;line-height:1.25"
+         id="tspan11042">REST-Aufrufe auszuführen. </tspan><tspan
          sodipodi:role="line"
-         x="-27.538048"
-         y="668.67798"
-         style="font-size:12.50000191px"
-         id="tspan5832" /></text>
+         x="-23.788048"
+         y="647.42798"
+         style="font-size:12.50000191px;line-height:1.25"
+         id="tspan5836"> </tspan><tspan
+         sodipodi:role="line"
+         x="-23.788048"
+         y="663.05298"
+         style="font-size:12.50000191px;line-height:1.25"
+         id="tspan5832"> </tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="197.09512"
-       y="637.76343"
-       id="text4681"
-       sodipodi:linespacing="125%"><tspan
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="214.22012"
+       y="637.88843"
+       id="text4681"><tspan
          sodipodi:role="line"
-         x="197.09512"
-         y="637.76343"
-         style="font-size:12.50000191px"
-         id="tspan4687"><tspan
-   id="tspan3623"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif">Authentifizieren Sie sich mit </tspan><tspan
+         x="214.22012"
+         y="637.88843"
+         style="font-size:12.50000191px;line-height:1.25"
+         id="tspan4687">Authentifizieren Sie sich <tspan
    style="font-weight:bold"
-   id="tspan5809">IBMid</tspan>.</tspan></text>
+   id="tspan5809">mit IBM ID</tspan>.</tspan></text>
     <g
        id="g11065"
        transform="translate(246.68159,543.97041)">
@@ -1494,7 +1523,7 @@
            id="g11050">
           <path
              id="path11052"
-             d="M 18,7 C 18,3.76 15.241,1 12,1 8.757,1 6,3.76 6,7 L 6,9.723 C 4.759,11.132 4,12.976 4,15 4,19.416 7.584,23 12.001,23 16.418,23 20,19.416 20,15 20,12.975 19.241,11.131 18,9.722 L 18,7 Z M 8,7 c 0,-2.131 1.869,-4 4,-4 2.131,0 4,1.869 4,4 l 0,1.079 C 14.822,7.396 13.459,7 12.001,7 10.542,7 9.178,7.397 8,8.08 L 8,7 Z m 2.5,12.414 -3.707,-3.707 1.414,-1.414 2.293,2.293 5.293,-5.293 1.414,1.414 -6.707,6.707 z"
+             d="M 18,7 C 18,3.76 15.241,1 12,1 8.757,1 6,3.76 6,7 V 9.723 C 4.759,11.132 4,12.976 4,15 4,19.416 7.584,23 12.001,23 16.418,23 20,19.416 20,15 20,12.975 19.241,11.131 18,9.722 Z M 8,7 c 0,-2.131 1.869,-4 4,-4 2.131,0 4,1.869 4,4 V 8.079 C 14.822,7.396 13.459,7 12.001,7 10.542,7 9.178,7.397 8,8.08 Z m 2.5,12.414 -3.707,-3.707 1.414,-1.414 2.293,2.293 5.293,-5.293 1.414,1.414 z"
              inkscape:connector-curvature="0" />
         </g>
       </g>
@@ -1508,7 +1537,7 @@
            style="display:inline">
           <path
              id="path11057"
-             d="M 23,1 23,23 1,23 1,1 23,1 M 24,0 0,0 0,24 24,24 24,0 24,0 Z"
+             d="M 23,1 V 23 H 1 V 1 H 23 M 24,0 H 0 v 24 h 24 z"
              inkscape:connector-curvature="0"
              style="fill:#ffcccc" />
         </g>
@@ -1536,7 +1565,7 @@
            id="g11050-5">
           <path
              id="path11052-9"
-             d="M 18,7 C 18,3.76 15.241,1 12,1 8.757,1 6,3.76 6,7 L 6,9.723 C 4.759,11.132 4,12.976 4,15 4,19.416 7.584,23 12.001,23 16.418,23 20,19.416 20,15 20,12.975 19.241,11.131 18,9.722 L 18,7 Z M 8,7 c 0,-2.131 1.869,-4 4,-4 2.131,0 4,1.869 4,4 l 0,1.079 C 14.822,7.396 13.459,7 12.001,7 10.542,7 9.178,7.397 8,8.08 L 8,7 Z m 2.5,12.414 -3.707,-3.707 1.414,-1.414 2.293,2.293 5.293,-5.293 1.414,1.414 -6.707,6.707 z"
+             d="M 18,7 C 18,3.76 15.241,1 12,1 8.757,1 6,3.76 6,7 V 9.723 C 4.759,11.132 4,12.976 4,15 4,19.416 7.584,23 12.001,23 16.418,23 20,19.416 20,15 20,12.975 19.241,11.131 18,9.722 Z M 8,7 c 0,-2.131 1.869,-4 4,-4 2.131,0 4,1.869 4,4 V 8.079 C 14.822,7.396 13.459,7 12.001,7 10.542,7 9.178,7.397 8,8.08 Z m 2.5,12.414 -3.707,-3.707 1.414,-1.414 2.293,2.293 5.293,-5.293 1.414,1.414 z"
              inkscape:connector-curvature="0" />
         </g>
       </g>
@@ -1550,7 +1579,7 @@
            style="display:inline">
           <path
              id="path11057-9"
-             d="M 23,1 23,23 1,23 1,1 23,1 M 24,0 0,0 0,24 24,24 24,0 24,0 Z"
+             d="M 23,1 V 23 H 1 V 1 H 23 M 24,0 H 0 v 24 h 24 z"
              inkscape:connector-curvature="0"
              style="fill:#ffcccc" />
         </g>
@@ -1558,37 +1587,19 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000095px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="260.63895"
-       y="377.30801"
-       id="text266398"
-       sodipodi:linespacing="100%"><tspan
-         sodipodi:role="line"
-         id="tspan3630"
-         x="260.63895"
-         y="377.30801">Watson™ IoT Platform </tspan><tspan
-         sodipodi:role="line"
-         id="tspan3632"
-         x="260.63895"
-         y="388.55801" /><tspan
-         sodipodi:role="line"
-         id="tspan3634"
-         x="260.63895"
-         y="399.80801" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000095px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="278.90833"
        y="434.47974"
-       id="text266398-3"
-       sodipodi:linespacing="100%"><tspan
+       id="text266398-3"><tspan
          sodipodi:role="line"
          id="tspan3626"
          x="278.90833"
-         y="434.47974">Org: q1bc3a</tspan><tspan
+         y="434.47974"
+         style="font-size:11.25000095px;line-height:1">Org: q1bc3a</tspan><tspan
          sodipodi:role="line"
          id="tspan3628"
          x="278.90833"
-         y="445.72974" /></text>
+         y="445.72974"
+         style="font-size:11.25000095px;line-height:1"> </tspan></text>
   </g>
 </svg>

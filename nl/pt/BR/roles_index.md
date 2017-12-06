@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-09-16"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -64,7 +64,8 @@ As funções de gateway padrão a seguir estão disponíveis:
 
 Função de gateway | Descrição
 ------------- | -------------
-Padrão | A função de gateway padrão. Concede acesso restrito às operações.
-Privilegiado | Destinada a gateways confiáveis e permite que gateways privilegiados incluam dispositivos no {{site.data.keyword.iot_short_notm}}. Concede acesso às operações relevantes para incluir, atualizar e gerenciar dispositivos e propriedades do dispositivo, mas não tem acesso a outras operações.  
+Padrão | Concede acesso restrito a operações. Os gateways padrão são limitados a agir em
+nome de dispositivos contidos em gateways designados a grupo de recursos.
+Privilegiado | A função de gateway padrão. Destinada a gateways confiáveis e permite que gateways privilegiados incluam dispositivos no {{site.data.keyword.iot_short_notm}}. Concede acesso às operações relevantes para incluir, atualizar e gerenciar dispositivos e propriedades do dispositivo, mas não tem acesso a outras operações.  
 
 Para obter mais informações sobre o acesso de funções de gateway às operações, consulte [Funções de gateway](reference/gateway_roles_access.html).

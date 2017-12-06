@@ -1,13 +1,6 @@
 ---
 
-copyright:
-
-years: 2015, 2017
-
-lastupdated: "2017-03-16"
-
-
----
+copyright:years: 2015, 2017lastupdated: "2017-03-16"---
 
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}

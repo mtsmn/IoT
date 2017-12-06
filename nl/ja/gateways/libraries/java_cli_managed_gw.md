@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-20"
-
----
+lastupdated: "2017-04-20"---
 
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}
@@ -62,7 +60,7 @@ lastupdated: "2017-04-20"
 
 ```java
 DeviceInfo deviceInfo = new DeviceInfo.Builder().
-                           serialNumber("10087").
+           serialNumber("10087").
            manufacturer("IBM").
            model("7865").
            deviceClass("A").
@@ -83,8 +81,8 @@ DeviceMetadata metadata = new DeviceMetadata(data);
 以下のコード・スニペットは、直前のサンプルで作成された `DeviceInfo` オブジェクトと `DeviceMetadata` オブジェクトを使用して `DeviceData` クラスを作成する方法の概要を示しています。
 
 ```java
-DeviceData deviceData = new DeviceData.Builder().
-                         deviceInfo(deviceInfo).
+  DeviceData deviceData = new DeviceData.Builder().
+               deviceInfo(deviceInfo).
              metadata(metadata).
              build();
 ```
@@ -102,7 +100,8 @@ DeviceData deviceData = new DeviceData.Builder().
 
 コンストラクター 1 は、以下のすべてのプロパティーを含む `DeviceData` クラスを受け入れて、`ManagedGateway` インスタンスを構成します。
 
-| プロパティー     |説明     |
+| プロパティー|説明
+|
 |----------------|----------------|
 |`Organization-ID` |組織 ID。|
 |`Gateway-Type` |ゲートウェイ・デバイスのタイプ。|
@@ -110,7 +109,7 @@ DeviceData deviceData = new DeviceData.Builder().
 |`Authentication-Method`|認証の方式。サポートされている唯一の方式は "token" です。|
 |`Authentication-Token`|API 鍵トークン。|
 |`auth-key`   |オプションの API キー。auth-method の値を `apikey` に設定する場合は、これを指定する必要があります。|
-|`auth-token`   |API キー・トークン。auth-method の値を `apikey` に設定する場合は、これも指定する必要があります。 |
+|`auth-token`   |API キー・トークン。auth-method の値を `apikey` に設定する場合は、これも指定する必要があります。|
 |`clean-session`|true または false の値。永続サブスクリプション・モードでゲートウェイを接続する場合のみ必要です。デフォルトでは、`clean-session` は `true` に設定されます。|
 |`Port`|接続先のポート番号。8883 か 443 のいずれかを指定してください。ポート番号を指定しない場合、クライアントは、デフォルトのポート番号 8883 で {{site.data.keyword.iot_short_notm}} に接続します。|
 |`WebSocket`|true または false の値。Web ソケットを使用してゲートウェイを接続する場合のみ必要です。|
@@ -169,7 +168,8 @@ managedGateway.sendGatewayManageRequest(0, true, true);
 デバイスがまだ {{site.data.keyword.iot_short}} に接続されていない場合は、管理要求が出されると、接続要求が内部的に開始します。
 `sendGatewayManageRequest()` メソッドは以下のパラメーターを受け入れます。
 
-| パラメーター     |説明     |
+| パラメーター|説明
+|
 |----------------|----------------|
 |`lifetime`|ゲートウェイが次の「デバイスを管理」要求を送信しなければならない制限時間 (秒数) です。これを過ぎると、デバイスは休止として分類されて非管理対象デバイスになります。`lifetime` フィールドが省略された場合、または 0 に設定された場合、管理対象ゲートウェイは休止になりません。`lifetime` フィールドのサポートされる最小の設定値は 3600 秒 (1 時間) です。|
 |`supportFirmwareActions`|ゲートウェイがファームウェア・アクションをサポートするかどうかを決定する true または false の値です。ファームウェアの要求を処理するために、ゲートウェイはファームウェア・ハンドラーも追加する必要があります。|
@@ -330,7 +330,7 @@ int rc = managedGateway.clearDeviceLogs(typeId, deviceId);
 
 ```java
 DeviceFirmware firmware = new DeviceFirmware.Builder().
-			version("Firmware.version").
+            version("Firmware.version").
             name("Firmware.name").
             url("Firmware.url").
             verifier("Firmware.verifier").
@@ -402,7 +402,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
-	boolean success = false;
+    boolean success = false;
     URL firmwareURL = null;
     URLConnection urlConnection = null;
 
@@ -466,7 +466,7 @@ public void downloadFirmware(DeviceFirmware deviceFirmware) {
 
 ```java
 private boolean verifyFirmware(File file, String verifier) throws IOException {
-	FileInputStream fis = null;
+    FileInputStream fis = null;
     String md5 = null;
     try {
         fis = new FileInputStream(file);
@@ -504,7 +504,7 @@ private boolean verifyFirmware(File file, String verifier) throws IOException {
 
 ```java
 public void updateFirmware(DeviceFirmware deviceFirmware) {
-	try {
+    try {
 			ProcessBuilder pkgInstaller = null;
         Process p = null;
         pkgInstaller = new ProcessBuilder("sudo", "dpkg", "-i", downloadedFirmwareName);
@@ -597,7 +597,7 @@ public abstract void handleFactoryReset(DeviceAction action);
 
 ```java
 public void handleReboot(DeviceAction action) {
-	ProcessBuilder processBuilder = null;
+    ProcessBuilder processBuilder = null;
     Process p = null;
     processBuilder = new ProcessBuilder("sudo", "shutdown", "-r", "now");
     boolean status = false;
@@ -625,7 +625,7 @@ public void handleReboot(DeviceAction action) {
 
 ```java
 public void handleFactoryReset(DeviceAction action) {
-	try {
+    try {
 			// code to perform Factory reset
     } catch (IOException e) {
         action.setMessage(e.getMessage());
@@ -686,13 +686,14 @@ mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds)
 
 ゲートウェイや {{site.data.keyword.iot_short}} の接続先のデバイスでカスタム・アクションを開始すると、MQTT メッセージがゲートウェイにパブリッシュされます。そのメッセージには、要求の一部として指定されたパラメーターが含まれています。ゲートウェイでは、そのメッセージを受け取って処理するために CustomActionHandler を追加する必要があります。そのメッセージは、`CustomAction` クラスのインスタンスとして返されます。そのクラスには以下のプロパティーがあります。
 
-| プロパティー     | データ・タイプ     | 説明 |
+| プロパティー| データ・タイプ| 説明
+|
 |----------------|----------------|----------------|
-|`bundleId` |ストリング | DME の固有 ID。|
+|`bundleId` |ストリング| DME の固有 ID。|
 |`actionId` |ストリング|開始されるカスタム・アクション。|
-|`typeId` |ストリング|カスタム・アクションが開始されるデバイス・タイプ。|
+|`typeId`                         |ストリング|カスタム・アクションが開始されるデバイス・タイプ。|
 |`deviceId` |ストリング|カスタム・アクションが開始されるデバイス。|
-|`payload` |ストリング|パラメーターのリストが組み込まれた JSON 形式の実際のメッセージ。|
+|`payload`  |ストリング|パラメーターのリストが組み込まれた JSON 形式の実際のメッセージ。|
 |`reqId` |ストリング|カスタム・アクション要求への応答で使用される要求 ID。|
 
 以下のコードは、`CustomActionHandler` のサンプル実装です。
@@ -712,7 +713,7 @@ import com.ibm.iotf.devicemgmt.CustomActionHandler;
 
 public class MyCustomActionHandler extends CustomActionHandler implements Runnable {
 
-	// A queue to hold & process the commands for smooth handling of MQTT messages
+	// A queue to hold &  process the commands for smooth handling of MQTT messages
 	private BlockingQueue<CustomAction> queue = new LinkedBlockingQueue<CustomAction>();
 	// A map to hold the publish interval time for each device
 	private Map<String, Long> intervalMap = new HashMap<String, Long>();
@@ -799,7 +800,7 @@ metadata.addPropertyChangeListener(listener);
 
 ```java
 public void propertyChange(PropertyChangeEvent evt) {
-	if(evt.getNewValue() == null) {
+    if(evt.getNewValue() == null) {
         return;
 	}
 	Object value = (Object) evt.getNewValue();

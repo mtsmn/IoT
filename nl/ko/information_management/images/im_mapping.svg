@@ -15,7 +15,10 @@
    width="945.05627"
    height="280.20871"
    viewBox="0 0 945.05627 280.20871"
-   sodipodi:docname="im_mapping.svg">
+   sodipodi:docname="im_mapping.svg"
+   inkscape:export-filename="S:\PUB\ABD142\ART\WORK\ship1\iot\information_management\images\im_mapping.png"
+   inkscape:export-xdpi="299.98099"
+   inkscape:export-ydpi="299.98099">
   <metadata
      id="metadata4153">
     <rdf:RDF>
@@ -226,9 +229,9 @@
      inkscape:window-height="1034"
      id="namedview4149"
      showgrid="false"
-     inkscape:zoom="1.0170851"
-     inkscape:cx="548.49912"
-     inkscape:cy="209.57023"
+     inkscape:zoom="1.3755794"
+     inkscape:cx="472.52816"
+     inkscape:cy="139.7606"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -260,7 +263,9 @@
        sodipodi:role="line"
        x="55.520435"
        y="133.92017"
-       id="tspan8202">IoT 디바이스</tspan><tspan
+       id="tspan8202">IoT <tspan
+   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   id="tspan4334">디바이스</tspan></tspan><tspan
        sodipodi:role="line"
        x="55.520435"
        y="147.67017"
@@ -292,7 +297,7 @@
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000024px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
      x="849.36615"
      y="98.85714"
      id="text18189-5-9"
@@ -362,7 +367,7 @@
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000024px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
      x="849.36609"
      y="152.63086"
      id="text18189-5-9-9"
@@ -432,7 +437,7 @@
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000024px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
      x="852.31573"
      y="202.47183"
      id="text18189-5-9-9-2"
@@ -520,11 +525,11 @@
      sodipodi:linespacing="125%"
      id="text44235-7"
      y="96.612892"
-     x="598.94263"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     x="586.94263"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000024px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
      xml:space="preserve"><tspan
        y="96.612892"
-       x="598.94263"
+       x="586.94263"
        sodipodi:role="line"
        id="tspan4781">애플리케이션 인터페이스</tspan></text>
   <text
@@ -623,15 +628,15 @@
      sodipodi:linespacing="125%"
      id="text44235-7-0"
      y="139.10797"
-     x="282.08661"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     x="274.08661"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      xml:space="preserve"><tspan
        y="139.10797"
-       x="282.08661"
+       x="274.08661"
        sodipodi:role="line"
        id="tspan6445-3-0">실제 </tspan><tspan
        y="152.85797"
-       x="282.08661"
+       x="274.08661"
        sodipodi:role="line"
        id="tspan6198">인터페이스</tspan></text>
   <rect
@@ -647,11 +652,11 @@
      sodipodi:linespacing="125%"
      id="text44235-7-4"
      y="153.54761"
-     x="599.22577"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     x="587.22577"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000024px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
      xml:space="preserve"><tspan
        y="153.54761"
-       x="599.22577"
+       x="587.22577"
        sodipodi:role="line"
        id="tspan4781-9">애플리케이션 인터페이스</tspan></text>
   <rect
@@ -667,11 +672,11 @@
      sodipodi:linespacing="125%"
      id="text44235-7-7"
      y="208.6069"
-     x="598.24261"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     x="586.24261"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000024px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
      xml:space="preserve"><tspan
        y="208.6069"
-       x="598.24261"
+       x="586.24261"
        sodipodi:role="line"
        id="tspan4781-98">애플리케이션 인터페이스</tspan></text>
   <rect
@@ -685,7 +690,7 @@
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.86541796;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000024px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
      x="454.02911"
      y="82.443031"
      id="text18189-1-0"
@@ -703,12 +708,12 @@
        x="454.02911"
        y="109.94303"
        id="tspan6878-8-8"
-       style="font-size:7.5px;stroke:none" /><tspan
+       style="font-size:11.00000024px;stroke:none;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /><tspan
        sodipodi:role="line"
        x="454.02911"
        y="123.69303"
        id="tspan18193-4-8"
-       style="font-size:7.5px;stroke:none" /></text>
+       style="font-size:11.00000024px;stroke:none;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></text>
   <g
      id="g5278-5"
      transform="translate(395.48257,72.687845)">
@@ -732,20 +737,20 @@
      sodipodi:linespacing="125%"
      id="text44235-7-4-0"
      y="152.56439"
-     x="448.24942"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     x="462.24942"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      xml:space="preserve"><tspan
        y="152.56439"
-       x="448.24942"
+       x="462.24942"
        sodipodi:role="line"
        id="tspan4781-9-1">맵핑</tspan></text>
   <text
      sodipodi:linespacing="125%"
      y="280.0798"
-     x="169.43762"
+     x="171.43762"
      font-size="11"
      id="text66184"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">인터넷</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">인터넷</text>
   <path
      inkscape:connector-curvature="0"
      id="path13593"
@@ -754,10 +759,10 @@
   <text
      sodipodi:linespacing="125%"
      y="279.09659"
-     x="756.40918"
+     x="758.40918"
      font-size="11"
      id="text66184-5"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">인터넷</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">인터넷</text>
   <path
      inkscape:connector-curvature="0"
      id="path13593-0"

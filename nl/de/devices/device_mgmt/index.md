@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -84,11 +84,11 @@ iotdm-1/response
 ### Nachrichtenformat für eine Anforderung des Typs 'Gerät verwalten'
 
 
-In einer Anforderung des Typs 'Gerät verwalten' sind das Feld `d` und alle seine untergeordneten Felder optional. Die Werte der Felder `metadata` und `deviceInfo` ersetzen die entsprechenden Attribute für das sendende Gerät, falls sie gesendet werden.
+In einer Anforderung des Typs 'Gerät verwalten' sind das Feld ``d`` und alle seine untergeordneten Felder optional. Die Werte der Felder ``metadata`` und ``deviceInfo`` ersetzen die entsprechenden Attribute für das sendende Gerät, falls sie gesendet werden.
 
-Das optionale Feld `lifetime` gibt den Zeitraum in Sekunden an, in dem das Gerät eine weitere Anforderung des Typs 'Gerät verwalten' senden muss, um nicht als 'ruhend' klassifiziert und ein nicht verwaltetes Gerät zu werden. Wenn das Feld `lifetime` ausgelassen oder auf `0` gesetzt wird, wird das verwaltete Gerät nicht 'ruhend'. Der für das Feld `lifetime` unterstützte Mindestwert lautet `3600` Sekunden, das heißt, eine Stunde.
+Das optionale Feld ``lifetime`` gibt den Zeitraum in Sekunden an, in dem das Gerät eine weitere Anforderung des Typs 'Gerät verwalten' senden muss, um nicht als 'ruhend' klassifiziert und ein nicht verwaltetes Gerät zu werden. Wenn das Feld ``lifetime`` ausgelassen oder auf ``0`` gesetzt wird, wird das verwaltete Gerät nicht 'ruhend'. Der für das Feld ``lifetime`` unterstützte Mindestwert lautet ``3600`` Sekunden, das heißt, eine Stunde.
 
-Die optionalen Felder `supports.deviceActions` und `supports.firmwareActions` geben die Möglichkeiten des Gerätemanagementagenten an. Wenn `supports.deviceActions` festgelegt wird, unterstützt der Agent sowohl die Aktion für den Neustart als auch die Aktion für das Zurücksetzen auf die Werkseinstellungen. Für ein Gerät, das nicht zwischen einem Neustart und dem Zurücksetzen auf Werkseinstellungen unterscheidet, ist es akzeptabel, dass für beide Aktionen dasselbe Verhalten verwendet wird. Wenn `supports.firmwareActions` festgelegt ist, unterstützt der Agent sowohl die Aktionen für den Firmware-Download als auch für das Firmware-Update.
+Die optionalen Felder ``supports.deviceActions`` und ``supports.firmwareActions`` geben die Möglichkeiten des Gerätemanagementagenten an. Wenn ``supports.deviceActions`` festgelegt wird, unterstützt der Agent sowohl die Aktion für den Neustart als auch die Aktion für das Zurücksetzen auf die Werkseinstellungen. Für ein Gerät, das nicht zwischen einem Neustart und dem Zurücksetzen auf Werkseinstellungen unterscheidet, ist es akzeptabel, dass für beide Aktionen dasselbe Verhalten verwendet wird. Wenn ``supports.firmwareActions`` festgelegt ist, unterstützt der Agent sowohl die Aktionen für den Firmware-Download als auch für das Firmware-Update.
 
 Das folgende Beispiel zeigt das Anforderungsformat:
 
@@ -249,7 +249,7 @@ iotdm-1/device/update
 ### Nachrichtenformat für eine Anforderung des Typs 'Position aktualisieren'
 
 
-Das Feld `measuredDateTime` ist das Datum der Positionsmessung. Das Feld `updatedDateTime` gibt das Datum der Aktualisierung für die Geräteinformationen an. Aus Effizienzgründen werden die Aktualisierungen der Positionsinformationen von {{site.data.keyword.iot_short_notm}} manchmal im Stapelbetrieb ausgeführt, wodurch die Aktualisierungen leicht verzögert sind. Der Breitengrad und der Längengrad muss anhand des World Geodetic System 1984 (WGS84) in Dezimalgraden angegeben werden.
+Das Feld ``measuredDateTime`` ist das Datum der Positionsmessung. Das Feld ``updatedDateTime`` gibt das Datum der Aktualisierung für die Geräteinformationen an. Aus Effizienzgründen werden die Aktualisierungen der Positionsinformationen von {{site.data.keyword.iot_short_notm}} manchmal im Stapelbetrieb ausgeführt, wodurch die Aktualisierungen leicht verzögert sind. Der Breitengrad und der Längengrad muss anhand des World Geodetic System 1984 (WGS84) in Dezimalgraden angegeben werden.
 
 Bei jeder Aktualisierung der Position werden die für den Breiten- und den Längengrad, die Höhe und die Unsicherheit angegebenen Werte als einzige mehrwertige Aktualisierung betrachtet. Der Breiten- und der Längengrad sind obligatorisch und sie müssen bei jeder Aktualisierung angegeben werden.  Die Höhe und die Unsicherheit sind optional und sie können ausgelassen werden.
 
@@ -327,7 +327,7 @@ Topic: iotdm-1/device/update
 }
 ```
 
-**Hinweis:** Der Parameter `reqID` wird nicht verwendet, da das Gerät nicht antworten muss.
+**Hinweis:** Der Parameter ``reqID`` wird nicht verwendet, da das Gerät nicht antworten muss.
 
 ## Anforderungen des Typs 'Geräteattribute aktualisieren'
 {: #update-attributes}
@@ -597,7 +597,7 @@ Topic: iotdm-1/response
 
 {{site.data.keyword.iot_short_notm}} kann eine Anforderung des Typs 'Attributänderungen beobachten' an ein Gerät senden, um mithilfe des Anforderungstyps 'Attributänderungen beobachten' die Änderungen mindestens eines Geräteattributs zu beobachten. Wenn das Gerät die Anforderung empfängt, muss es bei jeder Änderung der Werte für die beobachteten Attribute eine Benachrichtigungsanforderung an {{site.data.keyword.iot_short_notm}} senden.
 
-**Wichtig:** Geräte müssen Operationen zum Beobachten, Benachrichtigen und Abbrechen implementieren, um Anforderungen des Typs [Firmwareaktionen - Update](requests.html#firmware-actions-update) zu unterstützen.
+**Wichtig:** Geräte müssen Operationen zum Beobachten, Benachrichtigen und Abbrechen implementieren, um Anforderungen des Typs [Firmwareaktionen - Update](requests.html#firmware-actions-update) zu unterstützen. Beachten Sie, dass Anforderungen zur Attributänderung nur im Kontext von Firmwareanforderungen verwendet werden.
 
 ### Topic für eine Anforderung des Typs 'Attributänderungen beobachten'
 
@@ -613,7 +613,7 @@ iotdm-1/observe
 
 Der Array `fields` ist ein Array des Geräteattributs vom Gerätemodell. Bei Angabe eines komplexen Feldes wie beispielsweise `mgmt.firmware` wird erwartet, dass seine zugrunde liegenden Felder zum selben Zeitpunkt aktualisiert werden, sodass nur eine einzige Benachrichtigungsnachricht generiert wird.
 
-Der Parameter `message`, der in der Antwort verwendet wird, kann angegeben werden, wenn der Wert des Parameters `rc` nicht `200` lautet. Wenn ein bestimmter Parameterwert nicht abgerufen werden kann, muss für den Parameter `rc` der Wert `404` eingestellt werden, wenn das Gerät nicht gefunden wurde, oder der Wert `500`, falls eine andere Ursache vorliegt. Wenn Werte für Parameter nicht gefunden werden können, sollte die Feldgruppe `fields` Elemente enthalten, bei denen für `field` die Namen der einzelnen Parameter festgelegt sind, die nicht gelesen werden konnten. Der Parameter `value` sollte weggelassen werden. Damit der Parameter für den Antwortcode auf `200` eingestellt werden kann, muss sowohl das Feld `field` als auch `value` angegeben werden, wobei `value` der aktuelle Wert eines Attributs ist, das durch den Wert des Parameters `field` angegeben wird.
+Der Parameter `message`, der in der Antwort verwendet wird, kann angegeben werden, wenn der Wert des Parameters `rc` nicht `200` lautet. Wenn ein bestimmter Parameterwert nicht abgerufen werden kann, muss für den Parameter `rc` der Wert `404` eingestellt werden, wenn das Gerät nicht gefunden wurde, oder der Wert `500`, falls eine andere Ursache vorliegt. Wenn Werte für Parameter nicht gefunden werden können, sollte das Array `fields` Elemente enthalten, bei denen für `field` die Namen der einzelnen Parameter festgelegt sind, die nicht gelesen werden konnten. Der Parameter `value` sollte weggelassen werden. Damit der Parameter für den Antwortcode auf `200` eingestellt werden kann, muss sowohl das Feld `field` als auch `value` angegeben werden, wobei `value` der aktuelle Wert eines Attributs ist, das durch den Wert des Parameters `field` angegeben wird.
 
 Anforderungsformat:
 
@@ -624,7 +624,9 @@ Topic: iotdm-1/observe
 {
     "d": {
         "fields": [
-            "string"
+            {
+                "field": "field_name"
+            }
         ]
     },
     "reqId": "string"
@@ -656,11 +658,11 @@ Topic: iotdevice-1/response
 ## Anforderungen des Typs 'Attributbeobachtung abbrechen'
 {: #observations-cancel}
 
-{{site.data.keyword.iot_short_notm}} kann mithilfe des Anforderungstyps 'Attributbeobachtung abbrechen' eine Anforderung an ein Gerät senden, dass die aktuelle Beobachtung mindestens eines der Geräteattribute abgebrochen werden soll. Der `fields`-Teil der Anforderung ist eine Feldgruppe der Geräteattributnamen aus dem Gerätemodell, beispielsweise die Parameter `location`, `mgmt.firmware` oder `mgmt.firmware.state`.
+{{site.data.keyword.iot_short_notm}} kann mithilfe des Anforderungstyps 'Attributbeobachtung abbrechen' eine Anforderung an ein Gerät senden, dass die aktuelle Beobachtung mindestens eines der Geräteattribute abgebrochen werden soll. Der `fields`-Teil der Anforderung ist ein Array der Geräteattributnamen aus dem Gerätemodell, beispielsweise die Parameter `location`, `mgmt.firmware` oder `mgmt.firmware.state`.
 
 Der Parameter `message` muss angegeben werden, wenn der Wert des Parameters `rc` nicht `200` lautet.
 
-**Wichtig:** Geräte müssen Operationen zum Beobachten, Benachrichtigen und Abbrechen implementieren, um Anforderungen des Typs [Firmwareaktionen - Update](requests.html#firmware-actions-update) zu unterstützen.
+**Wichtig:** Geräte müssen Operationen zum Beobachten, Benachrichtigen und Abbrechen implementieren, um Anforderungen des Typs [Firmwareaktionen - Update](requests.html#firmware-actions-update) zu unterstützen. Anforderungen zum Abbruch der Attributbeobachtung werden nur im Kontext von Firmwareanforderungen verwendet.
 
 ### Topic für eine Anforderung des Typs 'Attributbeobachtung abbrechen'
 
@@ -684,7 +686,9 @@ Topic: iotdm-1/cancel
 {
     "d": {
         "fields": [
-            "string"
+            {
+                "field": "field_name"
+            }
         ]
     },
     "reqId": "string"
@@ -715,7 +719,7 @@ Der Wert des Parameters `field_name` ist der Name des geänderten Attributs und 
 
 Wenn die Benachrichtigungsanforderung erfolgreich verarbeitet wird, wird für den Parameter `rc` der Wert `200` eingestellt. Wenn die Anforderung nicht richtig ist, wird für den Parameter `rc` der Wert `400` eingestellt. Wenn der in der Benachrichtigungsanforderung angegebene Parameter nicht beobachtet wird, wird für den Parameter `rc` der Wert `404` eingestellt.
 
-**Wichtig:** Geräte müssen Operationen zum Beobachten, Benachrichtigen und Abbrechen implementieren, um Anforderungen des Typs [Firmwareaktionen - Update](requests.html#firmware-actions-update) zu unterstützen.
+**Wichtig:** Geräte müssen Operationen zum Beobachten, Benachrichtigen und Abbrechen implementieren, um Anforderungen des Typs [Firmwareaktionen - Update](requests.html#firmware-actions-update) zu unterstützen. Beachten Sie, dass Anforderungen zur Attributänderung nur im Kontext von Firmwareanforderungen verwendet werden.
 
 
 ### Topic für eine Anforderung des Typs 'Über Attributänderungen benachrichtigen'
@@ -739,8 +743,12 @@ Ausgehende Nachricht vom Gerät:
 Topic: iotdevice-1/notify
 {
     "d": {
-        "field": "field_name",
-        "value": "field_value"
+        "fields": [
+            {
+                "field": "field_name",
+                "value": "field_value"
+            }
+        ]
     }
     "reqId": "string"
 }
@@ -764,6 +772,6 @@ Topic: iotdm-1/response
 |:---|:---|
 |200   |Die Operation war erfolgreich.|
 |400   |Die Eingabenachricht stimmt nicht mit dem erwarteten Format überein oder einer der Werte liegt außerhalb des gültigen Bereichs.|
-|404   |Der Topicname ist falsch, das Gerät ist nicht in der Datenbank vorhanden oder es gibt für das Feld keine berichtete Beobachtung.|
+|404   |Der Topicname ist falsch, das Gerät ist nicht in der Datenbank vorhanden oder es gibt für das Feld keine gemeldete Beobachtung.|
 |409   |Bei der Gerätedatenbankaktualisierung trat ein Konflikt auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
 |500   |Es ist ein interner Fehler aufgetreten.|

@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
-
----
+lastupdated: "2017-03-14"---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -34,13 +32,14 @@ Java™ を使用して、{{site.data.keyword.iot_full}} の組織と対話す�
 
 コンストラクターは、クライアント・インスタンスを作成し、以下の定義を格納する `Properties` オブジェクトを受け入れます。
 
-| 定義     |説明     |
+| 定義|説明
+|
 |----------------|----------------|
 |`org` |組織 ID に設定する必要がある必須の値。Quickstart フローを使用する場合は、`quickstart` を指定します。|
 |`id` |組織内のアプリケーション固有の ID。|
-|`auth-method`  |認証の方式。サポートされている唯一の方式は `apikey` です。|
+|`auth-method` |認証の方式。サポートされている唯一の方式は `apikey` です。|
 |`auth-key`   |オプションの API キー。auth-method の値を `apikey` に設定する場合は、これを指定する必要があります。|
-|`auth-token`   |API キー・トークン。auth-method の値を `apikey` に設定する場合は、これも指定する必要があります。 |
+|`auth-token`   |API キー・トークン。auth-method の値を `apikey` に設定する場合は、これも指定する必要があります。|
 |`clean-session`|true または false の値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は `true` に設定されます。|
 |`Port`|接続先のポート番号。8883 か 443 のいずれかを指定してください。ポート番号を指定しない場合、クライアントは、デフォルトのポート番号 8883 で {{site.data.keyword.iot_short_notm}} に接続します。|
 |`MaxInflightMessages`  |接続の処理中メッセージの最大数を設定します。デフォルト値は 100 です。|
@@ -184,7 +183,8 @@ myClient.connect(10);
 |`event.deviceType`|ストリング|デバイス・タイプを識別します。通常、deviceType は、特定のタスクを実行するデバイスのグループです (例えば、"weatherballoon" などのデバイス・タイプを指定できます)。|
 |`event.deviceId`|ストリング|デバイスの ID を示します。通常、特定のデバイス・タイプにおいて、deviceId はそのデバイスの固有 ID です (シリアル番号や MAC アドレスなど)。|
 |`event.event`|ストリング|通常、特定の複数のイベントをグループ化するために使用します (「status」、「warning」、「data」など)。|
-|`event.format`|ストリング|形式は任意のストリング (JSON など) となります。  |
+|`event.format`|ストリング|形式は任意のストリング (JSON など) となります。
+|
 |`event.data`|辞書|メッセージ・ペイロードのデータ。最大長は 131072 バイトです。|
 |`event.timestamp`|日時|イベントの日時|
 
@@ -299,7 +299,7 @@ myClient.connect(10);
 サブスクリプションで受信した状況更新を処理するには、状況イベント・コールバック・メソッドを登録する必要があります。状況イベント `Connect` と `Disconnect` の場合、メッセージは、以下のパラメーターを持つ Status クラスのインスタンスとして返されます。
 
 
-| パラメーター     |データ・タイプ     |
+| パラメーター|データ・タイプ|
 |----------------|----------------|
 |`status.clientAddr` |string|
 |`status.protocol`  |string|
@@ -310,9 +310,9 @@ myClient.connect(10);
 |`status.connectTime`   |java.util.Date|
 |`status.port`|integer|
 
-以下のプロパティーは、状況イベントが `Disconnect` である場合にのみ設定されます。
+以下のプロパティーは、状況イベントが ``Disconnect`` である場合にのみ設定されます。
 
-| プロパティー     |データ・タイプ     |
+| プロパティー|データ・タイプ|
 |----------------|----------------|
 |`status.writeMsg` |integer|
 |`status.readMsg`  |integer|
@@ -346,7 +346,7 @@ myClient.connect(10);
   }
 ```
 
-この状況コールバックをアプリケーション・クライアントに追加すると、基準に一致するデバイスの {{site.data.keyword.iot_short_notm}} への接続が確立されたり切断されたりした場合に `processDeviceStatus()` メソッドが呼び出されます。以下のコード・サンプルは、状況コールバック・インスタンスをアプリケーション・クライアントに追加する方法を示しています。
+この状況コールバックをアプリケーション・クライアントに追加すると、基準に一致するデバイスの {{site.data.keyword.iot_short_notm}} への接続が確立されたり切断されたりした場合に ``processDeviceStatus()`` メソッドが呼び出されます。以下のコード・サンプルは、状況コールバック・インスタンスをアプリケーション・クライアントに追加する方法を示しています。
 
 ```
 
@@ -361,7 +361,7 @@ myClient.connect(10);
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-特定のアプリケーション状況へのサブスクリプションを制御するために、多重定義メソッドが用意されています。基準に一致するアプリケーションの {{site.data.keyword.iot_short_notm}} への接続が確立されたり切断されたりした場合に `processApplicationStatus()` メソッドが呼び出されます。
+特定のアプリケーション状況へのサブスクリプションを制御するために、多重定義メソッドが用意されています。基準に一致するアプリケーションの {{site.data.keyword.iot_short_notm}} への接続が確立されたり切断されたりした場合に ``processApplicationStatus()`` メソッドが呼び出されます。
 
 
 ## デバイスからのイベントのパブリッシュ

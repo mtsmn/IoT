@@ -28,7 +28,7 @@ Embedded C를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호
 ## 종속 항목
 {: #dependencies}
 
-|종속 항목 |설명|
+|종속 항목|설명 |
 |:---|:---|
 |[Eclipse Paho 임베디드 C 라이브러리 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |MQTT C 클라이언트 라이브러리를 제공합니다. 자세한 정보는 [MQTT 클라이언트 패키지 -  임베디드 디바이스용 C ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}을 참조하십시오. |
 
@@ -80,8 +80,8 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 |`org`|조직 ID입니다. |
 |`type` |디바이스 유형입니다. |
 |`id` |디바이스 ID입니다. |
-|`auth-method` |사용할 인증 메소드입니다. 현재 지원되는 값은 `token`입니다. |
-|`auth-token`|디바이스를 Watson IoT Platform에 안전하게 연결하기 위한 인증 토큰입니다. |
+|`auth-method` |사용할 인증 메소드입니다. 현재 지원되는 값은 `token`입니다.|
+|`auth-token`|디바이스를 Watson IoT Platform에 안전하게 연결하기 위한 인증 토큰입니다.|
 
 
 ```
@@ -155,9 +155,9 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 
 |특성 |설명|
 |:---|:---|
-|`commandName`  |호출된 명령의 이름입니다.  |  
+|`commandName`  |호출된 명령의 이름입니다.|  
 |`format`  |이벤트의 형식입니다. 형식은 임의의 문자열일 수 있습니다(예: JSON). |
-|`payload`  |명령 페이로드의 데이터입니다. 최대 길이는 131072바이트입니다.  |
+|`payload`  |명령 페이로드의 데이터입니다. 최대 길이는 131072바이트입니다. |
 
 
 ```
@@ -179,7 +179,7 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 	....
 
 ```
-**참고:** `yield()` 함수는 디바이스가 Watson IoT Platform에서 명령을 수신하고 연결을 활성으로 유지할 수 있도록 합니다. keepAlive 간격으로 지정된 시간 범위 내에 `yield()` 함수가 호출되지 않으면 플랫폼에서 전송된 명령을 디바이스가 수신하지 않습니다. `yield()` 함수에 지정된 값은 제어가 애플리케이션으로 리턴되기 전에 소켓에서 데이터를 읽을 수 있는 기간(밀리초)을 지정합니다.
+**참고:** ``yield()`` 함수는 디바이스가 Watson IoT Platform에서 명령을 수신하고 연결을 활성으로 유지할 수 있도록 합니다. keepAlive 간격으로 지정된 시간 범위 내에 ``yield()`` 함수가 호출되지 않으면 플랫폼에서 전송된 명령을 디바이스가 수신하지 않습니다. ``yield()`` 함수에 지정된 값은 제어가 애플리케이션으로 리턴되기 전에 소켓에서 데이터를 읽을 수 있는 기간(밀리초)을 지정합니다.
 
 ## 이벤트 공개
 {: #publishing_events}
@@ -188,10 +188,10 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 
 |특성 |설명|
 |:---|:---|
-|eventType  |공개되는 이벤트의 유형입니다(예: 상태 또는 gps). |  
-|eventFormat  |형식은 임의의 문자열일 수 있습니다(예: `json`).  |
-|data  |페이로드의 데이터입니다. 최대 길이는 131072바이트입니다.  |
-|QoS  |공개 이벤트의 서비스 품질(QoS) 레벨입니다. 지원되는 값은 `0`, `1`, `2`입니다. |
+|eventType|공개되는 이벤트의 유형입니다(예: 상태 또는 gps).|  
+|eventFormat|형식은 임의의 문자열일 수 있습니다(예: `json`). |
+|data|페이로드의 데이터입니다. 최대 길이는 131072바이트입니다. |
+|QoS|공개 이벤트의 서비스 품질(QoS) 레벨입니다. 지원되는 값은 `0`, `1`, `2`입니다. |
 
 
 ```
@@ -207,7 +207,7 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 ## 클라이언트 연결 끊기
 {: #disconnect_client}
 
-클라이언트의 연결을 끊고 연결을 해제하려면 다음 코드 스니펫을 실행하십시오. 
+클라이언트의 연결을 끊고 연결을 해제하려면 다음 코드 스니펫을 실행하십시오.
 
 ```
 	#include "iotfclient.h"

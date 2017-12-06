@@ -28,7 +28,7 @@ Para obtener información sobre la seguridad del cliente y cómo conectar los cl
 ## Conexión de dispositivos al servicio de Inicio rápido
 {: #connecting_devices}
 
-El servicio de Inicio rápido es el nivel más rápido de servicio. No ofrece confirmación de recepción y no da soporte a los niveles de calidad de servicio (QoS) de MQTT mayores que cero. Cuando se conecta al servicio de Inicio rápido, no se necesita la autenticación ni el registro, y el `orgId` se debe establecer en `quickstart`.
+El servicio de Inicio rápido es el nivel más rápido de servicio. No ofrece confirmación de recepción y no da soporte a los niveles de calidad de servicio (QoS) de MQTT mayores que cero. Cuando se conecta al servicio de Inicio rápido, no se necesita la autenticación ni el registro, y el ``orgId`` se debe establecer en ``quickstart``.
 
 Si está grabando código de dispositivos para su uso con el Inicio rápido, tenga en cuenta que las siguientes características de servicio de {{site.data.keyword.iot_short_notm}} no están soportadas en la modalidad de Inicio rápido:
 
@@ -42,13 +42,13 @@ Si está grabando código de dispositivos para su uso con el Inicio rápido, ten
 ## Autenticación de MQTT
 {: #mqtt_authentication}
 
-Para pasarelas y dispositivos, {{site.data.keyword.iot_short_notm}} utiliza la autenticación basada en tokens de MQTT.
+Para pasarelas y dispositivos, {{site.data.keyword.iot_short_notm}} utiliza la autenticación basada en señales de MQTT.
 
 Para habilitar la autenticación MQTT, envíe un nombre de usuario y una contraseña al realizar una conexión MQTT.
 
 ### Nombre de usuario
 
-El nombre de usuario es el mismo valor para todos los dispositivos: `use-token-auth`. Este valor hace que {{site.data.keyword.iot_short_notm}} utilice la señal de autenticación del dispositivo, que se especifica como la contraseña.
+El nombre de usuario es el mismo valor para todos los dispositivos: ``use-token-auth``. Este valor hace que {{site.data.keyword.iot_short_notm}} utilice la señal de autenticación del dispositivo, que se especifica como la contraseña.
 
 ### Contraseña
 
@@ -64,7 +64,7 @@ Los dispositivos publican en los temas de sucesos en el formato siguiente:
 
 Donde
 
--  **event_id** es el ID del suceso, por ejemplo `status`.  El ID de suceso puede ser cualquier serie válida en MQTT. Si no se utilizan comodines, las aplicaciones del suscriptor deben utilizar esta serie en su tema de suscripción para recibir los sucesos publicados en su tema.
+-  **event_id** es el ID del suceso, por ejemplo ``status``.  El ID de suceso puede ser cualquier serie válida en MQTT. Si no se utilizan comodines, las aplicaciones del suscriptor deben utilizar esta serie en su tema de suscripción para recibir los sucesos publicados en su tema.
 -  **format_string** es una serie que define el tipo de contenido de la carga útil del mensaje para que el receptor del mensaje pueda determinar la forma de analizar el contenido. Los valores de tipo de contenido comunes incluyen, pero no se limitan a, "json", "xml", "txt" y "csv". El valor puede ser cualquier serie válida en MQTT.
 
 **Importante:** La carga útil de mensajes está limitada a un máximo de 131072 bytes. Los mensajes mayores de este límite se rechazarán.
@@ -82,7 +82,7 @@ Los dispositivos pueden suscribirse a temas de mandatos en el formato siguiente:
 {: codeblock}
 
 Donde
- - **command_id** es el ID del mandato, por ejemplo, `update`. El ID de mandato puede ser cualquier serie válida en el protocolo MQTT.  Si no se utilizan comodines, un dispositivo debe utilizar esta serie en su tema de suscripción para que reciba mandatos publicados en su tema.
+ - **command_id** es el ID del mandato, por ejemplo, ``update``. El ID de mandato puede ser cualquier serie válida en el protocolo MQTT.  Si no se utilizan comodines, un dispositivo debe utilizar esta serie en su tema de suscripción para que reciba mandatos publicados en su tema.
  - **format_string** es una serie que define el tipo de contenido de la carga útil del mandato de modo que el receptor del mandato pueda determinar la forma de analizar el contenido. Los valores de tipo de contenido comunes incluyen, pero no se limitan a, "json", "xml", "txt" y "csv". El valor puede ser cualquier serie válida en MQTT.
 
 Los dispositivos no pueden suscribirse a sucesos de otros dispositivos. Un dispositivo recibe mandatos publicados únicamente en su propio dispositivo.
@@ -96,12 +96,12 @@ El soporte para la gestión del ciclo de vida de dispositivos es opcional. El Pr
 
 Los dispositivos gestionados pueden publicar mensajes que tienen un nivel de calidad de servicio (QoS) de 0 o 1.
 
-Los mensajes con QoS=0 pueden descartarse y no persisten una vez que se reinicia el servidor de mensajería. Los mensajes con QoS=1 se pueden poner en cola y persisten una vez que se reinicia el servidor de mensajería. La duración de la suscripción determina si se pone en cola una solicitud. El parámetro `cleansession` de la conexión que ha realizado la suscripción determina la duración de la suscripción.  
+Los mensajes con QoS=0 pueden descartarse y no persisten una vez que se reinicia el servidor de mensajería. Los mensajes con QoS=1 se pueden poner en cola y persisten una vez que se reinicia el servidor de mensajería. La duración de la suscripción determina si se pone en cola una solicitud. El parámetro ``cleansession`` de la conexión que ha realizado la suscripción determina la duración de la suscripción.  
 
-{{site.data.keyword.iot_short_notm}} publica solicitudes que tienen un nivel de QoS de 1 para dar soporte a la puesta en cola de mensajes. Para poner en cola mensajes que se envían mientras que un dispositivo gestionado no está conectado, configure el dispositivo para que no utilice sesiones limpias estableciendo el parámetro `cleansession` en false.
+{{site.data.keyword.iot_short_notm}} publica solicitudes que tienen un nivel de QoS de 1 para dar soporte a la puesta en cola de mensajes. Para poner en cola mensajes que se envían mientras que un dispositivo gestionado no está conectado, configure el dispositivo para que no utilice sesiones limpias estableciendo el parámetro ``cleansession`` en false.
 
 **Aviso:**
-  Si el dispositivo gestionado utiliza una suscripción duradera, los mandatos que se envíen a su dispositivo mientras esté fuera de línea se notifican como operaciones anómalas si el dispositivo no vuelve a conectarse al servicio antes de que se exceda el tiempo de espera de la solicitud. Sin embargo, cuando el dispositivo vuelve a conectarse, el dispositivo procesa dichas solicitudes. Se especifica una suscripción duradera mediante el parámetro `cleansession=false`.
+  Si el dispositivo gestionado utiliza una suscripción duradera, los mandatos que se envíen a su dispositivo mientras esté fuera de línea se notifican como operaciones anómalas si el dispositivo no vuelve a conectarse al servicio antes de que se exceda el tiempo de espera de la solicitud. Sin embargo, cuando el dispositivo vuelve a conectarse, el dispositivo procesa dichas solicitudes. Se especifica una suscripción duradera mediante el parámetro ``cleansession=false``.
 
 ### Temas
 
@@ -114,7 +114,7 @@ iotdm-1/#
 
 Un dispositivo gestionado publica en los temas específicos del tipo de solicitud de gestión que se esté llevando a cabo:
 
-- El dispositivo gestionado publica respuestas de gestión de dispositivos en `iotdevice-1/response`.
+- El dispositivo gestionado publica respuestas de gestión de dispositivos en ``iotdevice-1/response``.
 - Para otros temas en los que puede publicar un dispositivo gestionado, consulte [Protocolo de gestión de dispositivos](device_mgmt/index.html) y [Solicitudes de gestión de dispositivos](device_mgmt/requests.html).
 
 

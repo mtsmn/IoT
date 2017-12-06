@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
-
----
+lastupdated: "2017-03-14"---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -30,12 +28,13 @@ C# を使用して、{{site.data.keyword.iot_full}} 上で組織と対話する�
 
 コンストラクターはクライアント・インスタンスを作成し、以下の定義を格納する引数を受け入れます。
 
-|定義 |説明 |
+|定義|説明
+|
 |:---|:---|
 |`orgId`|組織 ID。|
 |`deviceType`|デバイスのタイプ。|
 |`deviceId` |デバイスの ID。|
-|`auth-method`   |使用する認証の方式。現在サポートされている値は、`token` のみです。|
+|`auth-method` |使用する認証の方式。現在サポートされている値は、`token` のみです。|
 |`auth-token`   |デバイスを Watson IoT Platform に安全に接続するための認証トークン。|
 
 
@@ -101,6 +100,6 @@ deviceClient.commandCallback += processCommand;
 
 |パラメーター|データ・タイプ|説明|
 |:---|:---|
-|`cmdName`|ストリング|コマンドを識別します。 |
+|`cmdName`|ストリング|コマンドを識別します。|
 |`cmdFormat`|ストリング|形式は任意のストリング (JSON など) となります。|
 |`cmdData`|辞書|ペイロードのデータ。最大長は 131072 バイトです。|

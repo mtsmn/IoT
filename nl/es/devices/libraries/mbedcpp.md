@@ -71,7 +71,7 @@ El ejemplo de código siguiente describe cómo puede interactuar una instancia d
   IoTF::DeviceClient client(organization, deviceType, deviceId);
 
   // Obtener el DeviceID(MAC Address) si se está en una modalidad de inicio rápido y el ID de dispositivo no se ha especificado
-  if((strcmp(organization, QUICKSTART) == 0) && (strcmp("", deviceId) == 0))
+  if((strcmp(organization, QUICKSTART) == 0) &&  (strcmp("", deviceId) == 0))
   {
   	char tmpBuf[50];
   	client.getDeviceId(tmpBuf, sizeof(tmpBuf));

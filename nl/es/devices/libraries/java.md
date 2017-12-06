@@ -105,7 +105,7 @@ public class RegisteredDeviceEventPublish {
 
     public static void main(String[] args) {
 
-        //Proporcionar los datos específicos del dispositivo, así como Auth-key y token utilizando la clase Properties
+        //Proporcionar los datos específicos del dispositivo, así como Auth-key y señal utilizando la clase Properties
         Properties options = new Properties();
 
         options.setProperty("org", "uguhsp");
@@ -154,7 +154,7 @@ import com.ibm.iotf.client.device.DeviceClient;
 public class RegisteredDeviceEventPublishPropertiesFile {
 
     public static void main(String[] args) {
-        //Proporcionar los datos específicos del dispositivo, así como Auth-key y token utilizando la clase Properties
+        //Proporcionar los datos específicos del dispositivo, así como Auth-key y señal utilizando la clase Properties
         Properties options = DeviceClient.parsePropertiesFile(new File("C:\\temp\\device.prop"));
 
         DeviceClient myClient = null;
@@ -309,7 +309,7 @@ boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, Co
 
 Para ver todo el código, consulte el ejemplo de dispositivo [HttpDeviceEventPublish ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")].{: new_window}
 
-En función de los valores del archivo de propiedades, el método `publishEventOverHTTP()` publica el suceso en modalidad de Inicio rápido o en modalidad de flujo registrado. Cuando el ID de organización en el archivo de propiedades se establece en `quickstart`, el método `publishEventOverHTTP()` publica el suceso en el servicio de inicio rápido de ejemplo del dispositivo y publica el suceso en formato HTTP sin formato. Cuando se especifica una organización registrada válida en el archivo de propiedades, los sucesos se publicarán de forma segura mediante HTTPS.
+En función de los valores del archivo de propiedades, el método ``publishEventOverHTTP()`` publica el suceso en modalidad de Inicio rápido o en modalidad de flujo registrado. Cuando el ID de organización en el archivo de propiedades se establece en ``quickstart``, el método ``publishEventOverHTTP()`` publica el suceso en el servicio de inicio rápido de ejemplo del dispositivo y publica el suceso en formato HTTP sin formato. Cuando se especifica una organización registrada válida en el archivo de propiedades, los sucesos se publicarán de forma segura mediante HTTPS.
 
 El protocolo HTTP proporciona una entrega 'at most once', que es similar al nivel de calidad de servicio 'at most once' (QoS 0) del protocolo MQTT. Al utilizar la entrega 'at most once' para publicar sucesos, la aplicación debe implementar la lógica de reintento siempre que haya un error.
 
@@ -377,7 +377,7 @@ public class RegisteredDeviceCommandSubscribe {
 
     public static void main(String[] args) {
 
-        //Proporcionar los datos específicos del dispositivo, así como Auth-key y token utilizando la clase Properties
+        //Proporcionar los datos específicos del dispositivo, así como Auth-key y señal utilizando la clase Properties
         Properties options = new Properties();
 
         options.setProperty("org", "uguhsp");

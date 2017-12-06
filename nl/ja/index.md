@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-03"
+lastupdated: "2017-06-16"
 
 ---
 
@@ -25,17 +25,23 @@ lastupdated: "2017-05-03"
 
 {{site.data.keyword.Bluemix_notm}} でアカウントに登録する方法、領域およびその他のアカウント管理設定の構成について詳しくは、[Bluemix アカウントの管理](https://console.ng.bluemix.net/docs/admin/account.html#signup)を参照してください。
 
-{{site.data.keyword.iot_short_notm}} インスタンスをダッシュボードからセットアップして構成することができます。ダッシュボードを開き、{{site.data.keyword.Bluemix_notm}} の {{site.data.keyword.iot_short_notm}} サービス・インスタンスに移動し、**「ダッシュボードを起動」**をクリックします。
+{{site.data.keyword.iot_short_notm}} インスタンスをダッシュボードからセットアップして構成することができます。ダッシュボードを開くには、{{site.data.keyword.Bluemix_notm}} の {{site.data.keyword.iot_short_notm}} サービス・インスタンスに移動し、**「起動」**をクリックします。
+
+## このタスクについて
+
+以下の手順では、{{site.data.keyword.iot_short_notm}} サービスを使用した作業をすぐに始める方法を説明します。
+
+さらに詳しい一連の概説ガイドとサンプル・アプリケーションもあります。{{site.data.keyword.iot_short_notm}} を使用して、実稼働環境ですぐに利用できるエンドツーエンド IoT プロトタイプ・システムを開発する基本的な手順を段階的に取り上げた資料です。{{site.data.keyword.iot_short_notm}} の操作を始めたばかりの開発者であれば、[概説ガイド](getting_started/getting-started-iot-overview.md)のセクションにあるステップバイステップ・プロセスを使用してください。
 
 ## 手順 1: デバイスを接続する
 {: #up_and_running}
 
 そのサービスを稼働させるために、各自の状況に応じて以下のオプションを調べてください。
 
-   |   サービスがデプロイされている | サービスがデプロイされていない
+   |   サービスがデプロイされている場合 | サービスがデプロイされていない場合
   ------------- | -------------
-  **接続するデバイスがある** | [デバイスを {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task) に接続します。| [Play organization demo ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} でデバイス接続を調べます。
-  **接続するデバイスがない** | [Node-RED デバイス・シミュレーターを作成して接続します](nodereddevice_sample.html){:new_window}。 | [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html) で作業を開始します。
+  **接続するデバイスがある場合** | [デバイスを {{site.data.keyword.iot_short_notm}} に接続します](iotplatform_task.html#iotplatform_task)。| [組織のデモを再生 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} でデバイス接続の方法を調べます。
+  **接続するデバイスがない場合** | [Node-RED デバイス・シミュレーターを作成して接続します](nodereddevice_sample.html){:new_window}。| [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html) で作業を開始します。
 特定のデバイス・タイプを {{site.data.keyword.iot_short_notm}} に接続する方法について詳しくは、[developerWorks recipes ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window} を参照してください。  
 
 デバイス接続の開発者資料については、以下のリンク先をご覧ください。

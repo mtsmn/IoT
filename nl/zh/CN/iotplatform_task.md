@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-10-02"
 
 ---
 
@@ -136,9 +136,8 @@ lastupdated: "2017-03-13"
 - 密码：*认证令牌*  
 此值是注册设备时所定义的或为设备分配的唯一令牌。
 - 事件主题格式：iot-2/evt/*event_id*/fmt/*format_string*  
- 其中，*event_id* 指定 {{site.data.keyword.iot_short_notm}} 中显示的事件名称，*format_string* 是事件的格式（例如，JSON）。
-- 消息格式：JSON
-   
+其中，*event_id* 指定 {{site.data.keyword.iot_short_notm}} 中显示的事件名称，*format_string* 是事件的格式（例如，JSON）。
+- 消息格式：JSON  
  {{site.data.keyword.iot_short_notm}} 支持多种格式（例如，JSON 和文本）。
 
 有关连接您的设备的更多信息，请参阅技术文档中的[设备的 MQTT 连接](devices/mqtt.html)。

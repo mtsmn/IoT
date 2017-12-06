@@ -28,9 +28,9 @@ Java™를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작
 
 생성자는 클라이언트 인스턴스를 빌드하며 다음 정의가 포함된 `Properties` 오브젝트를 허용합니다.
 
-|정의 |설명  |
+|정의 |설명 |
 |:----|:----|
-|`org` |조직 ID로 설정해야 하는 필수 값입니다. Quickstart 플로우를 사용 중인 경우 `quickstart`를 지정하십시오.|
+|`org` |조직 ID로 설정해야 하는 필수 값입니다. Quickstart 플로우를 사용 중인 경우 `quickstart`를 지정하십시오. |
 |`type`  |디바이스의 유형을 지정하는 필수 값입니다.|
 |`id`  |디바이스의 고유 ID를 지정하는 필수 값입니다.|
 |`auth-method`  |사용할 인증 메소드입니다. 지원되는 유일한 메소드는 `token`입니다.|
@@ -222,7 +222,7 @@ myClient.connect(10);
 ## 이벤트 공개
 {: #publishing_events}
 
-이벤트는 디바이스가 {{site.data.keyword.iot_short_notm}}에 데이터를 공개하는 데 사용하는 메커니즘입니다. 디바이스에서 이벤트의 컨텐츠를 제어하고 전송하는 각 이벤트의 이름을 지정합니다.
+이벤트는 디바이스가 {{site.data.keyword.iot_short_notm}}에 데이터를 공개하는 데 사용하는 메커니즘입니다. 디바이스에서 이벤트의 컨텐츠를 제어하고 전송하는 각 이벤트의 이름을 지정합니다. 
 
 {{site.data.keyword.iot_short_notm}} 인스턴스에서 이벤트를 수신할 때 수신된 이벤트의 신임 정보는 전송 중인 디바이스를 식별하며, 이는 디바이스가 다른 디바이스로 위장할 수 없음을 의미합니다. 
 
@@ -309,7 +309,7 @@ boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, Co
 
 전체 코드를 보려면, [HttpDeviceEventPublish ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")] 디바이스 예를 참조하십시오. {: new_window}
 
-특성 파일의 설정을 기반으로 `publishEventOverHTTP()` 메소드가 Quickstart 모드 또는 등록된 플로우 모드로 이벤트를 공개합니다. 특성 파일의 조직 ID를 `quickstart`로 설정한 경우 `publishEventOverHTTP()` 메소드는 이벤트를 디바이스 예제 Quickstart 서비스에 이벤트를 공개하고 일반 HTTP 형식의 이벤트를 공개합니다. 올바른 등록 조직이 특성 파일에 지정된 경우, 이벤트는 HTTPS를 통해 안전하게 공개됩니다.
+특성 파일의 설정을 기반으로 ``publishEventOverHTTP()`` 메소드가 Quickstart 모드 또는 등록된 플로우 모드로 이벤트를 공개합니다. 특성 파일의 조직 ID를 ``quickstart``로 설정한 경우 ``publishEventOverHTTP()`` 메소드는 이벤트를 디바이스 예제 Quickstart 서비스에 이벤트를 공개하고 일반 HTTP 형식의 이벤트를 공개합니다. 올바른 등록 조직이 특성 파일에 지정된 경우, 이벤트는 HTTPS를 통해 안전하게 공개됩니다.
 
 HTTP 프로토콜은 '최대 한 번' 전달을 제공하며, 이는 MQTT 프로토콜의 '최대 한 번'(QoS 0) 서비스 품질 레벨과 유사합니다. '최대 한 번' 제공을 사용하여 이벤트를 공개하는 경우 애플리케이션은 오류가 발생할 때마다 재시도하는 로직을 구현해야 합니다.
 
@@ -321,7 +321,7 @@ HTTP 프로토콜은 '최대 한 번' 전달을 제공하며, 이는 MQTT 프로
 디바이스 클라이언트가 연결되면 이 디바이스에 대한 명령을 자동으로 구독합니다. 특정 명령을 처리하려면 명령 콜백 메소드를 등록해야 합니다.
 메시지는 `Command` 클래스의 인스턴스로 리턴되며, 다음과 같은 특성이 있습니다.
 
-| 특성     |데이터 유형     | 설명 |
+| 특성     |데이터 유형     | 설명|
 |----------------|----------------|
 |`payload` |java.lang.String| 메시지 페이로드의 데이터입니다.|
 |`format`  |java.lang.String| 형식은 임의의 문자열일 수 있습니다(예: JSON). |

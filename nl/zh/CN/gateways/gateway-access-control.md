@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-10"
+lastupdated: "2017-08-25"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-05-10"
 # 网关访问控制 (Beta)
 {: #gateway-access-control}
 
-网关设备有权代表其他设备执行操作。网关资源组定义每个网关可以代表组织内的哪些设备执行操作。可以向网关分配*标准网关*角色。标准网关只能代表其资源组中的设备来发布或预订消息。
+网关设备是一种专用的设备类，可以代表其他设备采取操作。网关资源组定义每个网关可以代表组织内的哪些设备执行操作。可以向网关分配*标准网关*角色。标准网关只能代表其资源组中的设备来发布或预订消息。
 {: #shortdesc}
 
 **重要信息：** {{site.data.keyword.iot_full}} 网关访问控制功能只作为受限 Beta 程序的一部分提供。未来更新可能会包含与此功能当前版本不兼容的更改。请尝试此功能，[让我们了解您的想法 ![外部链接图标](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
@@ -27,10 +27,33 @@ lastupdated: "2017-05-10"
 
 必须向网关分配角色之后，该网关才能拥有资源组。没有资源组的网关可以代表组织中的所有设备执行操作。分配*标准网关*角色会自动为网关创建新的资源组。一旦向网关分配了资源组，该网关就只能代表该资源组中的设备及其自身执行操作，即便更改其角色后也是如此。
 
-要向网关分配角色，请使用以下 API：
+要将角色分配给网关，请使用以下 API，其中 *${clientID}* 是 URL 编码客户机标识，对于设备，格式为 *d:${orgId}:${typeId}:${deviceId}*；对于网关，格式为 *g:${orgId}:${typeId}:${deviceId}*：
 
 ```
-PUT /authorization/devices/{deviceId}/roles
+PUT /authorization/devices/${clientID}/roles
+
+Request Body:
+{
+    "roles": [
+        {
+            "roleId": "PD_STANDARD_GW_DEVICE",
+            "roleStatus": 1
+        }
+    ]
+}
+
+Request Response: 200
+{
+    "roles": [
+        {
+            "roleId": "PD_STANDARD_GW_DEVICE",
+            "roleStatus": 1
+        }
+    ],
+    "rolesToGroups": {
+        "PD_STANDARD_GW_DEVICE": ["gw_def_res_grp:abcdef:gatewayTypeId:gatewayDeviceId"]
+    }
+}
 ```
 
 有关请求模式的详细信息，请参阅 [{{site.data.keyword.iot_full}} Limited Gateway API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}。
@@ -65,13 +88,13 @@ GET /groups
 
 此 API 将返回与使用的搜索标签关联的资源组。如果未指定任何搜索标签，那么将返回所有资源组。<!-- For more information about the request schema, response, and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-可以使用以下 API 来查找资源组的标识：
+分配给网关的资源组标识可使用以下 API 找到，其中 *${clientID}* 是 URL 编码客户机标识，对于设备，格式为 *d:${orgId}:${typeId}:${deviceId}*；对于网关，格式为 *g:${orgId}:${typeId}:${deviceId}*：
 
 ```
-GET /authorization/devices/{deviceId}
+GET /authorization/devices/${clientId}
 ```
 
-此 API 将返回此设备所属的资源组的唯一标识。有关此 API 的更多信息位于 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window} 中。
+此 API 返回分配给此设备的资源组的唯一标识。有关此 API 的更多信息位于 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window} 中。
 
 
 ## 查询资源组
@@ -131,45 +154,45 @@ DELETE /groups/{groupId}
 ## 检索和更新设备属性。
 {: #fdevice_group_props}
 
-有多种方式可使用 API 来检索设备属性，每个 API 会返回不同的信息。要检索连接到您 {{site.data.keyword.iot_short_notm}} 组织的所有设备的设备属性，请使用以下 API：
+有多种方式可使用 API 来检索设备属性，每个 API 会返回不同的信息。要检索您 {{site.data.keyword.iot_short_notm}} 组织中的所有现有设备的设备属性，请使用以下 API：
 
 ```
 GET /authorization/devices
 
 ```
 
-此 API 将返回连接到该组织的所有设备的属性，包括其访问控制相关属性（角色、状态和到期日期）。<!-- For more information on responses and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
+此 API 将返回组织中所有现有设备的属性，包括其访问控制相关属性（角色、状态和到期日期）。<!-- For more information on responses and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-要检索设备属性而不检索访问控制相关信息，请使用以下 API：
-
-```
-GET /authorization/devices/{deviceId}
-```
-
-此 API 将返回指定设备的所有设备属性，而不返回访问控制信息。<!-- For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API). -->
-
-要检索特定设备的访问控制信息，请使用以下 API：
+要检索组织中单个设备的设备属性，请使用以下 API，其中 *${clientID}* 是 URL 编码客户机标识，对于设备，格式为 *d:${orgId}:${typeId}:${deviceId}*；对于网关，格式为 *g:${orgId}:${typeId}:${deviceId}*：
 
 ```
-GET /authorization/devices/{deviceId}/roles
+GET /authorization/devices/${clientId}
+```
+
+此 API 将返回指定设备的所有设备属性。<!-- For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API). -->
+
+要检索特定设备的访问控制信息，请使用以下 API，其中 *${clientID}* 是 URL 编码客户机标识，对于设备，格式为 *d:${orgId}:${typeId}:${deviceId}*；对于网关，格式为 *g:${orgId}:${typeId}:${deviceId}*：
+
+```
+GET /authorization/devices/${clientId}/roles
 ```
 
 此 API 将检索指定设备的访问控制相关信息，而不返回其他设备属性。<!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
 设备属性可以通过两种方式更新。可以更新属性而不更改访问控制属性，也可以直接更新访问控制属性。
 
-要更新设备属性而不影响访问控制属性，请使用以下 API：
+要更新设备属性而不影响访问控制属性，请使用以下 API，其中 *${clientID}* 是 URL 编码客户机标识，对于设备，格式为 *d:${orgId}:${typeId}:${deviceId}*；对于网关，格式为 *g:${orgId}:${typeId}:${deviceId}*：
 
 ```
-PUT /authorization/devices/{deviceId}
+PUT /authorization/devices/${clientId}
 ```
 
 此 API 将仅更新设备的不与访问控制相关联的属性。<!-- For more information on request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-要仅更新指定设备的访问控制属性，请使用以下 API：
+要更新指定设备的访问控制信息，请使用以下 API，其中 *${clientID}* 是 URL 编码客户机标识，对于设备，格式为 *d:${orgId}:${typeId}:${deviceId}*；对于网关，格式为 *g:${orgId}:${typeId}:${deviceId}*：
 
 ```
-PUT /authorization/devices/{deviceId}/withroles
+PUT /authorization/devices/${clientId}/withroles
 ```
 
 此 API 将仅更新指定设备的访问控制属性。<!-- For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->

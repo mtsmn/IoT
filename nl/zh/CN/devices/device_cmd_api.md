@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-06-08"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -13,10 +13,8 @@ lastupdated: "2017-06-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 针对设备的 HTTP 消息传递 API (Beta)
+# 针对设备的 HTTP 消息传递 API
 {: #api}
-
-**重要信息：**针对设备的 {{site.data.keyword.iot_full}} HTTP 消息传递 API 功能只作为受限 Beta 程序的一部分提供。未来更新可能会包含与此功能当前版本不兼容的更改。请尝试此功能，[让我们了解您的想法 ![外部链接图标](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
 
 
 ## 访问针对设备的 HTTP 消息传递 API 文档
@@ -35,7 +33,7 @@ lastupdated: "2017-06-08"
 
 除了使用 MQTT 消息传递协议外，还可以配置设备，以使用 HTTP REST API 命令通过 HTTP 将事件发布到 {{site.data.keyword.iot_short_notm}}。
 
-使用以下某个 URL 提交来自连接到 {{site.data.keyword.iot_short_notm}} 的设备的 `POST` 请求：
+使用以下某个 URL 提交来自连接到 {{site.data.keyword.iot_short_notm}} 的设备的 ``POST`` 请求：
 
 ### 非安全 POST 请求
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
@@ -57,13 +55,13 @@ lastupdated: "2017-06-08"
 
 ### Content-Type 请求头
 
-必须为请求提供 `Content-Type` 请求头。下表显示了如何将受支持的类型映射到 {{site.data.keyword.iot_short_notm}} 内部格式。
+如果内容不是 JSON，那么应该向请求提供 `Content-Type` 请求头。下表显示了如何将受支持的类型映射到 {{site.data.keyword.iot_short_notm}} 内部格式。
 
 |Content-Type 头|{{site.data.keyword.iot_short_notm}} 中的格式|
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml | "xml"
+|application/xml| "xml"
 |application/octet-stream|"bin"
 
 ## 接收命令
@@ -71,7 +69,7 @@ lastupdated: "2017-06-08"
 
 除了使用 MQTT 消息传递协议外，还可以配置设备，以使用 HTTP 消息传递 API 命令通过 HTTP 从 {{site.data.keyword.iot_short_notm}} 接收命令。设备可以接收自行导向的命令。
 
-使用以下某个 URL 提交来自连接到 {{site.data.keyword.iot_short_notm}} 的设备的 `POST` 请求：
+使用以下某个 URL 提交来自连接到 {{site.data.keyword.iot_short_notm}} 的设备的 ``POST`` 请求：
 
 ### 非安全 POST 请求
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
@@ -81,10 +79,6 @@ lastupdated: "2017-06-08"
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
 **注：**还可以为安全 HTTP API 调用指定端口 443（缺省 SSL 端口）。
-
-要从 {{site.data.keyword.iot_short_notm}} 接收命令，请使用以下 API：
-
-<pre class="pre"><code class="hljs">/device/types/{deviceType}/devices/{deviceId}/commands/{command}/request</code></pre>
 
 您可以选择性地在 HTTP 请求的主体中包含 *waitTimeSecs* 参数，以指定整数，代表等待命令的最大秒数：
 <pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>

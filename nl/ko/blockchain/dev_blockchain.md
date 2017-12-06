@@ -48,7 +48,7 @@ Golang 체인코드 실행 파일 양식으로 스마트 계약을 개발하고 
 - IBM.com의 [{{site.data.keyword.blockchainfull_notm}} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/blockchain/){: new_window}.
 - [{{site.data.keyword.blockchainfull_notm}} DOCS](https://console.ng.bluemix.net/docs/services/blockchain/index.html) - {{site.data.keyword.blockchainfull_notm}} 서비스 시작하기. 
 - [{{site.data.keyword.blockchainfull_notm}} HFC SDK for Node.js(API 문서 포함) ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/hyperledger/fabric/tree/v0.6/docs/API){: new_window} -  {{site.data.keyword.blockchainfull_notm}} API에 대한 개요입니다. 
-- [개발자용 {{site.data.keyword.blockchainfull_notm}} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/blockchain/for_developers.html){: new_window} - {{site.data.keyword.Bluemix_notm}}에서 실행하기 위해 배치 가능한 코드 및 라이브 데모에 대한 자세한 설명이 포함된 개발 환경에 맞게 블록체인을 적용하는 방법에 대한 개요입니다. 
+- [개발자용 {{site.data.keyword.blockchainfull_notm}}(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](http://www.ibm.com/blockchain/for_developers.html){: new_window} - {{site.data.keyword.Bluemix_notm}}에서 실행하기 위해 배치할 수 있는 라이브 데모 및 코드에 대한 자세한 설명이 포함된 개발 환경에 맞게 블록체인을 적용하는 방법에 대한 개요입니다.
 
 ## 샘플 스마트 계약
 
@@ -58,8 +58,8 @@ Golang 체인코드 실행 파일 양식으로 스마트 계약을 개발하고 
 
 |샘플 계약 |설명 |
 |:---|:---|
-|[기본: 단순 계약 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | 블록체인에서 디바이스 자산 데이터를 추적하고 저장할 수 있도록 허용하는 고급 계약의 단순화된 버전
-|[고급: IoT 일반 샘플 계약 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | 데이터 모델과 동작에 대한 **거래선** 종류 및 많은 기능에 대한 고급 샘플 계약|
+|[Basic: Simple Contract ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | 블록체인에서 디바이스 자산 데이터를 추적하고 저장할 수 있도록 허용하는 고급 계약의 단순화된 버전
+|[Advanced: IoT Generic Sample Contract ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | 데이터 모델과 동작에 대한 **거래선** 종류 및 많은 기능에 대한 고급 샘플 계약|
 
 
 ## {{site.data.keyword.blockchainfull_notm}} 환경 구성
@@ -129,7 +129,7 @@ Golang 체인코드 실행 파일 양식으로 스마트 계약을 개발하고 
      ```  
      **중요:** 선택하는 사용자는 선택한 피어가 아닌 다른 피어에서 이전에 등록되지 않았어야 합니다.
      7. **대시보드로 돌아가기**를 클릭하여 {{site.data.keyword.Bluemix_notm}} 대시보드로 돌아가십시오. 
-     8. {{site.data.keyword.iot_short_notm}}이 배치된 영역을 선택하십시오. 
+     8. {{site.data.keyword.iot_short_notm}}을 배치한 영역을 선택합니다.
      9. **서비스**에서 **{{site.data.keyword.iot_short_notm}}** 링크를 클릭하십시오.
      10. **시작**을 클릭하여 {{site.data.keyword.iot_short_notm}} 대시보드를 여십시오. 
      11. {{site.data.keyword.iot_short_notm}} 대시보드의 메뉴 사이드바에서 **확장기능**을 선택하십시오. 
@@ -239,7 +239,7 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
 
   </ul>
   3. 계약을 피어에 배치하십시오.   
-  배치 호출에 대한 자세한 정보는 [POST/chaincode API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}를 참조하십시오.   
+배치 호출에 대한 자세한 정보는 [POST/chaincode API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}를 참조하십시오.   
   배치 시에 다음 정보를 사용하십시오.   
   <ul>
   <li>URL: `http://api_host:api_port_tls/chaincode`
@@ -272,10 +272,10 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
 10. 디바이스 데이터를 새 스마트 계약에 맵핑하십시오.   
   디바이스 데이터를 새 블록체인 스마트 계약에 쓰기 시작하려면 우선 디바이스 데이터를 계약에 맵핑해야 합니다.   
    1. {{site.data.keyword.Bluemix_notm}}에서 대시보드로 이동하십시오. 
-   2. {{site.data.keyword.iot_short_notm}}이 배치된 영역을 선택하십시오. 
+   2. {{site.data.keyword.iot_short_notm}}을 배치한 영역을 선택합니다.
    3. **{{site.data.keyword.iot_short_notm}}** 서비스를 클릭하십시오.
    4. **시작**을 클릭하여 {{site.data.keyword.iot_short_notm}} 대시보드를 여십시오. 
-   5. 메뉴 사이드바에서 ![블록체인](images/platform_blockchain.png "블록체인")을 클릭하여 **블록체인**을 선택하십시오. 
+   5. 메뉴 사이드바에서 ![블록체인](images/platform_blockchain.png "블록체인")을 클릭하여 **블록체인**을 선택하십시오.
    6. **디바이스 데이터 맵핑**을 클릭하십시오. 
    7. 블록체인에 디바이스 데이터를 저장할 대상 디바이스 유형 및 저장할 이벤트의 이벤트 이름을 선택하십시오. **다음**을 클릭하십시오. 
    8. 이전에 작성한 패브릭에 대한 패브릭 이름을 선택하십시오. **다음**을 클릭하십시오. 
@@ -299,7 +299,7 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
     <li>  온도 - float64  
     <li>  캐리어 - 문자열   
     </ul>  
-    디바이스 데이터를 계약에 맵핑하는 방법에 대한 자세한 정보는 GitHub의 IoT 블록체인 샘플 위키에서 [데이터 맵핑 예 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example){: new_window}를 참조하십시오. 
+디바이스 데이터를 계약에 맵핑하는 방법에 대한 자세한 정보는 GitHub의 IoT 블록체인 샘플 위키에서 [데이터 맵핑 예 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example){: new_window}를 참조하십시오. 
    12. 요약 페이지에서 정보가 올바른지 확인하십시오. 
    13. 디바이스 데이터 대 계약 맵핑이 블록체인 페이지에 표시됩니다. 
 
@@ -353,7 +353,7 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
  계약 특정 체인코드 오퍼레이션이 예상한 대로 실행될 수 있는지 확인하십시오. 예를 들어, 기본 계약인 경우에는 `createAsset` 함수 실행의 결과로 자산이 블록체인에 추가되는지 확인하십시오. 
  - 응답 페이로드  
  체인코드 오퍼레이션 탭에서 REST 요청을 제출할 때 피어 요청 응답이 예상한 대로 나타나는지 확인하십시오. 
- - 블록체인  
+ - 블록체인(Blockchain)  
 링크된 디바이스에서 데이터를 삽입할 때나 체인코드 오퍼레이션 컴포넌트를 사용할 때 블록이 체인에 추가되는지 확인하십시오.     
 
 ## 다음 단계

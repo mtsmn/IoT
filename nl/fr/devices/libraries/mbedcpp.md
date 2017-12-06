@@ -71,7 +71,7 @@ L'exemple de code suivant montre comment une instance DeviceClient peut interagi
   IoTF::DeviceClient client(organization, deviceType, deviceId);
 
   // Get the DeviceID(MAC Address) if we are in quickstart mode and device ID is not specified
-  if((strcmp(organization, QUICKSTART) == 0) && (strcmp("", deviceId) == 0))
+  if((strcmp(organization, QUICKSTART) == 0) &&  (strcmp("", deviceId) == 0))
   {
   	char tmpBuf[50];
   	client.getDeviceId(tmpBuf, sizeof(tmpBuf));

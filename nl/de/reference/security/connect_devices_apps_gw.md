@@ -31,7 +31,7 @@ Zum Herstellen von Verbindungen zwischen Geräte-, Anwendungs- und Gateway-Clien
 
 ### Verbindungs-URL für HTTP-REST-API
 
-<pre class="pre"><code class="hljs">https://<var class="keyword varname">Organisations-ID</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
 {: codeblock}
 
 **Hinweise**

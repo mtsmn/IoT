@@ -26,11 +26,11 @@ Las instancias del {{site.data.keyword.iot_short_notm}} se pueden crear en el pa
 ## Acuerdo de nivel de servicio de {{site.data.keyword.iot_short_notm}}
 {: #iot-sla}
 
-El {{site.data.keyword.iot_short_notm}} tiene suministros para un nivel de servicio especificado. Para obtener más información sobre el acuerdo de nivel de servicio, consulte [Acuerdo de nivel de servicio de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf){: new_window}.
+El {{site.data.keyword.iot_short_notm}} tiene suministros para un nivel de servicio especificado. Para obtener más información sobre el acuerdo de nivel de servicio, consulte [Acuerdo de nivel de servicio de {{site.data.keyword.iot_short_notm}}![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf){: new_window}.
 
 ## Acuerdo de nivel de servicio de {{site.data.keyword.Bluemix_notm}}
 
-{{site.data.keyword.Bluemix_notm}} publica términos de uso que difieren en función de si [Acuerdo de servicios en la nube de IBM ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} o el [Acuerdo de IBM International Passport Advantage ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} se aplican al usuario. Para obtener más información sobre el Acuerdo de nivel de servicio de {{site.data.keyword.Bluemix_notm}}, consulte [Términos de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.{DomainName}/docs/navigation/notices.html#terms){:new_window}.
+{{site.data.keyword.Bluemix_notm}} publica términos de uso que difieren en función de si [Acuerdo de servicios en la nube de IBM ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} o el [Acuerdo de IBM International Passport Advantage ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} se aplican al usuario. Para obtener más información sobre el Acuerdo de nivel de servicio de {{site.data.keyword.Bluemix_notm}}, consulte [{{site.data.keyword.Bluemix_notm}}Términos de ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.{DomainName}/docs/navigation/notices.html#terms){:new_window}.
 
 ## Tarifas de {{site.data.keyword.iot_short_notm}}
 {: #iot-pricing}
@@ -58,7 +58,7 @@ Se muestran los detalles del plan de tarifas actual.
 
 * [Calculadora de tarifas de IoT ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://iot-cost-calculator.ng.bluemix.net/){:new_window}
 * [Seguridad de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [Seguridad de la plataforma {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [Seguridad de la plataforma {{site.data.keyword.Bluemix_notm}}![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [Conformidad de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
 * [Seguridad de {{site.data.keyword.BluSoftlayer_full}} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.softlayer.com/security){:new_window}
 * [Conformidad de {{site.data.keyword.BluSoftlayer_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.softlayer.com/compliance){:new_window}

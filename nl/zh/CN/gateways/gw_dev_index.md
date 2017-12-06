@@ -25,7 +25,7 @@ lastupdated: "2017-03-14"
 ## 客户机库
 用于开发可连接到 {{site.data.keyword.iot_short_notm}} 的网关的客户机库现提供以下语言版本：
 
-|客户机库 |库和更多文档的链接
+|客户机库|库和更多文档的链接
 |:---|:---
 |C++|[https://github.com/ibm-watson-iot/iot-cpp ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-cpp){: new_window}
 |C#|[https://github.com/ibm-watson-iot/iot-csharp ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-csharp){: new_window}

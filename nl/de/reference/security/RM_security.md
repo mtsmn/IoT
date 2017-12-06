@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-12"
+lastupdated: "2017-06-13"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-05-12"
 # Risiko- und Sicherheitsmanagement
 {: #RM_security}
 
-Sie können die Sicherheit verbessern, um das Erstellen, Durchsetzen und Melden der Verbindungssicherheit von Geräten zu ermöglichen. Dank dieser erhöhten Sicherheit werden neben den von {{site.data.keyword.iot_short_notm}} verwendeten Benutzer-IDs und Tokens Zertifikate und die TLS-Authentifizierung (TLS, Transport Layer Security) verwendet, um festzulegen, wie und wo Geräte eine Verbindung zu der Plattform herstellen. 
+Sie können die Sicherheit verbessern, um das Erstellen, Durchsetzen und Melden der Verbindungssicherheit von Geräten zu ermöglichen. Dank dieser erhöhten Sicherheit werden neben den von {{site.data.keyword.iot_short_notm}} verwendeten Benutzer-IDs und Tokens Zertifikate und die TLS-Authentifizierung (TLS, Transport Layer Security) verwendet, um festzulegen, wie und wo Geräte eine Verbindung zu der Plattform herstellen.
 
 ## Zertifikate
 {: #certificates}
@@ -23,7 +23,7 @@ Sie können die Sicherheit verbessern, um das Erstellen, Durchsetzen und Melden 
 Sind Zertifikate aktiviert, wird während der Kommunikation zwischen Geräten und dem Server allen Geräten, die in ihren Sicherheitseinstellungen nicht über gültige Zertifikate verfügen, der Zugriff verweigert, selbst wenn sie über gültige Benutzer-IDs und Kennwörter verfügen.
 
 Um Zertifikate und den Serverzugriff für Geräte zu konfigurieren, registriert der Systembediener die zugehörigen Zertifikate der Zertifizierungsstelle (CA-Zertifikate) und optional die Zertifikate des Messaging-Servers in der Watson IoT Platform.
-Um Clientzertifikate und den Serverzugriff für Geräte zu konfigurieren, importiert der Systembediener die zugehörigen Zertifikate der Zertifizierungsstelle (CA-Zertifikate) und des Messaging-Servers in {{site.data.keyword.iot_short_notm}}. Der Sicherheitsanalyst konfiguriert dann die Verbindungssicherheitsrichtlinien für Standardverbindungen zwischen Geräten und der Plattform. Der Analyst kann verschiedene Richtlinien für unterschiedliche Gerätetypen hinzufügen.
+Um Clientzertifikate und den Serverzugriff für Geräte zu konfigurieren, importiert der Systembediener die zugehörigen Zertifikate der Zertifizierungsstelle (CA-Zertifikate) und des Messaging-Servers in {{site.data.keyword.iot_short_notm}}. Der Sicherheitsanalyst konfiguriert dann die Standardsicherheitsrichtlinien für Verbindungen zwischen Geräten und der Plattform. Der Analyst kann verschiedene Richtlinien für unterschiedliche Gerätetypen hinzufügen.
 
 Informationen zum Konfigurieren von Zertifikaten finden Sie in [Zertifikate konfigurieren](set_up_certificates.html).
 

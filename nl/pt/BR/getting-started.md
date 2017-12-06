@@ -77,7 +77,7 @@ Para incluir um dispositivo a partir do painel do {{site.data.keyword.iot_short_
 
 5. Clique em **Avançar** para concluir o processo.
 
-6. Forneça um token de autenticação ou aceite um token gerado automaticamente. Se você escolher criar seu próprio token, certifique-se de que ele tenha entre 8 e 36 caracteres e consista somente em caracteres alfanuméricos e os caracteres a seguir: `_`, `.`, `!`, `&`, `@`, `?`, `\*`, `+`, `(`, `)` e `-`.
+6. Forneça um token de autenticação ou aceite um token gerado automaticamente. Se você optar por criar seu próprio token, certifique-se de que ele tenha entre 8 e 36 caracteres e consista apenas em caracteres alfanuméricos e os seguintes caracteres: `_`, `.`, `!`, `&`, `a`, `?`, `\ *`, `+`, `(`, `)` e `-`.
 
     O token não deve conter sequências de caracteres repetidos, palavras de dicionário, nomes de usuário ou outras sequências predefinidas.
 
@@ -109,12 +109,12 @@ Para incluir um dispositivo a partir do painel do {{site.data.keyword.iot_short_
       * 1883
       * 8883 (criptografada)
       * 443 (soquetes da web)
-    * ID do dispositivo: d:*org_id:device_type:device_id*
+    * ID do dispositivo: d:_org_id:device_type:device_id_
     * Nome do usuário: use-token-auth
-    * Senha: *Token de autenticação*
-    * Formato do tópico de evento: iot-2/evt/*event_id/fmt/format_string*
+    * Senha: _Token de autenticação_
+    * Formato do tópico de evento: iot-2/evt/_event_id/fmt/format_string_
 
-      Em que *event_id* especifica o nome do evento que é mostrado no {{site.data.keyword.iot_short_notm}} e *format_string* é o formato do evento, como JSON.
+      Em que _event_id_ especifica o nome do evento que é mostrado no {{site.data.keyword.iot_short_notm}} e _format_string_ é o formato do evento, como JSON.
 
     * Formato da mensagem: JSON
 
@@ -206,12 +206,11 @@ Condição = `temp_cpu>60 AND cpu_load>90`
 
     É possível usar os requisitos de acionador condicional para controlar o número de alertas que são acionados para uma regra durante um período de tempo. O acionamento condicional age em qualquer condição na regra. Por exemplo, se uma regra tiver cinco condições paralelas configuradas usando OR, cada condição verdadeira será incluída na contagem do acionador condicional.
 
-
       1. No editor de regras, clique no link **Acionar cada vez que as condições forem atendidas** padrão para abrir o diálogo para configurar o requisito de frequência.
       2. Selecione e configure o acionador condicional que você deseja usar na regra.
 
         * Acionar cada vez que as condições forem atendidas.
-        * Acionar se a condições forem atendidas N vezes em *Unidade de tempo* M
+        * Acionar se a condições forem atendidas N vezes em _Unidade de tempo_ M
 
 5. Crie ou selecione uma ou mais ações que ocorrem se as condições da regra forem atendidas.
 

@@ -67,7 +67,7 @@ Per creare una tabella e aggiungere una scheda a tale tabella:
 <tbody>
 <tr>
 <td>Visualizzazione generica</td>
-<td>Il valore di uno o più dataset.</br>**Suggerimento:** per visualizzare fino a tre valori di punto dati in una piccola tabella, scegli la dimensione del widget grande.  </td>
+<td>Il valore di uno o più dataset. </br>**Suggerimento:** per visualizzare fino a tre valori di punto dati in una piccola tabella, scegli la dimensione del widget grande. </td>
 </tr>
 <tr>
 <td>Grafico a linee</td>
@@ -98,7 +98,7 @@ Per creare una tabella e aggiungere una scheda a tale tabella:
 </tr>
 <tr>
 <td>Elenco dispositivi</td>
-<td>Un elenco per monitorare più dispositivi. Un elenco può essere utilizzato come un'origine dati per altre schede. </br>Puoi filtrare gli elenchi in base all'ID e al tipo del dispositivo nelle impostazioni della scheda. Gli elenchi di dispositivi di taglia L o più grandi possono anche essere filtrati in modo interattivo facendo clic sull'icona di filtro nella scheda. Le voci di filtro possono essere aggiunte come singole voci, intervalli (x-y) o separate da virgole.</br> Per impostazione predefinita, un elenco visualizza ID e tipo di dispositivo. Puoi configurare le impostazioni della scheda di elenco per fare in modo che la scheda visualizzi anche altri metadati dei dispositivi. </td>
+<td>Un elenco per monitorare più dispositivi. Un elenco può essere utilizzato come un'origine dati per altre schede. </br>Puoi filtrare gli elenchi in base all'ID e al tipo del dispositivo nelle impostazioni della scheda. Gli elenchi di dispositivi di taglia L o più grandi possono anche essere filtrati in modo interattivo facendo clic sull'icona di filtro nella scheda. Le voci di filtro possono essere aggiunte come singole voci, intervalli (x-y) o separate da virgole.</br> Per impostazione predefinita, un elenco visualizza ID e tipo di dispositivo. Puoi configurare le impostazioni della scheda di elenco per fare in modo che la scheda visualizzi anche altri metadati dei dispositivi.  </td>
 </tr>
 <tr>
 <td>Informazioni dispositivo</td>

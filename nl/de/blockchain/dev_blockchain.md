@@ -39,7 +39,7 @@ Eine Entwicklungsumgebung mit {{site.data.keyword.iot_short_notm}}-Blockchain-In
   - GitHub-Repository zum Bereitstellen von intelligenten Verträgen für das {{site.data.keyword.blockchainfull_notm}}-Fabric
 
 Das folgende Diagramm veranschaulicht die Entwicklungsumgebung für die {{site.data.keyword.iot_short_notm}}-Blockchain-Integration:
-![Die Integrationsarchitektur von IoT-Blockchain und {{site.data.keyword.iot_short_notm}}.](images/architecture_contracts.svg "Integrationsarchitektur von IoT-Blockchain und {{site.data.keyword.iot_short_notm}}")
+![Die IoT-Blockchain-Integrationsarchitektur von {{site.data.keyword.iot_short_notm}}.](images/architecture_contracts.svg "IoT-Blockchain-Integrationsarchitektur von {{site.data.keyword.iot_short_notm}}")
 
 ## Vorbereitende Schritte
 
@@ -97,7 +97,7 @@ Für die {{site.data.keyword.iot_short_notm}}-Blockchain-Integration ist das {{s
 
       Beispiel für Serviceberechtigungsnachweise:
      ```json
-     {
+  {
       "peers": [
       {
         "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",

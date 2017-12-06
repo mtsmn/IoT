@@ -24,7 +24,7 @@ lastupdated: "2017-03-14"
 ## 클라이언트 라이브러리
 {{site.data.keyword.iot_short_notm}}에 연결할 수 있는 게이트웨이를 개발하기 위한 클라이언트 라이브러리는 다음 언어로 제공됩니다. 
 
-|클라이언트 라이브러리 |라이브러리 및 추가 문서에 대한 링크
+|클라이언트 라이브러리|라이브러리 및 추가 문서에 대한 링크
 |:---|:---
 |C++|[https://github.com/ibm-watson-iot/iot-cpp ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-cpp){: new_window}
 |C#|[https://github.com/ibm-watson-iot/iot-csharp ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-csharp){: new_window}

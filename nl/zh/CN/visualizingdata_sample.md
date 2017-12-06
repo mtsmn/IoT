@@ -34,20 +34,20 @@ lastupdated: "2017-03-20"
 1. 使用 Node.js SDK 在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序。记录应用程序的应用程序名称和主机名，需要此信息以将应用程序上传到 {{site.data.keyword.Bluemix_notm}}。
 2. 通过完成以下步骤，在 {{site.data.keyword.Bluemix_notm}} 仪表板中将 node.JS 应用程序绑定到 {{site.data.keyword.iot_short_notm}} 实例：
 
-  a. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击已创建的 Node.JS 应用程序。
+  a. 在 {{site.data.keyword.Bluemix_notm}} 仪表板中，单击已创建的 Node.JS 应用程序。
 
   b. 单击**绑定服务或 API**，然后选择 {{site.data.keyword.iot_short_notm}} 服务并单击**添加**。
 3. 使用 cf 命令行工具，将目录切换到解压缩的可视化样本软件包，并运行以下命令以连接到 {{site.data.keyword.Bluemix_notm}}。
 ```
 cf api https://api.ng.bluemix.net
-	 ```
+```
 4. 接着，使用以下命令登录到 {{site.data.keyword.Bluemix_notm}}：
 ```
 cf login -u <your_bluemix_login_id>
 ```
 如果未使用缺省组织和空间，那么可使用：
 ```
-cf target-o <your_bluemix_org> -s dev
+cf target -o <your_bluemix_org> -s dev
 ```
 
 5. 编辑 `manifest.yml` 文件，并使用以下格式更新主机和应用程序名称：

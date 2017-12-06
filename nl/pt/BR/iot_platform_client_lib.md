@@ -18,7 +18,7 @@ lastupdated: "2017-03-13"
 As bibliotecas do cliente fornecem ferramentas e arquivos para os quais você precisa construir e desenvolver código para integrar e conectar seus dispositivos e aplicativos no {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
-As bibliotecas do cliente são fornecidas para cada uma das linguagens de programação suportadas e é possível acessá-las por meio do [repositório do GitHub do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot){:new_window} ou dos links diretos a seguir:
+As bibliotecas do cliente são fornecidas para cada um das linguagens de programação suportadas e é possível acessá-las no [repositório GitHub do {{site.data.keyword.iot_short_notm}}![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot){:new_window} ou nos links diretos a seguir:
 
 ## C++
 

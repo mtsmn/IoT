@@ -102,9 +102,9 @@ Para obter mais informações sobre por que uma chamada API (interface de progra
 
 |Propriedade|Descrição|
 |:---|:---|
-|`httpcode`|O código de status de HTTP.|
-|`message`|Uma mensagem de exceção que contém a razão da falha.|
-|`response`|O elemento JSON que contém a resposta parcial. Se não existir nenhum, esse valor será configurado como nulo.|
+|``httpcode``|O código de status de HTTP.|
+|``message``|Uma mensagem de exceção que contém a razão da falha.|
+|``response``|O elemento JSON que contém a resposta parcial. Se não existir nenhum, esse valor será configurado como nulo.|
 
 ## Assinando eventos de dispositivo
 {: #subscribe_device_events}
@@ -191,13 +191,13 @@ Para processar os eventos que são recebidos por suas assinaturas, você precisa
 
 |Propriedade|Tipo de Dados|Descrição|
 |:---|:---|
-|`event.device`|Seqüência de caracteres|Identifica o dispositivo de forma exclusiva entre todos os tipos de dispositivos na organização|
-|`event.deviceType`|Seqüência de caracteres|Identifica o tipo de dispositivo. Normalmente, o deviceType é um agrupamento de dispositivos que executam uma tarefa específica, por exemplo, "weatherballoon".|
-|`event.deviceId`|Seqüência de caracteres|Representa o ID do dispositivo. Normalmente, para um tipo de dispositivo especificado, o deviceId é um identificador exclusivo desse dispositivo, por exemplo, um número de série ou um endereço de Controle de Acesso à Mídia.|
-|`event.event`|Seqüência de caracteres|Normalmente usado para agrupar eventos específicos, por exemplo, "status", "warning" e "data".
-|`event.format`|Seqüência de caracteres|O formato pode ser qualquer sequência, por exemplo, JSON.
-|`event.data`|Dicionário|Os dados para a carga útil da mensagem. O comprimento máximo é 131072 bytes.
-|`event.timestamp`|Date and time|A data e hora do evento|
+|``event.device``|Seqüência de caracteres|Identifica o dispositivo de forma exclusiva entre todos os tipos de dispositivos na organização|
+|``event.deviceType``|Seqüência de caracteres|Identifica o tipo de dispositivo. Normalmente, o deviceType é um agrupamento de dispositivos que executam uma tarefa específica, por exemplo, "weatherballoon".|
+|``event.deviceId``|Seqüência de caracteres|Representa o ID do dispositivo. Normalmente, para um tipo de dispositivo especificado, o deviceId é um identificador exclusivo desse dispositivo, por exemplo, um número de série ou um endereço de Controle de Acesso à Mídia.|
+|``event.event``|Seqüência de caracteres|Normalmente usado para agrupar eventos específicos, por exemplo, "status", "warning" e "data".
+|``event.format``|Seqüência de caracteres|O formato pode ser qualquer sequência, por exemplo, JSON.
+|``event.data``|Dicionário|Os dados para a carga útil da mensagem. O comprimento máximo é 131072 bytes.
+|``event.timestamp``|Date and time|A data e hora do evento|
 
 ```python
 
@@ -273,31 +273,31 @@ Eventos de Status
 
 Para processar as atualizações de status que são recebidas por suas assinaturas, você precisa registrar um método de retorno de chamada de evento. As mensagens são retornadas como uma instância da classe de status.
 
-Há dois tipos de eventos de status, `Connect` e `Disconnect`. Todos os eventos de status incluem as propriedades a seguir:
+Há dois tipos de eventos de status, ``Connect`` e ``Disconnect``. Todos os eventos de status incluem as propriedades a seguir:
 
 |Propriedade|Tipo de Dados|
 |:---|:---|
-|`status.clientAddr`|Seqüência de caracteres|
-|`status.protocol`|Seqüência de caracteres|
-|`status.clientId`|Seqüência de caracteres|
-|`status.user`|Seqüência de caracteres|
-|`status.time`|Date and time|
-|`status.action`|Seqüência de caracteres|
-|`status.connectTime`|Date and time|
-|`status.port`|Integer|
+|``status.clientAddr``|Seqüência de caracteres|
+|``status.protocol``|Seqüência de caracteres|
+|``status.clientId``|Seqüência de caracteres|
+|``status.user``|Seqüência de caracteres|
+|``status.time``|Date and time|
+|``status.action``|Seqüência de caracteres|
+|``status.connectTime``|Date and time|
+|``status.port``|Integer|
 
 
-A propriedade `status.action` determina se um evento de status é do tipo `Connect` ou `Disconnect`.
+A propriedade ``status.action`` determina se um evento de status é do tipo ``Connect`` ou ``Disconnect``.
 
-Os eventos de status `Disconnect` incluem as propriedades adicionais a seguir:
+Os eventos de status ``Disconnect`` incluem as propriedades adicionais a seguir:
 
 |Propriedade|Tipo de Dados|
 |:---|:---|
-|`status.writeMsg`|Integer|
-|`status.readMsg`|Integer|
-|`status.reason`|Seqüência de caracteres|
-|`status.readBytes`|Integer|
-|`status.writeBytes`|Integer|
+|``status.writeMsg``|Integer|
+|``status.readMsg``|Integer|
+|``status.reason``|Seqüência de caracteres|
+|``status.readBytes``|Integer|
+|``status.writeBytes``|Integer|
 
 ```python
 
@@ -360,7 +360,7 @@ client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", commandData)
 ## Detalhes da organização
 {: #org_details}
 
-Os aplicativos podem usar o método `getOrganizationDetails()` para recuperar os detalhes sobre a configuração da organização.
+Os aplicativos podem usar o método ``getOrganizationDetails()`` para recuperar os detalhes sobre a configuração da organização.
 
 ```python
 
@@ -375,8 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-Para obter informações sobre o modelo de solicitação e de resposta, além dos códigos de
-status HTTP, consulte a seção Configuração da organização da [API {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
+Para obter informações sobre o modelo de solicitação e resposta e os códigos de status HTTP, consulte a seção Configuração da organização da [API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ## Operações do dispositivo em massa
@@ -389,9 +388,9 @@ Para obter informações sobre a lista de parâmetros de consulta, o modelo de s
 
 ### Recuperando Informações sobre o Dispositivo
 
-Informações em massa sobre o dispositivo podem ser recuperadas usando o método `getAllDevices()`. Esse método recupera informações sobre todos os dispositivos registrados na organização. Cada solicitação pode conter no máximo 512 KB.
+Informações em massa sobre o dispositivo podem ser recuperadas usando o método ``getAllDevices()``. Esse método recupera informações sobre todos os dispositivos registrados na organização. Cada solicitação pode conter no máximo 512 KB.
 
-A resposta contém parâmetros que são necessários para o aplicativo. Use os resultados do dicionário que aparecem na resposta para obter a matriz de dispositivos que é retornada. Outros parâmetros na resposta são necessários para fazer mais chamadas, por exemplo, o elemento `_bookmark` pode ser usado para percorrer os resultados. Envie a primeira solicitação sem especificar um marcador, em seguida, pegue o marcador retornado na resposta e forneça-o na solicitação da próxima página. Repita até o final do conjunto de resultados, que é indicado pela ausência de um marcador. Cada solicitação deve usar os mesmos valores para os outros parâmetros, caso contrário, os resultados serão indefinidos.
+A resposta contém parâmetros que são necessários para o aplicativo. Use os resultados do dicionário que aparecem na resposta para obter a matriz de dispositivos que é retornada. Outros parâmetros na resposta são necessários para fazer mais chamadas, por exemplo, o elemento ``_bookmark`` pode ser usado para percorrer os resultados. Envie a primeira solicitação sem especificar um marcador, em seguida, pegue o marcador retornado na resposta e forneça-o na solicitação da próxima página. Repita até o final do conjunto de resultados, que é indicado pela ausência de um marcador. Cada solicitação deve usar os mesmos valores para os outros parâmetros, caso contrário, os resultados serão indefinidos.
 
 
 ```python
@@ -409,7 +408,7 @@ except IoTFCReSTException as e:
 ### Incluindo vários dispositivos
 
 
-Use o método `addMultipleDevices()` para incluir um ou mais dispositivos em sua organização do {{site.data.keyword.iot_short_notm}}. Uma solicitação não pode ser maior que 512 KB. A resposta contém os tokens de autenticação que foram gerados para cada dispositivo. Assegure que seja feita uma cópia dos tokens de autenticação, pois se você perder os tokens de autenticação, eles não poderão ser recuperados.
+Use o método ``addMultipleDevices()`` para incluir um ou mais dispositivos em sua organização do {{site.data.keyword.iot_short_notm}}. Uma solicitação não pode ser maior que 512 KB. A resposta contém os tokens de autenticação que foram gerados para cada dispositivo. Assegure que seja feita uma cópia dos tokens de autenticação, pois se você perder os tokens de autenticação, eles não poderão ser recuperados.
 
 
 ```python
@@ -433,7 +432,7 @@ except IoTFCReSTException as e:
 ### Excluindo vários dispositivos
 
 
-Use o método `deleteMultipleDevices()` para excluir diversos dispositivos de uma organização do {{site.data.keyword.iot_short_notm}}. Uma solicitação não pode ser maior que 512 KB.
+Use o método ``deleteMultipleDevices()`` para excluir diversos dispositivos de uma organização do {{site.data.keyword.iot_short_notm}}. Uma solicitação não pode ser maior que 512 KB.
 
 ```python
 
@@ -459,13 +458,13 @@ except IoTFCReSTException as e:
 
 Os tipos de dispositivo que você cria em sua organização podem ser usados para criar modelos para incluir dispositivos. Usando os recursos da API (interface de programação de aplicativos) do {{site.data.keyword.iot_short_notm}}, seus aplicativos podem listar, criar, excluir, visualizar ou atualizar tipos de dispositivo em sua organização.
 
-Para obter informações sobre os parâmetros de consulta, o modelo de solicitação e de resposta e os códigos de status HTTP, veja a seção 'Tipos de dispositivo' da documentação da API do [{{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para obter informações sobre parâmetros de consulta, o modelo de solicitação e resposta e os códigos de status HTTP, consulte a seção 'Tipos de dispositivo' da documentação da [API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ### Recuperando todos os tipos de dispositivo
 
-Use o método `getAllDeviceTypes()` para recuperar todos os tipos de dispositivo que estão em sua organização do {{site.data.keyword.iot_short_notm}}.
-Use os resultados do dicionário que aparecem na resposta para obter a matriz de dispositivos que é retornada. Outros parâmetros na resposta são necessários para fazer mais chamadas, por exemplo, o elemento `_bookmark` pode ser usado para percorrer os resultados. Envie a primeira solicitação sem especificar um marcador, em seguida, pegue o marcador retornado na resposta e forneça-o na solicitação da próxima página. Repita esse processo até o final do conjunto de resultados, que é indicado pela ausência de um marcador. Cada solicitação deve usar os mesmos valores para os outros parâmetros, caso contrário, os resultados serão indefinidos.
+Use o método ``getAllDeviceTypes()`` para recuperar todos os tipos de dispositivo que estão em sua organização do {{site.data.keyword.iot_short_notm}}.
+Use os resultados do dicionário que aparecem na resposta para obter a matriz de dispositivos que é retornada. Outros parâmetros na resposta são necessários para fazer mais chamadas, por exemplo, o elemento ``_bookmark`` pode ser usado para percorrer os resultados. Envie a primeira solicitação sem especificar um marcador, em seguida, pegue o marcador retornado na resposta e forneça-o na solicitação da próxima página. Repita esse processo até o final do conjunto de resultados, que é indicado pela ausência de um marcador. Cada solicitação deve usar os mesmos valores para os outros parâmetros, caso contrário, os resultados serão indefinidos.
 
 ```python
 
@@ -489,7 +488,7 @@ except IoTFCReSTException as e:
 
 ### Incluindo um tipo de dispositivo
 
-Use o método `addDeviceType()` para registrar um tipo de dispositivo para sua instância do {{site.data.keyword.iot_short_notm}}. Em cada solicitação, deve-se primeiro definir as informações sobre o dispositivo e os elementos de metadados do dispositivo que você deseja que sejam aplicados a todos os dispositivos desse tipo. O elemento de informações sobre o dispositivo consiste em várias variáveis, que incluem número de série, fabricante, modelo, classe, descrição, firmware, versões de hardware e localização descritiva. O elemento de metadados consiste em variáveis e valores customizados que podem ser definidos pelo usuário.
+Use o método ``addDeviceType()`` para registrar um tipo de dispositivo para sua instância do {{site.data.keyword.iot_short_notm}}. Em cada solicitação, deve-se primeiro definir as informações sobre o dispositivo e os elementos de metadados do dispositivo que você deseja que sejam aplicados a todos os dispositivos desse tipo. O elemento de informações sobre o dispositivo consiste em várias variáveis, que incluem número de série, fabricante, modelo, classe, descrição, firmware, versões de hardware e localização descritiva. O elemento de metadados consiste em variáveis e valores customizados que podem ser definidos pelo usuário.
 
 
 ```python
@@ -523,7 +522,7 @@ except IoTFCReSTException as e:
 ### Excluindo um tipo de dispositivo
 
 
-Use o método `deleteDeviceType()` para excluir um tipo de dispositivo de sua organização do{{site.data.keyword.iot_short_notm}}.
+Use o método ``deleteDeviceType()`` para excluir um tipo de dispositivo de sua organização do{{site.data.keyword.iot_short_notm}}.
 
 ```python
 
@@ -541,7 +540,7 @@ except IoTFCReSTException as e:
 ### Recuperando informações de tipos de dispositivo específicos
 
 
-Use o método `getDeviceType()` para recuperar informações para um tipo de dispositivo específico. O `typeId` do tipo de dispositivo que você deseja recuperar deve ser especificado como um parâmetro.
+Use o método ``getDeviceType()`` para recuperar informações para um tipo de dispositivo específico. O ``typeId`` do tipo de dispositivo que você deseja recuperar deve ser especificado como um parâmetro.
 
 ```python
 
@@ -559,11 +558,11 @@ except IoTFCReSTException as e:
 ### Atualizando um tipo de dispositivo
 
 
-Use o método `updateDeviceType()` para modificar as propriedades de um tipo de dispositivo. Quando você usa o método `updateDeviceType()`, primeiro especifique o `typeId` do tipo de dispositivo a ser atualizado e, em seguida, especifique os elementos a seguir:
+Use o método ``updateDeviceType()`` para modificar as propriedades de um tipo de dispositivo. Quando você usa o método ``updateDeviceType()``, primeiro especifique o ``typeId`` do tipo de dispositivo a ser atualizado e, em seguida, especifique os elementos a seguir:
 
-- `description`
-- `deviceInfo`
-- `metadata`
+- ``description``
+- ``deviceInfo``
+- ``metadata``
 
 ```python
 
@@ -600,13 +599,12 @@ except IoTFCReSTException as e:
 
 As operações do dispositivo disponibilizadas na API (interface de programação de aplicativos) incluem listar, incluir, remover, visualizar, atualizar, visualizar localização e visualizar informações de gerenciamento do dispositivo em uma organização do {{site.data.keyword.iot_short_notm}}.
 
-Para obter informações sobre os parâmetros de consulta, sobre o modelo de solicitação e de resposta
-e sobre os códigos de status HTTP, consulte a 'seção Dispositivo' da [documentação da API {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para obter informações sobre os parâmetros de consulta, o modelo de solicitação e resposta e os códigos de status HTTP, consulte a 'Seção do dispositivo' da [documentação da API do {{site.data.keyword.iot_short_notm}}![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ### Recuperando dispositivos de um tipo de dispositivo específico
 
-Use o método `retrieveDevices()` para recuperar todos os dispositivos de um tipo de dispositivo específico em uma organização em uma instância do {{site.data.keyword.iot_short_notm}}, o que é mostrado no exemplo a seguir:
+Use o método ``retrieveDevices()`` para recuperar todos os dispositivos de um tipo de dispositivo específico em uma organização em uma instância do {{site.data.keyword.iot_short_notm}}, o que é mostrado no exemplo a seguir:
 
 
 ```python
@@ -628,20 +626,20 @@ A amostra de código anterior classifica a resposta com base no ID do dispositiv
 ### Incluindo um Dispositivo
 
 
-Para incluir um dispositivo em uma organização do {{site.data.keyword.iot_short_notm}}, use o método `registerDevice()`. O método `registerDevice()` inclui um único dispositivo em sua organização do {{site.data.keyword.iot_short_notm}}. Ao incluir um dispositivo, é possível especificar os parâmetros a seguir:
+Para incluir um dispositivo em uma organização do {{site.data.keyword.iot_short_notm}}, use o método ``registerDevice()``. O método ``registerDevice()`` inclui um único dispositivo em sua organização do {{site.data.keyword.iot_short_notm}}. Ao incluir um dispositivo, é possível especificar os parâmetros a seguir:
 
 |Parâmetro|Requirement|Descrição
 |:---|:---|
-|`deviceTypeId`|Optional|Atribui um tipo de dispositivo para o dispositivo. Se existir um conflito entre as variáveis definidas pelo tipo de dispositivo e as variáveis definidas pela variável `deviceInfo`, as variáveis específicas do dispositivo terão precedência.|
-|`deviceId`|Mandatório||
-|`authToken`|Optional|Se não fornecido, um token de autenticação será gerado e incluído na resposta.|
-|`deviceInfo`|Optional|Contém diversas variáveis que incluem serialNumber, manufacturer, model, deviceClass, description, descriptiveLocation, firmware e versões de hardware.|
-|`metadata`|Optional|Pares de sequência de valores de campo customizado, conforme esboçado em [Código de amostra para incluir um tipo de dispositivo](#sample_device_type).|
-|`location`|Optional|Contém as variáveis longitude, latitude, elevation, accuracy e measuredDateTime.|
+|``deviceTypeId``|Optional|Atribui um tipo de dispositivo para o dispositivo. Se existir um conflito entre as variáveis definidas pelo tipo de dispositivo e as variáveis definidas pela variável ``deviceInfo``, as variáveis específicas do dispositivo terão precedência.|
+|`` deviceId``|Mandatório||
+|``authToken``|Optional|Se não fornecido, um token de autenticação será gerado e incluído na resposta.|
+|``deviceInfo``|Optional|Contém diversas variáveis que incluem serialNumber, manufacturer, model, deviceClass, description, descriptiveLocation, firmware e versões de hardware.|
+|``metadata``|Optional|Pares de sequência de valores de campo customizado, conforme esboçado em [Código de amostra para incluir um tipo de dispositivo](#sample_device_type).|
+|``location``|Optional|Contém as variáveis longitude, latitude, elevation, accuracy e measuredDateTime.|
 
-Para obter informações sobre esses parâmetros, o formato e os códigos de resposta, veja a documentação da API do [ ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices){: new_window}.
+Para obter mais informações sobre esses parâmetros, o formato de resposta e os códigos, consulte a [Documentação da API![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices){: new_window}.
 
-Ao usar o método `registerDevice()`, defina o parâmetro deviceID obrigatório e os parâmetros opcionais necessários para seu dispositivo, em seguida, chame o método usando os parâmetros selecionados.
+Ao usar o método ``registerDevice()``, defina o parâmetro deviceID obrigatório e os parâmetros opcionais necessários para seu dispositivo, em seguida, chame o método usando os parâmetros selecionados.
 
 ### Código de amostra para incluir um tipo de dispositivo
 {: #sample_device_type}
@@ -660,7 +658,7 @@ apiCli.registerDevice(deviceTypeId, deviceId, metadata, deviceInfo, location)
 ```
 ### Excluindo um Dispositivo
 
-Use o método `deleteDevice()` para remover um dispositivo de uma organização na organização do {{site.data.keyword.iot_short_notm}}. Ao excluir um dispositivo usando o método `deleteDevice()`, deve-se especificar os parâmetros deviceTypeId e deviceId.
+Use o método ``deleteDevice()`` para remover um dispositivo de uma organização na organização do {{site.data.keyword.iot_short_notm}}. Ao excluir um dispositivo usando o método ``deleteDevice()``, deve-se especificar os parâmetros deviceTypeId e deviceId.
 
 A amostra de código a seguir esboça o formato necessário para esse método:
 
@@ -670,7 +668,7 @@ apiCli.deleteDevice(deviceTypeId, deviceId)
 
 ### Obtendo um dispositivo
 
-Use o método `getDevice()` para recuperar um dispositivo de uma organização no {{site.data.keyword.iot_short_notm}}. Ao recuperar detalhes do dispositivo usando o método `getDevice()`, deve-se especificar os parâmetros deviceTypeId e deviceId
+Use o método ``getDevice()`` para recuperar um dispositivo de uma organização no {{site.data.keyword.iot_short_notm}}. Ao recuperar detalhes do dispositivo usando o método ``getDevice()``, deve-se especificar os parâmetros deviceTypeId e deviceId
 
 A amostra de código a seguir fornece um esboço do formato necessário para esse método.
 
@@ -680,7 +678,7 @@ apiCli.getDevice(deviceTypeId, deviceId)
 
 ### Recuperando todos os dispositivos
 
-Use o método `getAllDevices()` para recuperar todos os dispositivos de uma organização no {{site.data.keyword.iot_short_notm}}.
+Use o método ``getAllDevices()`` para recuperar todos os dispositivos de uma organização no {{site.data.keyword.iot_short_notm}}.
 
 ```python
 apiCli.getAllDevices({'typeId' : deviceTypeId})
@@ -688,9 +686,9 @@ apiCli.getAllDevices({'typeId' : deviceTypeId})
 
 ### Atualizando um dispositivo
 
-Para modificar uma ou mais propriedades de um dispositivo, use o método `updateDevice()`.
+Para modificar uma ou mais propriedades de um dispositivo, use o método ``updateDevice()``.
 
-É possível atualizar qualquer propriedade nos parâmetros deviceInfo ou metadata. Para atualizar uma propriedade do dispositivo. defina o parâmetro deviceInfo antes de chamar o método `updateDevice()`. O parâmetro de status deve conter `alert`: True. A propriedade alert controla se um dispositivo exibe códigos de erro na interface com o usuário do {{site.data.keyword.iot_short_notm}} e deve estar configurada por padrão para `enabled`: True, conforme esboçado no exemplo de código a seguir:
+É possível atualizar qualquer propriedade nos parâmetros deviceInfo ou metadata. Para atualizar uma propriedade do dispositivo. defina o parâmetro deviceInfo antes de chamar o método ``updateDevice()``. O parâmetro de status deve conter ``alert``: True. A propriedade alert controla se um dispositivo exibe códigos de erro na interface com o usuário do {{site.data.keyword.iot_short_notm}} e deve estar configurada por padrão para ``enabled``: True, conforme esboçado no exemplo de código a seguir:
 
 ```python
 status = { "alert": { "enabled": True }  }
@@ -710,7 +708,7 @@ apiCli.updateDevice("MyDeviceType", "200020002000", deviceInfo, status)
 ### Recuperando informações de localização
 
 
-Use o método `getDeviceLocation()` para recuperar as propriedades de localização de um dispositivo. Os parâmetros necessários para recuperar os dados da localização são deviceTypeId e deviceId.
+Use o método ``getDeviceLocation()`` para recuperar as propriedades de localização de um dispositivo. Os parâmetros necessários para recuperar os dados da localização são deviceTypeId e deviceId.
 
 ```python
 apiClient.getDeviceLocation("iotsample-arduino", "arduino01")
@@ -721,7 +719,7 @@ A resposta a este método contém as propriedades de longitude, latitude, eleva�
 ### Atualizando informações de localização
 
 
-Use o método `updateDeviceLocation()` para modificar as informações de localização de um dispositivo. Assim como na atualização de propriedades do dispositivo, o parâmetro deviceLocation deve ser definido com as mudanças que você gostaria de aplicar. A amostra de código a seguir demonstra a mudança dos dados da localização para um dispositivo específico:
+Use o método ``updateDeviceLocation()`` para modificar as informações de localização de um dispositivo. Assim como na atualização de propriedades do dispositivo, o parâmetro deviceLocation deve ser definido com as mudanças que você gostaria de aplicar. A amostra de código a seguir demonstra a mudança dos dados da localização para um dispositivo específico:
 
 ```python
 deviceLocation = { "longitude": 0, "latitude": 0, "elevation": 0, "accuracy": 0, "measuredDateTime": "2015-10-28T08:45:11.673Z"}
@@ -734,7 +732,7 @@ Se uma data não for fornecida, a data e hora atuais serão usadas.
 ### Obter informações de gerenciamento
 
 
-Use o método `getDeviceManagementInformation()` para obter as informações de gerenciamento de dispositivo de um dispositivo específico. A resposta contém a última data e hora de atividade, o status inativo do dispositivo (True/False), o suporte para ações de dispositivo e firmware e dados do firmware. Para obter uma lista abrangente de conteúdo de resposta, consulte a documentação da API (interface de programação de aplicativos) relevante.
+Use o método ``getDeviceManagementInformation()`` para obter as informações de gerenciamento de dispositivo de um dispositivo específico. A resposta contém a última data e hora de atividade, o status inativo do dispositivo (True/False), o suporte para ações de dispositivo e firmware e dados do firmware. Para obter uma lista abrangente de conteúdo de resposta, consulte a documentação da API (interface de programação de aplicativos) relevante.
 
 A amostra de código a seguir retorna as informações de gerenciamento de dispositivo para um dispositivo com um deviceId configurado como "00aabbccde03" e um deviceTypeId configurado como "iotsample-arduino":
 
@@ -754,13 +752,12 @@ Use as operações de diagnóstico do dispositivo para implementar as tarefas de
 - Recuperando códigos de erro do dispositivo
 - Incluindo códigos de erro
 
-Para obter mais informações sobre modelos de consulta e de resposta, sobre códigos de resposta e
-sobre parâmetros de consulta, veja a [documentação da API {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para obter mais informações sobre modelos de consulta e resposta, códigos de resposta e parâmetros de consulta, consulte a [Documentação da API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Obter logs de diagnóstico
 
 
-Use o método `getAllDiagnosticLogs()` para recuperar todos os logs de diagnóstico para um dispositivo específico. O método `getAllDiagnosticLogs()` requer os parâmetros deviceTypeId e deviceId.
+Use o método ``getAllDiagnosticLogs()`` para recuperar todos os logs de diagnóstico para um dispositivo específico. O método ``getAllDiagnosticLogs()`` requer os parâmetros deviceTypeId e deviceId.
 
 ```python
 apiCli.getAllDiagnosticLogs(deviceTypeId, deviceId)
@@ -771,7 +768,7 @@ O modelo de resposta para esse método contém as propriedades ID do log, mensag
 ### Limpando os logs de diagnóstico para um dispositivo
 
 
-Use o método `clearAllDiagnosticLogs()` para excluir todos os logs de diagnóstico de um dispositivo específico. Os parâmetros necessários são deviceTypeId e deviceId. Tome cuidado ao excluir arquivos de log, porque eles não podem ser recuperados após serem excluídos.
+Use o método ``clearAllDiagnosticLogs()`` para excluir todos os logs de diagnóstico de um dispositivo específico. Os parâmetros necessários são deviceTypeId e deviceId. Tome cuidado ao excluir arquivos de log, porque eles não podem ser recuperados após serem excluídos.
 
 ```python
 apiCli.clearAllDiagnosticLogs(deviceTypeId, deviceId)
@@ -780,20 +777,20 @@ apiCli.clearAllDiagnosticLogs(deviceTypeId, deviceId)
 ### Incluindo um log de diagnóstico
 
 
-Use o método `addDiagnosticLog()` para incluir uma entrada no log de diagnóstico do dispositivo. O log pode ser removido quando a nova entrada for incluída. Se nenhuma data for fornecida, a data e hora atuais serão incluídas na entrada. Para usar esse método, você precisa definir um parâmetro 'logs' com as variáveis a seguir:
+Use o método ``addDiagnosticLog()`` para incluir uma entrada no log de diagnóstico do dispositivo. O log pode ser removido quando a nova entrada for incluída. Se nenhuma data for fornecida, a data e hora atuais serão incluídas na entrada. Para usar esse método, você precisa definir um parâmetro 'logs' com as variáveis a seguir:
 
 
 |Variável|Requirement|Descrição|
 |:---|:---|:---|
-|`message`|Mandatório|Contém a mensagem de diagnóstico que você gostaria de incluir|
-|`severity`|Optional|Corresponde à gravidade do log de diagnóstico e pode ser configurada como 0, 1 ou 2, o que corresponde às categorias de informação, aviso e erro|
-|`data`|Optional|Contém dados de diagnóstico|
-|`timestamp`|Optional|Contém a data e hora da entrada de log no formato ISO8601, mas se não especificada, a data e hora atuais serão usadas|
+|``message``|Mandatório|Contém a mensagem de diagnóstico que você gostaria de incluir|
+|``severity``|Optional|Corresponde à gravidade do log de diagnóstico e pode ser configurada como 0, 1 ou 2, o que corresponde às categorias de informação, aviso e erro|
+|``dados``|Optional|Contém dados de diagnóstico|
+|``timestamp``|Optional|Contém a data e hora da entrada de log no formato ISO8601, mas se não especificada, a data e hora atuais serão usadas|
 
 
 Os outros parâmetros necessários no método são os valores de deviceTypeId e deviceId para o dispositivo.
 
-A amostra de código a seguir contém um exemplo do método `addDiagnosticLog()`:
+A amostra de código a seguir contém um exemplo do método ``addDiagnosticLog()``:
 
 ```python
 logs = { "message": "MessageContent", "severity": 0, "data": "LogData"}
@@ -803,7 +800,7 @@ apiCli.addDiagnosticLog(deviceTypeId, deviceId, logs)
 ### Recuperando um log de diagnóstico específico
 
 
-Use o método `getDiagnosticLog()` para recuperar um log de diagnóstico específico para um dispositivo especificado com base no ID de log. Os parâmetros necessários para esse método são deviceTypeId, deviceId e logId.
+Use o método ``getDiagnosticLog()`` para recuperar um log de diagnóstico específico para um dispositivo especificado com base no ID de log. Os parâmetros necessários para esse método são deviceTypeId, deviceId e logId.
 
 ```python
 apiCli.getDiagnosticLog(deviceTypeId, deviceId, logId)
@@ -812,7 +809,7 @@ apiCli.getDiagnosticLog(deviceTypeId, deviceId, logId)
 ### Excluindo um log de diagnóstico
 
 
-Use o método `deleteDiagnosticLog()` para excluir um log de diagnóstico específico. Para especificar um log de diagnóstico, os parâmetros deviceTypeId, deviceId e logID devem ser fornecidos.
+Use o método ``deleteDiagnosticLog()`` para excluir um log de diagnóstico específico. Para especificar um log de diagnóstico, os parâmetros deviceTypeId, deviceId e logID devem ser fornecidos.
 
 ```python
 apiCli.deleteDiagnosticLog(deviceTypeId, deviceId, logId)
@@ -821,7 +818,7 @@ apiCli.deleteDiagnosticLog(deviceTypeId, deviceId, logId)
 ### Recuperando códigos de erro do dispositivo
 
 
-Use o método `getAllDiagnosticErrorCodes()` para recuperar todos os códigos de erro de diagnóstico associados a um dispositivo específico.
+Use o método ``getAllDiagnosticErrorCodes()`` para recuperar todos os códigos de erro de diagnóstico associados a um dispositivo específico.
 
 ```python
 apiCli.getAllDiagnosticErrorCodes(deviceTypeId, deviceId)
@@ -830,7 +827,7 @@ apiCli.getAllDiagnosticErrorCodes(deviceTypeId, deviceId)
 ### Limpar códigos de erro de diagnóstico
 
 
-Use o método `clearAllErrorCodes()` para limpar a lista de códigos de erro associados ao dispositivo. A lista é substituída com um único código de erro de zero.
+Use o método ``clearAllErrorCodes()`` para limpar a lista de códigos de erro associados ao dispositivo. A lista é substituída com um único código de erro de zero.
 
 ```python
 apiCli.clearAllErrorCodes(deviceTypeId, deviceId)
@@ -839,7 +836,7 @@ apiCli.clearAllErrorCodes(deviceTypeId, deviceId)
 ### Incluindo um código de erro de diagnóstico simples
 
 
-Use o método `addErrorCode()` para incluir um usar na lista de códigos de erro associados ao dispositivo. A lista pode ser removida quando a nova entrada for incluída. Os parâmetros necessários no método são deviceTypeId, deviceId e errorCode. O parâmetro errorCode contém as seguintes variáveis:
+Use o método ``addErrorCode()`` para incluir um usar na lista de códigos de erro associados ao dispositivo. A lista pode ser removida quando a nova entrada for incluída. Os parâmetros necessários no método são deviceTypeId, deviceId e errorCode. O parâmetro errorCode contém as seguintes variáveis:
 
 - errorCode: Esta variável é obrigatória e deve ser configurada como inteiro. Essa variável configura o número do código de erro criado.
 - timestamp: essa variável é opcional e contém a data e hora da entrada de log no formato ISO8601. Se esta variável não estiver incluída, ela é automaticamente incluída com a data e a hora atuais.
@@ -852,7 +849,7 @@ apiCli.addErrorCode(deviceTypeId, deviceId, errorCode)
 ## Determinação de problema de conexão
 {: #connection_problem_determination}
 
-Use o método `getDeviceConnectionLogs()` para listar os eventos de log de conexão para um dispositivo. Eventos de log de conexão podem ser usados para diagnosticar problemas de conectividade entre o dispositivo e o serviço do {{site.data.keyword.iot_short_notm}}. As entradas registram conexões bem-sucedidas, tentativas de conexão mal sucedidas, desconexões intencionais e eventos de desconexão iniciados pelo servidor.
+Use o método ``getDeviceConnectionLogs()`` para listar os eventos de log de conexão para um dispositivo. Eventos de log de conexão podem ser usados para diagnosticar problemas de conectividade entre o dispositivo e o serviço do {{site.data.keyword.iot_short_notm}}. As entradas registram conexões bem-sucedidas, tentativas de conexão mal sucedidas, desconexões intencionais e eventos de desconexão iniciados pelo servidor.
 
 ```
 apiCli.getDeviceConnectionLogs(deviceTypeId, deviceId)

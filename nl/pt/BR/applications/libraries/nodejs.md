@@ -273,7 +273,7 @@ Por padrão, os aplicativos assinam todos os eventos de todos os dispositivos co
 ### Manipulando eventos a partir de dispositivos
 
 
-Para processar os eventos que são recebidos por suas assinaturas, implemente um método de retorno de chamada de evento. O aplicativo cliente {{site.data.keyword.iot_short_notm}} envia o evento `deviceEvent`. Esta função possui as seguintes propriedades:
+Para processar os eventos que são recebidos por suas assinaturas, implemente um método de retorno de chamada de evento. O aplicativo cliente {{site.data.keyword.iot_short_notm}} envia o evento ``deviceEvent``. Esta função possui as seguintes propriedades:
 
 - deviceType
 - deviceId

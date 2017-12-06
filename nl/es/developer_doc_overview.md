@@ -60,7 +60,7 @@ Puede crear y gestionar dispositivos en {{site.data.keyword.iot_short_notm}} uti
 Si los dispositivos no se pueden conectar directamente a Internet, utilice la información proporcionada para crear un dispositivo de pasarela para recuperar y enviar datos a las aplicaciones de la organización de {{site.data.keyword.iot_short_notm}}.
 El protocolo de mensajería MQTT está soportado para el desarrollo de pasarelas en {{site.data.keyword.iot_short_notm}}.
 
-Para obtener más información y enlaces con las bibliotecas de cliente disponibles, consulte [Bibliotecas de cliente para el desarrollo de {{site.data.keyword.iot_short_notm}}](iot_platform_client_lib.html).
+Para obtener más información y enlaces a las bibliotecas de cliente disponibles, consulte [Bibliotecas de cliente para el desarrollo de {{site.data.keyword.iot_short_notm}}](iot_platform_client_lib.html).
 
 # Enlaces relacionados
 {: #rellinks}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-07-20"
 
 ---
 
@@ -22,9 +22,9 @@ lastupdated: "2017-03-13"
 
 ## {{site.data.keyword.iot_short_notm}} のアーキテクチャー
 {: #watsoniotplatform_architecture}
-![IBM Watson IoT Platform のアーキテクチャー](images/architecture_platform.svg "IBM Watson IoT Platform のアーキテクチャー")
+![IBM Watson IoT Platform のアーキテクチャー](images/architecture_platform_2.svg "IBM Watson IoT Platform のアーキテクチャー")
 
-**重要:** 分析機能は、{{site.data.keyword.iotrtinsights_full}} サービスからマージされます。既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのデータ・ソースとして {{site.data.keyword.iot_short_notm}} 組織を使用する場合は、既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのマイグレーションが完了するまでクラウド分析とエッジ分析が有効になりません。マイグレーションが完了するまでは、引き続き {{site.data.keyword.iotrtinsights_short}} ダッシュボードを使用して分析要件に対応してください。詳しくは、IBM developerWorks にある [IBM Watson IoT Platform のブログ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} および既存の {{site.data.keyword.iotrtinsights_short}} インスタンス・ダッシュボードをご覧ください。  
+**重要:** 分析機能は、{{site.data.keyword.iotrtinsights_full}} サービスからマージされます。既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのデータ・ソースとして {{site.data.keyword.iot_short_notm}} 組織を使用する場合は、既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのマイグレーションが完了するまで分析機能が有効になりません。マイグレーションが完了するまでは、引き続き {{site.data.keyword.iotrtinsights_short}} ダッシュボードを使用して分析要件に対応してください。詳しくは、IBM developerWorks にある [IBM Watson IoT Platform のブログ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} および既存の {{site.data.keyword.iotrtinsights_short}} インスタンス・ダッシュボードをご覧ください。  
 
 {{site.data.keyword.iot_short_notm}} は、{{site.data.keyword.iot_short_notm}} API と {{site.data.keyword.iot_short_notm}} メッセージ・プロトコルを使用してアプリケーションやデバイスと通信します。{{site.data.keyword.iot_short_notm}} ダッシュボードは、プラットフォーム内の操作を簡略化するためのフロントエンド・ユーザー・インターフェースとして接続します。分析ソリューションでは、そのようなデバイス・データを格納したり使用したりできます。
 

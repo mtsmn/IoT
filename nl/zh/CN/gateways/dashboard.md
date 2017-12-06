@@ -157,7 +157,7 @@ Edge Analytics Agent (EAA) 是基于针对边缘处理优化的 streaming engine
 4. 编辑环境的配置参数：
  <dl>
  <dt>DataDirectSendEnable</dt>
- <dd>布尔值 (true|false)</br>
+ <dd>BOOLEAN (true|false)</br>
  TRUE（缺省值）- 将所有数据发送到 {{site.data.keyword.iot_short_notm}}。</br>
  FALSE - 仅当引擎上设置了规则时，才将数据发送到 {{site.data.keyword.iot_short_notm}}。</dd>
  <dt>MonitorInterval</dt>

@@ -35,20 +35,20 @@ Operações de Dispositivo ||| Papéis do usuário|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrador** | **Operador** | **Desenvolvedor** | **Analista** | **Leitor**
 Criar, atualizar ou excluir dispositivos | P | P | P | - | -
-Visualizar dispositivos | P | P | P | P | X
+Visualizar dispositivos | P | P | P | P | P
 Ativar dispositivo | P | P | P | - | -
 Publicar um evento | - | - | - | - | -
-Assinar um evento | P | P | P | P | X
+Subscrever para um evento | P | P | P | P | P
 Publicar um comando | P | P | P | - | -
 Assinar um comando | - | - | - | - | -
 Iniciar ação de gerenciamento de dispositivo | P | P | P | - | -
-Visualizar ações de gerenciamento de dispositivo | P | P | P | P | X
+Visualizar ações de gerenciamento de dispositivo | P | P | P | P | P
 Limpar ações de gerenciamento de dispositivo | P | P | P | - | -
-Gerenciar pacotes configuráveis de ações de gerenciamento de dispositivo | P | P | P | - | -
-Criar, atualizar ou excluir tipos de dispositivos | P | P | P | - | -
-Visualizar tipos de dispositivos | P | P | P | P | X
-Gerenciar logs de diagnóstico | P | P | P | - | -
-Visualizar logs de diagnóstico | P | P | P | - | -
+Gerenciar pacotes configuráveis de ação de gerenciamento de dispositivo | P | P | P | - | -
+Criar, atualizar ou excluir tipos de dispositivo | P | P | P | - | -
+Visualizar tipos de dispositivo | P | P | P | P | P
+Gerenciar logs de diagnósticos | P | P | P | - | -
+Visualizar logs de diagnósticos | P | P | P | - | -
 
 ### Operações de log {: #user-log-ops}
 
@@ -62,27 +62,27 @@ Visualizar logs do servidor | P | P | P | P | P
 Operações de cache ||| Papéis do usuário|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrador** | **Operador** | **Desenvolvedor** | **Analista** | **Leitor**
-Visualizar dados ativos (cache de eventos) | P | P | P | P | X
-Gerenciar dados ativos (cache de eventos) | P	| P | P |	P	| -
+Visualizar dados ativos (cache de eventos) | P | P | P | P | P
+Gerenciar dados ativos (cache de eventos) | X	| P | P |	X	| -
 
 ### Operações de organização {: #user-org-ops}
 
 Operações de organização ||| Papéis do usuário|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrador** | **Operador** | **Desenvolvedor** | **Analista** | **Leitor**
-Configurar parâmetros de armazenamento|	P| - |-|-|-				
+Configure os parâmetros de armazenamento|	P| - |-|-|-				
 Configurar provedor de autenticação|	P|-|-|-|-				
 Criar, visualizar, atualizar, excluir configuração de e-mail	|P|-|-|-|-				
 Visualizar provedores de e-mail IoTP disponíveis	|P|	P|-|-|-			
-Criar, visualizar, atualizar, excluir modelos de correio	|P	|P	|-|-|-		
+Criar, visualizar, atualizar, excluir modelos de correio	|X	|X	|-|-|-		
 Criar, atualizar, excluir usuários	|P|	P|-|-|-			
 Visualizar usuários	|P|	P|	P|	P|-
-Criar, atualizar, excluir convites de usuários|	P	|P	| -|-|-		
-Visualizar convites de usuários	|P	|P	|- |- |-		
-Preencher convite	|P|	P|	P|	P|	X
-Criar, atualizar, excluir chaves API (interface de programação de aplicativos)	|P	|P	| -|-|-		
-Visualizar chaves API (interface de programação de aplicativos)	|P	|P	|- |- |-		
-Visualizar informações de uso da organização	|P	|P	| -|-|-		
+Criar, atualizar, excluir convites de usuário|	X	|X	| -|-|-		
+Visualizar convites de usuário	|X	|X	|- |- |-		
+Concluir convite	|P|	P|	P|	P|	P
+Criar, atualizar, excluir chaves API	|X	|X	| -|-|-		
+Visualizar chaves API	|X	|X	|- |- |-		
+Visualizar informações de uso da ORG	|X	|X	| -|-|-		
 
 ### Operações de controle de acesso {: #user-access-ops}
 
@@ -90,41 +90,41 @@ Operações de controle de acesso ||| Papéis do usuário|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrador** | **Operador** | **Desenvolvedor** | **Analista** | **Leitor**
 Visualizar propriedades de usuários, incluindo direitos de acesso	|P|	P|	P|	P| -
-Visualizar propriedades próprias dos usuários, incluindo direitos de acesso	|P|	P|	P|	P|	X
-Gerenciar usuários, incluindo direitos de acesso	|P	|P	|-|-|-		
-Visualizar propriedades de chave API (interface de programação de aplicativos), incluindo direitos de acesso|	P|	P|	P|	P|-
-Visualizar propriedades próprias da chave API (interface de programação de aplicativos), incluindo direitos de acesso	|-|	-|	-| -| -		
-Criar, atualizar, excluir chave API (interface de programação de aplicativos), incluindo direitos de acesso	|P	|P	|-|-|-		
-Visualizar propriedades do dispositivo, incluindo direitos de acesso	|P|	P|	P|	P|	X
-Visualizar propriedades próprias do dispositivo, incluindo direitos de acesso	|-	|- |- |- |-		
+Visualizar propriedades próprias dos usuários, incluindo direitos de acesso	|P|	P|	P|	P|	P
+Gerenciar usuários, incluindo direitos de acesso	|X	|X	|-|-|-		
+Visualizar propriedades da chave API, incluindo direitos de acesso|	P|	P|	P|	P|-
+Visualizar propriedades próprias da chave API, incluindo direitos de acesso	|-|	-|	-| -| -		
+Criar, atualizar, excluir a chave API, incluindo direitos de acesso |X	|X	|-|-|-		
+Visualizar propriedades do dispositivo, incluindo direitos de acesso	|P|	P|	P|	P|	P
+Visualizar propriedades próprias do dispositivo, incluindo direitos de acesso	|-	|- |- |- |-
 Criar, atualizar, excluir dispositivo, incluindo direitos de acesso	|P|	P|	P|	-| -
-Visualizar funções	|P	|P	|P	|P	|X
-Criar, atualizar, excluir funções customizadas	|P	|P |- |- |-
-Visualizar operações*	|P	|P	|P	|P	|P
+Visualizar funções	|X	|X	|X	|X	|P
+Criar, atualizar, excluir funções customizadas	|X	|P |- |- |-
+Visualizar operações*	|X	|X	|X	|X	|P
 
 ### Operações de análise de dados {: #user-analytics-ops}
 
 Operações de análise de dados ||| Papéis do usuário|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrador** | **Operador** | **Desenvolvedor** | **Analista** | **Leitor**
-Visualizar regras de análise de dados|	P|	P|	P|	P|	X
-Gerenciar regras de análise de dados|	P|	P|	P|	P| -
-Visualizar ações de análise de dados|	P|	P|	P|	P|	X
-Gerenciar ações de análise de dados|	P|	P|	P|	P| -
-Visualizar alertas de análise de dados|	P|	P|	P|	P|	X
-Visualizar esquemas de mensagens de análise de dados|	P|	P|	P|	P|	X
-Gerenciar esquemas de mensagens de análise de dados|	P|	P|	P|	P| -
+Visualizar regras de análise de dados|	P|	P|	P|	P|	P
+Gerenciar regras de analítica|	P|	P|	P|	P| -
+Visualizar ações de analítica|	P|	P|	P|	P|	P
+Gerenciar ações de analítica|	P|	P|	P|	P| -
+Visualizar alertas de analítica|	P|	P|	P|	P|	P
+Visualizar esquemas de mensagens de analítica|	P|	P|	P|	P|	P
+Gerenciar esquemas de mensagens de analítica|	P|	P|	P|	P| -
 
 ### Operações de serviço de terceiro {: #user-third-party}
 
 Operações de serviço de terceiro ||| Papéis do usuário|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrador** | **Operador** | **Desenvolvedor** | **Analista** | **Leitor**
-Processar notificações em lote de plataforma externa	|P|	P	|P |-|-
-Processar notificações em lote e enviá-las à plataforma externa	|P|	P	|P| -| -		
-Publicar um evento para um dispositivo	|P|	P	|P|	- |-
-Assinar eventos a partir de um dispositivo	|P	|P	|P |-| -		
-Configurar uma URL (Localizador Uniforme de Recursos) de retorno de chamada da plataforma externa	|P	|P	|P|	-| -		
+Processar notificações em lote da plataforma externa	|P|	X	|P |-|-
+Processar notificações em lote e enviá-las para a plataforma externa	|P|	X	|P| -| -		
+Publicar um evento para um dispositivo	|P|	X	|P|	- |-
+Assinar eventos de um dispositivo	|X	|X	|P |-| -		
+Configurar uma URL de retorno de chamada para a plataforma externa	|X	|X	|P|	-| -
 Configurar o nível de assinatura da plataforma externa|	P|	P|	P |- |-		
-Obter status de funcionamento do status do conector	|P|	P	|P	|- |-
-Verificar se um sistema externo está ativado e validar credenciais	|P	|P|	P	|- |-
+Obter status de funcionamento do status do conector	|P|	X	|X	|- |-
+Verificar se um sistema externo está operacional e validar credenciais	|X	|P|	X	|- |-

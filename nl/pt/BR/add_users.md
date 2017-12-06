@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -139,6 +139,15 @@ Os usuários podem ser bloqueados contra o acesso à organização do {{site.dat
 1. No painel do {{site.data.keyword.iot_short_notm}}, clique em **Membros** na barra de navegação à esquerda.
 2. Clique na alternância próxima ao usuário que você deseja bloquear contra o acesso à organização do {{site.data.keyword.iot_short_notm}}.
 
+## Limitando o acesso de usuário (Beta)
+{: #limiting-users}
+
+O controle de acesso no nível de recursos permite limitar o acesso a dispositivos
+dentro de uma organização. É possível usar grupos de recursos para especificar os
+dispositivos que cada usuário ou chave API pode gerenciar. Para obter informações sobre
+como configurar o controle de acesso no nível de recursos, consulte
+[Configurando o controle de acesso no
+nível recursos](reference/rlac.html#configure_RLAC).
 
 ## Removendo usuários
 {: #removing-users}

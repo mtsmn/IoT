@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
-
----
+lastupdated: "2017-03-14"---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -62,7 +60,7 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 - 下線 ( _ )
 - ドット ( . )
 
-アプリケーション ID とデバイス ID を定義したら、`mosquitto_sub` を使用してアプリケーションに対応する接続を作成します。以下の例では、`<applicationId>` を myApplicationId、`<deviceId>` を myDeviceId にしています。
+アプリケーション ID とデバイス ID を定義したら、`mosquitto_sub` を使用してアプリケーションに対応する接続を作成します。以下の例のように、`<applicationId>` = myApplicationId と `<deviceId>` = myDeviceId を使用してください。
 ```
     [user@host ~]$ mosquitto_sub -h quickstart.messaging.internetofthings.ibmcloud.com -p 1883 -i "a:quickstart:myApplicationId" -t iot-2/type/mosquitto/id/myDeviceId/evt/helloworld/fmt/json
 

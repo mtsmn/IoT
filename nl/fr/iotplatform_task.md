@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-10-02"
 
 ---
 
@@ -24,7 +24,7 @@ Avant de pouvoir commencer à recevoir des données depuis vos terminaux IoT, vo
 Avant de commencer le processus de connexion, vous devez vous assurer que vos terminaux sont conformes aux exigences suivantes relatives à la communication avec {{site.data.keyword.iot_short_notm}} :
 
 - Votre terminal doit pouvoir communiquer à l'aide des protocoles HTTP ou MQTT.
-- Les messages de terminal doivent être conformes aux exigences de contenu de message de {{site.data.keyword.iot_short_notm}}.
+- Les messages du terminal doivent obéir aux règles concernant la charge utile des messages {{site.data.keyword.iot_short_notm}}.
 
 Pour plus d'informations, voir [Développement de terminaux sur Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/devices/device_dev_index.html).
 
@@ -35,7 +35,7 @@ Pour connecter votre terminal à {{site.data.keyword.iot_short_notm}}, procédez
 
 Enregistrer un terminal implique de le classifier en tant que type de terminal, de lui donner un nom et de fournir des informations le concernant. Vous indiquez ensuite un jeton de connexion ou vous acceptez un jeton qui est généré par {{site.data.keyword.iot_short_notm}}.
 
-Vous pouvez ajouter un seul terminal à la fois depuis le tableau de bord {{site.data.keyword.iot_short_notm}} ou vous pouvez utiliser l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} pour ajouter un ou plusieurs terminaux à la fois.
+Vous pouvez ajouter un seul terminal à la fois depuis le tableau de bord {{site.data.keyword.iot_short_notm}} ou vous pouvez utiliser l'API [{{site.data.keyword.iot_short_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} pour ajouter un ou plusieurs terminaux à la fois.
 
 Pour ajouter un terminal depuis le tableau de bord {{site.data.keyword.iot_short_notm}} :
 
@@ -43,7 +43,7 @@ Pour ajouter un terminal depuis le tableau de bord {{site.data.keyword.iot_short
 
 2. Sur la page de service, cliquez sur **Lancer** pour commencer à administrer votre organisation {{site.data.keyword.iot_short_notm}}.
 
-  La console Web {{site.data.keyword.iot_short_notm}} s'ouvre dans un nouvel onglet de navigateur à l'URL suivante :
+  La console web {{site.data.keyword.iot_short_notm}} s'ouvre dans un nouvel onglet de navigateur à l'URL suivante :
 
  ```
  https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
@@ -69,7 +69,8 @@ Lorsque vous ajoutez votre premier terminal à votre organisation {{site.data.ke
  4. Cliquez sur **Créer** pour ajouter le nouveau type de terminal.
 10. Cliquez sur **Suivant** pour commencer le processus d'ajout de votre terminal avec le type de terminal sélectionné.
 11. Entrez un ID de terminal, tel que `my_first_device`.  
-L'ID de terminal permet d'identifier le terminal dans le tableau de bord {{site.data.keyword.iot_short_notm}} et représente également un paramètre requis pour la connexion de votre terminal à {{site.data.keyword.iot_short_notm}}.  
+L'ID de terminal permet d'identifier le terminal dans le tableau de bord {{site.data.keyword.iot_short_notm}}. Il constitue
+aussi un paramètre indispensable à la connexion de votre terminal à {{site.data.keyword.iot_short_notm}}.  
 **Important :** L'ID de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
  <ul>
  <li>Caractères alphanumériques (a-z, A-Z, 0-9)</li>
@@ -115,7 +116,7 @@ Après avoir enregistré un terminal auprès de {{site.data.keyword.iot_short_no
 
 {{site.data.keyword.iot_short_notm}} prend en charge un grand nombre de types de terminaux. Le processus de base permettant de connecter un terminal inclut généralement les étapes suivantes :
 - Configurer votre terminal pour la messagerie MQTT et utiliser l'ID d'organisation, le jeton d'authentification, le type de terminal et l'ID de terminal pour l'authentification.  
-- Envoyer des messages de terminal à votre organisation {{site.data.keyword.iot_short_notm}} à l'aide du protocole MQTT.
+- Envoyer des messages du terminal à votre organisation {{site.data.keyword.iot_short_notm}} en utilisant le protocole MQTT.
 
 **Astuce :** Un grand nombre de recettes de connexion sont disponibles pour les terminaux couramment utilisés. Pour obtenir une liste de recettes, voir les [recettes de connexion de terminal ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} disponibles sur le site IBM.com.
 
@@ -130,12 +131,11 @@ Où *org_id* est l'ID de votre organisation {{site.data.keyword.iot_short_notm}}
 Cette combinaison de paramètres identifie votre terminal de manière unique.
 - Nom d'utilisateur : use-token-auth  
 Cette valeur indique que vous utilisez l'autorisation à base de jeton.
-- Mot de passe : *Authentication token*  
+- Mot de passe : *jeton d'authentification*  
 Cette valeur est le jeton unique que vous avez défini ou qui a été affecté à votre terminal lorsque vous l'avez enregistré.
 - Format de sujet d'événement : iot-2/evt/*event_id*/fmt/*format_string*  
  Où *event_id* spécifie le nom d'événement affiché dans {{site.data.keyword.iot_short_notm}} et *format_string* est le format de l'événement, par exemple, JSON.
-- Format de message : JSON
-   
+- Format de message : JSON  
  {{site.data.keyword.iot_short_notm}} prend en charge plusieurs formats, tels que JSON et texte.
 
 Pour plus d'informations sur la connexion de votre terminal, voir [Connectivité MQTT pour les terminaux](devices/mqtt.html) dans la documentation technique.

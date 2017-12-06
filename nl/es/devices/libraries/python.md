@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-06-14"
 
 ---
 
@@ -24,7 +24,7 @@ Utilice la información y los ejemplos que se proporcionan para empezar a desarr
 ## Descarga del cliente y los recursos de Python
 {: #python_client_download}
 
-Para acceder al cliente Python para {{site.data.keyword.iot_short_notm}} a y otros recursos disponibles, vaya al repositorio [iot-python ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-python){: new_window} en GitHub y complete las instrucciones de instalación.
+Para acceder al cliente Python para {{site.data.keyword.iot_short_notm}} y otros recursos disponibles, vaya al repositorio [iot-python ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-python){: new_window} en GitHub y complete las instrucciones de instalación.
 
 ## Constructor
 {: #constructor}
@@ -36,8 +36,8 @@ El diccionario de opciones crea definiciones que se utilizan para interactuar co
 |`orgId`|El ID de la organización.|
 |`type`|El tipo del dispositivo. El tipo de dispositivo es una agrupación para los dispositivos que realizan una tarea específica, como por ejemplo "weatherballoon".|
 |`id`|Identificador exclusivo de un dispositivo. Normalmente, para un determinado tipo de dispositivo, el ID de dispositivo es un identificador exclusivo de dicho dispositivo, por ejemplo un número de serie o una dirección MAC.|
-|`auth-method`|El método de autenticación. El único método al que se da soporte es `apikey`.|
-|`auth-token`|Una señal de clave API, que también es obligatoria al establecer el valor de auth-method en `apikey`.|
+|`auth-method`|El método de autenticación. El único método al que se da soporte es `token`.|
+|`auth-token`|Una señal de autenticación para conectar de forma segura el dispositivo a {{site.data.keyword.iot_short_notm}}.|
 |`clean-session`|Un valor true o false que sólo es necesario si desea conectar la aplicación en modalidad de suscripción duradera. De forma predeterminada, `clean-session` se establece en true.|
 
 Si no se proporciona el diccionario de opciones, el cliente se conecta al servicio Inicio rápido de {{site.data.keyword.iot_short_notm}} como un dispositivo no registrado.
@@ -151,7 +151,7 @@ client.commandCallback = myCommandCallback
 ## Soporte de formatos de mensajes personalizado
 {: #custom_message_format}
 
-De forma predeterminada, el formato de mensajes se establece en `json`, lo que significa que la biblioteca da soporte a la codificación y decodificación de los objetos del diccionario Python en formato JSON. Cuando el formato del mensaje se establece en `json-iotf`, el mensaje se codifica de acuerdo con la especificación de carga útil JSON de {{site.data.keyword.iot_short_notm}}. Para añadir soporte para sus propios formatos de mensaje personalizados, consulte el [ejemplo de Formato de mensaje personalizado ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} en GitHub.
+De forma predeterminada, el formato de mensajes se establece en ``json``, lo que significa que la biblioteca da soporte a la codificación y decodificación de los objetos del diccionario Python en formato JSON. Cuando el formato del mensaje se establece en ``json-iotf``, el mensaje se codifica de acuerdo con la especificación de carga útil JSON de {{site.data.keyword.iot_short_notm}}. Para añadir soporte para sus propios formatos de mensaje personalizados, consulte el [ejemplo de Formato de mensaje personalizado ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} en GitHub.
 
 Cuando se crea un módulo de codificador personalizado, debe registrarlo en el cliente de dispositivo, tal como se describe en el ejemplo siguiente:
 
@@ -162,4 +162,4 @@ import myCustomCodec
 client.setMessageEncoderModule("custom", myCustomCodec)
 client.publishEvent("status", "custom", myData)
 ```
-Si se envía un suceso en un formato desconocido o si un dispositivo no reconoce el formato, la biblioteca de dispositivos devuelve una condición `MissingMessageDecoderException`.
+Si se envía un suceso en un formato desconocido o si un dispositivo no reconoce el formato, la biblioteca de dispositivos devuelve una condición ``MissingMessageDecoderException``.

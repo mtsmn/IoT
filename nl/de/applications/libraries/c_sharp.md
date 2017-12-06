@@ -53,7 +53,7 @@ Geräte verwenden Ereignisse, um Daten in der {{site.data.keyword.iot_short_notm
 
 Wenn ein Ereignis von der {{site.data.keyword.iot_short_notm}}-Instanz empfangen wird, geben die Berechtigungsnachweise des empfangenen Ereignisses das sendende Gerät an; dies bedeutet, dass ein Gerät nicht die Identität eines anderen Geräts annehmen kann.
 
-Anwendungen subskribieren standardmäßig alle Ereignisse von allen verbundenen Geräten. Steuern Sie den Bereich der Subskription mithilfe der Parameter für den Geräte-Typ, die Geräte-ID, das Ereignis und das Nachrichtenformat. Folgende Codebeispiele zeigen, wie der Bereich einer Subskription mithilfe dieser Parameter definiert werden kann:
+Anwendungen subskribieren standardmäßig alle Ereignisse von allen verbundenen Geräten. Steuern Sie den Bereich der Subskription mithilfe der Parameter für den Gerätetyp, die Geräte-ID, das Ereignis und das Nachrichtenformat. Folgende Codebeispiele zeigen, wie der Bereich einer Subskription mithilfe dieser Parameter definiert werden kann:
 
 ### Alle Ereignisse von allen Geräten subskribieren
 

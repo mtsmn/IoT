@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-10"
+lastupdated: "2017-08-25"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-05-10"
 # Control de acceso de pasarela (Beta)
 {: #gateway-access-control}
 
-Se autoriza a los dispositivos de pasarela para que actúen en nombre de otros dispositivos. Los grupos de recursos de pasarela definen los dispositivos de una organización en cuyo nombre puede actuar cada pasarela. Se puede asignar a las pasarelas el rol *Pasarela estándar*. Las pasarelas estándar solo pueden publicar o suscribirse a mensajes en nombre de los dispositivos de su grupo de recursos.
+Los dispositivos de pasarela son una clase especializada de dispositivo y pueden actuar en nombre de otro dispositivo. Los grupos de recursos de pasarela definen los dispositivos de una organización en cuyo nombre puede actuar cada pasarela. Se puede asignar a las pasarelas el rol *Pasarela estándar*. Las pasarelas estándar solo pueden publicar o suscribirse a mensajes en nombre de los dispositivos de su grupo de recursos.
 {: #shortdesc}
 
 **Importante:** La característica de Control de acceso de pasarela de {{site.data.keyword.iot_full}} únicamente está disponible como parte de un programa beta limitado. Las actualizaciones futuras pueden incluir cambios que no son compatibles con la versión actual de esta característica. Pruébela y [denos su opinión ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
@@ -27,10 +27,33 @@ Para obtener información sobre la publicación de sucesos desde dispositivos de
 
 La asignación de un rol a una pasarela es obligatoria para que la pasarela tenga un grupo de recursos. Las pasarelas sin un grupo de recursos pueden actuar en nombre de todos los dispositivos de la organización. Al asignar el rol *Pasarela estándar* se crea de forma automática un nuevo grupo de recursos para la pasarela. Una vez se asigna una pasarela a un grupo de recursos, solo puede actuar en nombre de los dispositivos de ese grupo de recursos y de sí misma, incluso si se modifica su rol.
 
-Para asignar un rol a una pasarela, utilice la siguiente API:
+Para asignar un rol a una pasarela, utilice la siguiente API, donde *${clientID}* es el ID de cliente codificado como URL en formato *d:${orgId}:${typeId}:${deviceId}* para dispositivos o *g:${orgId}:${typeId}:${deviceId}* para pasarelas:
 
 ```
-PUT /authorization/devices/{deviceId}/roles
+PUT /authorization/devices/${clientID}/roles
+
+Request Body:
+{
+    "roles": [
+        {
+            "roleId": "PD_STANDARD_GW_DEVICE",
+            "roleStatus": 1
+        }
+    ]
+}
+
+Request Response: 200
+{
+    "roles": [
+        {
+            "roleId": "PD_STANDARD_GW_DEVICE",
+            "roleStatus": 1
+        }
+    ],
+    "rolesToGroups": {
+        "PD_STANDARD_GW_DEVICE": ["gw_def_res_grp:abcdef:gatewayTypeId:gatewayDeviceId"]
+    }
+}
 ```
 
 Para ver información sobre el esquema de la solicitud, consulte la documentación de la API de [{{site.data.keyword.iot_full}} Limited Gateway ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}.
@@ -65,13 +88,13 @@ GET /groups
 
 Esta API devuelve los grupos de recursos asociados con la etiqueta de búsqueda utilizada. Si no se especifica ninguna etiqueta de búsqueda, se devuelven todos los grupos de recursos. <!-- For more information about the request schema, response, and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-Para buscar el ID de un grupo de recursos, utilice la siguiente API:
+El identificador de un grupo de recurso asignado a una pasarela se puede encontrar utilizando la siguiente API, donde *${clientID}* es el ID de cliente codificado como URL en formato *d:${orgId}:${typeId}:${deviceId}* para dispositivos o *g:${orgId}:${typeId}:${deviceId}* para pasarelas:
 
 ```
-GET /authorization/devices/{deviceId}
+GET /authorization/devices/${clientId}
 ```
 
-Esta API devuelve el identificador exclusivo del grupo o grupos de recursos de los que este dispositivo es miembro. Encontrará más información sobre esta API en la documentación de la API de [{{site.data.keyword.iot_short_notm}} Limited Gateway ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
+Esta API devuelve el identificador exclusivo del grupo o grupos de recursos asignado a este dispositivo. Encontrará más información sobre esta API en la documentación de la API de [{{site.data.keyword.iot_short_notm}} Limited Gateway ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
 
 
 ## Consulta de un grupo de recursos
@@ -132,27 +155,27 @@ Esta API suprime el grupo de recursos especificado. Los dispositivos que han sid
 ## Recuperación y actualización de propiedades del dispositivo.
 {: #fdevice_group_props}
 
-Hay varias formas de recuperar propiedades de un dispositivo mediante API; cada API devuelve información diferente. Para recuperar las propiedades de todos los dispositivos conectados a su organización {{site.data.keyword.iot_short_notm}}, utilice la siguiente API:
+Hay varias formas de recuperar propiedades de un dispositivo mediante API; cada API devuelve información diferente. Para recuperar las propiedades de todos los dispositivos existentes en su organización de {{site.data.keyword.iot_short_notm}}, utilice la siguiente API:
 
 ```
 GET /authorization/devices
 
 ```
 
-Esta API devuelve las propiedades de todos los dispositivos conectados a la organización, incluidas sus propiedades relevantes de control de acceso (rol, estado, fecha de caducidad).<!-- For more information on responses and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
+Esta API devuelve las propiedades de todos los dispositivos existentes de la organización, incluidas sus propiedades relevantes de control de acceso (rol, estado, fecha de caducidad).<!-- For more information on responses and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-Para recuperar propiedades del dispositivo sin recuperar la información relevante de control de acceso, utilice la siguiente API:
-
-```
-GET /authorization/devices/{deviceId}
-```
-
-Esta API devuelve todas las propiedades del dispositivo especificado, sin devolver la información de control de acceso. <!-- For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API). -->
-
-Para recuperar la información de control de acceso de un dispositivo específico, utilice la siguiente API:
+Para recuperar las propiedades de dispositivo de un único dispositivo de la organización, utilice la siguiente API, donde *${clientID}* es el ID de cliente codificado como URL en formato *d:${orgId}:${typeId}:${deviceId}* para dispositivos o *g:${orgId}:${typeId}:${deviceId}* para pasarelas:
 
 ```
-GET /authorization/devices/{deviceId}/roles
+GET /authorization/devices/${clientId}
+```
+
+Esta API devuelve todas las propiedades del dispositivo especificado. <!-- For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API). -->
+
+Para recuperar solo la información de control de acceso de un único dispositivo, utilice la siguiente API, donde *${clientID}* es el ID de cliente codificado como URL en formato *d:${orgId}:${typeId}:${deviceId}* para dispositivos o *g:${orgId}:${typeId}:${deviceId}* para pasarelas:
+
+```
+GET /authorization/devices/${clientId}/roles
 ```
 
 Esta API recupera la información relevante de control de acceso del dispositivo especificado sin devolver otras propiedades del dispositivo.
@@ -160,19 +183,19 @@ Esta API recupera la información relevante de control de acceso del dispositivo
 
 Las propiedades de un dispositivo se pueden actualizar de dos maneras. Las propiedades se pueden actualizar sin cambiar las propiedades de control de acceso o las propiedades de control de acceso se pueden actualizar directamente.
 
-Para actualizar las propiedades del dispositivo sin que ello afecte a las propiedades de control de acceso, utilice la siguiente API:
+Para actualizar las propiedades de dispositivo sin afectar a las propiedades de control de acceso, utilice la siguiente API, donde *${clientID}* es el ID de cliente codificado como URL en formato *d:${orgId}:${typeId}:${deviceId}* para dispositivos o *g:${orgId}:${typeId}:${deviceId}* para pasarelas:
 
 ```
-PUT /authorization/devices/{deviceId}
+PUT /authorization/devices/${clientId}
 ```
 
 Esta API solo actualiza las propiedades del dispositivo que no están asociadas al control de acceso.
 <!-- For more information on request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-Para actualizar únicamente las propiedades de control de accesos del dispositivo especificado, utilice la siguiente API:
+Para actualizar solo las propiedades de control de acceso del dispositivo especificado, utilice la siguiente API, donde *${clientID}* es el ID de cliente codificado como URL en formato *d:${orgId}:${typeId}:${deviceId}* para dispositivos o *g:${orgId}:${typeId}:${deviceId}* para pasarelas:
 
 ```
-PUT /authorization/devices/{deviceId}/withroles
+PUT /authorization/devices/${clientId}/withroles
 ```
 
 Esta API solo actualizará las propiedades de control de acceso del dispositivo especificado. <!-- For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->

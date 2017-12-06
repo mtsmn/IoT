@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-06-08"
+lastupdated: "2017-10-04"
 
 ---
 
@@ -13,10 +13,8 @@ lastupdated: "2017-06-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# デバイス用の HTTP Messaging API (ベータ)
+# デバイス用の HTTP Messaging API
 {: #api}
-
-**重要:** デバイス用の {{site.data.keyword.iot_full}} HTTP Messaging API 機能は、限定されたベータ・プログラムの一部としてのみ使用できます。今後の更新によって、この機能の現行バージョンと互換性のない変更が行われる可能性があります。この機能を試して、[ご意見をお寄せください ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
 
 
 ## デバイス用の HTTP Messaging API 資料へのアクセス
@@ -35,7 +33,7 @@ lastupdated: "2017-06-08"
 
 MQTT メッセージング・プロトコルの使用に加えて、HTTP REST API コマンドを使用して、HTTP を介してイベントを {{site.data.keyword.iot_short_notm}} にパブリッシュするようにデバイスを構成することもできます。
 
-{{site.data.keyword.iot_short_notm}} に接続されているデバイスから `POST` 要求を送信するには、以下のいずれかの URL を使用します。
+{{site.data.keyword.iot_short_notm}} に接続されているデバイスから ``POST`` 要求を送信するには、以下のいずれかの URL を使用します。
 
 ### 非セキュアな POST 要求
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
@@ -58,13 +56,13 @@ MQTT メッセージング・プロトコルの使用に加えて、HTTP REST AP
 
 ### Content-Type 要求ヘッダー
 
-`Content-Type` 要求ヘッダーを要求に含める必要があります。以下の表に、サポート対象タイプがどのように {{site.data.keyword.iot_short_notm}} 内部フォーマットにマップされるかを示します。
+コンテンツが JSON でない場合、`Content-Type` 要求ヘッダーを要求に含める必要があります。以下の表に、サポート対象タイプがどのように {{site.data.keyword.iot_short_notm}} 内部フォーマットにマップされるかを示します。
 
-|Content-Type ヘッダー |{{site.data.keyword.iot_short_notm}} での形式 |
+|Content-Type ヘッダー|{{site.data.keyword.iot_short_notm}} での形式 |
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml | "xml"
+|application/xml| "xml"
 |application/octet-stream|"bin"
 
 ## コマンドの受信
@@ -72,7 +70,7 @@ MQTT メッセージング・プロトコルの使用に加えて、HTTP REST AP
 
 MQTT メッセージング・プロトコルの使用に加えて、HTTP Messaging API コマンドを使用することで、HTTP を介してコマンドを {{site.data.keyword.iot_short_notm}} から受信するようにデバイスを構成することもできます。デバイスはそれ自体に対するコマンドを受信することができます。
 
-{{site.data.keyword.iot_short_notm}} に接続されているデバイスから `POST` 要求を送信するには、以下のいずれかの URL を使用します。
+{{site.data.keyword.iot_short_notm}} に接続されているデバイスから ``POST`` 要求を送信するには、以下のいずれかの URL を使用します。
 
 ### 非セキュアな POST 要求
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
@@ -82,10 +80,6 @@ MQTT メッセージング・プロトコルの使用に加えて、HTTP Messagi
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
 **注:** デフォルト SSL ポートのポート 443 も、セキュアな HTTP API 呼び出し用に指定できます。
-
-{{site.data.keyword.iot_short_notm}} からコマンドを受信するには、以下の API を使用します。
-
-<pre class="pre"><code class="hljs">/device/types/{deviceType}/devices/{deviceId}/commands/{command}/request</code></pre>
 
 オプションで、HTTP 要求の body にパラメーター *waitTimeSecs* を含めて、コマンドを待機する最大秒数を表す整数を指定することができます。
 <pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>
