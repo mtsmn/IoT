@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-11-14"
+lastupdated: "2017-12-06"
 
 ---
 
@@ -104,6 +104,57 @@ To access the {{site.data.keyword.iot_short_notm}} HTTP Messaging APIs, see [{{s
 
 For information about developing devices, see [Developing devices on {{site.data.keyword.iot_short_notm}}](../devices/device_dev_index.html).
 
+## Example of a secure POST request
+
+The following example sends a message from a device to {{site.data.keyword.iot_short_notm}} by using the HTTP protocol. An application receives the message by subscribing to the topic on which the message is published. The following table provides information about the device. 
+
+|Parameter|Value|
+|:---|:---|
+|Organization ID |myOrgID
+|Device Type| TestDevices
+|Device ID | TestPublishEvent
+|Authentication Method|use-token-auth
+|Authentication Token|passw0rd
+
+
+The following example uses curl to sends an event that is called *TestMessage* from the device *TestPublishEvent* to  {{site.data.keyword.iot_short_notm}} over the HTTP protocol: 
+
+```
+curl -v -X POST -H "Content-Type: application/json" -u "use-token-auth:passw0rd" -d @message.txt  https://myOrgID.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/TestDevices/devices/TestPublishEvent/events/TestMessage
+```
+
+The message is contained in a text file that is called *message.txt*. The content of the *message.txt* file is shown in the following example: 
+```
+{ "d": { "myName": "Publish Test","cputemp": 46,"sine": -10,"cpuload": 1.45 }  } 
+```
+The message is published on topic *iot-2/evt/TestMessage/fmt/json*. An application that is called *testSubscriber* is created that subscribes to a topic filter *iot-2/type/+/id/+/evt/+/fmt/+*. The topic filter matches the topic on which the message is published.
+
+You can use the python sample *simpleApp.py* that is provided in the [python library ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/simpleApp) to help you configure your application to subscribe to the topic filter *iot-2/type/+/id/+/evt/+/fmt/+*. 
+
+The following python script subscribes to a topic filter that matches the topic string on which the message is published:
+
+```
+python simpleApp.py -o "myOrgID" -i "testSubscriber" -k "a-myOrgID-jg95dkpscn" -t "L(r4gfPa3bLP2kz4Nb"
+```
+where:
+
+- **-o** is the organization name.
+- **-i** is the name of the application.
+- **-k** is API key that is generated when the application is created.  
+- **-t** is the authentication token that is generated when the application is created.   
+
+
+The following example shows a successful response to the receipt of the published message from *TestPublishEvent* device. 
+```
+=============================================================================
+Timestamp                        Device                        Event
+2017-12-06 15:09:40,438   ibmiotf.application.Client  INFO    Connected successfully: a:myOrgID:testSubscriber
+=============================================================================
+2017-12-06T15:09:59.691290+00:00 TestDevices:TestPublishEvent  TestMessage: {"d": {"myName": "Publish Test", "cputemp": 46, "sine": -10, "cpuload": 1.45}}
+2017-12-06T15:10:01.056000+00:00 TestDevices:TestPublishEvent  Connect 199.999.99.99
+2017-12-06T15:10:01.446000+00:00 TestDevices:TestPublishEvent  Disconnect 199.999.99.99 (None)
+
+```
 
 ## Last event cache
 {: #last-event-cache}
