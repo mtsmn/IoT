@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-01"
+lastupdated: "2017-12-11"
 
 ---
 
@@ -40,7 +40,7 @@ You can cancel device management requests that are in progress by using the foll
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests/{requestId}/cancel`
 
-This request clears the current operations for all in-progress requests and marks the requests as complete. 
+This request clears the current operations for all in-progress devices and marks the requests as complete. 
 
 Important: The {{site.data.keyword.iot_full}} cancel device management request feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
