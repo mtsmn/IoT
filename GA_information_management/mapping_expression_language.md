@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-11-09"
+lastupdated: "2017-12-12"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2017-11-09"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Understanding mapping expression language
+# Understanding the mapping expression language
 {: #mapping_expression}
 
-You can use mapping expression language to manipulate and combine data, and to format the results of any queries that you might run on your processed data. Mapping expression language is a subset of [JSONata ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://docs.jsonata.org/index.html){:new_window} and can be used when defining [mappings](ga_im_definitions.html#definitions_resources). JSONata is a lightweight query and transformation language for JSON data.
+You can use the mapping expression language to manipulate and combine data, and to format the results of any queries that you might run on your processed data. The mapping expression language is a subset of [JSONata ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://docs.jsonata.org/index.html){:new_window} and can be used when defining [mappings](ga_im_definitions.html#definitions_resources). JSONata is a lightweight query and transformation language for JSON data.
 
 The following information shows the key operators and functions that are currently supported, along with some examples of how you might use them. 
 
@@ -39,7 +39,7 @@ Other | . | The dot operator is used for object access with a literal key, for e
 - Use Parenthesis ( ) for expression grouping and to alter operator precedence
 - Use single quotes to surround property names that contain spaces, for example $event.object.'a b' 
 
-## Extending mapping expression language
+## Extending the mapping expression language
 
 The mapping expression language has been extended for use with the data management feature through the introduction of $event, $state and $instance variables. JSON is bound to these variables before the expression is evaluated. The following table provides an overview of these variables, which are defined for use in expressions:
 
