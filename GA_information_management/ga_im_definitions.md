@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-10-09"
+lastupdated: "2017-12-12"
 
 ---
 
@@ -251,7 +251,7 @@ If all the required resources are associated with a device type, check that the 
 
 You can refer to the following error log to help you to diagnose run time errors:
 ```
-iot-2/type/${typeId}/id/${devieId}/err/data
+iot-2/type/${typeId}/id/${deviceId}/err/data
 ```
 ### Resource limits
 
