@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-12-12"
 
 ---
 
@@ -125,7 +125,7 @@ If you are planning to create application code for use with the Quickstart servi
 
 - Publishing commands
 - Subscribing to commands
-- Using the MQTT "any" wildcard character (+) in **deviceType** or **appId** components
+- Using the MQTT "any" wildcard character (+) in **device_id** or **appId** components
 - MQTT connection over Transport Layer Security (TLS)
 - Scalable applications
 
