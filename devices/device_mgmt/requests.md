@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-11"
+lastupdated: "2017-12-12"
 
 ---
 
@@ -45,6 +45,15 @@ This request clears the current operations for all in-progress devices and marks
 Important: The {{site.data.keyword.iot_full}} cancel device management request feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 For more information about the cancel device management request API, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests_requestId_cancel){: new_window}.
+
+## Setting up device management requests to expire (Beta)
+{: #timeout-requests}
+
+You can set up device management requests to expire by timing out if they are still in progress after a certain amount of time. When you initiate a device management request, you can specify a timeout value in seconds. After the specified number of seconds are reached, the device management server cancels the request automatically.
+
+Important: The {{site.data.keyword.iot_full}} device management request timeout paramter is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+
+For more information about the timeout parameter in the initiation request API, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}.
 
 ## Device actions
 {: #device-actions}
