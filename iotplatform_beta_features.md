@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-12-01"
+lastupdated: "2017-12-12"
 
 ---
 
@@ -29,4 +29,5 @@ Resource-level access control | [Overview of RLAC (Beta)](reference/rlac_overvie
 IoT gateway package | [IoT gateway package (Beta)](gateways/iotgw.html#gw_package)
 Simulating device data | [Simulating device data (Beta)](devices/device_sim.html)
 Restoring deleted devices | [Restoring deleted devices (Beta)](iotplatform_task.html#restore_device)
-Canceling device management requests | [Canceling device management requests (Beta)](devices/device_mgmt/requests.html##cancel-requests)
+Canceling device management requests | [Canceling device management requests (Beta)](devices/device_mgmt/requests.html#cancel-requests)
+Setting device management requests to expire | [Setting device management requests to expire (Beta)](devices/device_mgmt/requests.html#timeout-requests)
