@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-10-18"
+lastupdated: "2017-11-29"
 
 ---
 
@@ -29,6 +29,8 @@ The following types of client data are currently backed up as part of the {{site
 - User information
 - All records of device management requests, including the history of any initiated requests - for example the current state of the request
 - Definitions of custom device management request bundles
+
+**Note:** All data for an organization is retained for 14 days after service deprovisioning. Contact support within the 14-day window to have an organization restored.
 
 ## What type of data is not backed up?
 
