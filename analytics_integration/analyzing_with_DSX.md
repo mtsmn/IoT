@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-18"
+lastupdated: "2017-12-18"
 ---
 
 ---
@@ -73,7 +73,7 @@ To simulate real sensor data events against your organizations by using the Weat
 1. [Deploy the Weather Sensors simulator web app with an instance of {{site.data.keyword.iot_short_notm}} ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window} and follow the detailed steps.
 
    For more information about the Weather Sensors, see [the Weather Sensors simulator guide ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
-2. Wait for the deployment to complete and then navigate to Bluemix dashboard.
+2. Wait for the deployment to complete and then navigate to IBM Cloud dashboard.
 3. Launch the {{site.data.keyword.iot_short_notm}} service "wiotp-for-weather-sensors-simulator" that was created by the deployment process.
 4. Proceed to [Step 2. Configure database connector](#DSX_config_db).
 
@@ -88,7 +88,7 @@ Regardless of the bucket interval configuration, three databases are automatical
 To use {{site.data.keyword.cloudant_short_notm}} with DSX, you must configure the platform data storage so that the Cloudant NoSQL DB is used as the historian service.
 
 1. On the {{site.data.keyword.cloudant_short_notm}} dashboard, click **Extensions** in the navigation bar.
-2. Under **Historical Data Storage**, click **Setup**. The **Configure Historical Data Storage** section lists all of the Cloudant NoSQL DB services that are available within the same Bluemix space as the {{site.data.keyword.cloudant_short_notm}}.
+2. Under **Historical Data Storage**, click **Setup**. The **Configure Historical Data Storage** section lists all of the Cloudant NoSQL DB services that are available within the same IBM Cloud space as the {{site.data.keyword.cloudant_short_notm}}.
 3. Select the Cloudant NoSQL DB service that you want to connect.
 4. Specify the following Cloudant NoSQL DB configuration options:
   - Bucket interval = Day
@@ -130,9 +130,9 @@ To set up DSX and start visualizing data:
 The Jupyter notebook is a web application that allows one to create and share documents that contain executable code, mathematical formulae, graphics/visualization (matplotlib) and explanatory text.
 
 To set up a pre-configured Jupyter Notebook to gain insights into your data and to detect anomalies:
-1. Use a supported browser to log in to [DSX ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://datascience.ibm.com/){: new_window} with your Bluemix ID.
+1. Use a supported browser to log in to [DSX ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://datascience.ibm.com/){: new_window} with your IBM Cloud ID.
 2. Click "+" and select **Create project** to create a new project. Projects create a space for you to collect and share notebooks, connect to data sources, create pipelines, and add data sets.
-3. Specify the project name and click **Create**. During the DSX account setup, the Spark service and Object Storage instance are automatically created. Alternatively, you can create them by using the Bluemix interface and then associate them with your DSX project at a later stage.
+3. Specify the project name and click **Create**. During the DSX account setup, the Spark service and Object Storage instance are automatically created. Alternatively, you can create them by using the IBM Cloud interface and then associate them with your DSX project at a later stage.
 4. Import your Cloudant credentials by selecting your project in the **DSX** menu and clicking ![Find and Add Data icon](images/find_add_data_icon.png).
 5. Click the **Connections** tab.
 6. Click **Create Connection** to import your Cloudant credentials to make them available in any notebook in your project.

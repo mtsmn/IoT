@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-10-18"
+lastupdated: "2017-12-18"
 
 ---
 
@@ -21,9 +21,9 @@ lastupdated: "2017-10-18"
 ## Before you begin
 {: #byb}
 
-Before connecting devices and utilizing data, register for an {{site.data.keyword.Bluemix_notm}} account and create an instance of the {{site.data.keyword.iot_short_notm}} service in your {{site.data.keyword.Bluemix_notm}} organization. You can create an {{site.data.keyword.iot_short_notm}} instance directly from the [{{site.data.keyword.iot_short_notm}} page in the Bluemix Services Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
+Before connecting devices and utilizing data, register for an {{site.data.keyword.Bluemix_notm}} account and create an instance of the {{site.data.keyword.iot_short_notm}} service in your {{site.data.keyword.Bluemix_notm}} organization. You can create an {{site.data.keyword.iot_short_notm}} instance directly from the [{{site.data.keyword.iot_short_notm}} page in the IBM Cloud Services Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
 
-For detailed information about how to sign up for an account on {{site.data.keyword.Bluemix_notm}}, configure regions, and other account management settings, see [Managing your Bluemix account](https://console.ng.bluemix.net/docs/admin/account.html#signup).
+For detailed information about how to sign up for an account on {{site.data.keyword.Bluemix_notm}}, configure regions, and other account management settings, see [Managing your IBM Cloud account](https://console.ng.bluemix.net/docs/admin/account.html#signup).
 
 You can set up and configure your {{site.data.keyword.iot_short_notm}} instance from the dashboard. To open the dashboard, go to your {{site.data.keyword.iot_short_notm}} service instance in  {{site.data.keyword.Bluemix_notm}}, and then click **Launch**.
 
