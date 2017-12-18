@@ -71,7 +71,7 @@ To simulate real sensor data events against your organizations by using the Weat
 1. [Deploy the Weather Sensors simulator web app with an instance of {{site.data.keyword.iot_short_notm}} ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window} and follow the detailed steps.
 
    For more information about the Weather Sensors, see [the Weather Sensors simulator guide ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
-2. Wait for the deployment to complete and then navigate to Bluemix dashboard.
+2. Wait for the deployment to complete and then navigate to IBM Cloud dashboard.
 3. Launch the {{site.data.keyword.iot_short_notm}} service "wiotp-for-weather-sensors-simulator" that was created by the deployment process.
 4. Proceed to [Step 2. Configure database connector](#WA_config_db).
 
@@ -91,7 +91,7 @@ To simulate real sensor data events against your organizations by using a pre-ma
 To use {{site.data.keyword.cloudant_short_notm}} with Watson Analytics, you must configure the platform data storage so that the Cloudant NoSQL DB is used as the historian service.
 
 1. On the {{site.data.keyword.cloudant_short_notm}} dashboard, click **Extensions** in the navigation bar.
-2. Under **Historical Data Storage**, click **Setup**. The **Configure Historical Data Storage** section lists all of the Cloudant NoSQL DB services that are available within the same Bluemix space as the {{site.data.keyword.cloudant_short_notm}}.
+2. Under **Historical Data Storage**, click **Setup**. The **Configure Historical Data Storage** section lists all of the Cloudant NoSQL DB services that are available within the same IBM Cloud space as the {{site.data.keyword.cloudant_short_notm}}.
 3. Select the Cloudant NoSQL DB service that you want to connect.
 4. Specify the following Cloudant NoSQL DB configuration options:
   - Bucket interval = Day
