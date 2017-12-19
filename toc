@@ -21,7 +21,6 @@ Internet of Things Platform
     {: .topicgroup}
     Beta features
         iotplatform_beta_features.md
-                
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
