@@ -31,7 +31,7 @@ You can set up and configure your {{site.data.keyword.iot_short_notm}} instance 
 
 The following steps describe how you can quickly get started with your {{site.data.keyword.iot_short_notm}} service.
 
-A more detailed set of getting started guides and sample applications that step through the basics of developing a ready-for-production, end-to-end IoT prototype system with {{site.data.keyword.iot_short_notm}} are also available. If you are a developer who is new to working with {{site.data.keyword.iot_short_notm}}, use the step-by-step processes in the [Getting started guides](getting_started/getting-started-iot-overview.md) section.
+A more detailed set of getting started guides and sample applications that step through the basics of developing a ready-for-production, end-to-end IoT prototype system with {{site.data.keyword.iot_short_notm}} are also available. If you are a developer who is new to working with {{site.data.keyword.iot_short_notm}}, use the step-by-step processes in the [Getting started guides](https://console.bluemix.net/docs/services/IoT/getting_started/getting-started-iot-overview.html#getting-started) section.
 
 ## Step 1: Connect your devices
 {: #up_and_running}
