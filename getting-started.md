@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-31"
+  years: 2016, 2017, 2018
+lastupdated: "2018-01-05"
 
 ---
 
@@ -35,7 +35,7 @@ For more information, see [Developing devices on Watson IoT Platform](/docs/serv
 
 ## Step 1: Register your device
 
-You can add devices one at a time from the {{site.data.keyword.iot_short_notm}} dashboard, or you can use the [Watson IoT Platform API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} to add multiple devices.
+You can add devices one at a time from the [{{site.data.keyword.iot_short_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://internetofthings.ibmcloud.com){: new_window}, or you can use the [Watson IoT Platform API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} to add multiple devices.
 
 To add a device from the {{site.data.keyword.iot_short_notm}} dashboard:
 
