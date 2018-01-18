@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-11-03"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-11-03"
 # Contacting {{site.data.keyword.iot_short_notm}} support
 {: #gettinghelp}
 
-You have several options for getting in touch for support using {{site.data.keyword.iot_full}}, such as getting help through a forum, or through Slack, or by opening a support ticket. 
+You have several options for getting in touch for support using {{site.data.keyword.iot_full}}, such as getting help through a forum, or through Slack, or by opening a support ticket. You can even submit your own ideas for enhancements to {{site.data.keyword.iot_short_notm}} by using the ideas portal.
 
 ## Forums
 
@@ -34,4 +34,9 @@ Don't have access to that slack workspace already ?  [Request access now ![Exter
 
 ## Support tickets
 
-* [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}.
+* [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}
+
+
+## Ideas portal
+
+* [IBM Cloud – Structured Ideas ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/cloudideas){:new_window}
