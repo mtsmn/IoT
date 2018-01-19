@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -584,6 +584,9 @@ Parameter	|	Description
 name	|	Provide a name for the logical interface that you are creating.
 schemaId	|	The identifier created for the logical interface schema resource.
 
+You can optionally specify a meaningful alias name for your logical interface. The alias can be referenced in the API call or topic string subscription that is used to retrieve the state of a device, instead of using the auto-generated logical interface identifier.
+
+**Note:** The alias name must be 1 - 36 characters long and can include alphanumeric, hypen, period, underscore characters. The alias name cannot be a 24 character hex string. 
 
 For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Logical_Interfaces) documentation.
 
@@ -890,7 +893,7 @@ Parameter	|	Description
 ------	|	-----
 typeId	|	The device type identifier.
 deviceId	|	The device identifier.
-logicalInterfaceId	|	The identifier created for the logical interface.
+logicalInterfaceId or alias|	The identifier created for the logical interface or the user-specified alias name. 
 
 For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Device_Types) documentation.
 
