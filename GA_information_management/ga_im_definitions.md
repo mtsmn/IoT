@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -94,7 +94,7 @@ Schema resources                         |  Use schema resources to define the s
 
 Interface resources                        | Description       
 ------------- | ------------- | -------------  
-Logical interface | A programmatic construct that your applications can connect to or subscribe to to see the state of a device. A logical interface is used to define the normalized view onto the device state in {{site.data.keyword.iot_short_notm}}. A logical interface must be associated with a logical interface schema. The state is updated in response to inbound device events. 
+Logical interface | A programmatic construct that your applications can connect to or subscribe to to see the state of a device. A logical interface is used to define the normalized view onto the device state in {{site.data.keyword.iot_short_notm}}. A logical interface must be associated with a logical interface schema. The state is updated in response to inbound device events. You can optionally specify a meaningful alias name for your logical interface. The alias can be referenced in the API call or topic string subscription that is used to retrieve the state of a device, instead of using the auto-generated logical interface identifier.  
 Physical interface                         | A physical interface is used to model the interface between a physical device and {{site.data.keyword.iot_short_notm}}. Event types can be associated with physical interface.  
 
 Instance resources                        | Description       
