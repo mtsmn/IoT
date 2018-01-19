@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-05"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -132,11 +132,11 @@ By using boards and cards, you can view graphics that represent data set values 
 
 4. Click the board you just created, and then click **Add New Card**. Select Devices as the card type. The following table describes the visualization options you can choose from.
 
-| Type | Data that is dispalyed |
+| Type | Data that is displayed |
 |---------------|---------------|
 | Generic visualization | The value of one or more data sets. Choose the large widget size to see up to three data point values in a small table. |
 | Line chart | One or more data sets in a real-time scrolling chart. Use the Settings menu to set the data range and retention, the look and feel of the graphs, and more. |
-| Bar chart | Data set values in labeld bars. Use the Settings menu to toggle horizontal or vertical bar direction. |
+| Bar chart | Data set values in labelled bars. Use the Settings menu to toggle horizontal or vertical bar direction. |
 | Donut chart | Two or more data sets in a circular representation. |
 | Value | The raw value of one or more data sets. |
 | Gauge | The value of a data set shown as a gauge. Use the Settings menu to optionally set gauge thresholds for lower, middle, and upper data ranges. |
