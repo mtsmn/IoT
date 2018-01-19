@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -184,4 +184,36 @@ The following example shows the average temperature and the summed temperature b
     "updated": "2017-10-13T11:05:40Z"
 }
 ```
+
+### Handling mismatches between mapping expression and input data
+
+A state update might fail when one of the mapping expressions contains a reference to input data that is not specified in the published event.
+
+For example, you might configure the following expressions:
+```
+temperature = $event.t 
+humidity = $event.h
+```
+where *t* is an optional property for the event. 
+
+If an event that contains only humidity data is received, for example, `{"humidity":22}`, then the expression `temperature = $event.t` fails to evaluate, because the optional *t* property is not specified in the published device event.
+
+The state update fails. The humidity state property is not updated, and an error message is published to the MQTT error topic for the device:
+```
+iot-2/type/${typeId}/id/${deviceId}/err/data
+```
+To prevent state update failures because of unspecified optional data, you can use the $exists function in combination with a ternary conditional to specify a default value for optional properties. The following example defines a default value of *0* for the *t* property: 
+
+```
+"tempEvent:
+    {
+      "temperature": "$exists($event.t)?$event.t:0",
+      "humidity": "$event.h"
+    }
+```
+
+By defining a default value for the optional property in this way, the expression evaluates successfully, even when the *t* property is not specified in the published device event. 
+
+Therefore, if the event `{"humidity":22}` is received, the state update completes successfully and the device state is set to ``{"humidity":22, "temperature":0}`.
+
 
