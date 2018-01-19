@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -99,7 +99,7 @@ Metric        | Lite plan      | Standard & Advanced Security plans       | Dedi
 ------------- | -------------|------------- |
 Maximum number of event IDs per device |5|5|5
 Maximum number of formats |2|3|3
-Expiry from last event cache |12 months |12 months | 12 months
+Expiry from last event cache |7 days |45 days | 45 days
 
 ## Extensions
 {: #extensions_metrics}
