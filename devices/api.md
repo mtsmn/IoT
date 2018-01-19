@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -159,7 +159,76 @@ Timestamp                        Device                        Event
 ## Last event cache
 {: #last-event-cache}
 
-By using the {{site.data.keyword.iot_short_notm}} Last Event Cache API, you can retrieve the last event that was sent by a device. This works whether the device is online or offline, which allows you to retrieve device status regardless of the device's physical location or use status. You can retrieve the last recorded value of an event ID for a specific device, or the last recorded value for each event ID that was reported by a specific device. Last event data of a device can be retrieved for any specific event that occurred up to 365 days ago.
+You can use the last event cache to store information about the last event that was sent to {{site.data.keyword.iot_short_notm}} by a connected device. By using an [API ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html#!/Last_Event_Cache){: new_window}, you can retrieve the last recorded value of a specific event-id for a device or the last recorded value for each event-id that is reported by a specific device. 
+
+### Configuring the last event cache
+
+The last event cache feature is disabled by default, but you can enable the functionality in the following ways: 
+
+-	Set the *enabled* parameter to **true** by using an API.
+-	On the *Settings* page of the {{site.data.keyword.iot_short_notm}} user interface, set **Enable LEC** to **On**.
+
+The length of time that event data is stored in the cache is specified by the time to live (TTL) value. The last event data for any specific event is stored for seven days by default.  You can change the duration by using an API to update the **ttlDays** parameter, or by selecting a value for the **Event Data TTL** field on the *Settings* page of the {{site.data.keyword.iot_short_notm}} user interface.
+
+For Lite plans, you can store information for a minimum of one day and a maximum of seven days. For other plans, you can store information for a minimum of one day and a maximum of 45 days.
+
+Use the following information to help you to configure the last event cache settings by using APIs.
+
+To retrieve the current configuration of the last event cache for an organization, use the following API:
+
+```
+    GET /api/v0002/config/lec
+```   
+
+   
+The following example shows a successful response to the GET method:
+```
+{
+    "enabled": false,
+    "ttlDays": 7
+}
+```
+Any person or application in an organization is authorized to access this endpoint. 
+
+If the last event cache is disabled for an organization by the {{site.data.keyword.iot_short_notm}} administrator, the following HTTP 403 FORBIDDEN status code is returned in response to the GET method:
+
+```
+{
+    "exception": {
+        "id": "CUDCS0105E",
+        "properties": ["myOrgID"]
+    },
+    "message": "CUDCS0105E: Last event cache is disabled for this organization. For more information, contact your support team."
+}
+```
+
+If the last event cache is not enabled, an HTTP 404 status code is returned in response to the GET method. To enable the last event cache feature for an organization, use the following API:
+
+```
+    PUT /api/v0002/config/lec
+```
+
+with the following example payload: 
+```
+{
+    "enabled": true,
+    "ttlDays": 5
+}
+```
+where: 
+
+- **enabled** is required and specifies whether the last event cache is enabled for an organization. The value must be a Boolean value. 
+
+- **ttlDays** is optional and specifies the number of days that an event is retained in the last event cache for an organization. The value must be an integer between 1 and 45 inclusive.
+   
+ 
+Only the administrator, operator users, or operator applications are authorized to access this endpoint. If the parameters or the JSON is invalid, an HTTP 401 BAD REQUEST status code is returned in response to the PUT method. 
+
+**Note:** It can take up to 30 seconds for a configuration change to complete.
+
+### Retrieving information from the last event cache
+
+By using an API, you can retrieve the last event that was sent by a device. You can retrieve device status regardless of the device's physical location or use status. You can retrieve the last recorded value of an event ID for a specific device, or the last recorded value for each event ID that was reported by a specific device. Last event data of a device can be retrieved for any specific event that occurred up to 45 days ago.
 
 To request the most recent value for a specific event ID, use the following API request, which returns the last recorded value for the “power” event ID.
 
@@ -180,7 +249,7 @@ The response is returned in the following JSON format:
 }
 ```
 
-**Note:** While the API response is in JSON format, event payloads can be written in any format. Payloads returned by Last Event Cache API are encoded in base64.
+**Note:** While the API response is in JSON format, event payloads can be written in any format. Payloads that are returned by Last Event Cache API are encoded in base64.
 
 To request the most recent value for each event ID that was reported by a device, use the following API request:
 
@@ -188,7 +257,7 @@ To request the most recent value for each event ID that was reported by a device
 GET /api/v0002/device/types/<device-type>/devices/<device-id>/events
 ```
 
-The response will include all event IDs that were sent by the device. In the following example, values are returned for the “power” and “temperature” events.
+The response includes all event IDs that were sent by the device. In the following example, values are returned for the “power” and “temperature” events.
 
 ```
 [
@@ -211,4 +280,4 @@ The response will include all event IDs that were sent by the device. In the fol
 ]
 ```
 
-To access the {{site.data.keyword.iot_short_notm}} Last event cache APIs, see [{{site.data.keyword.iot_short_notm}} HTTP Information Management API ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html#!/Last_Event_Cache){: new_window}.
+To access the {{site.data.keyword.iot_short_notm}} Last event cache APIs see [{{site.data.keyword.iot_short_notm}} HTTP Information Management API ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html#!/Last_Event_Cache){: new_window}.
