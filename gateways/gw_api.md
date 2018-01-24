@@ -135,9 +135,9 @@ You can use the last event cache to store information about the last event that 
 The last event cache feature is disabled by default, but you can enable the functionality in the following ways: 
 
 -	Set the *enabled* parameter to **true** by using an API.
--	On the *Settings* page of the {{site.data.keyword.iot_short_notm}} user interface, set **Enable LEC** to **On**.
+-	On the *Settings* page of the {{site.data.keyword.iot_short_notm}} dashboard, set **Enable LEC** to **On**.
 
-The length of time that event data is stored in the cache is specified by the time to live (TTL) value. The last event data for any specific event is stored for seven days by default.  You can change the duration by using an API to update the **ttlDays** parameter, or by selecting a value for the **Event Data TTL** field on the *Settings* page of the {{site.data.keyword.iot_short_notm}} user interface.
+The length of time that event data is stored in the cache is specified by the time to live (TTL) value. The last event data for any specific event is stored for seven days by default.  You can change the duration by using an API to update the **ttlDays** parameter, or by selecting a value for the **Event Data TTL** field on the *Settings* page of the {{site.data.keyword.iot_short_notm}} dashboard.
 
 For Lite plans, you can store information for a minimum of one day and a maximum of seven days. For other plans, you can store information for a minimum of one day and a maximum of 45 days.
 
