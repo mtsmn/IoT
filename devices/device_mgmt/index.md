@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-01-26"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-01-11"
 ## Introduction
 {: #introduction}
 
-The {{site.data.keyword.iot_full}} recognizes two classes of device: **managed devices** and **unmanaged devices**.
+The {{site.data.keyword.iot_full}} recognizes devices and gateways as the two classes of device. The device class is identified by using the "classId" field. Devices in the device class can be managed devices or unmanaged devices.
 
 **Managed devices** are defined as devices that contain a device management agent. A device management agent is a set of logic that allows the device to interact with the {{site.data.keyword.iot_short_notm}} Device Management service by using the Device Management Protocol. Managed devices can perform device management operations including location updates, firmware downloads and updates, reboots, and factory resets.
 
@@ -32,10 +32,9 @@ The Device Management Protocol is built on top of the MQTT messaging protocol. F
 
 1. A device and its associated device type are created in the {{site.data.keyword.iot_short_notm}} by using either the dashboard or the REST API.
 2. A device connects to the {{site.data.keyword.iot_short_notm}} and uses the **managed devices** operation to become a managed device.
-3. You can view and manipulate the metadata for a device by using the device operations. These operations - for example firmware update and device restart operations - are outlined in the 'Device model' documentation. For more information about the device model, see [Device model](https://console.ng.bluemix.net/docs/services/IoT/reference/device_model.html).
+3. You can view and manipulate the metadata for a device by using the device operations. These operations - for example firmware update and device restart operations - are outlined in the "Device management requests" and "Device model" documentation. For more information about device management requests, see [Device management requests](https://console.ng.bluemix.net/docs/services/IoT/devices/device_mgmt/requests.html). For more information about the device model, see [Device model](https://console.ng.bluemix.net/docs/services/IoT/reference/device_model.html).
 4. A device can communicate updates about its location, diagnostic information, and error codes by using the Device Management Protocol.
-5. To handle defunct devices in large device populations, the **managed devices** operation request includes an optional lifetime parameter. The lifetime parameter is the number of seconds in which the device must make another **managed devices** request to avoid being classified as dormant and becoming an unmanaged device.
-6. When a device is decommissioned, you can remove it from the {{site.data.keyword.iot_short_notm}} by using the dashboard or the REST API.
+5. When a device is decommissioned, you can remove it from the {{site.data.keyword.iot_short_notm}} by using the dashboard or the REST API.
 
 Refer to recipe [Connect Raspberry Pi as Managed Device to IBM Watson IoT Platform ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/){: new_window}.
 
@@ -50,11 +49,11 @@ The following table shows the return codes that are generated at various stages 
 |202   |Accepted (for initiating commands)|
 |204   |Changed (for attribute updates)|
 |400   |Bad request (for example, if a device is not in the appropriate state for this command)|
-|404   |Attribute was not found (also used if the operation was published to an invalid topic)|
 |409   |Resource could not be updated due to a conflict (for example, the resource is being updated by two simultaneous requests, so the update can be retried later)|
 |500   |Unexpected device error|
 |501   |Operation not implemented|
 
+403 (Forbidden). This may be returned if a device tries to publish a manage request claiming support for an invalid set of actions.
 
 ## Manage Device requests
 {: #manage_device_request}
@@ -138,6 +137,7 @@ Topic: iotdm-1/response
 |:---|:---|
 |200   |The operation was successful.|
 |400   |The input message does not match the expected format, or one of the values is out of the valid range.|
+|403   |Forbidden (if a device tries to publish a manage request claiming support for an invalid set of actions)|
 |404   |The topic name is incorrect, or the device is not in the database.|
 |409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
 
