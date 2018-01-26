@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-01-18"
 
 ---
 
@@ -12,10 +12,8 @@ lastupdated: "2018-01-11"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Configuring resource-level access control (Beta)
+# Configuring resource-level access control
 {: #configure_RLAC}
-
-**Important:** The {{site.data.keyword.iot_full}} resource-level access control feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 Resource-level access control enables you to control user and API key access to manage devices. You use resource groups to define which devices in an organization each user or API key can manage. Users and API keys can be assigned a "role to groups" pair, which defines that they can perform only operations that are covered by the specified role on devices that are in the specified groups. For more information about resource-level access control, see [Resource-level access control overview](rlac_overview.md) and [{{site.data.keyword.iot_short_notm}} Access control API documentation ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}.
 
