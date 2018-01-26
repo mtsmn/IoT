@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2017-12-12"
+lastupdated: "2018-01-18"
 
 ---
 
@@ -24,8 +24,6 @@ Feature       | Documentation
 ------------- | -------------
 Gateway Access Control | [Gateway Access Control (Beta)](gateways/gateway-access-control.html#gateway-access-control)
 Drill-down reporting | [Drill-down reporting (Beta)](reference/security/RM_security.html#drill-down)
-Resource-level access control | [Overview of RLAC (Beta)](reference/rlac_overview.html#RLAC_overview) 
- | [Configuring RLAC (Beta)](reference/rlac.html#configure_RLAC)
 IoT gateway package | [IoT gateway package (Beta)](gateways/iotgw.html#gw_package)
 Simulating device data | [Simulating device data (Beta)](devices/device_sim.html)
 Restoring deleted devices | [Restoring deleted devices (Beta)](iotplatform_task.html#restore_device)

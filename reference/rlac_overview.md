@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-01-18"
 
 ---
 
@@ -13,12 +13,10 @@ lastupdated: "2018-01-11"
 {:pre: .pre}
 
 
-# Resource-level access control overview (Beta)
+# Resource-level access control overview
 {: #RLAC_overview}
 
 Resource-level access control enables you to control user and API key access to manage devices. You use resource groups to specify the devices in an organization that each user or API key can manage. For information on how to configure resource-level access control, see [Configuring resource-level access control](rlac.html#configure_RLAC).
-
-**Important:** The {{site.data.keyword.iot_full}} resource-level access control feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Resource-level access control concepts 
 {: #RLAC_concepts}
@@ -58,7 +56,7 @@ A subject is an authenticated entity that requests platform access, which must b
 ### Resources
 {: #resources}
 
-A resource is an entity that the subject performs the action on. The subject requests authorized platform access for the resource. Devices are the only resources that are support in the resource-level access control Beta release.
+A resource is an entity that the subject performs the action on. The subject requests authorized platform access for the resource. 
 
 ### Actions
 {: #actions}
@@ -277,3 +275,9 @@ Returns a 404 error if the device is not accessible by the caller.
     GET /api/v0002/device/types/${typeId}/devices/${deviceId}/events/${eventId}
 
 Returns a 404 error if the device is not accessible by the caller.
+
+**Get logical interface for the device**
+
+    GET /api/v0002/device/types/{typeId}/devices/{deviceId}/state/{logicalInterfaceId}
+
+Returns a 404 error if the device is not in the caller's group.
