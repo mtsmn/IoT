@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-01-22"
 
 ---
 
@@ -94,9 +94,9 @@ Support for device lifecycle management is optional. The Device Management Proto
 
 ### Quality of service levels and clean session
 
-Managed devices can publish messages that have a quality of service (QoS) level of 0 or 1.
+Managed devices can publish messages that have a quality of service (QoS) level of 0, 1, or 2.
 
-Messages with QoS=0 can be discarded and do not persist after the messaging server is restarted. Messages with QoS=1 can be queued and do persist after the messaging server is restarted. The durability of the subscription determines whether a request is queued. The ``cleansession`` parameter of the connection that made the subscription determines the durability of the subscription.  
+Messages with QoS=0 can be discarded and do not persist after the messaging server is restarted. Messages with QoS=1 can be queued and do persist after the messaging server is restarted. The durability of the subscription determines whether a request is queued. The ``cleansession`` parameter of the connection that made the subscription determines the durability of the subscription. Devices can publish messages at QoS2, but the device management server publishes and subscribes at QoS1, so the response messages are only QoS1.
 
 {{site.data.keyword.iot_short_notm}} publishes requests that have a QoS level of 1 to support queuing of messages. To queue messages that are sent while a managed device is not connected, configure the device not to use clean sessions by setting the ``cleansession`` parameter to false.
 
