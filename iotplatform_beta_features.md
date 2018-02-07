@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-02-07"
 
 ---
 
@@ -22,7 +22,6 @@ The following beta features are available in {{site.data.keyword.iot_short_notm}
 
 Feature       | Documentation       
 ------------- | -------------
-Gateway Access Control | [Gateway Access Control (Beta)](gateways/gateway-access-control.html#gateway-access-control)
 Drill-down reporting | [Drill-down reporting (Beta)](reference/security/RM_security.html#drill-down)
 IoT gateway package | [IoT gateway package (Beta)](gateways/iotgw.html#gw_package)
 Simulating device data | [Simulating device data (Beta)](devices/device_sim.html)
