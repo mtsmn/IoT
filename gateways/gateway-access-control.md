@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-02-07"
 
 ---
 
@@ -12,13 +12,11 @@ lastupdated: "2018-01-11"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Gateway Access Control (Beta)
+# Gateway Access Control
 {: #gateway-access-control}
 
 Gateway devices are a specialized class of device and can act on behalf of other devices. Gateway resource groups define which devices within an organization each gateway can act on behalf of. Gateways can be assigned the *Standard Gateway* role. Standard gateways can only publish or subscribe to messages on behalf of devices in their resource group.
 {: #shortdesc}
-
-**Important:** The {{site.data.keyword.iot_full}} Gateway Access Control feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 For information about publishing events from gateway devices by using APIs, see [HTTP Messaging APIs for gateway devices](../gateways/gw_intro_api.html).
 
