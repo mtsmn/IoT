@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-02-07"
+lastupdated: "2018-02-09"
 
 ---
 
@@ -15,15 +15,25 @@ lastupdated: "2018-02-07"
 # Gateway Access Control
 {: #gateway-access-control}
 
-Gateway devices are a specialized class of device and can act on behalf of other devices. Gateway resource groups define which devices within an organization each gateway can act on behalf of. Gateways can be assigned the *Standard Gateway* role. Standard gateways can only publish or subscribe to messages on behalf of devices in their resource group.
+Gateway devices are a specialized class of device and can act on behalf of other devices. Gateway resource groups define which devices within an organization each gateway can act on behalf of. Gateway roles determine the ability of the gateway to register devices to the Watson IoT Platform.
 {: #shortdesc}
+
+You use resource groups to enable gateways to act on behalf of a subset of an organization's devices. Gateways can only publish or subscribe to messages for themeselves and on behalf of devices that are in their resource group. 
+
+When a new gateway is created, a default resource group is also created and assigned to the gateway. The default resource group cannot be removed from the gateway. Existing gateways without any resource groups can continue to act on behalf of all devices in the organization.
 
 For information about publishing events from gateway devices by using APIs, see [HTTP Messaging APIs for gateway devices](../gateways/gw_intro_api.html).
 
 ## Assigning a role to a gateway
 {: #gw_roles}
 
-Assigning a role to a gateway is mandatory for the gateway to have a resource group. Gateways without a resource group can act on behalf of all devices in the organization. Assigning the *Standard Gateway* role automatically creates a new resource group for the gateway. Once a gateway is assigned a resource group, it can only act on behalf of the devices in that resource group and itself, even if its role is changed.
+In order to assign a gateway to a resource group, you must first assign the gateway to a role. Newly created gateways are assigned the *Privileged Gateway* role by default and are assigned to a default resource group. Gateways with the privileged role can auto-register devices, which are added to the default resource group.
+
+Gateways with the *Standard Gateway* role cannot auto register-devices. 
+
+Once a gateway is assigned a resource group, the gateway can only act on behalf of the devices in that resource group and itself, even if its role is changed.
+
+For more information about gateway roles, see [Gateway roles](roles_index.html#gateway_roles).
 
 To assign a role to a gateway, use the following API where *${clientID}* is the URL-encoded ClientID in the format *d:${orgId}:${typeId}:${deviceId}* for devices or *g:${orgId}:${typeId}:${deviceId}* for gateways:
 
