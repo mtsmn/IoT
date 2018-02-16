@@ -48,7 +48,7 @@ Other | . | The dot operator is used for object access with a literal key, for e
 `7emperature`
 ```
 - For more information about the dot operator, see the [Operators ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://docs.jsonata.org/index.html){:new_window} section of the JSONata documentation. 
-- The function chaining operator, and the $ variable that is used in JSONata to refer to the context value at any point in the input JSON hierarchy are not currently supported. 
+- The function chaining operator, and the $ variable that is used in JSONata to refer to the context value at any point in the input JSON hierarchy are not currently supported.
 
 ## Extending the mapping expression language
 
