@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-17"
+lastupdated: "2018-02-13"
 
 ---
 
@@ -28,16 +28,27 @@ Type of operator                   | Supported operators     | Notes
 ------------- | ------------- | -------------
 Arithmetic | *+* - / * % | The % operator returns the remainder.
 Comparison | < <= > >= != = | The equality operator is = , as it is in JSONata.
-Boolean | *in*, *and* | The boolean constants are *true* or *false*.
-Conditional ternary | ? | The ? operator evaluates one of two alternative expressions based on the result of a test condition. The operator takes the following form *expression*  ? *value_if_true* : *value_if_false*
-String | & | The & operator joins the string values of the operands into a single resultant string.
-Sequence generator | .. | Creates an array of increasing integers, starting  with the number on the LHS and ending with the number on the RHS, for example, [1..4] -> [1,2,3,4]. The operands must evaluate to an integer. The sequence generator can only be used within an array constructor [].
-Other | . | The dot operator is used for object access with a literal key, for example $event.object.hh. *
-* Note: The expression on the left-hand side is constrained to a specific property, either in the event ($event) or the state ($state) or the metadata ($instance). 
+Boolean | *in* | The array inclusion operator returns Boolean *true* if the value of the LHS is included in the array of values on the RHS. Otherwise it returns *false*. If the RHS is a single value, then it is treated as a singleton array. For example, *"world" in ["hello", "world"]* -> *true*, *"hello" in "hello"* -> *true*.
+Boolean | *and*| The **and** operator returns Boolean *true* if both operands evaluate to *true*.
+Boolean | *or* | The **or** operator returns Boolean *true* if either operand evaluates to *true*.
+Conditional ternary | ? : | The ? : operator evaluates one of two alternative expressions based on the result of a test condition. The operator takes the following form *test_expression*  ? *value_if_true* : *value_if_false*. The *test_expression* expression is first evaluated. If it evaluates to Boolean *true*, then the operator returns the result of evaluating the *value_if_true* expression. Otherwise it returns the result of evaluating the *value_if_false* expression.
+String | & | The & operator joins the string values of the operands into a single resultant string, for example *"Hello" & "World" => "HelloWorld"*.
+Sequence generator | .. | Creates an array of monotonically increasing integer start with the number on the LHS and ending with the number on the RHS, for example, [1..4] -> [1,2,3,4] or [1..3, 10..12] -> [1,2,3,10,11,12]. The operands must evaluate to an integer. The sequence generator can only be used within an array constructor [].
+Other | . | The dot operator is used for object access with a literal key, for example $event.object.hh. The expression on the left-hand side is constrained to a specific property, either in the event ($event) or the state ($state) or the metadata ($instance). The expression on the right-hand side contains the information that you might want to access. 
 
 **Notes:** 
 - Use Parenthesis ( ) for expression grouping and to alter operator precedence
-- Use single quotes to surround property names that contain spaces, for example $event.object.'a b' 
+- Use single or double quotes to surround strings and property names, for example $event.object.'ab' 
+- Use backticks to surround property names that contain special characters, including spaces, for example 
+```
+{"x y":22}.`x y`
+```
+- Use backticks to surround property names that begin with a number, for example
+```
+`7emperature`
+```
+- For more information about the dot operator, see the [Operators ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://docs.jsonata.org/index.html){:new_window} section of the JSONata documentation. 
+- The function chaining operator, and the $ variable that is used in JSONata to refer to the context value at any point in the input JSON hierarchy are not currently supported. 
 
 ## Extending the mapping expression language
 
@@ -49,6 +60,52 @@ $event | *{"t": 34.5}*  | $event.t | Select a property of an inbound event to us
 $state | *{"temperature": 34.5,"humidity": 78 }*  | $state.temperature | Select a property on the device state to use in an expression.
 $instance | *{"deviceId": "TemperatureSensor1","typeId": "EnvSensor1","metadata": {"temp_adjustment": 50}}*  | $instance.metadata.temp_adjustment | Select device or device type attribute to use in an expression. 
 
+The following example uses the following object as the input to an event:  
+```
+ {
+    "temperature": 35,
+    "humidity": 72,
+    "pressure": 1024
+  }
+
+```
+The object is converted to an array by using the following expression:
+
+```
+  [$event.temperature, $event.humidity, $event.pressure]
+```  
+The expression results in the generation of the following output: 
+```
+ [
+    35,
+    72,
+    1024
+  ]
+```
+
+You can reverse this example, and convert an array from the input to an object. The following example uses the following array as the input to an event:
+```
+{
+    "readings": [
+      35,
+      72,
+      1024
+    ]
+  }
+```
+The array is converted to an object by using the following expression: 
+```
+ {"temperature": $event.readings[0], "humidity": $event.readings[1], "pressure": $event.readings[2]}
+```
+ The expression results in the generation of the following output: 
+  ```
+  {
+    "temperature": 35,
+    "humidity": 72,
+    "pressure": 1024
+  }
+  
+ ```
 You can also define an expression that combines the use of these variables. In the following example, a *temp_adjustment* property is defined in the device metadata and is used to calibrate the event reading. The property is defined in one mapping but can be applied to many devices. 
 
 ```
@@ -67,13 +124,25 @@ The following subset of JSONata functions are supported:
 Type of function                   |Function                   | Description | Example
 ------------- | ------------- | ------------- 
 String | $substring(string, start_index[, length]) | String substring, for example, *$substring("Hello World", 3, 5) => "lo Wo"*. 
-String | $string(arg) | Casts the argument to a string value, for example, *$string(2) => "2"*.
+String | $string(arg) | Casts the argument to a string value, following the JSONata casting rules. For example, *$string(2) => "2"*. For information about string casting rules, see [String functions ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://http://docs.jsonata.org/string-functions.html#stringarg){:new_window} in the JSONata documentation.
 Numeric | $number(arg) | Casts the argument to a numeric value if possible, for example, *$number(2) => 2*.
 Numeric | $sum(array) | Returns the arithmetic sum of an array of numbers, for example, *([1,2,3]) = 6*.
 Numeric | $average(array) | Returns the mean value of an array of numbers, for example, *([1,2,3]) = 2.0*.
-Boolean | $exists(expression) | Returns *true* if the property in the expression exists, *false* otherwise.
-Array | $count(array) | Returns the number of items in the array parameter, for example, *([1,2,3,4]) = 4*. If the array parameter is not an array, but rather a value of another JSON type, then the parameter is treated as a singleton array containing that value, and this function returns *1*.
-Array | $append(array1, array2) | Returns an array containing the values in *array1*, followed by the values in *array2*, For example, *([1,2], [3,4]) = [1,2,3,4]*. If either parameter is not an array, then it is treated as a singleton array containing that value, for example *$append("Hello", "World") => ["Hello", "World"]*.
+Boolean | $exists(expression) | Returns Boolean *true* if the arg expression evaluates to a value, or *false* if the expression does not match anything, for example, a path to a non-existent field reference.
+Boolean | $not(arg) | Returns Boolean *NOT* on the argument. *arg* is first cast to a boolean. 
+Array | $count(expression) | Returns the number of items in the array parameter, for example, *([1,2,3,4]) = 4*. If the array parameter is not an array, but rather a value of another JSON type, then the parameter is treated as a singleton array containing that value, and this function returns *1*. A count of no match returns *0*.
+Array | $append(array1, array2) | Returns an array containing the values in *array1*, followed by the values in *array2*, For example, *$append([1,2], [3,4]) = [1,2,3,4]*. If either parameter is not an array, then it is treated as a singleton array containing that value, for example *$append("Hello", "World") => ["Hello", "World"]*.
+
+## Combining values
+
+You can combine values for string and boolean expressions. 
+
+Path expressions that point to a string value will return that value. Strings can be combined using the concatenation operator *&*. 
+Boolean expressions are used to combine Boolean results, often to support more sophisticated predicate expressions. The *and* and *or* operators are supported. 
+
+**Note:** The value *not* is supported as a function, not as an operator. 
+
+For more information about combining values, see the [Combining values ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://docs.jsonata.org/index.html){:new_window} section of the JSONata documentation. 
 
 ## Arrays
 Use JSON arrays to put a collection of values in a specified order. Arrays associate each value in the array with an index or position. To address individual values in an array, you must specify the index by using square brackets after the field name of the array. If the square brackets contain a number, or an expression that evaluates to a number, then the number represents the index of the value to select. An array of numbers can also be used as an index, for example *["a","b","c"][[1,2]] -> ["b", "c"]*. The array *[1,2]* is used as an index that identifies which values to select from the array *["a","b","c"]*. 
@@ -88,7 +157,7 @@ If the specified index exceeds the size of the array, then nothing is selected.
 You can specify how processed data is presented in the output by using array constructors or object constructors.
 
 ### Supported array constructors
-Arrays can be constructed by enclosing a comma-separated list of literals or expressions in a pair of square brackets []. Commas are used to separate multiple expressions within the array constructor, for example, *[1, 3-1] = [1,2]*.
+Arrays can be constructed by enclosing a comma-separated list of literals or expressions in a pair of square brackets []. Commas are used to separate multiple expressions within the array constructor inlcuding sequence generation, for example, *[1, 3-1] = [1,2]*, *[1..3] -> [1,2,3]* and *[1..3, 7..9] -> [1,2,3,7,8,9]*.
 
 ### Supported object constructors
 {: #constructors}
@@ -185,7 +254,7 @@ The following example shows the average temperature and the summed temperature b
 }
 ```
 
-### Handling mismatches between mapping expression and input data
+### Handling mismatches between mapping expression and input data 
 
 A state update might fail when one of the mapping expressions contains a reference to input data that is not specified in the published event.
 
@@ -215,5 +284,3 @@ To prevent state update failures because of unspecified optional data, you can u
 By defining a default value for the optional property in this way, the expression evaluates successfully, even when the *t* property is not specified in the published device event. 
 
 Therefore, if the event `{"humidity":22}` is received, the state update completes successfully and the device state is set to ``{"humidity":22, "temperature":0}`.
-
-
