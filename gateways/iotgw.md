@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-02-20"
 
 ---
 
@@ -46,7 +46,7 @@ Complete the following steps to create a package binding:
 3. [Create a gateway type](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), for example, *myGWType* in your Watson IoT organization and [register an instance of the gateway](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), for example, *myGWId*. Make a note of the *Gateway Token* for the registered gateway.
 4. Create a package binding with the IoT gateway package by using the following example command:
    ```
-   wsk package bind /watson/iotgw myGW -p org myorg -p gatewayTypeId myGWType -p gatewayId myGWId -p gatewayToken myGWToken
+   wsk package bind /watson-iot/iot-gateway myGW -p org myorg -p gatewayTypeId myGWType -p gatewayId myGWId -p gatewayToken myGWToken
    ```
 5. Verify that the package binding exists by using the following command:  
    ```
@@ -55,7 +55,7 @@ Complete the following steps to create a package binding:
 
 ## Publishing Device Events
 
-The `/watson/iotgw/publishEvent` action publishes events from a registered {{site.data.keyword.iot_short_notm}} gateway, on behalf of its associated devices. The following table describes the parameters that are used when publishing events:  
+The `/watson-iot/iot-gateway/publishEvent` action publishes events from a registered {{site.data.keyword.iot_short_notm}} gateway, on behalf of its associated devices. The following table describes the parameters that are used when publishing events:  
 
 Parameter |  Description | Example
 ------------- | ------------- | -------------
