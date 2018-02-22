@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-02-22"
 
 ---
 
@@ -33,7 +33,6 @@ As part of this guide, you will:
 - Create and deploy a {{site.data.keyword.iot_short_notm}} organization by using Cloud Foundry CLI.
 - Build and deploy a sample conveyor belt device.
 - Connect the simulated conveyor belt device to {{site.data.keyword.iot_short_notm}}.
-- Monitor and visualize device data by using the {{site.data.keyword.iot_short_notm}} dashboards.
 
 To get started with {{site.data.keyword.iot_short_notm}} using a different IoT device, see the [Getting started tutorial](/docs/services/IoT/getting-started.html).
 {: tip}
@@ -51,7 +50,6 @@ If you choose to use Git to download the code samples you must also have a [GitH
 
 ## Step 1 - Deploy {{site.data.keyword.iot_short_notm}}  
 {: #deploy_watson_iot_platform_service}
-{{site.data.keyword.iot_short_notm}} provides powerful application access to IoT devices and data to help you rapidly compose analytics applications, visualization dashboards, and mobile IoT apps.
 The steps that follow will deploy an instance of the {{site.data.keyword.iot_short_notm}} service with the name `iotp-for-conveyor` in your {{site.data.keyword.Bluemix_notm}} environment. If you already have a service instance running, you can use that instance with the guide and skip this first step. Just make sure that you use the correct service name and {{site.data.keyword.Bluemix_notm}} space when you proceed through the guides.
 {: tip}
 1. From the command line, set your API endpoint by running the cf api command.   
@@ -86,7 +84,7 @@ If prompted, select the organization and space where you want to deploy {{site.d
 3. Deploy the {{site.data.keyword.iot_short_notm}} service to {{site.data.keyword.Bluemix_notm}}.  
    ```
 cf create-service iotf-service iotf-service-free YOUR_IOT_PLATFORM_NAME
-  ```
+   ```
 For YOUR_IOT_PLATFORM_NAME, use *iotp-for-conveyor*.  
 Example: `cf create-service iotf-service iotf-service-free iotp-for-conveyor`
 3. Create your sample conveyor belt device.  
@@ -266,73 +264,10 @@ While the motor is running, the program publishes events of event type `sensorDa
 You can bookmark the URL for easy access later.   
 Example: `https://*iot-org-id*.internetofthings.ibmcloud.com`.
  4. From the menu, select **Devices** and verify that your new device is displayed.
-2. View raw data
- 1. From the menu, select **Boards**.
- 3. Select the **Device Centric Analytics** board.
- 4. Locate the **Devices I Care About** card and select your device.  
-The device name is displayed in the Device Properties card.
-4. Send sensor data to the platform.   
+2. Send sensor data to the platform.   
 The device sends data to {{site.data.keyword.iot_short_notm}} when sensor readings change. You can simulate this data sending by stopping, starting or changing the speed of the conveyor belt.   
 **Path A:** If you are accessing the app on a mobile browser, try shaking your smart phone to trigger accelerometer data for the conveyor belt.
 {: tip}
-3. Verify that the updated device data points that correspond to the published message are displayed in the Device Properties card.  
-Message example A:
-  ```
-{
-	"d": {
-		"id": "belt1",
-		"ts": 1494341288662,
-		"ay": "0.00",
-		"running": true,
-		"rpm": "0.6"
-	}
-}
-  ```
-Message example B:
-  ```
-{
-	"d": {
-    "elapsed": 1,
-    "running": true,
-    "temperature": 35.00,
-    "ay": "0.00",
-    "rpm": "0.6"
-  }
-}
-  ```
-
-
-## Step 4 - Visualize live data in {{site.data.keyword.iot_short_notm}}
-{: #add_card}
-To create a dashboard card to see live conveyor belt data:
-1. On the same Device Centric Analytics board, click **Add New Card** and then select **Line Chart**.
-2. For card source data, click **Cards**.   
-A list of card names is displayed.
-3. Select **Devices I Care About** and then click **Next**.
-4. Click **Connect new data set** and enter the following values for the data set parameters:
-  - Event: sensorData
-  - Property: d.rpm
-  - Name: Belt RPM
-  - Type: Float
-  - Unit: rpm
-5. Click **Next**.
-6. On the card preview page, select **L**, and then click **Next**.
-7. On the card information page, change the name of the title to `Belt data` and then click **Submit**.
-8. Change the speed of your belt to see live data in your new card.
-9. Optional: Add a second data set to add acceleration data for the belt.  
-If you use your phone to connect to the sample app, you can shake the phone to send acceleration data for the belt.
- 1. Click the menu icon on your card and select to edit the card.
- 2. For card source data, select **Cards**.   
- 3. Select **Devices I Care About** and click **Next**.
- 4. Click **Connect new data set** and enter the following values:
-    - Event: sensorData
-    - Property: d.ay
-    - Name: Accel. Y
-    - Type: Float
-    - Unit: gs
- 5. Click **Next**.
- 6. Path A only: Shake your phone to see the live accelerometer data in your new card.
-For more information about creating boards and cards, see [Visualizing real-time data by using boards and cards](/docs/services/IoT/data_visualization.html#boards_and_cards).
 
 ## What's next
 {: @whats_next}  
@@ -347,14 +282,13 @@ For technical details, see:
 - Path B: Modify the Raspberry Pi setup to suit your needs.  
 For technical details, see:
  - [https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi/blob/master/README.md){: new_window}
-- [Guide 2: Using basic real-time rules and actions](getting-started-iot-rules.html)  
-Now that you successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.
+
 
 **Note:** Bluemix is now IBM Cloud. Check out the [IBM Cloud Blog](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") for more details.
 
-- [Guide 3: Monitoring your device data](getting-started-iot-monitoring.html)  
+- [Guide 2: Monitoring your device data](getting-started-iot-monitoring.html)  
 Now that you connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices.
-- [Guide 4: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
+- [Guide 3: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
 The conveyor belt sample app in path A lets you manually simulate one or a few conveyor belt devices. This guide lets you set up a simulated environment that has a large number of devices.
 - [Learn more about {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html)
 - [Learn more about {{site.data.keyword.iot_short_notm}} APIs](/docs/services/IoT/reference/api.html)
