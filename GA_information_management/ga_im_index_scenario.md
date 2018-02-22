@@ -62,7 +62,18 @@ Use the following example scenario to set up your own interfaces environment.
 
 In this scenario, two device types and two device instances are assumed. Device instance *TemperatureSensor1* is associated with device type *EnvSensor1*. Device instance *TemperatureSensor2* is associated with device type *EnvSensor2*.
 
+For information about using the dashboard to add a device type, see the [Getting started with Data Management by using the Web interface](../GA_information_management/im_ui_flow.html) documentation.
+
 For information about using REST APIs to add a device type, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html) documentation.
+
+**Note:** You can add metadata when you create a device type and device. In this scenario, the following metadata is added to the device instance *TemperatureSensor1*:
+```
+{
+    "tempThresholdMax": 44,
+    "tempThresholdMin": 10 
+}
+```
+This metadata is used in [Creating rules and actions](../information_management/im_rules.html) to trigger an alert if a temperature event that exceeds 44 degrees Celsius is received by {{site.data.keyword.iot_short_notm}} from *TemperatureSensor1*. 
 
 ## Step 1: Create a draft event schema file
 {: #step1}
