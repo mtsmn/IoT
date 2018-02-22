@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-02-07"
+lastupdated: "2018-02-22"
 
 ---
 
@@ -28,3 +28,4 @@ Simulating device data | [Simulating device data (Beta)](devices/device_sim.html
 Restoring deleted devices | [Restoring deleted devices (Beta)](iotplatform_task.html#restore_device)
 Canceling device management requests | [Canceling device management requests (Beta)](devices/device_mgmt/requests.html#cancel-requests)
 Setting device management requests to expire | [Setting device management requests to expire (Beta)](devices/device_mgmt/requests.html#timeout-requests)
+Embedded rules | [Creating embedded rules (Beta)](information_management/im_rules.html)
