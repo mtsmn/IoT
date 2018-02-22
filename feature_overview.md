@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-17"
+lastupdated: "2018-02-22"
 
 ---
 
@@ -19,8 +19,7 @@ The {{site.data.keyword.iot_full}} is built on the following key areas:
 
   1. Connect - Connect devices and develop applications.
   2. Information Management - Store, normalize, transform, and review device data and integrate your {{site.data.keyword.iot_short_notm}} with other services.
-  3. Analytics - Visualize real-time device data by using the {{site.data.keyword.iot_short_notm}} dashboard.
-  4. Risk Management - Configure secure connectivity and architecture with access control for users and applications.
+  3. Risk Management - Configure secure connectivity and architecture with access control for users and applications.
 
 ## Connect
 {: #connect}
@@ -61,19 +60,14 @@ Different makes and models of devices publish data in different formats. The dat
 
 For more information about using this feature, see [Introduction to data management](GA_information_management/ga_im_device_twin.html).
 
----
+<!---
 ## Analytics
 {: #analytics}
-
 ### Visualize real-time device data
-
 You can visualize and display real-time device data by using dashboard cards. Dashboard cards monitor and display device data in real-time, which allows you to keep track of key devices or device data. These visualizations are displayed on the main {{site.data.keyword.iot_short_notm}} dashboard to give you rapid access to the context and status of real-time device data. For more information, see [visualizing real-time data](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
-
 ### Edge and cloud analytics
-
 By using {{site.data.keyword.iot_short_notm}} cloud analytics, you specify rule conditions that are based on real-time device data and that trigger alerts and optional actions when met. For example, you might create a rule to ensure that when the device is dropped or when the temperature of the device spikes, an alert is sent to the dashboard on a user's device, and an email is sent to the administrator. For more information, see the [cloud analytics documentation](https://console.ng.bluemix.net/docs/services/IoT/cloud_analytics.html).
-
-With edge analytics, you move the analytics rule-triggering process from the cloud to an edge analytics enabled gateway that might dramatically reduce the amount of device data traffic to the cloud by doing the analytics processing close to the device. For more information, see the [edge analytics documentation](https://console.ng.bluemix.net/docs/services/IoT/edge_analytics.html).
+With edge analytics, you move the analytics rule-triggering process from the cloud to an edge analytics enabled gateway that might dramatically reduce the amount of device data traffic to the cloud by doing the analytics processing close to the device. For more information, see the [edge analytics documentation](https://console.ng.bluemix.net/docs/services/IoT/edge_analytics.html).-->
 
 ---
 
