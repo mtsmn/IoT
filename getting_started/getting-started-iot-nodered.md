@@ -16,7 +16,7 @@ lastupdated: "2018-01-11"
 {: #gettingstartedtemplate}
 <!-- Provide an appropriate ID above -->
 
-Get started with {{site.data.keyword.iot_full}} by using the {{site.data.keyword.iot_short_notm}} Starter GitHub project. By using the Starter, you can quickly simulate a device, create cards, generate data, and begin analyzing and displaying data in the {{site.data.keyword.iot_short_notm}} dashboard.  
+Get started with {{site.data.keyword.iot_full}} by using the {{site.data.keyword.iot_short_notm}} Starter GitHub project.
 {:shortdesc}
 
 ## Overview
@@ -25,10 +25,10 @@ Get started with {{site.data.keyword.iot_full}} by using the {{site.data.keyword
 The starter automatically deploys and connects these services:
 <dl>
 <dt>**{{site.data.keyword.iot_short_notm}}**</dt>
-<dd>An IoT web service that includes gateway management, device management, and application access. By using {{site.data.keyword.iot_short_notm}}, you can collect connected device data and run analytics on real-time data from your organization.</dd>
+<dd>An IoT web service that includes gateway management, device management, and application access. By using {{site.data.keyword.iot_short_notm}}, you can collect connected device data on real-time data from your organization.</dd>
 <dt>**{{site.data.keyword.sdk4nodefull}}**</dt>
 <dd>The runtime environment in which Node-RED runs. </br>For more information, see the [{{site.data.keyword.sdk4nodefull}} starter documentation](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html).</dd>
-<dd>Node-RED is a tool for wiring together hardware devices, APIs, and online services in new and interesting ways.  You can use Node-RED to create a simulated thermostat that sends simulated data to your {{site.data.keyword.iot_short_notm}} service. You can create cards to display real-time data in the {{site.data.keyword.iot_short_notm}} dashboard. </br>For more information, see the [Node-RED documentation](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).</dd>
+<dd>Node-RED is a tool for wiring together hardware devices, APIs, and online services in new and interesting ways.  You can use Node-RED to create a simulated thermostat that sends simulated data to your {{site.data.keyword.iot_short_notm}} service. </br>For more information, see the [Node-RED documentation](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).</dd>
 <dt>**{{site.data.keyword.cloudantfull}}**</dt><dd>The database in which Node-RED stores metadata.</dd>
 </dl>
 
@@ -44,7 +44,7 @@ To make moving between tasks easier in the process that follows, open the {{site
 <dt>*{{site.data.keyword.Bluemix_notm}} dashboard*</dt>
 <dd>See the state of your deployment, read documentation, and launch the dashboards.</dd>
 <dt>*{{site.data.keyword.iot_short_notm}} dashboard*</dt>
-<dd>Define device types, register devices, monitor incoming sensor data, create data visualization cards, and see live data visualizations.</dd>
+<dd>Define device types and register devices.</dd>
 <dt>*Node-RED*</dt>
 <dd>Configure and run the device simulator flow and work with other flows to process data from {{site.data.keyword.iot_short_notm}}.</dd>
 </dl>
@@ -142,52 +142,6 @@ The payload contains data points, such as those shown in the following example:
     3. Click the Debug tab to see messages.
   8. In the {{site.data.keyword.iot_short_notm}} Device Information page, verify that you see data points from the device in the Sensor Information section.
 
-
-## Step 4: Create cards in {{site.data.keyword.iot_short_notm}} to show live data  
-{: #createcards}  
-Create a board and cards to display device data in the {{site.data.keyword.iot_short_notm}} dashboard. For more information about boards and cards, see [Visualizing real-time data by using boards and cards](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
-
-1. Create a board
-  1. Open the {{site.data.keyword.iot_short_notm}} dashboard.  
-  **Tip:** If the {{site.data.keyword.iot_short_notm}} dashboard is not already open in another tab, return to your {{site.data.keyword.Bluemix_notm}} dashboard, click the name of your {{site.data.keyword.iot_short_notm}} instance, and then click **Launch Dashboard**.  
-  2. Create a board to contain the cards for your simulated devices.
-    1. If the All Boards, page is not already displayed, select **Boards** from the {{site.data.keyword.iot_short_notm}} dashboard main menu, and then click **Create New Board**.
-    2. Enter a name for the board (for example `Home Environment`) and click **Next**.
-    3. On the next page, click **Submit**.  
-  3. Click the board that you just created to open it.
-2. Create a card to display temperature
-  1. Click **Add New Card**, and then select the **Line chart** card type from the Devices section.
-  2. Select your device from the devices list, then click **Next**.
-  3. Click **Connect new data set**.
-  4. In the Create Value Card page, select or enter the following values and click **Next**.
-    - Event: update
-    - Property: temp
-    - Name: Temperature
-    - Type: Float
-    - Unit: °C
-    - Precision: 2
-    - Min: 0
-    - Max: 50
-  5. In the Card Preview page, select **L** for the line chart size, and click **Next**.
-  6. In the Card Information page, change the name of the card to **Temperature** and click **Submit**.   
-The temperature card appears on the dashboard and includes a line chart of the live temperature data.
-3. Create a card to display humidity
-  1. Click **Add New Card**, and then select the **Gauge** card type from the Devices section.
-  2. Select your device from the list, then click **Next**.
-  3. Click **Connect new data set**.
-  4. In the Create Value Card page, select or enter the following values and click **Next**.
-  Event: update
-     - Property: humidity
-     - Name: Humidity
-     - Type: Float
-     - Unit: %
-     - Precision: 1
-     - Min: 10
-     - Max: 95
-  5. In the Card Preview page, select **M** for the gauge size, and click **Next**.
-  6. In the Card Information page, change the name of the card to **Humidity** and click **Submit**.   
-The humidity card appears on the dashboard and includes a gauge that shows the live humidity data.  
-
 <!-- 4. Create a card to display location
   1. Click **Add New Card**, and then select the **Value** card type, which is located in the Devices section.
   2. Select your device from the list, then click **Next**.
@@ -218,7 +172,6 @@ The location card appears on the dashboard and shows the live latitude and longi
 ## What's next  
 {: #whats-next}  
 Now that your simulated device is sending data to {{site.data.keyword.iot_short_notm}}, you can continue to iterate on your IoT project.
- - Watch your cards display the data that is generated by your node-RED flow.  
 Node-Red continues to send data until you stop it. To stop the simulated data, perform the following steps:
     1.	In your Node-RED flow editor, double-click the gray **Send Data** node, set the Repeat value to **Interval**, and set the frequency to every **3** seconds.
     2. Click **Done**.
@@ -227,8 +180,6 @@ Node-Red continues to send data until you stop it. To stop the simulated data, p
  - Connect a physical device.  
 [Search the IoT Recipes](https://developer.ibm.com/recipes/?post_type=tutorials&s=watson+iot) to connect a physical device such as a Raspberry Pi and send data to {{site.data.keyword.iot_short_notm}}.
 
- - Explore visualization options.  
-[Deploy a sample node.js application to visualize device data.](https://www.bluemix.net/docs/services/IoT/visualizingdata_sample.html).
 
  -	Password protect the Node-RED flow editor.   
 By default, the editor is open for anyone to access and modify flows. To password-protect the editor, perform the following tasks:
