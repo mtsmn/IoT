@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-02-22"
 
 ---
 
@@ -354,7 +354,7 @@ For technical details, see:
 - Path B: Modify the widget library app to suit your needs.  
 For technical details, see:
  - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
-- [Guide 4: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
-Expand on the basic simulation by adding large numbers of self-running simulators to your environment. This expansion will let you test drive the basic analytics and monitoring from the previous guides in a more realistic, multi-device environment.
+- [Guide 3: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
+Expand on the basic simulation by adding large numbers of self-running simulators to your environment.
 - [Learn more about {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [Learn more about {{site.data.keyword.iot_short_notm}} APIs](/docs/services/IoT/reference/api.html){:new_window}
