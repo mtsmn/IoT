@@ -62,9 +62,9 @@ Use the following example scenario to set up your own interfaces environment.
 
 In this scenario, two device types and two device instances are assumed. Device instance *TemperatureSensor1* is associated with device type *EnvSensor1*. Device instance *TemperatureSensor2* is associated with device type *EnvSensor2*.
 
-For information about using the dashboard to add a device type, see the [Getting started with Data Management by using the Web interface](../GA_information_management/im_ui_flow.html) documentation.
+You can create device types and devices by using the [{{site.data.keyword.iot_short_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://internetofthings.ibmcloud.com){: new_window}, or by using REST APIs. For more information about using the {{site.data.keyword.iot_short_notm}} IoT Platform dashboard to add device types and devices, see the [Getting started with Data Management by using the Web interface](../GA_information_management/im_ui_flow.html) documentation. documentation.
 
-For information about using REST APIs to add a device type, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html) documentation.
+For information about using REST APIs to add device types and devices, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html){: new_window} documentation.
 
 **Note:** You can add metadata when you create a device type and device. In this scenario, the following metadata is added to the device instance *TemperatureSensor1*:
 ```
@@ -74,6 +74,8 @@ For information about using REST APIs to add a device type, see the [{{site.data
 }
 ```
 This metadata is used in [Creating rules and actions](../information_management/im_rules.html) to trigger an alert if a temperature event that exceeds 44 degrees Celsius is received by {{site.data.keyword.iot_short_notm}} from *TemperatureSensor1*. 
+
+**Note:** When a device makes an HTTP request through the Watson IoT Platform HTTP REST API, a user name and password is required. The password is the value of the authentication token that is either automatically generated or manually specified when a device is registered. If you are using an MQTT client, you must keep a note of the authentication token of your device as you need the token to retrieve device state by subscribing to a topic string.
 
 ## Step 1: Create a draft event schema file
 {: #step1}
