@@ -13,7 +13,7 @@ lastupdated: "2018-01-17"
 {:pre: .pre}
 
 
-# Step-by-step guide: A detailed example about how to work with devices through a common interface
+# Step-by-step guide 1: A detailed example about how to work with devices through a common interface
 {: #scenario}
 
 Use the following information to create a scenario in which two temperature sensors publish events to {{site.data.keyword.iot_full}}. One sensor measures temperature in degrees Celsius. The other sensor measures temperature in degrees Fahrenheit. These readings are mapped to a single temperature reading that is in degrees Celsius. When a new temperature reading is published by these devices, the value of the property associated with the device state is changed.
