@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-17"
+lastupdated: "2018-02-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-01-17"
 # Getting started tutorial
 {: #getting-started-with-iotp}
 
-In this {{site.data.keyword.iot_full}} getting started tutorial, we connect an IoT device to {{site.data.keyword.iot_short_notm}} and set up analytics to explore real-time data.
+In this {{site.data.keyword.iot_full}} getting started tutorial, we connect an IoT device to {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
 <div id="prerequisites"></div>
@@ -120,7 +120,7 @@ To add a device from the {{site.data.keyword.iot_short_notm}} dashboard:
 
   For more information, see [MQTT connectivity for devices](/docs/services/IoT/devices/mqtt.html).
 
-## Step 3: Create boards and cards to keep track of device data
+<!--## Step 3: Create boards and cards to keep track of device data
 
 By using boards and cards, you can view graphics that represent data set values from one or more devices for a quick overview and understanding of the device data.
 
@@ -220,11 +220,11 @@ Rules are condition-based decision points that match real-time device data with 
 
 7. Click **Save** to save without activating,  or click **Activate** to save and activate your rule.
 
-    When you activate the rule, an alert is added to the **Rule-Based Analytics** board when the conditions are met, and any rule action is run.
+    When you activate the rule, an alert is added to the **Rule-Based Analytics** board when the conditions are met, and any rule action is run. -->
 
 ## Next steps
 
-Extend the data analytics features by creating and connecting your own apps to consume real-time and historical device data.
+Create and connect your own apps to consume real-time and historical device data.
 
   * Check out the [client libraries](/docs/services/IoT/iot_platform_client_lib.html) for tools to build code for integrating and connecting your devices and apps.
 
