@@ -38,7 +38,6 @@ Internet of Things Platform
     {: .topicgroup}
     Watson IoT Platform security
         reference/security/index.md
-        reference/security/custom_cards_server.md
         reference/security/RM_security.md
         reference/security/set_up_certificates.md
         reference/security/set_up_policies.md
@@ -66,7 +65,6 @@ Internet of Things Platform
     Getting started guides
         getting_started/getting-started-iot-overview.md
         getting_started/getting-started-iot-conveyor.md
-        getting_started/getting-started-iot-rules.md
         getting_started/getting-started-iot-monitoring.md
         getting_started/getting-started-iot-large-scale-simulation.md
 
@@ -111,16 +109,6 @@ Internet of Things Platform
         gateways/gateway-access-control.md
         reference/rlac_overview.md
         reference/rlac.md     
-
-    {: .topicgroup}
-    Analyzing real-time IoT data
-        analytics.md
-        data_visualization.md
-        im_schemas.md
-        im_vir_calculations.md
-        custom_cards/custom-cards.md
-        cloud_analytics.md
-        edge_analytics.md
 
     {: .topicgroup}
     Analyzing historical IoT data
