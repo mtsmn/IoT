@@ -38,8 +38,8 @@ The following types of data are not backed up in {{site.data.keyword.iot_short_n
 
 - Device events
 - Transient messaging state, for example in-flight data
-- Analytics rules and alert configuration
 - MQTT messages that are sent and received as part of a device management request
+<!-- - Analytics rules and alert configuration -->
 
 ## How frequently is data backed up and where is it stored?
 
