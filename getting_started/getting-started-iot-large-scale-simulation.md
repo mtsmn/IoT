@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-02-22"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-01-11"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guide 4: Simulating a large number of devices
+# Guide 3: Simulating a large number of devices
 In the first guide, you set up a basic device simulator to manually simulate one or more conveyor belts. In this guide, we expand on this simulation by adding large numbers of self-running simulators to your environment to test analytics and monitoring in a more realistic, multi-device environment.
 {:shortdesc}
 
@@ -39,7 +39,7 @@ By completing the instructions that are in this guide, you will:
 - Use Cloud Foundry to deploy a Node-RED based and webhook enabled device simulator application.
 - Use API calls to create and register devices, publish device events, and delete devices.
 
-**Important:** Simulating large numbers of devices that concurrently send device data to {{site.data.keyword.iot_short_notm}} might use up a large amount of data. You can use the {{site.data.keyword.iot_short_notm}} *Usage* dashboard to monitor how much data your devices and applications are using. The metrics are refreshed on a 2-hourly interval.
+**Important:** Simulating large numbers of devices that concurrently send device data to {{site.data.keyword.iot_short_notm}} might use up a large amount of data. 
 
 ## Prerequisites
 {: #prereqs}  
@@ -192,11 +192,6 @@ The Node-RED interface opens.
 5. Click **Go to your Node-RED flow editor**.
 6. In the flow editor, select the **Device Type and Instance** tab.
 7. To register five devices, click the inject node labeled **Register 5 motorController devices**.
-8. Verify that your devices are registered.
- 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
- 3. Select the **Device Centric Analytics** board.
- 4. Locate the **Devices I Care About** card.  
-The device names are displayed.
 
 ### REST API  
 To register multiple devices:  
@@ -219,11 +214,6 @@ Example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/devices`
     - Optional: authToken is the authorization token the devices will register with.
     - Optional: If chunkSize is not provided, it is set to 500 by default. The 'chunksize' must be less than and a factor of numberDevices.
     - deviceName is the pattern for the deviceID for the created devices.
-2. Verify that your devices are registered.
- 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
- 3. Select the **Device Centric Analytics** board.
- 4. Locate the **Devices I Care About** card.  
-The device names are displayed.
 
 ## Step 4 - Simulate device events
 {: #step4}
@@ -234,11 +224,7 @@ Because the simulated devices are registered with {{site.data.keyword.iot_short_
 To send device events:  
 1. In the Node-RED flow editor, select the **Simulate multiple devices** tab.
 7. To simulate five devices, click the inject node that is labeled **Simulate 5 devices**.
-8. Verify that your devices are sending data.
- 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
- 3. Select the **Device Centric Analytics** board.
- 4. Locate the **Devices I Care About** card.  
- 5. Select one of the devices and verify that updated device data points that correspond to the published message are displayed in the **Device Properties** card.  
+ 
 
 
 ### Rest API  
@@ -261,11 +247,7 @@ Where:
     - timeInterval is the spacing of the events in milliseconds.
     - deviceType is the device type that you created simulated devices for.
     - deviceName is the pattern for the deviceID for the created devices.
-8. Verify that your devices are sending data.
- 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
- 3. Select the **Device Centric Analytics** board.
- 4. Locate the **Devices I Care About** card.  
- 5. Select one of the devices and verify that updated device data points that correspond to the published message are displayed in the **Device Properties** card.   
+ 
 
 ## Step 5 - Deleting devices
 {: #deleting}
@@ -274,11 +256,7 @@ Where:
 To delete devices:  
 1. In the Node-RED flow editor, select the **Device Type and Instance** tab.
 2. To delete five devices, click the inject node that is labeled **Delete 5 devices**.
-3. Verify that your devices are deleted.
- 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
- 3. Select the **Device Centric Analytics** board.
- 4. Locate the **Devices I Care About** card.  
- 5. Verify that devices are no longer listed.  
+
 
 
 ### Rest API  
@@ -292,19 +270,13 @@ Example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevice
 "deviceType":"iot-conveyor-belt",  
 "deviceName": "belt"  
 }</code></pre>
-2. Verify that your devices are deleted.
- 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
- 3. Select the **Device Centric Analytics** board.
- 4. Locate the **Devices I Care About** card.  
- 5. Verify that devices are no longer listed.  
+  
 
 
 ## What's next?
 {: @whats_next}  
 Jump to another topic that interests you:
-- [Guide 2: Using basic real-time rules and actions](getting-started-iot-rules.html)  
-Now that you successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.
-- [Guide 3: Monitoring your device data](getting-started-iot-monitoring.html)  
+- [Guide 2: Monitoring your device data](getting-started-iot-monitoring.html)  
 Now that you connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices.
 - [Learn more about {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [Learn more about {{site.data.keyword.iot_short_notm}} APIs](/docs/services/IoT/reference/api.html){:new_window}
