@@ -11,7 +11,7 @@ lastupdated: "2018-02-23"
 
 # Billing
 
-Paid {{site.data.keyword.iot_full}} service plans (plans other than 'Lite'), are based on the concept of megabytes exchanged and analyzed over the period of a month.  This document details how {{site.data.keyword.iot_short_notm}} meters the data to create usage information that determines the cost of using the service.  Usage information can be used to approximate the cost of using {{site.data.keyword.iot_short_notm}} based on the design and number of devices, applications and gateways.
+Paid {{site.data.keyword.iot_full}} service plans (plans other than 'Lite'), are based on the concept of megabytes exchanged over the period of a month.  This document details how {{site.data.keyword.iot_short_notm}} meters the data to create usage information that determines the cost of using the service.  Usage information can be used to approximate the cost of using {{site.data.keyword.iot_short_notm}} based on the design and number of devices, applications and gateways.
 
 For information about the cost of each megabyte of data exchanged, see the {{site.data.keyword.iot_short_notm}} service in the {{site.data.keyword.Bluemix_notm}} catalog for the region required.
 
