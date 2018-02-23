@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-02-21"
 
 ---
 
@@ -23,7 +23,7 @@ The tables show levels of access for:
 <!-- [Historian Operations](#user-historian) -->
 - [Organization Operations](#user-org-ops)
 - [Access Control Operations](#user-access-ops)
-- [Analytics Operations](#user-analytics-ops)
+<!-- - [Analytics Operations](#user-analytics-ops)-->
 - [Third-Party Operations](#user-third-party)  
 <!-- - [Risk Management Operations](#user-risk-mgt) -->
 
@@ -102,8 +102,7 @@ View roles	|X	|X	|X	|X	|X
 Create, update, delete custom roles	|X	|X |- |- |-
 View operations*	|X	|X	|X	|X	|X
 
-### Analytics Operations {: #user-analytics-ops}
-
+<!--### Analytics Operations {: #user-analytics-ops}
 Analytics Operations ||| User Roles|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrator** | **Operator** | **Developer** | **Analyst** | **Reader**
@@ -113,7 +112,7 @@ View analytics actions|	X|	X|	X|	X|	X
 Manage analytics actions|	X|	X|	X|	X| -
 View analytics alerts|	X|	X|	X|	X|	X
 View analytics message schemas|	X|	X|	X|	X|	X
-Manage analytics message schemas|	X|	X|	X|	X| -
+Manage analytics message schemas|	X|	X|	X|	X| - -->
 
 ### Third-Party Service Operations {: #user-third-party}
 
