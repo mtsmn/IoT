@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-02-23"
 
 ---
 
@@ -31,9 +31,16 @@ Requests can be initiated by using the following REST API sample:
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-For more information about the body of a device management request, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
+For more information about the body of a device management request, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}. 
 
-## Canceling device management requests (Beta)
+## Setting up device management requests to expire
+{: #timeout-requests}
+
+You can set up device management requests to expire by timing out if they are still in progress after a certain amount of time. When you initiate a device management request, you can specify a timeout value in seconds. After the specified number of seconds are reached, the device management server cancels the request automatically.
+
+For more information about the timeout parameter in the initiation request API, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}.
+
+## Canceling device management requests
 {: #cancel-requests}
 
 You can cancel device management requests that are in progress by using the following REST API request:
@@ -42,18 +49,14 @@ You can cancel device management requests that are in progress by using the foll
 
 This request clears the current operations for all in-progress devices and marks the requests as complete. 
 
-Important: The {{site.data.keyword.iot_full}} cancel device management request feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
-
 For more information about the cancel device management request API, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests_requestId_cancel){: new_window}.
 
-## Setting up device management requests to expire (Beta)
-{: #timeout-requests}
+## Overriding in-progress requests that are blocking a new request
+{: #force-override}
 
-You can set up device management requests to expire by timing out if they are still in progress after a certain amount of time. When you initiate a device management request, you can specify a timeout value in seconds. After the specified number of seconds are reached, the device management server cancels the request automatically.
+By default, if a device has an outstanding firmware download or update request, a new request cannot be initiated for that device. When you initiate a device management request, you can set the `override=true` query parameter to specify that in-progress requests are canceled so that the new request can be initiated. When you use this query parameter, all in-progress requests are canceled. To select specific requests to cancel, use the [cancel device management request API](#cancel-requests).
 
-Important: The {{site.data.keyword.iot_full}} device management request timeout paramter is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
-
-For more information about the timeout parameter in the initiation request API, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}.
+For more information about the override parameter in the initiation request API, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}.
 
 ## Device actions
 {: #device-actions}
