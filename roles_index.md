@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-07-19"
+lastupdated: "2018-02-23"
 
 ---
 
@@ -27,9 +27,8 @@ The following standard user roles are available:
 User role | Description
 ------------- | -------------
 Administrator | A 'super-user' role that grants access to all user-related APIs. Administrators cannot access operations that are restricted to devices and applications.
-Operator | Intended for front-end organization users. Grants access to most organization operations, access control operations, analytics operations, third-party operations, and risk management operations.
-Developer | Grants unrestricted access to device operations, log operations, cache operations, historian operations, analytics operations, and third-party service operations. The role provides limited access to organization, access control, and risk management operations.
-Analyst | Grants access to analytics operations, including creating, updating, and deleting rules, actions, and schemas.
+Operator | Intended for front-end organization users. Grants access to most organization operations, access control operations, third-party operations, and risk management operations.
+Developer | Grants unrestricted access to device operations, log operations, cache operations, historian operations and third-party service operations. The role provides limited access to organization, access control, and risk management operations.
 Reader | The default user role. Grants limited access to operations that are available to all users.
 
 For more information about the user roles, see [User roles](reference/roles_access.html).
@@ -50,7 +49,7 @@ Application role | Description
 Standard | The default application role. Grants access to most application operations but no user or role operations.   
 Operations | Grants access to the broadest range of operations, but denies access to subscribe or publish operations.
 Backend Trusted | Intended for applications that do not require interaction from the systems operator. Denies access to device management, organization, role, or extension operations.
-Data Processor | Intended for applications that perform analytics and data processing. Data processor applications are granted limited access to organization operations and user operations, but have full access to analytics operations, including creating and managing rules, actions, and schemas.
+Data Processor | Intended for applications that perform analytics and data processing. Data processor applications are granted limited access to organization operations and user operations.
 Visualization | Intended for applications that are responsible for generating visualizations of data. Visualization applications have access to live and stored data operations and dashboard operations.
 Device | Intended for applications that take the role of devices; that is, they provide a source of data that is sent to the {{site.data.keyword.iot_short_notm}} as though it is a device. Device applications are granted only limited access to operations.
 

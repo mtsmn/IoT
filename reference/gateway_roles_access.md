@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-02-21"
 
 ---
 
@@ -23,7 +23,7 @@ The tables show levels of access for:
 <!-- [Historian Operations](#gateway-historian) -->
 - [Organization Operations](#gateway-org-ops)
 - [Access Control Operations](#gateway-access-ops)
-- [Analytics Operations](#gateway-analytics-ops)
+<!-- - [Analytics Operations](#gateway-analytics-ops) -->
 - [Third-Party Operations](#gateway-third-party)  
 <!-- - [Risk Management Operations](#gateway-risk-mgt) -->
 
@@ -104,8 +104,7 @@ View Roles|-|-
 Create, update, delete Custom Roles|-|-
 View Operations|-|-
 
-### Analytics Operations {: #gateway-analytics-ops}
-
+<!-- ### Analytics Operations {: #gateway-analytics-ops}
 Analytics Operations || Gateway Roles|
 :--------: | ---------------------|------------------------|
            | **Standard Gateway** | **Privileged Gateway** |
@@ -115,7 +114,7 @@ View analytics actions|-|-
 Manage analytics actions|-|-
 View analytics alerts|-|-
 View analytics message schemas|-|-
-Manage analytics message schemas|-|-
+Manage analytics message schemas|-|- -->
 
 ### Third-party Service Operations {: #gateway-third-party}
 
