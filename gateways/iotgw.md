@@ -46,11 +46,11 @@ Complete the following steps to create a package binding:
 3. [Create a gateway type](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), for example, *myGWType* in your Watson IoT organization and [register an instance of the gateway](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), for example, *myGWId*. Make a note of the *Gateway Token* for the registered gateway.
 4. Create a package binding with the IoT gateway package by using the following example command:
    ```
-   wsk package bind /watson-iot/iot-gateway myGW -p org myorg -p gatewayTypeId myGWType -p gatewayId myGWId -p gatewayToken myGWToken
+   bx wsk package bind /watson-iot/iot-gateway myGW -p org myorg -p gatewayTypeId myGWType -p gatewayId myGWId -p gatewayToken myGWToken
    ```
 5. Verify that the package binding exists by using the following command:  
    ```
-   wsk package list
+   bx wsk package list
    ```
 
 ## Publishing Device Events
@@ -74,8 +74,8 @@ The following example shows how to publish events from the *iotgw* package:
 
 Publish a device event by using the *publishEvent* action in the package binding that you created. You must replace `/myNamespace/myGateway` with your package name.
 
- ```
-  wsk action invoke /myNamespace/myGateway/publishEvent -i --result --blocking -p org ORG_ID -p eventType value -p payload '{"test":"etsd"}' -p typeId myDeviceType -p deviceId 00aabbccde03_0001 -p gatewayTypeId myGatewayType -p gatewayId 00aabbccde03 -p gatewayToken "ZZZ"
+ ``` 
+ bx wsk action invoke /myNamespace/myGateway/publishEvent -i --result --blocking -p org ORG_ID -p eventType value -p payload '{"test":"etsd"}' -p typeId myDeviceType -p deviceId 00aabbccde03_0001 -p gatewayTypeId myGatewayType -p gatewayId 00aabbccde03 -p gatewayToken "ZZZ"
  ```
 
  ## Working with the repository
