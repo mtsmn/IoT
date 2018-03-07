@@ -60,7 +60,7 @@ If you completed [Guide 1: Getting started with {{site.data.keyword.iot_short_no
 ## Step 1A - Deploy and connect the monitoring web application
 {: #deploy_app}
 
-The Plant Floor Monitoring sample app lists all iot-conveyor-belt type devices that are connected to your {{site.data.keyword.iot_short_notm}} organization together with a subset of the event data such as RPM, last updated, and device ID.
+The Plant Floor Monitoring sample app lists all iot-conveyor-belt type devices that are connected to your {{site.data.keyword.iot_full}} organization together with a subset of the event data such as RPM, last updated, and device ID.
 
 The sample app is built using the Node.js client libraries at: [https://github.com/ibm-watson-iot/iot-nodejs ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 
