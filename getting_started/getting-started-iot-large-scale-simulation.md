@@ -39,7 +39,7 @@ By completing the instructions that are in this guide, you will:
 - Use Cloud Foundry to deploy a Node-RED based and webhook enabled device simulator application.
 - Use API calls to create and register devices, publish device events, and delete devices.
 
-**Important:** Simulating large numbers of devices that concurrently send device data to {{site.data.keyword.iot_short_notm}} might use up a large amount of data. 
+**Important:** Simulating large numbers of devices that concurrently send device data to {{site.data.keyword.iot_full}} might use up a large amount of data. 
 
 ## Prerequisites
 {: #prereqs}  
