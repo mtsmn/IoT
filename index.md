@@ -49,6 +49,7 @@ For device connection developer documentation, see:
 - [MQTT connectivity for devices](devices/mqtt.html).
 - [MQTT connectivity for gateways](gateways/mqtt.html).
 
+<!--
 ## Step 2: Analyze your device data
 {: #analyzing_data}
 
@@ -59,8 +60,9 @@ Start exploring the real-time data that the devices are sending to {{site.data.k
 - [Rules and actions](analytics.html) that are triggered by real-time device data.
 
 For a quick getting started example, see the [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window} developerWorks recipe.
+-->
 
-## Step 3: Create applications to consume your device data
+## Step 2: Create applications to consume your device data
 {: #develop_applications}
 
 Extend the data analytics features of {{site.data.keyword.iot_short_notm}} by creating and connecting your own applications to consume real-time and historical device data.
