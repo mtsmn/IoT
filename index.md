@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-12-21"
+lastupdated: "2018-03-07"
 
 ---
 
@@ -52,22 +52,20 @@ For device connection developer documentation, see:
 <!--
 ## Step 2: Analyze your device data
 {: #analyzing_data}
-
 Start exploring the real-time data that the devices are sending to {{site.data.keyword.iot_short_notm}}.
-
 {{site.data.keyword.iot_short_notm}} includes the following analytics tools:  
 - [Boards and cards](data_visualization.html) to visualize your real-time device data.
 - [Rules and actions](analytics.html) that are triggered by real-time device data.
-
 For a quick getting started example, see the [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window} developerWorks recipe.
 -->
 
 ## Step 2: Create applications to consume your device data
 {: #develop_applications}
 
-Extend the data analytics features of {{site.data.keyword.iot_short_notm}} by creating and connecting your own applications to consume real-time and historical device data.
+Create and connect your own applications to consume device data.
 
 For more information, see the following topics:   
 - Explore the [application developer documentation](applications/api.html) and the [{{site.data.keyword.iot_short_notm}} API Documentation](reference/api.html).
 - Explore the [{{site.data.keyword.iot_short_notm}} client libraries](iot_platform_client_lib.html) that provide tools and files to build and develop code for integrating and connecting your devices and applications.
 - [Connect a {{site.data.keyword.cloudantfull}} service](cloudant_connector.html) to your {{site.data.keyword.iot_short_notm}} to store historical device data.
+- Create your own rules by using the new [embedded rules (Beta)](information_management/im_rules.html) feature.
