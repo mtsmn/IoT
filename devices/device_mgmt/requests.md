@@ -2,13 +2,13 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-23"
+lastupdated: "2018-03-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}  
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
@@ -27,11 +27,11 @@ Requests can be initiated through the dashboard by using the **Actions** tab of 
 ## Initiating device management requests by using the REST API
 {: #initiating-dm-api}
 
-Requests can be initiated by using the following REST API sample:  
+Requests can be initiated by using the following REST API:
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-For more information about the body of a device management request, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}. 
+For more information about the body of a device management request, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
 
 ## Setting up device management requests to expire
 {: #timeout-requests}
@@ -43,11 +43,11 @@ For more information about the timeout parameter in the initiation request API, 
 ## Canceling device management requests
 {: #cancel-requests}
 
-You can cancel device management requests that are in progress by using the following REST API request:
+You can cancel device management requests that are in progress by using the following API request:
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests/{requestId}/cancel`
 
-This request clears the current operations for all in-progress devices and marks the requests as complete. 
+This request clears the current operations for all in-progress devices and marks the requests as complete.
 
 For more information about the cancel device management request API, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests_requestId_cancel){: new_window}.
 
@@ -61,7 +61,7 @@ For more information about the override parameter in the initiation request API,
 ## Device actions
 {: #device-actions}
 
-A device can specify that it supports device actions when it publishes a manage request. A device action request indicates to the {{site.data.keyword.iot_short_notm}} that the device is able to respond to device reboot and device reset actions.
+A device can specify that it supports device actions when it publishes a manage request. The device does this by setting the deviceActions flag in the Manage Device request to true to indicate that the device can respond to device reboot and device reset actions.
 
 ## Device actions - reboot
 {: #device-actions-reboot}
@@ -72,7 +72,7 @@ To initiate a device reboot by using the REST API, issue a POST request to:
 
 `https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Provide the following information:
+Provide the following information in the request:
 
 - The action ``device/reboot``
 - A list of devices to reboot, with a maximum of 5000 devices
@@ -91,9 +91,7 @@ Example device reboot request:
 }
 ```
 
-After a request is initiated, an MQTT message is published to all devices that are specified in the body of the reboot request. For each device, a response must be sent back to indicate whether the reboot action can be initiated. If this operation can be initiated immediately, set the `rc` parameter to `202`. If the reboot attempt fails, set the `rc` parameter to `500` and set the `message` parameter accordingly. If reboot is not supported, set the `rc` parameter to `501` and optionally set the `message` parameter accordingly.
-
-The reboot action is complete when the device sends a Manage Device request after its reboot.
+After a request is initiated, an MQTT message is published to all devices that are specified in the body of the reboot request. For each device, a response must be sent back to indicate whether the reboot action can be initiated. If this operation can be initiated immediately, set the `rc` parameter to `202`. If the reboot attempt fails, set the `rc` parameter to `500` and set the appropriate error in the `message` parameter. If reboot is not supported, set the `rc` parameter to `501` and optionally set the `message` parameter accordingly.
 
 ### Topic for device reboot request
 
@@ -124,11 +122,13 @@ Outgoing message from the device:
 
 Topic: iotdevice-1/response
 {
-    "rc": "response_code",
+    "rc": response_code,
     "message": "string",
     "reqId": "string"
 }
 ```
+The reboot action is complete when the device sends a Manage Device request after its reboot.
+
 
 ## Device actions - factory reset
 {: #device-actions-factory-reset}
@@ -192,7 +192,7 @@ The following topic shows an outgoing message from the device:
 
 Topic: iotdevice-1/response
 {
-    "rc": "response_code",
+    "rc": response_code,
     "message": "string",
     "reqId": "string"
 }
@@ -205,22 +205,24 @@ The firmware level that is known to be on a device is stored in the ``deviceInfo
 
 **Important:** The managed device must support observation of the ``mgmt.firmware`` attribute to support firmware actions.
 
-The firmware update process is separated into distinct actions:
+The firmware update process can be separated into distinct actions:
 - Downloading firmware
 - Updating firmware
 
-The status of each of firmware actions is stored in a separate attribute on the device. The ``mgmt.firmware.state`` attribute describes the status of the firmware download. The following table describes the possible values that can be set for the ``mgmt.firmware.state`` attribute:
+The status of firmware actions is stored in the ``mgmt.firmware.state`` and ``mgmt.firmware.updateStatus`` attributes.
+
+The following table describes the possible values that can be set for the ``mgmt.firmware.state`` attribute:
 
  |Value |State  | Meaning |
  |:---|:---|:---|
- |0  | Idle        | The device is not downloading firmware. |  
+ |0  | Idle        | The device is not downloading firmware. |
  |1  | Downloading | The device is downloading firmware. |
  |2  | Downloaded  | The device successfully downloaded a firmware update and is ready to install it. |
 
 
-The ``mgmt.firmware.updateStatus`` attribute describes the status of the firmware update. The possible values for the ``mgmt.firmware.updateStatus`` attribute are:
+The possible values for the ``mgmt.firmware.updateStatus`` attribute are:
 
-|Value |State | Meaning |  
+|Value |State | Meaning |
 |:---|:---|:---|
 |0 | Success | The firmware was successfully updated. |
 |1 | In Progress | The firmware update was initiated but is not yet complete.|
@@ -280,7 +282,7 @@ If none of the optional parameters are specified, the first step in the followin
 The device management server in {{site.data.keyword.iot_short_notm}} uses the Device Management Protocol to send a request to the devices, which initiates the firmware download. The download process consists of the following steps:
 
 1. A firmware details update request is sent on topic ``iotdm-1/device/update``.
-The update request lets the device validate if the requested firmware differs from the currently installed firmware. If there is a difference, set the ``rc`` parameter to ``204``, which translates to the status ``Changed``.  
+The update request lets the device validate if the requested firmware differs from the currently installed firmware. If there is a difference, the device sends a response containing the rc ``204``, which translates to the status ``Changed``.
 The following example shows which message to expect for the previously sent example firmware download request and which response is sent when a difference is detected:
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -343,7 +345,7 @@ The observation request verifies whether the device is ready to start the firmwa
       "reqId" : "909b477c-cd37-4bee-83fa-1d568664fbe8"
    }
    ```
-This exchange triggers the last step.  
+This exchange triggers the last step.
 
 3. The download request is sent on topic ``iotdm-1/mgmt/initiate/firmware/download``:
 
