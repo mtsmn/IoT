@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-26"
+lastupdated: "2018-03-08"
 
 ---
 
@@ -23,7 +23,7 @@ The {{site.data.keyword.iot_full}} recognizes devices and gateways as the two cl
 
 **Managed devices** are defined as devices that contain a device management agent. A device management agent is a set of logic that allows the device to interact with the {{site.data.keyword.iot_short_notm}} Device Management service by using the Device Management Protocol. Managed devices can perform device management operations including location updates, firmware downloads and updates, reboots, and factory resets.
 
-The Device Management Protocol defines a set of supported operations. A device management agent can support a subset of the operations, but the **manage** and **unmanage** operations must be supported. A device that supports firmware action operations must also support observation.
+The Device Management Protocol defines a set of supported operations. A device management agent can support a subset of the operations, but it must make Manage Device request. A device that supports firmware action operations must also support observation.
 
 The Device Management Protocol is built on top of the MQTT messaging protocol. For more information about how the Device Management Protocol interacts with MQTT, see [MQTT connectivity for devices](../mqtt.html).
 
@@ -31,37 +31,17 @@ The Device Management Protocol is built on top of the MQTT messaging protocol. F
 ### The device management lifecycle
 
 1. A device and its associated device type are created in the {{site.data.keyword.iot_short_notm}} by using either the dashboard or the REST API.
-2. A device connects to the {{site.data.keyword.iot_short_notm}} and uses the **managed devices** operation to become a managed device.
-3. You can view and manipulate the metadata for a device by using the device operations. These operations - for example firmware update and device restart operations - are outlined in the "Device management requests" and "Device model" documentation. For more information about device management requests, see [Device management requests](https://console.ng.bluemix.net/docs/services/IoT/devices/device_mgmt/requests.html). For more information about the device model, see [Device model](https://console.ng.bluemix.net/docs/services/IoT/reference/device_model.html).
+2. A device connects to the {{site.data.keyword.iot_short_notm}} and makes a Manage Device request to become a managed device.
+3. You can view and manipulate the metadata for a device by using the {{site.data.keyword.iot_short_notm}} REST API. These API operations - for example firmware update and device restart - are outlined in the [Device management requests](https://console.ng.bluemix.net/docs/services/IoT/devices/device_mgmt/requests.html) documentation.
 4. A device can communicate updates about its location, diagnostic information, and error codes by using the Device Management Protocol.
 5. When a device is decommissioned, you can remove it from the {{site.data.keyword.iot_short_notm}} by using the dashboard or the REST API.
 
 Refer to recipe [Connect Raspberry Pi as Managed Device to IBM Watson IoT Platform ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/){: new_window}.
 
-### Return code summary
-
-
-The following table shows the return codes that are generated at various stages during the device management lifecycle.
-
-|Return code |Message |
-|:---|:---|
-|200   |Operation succeeded|
-|202   |Accepted (for initiating commands)|
-|204   |Changed (for attribute updates)|
-|400   |Bad request (for example, if a device is not in the appropriate state for this command)|
-|409   |Resource could not be updated due to a conflict (for example, the resource is being updated by two simultaneous requests, so the update can be retried later)|
-|500   |Unexpected device error|
-|501   |Operation not implemented|
-
-403 (Forbidden). This may be returned if a device tries to publish a manage request claiming support for an invalid set of actions.
-
 ## Manage Device requests
 {: #manage_device_request}
 
-A device uses the Manage Device request to become a managed device. The Manage Device request must be the first device management request that is sent by the device after connecting to the {{site.data.keyword.iot_short_notm}}. A device management agent typically sends this type of request whenever it starts or restarts.
-
-**Important:** Support for this operation is mandatory for any managed devices.
-
+A device uses the Manage Device request to become a managed device. A device management agent must send a Manage Device request before it can receive requests from the server. A device management agent typically sends this type of request whenever it starts or restarts.
 
 ### Topic for a Manage Device request
 
@@ -125,7 +105,7 @@ Incoming message from the server:
 
 Topic: iotdm-1/response
 {
-    "rc": 200,
+    "rc": number,
     "reqId": "string"
 }
 ```
@@ -138,16 +118,15 @@ Topic: iotdm-1/response
 |200   |The operation was successful.|
 |400   |The input message does not match the expected format, or one of the values is out of the valid range.|
 |403   |Forbidden (if a device tries to publish a manage request claiming support for an invalid set of actions)|
-|404   |The topic name is incorrect, or the device is not in the database.|
-|409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
+|404   |The device has not been registered with {{site.data.keyword.iot_short_notm}}.|
+|409   |Resource could not be updated due to a conflict (for example, the resource is being updated by two simultaneous requests). The update can be retried later.|
 
 
 ## Unmanage Device requests
 {: #manage-unmanage}
 
 
-A device uses an Unmanage Device request when it no longer needs to be managed. When a device becomes unmanaged, {{site.data.keyword.iot_short_notm}} no longer sends new device management requests to the device. Unmanaged devices continue to publish error codes, log messages, and location messages.
-**Important:** Support for this operation is mandatory for any managed devices.
+A device uses an Unmanage Device request when it no longer needs to be managed. When a device becomes unmanaged, {{site.data.keyword.iot_short_notm}} no longer sends new device management requests to the device. Unmanaged devices can continue to publish error codes, log messages, and location messages.
 
 ### Topic for an Unmanage Device request
 
@@ -184,7 +163,7 @@ Incoming message from the server:
 
 Topic: iotdm-1/response
 {
-    "rc": 200,
+    "rc": number,
     "reqId": "string"
 }
 ```
@@ -195,24 +174,20 @@ Topic: iotdm-1/response
 |:---|:---|
 |200   |The operation was successful.|
 |400   |The input message does not match the expected format, or one of the values is out of the valid range.|
-|404   |The topic name is incorrect, or the device is not in the database.|
-|409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
+|404   |The device has not been registered with {{site.data.keyword.iot_short_notm}}.|
+|409   |Resource could not be updated due to a conflict (for example, the resource is being updated by two simultaneous requests). The update can be retried later.|
 
 
 ## Update Location requests
 {: #update-location}
 
-A device uses an Update Location request to manage the location data for a device. The location metadata for a device can be updated in {{site.data.keyword.iot_short_notm}} in the following ways:
+The location metadata for a device can be updated in {{site.data.keyword.iot_short_notm}} in the following ways:
 
 ### Automatic device location updates
-- The device notifies {{site.data.keyword.iot_short_notm}} about the location update. The device retrieves its location from a GPS receiver and sends a device management message to the {{site.data.keyword.iot_short_notm}} instance to update its location. The time stamp captures the time at which the location was retrieved from the GPS receiver. The time stamp is valid even if there is a delay in sending the location update message. If time stamp is omitted from the device management message, the date and time of the message receipt is used to update the location metadata.
+- Devices that can determine their location can choose to notify the {{site.data.keyword.iot_short_notm}} device management server about location changes. The device notifies {{site.data.keyword.iot_short_notm}} about the location update. The device retrieves its location, from a GPS receiver, for example, and sends a device management message to the {{site.data.keyword.iot_short_notm}} instance to update its location. The time stamp captures the time at which the location was retrieved from the GPS receiver. The time stamp is valid even if there is a delay in sending the location update message. The server records the date and time of the message receipt and uses that information to update the location metadata if a time stamp was not used.
 
 ### Manual device location updates by using the REST API
 - You can manually set the location metadata for a static device by using the {{site.data.keyword.iot_short_notm}} REST API when the device is registered. You can also modify the location later. The time stamp setting is optional, but when omitted, the current date and time is set in the location metadata for the device.
-
-### Location updates that are triggered by devices
-
-Devices that can determine their location can choose to notify the {{site.data.keyword.iot_short_notm}} device management server about location changes.
 
 ### Topic for an Update Location request that is triggered by a device:
 
@@ -232,7 +207,7 @@ iotdm-1/response
 ### Location update that is triggered by users or apps
 
 
-When a user or application updates the location of an active managed device, the device retrieves an update message.
+When a user or application updates the location of an active managed device, the device receives an update message.
 
 
 
@@ -249,13 +224,11 @@ iotdm-1/device/update
 ### Message format for an Update location request
 
 
-The ``measuredDateTime`` field is the date of location measurement. The ``updatedDateTime`` field is the date of the update to the device information. For efficiency reasons, the {{site.data.keyword.iot_short_notm}} sometimes batches updates to location information so that the updates are slightly delayed. The latitude and longitude must be specified in decimal degrees by using World Geodetic System 1984 (WGS84).
+The ``measuredDateTime`` field is the date and time of location measurement.
 
-Whenever location is updated, the values that are provided for latitude, longitude, elevation, and uncertainty are considered a single multi-value update. The latitude and longitude are mandatory and must both be provided with each update.  Elevation and uncertainty are optional and can be omitted.
+Whenever location is updated, the values that are provided for latitude, longitude, elevation, and accuracy are considered a single multi-value update. The latitude and longitude are mandatory and must both be provided with each update. The latitude and longitude must be specified in decimal degrees by using World Geodetic System 1984 (WGS84). Elevation and accuracy are measured in meters and are optional.
 
 If an optional value is provided on an update and then omitted on a later update, the earlier value is deleted by the later update. Each update is considered a complete multi-value set.
-
-### Location updates that are triggered by device
 
 
 Request format:
@@ -285,7 +258,7 @@ Incoming message from the server:
 
 Topic: iotdm-1/response
 {
-    "rc": 200,
+    "rc": number,
     "reqId": "string"
 }
 ```
@@ -296,8 +269,8 @@ Topic: iotdm-1/response
 |:---|:---|
 |200   |The operation was successful.|
 |400   |The input message does not match the expected format, or one of the values is out of the valid range.|
-|404   |The topic name is incorrect, or the device is not in the database.|
-|409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
+|404   |The device has not been registered with {{site.data.keyword.iot_short_notm}}.|
+|409   |Resource could not be updated due to a conflict (for example, the resource is being updated by two simultaneous requests). The update can be retried later.|
 
 
 ### Location updates that are triggered by users or apps
@@ -320,6 +293,8 @@ Topic: iotdm-1/device/update
                     "elevation": number,
                     "accuracy": number,
                     "measuredDateTime": "string in ISO8601 format"
+                    "updatedDateTime": "string in ISO8601 format",
+
                 }
             }
         ]
@@ -414,7 +389,7 @@ Incoming message from the server:
 
 Topic: iotdm-1/response
 {
-    "rc": 200,
+    "rc": number,
     "reqId": "string"
 }
 ```
@@ -425,8 +400,8 @@ Topic: iotdm-1/response
 |:---|:---|
 |200   |The operation was successful.|
 |400   |The input message does not match the expected format, or one of the values is out of the valid range.|
-|404   |The topic name is incorrect, or the device is not in the database.|
-|409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
+|404   |The device has not been registered with {{site.data.keyword.iot_short_notm}}.
+|409   |Resource could not be updated due to a conflict (for example, the resource is being updated by two simultaneous requests). The update can be retried later.|
 
 
 ## Clear Error Codes requests
@@ -475,8 +450,8 @@ Topic: iotdm-1/response
 |:---|:---|
 |200   |The operation was successful.|
 |400   |The input message does not match the expected format, or one of the values is out of the valid range.|
-|404   |The topic name is incorrect, or the device is not in the database.|
-|409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
+|404   |The device has not been registered with {{site.data.keyword.iot_short_notm}}.|
+|409   |Resource could not be updated due to a conflict (for example, the resource is being updated by two simultaneous requests). The update can be retried later.|
 
 
 ## Add Log requests
@@ -512,9 +487,9 @@ Outgoing message from the device:
 Topic: iotdevice-1/add/diag/log
 {
     "d": {
-        "message": string,
-        "timestamp": string,
-        "data": string,
+        "message": "string",
+        "timestamp": "string",
+        "data": "string",
         "severity": number
     },
     "reqId": "string"
@@ -528,7 +503,7 @@ Incoming message from the server:
 
 Topic: iotdm-1/response
 {
-    "rc": 200,
+    "rc": number,
     "reqId": "string"
 }
 ```
@@ -540,8 +515,8 @@ Topic: iotdm-1/response
 |:---|:---|
 |200   |The operation was successful.|
 |400   |The input message does not match the expected format, or one of the values is out of the valid range.|
-|404   |The topic name is incorrect, or the device is not in the database.|
-|409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
+|404   |The device has not been registered with {{site.data.keyword.iot_short_notm}}.|
+|409   |Resource could not be updated due to a conflict (for example, the resource is being updated by two simultaneous requests). The update can be retried later.|
 
 ## Clear Logs requests
 {: #diag-clear-logs}
@@ -578,7 +553,7 @@ Incoming message from the device:
 
 Topic: iotdm-1/response
 {
-    "rc": 200,
+    "rc": number,
     "reqId": "string"
 }
 ```
@@ -589,15 +564,15 @@ Topic: iotdm-1/response
 |:---|:---|
 |200   |The operation was successful.|
 |400   |The input message does not match the expected format, or one of the values is out of the valid range.|
-|404   |The topic name is incorrect, or the device is not in the database.|
-|409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
+|404   |The device has not been registered with {{site.data.keyword.iot_short_notm}}.|
+|409   |Resource could not be updated due to a conflict (for example, the resource is being updated by two simultaneous requests). The update can be retried later.|
 
 ## Observe Attribute Changes requests
 {: #observations-observe}
 
 {{site.data.keyword.iot_short_notm}} can send an Observe Attribute Change request to a device to observe changes of one or more device attributes by using the Observe Attribute Changes request type. When the device receives the request, it must send a notification request to {{site.data.keyword.iot_short_notm}} whenever the values of the observed attributes change.
 
-**Important:** Devices must implement, observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update)  request types. Observe attribute change requests are only used in the context of firmware requests.
+**Important:** Devices must implement, observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update) request types.
 
 ### Topic for an Observe Attribute Changes request
 
@@ -611,9 +586,9 @@ iotdm-1/observe
 ### Message format for an Observe Attribute Changes request
 
 
-The `fields` array is an array of the device attribute from the device model. If a complex field, such as `mgmt.firmware` is specified, it is expected that its underlying fields are updated at the same time so that only a single notification message is generated.
+The `fields` array is an array of the device attributes from the device model. If a complex field, such as `mgmt.firmware` is specified, it is expected that its underlying fields are updated at the same time so that only a single notification message is generated.
 
-The `message` parameter that is used in the response can be specified if the value of the `rc` parameter is not `200`. If any specified parameter value cannot be retrieved, the value of the `rc` parameter must be set to either `404` if the device is not found, or to `500` for any other reason. When values for parameters cannot be found, the `fields` array should contain elements which have `field` set to the name of each parameter that could not be read. The `value` parameter should be omitted. For the response code parameter to be set to `200`, both `field` and `value` must be specified, where `value` is the current value of an attribute that is identified by the value of the `field` parameter.
+The `message` parameter that is used in the response can be specified if the value of the `rc` parameter is not `200`. If any specified parameter value cannot be retrieved, the value of the `rc` parameter must be set to either `404` if the attribute is not found, or to `500` for any other reason. When values for parameters cannot be found, the `fields` array should contain elements which have `field` set to the name of each parameter that could not be read. The `value` parameter should be omitted. For the response code parameter to be set to `200`, both `field` and `value` must be specified, where `value` is the current value of an attribute that is identified by the value of the `field` parameter.
 
 Request format:
 
@@ -660,9 +635,9 @@ Topic: iotdevice-1/response
 
 {{site.data.keyword.iot_short_notm}} can send a request to a device to cancel the current observation of one or more device attributes by using the Cancel Attribute Observation request type. The `fields` part of the request is an array of the device attribute names from the device model, for example, `location`, `mgmt.firmware`, or `mgmt.firmware.state` parameters.
 
-The `message` parameter must be specified if the value of the `rc` parameter is not `200`.
+The `message` parameter can be specified if the value of the `rc` parameter is not `200`.
 
-**Important:** Devices must implement, observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update) request types. Cancel attribute observation requests are only used in the context of firmware requests.
+**Important:** Devices must implement, observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update) request types.
 
 ### Topic for a Cancel Attribute Observation request
 
@@ -715,11 +690,9 @@ Topic: iotdevice-1/response
 
 {{site.data.keyword.iot_short_notm}} can make an observation request for a specific attribute or a set of values by using the Notify Attribute Changes request type. When the value of the attribute or attributes changes, the device must send a notification that contains the latest value.
 
-The value of the `field_name` parameter is the name of the attribute that changed, and the `field_value` is the current value of the attribute. The attribute can be a complex field. If multiple values in a complex field are updated as a result of a single operation, only a single notification message is sent.
+The value of the `field` parameter is the name of the attribute that changed, and the `value` is the current value of the attribute. The attribute can be a complex field. If multiple values in a complex field are updated as a result of a single operation, only a single notification message is sent.
 
-When the notify request is processed successfully, the value of the `rc` parameter is set to `200`. If the request is not correct, the value of the `rc` parameter is set to `400`. If the parameter that is specified in the notify request is not observed, the value of the `rc` parameter is set to `404`.
-
-**Important:** Devices must implement observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update) request types. Notify attribute changes requests are only used in the context of firmware requests.
+**Important:** Devices must implement observe, notify, and cancel operations in order to support [Firmware Actions- Update](requests.html#firmware-actions-update) request types.
 
 
 ### Topic for a Notify Attribute Change request
@@ -772,6 +745,6 @@ Topic: iotdm-1/response
 |:---|:---|
 |200   |The operation was successful.|
 |400   |The input message does not match the expected format, or one of the values is out of the valid range.|
-|404   |The topic name is incorrect, or the device is not in the database, or there is no observation for the field that was reported.|
-|409   |A conflict occurred during the device database update. To resolve this conflict, simplify the operation if necessary.|
+|404   |The device has not been registered with {{site.data.keyword.iot_short_notm}}.|
+|409   |Resource could not be updated due to a conflict (for example, the resource is being updated by two simultaneous requests). The update can be retried later.|
 |500   |An internal error occurred.|
