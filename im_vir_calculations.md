@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2016-12-12"
+lastupdated: "2018-03-12"
 
 ---
 
@@ -15,10 +15,18 @@ lastupdated: "2016-12-12"
 # Advanced calculations for edge virtual properties
 {: #im_vir_calculations}
 
-Extend the basic virtual property calculations with premade edge analytics formulas.
-{:shortdesc}
+**Important:** We are launching a Beta for a new way to define rules on your IoT device data as part of a wider 
+program of changes to improve the way {{site.data.keyword.iot_full}} delivers rules and actions.
 
-**Important:** The advanced calculations only return property datapoints if the data for the selected property comes from a device that is connected to a gateway that has an Edge Analytics Agent installed. An edge rule can use this virtual property directly. To use the property with a cloud rule, an edge rule must send the datapoint to the cloud by using the Forward to cloud action. For more information, see [Installing the edge analytics agent](gateways/dashboard.html#edge).
+To find out more, check out the blog post [An alternative approach to defining Rules on IoT data ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+To start defining your own rules, see the [Creating embedded rules (Beta)](information_management/im_rules.html) documentation.
+
+## About calculations for edge virtual properties
+
+Extend the basic virtual property calculations with premade edge analytics formulas.
+
+The advanced calculations only return property datapoints if the data for the selected property comes from a device that is connected to a gateway that has an Edge Analytics Agent installed. An edge rule can use this virtual property directly. To use the property with a cloud rule, an edge rule must send the datapoint to the cloud by using the Forward to cloud action. For more information, see [Installing the edge analytics agent](gateways/dashboard.html#edge).
 
 Example: Use the advanced virtual datapoints in a line graph card to visualize data trends with data spikes removed.  
  ![Actual datapoints vs. average datapoints.](images/vir_adv_avg_card.svg "Comparison between actual and averaged datapoints.")
