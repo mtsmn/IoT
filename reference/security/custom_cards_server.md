@@ -20,7 +20,7 @@ program of changes to improve the way {{site.data.keyword.iot_full}} delivers ru
 
 To find out more, check out the blog post [An alternative approach to defining Rules on IoT data ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
 
-To start defining your own rules, see the [Creating embedded rules (Beta)](information_management/im_rules.html) documentation.
+To start defining your own rules, see the [Creating embedded rules (Beta)](../../information_management/im_rules.html) documentation.
 
 ## About custom cards servers
 
