@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-03-14"
+lastupdated: "2018-03-14"
 
 ---
 
@@ -15,12 +15,17 @@ lastupdated: "2017-03-14"
 # Create device type schemas
 {: #iotrtinsights_task}
 
-To use {{site.data.keyword.iot_short}} features such as rules and actions, you must create a schema to map device properties to user-friendly properties names, set the data units for the properties, and specify a message type to use with the schema.
-{: shortdesc}
+**Important:** We are launching a Beta for a new way to define rules on your IoT device data as part of a wider program of changes to improve the way {{site.data.keyword.iot_full}} delivers rules and actions.
+To find out more, check out the blog post [An alternative approach to defining Rules on IoT data ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+To start defining your own rules, see the [Creating embedded rules (Beta)](information_management/im_rules.html) documentation.
 
-**Important:** Schemas are required to use rules and actions. For information, see [Cloud Analytics](cloud_analytics.html#rules).
+## About this task
 
-**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Cloud and Edge Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  
+To use {{site.data.keyword.iot_short_notm}} features such as rules and actions, you must create a schema to map device properties to user-friendly properties names, set the data units for the properties, and specify a message type to use with the schema.
+
+Schemas are required to use rules and actions. For information, see [Cloud Analytics](cloud_analytics.html#rules).
+
+The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Cloud and Edge Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  
 
 ## Adding a device schema
 {: #add_schema}
