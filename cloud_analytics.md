@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-03-13"
+lastupdated: "2018-03-13"
 
 ---
 
@@ -15,13 +15,21 @@ lastupdated: "2017-03-13"
 # Cloud Analytics
 {: #cloud_analytics}
 
-By using {{site.data.keyword.iot_short}} cloud analytics, you specify rule conditions that are based on real-time device data and that trigger alerts and optional actions when met.    
-{: shortdesc}
+**Important:** We are launching a Beta for a new way to define rules on your IoT device data as part of a wider 
+program of changes to improve the way {{site.data.keyword.iot_full}} delivers rules and actions.
 
-For example, you might create a rule to ensure that when the device is dropped or when the temperature of the device spikes, an alert is sent to the dashboard on a user's device, and an email is sent to the administrator.
+To find out more, check out the blog post [An alternative approach to defining Rules on IoT data ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+To start defining your own rules, see the [Creating embedded rules (Beta)](information_management/im_rules.html) documentation.
+
 
 ## Before you begin
 {: #byb}
+
+By using {{site.data.keyword.iot_short}} cloud analytics, you specify rule conditions that are based on real-time device data and that trigger alerts and optional actions when met.    
+
+For example, you might create a rule to ensure that when the device is dropped or when the temperature of the device spikes, an alert is sent to the dashboard on a user's device, and an email is sent to the administrator.
+
 Make sure that the device properties that you want to use as conditions in your rules have been mapped to schemas. See [Connecting devices](iotplatform_task.html) and [Creating schemas](im_schemas.html) for more information.
 
 Also, review the recipe [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} to understand the rules and actions that are used in Cloud Analytics.
