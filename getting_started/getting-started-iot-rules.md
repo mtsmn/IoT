@@ -14,11 +14,19 @@ lastupdated: "2018-01-11"
 {:tip: .tip}
 
 # Guide 2: Using basic real-time rules and actions
-Use the instructions in this guide to configure a set of basic rules and actions for some real-time analytics of your conveyor belt IoT data.
-{:shortdesc}
+
+**Important:** We are launching a Beta for a new way to define rules on your IoT device data as part of a wider 
+program of changes to improve the way {{site.data.keyword.iot_full}} delivers rules and actions.
+
+To find out more, check out the blog post [An alternative approach to defining Rules on IoT data ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+To start defining your own rules, see the [Creating embedded rules (Beta)](../information_management/im_rules.html) documentation.
 
 ## Overview and goal
 {: #overview}  
+
+Use the instructions in this guide to configure a set of basic rules and actions for some real-time analytics of your conveyor belt IoT data.
+
 Now that you successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_full}}, and sent some data, it is time to make that data work for you by using rules and actions.
 
 ![Example rule](images/slow_rule.svg "Example rule")
