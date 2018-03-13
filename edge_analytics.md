@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-03-13"
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,12 +16,21 @@ lastupdated: "2017-03-13"
 # Edge analytics
 {: #edge_analytics}
 
+**Important:** We are launching a Beta for a new way to define rules on your IoT device data as part of a wider 
+program of changes to improve the way {{site.data.keyword.iot_full}} delivers rules and actions.
+
+To find out more, check out the blog post [An alternative approach to defining Rules on IoT data ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+To start defining your own rules, see the [Creating embedded rules (Beta)](information_management/im_rules.html) documentation.
+
+## About edge analytics
+
 With edge analytics, you move the analytics rule-triggering process from the cloud to an edge analytics enabled gateway that might dramatically reduce the amount of device data traffic to the cloud by doing the analytics processing close to the device.
-{:shortdesk}
+{:shortdesc}
 
-Devices send their data to an edge analytics enabled gateway where edge analytics rules parse the data. Depending on your rule and its action, critical data and alerts might be sent to {{site.data.keyword.iot_full}}, trigger an alert on the gateway, or be written to a text file that is local to the gateway.
+Devices send their data to an edge analytics enabled gateway where edge analytics rules parse the data. Depending on your rule and its action, critical data and alerts might be sent to {{site.data.keyword.iot_short_notm}}, trigger an alert on the gateway, or be written to a text file that is local to the gateway.
 
-The following diagram illustrates the general architecture of an {{site.data.keyword.iot_full}} edge analytics environment.
+The following diagram illustrates the general architecture of an {{site.data.keyword.iot_short_notm}} edge analytics environment.
 ![IBM Watson IoT Platform for edge analytics architecture](images/architecture_platform_edge.svg "IBM Watson IoT Platform withe edge analytics architecture")
 
 ## Before you begin
