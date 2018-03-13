@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-03-11"
 
 ---
 
@@ -15,11 +15,18 @@ lastupdated: "2018-01-11"
 # Custom cards
 {: #custom_cards}
 
-Use custom cards to visualize your Internet of Things data beyond the generic cards that are provided with {{site.data.keyword.iot_full}}.
-{:shortdesc}
+**Important:** We are launching a Beta for a new way to define rules on your IoT device data as part of a wider 
+program of changes to improve the way {{site.data.keyword.iot_full}} delivers rules and actions.
+
+To find out more, check out the blog post [An alternative approach to defining Rules on IoT data ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+To start defining your own rules, see the [Creating embedded rules (Beta)](../information_management/im_rules.html) documentation.
+
 
 ## Architecture
 {: #architecture}  
+
+Use custom cards to visualize your Internet of Things data beyond the generic cards that are provided with {{site.data.keyword.iot_short_notm}}.
 
 Custom cards are developed by you and deployed using your own custom cards HTTP server repository.  This server is accessed by a user's browser as it displays and processes {{site.data.keyword.iot_short_notm}} dashboards. {{site.data.keyword.iot_short_notm}} manages the browser connection through the custom cards extension but does not itself connect to the custom cards server.
 
