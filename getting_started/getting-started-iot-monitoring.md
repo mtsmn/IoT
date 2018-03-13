@@ -13,7 +13,7 @@ lastupdated: "2018-02-22"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guide 3: Monitoring your device data
+# Guide 2: Monitoring your device data
 Now that you have one or more devices connected, it is time to start monitoring device data in real time.
 {:shortdesc}
 
