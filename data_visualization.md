@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-05-08"
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,8 +16,17 @@ lastupdated: "2017-05-08"
 # Visualizing real-time data by using boards and cards
 {: #boards_and_cards}
 
+
+**Important:** We are launching a Beta for a new way to define rules on your IoT device data as part of a wider 
+program of changes to improve the way {{site.data.keyword.iot_full}} delivers rules and actions.
+
+To find out more, check out the blog post [An alternative approach to defining Rules on IoT data ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+To start defining your own rules, see the [Creating embedded rules (Beta)](information_management/im_rules.html) documentation.
+
+## About boards and cards
+
 Create boards and cards to create and share your own dashboards that visualize your device data in real time.
-{:shortdesc}
 
 By using boards and cards, you can graphically visualize data set values from one or more devices to provide a quick overview and enhance understanding of the data. Create boards and add cards that display the data as raw numbers, real-time graphs, gauges, and more. Add members to your boards to share them with other users in your organization. Arrange the cards and add explanatory text dividers to fine-tune your presentation.  
 
@@ -27,7 +36,7 @@ You can also expand on the default set of cards by [creating your own custom car
 
 ## Default boards
 {: #default_boards}
-The {{site.data.keyword.iot_full}} dashboard has the following default boards:
+The {{site.data.keyword.iot_short_notm}} dashboard has the following default boards:
 
 |Board Name | Description | Cards Included
 |:---|:---|:---|  
