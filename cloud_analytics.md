@@ -26,7 +26,7 @@ To start defining your own rules, see the [Creating embedded rules (Beta)](infor
 ## Before you begin
 {: #byb}
 
-By using {{site.data.keyword.iot_short}} cloud analytics, you specify rule conditions that are based on real-time device data and that trigger alerts and optional actions when met.    
+By using {{site.data.keyword.iot_short_notm}} cloud analytics, you specify rule conditions that are based on real-time device data and that trigger alerts and optional actions when met.    
 
 For example, you might create a rule to ensure that when the device is dropped or when the temperature of the device spikes, an alert is sent to the dashboard on a user's device, and an email is sent to the administrator.
 
