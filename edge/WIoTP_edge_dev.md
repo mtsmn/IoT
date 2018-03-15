@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-04"
+lastupdated: "2018-03-14"
 
 ---
 
@@ -26,7 +26,7 @@ When {{site.data.keyword.iot_short_notm}} Edge administrators configure {{site.d
 
 As a {{site.data.keyword.iot_short_notm}} Edge developer, you develop Edge containers and create Edge services.
 
-For a detailed example of how to create custom services, see the [Custom service recipe ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/open-horizon/examples/wiki/Edge-Developer-Quickstart-Guide).
+Detailed instructions for creating custome services are coming soon and will be published here.
 
 ## Finding more information
 {: #more_info}
