@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-07-19"
+lastupdated: "2018-03-14"
 
 ---
 
@@ -21,7 +21,7 @@ From the members dashboard, you can control and manage access to your {{site.dat
 ## Adding users
 {: #adding-new-users}
 
-From the **Members** tab of the dashboard, you can add individual members by using the <!--Add, Invite, or Register--> Add or Invite functions. You can also <!--add, invite, or register-->add or invite multiple members simultaneously by using the Import function.
+From the **Members** tab of the dashboard, you can add individual members by using the Add function. You can also add members simultaneously by using the Import function.
 
 By default, members accounts do not expire. When you add users to your {{site.data.keyword.iot_short_notm}} organization, you can optionally set an expiry date for their account.
 
@@ -46,7 +46,7 @@ To add multiple members simultaneously, you must upload a `.csv` file that conta
 6. Select the appropriate comma or semicolon column separator to match the separator used in your `.csv` file.
 7. Click **Import** to import the IBMids and create the members.
 
-
+<!--
 ### Inviting members to your {{site.data.keyword.iot_short_notm}} organization
 
 When you invite a user to become a member of your {{site.data.keyword.iot_short_notm}} organization, the user receives an email that contains an invitation link. Invitation links expire 48 hours after they are sent. If an invitation link is not used within 48 hours, the user must be invited again to receive a new invitation link.
@@ -70,7 +70,7 @@ To invite multiple members simultaneously, you must upload a `.csv` file that co
 4. Select a default role to use if a role specified in the CSV file is not recognized.
 5. Map the column numbers in your CSV file to the corresponding email address, role, and (optional) expiry date entries.
 6. Select the appropriate comma or semicolon column separator to match the separator used in your `.csv` file.
-7. Click **Import** to send out the invitations.
+7. Click **Import** to send out the invitations. -->
 
 <!-- ### Registering a member with your {{site.data.keyword.iot_short_notm}} organization
 
@@ -103,11 +103,10 @@ When you construct a CSV file to import members into your organization, ensure t
 
 Sample CSV file with comma delimitation:  
 ```
-user1@sample.com,PD_DEVELOPER_USER,1489505652152
-user2@sample.com,PD_OPERATOR_USER,1489505652152
-user3@sample.com,PD_ADMIN_USER,1489505652152
+user1@sample.com,PD_DEVELOPER_USER,2018-03-13
+user2@sample.com,PD_OPERATOR_USER,2018-03-13
+user3@sample.com,PD_ADMIN_USER,2018-03-13
 ```
-
 Where the following column entries are used:  
 - Column 1: The email address of the user.  
 If you are adding members, make sure that you use the email address corresponding to a valid IBMid. If you are inviting members you can use any valid email address.
@@ -119,7 +118,7 @@ Enter one of the following roles:
  - PD_ANALYST_USER
  - PD_READER_USER  
  For more information about user roles, see [User, application, and gateway roles](roles_index.html#user_roles).
-- Column 3: The Unix timestamp (in milliseconds since January 1, 1970 00:00 UTC) that corresponds to the user expiry date.
+- Column 3: The ISO 6801 date (for example, `2018-03-13`) that corresponds to the user expiry date.
 
 ## Editing users
 {: #editing-users}
@@ -139,7 +138,7 @@ Users can be blocked from accessing the {{site.data.keyword.iot_short_notm}} org
 1. From your {{site.data.keyword.iot_short_notm}} dashboard, click **Members** from the navigation bar on the left.
 2. Click the toggle next to the user you wish to block from accessing the {{site.data.keyword.iot_short_notm}} organization.
 
-## Limiting user access (Beta)
+## Limiting user access
 {: #limiting-users}
 
 Resource-level access control enables you to limit access to devices within an organization. You can use resource groups to specify the devices that each user or API key can manage. For information on how to configure resource-level access control, see [Configuring resource-level access control](reference/rlac.html#configure_RLAC).
