@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-11-14"
+lastupdated: "2018-03-15"
 
 ---
 
@@ -161,6 +161,10 @@ You can use the following API to retrieve a list of all of the device mementos:
     GET /archive/device/types/{typeId}/devices/{deviceId}
 
 For more information about the Restore Devices APIs, see [Restore Devices APIs Beta ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html).
+
+## Reconnecting devices
+
+Devices might disconnect from {{site.data.keyword.iot_short_notm}} due to a network problem or due to routine maintenance on the service or infrastructure. When the device or devices reconnect, you might want to consider minimizing the amount of network traffic that is generated during a reconnection, or to introduce a time-delay to reduce the number of simultaneous reconnects. 
 
 
 ## Recipes on Connecting Devices
