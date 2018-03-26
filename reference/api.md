@@ -31,7 +31,7 @@ https://<**orgId**>.internetofthings.ibmcloud.com/api/v0002
 
 To authenticate requests to the application API, set the username to the API key and the password to the authentication token.
 
-For Messaging APIs, use the following address: 
+For Messaging APIs, use the following address:
 
 https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002
 
