@@ -62,7 +62,7 @@ Use the following example scenario to set up your own interfaces environment.
 
 In this scenario, two device types and two device instances are assumed. Device instance *TemperatureSensor1* is associated with device type *EnvSensor1*. Device instance *TemperatureSensor2* is associated with device type *EnvSensor2*.
 
-You can create device types and devices by using the [{{site.data.keyword.iot_short_notm}} dashboard ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://internetofthings.ibmcloud.com){: new_window}, or by using REST APIs. For more information about using the {{site.data.keyword.iot_short_notm}} IoT Platform dashboard to add device types and devices, see the [Getting started with Data Management by using the Web interface](../GA_information_management/im_ui_flow.html) documentation. documentation.
+You can create device types and devices by using the [{{site.data.keyword.iot_short_notm}} dashboard ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://internetofthings.ibmcloud.com){: new_window}, or by using REST APIs. For more information about using the {{site.data.keyword.iot_short_notm}} IoT Platform dashboard to add device types and devices, see the [Getting started with Data Management by using the Web interface](../GA_information_management/im_ui_flow.html) documentation. 
 
 For information about using REST APIs to add device types and devices, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html){: new_window} documentation.
 
