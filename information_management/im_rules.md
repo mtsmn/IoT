@@ -226,6 +226,17 @@ The following example shows a sample message body:
 ```
 You can then configure an action that is initiated when a rule is triggered. For example, you might use [Node-RED](../applications/dev_nodered.html) to send a message to a specified user when a rule evaluates to *true*. 
 
+
+
+<!-- In our example from [Step-by-step guide 1](../information_management/im_index_scenario_device.html#step11) step 11, the notification setting is set to **on-state-change** in the mappings resource, and rule notification is active. The
+following table shows the notifications that are sent when temperature events are received by {{site.data.keyword.iot_short_notm}}.
+Temperature in the received event | State change notification sent | Rule notification sent
+------------------- |------------- | --------
+10 degrees Celsius | Yes | No
+45 degrees Celsius | Yes | Yes
+45 degrees Celsius | No | Yes
+The first received event changes the state but does not exceed the value of the temperature threshold variable, so no rule notification is sent but a state change notification is sent. The second received event changes the state and exceeds the threshold value, so a rule and state change notification is sent. The third received event does not change the state but does exceed the threshold value, so only a rule notification is sent. -->
+
 If an error is generated during rule evaluation, an error message is published on the following MQTT topic:
 
 ```
@@ -250,3 +261,88 @@ The following example shows an example message body:
 }
 ```
 The message body includes information about the logical interface ID, rule ID, device and state. You can use the information to help in debugging the error.
+
+<!--## Next steps
+
+The following section uses Node-RED to process the MQTT message that is generated when a rule evaluates to *true*. 
+
+Node-RED provides a browser-based flow editor that makes it easy to wire together devices, APIs, and online services by using the wide range of nodes in the palette. Flows can be then deployed to the Node.js runtime with a single click. 
+
+### IBM IoT App Node  
+{: #watson_app_node}  
+
+The *IBM IoT App Node* is a pair of nodes for connecting your applications to {{site.data.keyword.iot_short_notm}}. Applications can use the nodes to receive device events. The *IBM IoT App Node* has been extended to contain rules and device state. You can get the latest version of the *IBM IoT App Node* by navigating to *Manage Palettes* from the main menu of your Node-Red application or instance, and installing or updating the **node-red-contrib-scx-ibmiotapp** node to the latest version. If you want to use charts to visualize your device data or to send notifications on device state change, ensure that you also have the **node-red-dashboard** node installed. 
+
+For more information about getting started with Node-RED, see [Developing Watson IoT Platform by using Node-RED](../applications/dev_nodered.html).
+
+The following example creates the following Node-RED flow:
+
+![Sample Node_RED flow](images/Node-RED_flow.png "Sample Node_RED flow")
+
+The flow results in a Slack message being generated and sent to a specified user if the temperature of the device state falls below 10 degrees Celsius or exceeds 44 degrees Celsius. 
+
+Complete the following steps to create the example Node-RED flow. 
+
+1. Complete the following steps to configure the *IBM IoT App Node* node:  
+a. From your device’s Node-RED application or instance, drag and drop the **ibmiot** node from the *input* section into your flow and change the name of the node to *IBM IoT - Rule Trigger Input*.  
+b. Double-click the node and set the following values: 
+ - Set the **Authentication** node property to *Bluemix Service* or *API Key*.  
+ - Set the **Input Type** node property to *Rule Trigger*. 
+ - Select the **Logical Interface** and **Rule Id** check boxes.  
+c. Click **Done**.  
+2. Complete the following steps to configure the switch node:  
+a. Drag and drop the **switch** node from the *function* section into your flow.  
+b. Double-click the node and set the **Property** value to *msg.state.state.temperature*. This is the value that is specified in the body of the sample MQTT message that was generated earlier.  
+c. Click **+add** and set the first value to *5a71991e59080100328710e9*. This is the rule ID that is associated with *tempRuleMax*. If an inbound device temperature event that is received by {{site.data.keyword.iot_short_notm}} causes the device state to exceed 44 degrees Celsius, the flow goes to the change node that is called **too hot** which sets **msg.payload** value to *true*. This change node is configured in Step 3.  
+d. Click **+add** and set the second value to *5a71991e59080100328710e10*. This is the rule ID that is associated with *tempRuleMin*. If an inbound device temperature event that is received by {{site.data.keyword.iot_short_notm}} causes the device state to drop below 10 degrees Celsius, the flow goes to the change node that is called **too cold** which sets **msg.payload** value to *false*. This change node is configured in Step 3.
+e. Click **Done**.  
+3. Complete the following steps to configure the change nodes:  
+a. Drag and drop a **change** node from the *function* section into your flow. Change the name to *too hot*.  
+b. Double-click the node and set the **msg.payload** value to *true* in the *Rules* section. Setting the **msg.payload** value to *true* causes a notification to be generated by the code that is contained in the function node which is configured in Step 5. 
+c. Drag and drop another **change** node from the *function* section into your flow. Change the name to *too cold*.  
+d. Double-click the node and set the **msg.payload** value to *false* in the *Rules* section.  
+4. Complete the following steps to configure the rbe node:  
+a. Drag and drop the **rbe** node from the *function* section into your flow.  
+b. Double-click the node and set the **Mode** property value to *block unless value changes (ignore initial value)*. Selecting this value means that further notifications are sent only if the device state changes.  
+c. Click **Done**.  
+5. Complete the following steps to configure the function node:  
+a. Drag and drop the **function** node from the *function* section into your flow.  
+b. Double-click the node and add the following information to the *Function* section:  
+```
+var turnOn = msg.payload;
+var msgVal = "It's too hot. Turn on the air conditioning!";
+if (turnOn) {
+    msgVal = "It's too cold. Turn the air conditioning off!";
+}
+var slackMsg = {
+    "attachments" : [
+        {
+            "pretext" : "A Rule was triggered!",
+            "mrkdwn_in" : ["pretext", "fields"],
+            "fields" : [
+                {"title" : "message", value: msgVal }
+            ],
+            "color" : "#3d86e5"
+        }
+    ]    
+};
+var newmsg = {
+    "payload" : slackMsg
+};
+return newmsg;
+```  
+c. Click **Done**.  
+5. Complete the following steps to configure the http request node:  
+a. Drag and drop the **http request** node from the *function* section into your flow.  
+b. Double-click the node and set the following properties to the values specified :  
+  - Set **Method** to *POST*  
+  - Set **URL** to the Slack channel to which you want the message sent.  
+c. Click **Done**.  If the rule is triggered, a message is generated and is sent to the specified user in Slack.  
+6. (Optional) Complete the following steps to configure the debug node:  
+a. Drag and drop the **debug** node to your flow.  
+7. Complete the following steps to configure and deploy your flow:  
+a. Wire your nodes together. Ensure that each of the **switch** node flows goes to the correct **change** node.  
+b. Click **Deploy**. -->
+
+
+
