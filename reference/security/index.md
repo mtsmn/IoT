@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-02-27"
 
 ---
 
@@ -50,7 +50,7 @@ For more details about the security of the {{site.data.keyword.Bluemix_notm}}, s
 ## How do we secure IoT information management within your organization?
 {: #secure-org}
 
-The browser-based GUI and REST APIs are fronted by HTTPS, with a certificate signed by DigiCert, so you can trust that you're connecting to the genuine {{site.data.keyword.iot_short_notm}}. Access to the web-based GUI is authenticated by your IBMid or {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. Using the REST API requires an API key, generated through the GUI, you can use this to make authenticated REST API calls against your organization.
+The browser-based GUI and REST APIs are fronted by HTTPS, with a certificate signed by DigiCert, so you can trust that you're connecting to the genuine {{site.data.keyword.iot_short_notm}}. Access to the web-based GUI is authenticated by your IBMid. Using the REST API requires an API key, generated through the GUI, you can use this to make authenticated REST API calls against your organization.
 
 ![image](management_platform.svg)
 
