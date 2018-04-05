@@ -99,7 +99,6 @@ Internet of Things Platform
     {: .topicgroup}
     Accessing Watson IoT Platform
         add_users.md
-        singlesignon.md
         roles_index.md
         managing_user_roles.md
         custom_role.md
