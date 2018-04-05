@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-02-22"
+lastupdated: "2018-02-21"
 
 ---
 
@@ -11,73 +11,119 @@ lastupdated: "2018-02-22"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
-# {{site.data.keyword.iot_short_notm}} Feature Overview
-{: #feature_overview}
+# Getting started tutorial
+{: #getting-started-with-iotp}
 
-The {{site.data.keyword.iot_full}} is built on the following key areas:
+In this {{site.data.keyword.iot_full}} getting started tutorial, we connect an IoT device to {{site.data.keyword.iot_short_notm}}.
+{:shortdesc}
 
-  1. Connect - Connect devices and develop applications.
-  2. Information Management - Store, normalize, transform, and review device data and integrate your {{site.data.keyword.iot_short_notm}} with other services.
-  3. Risk Management - Configure secure connectivity and architecture with access control for users and applications.
+<div id="prerequisites"></div>
 
-## Connect
-{: #connect}
+## Before you begin
+{: #prereqs}
 
-{{site.data.keyword.iot_short_notm}} Connect is the starting point for any {{site.data.keyword.iot_short_notm}} service. Connecting devices, creating applications, controlling your devices, and interacting with third-party services are all available under {{site.data.keyword.iot_short_notm}} Connect.
+You'll need an [IBM Cloud account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/registration/){: new_window},
+an instance of the {{site.data.keyword.iot_short_notm}} service, and a device that meets the following requirements:
 
-### Gateway devices
+*	Your device must be able to communicate by using HTTP or MQTT protocols.
 
-By using a gateway, you can connect devices to the {{site.data.keyword.iot_short_notm}} that otherwise cannot connect to the Internet. Gateways have all the functions of a device, but can also publish and subscribe on behalf of the devices connected to them. Gateway devices allow groups of sensors which cannot connect to the Internet to connect to your {{site.data.keyword.iot_short_notm}} by sending their data to a gateway. For more information, see [developing for gateways](https://console.ng.bluemix.net/docs/services/IoT/gateways/gw_dev_index.html).
+* The device messages must conform to the {{site.data.keyword.iot_short_notm}} message payload requirements.
 
-### Device management
+For more information, see [Developing devices on Watson IoT Platform](/docs/services/IoT/devices/device_dev_index.html).
 
-Device management capabilities are provided through a device management API and a device management agent that is installed on devices. Devices with a device management agent can perform device management actions, which can be triggered through the main {{site.data.keyword.iot_short_notm}} dashboard or the device management API. Device management actions include reboot, download and install firmware updates, and reset devices to factory settings. Device management can also be extended to include custom device management actions. For more information, see the [device management documentation](https://console.ng.bluemix.net/docs/services/IoT/devices/device_mgmt/index.html).
+## Step 1: Register your device
 
-### Extensions and service integrations
+You can add devices one at a time from the [{{site.data.keyword.iot_short_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://internetofthings.ibmcloud.com){: new_window}, or you can use the [Watson IoT Platform API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} to add multiple devices.
 
-Extensions and service integration enable both external services and user-defined extensions of core services to be added to an instance of {{site.data.keyword.iot_short_notm}}. External services which can be integrated with the {{site.data.keyword.iot_short_notm}} include The Weather Company weather location services, allowing you to find the current weather at a device location, Jasper SIM data, and {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. For more information on third-party service integrations and extensions, see [integrating external services](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
+To add a device from the {{site.data.keyword.iot_short_notm}} dashboard:
+
+1. In the {{site.data.keyword.Bluemix_notm}} console, click **Launch** on the {{site.data.keyword.iot_short_notm}} service details page.
+
+    The {{site.data.keyword.iot_short_notm}} web console opens in a new browser tab at the following URL:
+
+    ```
+    https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+    ```
+
+    Where *org_id* is the ID of [your {{site.data.keyword.iot_short_notm}} organization](iotplatform_overview.html#organizations){: new_window}.
+
+2. In the Overview dashboard, from the menu pane, select **Devices** and then click **Add Device**.
+
+3. Create a device type for the device that you are adding.
+
+    Each device that is connected to the {{site.data.keyword.iot_short_notm}} must be associated with a device type. Device types are groups of devices that share common characteristics.
+
+    1. Click **Create device type**.
+    2. Enter a device name, such as `my_device_type`, and a description for the device type.
+    
+        > **Note:** The device type name must be no more than 36 characters and can contain only alpha-numeric characters (a-z, A-Z, 0-9) and any of the following characters: `_`, `.`, and `-`.
+
+    3. Optional: Enter device type attributes and metadata.
+
+        You can add and edit attributes and metadata later.
+        {: tip}
+
+4. Click **Next** to begin the process of adding your device with the selected device type.
+
+5. Enter a device ID, for example `my_first_device`.
+
+    The device ID is used to identify the device in the {{site.data.keyword.iot_short_notm}} dashboard and is also a required parameter for connecting your device to {{site.data.keyword.iot_short_notm}}.
+
+    > **Note:** The device type name must be no more than 36 characters and can contain only alpha-numeric characters (a-z, A-Z, 0-9) and any of the following characters: `_`, `.`, and `-`.
+
+    For network connected devices, the device ID could be the device MAC address without any separating colons.
+
+5. Click **Next** to complete the process.
+
+6. Provide an authentication token, or accept an automatically generated token. If you choose to create your own token, make sure that it is between 8 and 36 characters long and consists only of alpha-numerical characters and the following characters: `_`, `.`, `!`, `&`, `@`, `?`, `\*`, `+`, `(`, `)`, and `-`.
+
+    The token must not contain repeated character sequences, dictionary words, user names, or other predefined sequences.
+
+7. Verify the summary information is correct, and then click **Add** to add the connection.
+
+8. In the device information page, copy and save the following details:
+
+    * Organization ID
+    * Device Type
+    * Device ID
+    * Authentication Method
+    * Authentication Token
+
+    You'll need Organization ID, Device Type, Device ID, and Authentication Token configure your device to connect to {{site.data.keyword.iot_short_notm}}.
+
+## Step 2: Connect your device to {{site.data.keyword.iot_short_notm}}
+
+1. Set up your device for MQTT messaging and authenticate by using Organization ID, Device Type, Device ID, and Authentication Token.
+
+2. Send device messages to your {{site.data.keyword.iot_short_notm}} organization by using the MQTT protocol.
+
+    The following information is required when connecting your device:
+
+    * URL: *org_id*.messaging.internetofthings.ibmcloud.com
+
+      Where *org_id* is the ID of your {{site.data.keyword.iot_short_notm}} organization.
+
+    * Port:
+      * 1883
+      * 8883 (encrypted)
+      * 443 (websockets)
+    * Device ID: d:_org_id:device_type:device_id_
+    * User name: use-token-auth
+    * Password: _Authentication token_
+    * Event topic format: iot-2/evt/_event_id/fmt/format_string_
+
+      Where _event_id_ specifies the event name that's shown in {{site.data.keyword.iot_short_notm}}, and _format_string_ is the format of the event, such as JSON.
+
+    * Message format: JSON
+
+  For more information, see [MQTT connectivity for devices](/docs/services/IoT/devices/mqtt.html).
 
 
----
+## Next steps
 
-## Information Management
-{: #information_management}
+Extend the data analytics features by creating and connecting your own apps to consume device data.
 
-{{site.data.keyword.iot_short_notm}} Information Management controls the data that is sent by devices after it reaches your {{site.data.keyword.iot_short_notm}} service. Information management includes data storage and transformation.
+  * Check out the [client libraries](/docs/services/IoT/iot_platform_client_lib.html) for tools to build code for integrating and connecting your devices and apps.
 
-### Device last event cache
-
-By using the {{site.data.keyword.iot_short_notm}} Last Event Cache API, you can retrieve the last event that was sent by a device. This works whether the device is online or offline, which allows you to retrieve device status regardless of the device's physical location or use status. Last event data of a device can be retrieved for any specific event that occurred up to 45 days ago.
-
-### Device event data storage
-
-Device event data from your {{site.data.keyword.iot_short_notm}} service can be stored for later use. Data storage is an essential first step towards performing insightful analytics to gain insights from that data.  For example, you can track changes over longer periods of time and store sets of data for use with powerful analytics tools, including use with Watson APIs and cognitive computing. For more information, see [connecting a {{site.data.keyword.cloudant_short_notm}} historian service](https://console.ng.bluemix.net/docs/services/IoT/cloudant_connector.html), or [connecting a {{site.data.keyword.messagehub}} historian service](https://console.ng.bluemix.net/docs/services/IoT/message_hub.html).
-
-### Data management
-
-Different makes and models of devices publish data in different formats. The data management feature lets you transform and normalize this data into a single, logical view called *device state*, which can be understood and processed by applications. Using the data management feature greatly simplifies application development because the application no longer needs to understand the different formats of the event data that is sent from each device. When devices publish events to {{site.data.keyword.iot_short_notm}}, the content of the events can be mapped to user-defined state properties by using mappings. If the inbound event results in a change to the state of the device, the values of the device state properties are updated and stored in {{site.data.keyword.iot_short_notm}}. The values are made available to the application on request by using an HTTP API, or by subscribing to a topic.
-
-For more information about using this feature, see [Introduction to data management](GA_information_management/ga_im_device_twin.html).
-
-<!---
-## Analytics
-{: #analytics}
-### Visualize real-time device data
-You can visualize and display real-time device data by using dashboard cards. Dashboard cards monitor and display device data in real-time, which allows you to keep track of key devices or device data. These visualizations are displayed on the main {{site.data.keyword.iot_short_notm}} dashboard to give you rapid access to the context and status of real-time device data. For more information, see [visualizing real-time data](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
-### Edge and cloud analytics
-By using {{site.data.keyword.iot_short_notm}} cloud analytics, you specify rule conditions that are based on real-time device data and that trigger alerts and optional actions when met. For example, you might create a rule to ensure that when the device is dropped or when the temperature of the device spikes, an alert is sent to the dashboard on a user's device, and an email is sent to the administrator. For more information, see the [cloud analytics documentation](https://console.ng.bluemix.net/docs/services/IoT/cloud_analytics.html).
-With edge analytics, you move the analytics rule-triggering process from the cloud to an edge analytics enabled gateway that might dramatically reduce the amount of device data traffic to the cloud by doing the analytics processing close to the device. For more information, see the [edge analytics documentation](https://console.ng.bluemix.net/docs/services/IoT/edge_analytics.html).-->
-
----
-
-## Risk Management
-{: #risk_management}
-
-### Secure connectivity and architecture
-
-The architecture of the {{site.data.keyword.iot_short_notm}} is designed to prevent devices from impersonating other devices, which maintains the integrity of your device data. Devices connect to the {{site.data.keyword.iot_short_notm}} by using a combination of a client ID and authentication token, which only you know. After the devices are registered or the API keys are generated, the authentication token is salted and hashed to maintain the security of your credentials.
-
-The Risk and Security Management add-on enables you to enhance {{site.data.keyword.iot_short_notm}} security to ensure that all points of connection between the server and devices are authenticated with proven credentials. With this add-on, certificates and transport layer security (TLS) authentication are used, on top of the {{site.data.keyword.iot_short_notm}} use of user IDs and tokens. During communication between devices and the server, any devices that do not have valid certificates with server access, as configured in the Risk and Security Management add-on, are denied access, even if they use valid user IDs and passwords.
-
----
