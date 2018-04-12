@@ -79,15 +79,17 @@ Internet of Things Platform
     devices/device_sim.md
 
     {: .topicgroup}
-    Managing data in Watson IoT Platform
-        GA_information_management/ga_im_device_twin.md
+    Managing data in Watson IoT PlatformGA_information_management/ga_im_device_twin.md
         GA_information_management/ga_im_definitions.md
         GA_information_management/im_ui_flow.md
         GA_information_management/ga_im_example.md
         GA_information_management/mapping_expression_language.md
         GA_information_management/ga_im_index_scenario.md
+        information_management/im_index_scenario_thing.md
+        information_management/im_hygrometer.md
+        information_management/im_id_reference.md
         information_management/im_rules.md
-        information_management/im_reference.md
+        information_management/im_reference.md 
         
     {: .topicgroup}
     Managing Watson IoT Platform
