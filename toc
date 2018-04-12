@@ -18,9 +18,7 @@ Internet of Things Platform
         [IoT pricing calculator](http://iot-cost-calculator.ng.bluemix.net/)
         reference/quotas.md
 
-    {: .topicgroup}
-    Beta features
-        iotplatform_beta_features.md
+    iotplatform_beta_features.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
