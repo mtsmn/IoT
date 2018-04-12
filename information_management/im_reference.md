@@ -2,7 +2,7 @@
 
 copyright:
 years: 2017, 2018
-lastupdated: "2018-02-21"
+lastupdated: "2018-03-06"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-02-21"
 
 # Data management reference information
 
-Use the following reference information to learn about the restrictions that apply when using the data management component of Watson IoT Platform. 
+Use the following reference information to learn about the restrictions that apply when using the data management component of {{site.data.keyword.iot_full}}. 
 
 ## Schema restrictions
 
@@ -36,7 +36,7 @@ Logical interface     | If an object is defined in the schema, at least one prop
 Logical interface | If an array is defined in the schema, associated items must be of only one type, for example only of type "string". 
 Thing type        | Only top level properties are allowed. No nesting is allowed beyond the first level. 
 Thing type        | The top level property must be of type "object".
-Thing type        | The top level property must reference a $logicalInterfaceRef and a type. The value of $logicalInterfaceRef is the ID or alias name of a logical interface. The type must be set to "object" or "array". 
+Thing type        | The top level property must reference a $logicalInterfaceRef and a type. The value of $logicalInterfaceRef is the identifier or alias name of a logical interface. The type must be set to "object" or "array". 
 
 ## Examples of valid and invalid schemas
 
@@ -89,7 +89,7 @@ The following example defines a thing type schema that conforms to the constrain
   - The schema is of type "object".
   - The schema has a nesting level of less than seven. 
   - The schema only defines top-level properties. 
-  - The top-level properties reference a $logicalInterfaceRef and a type that is set to either "array" or "object". The type "array" can be used to aggregate a number of devices, for example, a number of temperature sensors. The type "object" can be used to reference a single device, for example, a single humidity sensor.   
+  - The top-level properties reference a $logicalInterfaceRef and a type that is set to either "array" or "object". The type "array" can be used to aggregate a number of devices or Things, for example, a number of temperature sensors. The type "object" can be used to reference a single device or Thing, for example, a single humidity sensor.   
   - The required properties do not need a default value to be specified. This constraint applies only to logical interface schemas. A default value cannot be specified in this schema type. 
 
 ```
@@ -98,12 +98,12 @@ The following example defines a thing type schema that conforms to the constrain
    "properties" : {
        "temperatureSensors": {
            "description": "Aggregated temperature sensors",
-           "$logicalInterfaceRef": "temperatureSensorsLogicalInterface",
+           "$logicalInterfaceRef": "IThermometer",
            "type" : "array"
        },
        "humiditySensor": {
            "description": "The humidity sensor device",
-           "$logicalInterfaceRef": "58c135ea52faff0001678f06"
+           "$logicalInterfaceRef": "5846cd7c6522050001db0e24"
             "type" : "object"
        }
    },

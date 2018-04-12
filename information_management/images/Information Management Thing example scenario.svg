@@ -251,7 +251,7 @@
        sodipodi:role="line"
        x="44.453247"
        y="87.598831"
-       id="tspan4442"> temperaturesensor1</tspan><tspan
+       id="tspan4442"> tSensor</tspan><tspan
        sodipodi:role="line"
        x="44.453247"
        y="101.34883"
@@ -374,7 +374,7 @@
        sodipodi:role="line"
        id="tspan266400-5"
        x="250.96303"
-       y="8.5898438">Device type: Thermometer</tspan><tspan
+       y="8.5898438">Device type: TSensor</tspan><tspan
        sodipodi:role="line"
        x="250.96303"
        y="23.589844"
@@ -420,7 +420,7 @@
        y="412.41034"
        x="-139.9323"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4-7">Application  Interface</tspan></text>
+       id="tspan6445-3-0-1-4-7">Logical  Interface</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -468,7 +468,7 @@
        sodipodi:role="line"
        id="tspan266400-5-3"
        x="249.21837"
-       y="183.17638">Device type: Hygrometer</tspan><tspan
+       y="183.17638">Device type: HumiditySensor</tspan><tspan
        sodipodi:role="line"
        x="249.21837"
        y="198.17638"
@@ -514,7 +514,7 @@
        y="412.41034"
        x="-314.40448"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4-7-0">Application  Interface</tspan></text>
+       id="tspan6445-3-0-1-4-7-0">Logical  Interface</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -533,7 +533,7 @@
        sodipodi:role="line"
        id="tspan266400-5-8"
        x="529.38928"
-       y="92.758682">Thing type: Room</tspan><tspan
+       y="92.758682">Thing type: RoomType</tspan><tspan
        sodipodi:role="line"
        x="529.38928"
        y="107.75868"
@@ -579,7 +579,7 @@
        y="692.09985"
        x="-225.8161"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4-7-3">Application  Interface</tspan></text>
+       id="tspan6445-3-0-1-4-7-3">Logical  Interface</tspan></text>
 <g
      id="Page-1_1_-3-9"
      transform="matrix(1.0023432,0,0,0.84790301,562.17117,100.04648)"><g
@@ -649,7 +649,7 @@
        y="76.79863"
        x="167.54434"
        id="tspan3435"
-       sodipodi:role="line">{ &quot;temp&quot;}</tspan></text>
+       sodipodi:role="line">{ &quot;t&quot;}</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -710,7 +710,7 @@
        x="1.8197289"
        sodipodi:role="line"
        id="tspan5272-7"
-       style="font-weight:bold">Registered devices in room ID R1</tspan></text>
+       style="font-weight:bold">Registered devices in Meeting Room 1</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -741,11 +741,11 @@
        sodipodi:role="line"
        x="591.09735"
        y="300.63867"
-       id="tspan5620-3">Room 1</tspan><tspan
+       id="tspan5620-3">Meeting Room 1</tspan><tspan
        sodipodi:role="line"
        x="591.09735"
        y="314.38867"
-       id="tspan4442-2">ID: R1</tspan><tspan
+       id="tspan4442-2">ID: meetingroom1</tspan><tspan
        sodipodi:role="line"
        x="591.09735"
        y="328.13867"
@@ -811,7 +811,7 @@
        y="99.320496"
        x="712.1286"
        sodipodi:role="line"
-       id="tspan5272-30">ID R1 </tspan></text>
+       id="tspan5272-30">ID meetingroom1 </tspan></text>
 <path
      style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-1-5-2-3);marker-end:url(#TriangleOutM-3-4-3-3-0-0)"
      d="m 611.32485,260.42388 0,-15.17705"
@@ -919,7 +919,7 @@
        sodipodi:role="line"
        x="45.157795"
        y="262.16061"
-       id="tspan4442-7"> humiditysensor1</tspan><tspan
+       id="tspan4442-7"> humiditySensor1</tspan><tspan
        sodipodi:role="line"
        x="45.157795"
        y="275.91061"
