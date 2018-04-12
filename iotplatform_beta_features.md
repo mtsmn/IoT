@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-02-26"
+lastupdated: "2018-04-12"
 
 ---
 
@@ -28,3 +28,4 @@ Simulating device data | [Simulating device data (Beta)](devices/device_sim.html
 Restoring deleted devices | [Restoring deleted devices (Beta)](iotplatform_task.html#restore_device)
 Embedded rules | [Creating embedded rules (Beta)](information_management/im_rules.html)
 Things | [Introduction to data mangement](information_management/im_introduction.html)
+Cloud IAM Authentication and Authorization | [Cloud IAM Authentication and Authorization for {{site.data.keyword.iot_short_notm}} (Beta)](reference/security/cloud_iam.html)
