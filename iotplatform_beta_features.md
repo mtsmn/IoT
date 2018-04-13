@@ -27,5 +27,6 @@ IoT gateway package | [IoT gateway package (Beta)](gateways/iotgw.html#gw_packag
 Simulating device data | [Simulating device data (Beta)](devices/device_sim.html)
 Restoring deleted devices | [Restoring deleted devices (Beta)](iotplatform_task.html#restore_device)
 Embedded rules | [Creating embedded rules (Beta)](information_management/im_rules.html)
-Things | [Introduction to data mangement](information_management/im_introduction.html)
+Things | [Introduction to data mangement](GA_information_management/ga_im_device_twin.html#device_twins)
+{{site.data.keyword.iot_short_notm}} Edge (Preview) | [{{site.data.keyword.iot_short_notm}} Edge overview (Preview)](edge/WIoTP_edge.html)
 Cloud IAM Authentication and Authorization | [Cloud IAM Authentication and Authorization for {{site.data.keyword.iot_short_notm}} (Beta)](reference/security/cloud_iam.html)
