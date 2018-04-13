@@ -107,6 +107,7 @@ Internet of Things Platform
         reference/roles_access.md
         reference/app_roles_access.md
         reference/gateway_roles_access.md
+        reference/manage_groups.md
         gateways/gateway-access-control.md
         reference/rlac_overview.md
         reference/rlac.md     
