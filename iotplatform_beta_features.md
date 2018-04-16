@@ -30,3 +30,4 @@ Embedded rules | [Creating embedded rules (Beta)](information_management/im_rule
 Things | [Introduction to data mangement](GA_information_management/ga_im_device_twin.html#device_twins)
 {{site.data.keyword.iot_short_notm}} Edge (Preview) | [{{site.data.keyword.iot_short_notm}} Edge overview (Preview)](edge/WIoTP_edge.html)
 Cloud IAM Authentication and Authorization | [Cloud IAM Authentication and Authorization for {{site.data.keyword.iot_short_notm}} (Beta)](reference/security/cloud_iam.html)
+Groups user interface | [Managing groups (Beta)](manage_groups.html#groups_overview)
