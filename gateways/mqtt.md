@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -110,9 +110,6 @@ If the gateway fails to register a device automatically, it does not attempt to 
 
 When errors occur during the validation of the publish or subscribe topic or during automatic registration, a notification is sent to the gateway device. A gateway can receive these notifications by subscribing to the following topic, substituting the `typeId` and `deviceId` values:
 
-```
-iot-2/type/**typeId**/id/**deviceId**/notify
-```
 <pre class="pre">iot-2/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/notify</pre>
 {: codeblock}
 
