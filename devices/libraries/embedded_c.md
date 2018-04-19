@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-04-19"
 
 ---
 
@@ -31,6 +31,7 @@ To access the Embedded C client libraries and samples for {{site.data.keyword.io
 |Dependency |Description|
 |:---|:---|
 |[Eclipse Paho Embedded C library ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Provides an MQTT C client library. For more information, see [MQTT Client Package -  C for embedded devices ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
+|[Mbed TLS 2.4.1 ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.4.1.tar.gz){: new_window} | Provides SSL Library to enable TLS Support and Client Side Certificates based authentication. For more information, check [SSL Library from Mbed TLS ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://tls.mbed.org/ssl-library){: new_window}.|
 
 
 ## Installation
