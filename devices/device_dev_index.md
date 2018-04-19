@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-01-11"
+lastupdated: "2018-04-19"
 
 ---
 
@@ -46,7 +46,7 @@ If you cannot find a recipe for your particular device, then IBM provide a numbe
 - Java
 - Node.js
 - Embedded C
-- ARM mBed C++
+- Arm Mbed C++
 - Python
 - C#
 - Node-RED
