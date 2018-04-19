@@ -129,18 +129,18 @@ To configure your AT&T-connected devices, complete the following steps:
 
 When the organization is successfully configured, the *Extensions* section displays under the *Extensions Configuration* section in the *Device Drilldown* view.
 
-## Arm Mbed Cloud bridge
+## Arm Mbed bridge
 {: #arm}
 
-The bridge enables Arm Mbed devices to integrate with IBM Watson IoT Platform and exchange messages bidirectionally. To enable this integration, you first need to sign up for an Arm Mbed Cloud account here and then provide the requested connection information for your Watson IoT configuration.
+The bridge enables Arm Mbed devices to integrate with IBM Watson IoT Platform and exchange messages bidirectionally. To enable this integration, you first need to sign up for an Arm Mbed Cloud account and then provide the requested connection information for your Watson IoT configuration.
 
 ### Setup Configuration
 
 
-1. Enable the Arm Mbed Cloud bridge extension. To enable the extension, complete the following steps:
+1. Enable the Arm Mbed bridge extension. To enable the extension, complete the following steps:
   1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
   2. In the **Extensions** page, click **+Add Extension**.
-  3. Click **Add** next to the Arm Mbed Cloud bridge extension.
+  3. Click **Add** next to the Arm Mbed bridge extension.
   4. Enter your Arm Mbed access key and domain ID. You can find these by using the Arm Mbed portal at https://connector.mbed.com.
   5. Check the credentials are correct by clicking the **Check Connection** button.
   6. Click **Done**.
