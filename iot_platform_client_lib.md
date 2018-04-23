@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-03-13"
+lastupdated: "2018-04-19"
 
 ---
 
@@ -43,11 +43,10 @@ Client libraries are provided for each of the supported programming languages, a
 - [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
 - [More documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
 
-## mBed C++
+## Mbed C++
 
-- [Client library ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
-- [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){:new_window}
-- [More documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://iotf.readthedocs.io/en/latest/devices/libraries/mbedcpp.html){:new_window}
+- [Client library ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+- [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){:new_window}
 
 ## Node.js
 - [Client library ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
