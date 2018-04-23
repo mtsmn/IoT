@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-17"
+lastupdated: "2018-04-23"
 
 ---
 
@@ -91,12 +91,12 @@ To submit a ``POST`` request from a device that is connected to {{site.data.keyw
 - If a gateway is not assigned the *Standard Gateway* role, it can publish events on behalf of any devices in the organization. If the device that is connected to the gateway is unregistered, the gateway automatically registers that device.
 - Assign the *Standard Gateway* role if you want to check device authorization levels.
 
-For more information about the role of gateways and resource groups, see [Gateway Access Control (Beta)](../gateways/gateway-access-control.html).
+For more information about the role of gateways and resource groups, see [Gateway Access Control](../gateways/gateway-access-control.html).
 
 ## Receiving commands
 {: #receive_commands}
 
-In addition to using the MQTT messaging protocol, you can also configure your gateway devices to receive commands from {{site.data.keyword.iot_short_notm}} over HTTP by using HTTP messaging API commands. A gateway device can receive commands that are directed to devices within its associated resource group. For more information about gateway resource groups, see [Gateway Access Control (Beta)](../gateways/gateway-access-control.html).
+In addition to using the MQTT messaging protocol, you can also configure your gateway devices to receive commands from {{site.data.keyword.iot_short_notm}} over HTTP by using HTTP messaging API commands. A gateway device can receive commands that are directed to devices within its associated resource group. For more information about gateway resource groups, see [Gateway Access Control](../gateways/gateway-access-control.html).
 
 Use one of the following URLs to submit a ``POST`` request from a gateway that is connected to {{site.data.keyword.iot_short_notm}}:
 
