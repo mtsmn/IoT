@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-19"
+lastupdated: "2018-04-26"
 
 ---
 
@@ -141,7 +141,7 @@ The bridge enables Arm Mbed devices to integrate with IBM Watson IoT Platform an
   1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
   2. In the **Extensions** page, click **+Add Extension**.
   3. Click **Add** next to the Arm Mbed bridge extension.
-  4. Enter your Arm Mbed access key. You can create it by using the Arm Mbed portal at https://portal.us-east-1.mbedcloud.com.
+  4. Enter your Arm Mbed access key. You can create it by using the Arm Mbed portal at https://portal.mbedcloud.com.
   5. Check the credentials are correct by clicking the **Check Connection** button.
   6. Click **Done**.
 
