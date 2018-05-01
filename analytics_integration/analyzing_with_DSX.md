@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2017-12-18"
+lastupdated: "2018-05-01"
 ---
 
 ---
@@ -42,7 +42,7 @@ As part of this guide you will learn:
 ## Prerequisites
 
 To complete these steps you must have access to [{{site.data.keyword.iot_short_notm}} ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window} with [Cloudant NoSQL DB ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/cloudant-nosql-db
-){: new_window}, and access to a [DSX Account ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://datascience.ibm.com/docs/content/getting-started/get-started.html){: new_window}.
+){: new_window}, access to the [Apache Spark ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/apache-spark){:new_window} Service, and access to a [DSX Account ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://datascience.ibm.com/docs/content/getting-started/get-started.html){: new_window}.
 
 
 ## Step 1. Set up the simulator
@@ -131,34 +131,29 @@ The Jupyter notebook is a web application that allows one to create and share do
 
 To set up a pre-configured Jupyter Notebook to gain insights into your data and to detect anomalies:
 1. Use a supported browser to log in to [DSX ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://datascience.ibm.com/){: new_window} with your IBM Cloud ID.
-2. Click "+" and select **Create project** to create a new project. Projects create a space for you to collect and share notebooks, connect to data sources, create pipelines, and add data sets.
-3. Specify the project name and click **Create**. During the DSX account setup, the Spark service and Object Storage instance are automatically created. Alternatively, you can create them by using the IBM Cloud interface and then associate them with your DSX project at a later stage.
-4. Import your Cloudant credentials by selecting your project in the **DSX** menu and clicking ![Find and Add Data icon](images/find_add_data_icon.png).
-5. Click the **Connections** tab.
-6. Click **Create Connection** to import your Cloudant credentials to make them available in any notebook in your project.
-7. Complete the **New Connections** screen by entering the following information:
-   - Connection name
-   - Set **Service Category** to `Data Service`.
-   - Select your Cloudant service from the **Target service instance** dropdown menu.
-   - Select the Cloudant database corresponding to the current date.
-8. Click **Create**.
-9. Click **add notebooks** to create a new Jupyter notebook.
-10. Select **From URL** to load an existing notebook, then specify a descriptive name for the notebook and enter the following URL to open the sample notebook:
+2. Click **+ New project** to create a new project and select the **Jupyter Notebooks** tile. Projects create a space for you to collect and share notebooks, connect to data sources, create pipelines, and add data sets.
+3. Click the **+ Add to project** dropdown and select **Connection**. From the list of services select **Cloudant** and then enter your Cloudant URL, Username, and Password found in the Service credentials tab of the {{site.data.keyword.cloudant_short_notm}} service page and enter them in the fields shown. Specify a name for the connection and click **Create**.
+4. Check that the connection has become available under the Data assets section of the dashboard.
+5. Click **+ New notebook** to create a new Jupyter notebook.
+6. From the Select runtime dropdown under Services select **spark-iw**. If this is not present it means the Apache Spark service has not been correctly provisioned. Check on the IBM Cloud Dashboard that it is present and if not then visit the service page to provision it.
+7. Set the Language as **Python 2** and the Spark version as **2.1**.
+8. Select **From URL** to load an existing notebook, then specify a descriptive name for the notebook and enter the following URL to open the sample notebook:
 ```
 https://github.com/ibm-watson-iot/analytics-integration-samples/blob/master/dsx/notebooks/witop_dsx_weather_sensors_sim_notebook.ipynb
 ```
-11. Click **Create Notebook**. Check that the notebook is created with metadata and code.
-12. Select the cell that starts with '!pip install --upgrade pixiedust, ,' and then click **Play** to run the code.
-13. When the installation is complete, restart the Spark kernel by clicking the **Restart Kernel** icon.
-14. Wait about 10 seconds for the kernel to restart and then click on the cell with the comment to select it.
-15. Import your Cloudant credentials to that cell by completing the following steps:
 
-    1. Click ![Find and Add Data icon](images/find_add_data_icon.png).
+9. Click **Create Notebook**. Check that the notebook is created with metadata and code.
+10. Select the cell that starts with '!pip install --upgrade pixiedust, ,' and then click **Run** to run the code.
+11. When the installation is complete, restart the Spark kernel by clicking the **Restart Kernel** icon or selecting **Restart** from the Kernel menu.
+12. Wait about 10 seconds for the kernel to restart and then click on the empty code cell with the comment to select it.
+13. Import your Cloudant credentials to that cell by completing the following steps:
+
+    1. Click ![Find and add data](images/find_add_data_icon.png).
     2. Select the **Connections** tab.
     3. Click **Insert to code**.
 A dictionary called credentials_1" is created with your Cloudant credentials. If the name is not specified as "credentials_1", rename the dictionary to "credentials_1" because this is the name that is required for the notebook code to run.
-16. In the cell with the database name (dbname) enter the name of the Cloudant database that is the source of data, for example, `iotp_yourWIoTPorgId_default_Year-month-day`.
-17. Save the notebook. The notebook is ready to be executed.
+14. In the cell with the database name (dbname) enter the name of the Cloudant database that is the source of data, for example, `iotp_yourWIoTPorgId_default_Year-month-day`.
+15. Save the notebook. The notebook is ready to be executed.
 
 
 ### 2. Run the analysis
