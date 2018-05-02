@@ -73,7 +73,7 @@ The end-user application can now request the state of a specific room Thing ID a
 
 The following diagrams illustrate the logical mapping between devices and applications on {{site.data.keyword.iot_short_notm}} when using logical interfaces.
 
-![The logical mapping between a device and an application on {{site.data.keyword.iot_short_notm}}.](images/im_resources.svg "The mapping between devices, Things, and applications on {{site.data.keyword.iot_short_notm}}")
+![The logical mapping between a device and an application on {{site.data.keyword.iot_short_notm}}.](../information_management/images/im_resources_things.svg "The mapping between devices, Things, and applications on {{site.data.keyword.iot_short_notm}}")
 
 ### Concepts
 
