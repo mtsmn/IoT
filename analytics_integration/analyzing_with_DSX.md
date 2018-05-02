@@ -121,7 +121,7 @@ To set up DSX and start visualizing data:
 
 1. [Set up a pre-configured Jupyter Notebook](#setup_jupyter_notebook) to gain insights into your data and to detect anomalies.
 2. [Run the analysis.](#run_analysis)
-3. [Configure alerts on sensor anomalies](#config_alerts).
+<!--3. [Configure alerts on sensor anomalies](#config_alerts).-->
 
 
 ### 1. Set up a pre-configured Jupyter Notebook
@@ -167,7 +167,7 @@ A dictionary called credentials_1" is created with your Cloudant credentials. If
 **Note:** Some cells run background Spark jobs and might take longer to finish. When the code execution inside a cell is complete, the asterisk `*` turns into a number, for example, In `[*]` turns into In `[1]`. After completing the steps, you can create cloud rules in the {{site.data.keyword.iot_short_notm}} to automatically generate alerts when anomalies are detected.
 
 
-### 3. Configure alerts on sensor anomalies
+<!-- ### 3. Configure alerts on sensor anomalies
 {: #config_alerts}
 
 
@@ -210,13 +210,13 @@ To create cloud rules:
     - In the **Operator** field select less than icon `<`.
     - In the **Value** field enter the lower threshold value.
     - Click **OK**. The conditions to trigger the rule are now set.
-4. Set the action to "Send email" and click **OK** to activate the rule. An email alert is generated whenever the value of the Nitrogen Dioxide reading that is published by a device crosses either of the threshold values. You can run the simulator to see the alert emails.
+4. Set the action to "Send email" and click **OK** to activate the rule. An email alert is generated whenever the value of the Nitrogen Dioxide reading that is published by a device crosses either of the threshold values. You can run the simulator to see the alert emails. -->
 
 
 ## What's next?
 
 For more information about DSX, see the following resources:
 
- - [WIoTP Cloud Rules ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/IoT/cloud_analytics.html#cloud_analytics){: new_window}
+<!-- - [WIoTP Cloud Rules ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/IoT/cloud_analytics.html#cloud_analytics){: new_window} -->
  - [DSX Community Notebooks and Tutorials ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://idaas.iam.ibm.com/idaas/mtfim/sps/authsvc?PolicyId=urn:ibm:security:authentication:asf:basicldapuser){: new_window} following the links to learn more about Jupyter notebooks.
  - [Analytics recipes in the Watson IoT Platform cookbook ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/resources/watson-iot-analytics-cookbook/)
