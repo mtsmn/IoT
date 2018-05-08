@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-03-07"
+lastupdated: "2018-05-08"
 
 ---
 
@@ -38,10 +38,10 @@ A more detailed set of getting started guides and sample applications that step 
 
 To get up and running with the service, explore the following options depending on your situation:
 
-|   The service is deployed | The service is not deployed
-------------- | -------------
-**I have a device to connect** | [Connect your device to {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore device connection in the [Play with {{site.data.keyword.iot_short_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-**I do not have a device to connect** | [Create and connect a Node-RED device simulator](nodereddevice_sample.html){:new_window}. Or [Connect your Smartphone ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Get started with [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html).
+|  |   The service is deployed | The service is not deployed
+ | -------------| ------------- | -------------
+  |**I have a device to connect** | [Connect your device to {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore device connection in the [Play with {{site.data.keyword.iot_short_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
+  |**I do not have a device to connect** | [Create and connect a Node-RED device simulator](nodereddevice_sample.html){:new_window}. Or [Connect your Smartphone ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Get started with [Watson IoT Platform Starter](https://console.bluemix.net/docs/starters/IoT-starter/iot500.html).
   
 For more information on how to connect specific device types to {{site.data.keyword.iot_short_notm}}, see [developerWorks recipes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
