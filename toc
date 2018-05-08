@@ -15,7 +15,7 @@ Internet of Things Platform
         reference/bluemix_and_platform.md
         reference/back_up.md
         reference/billing.md
-        [IoT pricing calculator](http://iot-cost-calculator.ng.bluemix.net/)
+        [IoT pricing calculator](https://console.bluemix.net/pricing/configure/service/iotf-service-id)
         reference/quotas.md
 
     iotplatform_beta_features.md
