@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-02-27"
+lastupdated: "2018-05-08"
 
 ---
 
@@ -19,7 +19,7 @@ The {{site.data.keyword.iot_full}} is built on the following key areas:
 
   1. Connect - Connect devices and develop applications.
   2. Information Management - Store, normalize, transform, and review device data and integrate your {{site.data.keyword.iot_short_notm}} with other services.
-  3. Analytics - Visualize real-time device data by using the {{site.data.keyword.iot_short_notm}} dashboard.
+  3. Analytics - Specify rule conditions that are based on real-time device data to trigger alerts and actions.
   4. Risk Management - Configure secure connectivity and architecture with access control for users and applications.
 
 ## Connect
@@ -64,10 +64,6 @@ For more information about using this feature, see [Introduction to data managem
 
 ## Analytics
 {: #analytics}
-
-### Visualize real-time device data
-
-You can visualize and display real-time device data by using dashboard cards. Dashboard cards monitor and display device data in real-time, which allows you to keep track of key devices or device data. These visualizations are displayed on the main {{site.data.keyword.iot_short_notm}} dashboard to give you rapid access to the context and status of real-time device data. For more information, see [visualizing real-time data](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
 
 ### Edge and cloud analytics
 
