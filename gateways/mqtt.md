@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-24"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -191,7 +191,7 @@ A managed gateway publishes to topics that are specific to the type of managemen
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
 {: codeblock}
 
-For other topics that a managed gateway can publish to, see [Device Management Protocol](device_mgmt/index.html) and [Device management requests](../devices/device_mgmt/requests.html). 
+For other topics that a managed gateway can publish to, see [Device Management Protocol](../devices/device_mgmt/index.html) and [Device management requests](../devices/device_mgmt/requests.html). 
 - The protocol remains the same for gateways, except that any topic that begins with **iotdevice-1/** will instead begin with:
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}
