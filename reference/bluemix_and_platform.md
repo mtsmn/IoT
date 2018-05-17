@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -30,7 +30,7 @@ The {{site.data.keyword.iot_short_notm}} has provisions for a specified level of
 
 ## {{site.data.keyword.Bluemix_notm}} Service Level Agreement
 
-{{site.data.keyword.Bluemix_notm}} publishes terms of use which differ depending on whether the [IBM Cloud Services Agreement ![External link icon](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} or the [IBM International Passport Advantage Agreement ![External link icon](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} apply to the user. For more information on the {{site.data.keyword.Bluemix_notm}} Service Level Agreement, see [{{site.data.keyword.Bluemix_notm}} Terms ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/docs/navigation/notices.html#terms){:new_window}.
+{{site.data.keyword.Bluemix_notm}} publishes terms of use which differ depending on whether the [IBM Cloud Services Agreement ![External link icon](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} or the [IBM International Passport Advantage Agreement ![External link icon](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} apply to the user. 
 
 ## {{site.data.keyword.iot_short_notm}} Pricing
 {: #iot-pricing}

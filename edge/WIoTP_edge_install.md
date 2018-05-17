@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-09"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -162,5 +162,5 @@ Filtering log messages by containers:
 
 For more information about {{site.data.keyword.iot_short_notm}} Edge, see the following topics:
 - [{{site.data.keyword.iot_short_notm}} Edge overview](WIoTP_edge.html#edge_overview)
-- [Configuring {{site.data.keyword.iot_short_notm}} Edge](WIoTP_edge_configure.html#edge_configure)
+- [Configuring {{site.data.keyword.iot_short_notm}} Edge](WIoTP_edge_config.html#edge_configure)
 - [Developing for {{site.data.keyword.iot_short_notm}} Edge](WIoTP_edge_dev.html#edge_dev)

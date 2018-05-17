@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-03-21"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -21,7 +21,7 @@ Use the following information to create a scenario in which sensors on two humid
 
 Use the same {{site.data.keyword.iot_short_notm}} organization instance and an API key or token for that organization that you used in [Step-by-step guide 1](../GA_information_management/ga_im_index_scenario.html). 
 
-This configuration is a pre-requisite to the tutorial described in the [Step-by-Step guide 2](im_index_scenario_thing.md) documentation.
+This configuration is a pre-requisite to the tutorial described in the [Step-by-Step guide 2](im_index_scenario_thing.html) documentation.
 
 In this scenario, one device type and two device instances are created.
 
@@ -439,7 +439,7 @@ The following example shows a response to the POST method:
   "version" : "draft"
 }
 ```
-In this scenario, use the logical interface identifier *5846cd7c6522050001db0e24* that is returned in the response to the POST method to add your logical interface to your device type. You also use this identifier to map an inbound device event to a property that is defined by the logical interface. You can use the logical interface alias *IHygrometer* to [retrieve the state of the device](##step13), either by using HTTP REST APIs, or by subscribing to a topic string.
+In this scenario, use the logical interface identifier *5846cd7c6522050001db0e24* that is returned in the response to the POST method to add your logical interface to your device type. You also use this identifier to map an inbound device event to a property that is defined by the logical interface. You can use the logical interface alias *IHygrometer* to retrieve the state of the device, either by using HTTP REST APIs, or by subscribing to a topic string.
 
 
 ## Step 10: Add the logical interface to the device type
