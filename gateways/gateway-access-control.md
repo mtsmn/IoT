@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-02-09"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -22,7 +22,7 @@ You use resource groups to enable gateways to act on behalf of a subset of an or
 
 When a new gateway is created, a default resource group is also created and assigned to the gateway. The default resource group cannot be removed from the gateway. Existing gateways without any resource groups can continue to act on behalf of all devices in the organization.
 
-For information about publishing events from gateway devices by using APIs, see [HTTP Messaging APIs for gateway devices](../gateways/gw_intro_api.html).
+For information about publishing events from gateway devices by using APIs, see [HTTP APIs for gateway devices](gw_api.html).
 
 ## Assigning a role to a gateway
 {: #gw_roles}
@@ -33,7 +33,7 @@ Gateways with the *Standard Gateway* role cannot auto register-devices.
 
 Once a gateway is assigned a resource group, the gateway can only act on behalf of the devices in that resource group and itself, even if its role is changed.
 
-For more information about gateway roles, see [Gateway roles](roles_index.html#gateway_roles).
+For more information about gateway roles, see [Gateway roles](../roles_index.html#gateway_roles).
 
 To assign a role to a gateway, use the following API where *${clientID}* is the URL-encoded ClientID in the format *d:${orgId}:${typeId}:${deviceId}* for devices or *g:${orgId}:${typeId}:${deviceId}* for gateways:
 
