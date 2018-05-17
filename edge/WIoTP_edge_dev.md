@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -33,5 +33,5 @@ Detailed instructions for creating custome services are coming soon and will be 
 
 For more information about {{site.data.keyword.iot_short_notm}} Edge, see the following topics:
 - [{{site.data.keyword.iot_short_notm}} Edge overview](WIoTP_edge.html#edge_overview)
-- [Configuring {{site.data.keyword.iot_short_notm}} Edge](WIoTP_edge_configure.html#edge_configure)
+- [Configuring {{site.data.keyword.iot_short_notm}} Edge](WIoTP_edge_config.html#edge_configure)
 - [Installing {{site.data.keyword.iot_short_notm}} Edge on edge devices](WIoTP_edge_install.html#edge_install_device)
