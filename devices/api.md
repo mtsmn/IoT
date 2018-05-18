@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016, 2018
-lastupdated: "2018-01-17"
+years: 2016, 2017
+lastupdated: "2018-05-17"
 
 ---
 
@@ -63,10 +63,10 @@ In addition to using the MQTT messaging protocol, you can also configure your de
 
 Use one of the following URLs to submit a ``POST`` request from a device that is connected to {{site.data.keyword.iot_short_notm}}:
 
-### Non-secure POST request
+### Non-secure POST request for publishing events
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-### Secure POST request
+### Secure POST request for publishing events
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
@@ -79,10 +79,11 @@ In addition to using the MQTT messaging protocol, you can also configure your de
 
 Use one of the following URLs to submit a ``POST`` request from a device that is connected to {{site.data.keyword.iot_short_notm}}:
 
-### Non-secure POST request
+### Non-secure POST request for receiving commands
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
-### Secure POST request
+### Secure POST request for receiving commands
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
@@ -166,7 +167,7 @@ You can use the last event cache to store information about the last event that 
 The last event cache feature is disabled by default, but you can enable the functionality in the following ways: 
 
 -	Set the *enabled* parameter to **true** by using an API.
--	On the *Settings* page of the {{site.data.keyword.iot_short_notm}} dashboard, set **Enable LEC** to **On**.
+-	On the *Settings* page of the [{{site.data.keyword.iot_short_notm}} dashboard ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://internetofthings.ibmcloud.com){: new_window}, set **Enable LEC** to **On**.
 
 The length of time that event data is stored in the cache is specified by the time to live (TTL) value. The last event data for any specific event is stored for seven days by default.  You can change the duration by using an API to update the **ttlDays** parameter, or by selecting a value for the **Event Data TTL** field on the *Settings* page of the {{site.data.keyword.iot_short_notm}} dashboard.
 
