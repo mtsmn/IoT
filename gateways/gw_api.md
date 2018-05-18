@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-23"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -18,7 +18,6 @@ lastupdated: "2018-04-23"
 
 There are two types of HTTP APIs that can be used with {{site.data.keyword.iot_full}}. You can use HTTP REST APIs to
 create, update, list, and delete gateway devices. Use HTTP Messaging APIs to send event information from gateway devices to the cloud, and to accept commands from applications in the cloud. 
-
 
 
 ## Client connections
@@ -80,10 +79,12 @@ In addition to using the MQTT messaging protocol, you can also configure your ga
 
 To submit a ``POST`` request from a device that is connected to {{site.data.keyword.iot_short_notm}}, use one of the following URLs:
 
-### Non-secure POST request
+### Non-secure POST request for publishing events
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-### Secure POST request
+### Secure POST request for publishing events
+
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **Important notes:**
@@ -100,10 +101,11 @@ In addition to using the MQTT messaging protocol, you can also configure your ga
 
 Use one of the following URLs to submit a ``POST`` request from a gateway that is connected to {{site.data.keyword.iot_short_notm}}:
 
-### Non-secure POST request
+### Non-secure POST request for receiving commands
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
-### Secure POST request
+### Secure POST request for receiving commands
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 

@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-01-17"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -63,10 +63,11 @@ In addition to using the MQTT messaging protocol, you can also configure your de
 
 Use one of the following URLs to submit a ``POST`` request from a device that is connected to {{site.data.keyword.iot_short_notm}}:
 
-### Non-secure POST request
+### Non-secure POST request for publishing events
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-### Secure POST request
+### Secure POST request for publishing events
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
@@ -79,10 +80,11 @@ In addition to using the MQTT messaging protocol, you can also configure your de
 
 Use one of the following URLs to submit a ``POST`` request from a device that is connected to {{site.data.keyword.iot_short_notm}}:
 
-### Non-secure POST request
+### Non-secure POST request for receiving commands
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
-### Secure POST request
+### Secure POST request for receiving commands
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
