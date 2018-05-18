@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -179,7 +179,7 @@ When your Node-RED flow is secure, if you plan to use REST API commands to creat
 
 You can use the Node-RED flow interface or the application rest API to complete the following tasks.
 
-### Node-RED  
+### Creating and connecting devices by using Node-RED  
 To register multiple devices:  
 1. Log in to {{site.data.keyword.Bluemix_notm}} at:  
 [https://bluemix.net ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net){: new_window}.
@@ -198,7 +198,7 @@ The Node-RED interface opens.
  4. Locate the **Devices I Care About** card.  
 The device names are displayed.
 
-### REST API  
+### Creating and connecting devices by using REST API  
 To register multiple devices:  
 
 1. Make an HTTP POST request to the following URL: `ROUTE_URL/rest/devices`  
@@ -230,7 +230,7 @@ The device names are displayed.
 
 Because the simulated devices are registered with {{site.data.keyword.iot_short_notm}}, you can now run the simulator to start sending device events.
 
-### Node-RED  
+### Simulating device events by using Node-RED  
 To send device events:  
 1. In the Node-RED flow editor, select the **Simulate multiple devices** tab.
 7. To simulate five devices, click the inject node that is labeled **Simulate 5 devices**.
@@ -241,7 +241,7 @@ To send device events:
  5. Select one of the devices and verify that updated device data points that correspond to the published message are displayed in the **Device Properties** card.  
 
 
-### Rest API  
+### Simulating device events by using Rest API  
 To send device events:
 
 1. Make an HTTP POST request to the following URL: `ROUTE_URL/rest/runtest`  
