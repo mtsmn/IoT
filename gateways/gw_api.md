@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-23"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -18,7 +18,6 @@ lastupdated: "2018-04-23"
 
 There are two types of HTTP APIs that can be used with {{site.data.keyword.iot_full}}. You can use HTTP REST APIs to
 create, update, list, and delete gateway devices. Use HTTP Messaging APIs to send event information from gateway devices to the cloud, and to accept commands from applications in the cloud. 
-
 
 
 ## Client connections
@@ -80,10 +79,10 @@ In addition to using the MQTT messaging protocol, you can also configure your ga
 
 To submit a ``POST`` request from a device that is connected to {{site.data.keyword.iot_short_notm}}, use one of the following URLs:
 
-### Non-secure POST request
+### Non-secure POST request for publishing events
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-### Secure POST request
+### Secure POST request for publishing events
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **Important notes:**
@@ -100,10 +99,11 @@ In addition to using the MQTT messaging protocol, you can also configure your ga
 
 Use one of the following URLs to submit a ``POST`` request from a gateway that is connected to {{site.data.keyword.iot_short_notm}}:
 
-### Non-secure POST request
+### Non-secure POST request for receiving commands
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
-### Secure POST request
+### Secure POST request for receiving commands
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
@@ -125,6 +125,56 @@ To access the {{site.data.keyword.iot_short_notm}} HTTP REST APIs, see [{{site.d
 
 To access the {{site.data.keyword.iot_short_notm}} HTTP Messaging APIs, see [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
+## Example of a secure POST request
+
+The following example sends a message from a gateway device to {{site.data.keyword.iot_short_notm}} by using the HTTP protocol. An application receives the message by subscribing to the topic on which the message is published. The following table provides information about the gateway device. 
+
+|Parameter|Value|
+|:---|:---|
+|Organization ID |myOrgID
+|Device Type| TestGateways
+|Device ID | TestPublishGatewayEvent
+|Authentication Method|use-token-auth
+|Authentication Token|passw0rd
+
+
+The following example uses curl to sends an event that is called *TestMessage* from the gateway device *TestPublishGatewayEvent* to  {{site.data.keyword.iot_short_notm}} over the HTTP protocol: 
+
+```
+curl -v -X POST -H "Content-Type: application/json" -u "g-myOrgID-TestGateways-TestPublishGatewayEvent:passw0rd" -d @message.txt  https://myOrgID.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/TestGateways/devices/TestPublishGatewayEvent/events/TestMessage
+```
+
+The message is contained in a text file that is called *message.txt*. The content of the *message.txt* file is shown in the following example: 
+```
+{ "d": { "myName": "Publish Test","cputemp": 46,"sine": -10,"cpuload": 1.45 }  } 
+```
+The message is published on topic *iot-2/evt/TestMessage/fmt/json*. An application that is called *testSubscriber* is created that subscribes to a topic filter *iot-2/type/+/id/+/evt/+/fmt/+*. The topic filter matches the topic on which the message is published.
+
+You can use the python sample *client_sub_opts.py* that is provided in the [python paho library ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/eclipse/paho.mqtt.python/tree/fixes/examples) to help you configure your application to subscribe to the topic filter *iot-2/type/+/id/+/evt/+/fmt/+*. 
+
+The following python script subscribes to a topic filter that matches the topic string on which the message is published:
+
+```
+python client_sub_opts.py -H myOrgID.messaging.internetofthings.ibmcloud.com -t "iot-2/type/+/id/+/evt/+/fmt/+" -c "a:myOrgID:testSubscriber" -u "a-myOrgID-jkl3fghdef" -p "K(c8lnTl1aN9sf2N&" -P 8883 -s -D
+```
+where:
+
+- **-H** is the host name.
+- **-t** is the name of the topic filter.
+- **-c** is the client ID. The client ID is in the format "a:{orgID}:{applicationName}"
+- **-u** is the API key that is generated when the application is created.   
+- **-p** is the authentication token that is generated when the application is created.   
+- **-P** is the port number.   
+- **-s** specifies a tls connection.   
+- **-D** specifies that debug mode is enabled.   
+
+The following example shows a successful response to the receipt of the published message from *TestPublishGatewayEvent* gateway device. 
+```
+Received PUBLISH (d0, q0, r0, m0), 'iot-2/type/TestGateways/id/TestPublishGatewayEvent/evt/TestMessage/fmt/json', ...  (80 bytes)
+iot-2/type/TestGateways/id/TestPublishGatewayEvent/evt/TestMessage/fmt/json 0 b'{ "d": { "myName": "Publish Test","cputemp": 46,"sine": -10,"cpuload": 1.45 }  }
+
+```
+
 ## Last event cache
 {: #last-event-cache}
 
@@ -135,7 +185,7 @@ You can use the last event cache to store information about the last event that 
 The last event cache feature is disabled by default, but you can enable the functionality in the following ways: 
 
 -	Set the *enabled* parameter to **true** by using an API.
--	On the *Settings* page of the {{site.data.keyword.iot_short_notm}} dashboard, set **Enable LEC** to **On**.
+-	On the *Settings* page of the [{{site.data.keyword.iot_short_notm}} dashboard ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://internetofthings.ibmcloud.com){: new_window}, set **Enable LEC** to **On**.
 
 The length of time that event data is stored in the cache is specified by the time to live (TTL) value. The last event data for any specific event is stored for seven days by default.  You can change the duration by using an API to update the **ttlDays** parameter, or by selecting a value for the **Event Data TTL** field on the *Settings* page of the {{site.data.keyword.iot_short_notm}} dashboard.
 
