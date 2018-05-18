@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -71,7 +71,7 @@ As part of this step, you will:
 - Configure the sample app to connect to {{site.data.keyword.iot_short_notm}} by using an API key and authentication token.
 - Use the web application to monitor your connected conveyor belt devices.  
 
-### Detailed steps
+### Detailed steps for deploying and connecting the monitoring application
 The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the README file in GitHub.
 1. Clone the Node.js *Plant Floor Monitoring* sample app GitHub repository.  
 Use your favorite git tool to clone the following repository:  
@@ -179,7 +179,7 @@ As part of this step, you will:
 - Configure three user interface widgets to display device data as gauges and graphs.
 - Use the web application to monitor your connected conveyor belt device.  
 
-### Detailed steps
+### Detailed steps for creating a monitoring user interface by using the widget library
 The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the README file in GitHub.
 1. Clone the *Widget Library Monitoring* sample app GitHub repository.  
 Use your favorite git tool to clone the following repository:  
