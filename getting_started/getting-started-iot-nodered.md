@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -55,7 +55,7 @@ To make moving between tasks easier in the process that follows, open the {{site
 Perform the following steps to deploy the Starter sample application:
 
 1. Deploy the starter application.
- 1. Click <a href="https://bluemix.net/devops/setup/deploy?repository=https://github.com/ibm-watson-iot/iot-platform-bluemix-starter"><img src="https://bluemix.net/devops/graphics/create_toolchain_button.png" height=25></a> to create a new Continuous Delivery Toolchain in Bluemix:  (via Continuous Delivery)  
+ 1. Click **Create Toolchain** to create a new Continuous Delivery Toolchain in Bluemix:  (via Continuous Delivery)  
  **Tip:** If you'd rather deploy from the command line, you can [find the {{site.data.keyword.iot_short_notm}} starter](https://github.com/ibm-watson-iot/iot-platform-bluemix-starter) in the IBM Watson IoT organization in GitHub.
  2. When prompted, log in to IBM Bluemix.
  3. If needed, select the Bluemix Organization where you want to deploy the starter application.
