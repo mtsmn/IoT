@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -41,7 +41,9 @@ To connect device, application, and gateway clients to your {{site.data.keyword.
 ## Port security
 {: #client_port_security}
 
-Ensure that the required ports are open and enabled for communication. Ports 8883 and 443 support secure connections using TLS with the MQTT and HTTP protocol. Port 1883 supports non-secure connections with the MQTT and HTTP protocol. Information about connection type and associated port numbers is summarized in the following table:   
+Ensure that the required ports are open and enabled for communication. Ports 8883 and 443 support secure connections using TLS with the MQTT and HTTP protocol. Port 1883 supports non-secure connections with the MQTT and HTTP protocol. HTTP port 1883 is disabled by default. For information about changing the default setting, see [Configuring security policies](set_up_policies.html#set_up_policies.html).
+
+Information about connection type and associated port numbers is summarized in the following table:   
 
 |Connection type |Port number|
 |:---|:---|
