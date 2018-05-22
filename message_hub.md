@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-02-17"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -15,7 +15,9 @@ lastupdated: "2017-02-17"
 # Connecting and configuring a historian service by using {{site.data.keyword.messagehub}}  
 {: #messagehub_main}
 
-Connecting {{site.data.keyword.messagehub_full}} to {{site.data.keyword.iot_short}} provides a scalable, high-throughput message bus for historical data storage. {{site.data.keyword.messagehub}} is built on Apache Kafka, which is an open-source, high-throughput messaging system that provides a low-latency platform for handling real-time data feeds.
+Connecting {{site.data.keyword.messagehub_full}} to {{site.data.keyword.iot_full}} provides a scalable, high-throughput message bus for historical data storage. {{site.data.keyword.messagehub}} is built on Apache Kafka, which is an open-source, high-throughput messaging system that provides a low-latency platform for handling real-time data feeds.
+
+MessageHub forwarding partitions events by using a partition key. The key is formed by concatenating the {{site.data.keyword.iot_short}} 6 character organization ID with the device type and device ID. Payload fields, including timestamp and event ID, are not used to form the partition key. This configuration ensures that all events from a specific device are sent to the same partition, so that the events are processed in the order in which they are sent. 
 
 ## Before you begin  
 {: #byb}
@@ -25,6 +27,7 @@ Before connecting a {{site.data.keyword.messagehub}} to your {{site.data.keyword
 - Set up {{site.data.keyword.messagehub}} in the same {{site.data.keyword.Bluemix_notm}} space as your {{site.data.keyword.iot_short_notm}} by using the {{site.data.keyword.Bluemix_notm}} Catalog. For more information about {{site.data.keyword.messagehub}}, see the [Getting started with {{site.data.keyword.messagehub}}](https://console.{DomainName}/docs/services/MessageHub/index.html).
 
 - Ensure that you have developer privileges in the {{site.data.keyword.Bluemix_notm}} organization and that you are signed in via {{site.data.keyword.Bluemix_notm}}. If you are not signed in through {{site.data.keyword.Bluemix_notm}}, or do not have developer privileges in this {{site.data.keyword.Bluemix_notm}} organization, you are not able to authorize the binding of {{site.data.keyword.messagehub}} and the {{site.data.keyword.iot_short_notm}}.
+
 
 ## Connect
 
