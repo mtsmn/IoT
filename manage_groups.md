@@ -2,7 +2,7 @@
 
 copyright:
 years: 2018
-lastupdated: "2018-04-13"
+lastupdated: "2018-04-21"
 
 ---
 
@@ -26,6 +26,8 @@ You can manage groups by using the {{site.data.keyword.iot_short_notm}} dashboar
 For more information about access control and groups, and for instructions on using {{site.data.keyword.iot_short_notm}} access control APIs to manage groups, see [Resource-level access control overview](reference/rlac_overview.html#RLAC_overview).
 
 ## Adding groups
+
+**Note:** To start adding groups, turn on the **Groups** feature on the **Settings** page. 
 
 1. From your {{site.data.keyword.iot_short_notm}} dashboard, select **Access Management** in the left navigation bar.
 2. Select the **Groups** tab and view the list of groups.
