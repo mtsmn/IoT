@@ -42,7 +42,7 @@ As part of this guide you will learn:
 ## Prerequisites
 
 To complete these steps you must have access to [{{site.data.keyword.iot_short_notm}} ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window} with [Cloudant NoSQL DB ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/cloudant-nosql-db
-){: new_window}, access to the [Apache Spark ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/apache-spark){:new_window} Service, and access to a [DSX Account ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://datascience.ibm.com/docs/content/getting-started/get-started.html){: new_window}.
+){: new_window}, access to the [Apache Spark ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/apache-spark){:new_window} Service, and access to a [DSX Account ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://datascience.ibm.com/docs/content/getting-started/get-started-wdp.html){: new_window}.
 
 
 ## Step 1. Set up the simulator
