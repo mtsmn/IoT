@@ -32,7 +32,7 @@ To add a schema:
 3. Add one or more properties.  
     You can select properties from a connected device, create virtual properties that modify or combine existing properties, or add properties manually.  
 
-    **Tip:** The available properties are defined in the payload of the messages that are sent by a device. For information about the {{site.data.keyword.iot_short}} payload format, see the [Message payload](reference/mqtt/index.html#message-payloadl "Message payload.") topic.   
+    **Tip:** The available properties are defined in the payload of the messages that are sent by a device. For information about the {{site.data.keyword.iot_short}} payload format, see the [Message payload](reference/mqtt/index.html#message-payload "Message payload.") topic.   
   <dl>
   <dt>Add a property manually</dt>
   <p><b>Tip:</b> To create a nested property structure, first add a property that has the data type Parent. In the properties table, you can then click ![Add child icon.](images/add_child.png "Add child") to add one or more child properties.</p>
