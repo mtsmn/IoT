@@ -30,7 +30,6 @@ See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help
 
 * [Slack ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-developers.slack.com/){:new_window} - join the #internet-of-things channel.
 
-Don't have access to that slack workspace already ?  [Request access now ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://bxdevs-slack-invite.mybluemix.net/){:new_window}
 
 ## Support tickets
 
