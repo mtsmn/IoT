@@ -30,4 +30,4 @@ To view the status of selected Watson IoT services that are also running on {{si
 
 ![Twitter feed https://twitter.com/ibmiotf](images/twitter_logo.png "IBM Watson IoT Platform Twitter feed")
 
-You can also get the latest news and updates about {{site.data.keyword.iot_short_notm}} and associated services by following our [Twitter feed ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://twitter.com/ibmiotf).
+You can also get the latest news and updates about {{site.data.keyword.iot_short_notm}} and associated services by following our [Twitter feed ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://twitter.com/ibmiot). 
