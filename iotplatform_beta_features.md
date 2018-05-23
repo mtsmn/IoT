@@ -22,7 +22,7 @@ The following beta features are available in {{site.data.keyword.iot_short_notm}
 
 Feature       | Documentation       
 ------------- | -------------
-Drill-down reporting | [Drill-down reporting (Beta)](reference/security/RM_security.html#drill-down)
+Drill-down reporting | [Drill-down reporting (Beta)](reference/security/RM_security.html#drill_down)
 IoT gateway package | [IoT gateway package (Beta)](gateways/iotgw.html#gw_package)
 Simulating device data | [Simulating device data (Beta)](devices/device_sim.html)
 Restoring deleted devices | [Restoring deleted devices (Beta)](iotplatform_task.html#restore_device)
