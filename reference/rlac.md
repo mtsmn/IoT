@@ -24,7 +24,7 @@ The following process flow is typically used for enabling and using resource-lev
 1. [Create an organization](../iotplatform_overview.html#organizations).
 2. [Create users](../add_users.html#adding-new-users) and [API keys](../platform_authorization.html#api-key).
 3. [Create resource groups](rlac.html#create_delete_group).
-4. [Assign role-to-groups mappings for the users and API keys](rlac.html#assign_roletoegroup).
+4. [Assign role-to-groups mappings for the users and API keys](rlac.html#assign_roletogroup).
 5. [Add devices to the resource groups](rlac.html#add_device).
 6. [Enable resource-level access control](rlac.html#RLAC_enable).
 
