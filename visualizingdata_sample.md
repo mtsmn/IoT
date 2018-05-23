@@ -26,7 +26,7 @@ Before you can visualize your data, your must take the following actions:
 - Register your devices to your {{site.data.keyword.iot_short_notm}} organization.
 - Ensure that your devices are sending events to the {{site.data.keyword.iot_short_notm}}.
 - [Download the visualization sample](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip) from the github repository and extract the .zip file.
-- [Install the cf command-line tool](../../starters/install_cli.html) from {{site.data.keyword.Bluemix_notm}}.
+- [Install the cf command-line tool](https://console.bluemix.net/docs/starters/install_cli.html) from {{site.data.keyword.Bluemix_notm}}.
 
 ## Running the sample in {{site.data.keyword.Bluemix_notm}}
 {: #running_sample}
