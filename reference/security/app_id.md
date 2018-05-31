@@ -17,7 +17,7 @@ lastupdated: "2018-05-31"
 
 {{site.data.keyword.iot_full}} APIs support the authentication and authorization of users by using App ID.
 
-**Important:** The App ID Authentication and Authorization for {{site.data.keyword.iot_short_notm}} feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+**Important:** The App ID Authentication and Authorization for {{site.data.keyword.iot_short_notm}} feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 With App ID, users can obtain an App ID OAuth token and use it to authenticate API calls. A user can use the App ID endpoint to log in and retrieve their App ID token.
 
