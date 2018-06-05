@@ -37,5 +37,5 @@ For more information about access control and groups, and for instructions on us
 6. Click **Add Devices to Group**.
 7. Select the devices that you want to add to the group and then click **Done**.
 8. Click **Finish** to create the group.
-You can edit the group by add more devices or removing devices, and you can add more groups.
+You can edit the group by adding more devices or removing devices, and you can add more groups.
 
