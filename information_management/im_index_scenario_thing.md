@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-03-22"
+lastupdated: "2018-06-07"
 
 ---
 
@@ -403,37 +403,17 @@ The following example shows how to use cURL to add a mapping to Thing type *Room
   "logicalInterfaceId": "5a4b9847d60180002efce645",
   "notificationStrategy": "on-state-change",
   "propertyMappings": {
-       "humiditySensor": {
-         "humidity": "$event.hum"
+       "thermometer": {
+         "temperature": "$event.temperature"
        },
-       "TSensor": {
-         "temperature": "$event.t"
+       "hygrometer": {
+         "humidity": "$event.humidity"
        }
    },
 }
-```
-The following example shows a response to the POST method:
-```
-{
- "logicalInterfaceId": "5a4b9847d60180002efce645",
- "notificationStrategy": "on-state-change",
- "propertyMappings": {
-       "humiditySensor": {
-         "humidity": "$event.hum"
-       },
-       "TSensor": {
-         "temperature": "$event.t"
-       }
-   },
- "version": "draft",
- "created": "2018-02-01T10:40:27Z",
- "createdBy": "ANOther",
- "updated": "2018-02-01T10:40:27Z",
- "updatedBy": "ANOther"
-}
-```
-The *humiditySensor* is defined in [roomTypeSchema](#crt_composition_file). The *$event.hum* is defined in the logical interface schema with the identifier *5846cd7c6522050001db0e24* and alias *IHygrometer*.  
-The *TSensor* is defined in the [roomTypeSchema](#crt_composition_file). The *$event.t* is defined in the logical interface schema with the identifier *5846ed076522050001db0e12* and alias *IThermometer*.
+```  
+The *thermometer* device is defined in [roomTypeSchema](#crt_composition_file). The *$event.temperature* property is defined in the logical interface schema with the identifier *5846ed076522050001db0e12* and alias *IThermometer*.  
+The *hygrometer* device is defined in the [roomTypeSchema](#crt_composition_file). The *$event.humidity* property is defined in the logical interface schema with the identifier *5846cd7c6522050001db0e24* and alias *IHygrometer*.
 
 
 ## Step 9: Validate and activate the configuration
@@ -495,12 +475,12 @@ The following example shows how to use cURL to create a Thing instance that is c
 ```
 thingId = "meetingroom1"
  meetingroom1AggregatedObjects = {
-   "tSensor": {
+   "thermometer": {
      "type": "device",
      "typeId": "TSensor",
      "id": "tSensor"
    },
-   "humiditySensor": {
+   "hygrometer": {
      "type": "device",
      "typeId": "HumiditySensor",
      "id": "humiditySensor1"
@@ -515,12 +495,12 @@ The following example shows how to use cURL to create a Thing instance that is c
 ```
 thingId = "meetingroom2"
    meetingroom2AggregatedObjects = {
-    "tempSensor": {
+    "thermometer": {
       "type": "device",
       "typeId": "TempSensor",
       "id": "tempSensor"
     },
-    "humiditySensor": {
+    "hygrometer": {
       "type": "device",
       "typeId": "HumiditySensor",
       "id": "humiditySensor2"
