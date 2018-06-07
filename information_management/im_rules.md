@@ -231,7 +231,6 @@ You can then configure an action that is initiated when a rule is triggered. For
 <!-- In our example from [Step-by-step guide 1](../information_management/im_index_scenario_device.html#step11) step 11, the notification setting is set to **on-state-change** in the mappings resource, and rule notification is active. The
 following table shows the notifications that are sent when temperature events are received by {{site.data.keyword.iot_short_notm}}.
 Temperature in the received event | State change notification sent | Rule notification sent
-------------------- |------------- | --------
 10 degrees Celsius | Yes | No
 45 degrees Celsius | Yes | Yes
 45 degrees Celsius | No | Yes

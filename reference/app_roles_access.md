@@ -105,7 +105,6 @@ View operations*|X|X|-|-|-|-
 
 <!-- ### Analytics Operations {: #app-analytics-ops}
 Analytics Operations ||| Application Roles||||
-:--------: | -------------|-------------|---------------|-----|---
            | **Standard Application** | **Operations Application** | **Backend Trusted Application** | **Data Processor Application** | **Visualization Application** | **Device Application**
 View analytics rules|X|X|-|X|X|-
 Manage analytics rules|X|X|-|X|-|-

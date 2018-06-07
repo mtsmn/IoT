@@ -106,7 +106,6 @@ View Operations|-|-
 
 <!-- ### Analytics Operations {: #gateway-analytics-ops}
 Analytics Operations || Gateway Roles|
-:--------: | ---------------------|------------------------|
            | **Standard Gateway** | **Privileged Gateway** |
 View analytics rules|-|-
 Manage analytics rules|-|-

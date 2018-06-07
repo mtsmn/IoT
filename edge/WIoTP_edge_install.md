@@ -112,13 +112,17 @@ You can use mosquitto-clients to simulate devices connecting to your edge node:
 `apt-get install mosquitto-clients`
 
 Run the following command on your Edge node (replace OrgId, DeviceType, DeviceID, DeviceToken and EdgeNodeIP with the appropriate values).
-To find out which IP needs to be passed, check the messages displayed after running the `wiotp_agent_setup` command, underneath the `Generating Edge internal certificates` part.
+To find out which IP needs to be passed, check the messages displayed after running the `wiotp_agent_setup` command, underneath the `Generating Edge internal certificates` section.
 
-```mosquitto_pub -p 8883 -i 'd:<orgId>:<deviceType>:<deviceId>' -u 'use-token-auth' -P '<deviceToken>' -t 'iot-2/evt/evTest/fmt/json' -m '{"message": "Hello World"}' --cafile /var/wiotp-edge/persist/dc/ca/ca.pem -h <EdgeNodeIP>```
+```
+mosquitto_pub -p 8883 -i 'd:<orgId>:<deviceType>:<deviceId>' -u 'use-token-auth' -P '<deviceToken>' -t 'iot-2/evt/evTest/fmt/json' -m '{"message": "Hello World"}' --cafile /var/wiotp-edge/persist/dc/ca/ca.pem -h <EdgeNodeIP>
+```
 
 Example:
 
-```mosquitto_pub -p 8883 -i 'd:nwr48y:myDevice:device1' -u 'use-token-auth' -P '12345678' -t 'iot-2/evt/evTest/fmt/json' -m '{"message": "Hello World"}' --cafile /var/wiotp-edge/persist/dc/ca/ca.pem -h 10.0.2.15```
+```
+mosquitto_pub -p 8883 -i 'd:nwr48y:myDevice:device1' -u 'use-token-auth' -P '12345678' -t 'iot-2/evt/evTest/fmt/json' -m '{"message": "Hello World"}' --cafile /var/wiotp-edge/persist/dc/ca/ca.pem -h 10.0.2.15
+```
 
 Note: If you are running mosquitto_pub outside the edge node use the -h `<host>` option and adjust the  --cafile path.
 
