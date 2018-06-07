@@ -147,7 +147,7 @@ curl --request POST \
 ```
 
 **Note:** The example authorization value `MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=` consists of the following information:
-```{API Key}:{authorization token}```,  which is then Base64 encoded.
+`{API Key}:{authorization token}`,  which is then Base64 encoded.
 
 The following example shows a response to the POST method:
 
