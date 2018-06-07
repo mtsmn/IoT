@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-04"
+lastupdated: "2018-06-07"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-03-04"
 
 **Important:** The {{site.data.keyword.iot_full}} Edge feature is available only as part of a limited preview program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
-Before you can begin receiving data from devices that are connected to your Edge node, you must connect the gateway to {{site.data.keyword.iot_full}}. Connecting a gateway to {{site.data.keyword.iot_short_notm}} involves creating a gateway device type and registering the gateway with {{site.data.keyword.iot_short_notm}}. You can then use the registration information to connect the gateway device to {{site.data.keyword.iot_short_notm}}.
+Before you can begin receiving data from devices that are connected to your Edge node, you must connect the gateway to {{site.data.keyword.iot_short_notm}}. Connecting a gateway to {{site.data.keyword.iot_short_notm}} involves creating a gateway device type and registering the gateway with {{site.data.keyword.iot_short_notm}}. You can then use the registration information to connect the gateway device to {{site.data.keyword.iot_short_notm}}.
 
 ## High-level configuration flow
 
@@ -33,20 +33,20 @@ Before you can begin receiving data from devices that are connected to your Edge
 {: #edge_org}
 
 Create an organization within the {{site.data.keyword.iot_short_notm}} Edge preview test environment by completing the following steps:
-1. Go to http://YOUR_ORGANIZATION.internetofthings.ibmcloud.com.
-2. Complete the information to provision the IBM Cloud organization. **Important:** For the {{site.data.keyword.iot_short_notm}} Edge preview, you must create your IBM Cloud organization in the US region.
-3. Click **Provision Service Instance**.
+1. Register for an {{site.data.keyword.Bluemix_notm}} account and create an instance of the {{site.data.keyword.iot_short_notm}} service in your {{site.data.keyword.Bluemix_notm}} organization. You can create an {{site.data.keyword.iot_short_notm}} instance directly from the [{{site.data.keyword.iot_short_notm}} page in the IBM Cloud Services Catalog ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
+2. Complete the information to provision the IBM Cloud organization. **Important:** You must deploy your IBM Cloud organization in the **US South** location to use the {{site.data.keyword.iot_short_notm}} Edge preview.
+3. Click **Create**.
 4. In the {{site.data.keyword.iot_short_notm}} instance that opens, click **Launch**.
-A new WIoTP organization is created. The org ID is shown at the start of the URL and in the dashboard under your user name. You can now enable {{site.data.keyword.iot_short_notm}} Edge for the organization.
+A new {{site.data.keyword.iot_short_notm}} organization is created. The org ID is shown at the start of the URL and in the dashboard under your user name. You can now enable {{site.data.keyword.iot_short_notm}} Edge for the organization.
 
 ## Enable the {{site.data.keyword.iot_short_notm}} Edge preview
 {: #edge_enable}
 
 The {{site.data.keyword.iot_short_notm}} Edge preview is turned off by default. To enable {{site.data.keyword.iot_short_notm}} Edge:
 
-1. From the {{site.data.keyword.iot_full}} dashboard for your organization, select **Settings**.
+1. From the {{site.data.keyword.iot_short_notm}} dashboard for your organization, select **Settings**.
 2. In the **Experimental Features** section, activate the experimental features, including the {{site.data.keyword.iot_short_notm}} Edge preview.
-2. Refresh your browser to view the new features and shortcuts in the dashboard navigation menu.
+3. Refresh your browser to view the new **Edge Services** feature and shortcut in the dashboard navigation menu. **Note:** if the **Edge Services** icon does not appear in the dashboard navigation menu, ensure that you selected **US South** for your location.
 
 The flag is added to the local browser storage.
 
