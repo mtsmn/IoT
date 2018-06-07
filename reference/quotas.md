@@ -130,6 +130,5 @@ Maximum number of resource groups to which a device can belong |10|10|10
 <!--## User Interface
 {: #UI_metrics}
 Metric        | Lite plan      | Standard & Advanced Security plans       | Dedicated
-------------- | -------------|------------- |
 Maximum number of dashboards |50|50|50
 Maximum number of cards on board |30|30|30 -->
