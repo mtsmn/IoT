@@ -172,6 +172,7 @@ Internet of Things Platform
     Watson IoT Platform Edge
         edge/WIoTP_edge.md
         edge/WIoTP_edge_config.md
+        edge/WIoTP_edge_rules.md
         edge/WIoTP_edge_install.md
         edge/WIoTP_edge_dev.md
 
