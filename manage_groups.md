@@ -21,7 +21,7 @@ Users with the administrator role can use {{site.data.keyword.iot_full}} groups 
 
 You can manage groups by using the {{site.data.keyword.iot_short_notm}} dashboard user interface or by using the {{site.data.keyword.iot_short_notm}} access control APIs.
 
-For details about how to manage roles, see [Managing user roles](managing_user_roles.html#managing-user-roles)
+For details about how to manage roles, see [Managing user roles](managing_user_roles.html#managing-user-roles).
 
 **Important:** The groups feature in the {{site.data.keyword.iot_short_notm}} UI is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
