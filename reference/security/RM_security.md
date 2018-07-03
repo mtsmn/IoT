@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -20,11 +20,12 @@ You can enhance security to enable creating, enforcing, and reporting on device 
 ## Certificate Revocation Lists and client certificates
 {: #CRLs}
 
-Certificate Revocation Lists (CRLs) are supported for configurations that use client certificates to authenticate devices. The location that is specified as the CRL distribution point must support either HTTP or HTTPS access, and the site must be reachable. The client connection is rejected if the distribution point of the CRL cannot be reached, or if the CRL is not found at the distribution point.
+Certificate Revocation Lists (CRLs) are supported for configurations that use client certificates to authenticate devices. The location that is specified as the CRL distribution point must support either HTTP or HTTPS access, and the site must be reachable. The client connection is rejected if the distribution point of the CRL cannot be reached, or if the CRL is not valid or is not found at the distribution point. 
+ 
 
 Client certificates must be signed by certificate authority (CA) certificates that have "Certificate Sign" specified in the "X509v3 Key Usage" section in "X509v3 extensions". To use CRLs to revoke client certificates, the CA certificate that signs a client certificate must also include "CRL Sign" in the "X509v3 Key Usage" section in "X509v3 extensions". This configuration allows the CA certificate to issue and sign CRL updates when required. Only the CRL that is specified in the client certificate distribution point is used to determine whether a certificate has been revoked.
 
-Ensure that you test your certificates and CRLs, particularly if you choose to generate self-signed certificates and CRLs instead of using certificates from a recognized certificate authority.
+Ensure that you test your certificates and CRLs, particularly if you generate your own certificates and CRLs instead of using certificates from a recognized certificate authority.
 
 
 ## Configuring certificates
