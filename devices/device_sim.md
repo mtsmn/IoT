@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-05-07"
 ---
 
 ---
@@ -15,15 +15,13 @@ lastupdated: "2018-01-11"
 {:tip: .tip}
 
 
-# Simulating device data (Beta)
+# Simulating device data 
 {: #sim_device_data}
 
 By using the {{site.data.keyword.iot_full}} device simulator, you can set up simulated events for devices. You can use the simulated event data to learn about, test, and demonstrate fully functioning {{site.data.keyword.iot_short_notm}} features.
 {: shortdesc}
 
 You can use existing device types and devices and the simulator enables you to generate new devices for existing types. You can configure the event details for each device or set a default configuration that is applied to all devices. You can export a simulated event configuration so that it can be reused or shared to set up other simulations.
-
-**Important:** The {{site.data.keyword.iot_full}} device simulator feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 To simulate device data: 
 

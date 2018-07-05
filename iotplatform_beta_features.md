@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-05-31"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -24,7 +24,6 @@ Feature       | Documentation
 ------------- | -------------
 Drill-down reporting | [Drill-down reporting (Beta)](reference/security/RM_security.html#drill_down)
 IoT gateway package | [IoT gateway package (Beta)](gateways/iotgw.html#gw_package)
-Simulating device data | [Simulating device data (Beta)](devices/device_sim.html)
 Restoring deleted devices | [Restoring deleted devices (Beta)](iotplatform_task.html#restore_device)
 Embedded rules | [Creating embedded rules (Beta)](information_management/im_rules.html)
 Things | [Introduction to data mangement](GA_information_management/ga_im_device_twin.html#device_twins)
