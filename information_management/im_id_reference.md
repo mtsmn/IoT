@@ -64,7 +64,7 @@ Resource    | Property value | Identifier
 event schema | tempEventSchema | not applicable
 event schema file | tempEventSchema.json | 5846cee36522050001db0e0e 
 event type | tempEvent |5846d2846522050001db0e10
-event id | tevt | not applicable
+event id | tempevt | not applicable
 
 ### Physical interface properties for *TempSensor*
 
