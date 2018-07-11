@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-02-20"
+lastupdated: "2018-07-11"
 
 ---
 
@@ -12,13 +12,12 @@ lastupdated: "2018-02-20"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# IoT gateway package (Beta)
+# IoT gateway package 
 {: #gw_package}
 
 The {{site.data.keyword.iot_full}} IoT gateway package enables a gateway that is registered with {{site.data.keyword.iot_short_notm}} to send events to the platform for devices that are in the resource group that is associated with the gateway. 
 {:shortdesc}
 
-**Important:** The IoT gateway package is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Overview
 
@@ -85,4 +84,4 @@ Complete the following steps to deploy the package by using `installCatalog.sh`
 2. `cd openwhisk-package-watsoniotp/packages`
 3. `./installCatalog.sh AUTH APIHOST WSK_CLI`
 
-where *AUTH* is your authorization key, *APIHOST* is the OpenWhisk hostname, and *WSK_CLI* is the location of the Openwhisk CLI binary.
+where *AUTH* is your authorization key, *APIHOST* is the IBM Cloud Functions hostname, and *WSK_CLI* is the location of the IBM Cloud Functions CLI binary.
