@@ -72,6 +72,7 @@ Internet of Things Platform
         gateways/dashboard.md
         platform_authorization.md
         reference/security/connect_devices_apps_gw.md
+        reference/security/client_connect.md
         reference/security/cloud_iam.md
         reference/security/app_id.md
 
