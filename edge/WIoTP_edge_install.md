@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-11"
 
 ---
 
@@ -76,9 +76,7 @@ If more than one IP address is found in the device, you will be prompted to choo
 
 Make sure there are no error messages during execution.
 
-Wait a few seconds and check if one Horizon active “agreement” was created (No agreements means something might be wrong, chek the [troubleshooting section](#troubleshooting) section to collect logs).
-
-`hzn agreement list`
+Wait a few seconds and then verfiy that the Edge components were created.
 
 Check to see if the edge components images were created `docker images` (TAG versions may differ).
 
@@ -88,7 +86,6 @@ Check to see if the edge components images were created `docker images` (TAG ver
 # docker images
 REPOSITORY                                        TAG                 IMAGE ID            CREATED             SIZE
 wiotp-connect/edge/amd64/edge-connector           1.0.1               3d98b90aaa16        3 hours ago         31.7MB
-wiotp-connect/edge/amd64/edge-core-iot-workload   1.0.1               eed3b624eeb2        7 hours ago         3.97MB
 wiotp-infomgmt/edge/amd64/edge-simulated-im       1.0.3               6af448fb2204        7 hours ago         27.6MB
 wiotp-connect/edge/amd64/edge-mqttbroker          1.0.2               1973bc0f3d8a        7 hours ago         31.2MB
 ```
@@ -99,7 +96,6 @@ Example:
 ```
 # docker ps
 CONTAINER ID        IMAGE                                                   COMMAND             PORTS
-ebae877baac6        wiotp-connect/edge/amd64/edge-core-iot-workload:1.0.1   "/start.sh"
 7cbfc719cb71        wiotp-infomgmt/edge/amd64/edge-simulated-im:1.0.1       "/start.sh"
 a40f926f78f3        wiotp-connect/edge/amd64/edge-connector:1.0.0           "/start.sh"         0.0.0.0:1883->1883/tcp, 0.0.0.0:8883->8883/tcp
 22d8e82f09f3        wiotp-connect/edge/amd64/edge-mqttbroker:1.0.1          "/start.sh"
@@ -112,17 +108,13 @@ You can use mosquitto-clients to simulate devices connecting to your edge node:
 `apt-get install mosquitto-clients`
 
 Run the following command on your Edge node (replace OrgId, DeviceType, DeviceID, DeviceToken and EdgeNodeIP with the appropriate values).
-To find out which IP needs to be passed, check the messages displayed after running the `wiotp_agent_setup` command, underneath the `Generating Edge internal certificates` section.
+To find out which IP needs to be passed, check the messages displayed after running the `wiotp_agent_setup` command, underneath the `Generating Edge internal certificates` part.
 
-```
-mosquitto_pub -p 8883 -i 'd:<orgId>:<deviceType>:<deviceId>' -u 'use-token-auth' -P '<deviceToken>' -t 'iot-2/evt/evTest/fmt/json' -m '{"message": "Hello World"}' --cafile /var/wiotp-edge/persist/dc/ca/ca.pem -h <EdgeNodeIP>
-```
+```mosquitto_pub -p 8883 -i 'd:<orgId>:<deviceType>:<deviceId>' -u 'use-token-auth' -P '<deviceToken>' -t 'iot-2/evt/evTest/fmt/json' -m '{"message": "Hello World"}' --cafile /var/wiotp-edge/persist/dc/ca/ca.pem -h <EdgeNodeIP>```
 
 Example:
 
-```
-mosquitto_pub -p 8883 -i 'd:nwr48y:myDevice:device1' -u 'use-token-auth' -P '12345678' -t 'iot-2/evt/evTest/fmt/json' -m '{"message": "Hello World"}' --cafile /var/wiotp-edge/persist/dc/ca/ca.pem -h 10.0.2.15
-```
+```mosquitto_pub -p 8883 -i 'd:nwr48y:myDevice:device1' -u 'use-token-auth' -P '12345678' -t 'iot-2/evt/evTest/fmt/json' -m '{"message": "Hello World"}' --cafile /var/wiotp-edge/persist/dc/ca/ca.pem -h 10.0.2.15```
 
 Note: If you are running mosquitto_pub outside the edge node use the -h `<host>` option and adjust the  --cafile path.
 
