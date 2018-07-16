@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-04-12"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -19,6 +19,10 @@ lastupdated: "2018-04-12"
 {{site.data.keyword.iot_full}} APIs support the authentication and authorization of users by using Identity and Access Management (IAM).
 
 **Important:** The Cloud IAM Authentication and Authorization for {{site.data.keyword.iot_short_notm}} feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+
+Cloud IAM is built into the IBM Cloud and is used for authenticating and authorizing administrative and developer users that need to configure and manage their IBM services. Users needing access to the Watson IoT Platform UI are authenticated with IBM Cloud IAM. The source of identity for Cloud IAM can be registered IBM ID users or it can be a customer’s directory service that supports SAML.  
+
+{{site.data.keyword.iot_short_notm}} also supports authenticating users through App ID. App ID is used for authenticating users who need access to applications that are hosted in the IBM Cloud. App ID users do not typically perform administrative or development activities on a cloud service. For more information, see [App ID Authentication for Watson IoT Platform](app_id.html#app_id).
 
 IAM enables users to obtain an IAM OAuth token and use it to authenticate API calls. For example, a user with the {{site.data.keyword.containershort_notm}} CLI installed might use the following command:
 
