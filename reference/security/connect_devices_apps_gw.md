@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -61,45 +61,36 @@ When you use secure MQTT messaging on ports 8883 or 443, newer client libraries 
 
 Some Transport Layer Security (TLS) client libraries do not support domains that include a wildcard. If you cannot successfully change libraries, disable certificate checking.
 
-Your TLS requirements depend on whether you are connecting to {{site.data.keyword.iot_short_notm}} with the MQTT or HTTP protocol. The following sections show the cipher suites that are supported if the default server certificate is used. If you are using your own client
-certificate, the cipher suites that are supported depend on the certificate that is used.
+Your TLS requirements depend on whether you are connecting to {{site.data.keyword.iot_short_notm}} with the MQTT or HTTP protocol. The following sections show the cipher suites that are supported if the default server certificate is used. If you are using your own client certificate, the cipher suites that are supported depend on the certificate that is used.
 
 ### TLS requirements for MQTT connections
 
-{{site.data.keyword.iot_short_notm}} requires TLS v1.2 and the following cipher suites:
+{{site.data.keyword.iot_short_notm}} requires TLS v1.1 or TLS v1.2. Ensure that at least one of the following cipher suites is allowed: 
 
-
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
-- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
-- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
 - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
 
 ### TLS requirements for HTTP connections
 
-If you are using the default server certificate, {{site.data.keyword.iot_short_notm}} requires TLS v1.1 or TLS v1.2 and the following cipher suites:
+If you are using the default server certificate, {{site.data.keyword.iot_short_notm}} requires TLS v1.1 or TLS v1.2. Ensure that at least one of the following cipher suites is allowed: 
 
 
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
 - TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
+- TLS_RSA_WITH_AES_128_CBC_SHA
 
+Increase the strength of your encryption by using the forward secrecy ciphers ECDHE or DHE in your cipher list. 
 
 ## MQTT client authentication
 {: #mqtt_authentication}
@@ -135,6 +126,8 @@ The *appId*, *type_id*, *device_type*, and *device_id* values must be no more th
 **Notes:**
 - When you connect to the Quickstart service, authentication is not required.
 - You do not need to register an application before you connect.
+
+For information about the format of shared subscriptions, see [MQTT connectivity for applications](../../applications/mqtt.html).
 
 
 ### Connecting applications by using MQTT
