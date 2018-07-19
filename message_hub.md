@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,6 +18,8 @@ lastupdated: "2018-05-22"
 Connecting {{site.data.keyword.messagehub_full}} to {{site.data.keyword.iot_full}} provides a scalable, high-throughput message bus for historical data storage. {{site.data.keyword.messagehub}} is built on Apache Kafka, which is an open-source, high-throughput messaging system that provides a low-latency platform for handling real-time data feeds.
 
 MessageHub forwarding partitions events by using a partition key. The key is formed by concatenating the {{site.data.keyword.iot_short}} 6 character organization ID with the device type and device ID. Payload fields, including timestamp and event ID, are not used to form the partition key. This configuration ensures that all events from a specific device are sent to the same partition, so that the events are processed in the order in which they are sent. 
+
+The quality of service (QoS) that is used by an MQTT device to send messages to {{site.data.keyword.iot_short_notm}} does not apply when messages are sent from {{site.data.keyword.iot_short_notm}} to {{site.data.keyword.messagehub}}. Typically, a message is sent to {{site.data.keyword.messagehub}} once. Rarely, it might be possible for a message to be sent more than once or not at all.
 
 ## Before you begin  
 {: #byb}
