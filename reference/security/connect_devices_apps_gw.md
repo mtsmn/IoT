@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-18"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Connecting applications, devices, and gateways using the API
+# Connecting applications, devices, and gateways
 {: #connect_devices_apps_gw}
 
 You can connect applications, devices, and gateways to {{site.data.keyword.iot_full}} through the MQTT protocol. You can also use the HTTP REST API to connect devices to {{site.data.keyword.iot_short_notm}}.
@@ -65,7 +65,7 @@ Your TLS requirements depend on whether you are connecting to {{site.data.keywor
 
 ### TLS requirements for MQTT connections
 
-{{site.data.keyword.iot_short_notm}} requires TLS v1.1 or TLS v1.2. Ensure that at least one of the following cipher suites is allowed: 
+{{site.data.keyword.iot_short_notm}} requires TLS v1.2. Ensure that at least one of the following cipher suites is allowed: 
 
 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
@@ -80,7 +80,7 @@ Your TLS requirements depend on whether you are connecting to {{site.data.keywor
 
 ### TLS requirements for HTTP connections
 
-If you are using the default server certificate, {{site.data.keyword.iot_short_notm}} requires TLS v1.1 or TLS v1.2. Ensure that at least one of the following cipher suites is allowed: 
+If you are using the default server certificate, {{site.data.keyword.iot_short_notm}} requires TLS v1.2. Ensure that at least one of the following cipher suites is allowed: 
 
 
 - TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
