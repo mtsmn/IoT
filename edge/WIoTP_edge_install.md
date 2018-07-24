@@ -60,7 +60,7 @@ deb-src [arch=armhf] http://pkg.bluehorizon.network/linux/raspbian jessie-update
 
 `apt-get update && apt-get install -y horizon-wiotp`
 
-## Registring your Edge node
+## Registering your Edge node
 
 Run the agent setup:
 
