@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -39,8 +39,9 @@ You can add devices one at a time from the {{site.data.keyword.iot_short_notm}} 
 
 To add a device from the {{site.data.keyword.iot_short_notm}} dashboard:
 
-1. Click the {{site.data.keyword.iot_short_notm}} service tile in your {{site.data.keyword.Bluemix}} dashboard.
-
+1. On the IBM Cloud console, select **IoT** from the menu and click the {{site.data.keyword.iot_short_notm}} link.  
+2. Log in or click **Sign up to Create**.  
+3. On the {{site.data.keyword.iot_short_notm}} page, choose a region, organization and space and click **Create**.  
 2. On the service page, click **Launch** to start administering your {{site.data.keyword.iot_short_notm}} organization.
 
   The {{site.data.keyword.iot_short_notm}} web console opens in a new browser tab at the following URL:
