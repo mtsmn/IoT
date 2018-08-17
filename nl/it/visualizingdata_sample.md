@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017
+  years: 2016, 2018
 lastupdated: "2017-03-20"
 
 ---
@@ -26,7 +26,7 @@ Prima di poter visualizzare i tuoi dati, devi eseguire le seguenti azioni:
 - Registra i tuoi dispositivi nella tua organizzazione {{site.data.keyword.iot_short_notm}}.
 - Assicurati che i tuoi dispositivi stiano inviando eventi a {{site.data.keyword.iot_short_notm}}.
 - [Scarica l'esempio di visualizzazione](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip) dal repository github ed estrai il file .zip.
-- [Installa lo strumento di riga di comando cf](../../starters/install_cli.html) da {{site.data.keyword.Bluemix_notm}}.
+- [Installa lo strumento di riga di comando cf](https://console.bluemix.net/docs/starters/install_cli.html) da {{site.data.keyword.Bluemix_notm}}.
 
 ## Esecuzione dell'esempio in {{site.data.keyword.Bluemix_notm}}
 {: #running_sample}
@@ -34,7 +34,7 @@ Prima di poter visualizzare i tuoi dati, devi eseguire le seguenti azioni:
 1. Crea un'applicazione in {{site.data.keyword.Bluemix_notm}} utilizzando la SDK Node.js. Prendi nota del nome e del nome host dell'applicazione, queste informazioni sono necessarie al caricamento dell'applicazione in {{site.data.keyword.Bluemix_notm}}.
 2. Esegui il bind dell'applicazione node.JS alla tua istanza {{site.data.keyword.iot_short_notm}} nel tuo dashboard {{site.data.keyword.Bluemix_notm}} completando i seguenti passi:
 
-  a. Nel tuo dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'applicazione Node.JS che hai creato. 
+  a. Nel tuo dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'applicazione Node.JS che hai creato.
 
   b. Fai clic su **Bind a service or API** e quindi seleziona il tuo servizio {{site.data.keyword.iot_short_notm}} e fai clic su **Add**.
 3. Utilizzando lo strumento di riga di comando cf, modifica la tua directory in quella del pacchetto di esempio di visualizzazione estratto ed esegui il seguente comando per il collegamento a {{site.data.keyword.Bluemix_notm}}.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2017-12-08"
 
 ---
 
@@ -33,11 +33,10 @@ Per creare una nuova coppia di chiave API e token di autenticazione:
 4.	Fai clic su **Finish**.
 
 
-
-## Connessione bind Bluemix
+## Connessione bind IBM Cloud
 {: #bluemix-binding}
 Puoi eseguire il bind delle applicazioni alla tua organizzazione {{site.data.keyword.iot_short_notm}} da {{site.data.keyword.Bluemix_notm}}. Eseguendo il bind dell'applicazione, è possibile soltanto comunicare con le istanze del servizio nello stesso spazio o organizzazione. Puoi trovare tutti i dati necessari perché l'applicazione comunichi con l'istanza del servizio nella variabile di ambiente VCAP_SERVICES. Se la tua applicazione è associata a più servizi, la variabile VCAP_SERVICES include le informazioni di connessione per ciascuna istanza di servizio.  
 
-Tuttavia, puoi utilizzare le istanze del servizio da altri spazi o organizzazioni nello stesso modo di un'applicazione esterna. Invece di creare un bind, utilizza le credenziali per configurare direttamente la tua istanza dell'applicazione. Per ulteriori informazioni, consulta [Richiesta di una nuova istanza del servizio](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) nella documentazione {{site.data.keyword.Bluemix_notm}}.
+Tuttavia, puoi utilizzare le istanze del servizio da altri spazi o organizzazioni nello stesso modo di un'applicazione esterna. Invece di creare un bind, utilizza le credenziali per configurare direttamente la tua istanza dell'applicazione. Per ulteriori informazioni, consulta [Richiesta di una nuova istanza del servizio](https://console.{DomainName}/docs/manageapps/reqnsi.html#req_instance) nella documentazione {{site.data.keyword.Bluemix_notm}}.
 
-Per visualizzare i dettagli delle applicazioni Bluemix associate all'istanza del servizio Bluemix associata alla tua organizzazione, vai a **Apps > Bluemix Apps**.  
+Per visualizzare i dettagli delle applicazioni {{site.data.keyword.Bluemix_notm}} associate all'istanza del servizio {{site.data.keyword.Bluemix_notm}} associata alla tua organizzazione, vai a **Apps > IBM Cloud Apps**.  

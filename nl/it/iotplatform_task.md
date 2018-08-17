@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-02"
+  years: 2016, 2018
+lastupdated: "2018-03-15"
 
 ---
 
@@ -132,7 +132,7 @@ Questa combinazione di parametri identifica univocamente il tuo dispositivo.
 - Nome utente: use-token-auth  
 Questo valore indica che stai utilizzando l'autorizzazione token.
 - Password: *Token di autenticazione*  
-Questo valore è il token univoco che hai definito o che è stato assegnato al tuo dispositivo quando lo hai registrato. 
+Questo valore è il token univoco che hai definito o che è stato assegnato al tuo dispositivo quando lo hai registrato.
 - Formato argomento dell'evento: iot-2/evt/*event_id*/fmt/*format_string*  
  Dove *event_id* specifica il nome dell'evento visualizzato in {{site.data.keyword.iot_short_notm}} e *format_string* è il formato dell'evento, come ad esempio JSON.
 - Formato messaggio: JSON  
@@ -141,6 +141,31 @@ Questo valore è il token univoco che hai definito o che è stato assegnato al t
 Per ulteriori informazioni sulla connessione del tuo dispositivo, consulta [Connettività MQTT per i dispositivi](devices/mqtt.html) nella documentazione tecnica.
 
 La documentazione API [Organization Administration ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} contiene inoltre le informazioni richieste.
+
+## Ripristino dei dispositivi eliminati (Beta) 
+{: #restore_device}
+
+**Importante:** la funzione del ripristino dei dispositivi {{site.data.keyword.iot_short_notm}} è disponibile solo come parte di un programma beta limitato. Futuri aggiornamenti possono includere modifiche incompatibili con la versione corrente di questa funzione. Provala e [facci sapere cosa ne pensi ![Icona link esterno](../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+
+Se un dispositivo viene eliminato per errore, puoi ripristinarlo entro 14 giorni.  
+
+Quando il dispositivo viene eliminato, viene creato un dispositivo “memento”. Il memento è una copia del documento del dispositivo ed è disponibile per 14 giorni, dopodiché viene eliminato. 
+
+La seguente API di ripristino di un dispositivo ti abilita ad utilizzare il memento per ripristinare una versione precedente del dispositivo:
+
+    POST /archive/device/types/{typeId}/devices/{deviceId}/restore
+
+
+Puoi utilizzare la seguente API per richiamare un elenco di tutti i memento del dispositivo: 
+
+    GET /archive/device/types/{typeId}/devices/{deviceId}
+
+Per ulteriori informazioni sulle API di ripristino del dispositivo, consulta [Restore Devices APIs Beta ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html).
+
+## Ricollegamento dei dispositivi
+
+I dispositivi potrebbero scollegarsi da {{site.data.keyword.iot_short_notm}} a causa di un problema di rete o della manutenzione di routine sul servizio o sull'infrastruttura. Quando il dispositivo o i dispositivi si ricollegano, potresti desiderare di minimizzare la quantità di traffico di rete generata durante una riconnessione o di introdurre un ritardo per ridurre il numero di riconnessioni simultanee. 
+
 
 ## Ricette sulla connessione dei dispositivi
 

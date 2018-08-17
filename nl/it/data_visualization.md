@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-08"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,8 +16,17 @@ lastupdated: "2017-05-08"
 # Visualizzazione dei dati in tempo reale utilizzando le tabelle e le schede
 {: #boards_and_cards}
 
+
+**Importante:** stiamo facendo partire una beta per definire in un nuovo modo le regole nei tuoi dati del dispositivo IoT come parte
+di un programma di modifiche più grande per migliorare il modo in cui {{site.data.keyword.iot_full}} fornisce le regole e le azioni.
+
+Per ulteriori informazioni, controlla il post del blog [An alternative approach to defining Rules on IoT data ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Per iniziare a definire le tue regole, consulta la documentazione [Creazione delle regole integrate (Beta)](information_management/im_rules.html).
+
+## Informazioni sulle tabelle e sulle schede 
+
 Crea le tabelle e le schede per creare e condividere i tuoi propri dashboard che visualizzano i tuoi dati del dispositivo in tempo reale.
-{:shortdesc}
 
 Utilizzando le schede e le tabelle, puoi visualizzare i valori dei dataset graficamente da uno o più dispositivi per avere una veloce panoramica e una migliore comprensione dei dati. Crea tabelle e aggiungi schede che visualizzano i dati come numeri non elaborati, grafici in tempo reale, misuratori e altro. Aggiungi membri alle tue tabelle per condividerle con altri utenti nella tua organizzazione. Ordina le schede e aggiungi divisori di testo esplicativi per ottimizzare la tua presentazione.  
 
@@ -27,7 +36,7 @@ Puoi anche espandere la serie predefinita di schede [creando le tue proprie sche
 
 ## Tabelle predefinite
 {: #default_boards}
-Il dashboard {{site.data.keyword.iot_full}} dispone delle seguenti tabelle predefinite:
+Il dashboard {{site.data.keyword.iot_short_notm}} dispone delle seguenti tabelle predefinite:
 
 |Nome tabella | Descrizione | Schede incluse
 |:---|:---|:---|  

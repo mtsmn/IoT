@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-02-23"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -28,7 +28,8 @@ Ruolo utente | Descrizione
 ------------- | -------------
 Amministratore | Un ruolo 'super-utente' che concede l'accesso a tutte le API correlate all'utente. Gli amministratori non possono accedere alle operazioni limitate ai dispositivi e alle applicazioni.
 Operatore | Destinato agli utenti dell'organizzazione di front-end. Concede l'accesso alla maggior parte delle operazioni dell'organizzazione, alle operazioni di controllo dell'accesso, di terze parti e di gestione del rischio.
-Sviluppatore | Concede accesso illimitato alle operazioni del dispositivo, di log, di cache, storiche e dei servizi di terze parti. Il ruolo fornisce l'accesso all'organizzazione, al controllo dell'accesso e alle operazioni di gestione del rischio.
+Sviluppatore | Concede accesso illimitato alle operazioni del dispositivo, di log, di cache, storiche, di analisi e dei servizi di terze parti. Il ruolo fornisce l'accesso all'organizzazione, al controllo dell'accesso e alle operazioni di gestione del rischio.
+Analista | Concede accesso alle operazioni di analisi, inclusi la creazione, l'aggiornamento e l'eliminazione di regole, azioni e schemi.
 Lettore | Il ruolo utente predefinito. Concede accesso limitato alle operazioni disponibili a tutti gli utenti.
 
 Per ulteriori informazioni sui ruoli utente, vedi [Ruoli utente](reference/roles_access.html).
@@ -49,7 +50,7 @@ Ruolo Applicazione | Descrizione
 Standard | Il ruolo applicazione predefinito. Concede l'accesso alla maggior parte delle operazioni dell'applicazione ma non alle operazioni ruolo o utente.   
 Operazioni | Concede l'accesso ad un'ampia gamma di operazioni, ma nega l'accesso alle operazioni di sottoscrizione o di pubblicazione.
 Backend attendibile | Pensato per le applicazioni che non richiedono interazione con l'operatore dei sistemi. Nega l'accesso alle operazioni di gestione, organizzazione, ruolo o di estensione.
-Processore dati | Pensato per le applicazioni che eseguono elaborazione dati e analisi. Le applicazioni del processore dati hanno accesso limitato alle operazioni di organizzazione e utente. 
+Processore dati | Pensato per le applicazioni che eseguono elaborazione dati e analisi. Le applicazioni del processore dati hanno accesso limitato alle operazioni di organizzazione e utente, ma hanno accesso completo alle operazioni di analisi inclusi la creazione e la gestione di regole, azioni e schemi.
 Visualizzazione | Pensato per le applicazioni che sono responsabili della generazione delle visualizzazioni dei dati. Le applicazioni di visualizzazione hanno accesso alle operazioni dai dati archiviati o live e alle operazioni dashboard.
 Dispositivo | Pensate per le applicazioni che hanno il ruolo di dispositivi; cioè, forniscono un'origine dei dati che viene inviata a {{site.data.keyword.iot_short_notm}} come se fosse un dispositivo. Le applicazioni dispositivo hanno soltanto un accesso limitato alle operazioni.
 

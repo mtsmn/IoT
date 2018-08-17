@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-02-22"
+lastupdated: "2017-11-21"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-02-22"
 # Informazioni su {{site.data.keyword.iot_short_notm}}
 {: #about_iotplatform}
 
-{{site.data.keyword.iot_full}} fornisce l'accesso all'applicazione potente per i dati e i dispositivi IoT per aiutarti a comporre rapidamente le applicazioni di analisi e le applicazioni IoT mobili.
+{{site.data.keyword.iot_full}} fornisce l'accesso all'applicazione potente per i dati e i dispositivi IoT per aiutarti a comporre rapidamente le applicazioni di analisi, i dashboard di visualizzazione e le applicazioni IoT mobili.
 {:shortdesc}
 
 {{site.data.keyword.iot_short_notm}} ti consente di eseguire operazioni di gestione del dispositivo potenti e di archiviare e accedere ai dati del dispositivo, collegare una grande varietà di dispositivi e di dispositivi gateway. {{site.data.keyword.iot_short_notm}} fornisce la comunicazione sicura da e per i tuoi dispositivi utilizzando MQTT e TLS.
@@ -24,7 +24,7 @@ lastupdated: "2018-02-22"
 {: #watsoniotplatform_architecture}
 ![Architettura IBM Watson IoT Platform](images/architecture_platform_2.svg "Architettura Watson IoT Platform")
 
-<!--**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  -->
+**Importante:** le funzioni di analisi vengono unite dal servizio {{site.data.keyword.iotrtinsights_full}} Se la tua organizzazione {{site.data.keyword.iot_short_notm}} viene utilizzata come origine dati per un'istanza {{site.data.keyword.iotrtinsights_short}} esistente, Analytics non è abilitato finché non siano state migrate le istanze {{site.data.keyword.iotrtinsights_short}} esistenti. Continuare ad utilizzare il dashboard {{site.data.keyword.iotrtinsights_short}} per le tue analisi finché non viene completata la migrazione. Per ulteriori informazioni, consulta il blog [IBM Watson IoT Platform blog ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks e i tuoi dashboard dell'istanza {{site.data.keyword.iotrtinsights_short}} esistenti.  
 
 {{site.data.keyword.iot_short_notm}} comunica con le tue applicazioni e dispositivi utilizzando l'API {{site.data.keyword.iot_short_notm}} e il protocollo di messaggistica {{site.data.keyword.iot_short_notm}}. Il dashboard {{site.data.keyword.iot_short_notm}} si collega a un'interfaccia utente di front-end per semplificare le operazioni nella piattaforma. I dati del dispositivo possono essere archiviati o utilizzati con le soluzioni di analisi.
 

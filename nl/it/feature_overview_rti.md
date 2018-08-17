@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-05-08"
 
   1. Connect - Connessione dei dispositivi e sviluppo delle applicazioni
   2. Information Management - Archiviare, normalizzare, trasformare e controllare i dati del dispositivo e integrare il tuo {{site.data.keyword.iot_short_notm}} con altri servizi.
-  3. Analytics - Specificare le condizioni della regola basate sui dati del dispositivo in tempo reale per attivare gli avvisi e le azioni.
+  3. Analytics - Visualizzare i dati del dispositivo in tempo reale utilizzando il dashboard {{site.data.keyword.iot_short_notm}}.
   4. Risk Management - Configurare l'architettura e la connettività sicure con il controllo dell'accesso per gli utenti e le applicazioni.
 
 ## Collegamento
@@ -37,7 +37,8 @@ Le funzioni di gestione del dispositivo sono fornite tramite un'API di gestione 
 
 ### Estensioni e integrazioni del servizio
 
-Le estensioni e le integrazioni del servizio permettono ai servizi esterni e alle estensioni definite dall'utente dei servizi core di essere aggiunti a un'istanza di {{site.data.keyword.iot_short_notm}}. I servizi esterni che possono essere integrati con {{site.data.keyword.iot_short_notm}} includono i servizi di rilevamento meteo della Weather Company che ti consentono di trovare il meteo corrente per un'ubicazione del dispositivo e i dati SIM Jasper. Per ulteriori informazioni sulle estensioni e le integrazioni dei servizi di terze parti, consulta [integrazione di servizi esterni](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
+Le estensioni e le integrazioni del servizio permettono ai servizi esterni e alle estensioni definite dall'utente dei servizi core di essere aggiunti a un'istanza di {{site.data.keyword.iot_short_notm}}. I servizi esterni che possono essere integrati con {{site.data.keyword.iot_short_notm}} includono i servizi di rilevamento meteo della Weather Company, i dati SIM Jasper e {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. Per ulteriori informazioni sulle estensioni e le integrazioni dei servizi di terze parti, consulta [integrazione di servizi esterni](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
+
 
 ---
 
@@ -61,9 +62,12 @@ Diverse marche e modelli di dispositivi pubblicano i dati in formati diversi. La
 Per ulteriori informazioni sull'utilizzo di questa funzione, consulta [Introduzione alla gestione dei dati](GA_information_management/ga_im_device_twin.html).
 
 ---
-
 ## Analytics
 {: #analytics}
+
+### Visualizzare i dati del dispositivo in tempo reale
+
+Puoi visualizzare i dati del dispositivo in tempo reale utilizzando le schede del dashboard. Le schede del dashboard monitorano e visualizzano i dati del dispositivo in tempo reale, il che ti consente di tenere traccia dei dispositivi chiave e dei dati del dispositivo. Queste visualizzazioni vengono mostrate nel dashboard {{site.data.keyword.iot_short_notm}} principale per fornirti un rapido accesso al contesto e allo stato dei dati del dispositivo in tempo reale. Per ulteriori informazioni, consulta [visualizzazione dei dati in tempo reale](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
 
 ### Analisi cloud e edge
 

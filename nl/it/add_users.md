@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-07-19"
+  years: 2016, 2018
+lastupdated: "2018-03-14"
 
 ---
 
@@ -21,7 +21,7 @@ Dal dashboard dei membri, puoi controllare e gestire l'accesso alla tua organizz
 ## Aggiunta di utenti
 {: #adding-new-users}
 
-Dalla scheda **Members** del dashboard, puoi aggiungere singoli membri utilizzando le <!--Add, Invite, or Register--> funzioni di aggiunta o invito. Puoi anche <!--add, invite, or register-->aggiungere o invitare più membri contemporaneamente utilizzando la funzione di importazione.
+Dalla scheda **Members** del dashboard, puoi aggiungere singoli membri utilizzando la funzione di aggiunta. Puoi anche aggiungere membri contemporaneamente utilizzando la funzione di importazione. 
 
 Per impostazione predefinita, gli account dei membri non scadono. Quando aggiungi utenti alla tua organizzazione {{site.data.keyword.iot_short_notm}}, puoi facoltativamente impostare una data di scadenza per i relativi account.
 
@@ -46,31 +46,31 @@ Per aggiungere più membri contemporaneamente, devi caricare un file `.csv` che 
 6. Seleziona il separatore di colonna punto e virgola o virgola che corrisponde al separatore utilizzato nel tuo file `.csv`.
 7. Fai clic su **Import** per importare gli ID IBM e creare i membri.
 
+<!--
+### Inviting members to your {{site.data.keyword.iot_short_notm}} organization
 
-### Invito di membri alla tua organizzazione {{site.data.keyword.iot_short_notm}}
+When you invite a user to become a member of your {{site.data.keyword.iot_short_notm}} organization, the user receives an email that contains an invitation link. Invitation links expire 48 hours after they are sent. If an invitation link is not used within 48 hours, the user must be invited again to receive a new invitation link.
 
-Quando inviti un utente a diventare membro della tua organizzazione {{site.data.keyword.iot_short_notm}}, l'utente riceve un'email che contiene un link di invito. I link di invito scadono 48 ore dopo l'invio. Se un link di invito non viene utilizzato entro 48 ore, l'utente deve essere nuovamente invitato per ricevere un nuovo link di invito.
+**Important:** The invite feature requires a configured mail service. For more information, see the Email section of the [External service integrations](reference/extensions/index.html#email) topic.
 
-**Importante:** la funzione di invito richiede un servizio di posta configurato. Per ulteriori informazioni, consulta la sezione Email dell'argomento [Integrazioni del servizio esterno](reference/extensions/index.html#email).
+To invite a member to your {{site.data.keyword.iot_short_notm}} organization:
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Members**.
+2. Select the **Invitations** tab.
+2. Click **Invite Members** and select the **Invite** tab.
+3. Enter the email address of the member.
+4. Select a role for this member.
+5. Optional: Set an expiry date for the member.
+6. Click **Invite Member**.
 
-Per invitare un membro nella tua organizzazione {{site.data.keyword.iot_short_notm}}:
-1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Members**.
-2. Seleziona la scheda **Invitations**.
-2. Fai clic su **Invite Members** e seleziona la scheda **Invite**.
-3. Immetti l'indirizzo email del membro.
-4. Seleziona un ruolo per questo membro.
-5. Facoltativo: imposta una data di scadenza per il membro.
-6. Fai clic su **Invite Member**.
-
-Per invitare più membri contemporaneamente, devi caricare un file `.csv` che contiene l'indirizzo email, il ruolo e facoltativamente la data di scadenza di ogni membro. Per informazioni, consulta [Messa a punto del tuo file CSV](#constructing-your-csv).
-1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Members**.
-2. Seleziona la scheda **Invitations**.
-2. Fai clic su **Invite Members** e seleziona la scheda **Import**.
-3. Fai clic sui tuoi file o trascina il file `.csv` nella finestra **Upload CSV**.
-4. Seleziona un ruolo predefinito da utilizzare se non viene riconosciuto un ruolo specificato nel file CSV.
-5. Associa i numeri di colonna nel tuo file CSV all'indirizzo email, al ruolo e (facoltativo) alle voci della data di scadenza corrispondenti.
-6. Seleziona il separatore di colonna punto e virgola o virgola che corrisponde al separatore utilizzato nel tuo file `.csv`.
-7. Fai clic su **Import** per inviare gli inviti.
+To invite multiple members simultaneously, you must upload a `.csv` file that contains the email address, role and the optional expiry date of each member. For information, see [Constructing your CSV file](#constructing-your-csv).
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Members**.
+2. Select the **Invitations** tab.
+2. Click **Invite Members** and select the **Import** tab.
+3. Browse your files or drag the `.csv` file into the **Upload CSV** window.
+4. Select a default role to use if a role specified in the CSV file is not recognized.
+5. Map the column numbers in your CSV file to the corresponding email address, role, and (optional) expiry date entries.
+6. Select the appropriate comma or semicolon column separator to match the separator used in your `.csv` file.
+7. Click **Import** to send out the invitations. -->
 
 <!-- ### Registering a member with your {{site.data.keyword.iot_short_notm}} organization
 
@@ -103,11 +103,10 @@ Quando metti a punto un file CSV per importare i membri nella tua organizzazione
 
 File CSV di esempio con la delimitazione con virgola:  
 ```
-user1@sample.com,PD_DEVELOPER_USER,1489505652152
-user2@sample.com,PD_OPERATOR_USER,1489505652152
-user3@sample.com,PD_ADMIN_USER,1489505652152
+user1@sample.com,PD_DEVELOPER_USER,2018-03-13
+user2@sample.com,PD_OPERATOR_USER,2018-03-13
+user3@sample.com,PD_ADMIN_USER,2018-03-13
 ```
-
 Dove vengono utilizzate le seguenti voci di colonna:  
 - Colonna 1: l'indirizzo email dell'utente.  
 Se stai aggiungendo dei membri, assicurati di utilizzare l'indirizzo email corrispondente a un ID IBM valido. Se stai invitando i membri, puoi utilizzare qualsiasi indirizzo email valido.
@@ -119,7 +118,7 @@ Immetti uno dei seguenti ruoli:
  - PD_ANALYST_USER
  - PD_READER_USER  
  Per ulteriori informazioni sui ruoli utente, vedi [Ruoli utente, applicazione e gateway](roles_index.html#user_roles).
-- Colonna 3: la data/ora Unix (in millisecondi dal 1 gennaio 1970 00:00 UTC) che corrisponde alla data di scadenza dell'utente.
+- Colonna 3: la data ISO 6801 (ad esempio, `2018-03-13`) che corrisponde alla data di scadenza dell'utente.
 
 ## Modifica degli utenti
 {: #editing-users}
@@ -139,7 +138,7 @@ Gli utenti possono essere bloccati dall'accedere all'organizzazione {{site.data.
 1. Dal tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Members** dalla barra di navigazione sulla sinistra.
 2. Fai clic sull'attivazione accanto all'utente che desideri bloccare dall'accedere all'organizzazione {{site.data.keyword.iot_short_notm}}.
 
-## Limitazione dell'accesso utente (Beta)
+## Limitazione dell'accesso utente 
 {: #limiting-users}
 
 Il controllo dell'accesso al livello della risorsa ti permette di limitare l'accesso ai dispositivi in un'organizzazione. Puoi utilizzare i gruppi di risorse per specificare i dispositivi che ogni utente o chiave API possono gestire. Per informazioni su come configurare il controllo dell'accesso al livello della risorsa, consulta [Configurazione del controllo dell'accesso al livello della risorsa](reference/rlac.html#configure_RLAC).

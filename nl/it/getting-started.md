@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-06-01"
+  years: 2016, 2018
+lastupdated: "2018-02-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-06-01"
 # Esercitazione introduttiva
 {: #getting-started-with-iotp}
 
-In questa esercitazione di introduzione a {{site.data.keyword.iot_full}}, connettiamo un dispositivo IoT a {{site.data.keyword.iot_short_notm}} e configuriamo l'analisi per esplorare i dati in tempo reale.
+In questa esercitazione di introduzione a {{site.data.keyword.iot_full}}, connettiamo un dispositivo IoT a {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
 <div id="prerequisites"></div>
@@ -24,7 +24,7 @@ In questa esercitazione di introduzione a {{site.data.keyword.iot_full}}, connet
 ## Prima di cominciare
 {: #prereqs}
 
-Ti servirà un [account Bluemix ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/registration/){: new_window},
+Ti servirà un [account IBM Cloud ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/registration/){: new_window},
 una istanza del servizio {{site.data.keyword.iot_short_notm}} e un dispositivo che soddisfa i seguenti requisiti:
 
 *	Il tuo dispositivo deve essere in grado di comunicare utilizzando i protocolli HTTP o MQTT.
@@ -35,7 +35,7 @@ Per ulteriori informazioni, consulta [Sviluppo dei dispositivi su Watson IoT Pla
 
 ## Passo 1: registra il tuo dispositivo
 
-Puoi aggiungere i dispositivi uno per volta dal dashboard {{site.data.keyword.iot_short_notm}} oppure puoi utilizzare la [API Watson IoT Platform ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} per aggiungere più dispositivi.
+Puoi aggiungere i dispositivi uno per volta dal [dashboard {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://internetofthings.ibmcloud.com){: new_window} o puoi utilizzare l'API [Watson IoT Platform ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} per aggiungere più dispositivi.
 
 Per aggiungere un dispositivo dal dashboard {{site.data.keyword.iot_short_notm}}:
 
@@ -120,111 +120,110 @@ Per aggiungere un dispositivo dal dashboard {{site.data.keyword.iot_short_notm}}
 
   Per ulteriori informazioni, consulta [Connettività MQTT per i dispositivi](/docs/services/IoT/devices/mqtt.html).
 
-## Passo 3: crea tabelle e schede per tenere traccia dei dati dispositivo
+<!--## Step 3: Create boards and cards to keep track of device data
 
-Utilizzando tabelle e schede, puoi visualizzare dei grafici che rappresentano i valori dei dataset da uno o più dispositivi per una rapida panoramica e comprensione dei dati del dispositivo.
+By using boards and cards, you can view graphics that represent data set values from one or more devices for a quick overview and understanding of the device data.
 
-1. Nel tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Create New Board**.
+1. In your {{site.data.keyword.iot_short_notm}} dashboard, click **Create New Board**.
 
-2. Immetti un nome e una descrizione per la tabella.
+2. Enter a name and description for the board.
 
-3. Fai clic su **Next** e quindi su **Create**.
+3. Click **Next** and then **Create**.
 
-4. Fai clic sulla tabella che hai appena creato e fai quindi clic su **Add New Card**. Seleziona Devices come tipo di scheda. La seguente tabella descrive le opzioni di visualizzazione da cui puoi scegliere.
+4. Click the board you just created, and then click **Add New Card**. Select Devices as the card type. The following table describes the visualization options you can choose from.
 
-| Tipo | Dati visualizzati |
-|---------------|---------------|
-| Visualizzazione generica | Il valore di uno o più dataset. Scegli la dimensione del widget grande per visualizzare fino a tre valori di punto dati in una piccola tabella. |
-| Grafico a linee | Uno o più dataset in un grafico a scorrimento in tempo reale. Utilizza il menu delle impostazioni per impostare l'intervallo e la conservazione dei dati, l'aspetto dei grafici e altro. |
-| Grafico a barre | Valori dei dataset nelle barre etichettate. Utilizza il menu delle impostazioni per cambiare la direzione della barra, verticale o orizzontale. |
-| Grafico ad anello | Due o più dataset in una rappresentazione circolare. |
-| Valore | Il valore non elaborato di uno o più dataset. |
-| Misuratore | Il valore del dataset visualizzato come un misuratore. Utilizza il menu delle impostazioni per facoltativamente impostare le soglie del misuratore per gli intervalli di dati inferiore, medio e superiore. |
-| Proprietà del dispositivo | Proprietà specifiche per uno o più dispositivi. |
-| Tutte le proprietà del dispositivo | Tutte le proprietà per uno o più dispositivi. |
-| Elenco dispositivi | Un elenco per monitorare più dispositivi. Un elenco può essere utilizzato come un'origine dati per altre schede. |
-| Informazioni dispositivo | Informazioni di base per un solo dispositivo. |
-| Associazione dispositivo | L'ubicazione dei dispositivi in un elenco di dispositivi. |
+| Type | Data that is displayed |
+| Generic visualization | The value of one or more data sets. Choose the large widget size to see up to three data point values in a small table. |
+| Line chart | One or more data sets in a real-time scrolling chart. Use the Settings menu to set the data range and retention, the look and feel of the graphs, and more. |
+| Bar chart | Data set values in labelled bars. Use the Settings menu to toggle horizontal or vertical bar direction. |
+| Donut chart | Two or more data sets in a circular representation. |
+| Value | The raw value of one or more data sets. |
+| Gauge | The value of a data set shown as a gauge. Use the Settings menu to optionally set gauge thresholds for lower, middle, and upper data ranges. |
+| Device properties | Specific properties for one or more devices. |
+| All device properties | All properties for one or more devices. |
+| Device list | A list to monitor multiple devices. A list can be used as a data source for other cards. |
+| Device info | Basic information for a single device. |
+| Device map | The location of devices in a device list. |
 
-{: caption="Tabella 1. Opzioni di visualizzazione" caption-side="top"}
+{: caption="Table 1. Visualization options" caption-side="top"}
 
-## Passo 4: crea schemi di tipo di dispositivo
+## Step 4: Create device type schemas
 
-A questo punto, dovrai creare uno schema di tipo di dispositivo e associare le proprietà dispositivo per creare quindi le regole attivate in base ai punti di dati dalle tue proprietà dispositivo associate.
+At this point, you need to create a device type schema and map device properties to then create rules that are triggered based on the datapoints from your mapped device properties.
 
-1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Devices > Manage Schemas** e fai clic su **Add Schema**.
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Devices > Manage Schemas** and click **Add Schema**.
 
-2. Seleziona un tipo di dispositivo da associare allo schema del messaggio. Può essere definito un solo schema per un tipo di dispositivo.
+2. Select a device type to associate with the message schema. Only one schema can be defined for a device type.
 
-3. Fai clic su **Add property** e aggiungi una o più proprietà.
+3. Click **Add property** and add one or more properties.
 
-    Puoi selezionare le proprietà dal dispositivo collegato, creare proprietà virtuali per modificare o da combinare a proprietà esistenti o aggiungere le proprietà manualmente.
+    You can select properties from a connected device, create virtual properties that modify or combine existing properties, or add properties manually.
 
-    Le proprietà disponibili sono definite nel payload dei messaggi inviati da un dispositivo.
+    The available properties are defined in the payload of the messages that are sent by a device.
     {: tip}
 
-    * Per aggiungere una proprietà manualmente, seleziona la **scheda Manual** e definisci i seguenti dettagli di proprietà:
-        * Nome
-        * Tipo di dati
-        * Proprietà
-        * Unità dati (facoltativo)
-        * Posizioni decimali (facoltativo)
+    * To add a property manually, select the **Manual tab** and define the following property details:
+        * Name
+        * Data type
+        * Property
+        * Data unit (optional)
+        * Decimal places (optional)
 
-    * Per creare una proprietà virtuale, seleziona la scheda **Virtual Property** e definisci i seguenti dettagli di proprietà:
-        * Nome
-        * Tipo di dati
-        * Proprietà
-        * Calcolo
-        * Unità dati (facoltativo)
-        * Posizioni decimali
+    * To create a virtual property, select the **Virtual Property** tab and define the following property details:
+        * Name
+        * Data type
+        * Property
+        * Calculation
+        * Data unit (optional)
+        * Decimal places
 
-    * Per selezionare le proprietà da un dispositivo connesso, seleziona la scheda **From Connected** e seleziona quindi una o più proprietà da aggiungere allo schema. Le proprietà selezionate vengono aggiunte e la descrizione è impostata sul nome della proprietà.
+    * To select properties from a connected device, select the **From Connected** tab, and then select one or more properties to add to the schema. The selected properties are added and the description is set to the name of the property.
 
-4. Fai clic su **Finish** per creare le proprietà.
+4. Click **Finish** to create the properties.
 
-## Passo 5: crea regole e azioni
+## Step 5: Create rules and actions
 
-Le regole sono punti di decisione che corrispondono ai dati in tempo reale con valori di soglia predefiniti o altri dati della proprietà per attivare un avviso se viene riscontrata una condizione. In aggiunta all'avviso che viene visualizzato nel dashboard {{site.data.keyword.iot_short_notm}}, puoi aggiungere una o più azioni per eseguire la logica di business quando viene attivata una regola.
+Rules are condition-based decision points that match real-time device data with predefined threshold values or other property data to trigger an alert if a condition is met. In addition to the alert that's displayed in the {{site.data.keyword.iot_short_notm}} dashboard, you can add one or more actions to run business logic when a rule is triggered.
 
-1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Rules** e fai clic su **Create Cloud Rule**.
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Rules** and click **Create Cloud Rule**.
 
-2. Immetti un nome e una descrizione per la regola, seleziona un tipo di dispositivo a cui si applica la regola e fai clic su **Next**.
+2. Enter a name and description for the rule, select a device type that the rule applies to, and click **Next**.
 
-3. Per configurare la logica della regola, aggiungi una o più condizioni IF da utilizzare come trigger per la regola.
+3. To set up the rule logic, add one or more IF conditions to use as triggers for the rule.
 
-    Puoi aggiungere condizioni in righe parallele per applicarle come condizioni OR o puoi aggiungere le condizioni in colonne sequenziali per applicarle come condizioni AND. Dai un'occhiata ai seguenti esempi:
+    You can add conditions in parallel rows to apply them as OR conditions, or you can add conditions in sequential columns to apply them as AND conditions. Take a look at the following examples:
 
-      * Una semplice regola potrebbe attivare un avviso se un valore di parametro è più grande di un valore specificato: Condition = `temp_cpu>80`
-      * Una regola più complessa potrebbe essere attivata quando viene raggiunta una combinazione di soglie: Condition = `temp_cpu>60 AND cpu_load>90`
+      * A simple rule might trigger an alert if a parameter value is larger than a specified value: Condition = `temp_cpu>80`
+      * A more complex rule might trigger when a combination of thresholds are met: Condition = `temp_cpu>60 AND cpu_load>90`
 
-    Per attivare una condizione che confronta due proprietà o per attivare due o più condizioni della proprietà combinate sequenzialmente utilizzando AND, includi i punti dei dati di attivazione nello stesso messaggio del dispositivo. Se i dati sono ricevuti in più di un messaggio, la condizione o le condizioni in sequenza non vengono attivate.
+    To trigger a condition that compares two properties, or to trigger two or more property conditions that are combined sequentially by using AND, include the triggering data points in the same device message. If the data is received in more than one message, the condition or sequential conditions don't trigger.
     {: tip}
 
-4. Configura i requisiti di attivazione condizionali per la tua regola.
+4. Configure conditional trigger requirements for your rule.
 
-    Puoi utilizzare i requisiti di trigger condizionale per controllare il numero di avvisi attivato per una regola in un periodo di tempo. L'attivazione condizionale agisce su qualsiasi condizione nella regola. Ad esempio, se una regola ha cinque condizioni parallele impostate utilizzando OR, ogni condizione che è true viene conteggiata nel numero di trigger condizionali.
+    You can use conditional trigger requirements to control the number of alerts that are triggered for a rule over a time period. The conditional triggering acts on any condition in the rule. For example, if a rule has five parallel conditions set by using OR, each condition that's true counts towards the conditional trigger count.
 
-      1. Nell'editor della regola, fai clic sul link **Trigger each time conditions are met** predefinito per aprire la finestra di dialogo per la configurazione dei requisiti della frequenza della serie.
-      2. Seleziona e configura il trigger condizionale che desideri utilizzare nella regola.
+      1. In the rule editor, click the default **Trigger each time conditions are met** link to open the set frequency requirement dialog.
+      2. Select and configure the conditional trigger you want to use in the rule.
 
-        * Attiva ogni volta che le condizioni sono soddisfatte
-        * Attiva se le condizioni sono soddisfatte N volte in M _Unità di tempo_
+        * Trigger every time conditions are met
+        * Trigger if conditions are met N times in M _Unit of time_
 
-5. Crea o seleziona una o più azioni che si verificano se vengono soddisfatte le condizioni della regola.
+5. Create or select one or more actions that occur if the rule conditions are met.
 
-    Ad esempio, un'azione può consistere nell'inviare una email o di inserire un webhook.
+    For example, an action can be to send an email or post a webhook.
 
-6. Facoltativo: seleziona una priorità di avviso per la regola.
+6. Optional: Select an alert priority for the rule.
 
-    La priorità viene utilizzata per classificare gli avvisi che vengono visualizzati nella tabella **Boards > Rule-Based Analytics**. La priorità predefinita è bassa.
+    The priority is used to classify the alerts that are displayed in the **Boards > Rule-Based Analytics** board. The default priority is Low.
 
-7. Fai clic su **Save** per salvare senza attivare o su **Activate** per salvare e attivare la tua regola.
+7. Click **Save** to save without activating,  or click **Activate** to save and activate your rule.
 
-    Quando attivi la regola, alla tabella **Rule-Based Analytics** viene aggiunto un avviso quando vengono soddisfatte le condizioni e vengono eseguire tutte le azioni della regola.
+    When you activate the rule, an alert is added to the **Rule-Based Analytics** board when the conditions are met, and any rule action is run. -->
 
 ## Fasi successive
 
-Estendi le funzioni di analisi dati creando e connettendo le tue proprie applicazioni per utilizzare i dati del dispositivo cronologici e in tempo reale.
+Crea e collega le tue applicazioni per utilizzare i dati del dispositivo cronologici e in tempo reale.
 
   * Consulta le [librerie client](/docs/services/IoT/iot_platform_client_lib.html) per gli strumenti per creare il codice per integrare e connettere i tuoi dispositivi e le tue applicazioni.
 
