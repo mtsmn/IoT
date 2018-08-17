@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-05-17"
+  years: 2017, 2018
+lastupdated: "2018-08-17"
 
 ---
 
@@ -17,14 +17,14 @@ lastupdated: "2018-05-17"
 In the first guide, you set up a basic device simulator to manually simulate one or more conveyor belts. In this guide, we expand on this simulation by adding large numbers of self-running simulators to your environment to test analytics and monitoring in a more realistic, multi-device environment.
 {:shortdesc}
 
-**Important:** The application requires 512 MB of memory, which is more than is allocated by default and which also exceeds the amount that is available to free trial accounts, including the {{site.data.keyword.Bluemix}} Trial Account and Standard Account. Subscription and Pay-As-You-Go account holders can increase the allocated memory to 512 MB. Free trial account holders need to upgrade to a Subscription or Pay-As-You-Go account. For more information about {{site.data.keyword.Bluemix_notm}} account types, see [Account types](/docs/pricing/index.html#pricing).
+**Important:** The application requires 512 MB of memory, which is more than is allocated by default and which also exceeds the amount that is available to free trial accounts, including the Bluemix Trial Account and Standard Account. Subscription and Pay-As-You-Go account holders can increase the allocated memory to 512 MB. Free trial account holders need to upgrade to a Subscription or Pay-As-You-Go account. For more information about {{site.data.keyword.Bluemix_notm}} account types, see [Account types](/docs/pricing/index.html#pricing).
 
 **Note:** Bluemix is now IBM Cloud. Check out the [IBM Cloud Blog](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") for more details.
 
 ## Overview and goal
 {: #overview}
 
-In this guide, you will set up an {{site.data.keyword.Bluemix_notm}} application to simulate multiple conveyor belt devices using a  [Node-RED ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://nodered.org){: new_window} "back end".
+In this guide, you will set up a {{site.data.keyword.Bluemix_notm}} application to simulate multiple conveyor belt devices using a  [Node-RED ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://nodered.org){: new_window} "back end".
 
 The application contains three flows that:   
 1. Create multiple devices.   
@@ -39,7 +39,7 @@ By completing the instructions that are in this guide, you will:
 - Use Cloud Foundry to deploy a Node-RED based and webhook enabled device simulator application.
 - Use API calls to create and register devices, publish device events, and delete devices.
 
-**Important:** Simulating large numbers of devices that concurrently send device data to {{site.data.keyword.iot_full}} might use up a large amount of data. 
+**Important:** Simulating large numbers of devices that concurrently send device data to {{site.data.keyword.iot_full}} might use up a large amount of data. You can use the {{site.data.keyword.iot_short_notm}} *Usage* dashboard to monitor how much data your devices and applications are using. The metrics are refreshed on a 2-hourly interval.
 
 ## Prerequisites
 {: #prereqs}  
@@ -64,10 +64,10 @@ Follow the steps below to create and deploy your app manually.
 
 1. Clone the *Lesson4* sample app GitHub repository.  
 Use your favorite git tool to clone the following repository:  
-https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 In Git Shell, use the following command:
 ```bash
-$ git clone https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+$ git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 ```
 3. Configure the application for your environment by editing the manifest.yml file.  
 What to edit:
@@ -76,22 +76,22 @@ What to edit:
 In the applications section, change the `name` and `host` entries to something that is unique, such as `YOUR_NAME-lesson4-simulate`.   
 **Tip:** The ROUTES URL that you use to access the app is created from the `host` entry, for example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net`.  
 <pre><code>
-declared-services:
+  declared-services:
     lesson4-simulate-cloudantNoSQLDB:
      label: cloudantNoSQLDB
      plan: Lite
     lesson4-simulate-iotf-service:
      label: iotf-service
      plan: iotf-service-free
-applications:  </br>
-  -  path: .
+  applications:
+    - path: .
       memory: 512M
       instances: 1
       domain: mybluemix.net
       name: lesson4-simulate
       host: lesson4-simulate
-      disk_quota: 1024M</br>
-  services:</br>
+      disk_quota: 1024M
+  services:
      - lesson4-simulate-cloudantNoSQLDB
      - lesson4-simulate-iotf-service
 </code></pre>  
@@ -192,6 +192,11 @@ The Node-RED interface opens.
 5. Click **Go to your Node-RED flow editor**.
 6. In the flow editor, select the **Device Type and Instance** tab.
 7. To register five devices, click the inject node labeled **Register 5 motorController devices**.
+8. Verify that your devices are registered.
+ 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
+ 3. Select the **Device Centric Analytics** board.
+ 4. Locate the **Devices I Care About** card.  
+The device names are displayed.
 
 ### Creating and connecting devices by using REST API  
 To register multiple devices:  
@@ -214,6 +219,11 @@ Example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/devices`
     - Optional: authToken is the authorization token the devices will register with.
     - Optional: If chunkSize is not provided, it is set to 500 by default. The 'chunksize' must be less than and a factor of numberDevices.
     - deviceName is the pattern for the deviceID for the created devices.
+2. Verify that your devices are registered.
+ 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
+ 3. Select the **Device Centric Analytics** board.
+ 4. Locate the **Devices I Care About** card.  
+The device names are displayed.
 
 ## Step 4 - Simulate device events
 {: #step4}
@@ -224,7 +234,11 @@ Because the simulated devices are registered with {{site.data.keyword.iot_short_
 To send device events:  
 1. In the Node-RED flow editor, select the **Simulate multiple devices** tab.
 7. To simulate five devices, click the inject node that is labeled **Simulate 5 devices**.
- 
+8. Verify that your devices are sending data.
+ 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
+ 3. Select the **Device Centric Analytics** board.
+ 4. Locate the **Devices I Care About** card.  
+ 5. Select one of the devices and verify that updated device data points that correspond to the published message are displayed in the **Device Properties** card.  
 
 
 ### Simulating device events by using Rest API  
@@ -247,7 +261,11 @@ Where:
     - timeInterval is the spacing of the events in milliseconds.
     - deviceType is the device type that you created simulated devices for.
     - deviceName is the pattern for the deviceID for the created devices.
- 
+8. Verify that your devices are sending data.
+ 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
+ 3. Select the **Device Centric Analytics** board.
+ 4. Locate the **Devices I Care About** card.  
+ 5. Select one of the devices and verify that updated device data points that correspond to the published message are displayed in the **Device Properties** card.   
 
 ## Step 5 - Deleting devices
 {: #deleting}
@@ -256,7 +274,11 @@ Where:
 To delete devices:  
 1. In the Node-RED flow editor, select the **Device Type and Instance** tab.
 2. To delete five devices, click the inject node that is labeled **Delete 5 devices**.
-
+3. Verify that your devices are deleted.
+ 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
+ 3. Select the **Device Centric Analytics** board.
+ 4. Locate the **Devices I Care About** card.  
+ 5. Verify that devices are no longer listed.  
 
 
 ### Rest API  
@@ -270,12 +292,18 @@ Example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevice
 "deviceType":"iot-conveyor-belt",  
 "deviceName": "belt"  
 }</code></pre>
-  
+2. Verify that your devices are deleted.
+ 1. In your {{site.data.keyword.iot_short_notm}} dashboard, from the menu, select **Boards**.
+ 3. Select the **Device Centric Analytics** board.
+ 4. Locate the **Devices I Care About** card.  
+ 5. Verify that devices are no longer listed.  
 
 
 ## What's next?
 {: @whats_next}  
 Jump to another topic that interests you:
+<!--- [Guide 2: Using basic real-time rules and actions](getting-started-iot-rules.html)  
+Now that you successfully set up your conveyor belt, connected it to {{site.data.keyword.iot_short_notm}}, and sent some data, it is time to make that data work for you by using rules and actions.-->
 - [Guide 2: Monitoring your device data](getting-started-iot-monitoring.html)  
 Now that you connected one or more devices and started making good use of the device data, it is time to start monitoring a collection of devices.
 - [Learn more about {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
