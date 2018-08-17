@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-02"
+  years: 2016, 2018
+lastupdated: "2018-03-15"
 
 ---
 
@@ -73,7 +73,7 @@ Este ID de dispositivo se utiliza para identificar el dispositivo en el panel de
 **Importante:** el ID de dispositivo no debe tener más de 36 caracteres y sólo puede contener:
  <ul>
  <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
- <li>Guiones (-).</li>
+ <li>Guiones (-)</li>
  <li>Signos de subrayado (&lowbar;)</li>
  <li>Puntos (.)</li>  
  </ul>
@@ -132,14 +132,39 @@ Esta combinación de parámetros identifica de forma exclusiva el dispositivo.
 Este valor indica que está utilizando la autorización de señales.
 - Contraseña: *Señal de autenticación*  
 Este valor es la señal exclusiva que ha definido o que se ha asignado al dispositivo al registrarlo.
-- Formato del tema del suceso: iot-2/evt/*event_id*/fmt/*format_string*  
- Donde el *event_id* especifica el nombre del suceso que se muestra en {{site.data.keyword.iot_short_notm}}, y *format_string* es el formato del suceso, como por ejemplo JSON.
+- Formato de tema de suceso: iot-2/evt/*event_id*/fmt/*format_string*  
+ Donde *event_id* especifica el nombre del suceso que se muestra en {{site.data.keyword.iot_short_notm}} y *format_string* es el formato del suceso, como por ejemplo JSON.
 - Formato del mensaje: JSON  
  {{site.data.keyword.iot_short_notm}} JSON da soporte a varios formatos, como JSON y texto.
 
 Para obtener más información sobre cómo conectar su dispositivo, consulte [Conectividad de MQTT para dispositivos](devices/mqtt.html) en la documentación técnica.
 
 La documentación de la API [Administración de la organización ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} también contiene la información necesaria.
+
+## Restauración de dispositivos suprimidos (Beta)
+{: #restore_device}
+
+**Importante:** la característica de restauración de dispositivos de {{site.data.keyword.iot_short_notm}} solo está disponible como parte de un programa beta limitado. Las actualizaciones futuras pueden incluir cambios que no son compatibles con la versión actual de esta característica. Pruébelo y [háganos llegar su opinión ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+
+Si se suprime un dispositivo por equivocación, puede restaurarlo dentro de un plazo de 14 días. 
+
+Cuando se suprime el dispositivo, se crea un dispositivo “memento”. El memento es una copia del documento del dispositivo y está disponible durante 14 días, transcurridos los cuales se suprime.
+
+La siguiente API para restaurar un dispositivo le permite utilizar el memento para restaurar una versión anterior del dispositivo:
+
+    POST /archive/device/types/{typeId}/devices/{deviceId}/restore
+
+
+Puede utilizar la siguiente API para recuperar una lista de todos los mementos de dispositivo:
+
+    GET /archive/device/types/{typeId}/devices/{deviceId}
+
+Para obtener más información sobre las API para restaurar dispositivos, consulte [API para restaurar dispositivos (Beta) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html).
+
+## Reconexión de dispositivos
+
+Los dispositivos se pueden desconectar de {{site.data.keyword.iot_short_notm}} debido a un problema en la red o al mantenimiento rutinario del servicio o de la infraestructura. Cuando se vuelven a conectar los dispositivos, tenga en cuenta la posibilidad de minimizar la cantidad de tráfico en la red que se genera durante una reconexión o de introducir un retardo en el tiempo para reducir el número de reconexiones simultáneas. 
+
 
 ## Recetas sobre la conexión de dispositivos
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-12-12"
+  years: 2016, 2018
+lastupdated: "2018-03-12"
 
 ---
 
@@ -15,10 +15,17 @@ lastupdated: "2016-12-12"
 # Cálculos avanzados para propiedades virtuales de extremo
 {: #im_vir_calculations}
 
-Amplíe los cálculos básicos de propiedades virtuales con fórmulas analíticas de extremo preconfiguradas.
-{:shortdesc}
+**Importante:** estamos lanzando una versión Beta con una nueva forma de definir reglas en los datos del dispositivo IoT como parte de un programa más ambicioso de cambios para mejorar la forma en que {{site.data.keyword.iot_full}} distribuye reglas y acciones.
 
-**Importante:** Los cálculos avanzados sólo devuelven puntos de datos de propiedades si los datos para la propiedad seleccionada provienen de un dispositivo que está conectado a una pasarela que tiene Edge Analytics Agent instalado. Una regla de extremo puede utilizar esta propiedad virtual directamente. Para utilizar la propiedad con una regla de nube, una regla de extremo debe enviar el punto de datos a la nube utilizado la acción Reenviar a la nube. Para obtener más información, consulte [Instalación de Edge Analytics Agent](gateways/dashboard.html#edge).
+Para ver más información, consulte la publicación del blog sobre [Un enfoque alternativo a la definición de reglas en datos de IoT ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para empezar a definir sus propias reglas, consulte la documentación sobre [Creación de reglas incorporadas (Beta)](information_management/im_rules.html).
+
+## Acerca de los cálculos para propiedades virtuales de extremo
+
+Amplíe los cálculos básicos de propiedades virtuales con fórmulas analíticas de extremo preconfiguradas.
+
+Los cálculos avanzados solo devuelven puntos de datos de propiedades si los datos para la propiedad seleccionada provienen de un dispositivo que está conectado a una pasarela que tiene Edge Analytics Agent instalado. Una regla de extremo puede utilizar esta propiedad virtual directamente. Para utilizar la propiedad con una regla de nube, una regla de extremo debe enviar el punto de datos a la nube utilizado la acción Reenviar a la nube. Para obtener más información, consulte [Instalación de Edge Analytics Agent](gateways/dashboard.html#edge).
 
 Ejemplo: utilice los puntos de datos virtuales avanzados en una tarjeta de gráfico de líneas para visualizar tendencias de datos con los picos de datos eliminados.  
  ![Puntos de datos reales frente a puntos de datos medios.](images/vir_adv_avg_card.svg "Comparación entre los puntos de datos reales y puntos de datos medios.")

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -15,13 +15,20 @@ lastupdated: "2017-03-13"
 # Cloud Analytics
 {: #cloud_analytics}
 
-Al utilizar cloud analytics de {{site.data.keyword.iot_short}}, especifique condiciones de reglas basadas en datos de dispositivos en tiempo real y que activen alertas y acciones opcionales cuando se cumplan.    
-{: shortdesc}
+**Importante:** estamos lanzando una versión Beta con una nueva forma de definir reglas en los datos del dispositivo IoT como parte de un programa más ambicioso de cambios para mejorar la forma en que {{site.data.keyword.iot_full}} distribuye reglas y acciones.
 
-Por ejemplo, puede crear una regla para asegurarse de que cuando el dispositivo se ha eliminado o cuando se dispara la temperatura del dispositivo, se envíe una alerta al panel de control del dispositivo de un usuario, y se envíe un correo electrónico al administrador.
+Para ver más información, consulte la publicación del blog sobre [Un enfoque alternativo a la definición de reglas en datos de IoT ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para empezar a definir sus propias reglas, consulte la documentación sobre [Creación de reglas incorporadas (Beta)](information_management/im_rules.html).
+
 
 ## Antes de empezar
 {: #byb}
+
+Al utilizar cloud analytics de {{site.data.keyword.iot_short_notm}}, especifique condiciones de reglas basadas en datos de dispositivos en tiempo real y que activen alertas y acciones opcionales cuando se cumplan.    
+
+Por ejemplo, puede crear una regla para asegurarse de que cuando el dispositivo se ha eliminado o cuando se dispara la temperatura del dispositivo, se envíe una alerta al panel de control del dispositivo de un usuario, y se envíe un correo electrónico al administrador.
+
 Asegúrese de que las propiedades de dispositivos que desea utilizar como condiciones en las reglas se hayan correlacionado con esquemas. Consulte [Conexión de dispositivos](iotplatform_task.html) y [Creación de esquemas](im_schemas.html) para obtener más información.
 
 Consulte también la receta [Utilización de reglas y acciones con {{site.data.keyword.iot_short}} Cloud Analytics ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} para comprender las reglas y acciones que se utilizan en Cloud Analytics.
@@ -74,7 +81,7 @@ Para establecer el desencadenante condicional para una regla:
 5. Cree o seleccione una o varias acciones que se producen si se cumplen las condiciones de la regla.  
 Para obtener más información sobre las acciones, consulte [Utilización de acciones con las reglas](#shared "Crear acciones").   
  Por ejemplo: Una acción puede ser enviar un correo electrónico o publicar un webhook.
-3. **Opcional:** Seleccionar una prioridad de alerta para la regla.  
+3. **Opcional:** Seleccione una prioridad de alerta para la regla.  
  La prioridad se utiliza para clasificar las alertas que se muestran en el tablero **Herramientas de análisis basadas en reglas**. La prioridad predeterminada es Low.
 6. Cuando esté satisfecho con la regla, pulse **Guardar** para guardar sin activar o pulse **Activar** para guardar y activar la regla.
 

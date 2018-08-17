@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-08"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,8 +16,16 @@ lastupdated: "2017-05-08"
 # Visualización de datos en tiempo real utilizando paneles y tarjetas
 {: #boards_and_cards}
 
+
+**Importante:** estamos lanzando una versión Beta con una nueva forma de definir reglas en los datos del dispositivo IoT como parte de un programa más ambicioso de cambios para mejorar la forma en que {{site.data.keyword.iot_full}} distribuye reglas y acciones.
+
+Para ver más información, consulte la publicación del blog sobre [Un enfoque alternativo a la definición de reglas en datos de IoT ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para empezar a definir sus propias reglas, consulte la documentación sobre [Creación de reglas incorporadas (Beta)](information_management/im_rules.html).
+
+## Acerca de paneles y tarjetas
+
 Crear paneles y tarjetas para crear y compartir sus propios paneles de instrumentos que visualizan los datos de dispositivo en tiempo real.
-{:shortdesc}
 
 Al utilizar los paneles y las tarjetas, puede visualizar gráficamente valores de conjuntos de datos de uno o varios dispositivos para proporcionar una visión general rápida y mejorar la comprensión de los datos. Cree paneles y añada tarjetas que muestren los datos como números en bruto, gráficos en tiempo real, indicadores, etc. Añada miembros a los paneles para compartirlos con otros usuarios de su organización. Organice las tarjetas y añada divisores de texto explicativo para ajustar la presentación.  
 
@@ -27,7 +35,7 @@ También puede expandir el conjunto predeterminado de tarjetas mediante la [crea
 
 ## Paneles predeterminados
 {: #default_boards}
-El panel de control de {{site.data.keyword.iot_full}} tiene los siguientes paneles predeterminados:
+El panel de control de {{site.data.keyword.iot_short_notm}} tiene los siguientes paneles predeterminados:
 
 |Nombre de panel | Descripción | Tarjetas incluidas
 |:---|:---|:---|  

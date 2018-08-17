@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016, 2017
-lastupdated: "2017-10-04"
+years: 2016, 2018
+lastupdated: "2018-05-31"
 
 ---
 
@@ -20,14 +20,15 @@ En el continuo desarrollo de {{site.data.keyword.iot_full}}, se van incorporando
 
 Las siguientes características beta están disponibles en {{site.data.keyword.iot_short_notm}}:
 
-Característica | Documentación 
+Característica       | Documentación       
 ------------- | -------------
-Interfaz de usuario de gestión de datos| [Cómo empezar con la Gestión de datos utilizando la interfaz web (Beta)](GA_information_management/im_ui_flow.html#gs_web)
- | [Configuración de dispositivos para utilizarlos con la característica de gestión de datos mediante la interfaz web (Beta)](GA_information_management/im_config_devices.html#im_config_devices)
-Control de acceso de pasarela| [Control de acceso de pasarela (Beta)](gateways/gateway-access-control.html#gateway-access-control)
-Dominios personalizados| [Dominios personalizados (Beta)](reference/security/set_up_certificates.html#custom-domains)
-Creación de informes profundizables| [Creación de informes profundizables (Beta)](reference/security/RM_security.html#drill-down)
-Control de acceso a nivel de recurso| [Visión general del control de acceso a nivel de recurso (Beta)](reference/rlac_overview.html#RLAC_overview) 
- | [Configuración del control de acceso a nivel de recurso (Beta)](reference/rlac.html#configure_RLAC)
-Paquete de pasarela de IoT| [Paquete de pasarela de IoT (Beta)](gateways/iotgw.html#gw_package)
-Simulación de datos de dispositivo| [Simulación de datos de dispositivo (Beta)](devices/device_sim.html)
+Creación de informes detallados | [Informes detallados (Beta)](reference/security/RM_security.html#drill_down)
+Paquete de pasarela de IoT | [Paquete de pasarela de IoT (Beta)](gateways/iotgw.html#gw_package)
+Simulación de datos de dispositivo | [Simulación de datos de dispositivo (Beta)](devices/device_sim.html)
+Restauración de dispositivos suprimidos | [Restauración de dispositivos suprimidos (Beta)](iotplatform_task.html#restore_device)
+Reglas incorporadas | [Creación de reglas incorporadas (Beta)](information_management/im_rules.html)
+Objetos | [Introducción a la gestión de datos](GA_information_management/ga_im_device_twin.html#device_twins)
+{{site.data.keyword.iot_short_notm}} Edge (presentación) | [Visión general de {{site.data.keyword.iot_short_notm}} Edge (presentación)](edge/WIoTP_edge.html)
+Autenticación y autorización de Cloud IAM | [Autenticación y autorización de Cloud IAM para {{site.data.keyword.iot_short_notm}} (Beta)](reference/security/cloud_iam.html)
+Autenticación y autorización de ID de app | [Autenticación y autorización de ID de app para {{site.data.keyword.iot_short_notm}} (Beta)](reference/security/app_id.html)
+Interfaz de usuario de grupos | [Gestión de grupos (Beta)](manage_groups.html#groups_overview)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-03-14"
+lastupdated: "2017-03-14"
 
 ---
 
@@ -15,19 +15,12 @@ lastupdated: "2018-03-14"
 # Crear esquemas de tipo de dispositivo
 {: #iotrtinsights_task}
 
-**Importante:** estamos lanzando una versión Beta con una nueva forma de definir reglas en los datos del dispositivo IoT como parte de un programa más ambicioso de cambios para mejorar la forma en que {{site.data.keyword.iot_full}} distribuye reglas y acciones.  
+Para utilizar características de {{site.data.keyword.iot_short}} como, por ejemplo, reglas y acciones, debe crear un esquema para correlacionar las propiedades de dispositivos a nombres de propiedades sencillos para el usuario, para establecer las unidades de datos para las propiedades, y para especificar un tipo de mensaje para utilizar con el esquema.
+{: shortdesc}
 
-Para ver más información, consulte la publicación del blog sobre [Un enfoque alternativo a la definición de reglas en datos de IoT ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.  
+**Importante:** Los esquemas son necesarios para utilizar reglas y acciones. Para obtener información, consulte [Cloud Analytics](cloud_analytics.html#rules).
 
-Para empezar a definir sus propias reglas, consulte la documentación sobre [Creación de reglas incorporadas (Beta)](information_management/im_rules.html).
-
-## Acerca de esta tarea
-
-Para utilizar características de {{site.data.keyword.iot_short_notm}} como, por ejemplo, reglas y acciones, debe crear un esquema para correlacionar las propiedades de dispositivos a nombres de propiedades sencillos para el usuario, para establecer las unidades de datos para las propiedades, y para especificar un tipo de mensaje para utilizar con el esquema.
-
-Se necesitan esquemas para poder utilizar reglas y acciones. Para obtener información, consulte [Cloud Analytics](cloud_analytics.html#rules).
-
-Las características de análisis se fusionan desde el servicio de {{site.data.keyword.iotrtinsights_full}}. Si la organización de {{site.data.keyword.iot_short_notm}} se utiliza como un origen de datos para una instancia existente de {{site.data.keyword.iotrtinsights_short}}, Cloud y Edge Analytics no se habilitarán hasta que se hayan migrado las instancias existentes de {{site.data.keyword.iotrtinsights_short}}. Siga utilizando el panel de control de {{site.data.keyword.iotrtinsights_short}} para sus necesidades de análisis hasta que se haya completado la migración. Para obtener más información, consulte el [Blog de IBM Watson IoT Platform ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} en IBM developerWorks y los paneles de control de instancias de {{site.data.keyword.iotrtinsights_short}} existentes.  
+**Importante:** Las características de análisis se fusionan desde el servicio de {{site.data.keyword.iotrtinsights_full}}. Si la organización de {{site.data.keyword.iot_short_notm}} se utiliza como un origen de datos para una instancia existente de {{site.data.keyword.iotrtinsights_short}}, Cloud y Edge Analytics no se habilitarán hasta que se hayan migrado las instancias existentes de {{site.data.keyword.iotrtinsights_short}}. Siga utilizando el panel de control de {{site.data.keyword.iotrtinsights_short}} para sus necesidades de análisis hasta que se haya completado la migración. Para obtener más información, consulte el [Blog de IBM Watson IoT Platform ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} en IBM developerWorks y los paneles de control de instancias de {{site.data.keyword.iotrtinsights_short}} existentes.  
 
 ## Adición de un esquema de dispositivo
 {: #add_schema}
