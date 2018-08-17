@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-11-03"
+  years: 2016, 2018
+lastupdated: "2018-01-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-11-03"
 # Prise de contact avec le support {{site.data.keyword.iot_short_notm}}
 {: #gettinghelp}
 
-Plusieurs options d'assistance s'offrent à vous lorsque vous utilisez {{site.data.keyword.iot_full}}, notamment via un forum, Slack ou un ticket de demande de service. 
+Plusieurs options d'assistance s'offrent à vous lorsque vous utilisez {{site.data.keyword.iot_full}}, notamment via un forum, Slack ou un ticket de demande de service. Vous pouvez même soumettre vos propres suggestions d'améliorations pour {{site.data.keyword.iot_short_notm}} via le portail d'idées.
 
 ## Forums
 
@@ -28,10 +28,14 @@ Pour plus d'informations sur l'utilisation des forums, voir la rubrique décriva
 
 ## Slack
 
-* [Slack ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-developers.slack.com/){:new_window} - joignez le canal #internet-of-things.
+* [Slack ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-developers.slack.com/){:new_window} - rejoignez le canal #internet-of-things.
 
-Vous n'avez pas accès à l'espace de travail Slack ?  [Demandez-en l'accès maintenant ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://bxdevs-slack-invite.mybluemix.net/){:new_window}
 
 ## Tickets de demande de service
 
-* [Contacter le support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}.
+* [Contactez le support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}
+
+
+## Portail d'idées
+
+* [IBM Cloud – Idées structurées ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://ibm.biz/cloudideas){:new_window}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,12 +16,20 @@ lastupdated: "2017-03-13"
 # Edge analytics
 {: #edge_analytics}
 
+**Important :** Nous lançons un nouveau programme bêta proposant une nouvelle façon de définir des règles pour vos données de terminal IoT dans le cadre d'un programme plus vaste de modifications visant à améliorer la manière dont {{site.data.keyword.iot_full}} distribue des règles et des actions.
+
+Pour en savoir plus, consultez l'article de blogue [Une approche alternative pour définir des règles sur les données IoT ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Pour commencer à définir vos propres règles, voir la documentation [Création de règles imbriquées (bêta)](information_management/im_rules.html).
+
+## A propos d'Edge analytics
+
 Avec Edge Analytics, le processus d'analyse déclenché par des règles depuis le cloud est remplacé par une passerelle sur laquelle Edge Analytics est activé. Cela peut vous permettre de réduire considérablement la quantité de données de terminal envoyées vers le cloud car le traitement des analyses est exécutée à proximité du terminal.
-{:shortdesk}
+{:shortdesc}
 
-Les terminaux envoient leurs données à une passerelle sur laquelle un agent Edge Analytics est activé pour une analyse syntaxique des données par les règles de ce dernier. Selon la règle définie et l'action correspondante, des données critiques et des alertes peuvent être envoyées à {{site.data.keyword.iot_full}} ou être écrites dans un fichier texte en local sur la passerelle.
+Les terminaux envoient leurs données à une passerelle sur laquelle un agent Edge Analytics est activé pour une analyse syntaxique des données par les règles de ce dernier. Selon la règle définie et l'action correspondante, des données critiques et des alertes peuvent être envoyées à {{site.data.keyword.iot_short_notm}} ou être écrites dans un fichier texte en local sur la passerelle.
 
-Le diagramme suivant illustre l'architecture générale d'un environnement {{site.data.keyword.iot_full}} Edge Analytics.
+Le présent diagramme illustre l'architecture générale d'un environnement {{site.data.keyword.iot_short_notm}} Edge Analytics.
 ![IBM Watson IoT Platform pour architecture Edge Analytics](images/architecture_platform_edge.svg "IBM Watson IoT Platform avec architecture Edge Analytics")
 
 ## Avant de commencer

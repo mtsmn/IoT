@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-12-12"
+  years: 2016, 2018
+lastupdated: "2018-03-12"
 
 ---
 
@@ -15,10 +15,17 @@ lastupdated: "2016-12-12"
 # Calculs avancés pour les propriétés virtuelles Edge
 {: #im_vir_calculations}
 
-Etendez les calculs de propriété virtuelle de base avec des formules d'analyse Edge prédéfinies.
-{:shortdesc}
+**Important :** Nous lançons un nouveau programme bêta proposant une nouvelle façon de définir des règles pour vos données de terminal IoT dans le cadre d'un programme plus vaste de modifications visant à améliorer la manière dont {{site.data.keyword.iot_full}} distribue des règles et des actions.
 
-**Important :** Les calculs avancés renvoient uniquement des points de données de propriété si les données pour la propriété sélectionnée proviennent d'un terminal connecté à une passerelle sur laquelle un agent Edge Analytics Agent est installé. Une règle Edge peut utiliser cette propriété virtuelle directement. Pour que la propriété puisse être utilisée avec une règle de cloud, une règle marginale doit envoyer le point de données vers le cloud à l'aide de l'action d'acheminement vers le cloud. Pour plus d'informations, voir [Installation de l'agent Edge Analytics Agent](gateways/dashboard.html#edge).
+Pour en savoir plus, consultez l'article de blogue [Une approche alternative pour définir des règles sur les données IoT ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Pour commencer à définir vos propres règles, voir la documentation [Création de règles imbriquées (bêta)](information_management/im_rules.html).
+
+## A propos des calculs des propriétés virtuelles Edge
+
+Etendez les calculs de propriété virtuelle de base avec des formules d'analyse Edge prédéfinies.
+
+Les calculs avancés renvoient uniquement des points de données de propriété si les données pour la propriété sélectionnée proviennent d'un terminal connecté à une passerelle sur laquelle un agent Edge Analytics Agent est installé. Une règle Edge peut utiliser cette propriété virtuelle directement. Pour que la propriété puisse être utilisée avec une règle de cloud, une règle marginale doit envoyer le point de données vers le cloud à l'aide de l'action d'acheminement vers le cloud. Pour plus d'informations, voir [Installation de l'agent Edge Analytics Agent](gateways/dashboard.html#edge).
 
 Exemple : Utilisation des points de données virtuels avancés dans une carte de diagramme linéaire pour visualiser les tendances de données avec des projections de données retirées.  
  ![Comparaison entre les points de données réels et moyens.](images/vir_adv_avg_card.svg "Comparaison entre les points de données réels et moyens.")

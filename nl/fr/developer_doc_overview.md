@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-02-03"
+  years: 2016, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -39,7 +39,7 @@ Vous pouvez générer et gérer des applications dans {{site.data.keyword.iot_sh
 - Protocole de messagerie MQTT
 - Python
 - Node.js
-- Java™
+- Java
 - C#
 
 ## Développement de terminaux
@@ -53,7 +53,7 @@ Vous pouvez générer et gérer des terminaux dans {{site.data.keyword.iot_short
 - Java
 - C#
 - Embedded C
-- mBed C++
+- Mbed C++
 
 ## Développement de passerelles
 {: #gateway-dev}
@@ -72,6 +72,6 @@ Pour plus d'informations et pour accéder à des liens vers les bibliothèques c
 * [C# ![Icône de lien externe](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
 * [Embedded C ![Icône de lien externe](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
 * [Java ![Icône de lien externe](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-java){:new_window}
-* [mBed C++ ![Icône de lien externe](../../icons/launch-glyph.svg)](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+* [Mbed C++ ![Icône de lien externe](../../icons/launch-glyph.svg)](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){:new_window}
 * [Node.js ![Icône de lien externe](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
 * [Python ![Icône de lien externe](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python){:new_window}

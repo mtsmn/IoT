@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-08"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,8 +16,16 @@ lastupdated: "2017-05-08"
 # Visualisation des données en temps réel à l'aide de tableaux et de cartes
 {: #boards_and_cards}
 
+
+**Important :** Nous lançons un nouveau programme bêta proposant une nouvelle façon de définir des règles pour vos données de terminal IoT dans le cadre d'un programme plus vaste de modifications visant à améliorer la manière dont {{site.data.keyword.iot_full}} distribue des règles et des actions.
+
+Pour en savoir plus, consultez l'article de blogue [Une approche alternative pour définir des règles sur les données IoT ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Pour commencer à définir vos propres règles, voir la documentation [Création de règles imbriquées (bêta)](information_management/im_rules.html).
+
+## A propos des tableaux et des cartes
+
 Créez des tableaux et des cartes afin de créer et partager vos propres tableaux de bord permettant de visualiser vos données de terminal en temps réel.
-{:shortdesc}
 
 En utilisant des tableaux et des cartes, vous pouvez visualiser, sous forme
 graphique, les valeurs de jeux de données d'un ou de plusieurs terminaux afin de bénéficier
@@ -29,7 +37,7 @@ Vous pouvez également développer l'ensemble par défaut de cartes [en créant 
 
 ## Cartes par défaut
 {: #default_boards}
-Le tableau de bord {{site.data.keyword.iot_full}} comporte les tableaux par défaut suivants :
+Le tableau de bord {{site.data.keyword.iot_short_notm}} comporte les tableaux par défaut suivants :
 
 |Nom de tableau | Description | Cartes incluses
 |:---|:---|:---|  

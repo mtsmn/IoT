@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-02-23"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -27,9 +27,9 @@ Les rôles d'utilisateur standard suivants sont disponibles :
 Rôle d'utilisateur | Description
 ------------- | -------------
 Administrateur | Rôle de superutilisateur qui accorde un accès à toutes les API liées aux utilisateurs. Les administrateurs ne peuvent pas accéder à des opérations qui sont limitées à des terminaux et à des applications.
-Opérateur | Destiné aux utilisateurs de l'organisation principale. Accorde un accès à la plupart des opérations d'organisation, de contrôle d'accès, de service de tiers et de gestion des risques.
-
-Développeur | Accorde un accès illimité aux opérations de terminal, de journal, de cache, d'historique et de service de tiers. Il fournit un accès limité aux opérations d'organisation, de contrôle d'accès et de gestion des risques.
+Opérateur | Destiné aux utilisateurs de l'organisation principale. Accorde un accès à la plupart des opérations d'organisation, de contrôle d'accès, d'analyse, de service de tiers et de gestion des risques.
+Développeur | Accorde un accès illimité aux opérations de terminal, de journal, de cache, d'historique, d'analyse et de service de tiers. Il fournit un accès limité aux opérations d'organisation, de contrôle d'accès et de gestion des risques.
+Analyste | Accorde un accès aux opérations d'analyse, y compris la création, la mise à jour et la suppression de règles, d'actions et de schémas.
 Lecteur | Rôle d'utilisateur par défaut. Accorde un accès limité aux opérations disponibles pour tous les utilisateurs.
 
 Pour plus d'informations sur les rôles d'utilisateur, voir [Rôles d'utilisateur](reference/roles_access.html).
@@ -50,7 +50,7 @@ Rôle d'application | Description
 Standard | Rôle d'application par défaut. Accorde l'accès à la plupart des opérations d'application, mais pas aux opérations d'utilisateur ou de rôle.   
 Opérations | Accorde l'accès à plus large gamme d'opérations, mais refuse l'accès aux opérations d'abonnement ou de publication.
 Sécurisée de back end | Destiné aux applications ne requièrent pas d'interaction avec l'opérateur système. Refuse l'accès aux opérations de gestion des terminaux, d'organisation, de rôle ou d'extension.
-Processeur de données | Destiné aux applications qui effectuent des opérations d'analyse et de traitement des données. Un accès limité aux opérations de terminal et d'utilisateur est accordé aux application de processeur de données.
+Processeur de données | Destiné aux applications qui effectuent des opérations d'analyse et de traitement des données. Pour les applications de processeur de données, un accès limité est accordé aux opérations d'organisation et aux opérations d'utilisateur, mais un accès complet est accordé aux opérations d'analyse, y compris la création et la gestion de règles, d'actions et de schémas.
 Visualisation | Destiné aux applications chargées de générer des visualisations de données. Les applications de visualisation ont accès à des opérations sur des données en temps réel et stockées et à des opérations de tableau de bord.
 Terminal | Destiné aux applications qui jouent le rôle de terminaux ; autrement dit, elles fournissent une source de données qui est envoyée à {{site.data.keyword.iot_short_notm}}, comme si elles étaient un terminal. Les applications de terminal ne disposent que d'un accès limité aux opérations.
 

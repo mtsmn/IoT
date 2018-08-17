@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-02-17"
+  years: 2016, 2018
+lastupdated: "2018-05-22"
 
 ---
 
@@ -15,7 +15,9 @@ lastupdated: "2017-02-17"
 # Connexion et configuration d'un service historique à l'aide de {{site.data.keyword.messagehub}}  
 {: #messagehub_main}
 
-Le fait de connecter {{site.data.keyword.messagehub_full}} à {{site.data.keyword.iot_short}} permet d'obtenir un bus de messages à débit élevé évolutif pour le stockage de données d'historique. {{site.data.keyword.messagehub}} repose sur Apache Kafka, système de messagerie à débit élevé open source qui fournit une plateforme à faible temps d'attente pour la gestion des flux de données en temps réel.
+Le fait de connecter {{site.data.keyword.messagehub_full}} à {{site.data.keyword.iot_full}} permet d'obtenir un bus de messages à débit élevé évolutif pour le stockage de données d'historique. {{site.data.keyword.messagehub}} repose sur Apache Kafka, système de messagerie à débit élevé open source qui fournit une plateforme à faible temps d'attente pour la gestion des flux de données en temps réel.
+
+Evénements d'acheminement de partitions MessageHub en utilisant une clé de partitionnement. La clé est constituée par concaténation de l'ID organisation {{site.data.keyword.iot_short}} en 6 caractères avec le type de terminal et l'ID terminal. Les zones de contenu, incluant horodatage et ID événement, ne sont pas utilisées pour constituer la clé de partitionnement. Cette configuration garantit que tous les événements d'un terminal spécifique sont envoyés à la même partition, de sorte que tous les événements sont traités dans l'ordre où ils sont envoyés. 
 
 ## Avant de commencer  
 {: #byb}
@@ -25,6 +27,7 @@ Avant de connecter {{site.data.keyword.messagehub}} à votre service {{site.data
 - Configurez {{site.data.keyword.messagehub}} dans le même espace {{site.data.keyword.Bluemix_notm}} que votre instance {{site.data.keyword.iot_short_notm}} à l'aide du catalogue {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur {{site.data.keyword.messagehub}}, voir [Getting started with {{site.data.keyword.messagehub}}](https://console.{DomainName}/docs/services/MessageHub/index.html).
 
 - Vérifiez que vous disposez des privilèges de développeur dans l'organisation {{site.data.keyword.Bluemix_notm}} et que vous êtes connecté via {{site.data.keyword.Bluemix_notm}}. Si vous n'êtes pas connecté via {{site.data.keyword.Bluemix_notm}} ou si vous ne disposez pas de privilèges de développeur dans cette organisation {{site.data.keyword.Bluemix_notm}},  vous ne pourrez pas autoriser la liaison entre {{site.data.keyword.messagehub}} et {{site.data.keyword.iot_short_notm}}.
+
 
 ## Connexion
 

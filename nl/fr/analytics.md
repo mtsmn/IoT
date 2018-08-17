@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-02-28"
+  years: 2016, 2018
+lastupdated: "2017-03-13"
 
 ---
 
@@ -16,7 +16,15 @@ lastupdated: "2017-02-28"
 # Analyse de données IoT en temps réel
 {: #analytics}  
 
-Utilisez Watson {{site.data.keyword.iot_full}} Analytics pour obtenir les informations d'analyse en temps réel dont vous avez besoin à partir des données brutes générées par vos terminaux.  
+**Important :** Nous lançons un nouveau programme bêta proposant une nouvelle façon de définir des règles pour vos données de terminal IoT dans le cadre d'un programme plus vaste de modifications visant à améliorer la manière dont {{site.data.keyword.iot_full}} distribue des règles et des actions.
+
+Pour en savoir plus, consultez l'article de blogue [Une approche alternative pour définir des règles sur les données IoT ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Pour commencer à définir vos propres règles, voir la documentation [Création de règles imbriquées (bêta)](information_management/im_rules.html).
+
+## A propos de l'analyse de données IoT en temps réel
+
+Utilisez Watson {{site.data.keyword.iot_short_notm}} Analytics pour obtenir les informations d'analyse en temps réel dont vous avez besoin à partir des données brutes générées par vos terminaux.  
 {: shortdesc}
 
 En utilisant des [tableaux et des cartes](data_visualization.html), vous pouvez visualiser, sous forme

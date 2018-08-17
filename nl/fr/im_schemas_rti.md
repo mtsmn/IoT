@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-03-14"
+lastupdated: "2017-03-14"
 
 ---
 
@@ -15,19 +15,12 @@ lastupdated: "2018-03-14"
 # Création de schémas de type de terminal
 {: #iotrtinsights_task}
 
-**Important :** Nous lançons un nouveau programme bêta proposant une nouvelle façon de définir des règles pour vos données de terminal IoT dans le cadre d'un programme plus vaste de modifications visant à améliorer la manière dont {{site.data.keyword.iot_full}} distribue des règles et des actions.  
+Pour utiliser les fonctions {{site.data.keyword.iot_short}}, telles que des règles et des actions, vous devez créer un schéma pour mapper des propriétés de terminal à des noms de propriété conviviaux, définir les unités de données pour les propriétés et spécifier un type de message à utiliser avec le schéma.
+{: shortdesc}
 
-Pour en savoir plus, consultez l'article de blogue [Une approche alternative pour définir des règles sur les données IoT ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.  
+**Important :** Des schémas sont requis pour utiliser des règles et des actions. Pour plus d'informations, voir [Cloud Analytics](cloud_analytics.html#rules).
 
-Pour commencer à définir vos propres règles, voir la documentation [Création de règles imbriquées (bêta)](information_management/im_rules.html).
-
-## A propos de cette tâche
-
-Pour utiliser les fonctions {{site.data.keyword.iot_short_notm}}, telles que des règles et des actions, vous devez créer un schéma pour mapper des propriétés de terminal à des noms de propriété conviviaux, définir les unités de données pour les propriétés et spécifier un type de message à utiliser avec le schéma.
-
-Des schémas sont requis pour utiliser des règles et des actions. Pour plus d'informations, voir [Cloud Analytics](cloud_analytics.html#rules).
-
-Les fonctions d'analyse sont fusionnées à partir du service {{site.data.keyword.iotrtinsights_full}}. Si votre organisation {{site.data.keyword.iot_short_notm}} est utilisée comme source de données pour une instance {{site.data.keyword.iotrtinsights_short}} existante, Cloud and Edge Analytics n'est pas activé tant que les instances {{site.data.keyword.iotrtinsights_short}} existantes n'ont pas été migrées. Continuez d'utiliser le tableau de bord {{site.data.keyword.iotrtinsights_short}} pour vos besoins en analyse tant que la migration n'est pas terminée. Pour plus d'informations, voir le [blogue IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} sur IBM developerWorks et vos tableaux de bord de l'instance {{site.data.keyword.iotrtinsights_short}} existante.  
+**Important :** Les fonctions d'analyse sont fusionnées à partir du service {{site.data.keyword.iotrtinsights_full}}. Si votre organisation {{site.data.keyword.iot_short_notm}} est utilisée comme source de données pour une instance {{site.data.keyword.iotrtinsights_short}} existante, Cloud and Edge Analytics n'est pas activé tant que les instances {{site.data.keyword.iotrtinsights_short}} existantes n'ont pas été migrées. Continuez d'utiliser le tableau de bord {{site.data.keyword.iotrtinsights_short}} pour vos besoins en analyse tant que la migration n'est pas terminée. Pour plus d'informations, voir le [blogue IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} sur IBM developerWorks et vos tableaux de bord de l'instance {{site.data.keyword.iotrtinsights_short}} existante.  
 
 ## Ajout d'un schéma de terminal
 {: #add_schema}

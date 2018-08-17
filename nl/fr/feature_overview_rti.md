@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-05-08"
 
   1. Connexion - Connexion de terminaux et développement d'applications.
   2. Gestion des informations - Stockage, normalisation, transformation et révision des données de terminal et intégration de {{site.data.keyword.iot_short_notm}} à d'autres services.
-  3. Analyse - Spécification de conditions de règle basées sur les données de terminal en temps réel pour déclencher des alertes et des actions.
+  3. Analyse - Visualisation de données de terminal en temps réel à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}}.
   4. Gestion des risques - Configuration de la connectivité et de l'architecture sécurisées avec contrôle d'accès pour les utilisateurs et les applications.
 
 ## Connexion
@@ -37,7 +37,8 @@ Les fonctions de gestion des terminaux sont fournies via une API de gestion des 
 
 ### Extensions et intégrations de services
 
-Les extensions et l'intégration de services permettent d'ajouter des services externes et des extensions définies par l'utilisateur de services de base à une instance de {{site.data.keyword.iot_short_notm}}. Les services externes qui peuvent être intégrés à {{site.data.keyword.iot_short_notm}} comprennent les services de localisation météorologiques de The Weather Company, vous permettant de trouver la météo en cours dans la zone géographique d'un terminal et les données Jasper SIM. Pour plus d'informations sur les extensions et les intégrations de services tiers, reportez-vous à la section relative à l'[intégration de services externes](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
+Les extensions et l'intégration de services permettent d'ajouter des services externes et des extensions définies par l'utilisateur de services de base à une instance de {{site.data.keyword.iot_short_notm}}. Les services externes qui peuvent être intégrés à {{site.data.keyword.iot_short_notm}} comprennent les services de localisation météorologiques de The Weather Company, vous permettant de trouver la météo en cours dans la zone géographique d'un terminal, les données Jasper SIM et {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. Pour plus d'informations sur les extensions et les intégrations de services tiers, reportez-vous à la section relative à l'[intégration de services externes](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
+
 
 ---
 
@@ -61,9 +62,12 @@ Différents modèles et marques publient des données dans différents formats. 
 Pour plus d'informations sur l'utilisation de cette fonction, voir [Introduction à la gestion des données](GA_information_management/ga_im_device_twin.html).
 
 ---
-
 ## Analyse
 {: #analytics}
+
+### Visualisation de données de terminal en temps réel
+
+Vous pouvez visualiser et afficher des données de terminal en temps réel à l'aide de cartes de tableau de bord. Les cartes de tableau de bord surveillent et affichent des données de terminal en temps réel, ce qui vous permet d'assurer le suivi des principaux terminaux ou des données de terminal. Ces visualisations sont affichées sur le tableau de bord {{site.data.keyword.iot_short_notm}} principal pour vous permettre d'accéder rapidement au contexte et au statut des données de terminal en temps réel. Pour plus d'informations, voir la rubrique relative à la [visualisation des données en temps réel](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
 
 ### Edge Analytics et Cloud Analytics
 

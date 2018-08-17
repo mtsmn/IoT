@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-03-13"
 Les bibliothèques client fournissent les outils et les fichiers dont vous avez besoin pour générer et développer du code afin d'intégrer et de connecter vos terminaux et vos applications sur {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
-Des bibliothèques client sont fournies pour chacun des langages deprogrammation pris en charge, et vous pouvez y accéder à partir du [référentiel GitHub {{site.data.keyword.iot_short_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot){:new_window} ou des liens directs suivants :
+Des bibliothèques client sont fournies pour chacun des langages de programmation pris en charge, et vous pouvez y accéder à partir du [référentiel GitHub {{site.data.keyword.iot_short_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot){:new_window} ou des liens directs suivants :
 
 ## C++
 
@@ -43,11 +43,10 @@ Des bibliothèques client sont fournies pour chacun des langages deprogrammation
 - [Exemples ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
 - [Documentation supplémentaire ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
 
-## mBed C++
+## Mbed C++
 
-- [Bibliothèque client ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
-- [Exemples ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){:new_window}
-- [Documentation supplémentaire ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://iotf.readthedocs.io/en/latest/devices/libraries/mbedcpp.html){:new_window}
+- [Bibliothèque client ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+- [Exemples ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){:new_window}
 
 ## Node.js
 - [Bibliothèque client ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}

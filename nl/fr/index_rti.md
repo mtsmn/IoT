@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2017-12-21"
 
 ---
 
@@ -38,34 +38,33 @@ Un ensemble plus détaillé de guides d'initiation et d'exemples d'applications 
 
 Pour être rapidement opérationnel avec le service, examinez les options suivantes selon votre situation :
 
-|  |   Le service est déployé | Le service n'est pas déployé
- | -------------| ------------- | -------------
-  |**J'ai un terminal à connecter** | [Connectez votre terminal à {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explorez la connexion de terminal dans la [démonstration Play with {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  |**Je n'ai aucun terminal à connecter** | [Créez et connectez un simulateur de terminal Node-RED](nodereddevice_sample.html){:new_window}. Ou [Connectez votre Smartphone ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Commencez à utiliser [Watson IoT Platform Starter](https://console.bluemix.net/docs/starters/IoT-starter/iot500.html).
-  
+   |   Le service est déployé | Le service n'est pas déployé
+  ------------- | -------------
+  **J'ai un terminal à connecter** | [Connectez votre terminal à {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Regardez la connexion de terminal dans la démonstration [Play organization demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
+  **Je n'ai aucun terminal à connecter** | [Créez et connectez un simulateur de terminal Node-RED](nodereddevice_sample.html){:new_window}. | Commencez à utiliser [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html).
 Pour plus d'informations sur la connexion de types de terminaux spécifiques à {{site.data.keyword.iot_short_notm}}, voir les [recettes developerWorks ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Pour la documentation du développeur de connexion de terminal, voir :
 - [Connectivité MQTT pour les terminaux](devices/mqtt.html)
 - [Connectivité MQTT pour les passerelles](gateways/mqtt.html)
 
-<!--
-## Step 2: Analyze your device data
+## Etape 2 : Analyser vos données de terminal
 {: #analyzing_data}
-Start exploring the real-time data that the devices are sending to {{site.data.keyword.iot_short_notm}}.
-{{site.data.keyword.iot_short_notm}} includes the following analytics tools:  
-- [Boards and cards](data_visualization.html) to visualize your real-time device data.
-- [Rules and actions](analytics.html) that are triggered by real-time device data.
-For a quick getting started example, see the [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window} developerWorks recipe.
--->
 
-## Etape 2 : Créer des applications destinées à consommer vos données de terminal
+Commencez par explorer les données en temps réel envoyées par les terminaux à {{site.data.keyword.iot_short_notm}}.
+
+{{site.data.keyword.iot_short_notm}} inclut les outils d'analyse suivants :  
+- [Tableaux et cartes](data_visualization.html) pour visualiser vos données de terminal en temps réel
+- [Règles et actions](analytics.html) déclenchées par les données de terminal en temps réel
+
+Pour un exemple montrant comment démarrer rapidement, voir la recette developerWorks [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window}.
+
+## Etape 3 : Créer des applications destinées à consommer vos données de terminal
 {: #develop_applications}
 
-Créez et connectez vos propres applications pour consommer des données de terminal.
+Etendez les fonctions d'analyse de données de {{site.data.keyword.iot_short_notm}} en créant et en connectant vos propres applications afin qu'elles consomment des données de terminal historiques et en temps réel.
 
 Pour plus d'informations, voir les rubriques suivantes :   
 - Explorez la [documentation de développeur d'applications](applications/api.html) et la [{{site.data.keyword.iot_short_notm}}documentation d'API](reference/api.html).
 - Explorez les [bibliothèques client {{site.data.keyword.iot_short_notm}} ](iot_platform_client_lib.html) qui fournissent des outils et des fichiers pour générer et développer du code afin d'intégrer et de connecter vos terminaux et vos applications.
 - [Connectez un service {{site.data.keyword.cloudantfull}} ](cloudant_connector.html) à votre {{site.data.keyword.iot_short_notm}} pour stocker les données de terminal historiques.
-- Créez vos propres règles à l'aide de la fonction nouvelle de [règles imbriquées (bêta)](information_management/im_rules.html).

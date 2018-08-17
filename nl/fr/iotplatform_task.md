@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-02"
+  years: 2016, 2018
+lastupdated: "2018-03-15"
 
 ---
 
@@ -134,7 +134,7 @@ Cette valeur indique que vous utilisez l'autorisation à base de jeton.
 - Mot de passe : *jeton d'authentification*  
 Cette valeur est le jeton unique que vous avez défini ou qui a été affecté à votre terminal lorsque vous l'avez enregistré.
 - Format de sujet d'événement : iot-2/evt/*event_id*/fmt/*format_string*  
- Où *event_id* spécifie le nom d'événement affiché dans {{site.data.keyword.iot_short_notm}} et *format_string* est le format de l'événement, par exemple, JSON.
+Où *event_id* spécifie le nom d'événement affiché dans {{site.data.keyword.iot_short_notm}} et *format_string* est le format de l'événement, par exemple, JSON.
 - Format de message : JSON  
  {{site.data.keyword.iot_short_notm}} prend en charge plusieurs formats, tels que JSON et texte.
 
@@ -142,16 +142,41 @@ Pour plus d'informations sur la connexion de votre terminal, voir [Connectivité
 
 La documentation de l'API [Administration d'organisation ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} contient également les informations demandées.
 
+## Restauration de terminaux supprimés (bêta)
+{: #restore_device}
+
+**Important :** La fonction de restauration de terminal {{site.data.keyword.iot_short_notm}} est disponible uniquement dans le cadre d'un programme bêta limité. Il est possible que des mises à jour ultérieures incluent des modifications incompatibles avec la version en cours de cette fonction. Essayez-la et [dites-nous ce que vous en pensez ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+
+Un terminal supprimé par erreur peut être restauré pendant 14 jours. 
+
+Lorsque le terminal est supprimé, un “mémento” de terminal est créé. Ce mémento est une copie du document de terminal, disponible pendant 14 jours et supprimée ensuite.
+
+La commande suivante de restauration d'une API de terminal vous permet d'utiliser le mémento pour restaurer une version antérieure du terminal :
+
+    POST /archive/device/types/{typeId}/devices/{deviceId}/restore
+
+
+Vous pouvez utiliser l'API suivante pour extraire la liste de tous les mémentos de terminal :
+
+    GET /archive/device/types/{typeId}/devices/{deviceId}
+
+Pour plus d'informations sur la restauration d'API de terminaux, voir [Restore Devices APIs Beta ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html).
+
+## Reconnexion de tereminaux
+
+Il arrive que des terminaux se déconnectent de {{site.data.keyword.iot_short_notm}} en raison d'un problème réseau ou d'une maintenance de routine sur le service ou l'infrastructure. Lorsque que le ou les terminaux se reconnectent, vous voudrez peut-être minimiser le trafic réseau généré lors de la reconnexion ou définir un temps d'attente afin de réduire le nombre de reconnexions simultanées. 
+
+
 ## Recettes relatives à la connexion de terminaux
 
 Les recettes suivantes décrivent le flux complet utilisé pour enregistrer et connecter des terminaux à Watson IoT Platform.
 
-- [How to Register Devices in IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/){: new_window}
+- [How to Register Devices in IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/){: new_window}
 
-- [Connecting Raspberry Pi as a Device to Watson IoT using Node-RED ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
+- [Connecting Raspberry Pi as a Device to Watson IoT using Node-RED ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
 
-- [Connect an Arduino Uno device to the IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/){: new_window}
+- [Connect an Arduino Uno device to the IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/){: new_window}
 
-- [Connecting a Sense HAT to Watson IoT using Node-RED ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/){: new_window}
+- [Connecting a Sense HAT to Watson IoT using Node-RED ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/){: new_window}
 
-- [Connecting Raspberry Pi with Windows IoT Core as a Device to Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/){: new_window}
+- [Connecting Raspberry Pi with Windows IoT Core as a Device to Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/){: new_window}
