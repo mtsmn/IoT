@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-05-08"
 
   1. 연결 - 디바이스를 연결하고 애플리케이션을 개발합니다.
   2. 정보 관리 - 디바이스 데이터를 저장하고 정규화하고 변환하고 검토하며 {{site.data.keyword.iot_short_notm}}을 다른 서비스와 통합합니다.
-  3. 분석 - 경보와 조치를 트리거하기 위해 실시간 디바이스 데이터에 기반한 규칙 조건을 지정합니다.
+  3. 분석 - {{site.data.keyword.iot_short_notm}} 대시보드를 사용하여 실시간 디바이스 데이터를 시각화합니다.
   4. 위험 관리 - 사용자와 애플리케이션에 대한 액세스 제어를 사용하여 보안 연결과 아키텍처를 구성합니다.
 
 ## 연결
@@ -37,7 +37,8 @@ lastupdated: "2018-05-08"
 
 ### 확장기능 및 서비스 통합
 
-확장기능 및 서비스 통합을 통해 외부 서비스와 코어 서비스의 사용자 정의 확장기능을 모두 {{site.data.keyword.iot_short_notm}}의 인스턴스에 추가할 수 있습니다. {{site.data.keyword.iot_short_notm}}과 통합할 수 있는 외부 서비스에는 디바이스 위치에서 현재 날씨 및 Jasper SIM 데이터를 찾을 수 있는 The Weather Company 날씨 위치 서비스가 포함됩니다.써드파티 서비스 통합 및 확장기능에 대한 자세한 정보는 [외부 서비스 통합](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)을 참조하십시오.
+확장기능 및 서비스 통합을 통해 외부 서비스와 코어 서비스의 사용자 정의 확장기능을 모두 {{site.data.keyword.iot_short_notm}}의 인스턴스에 추가할 수 있습니다. {{site.data.keyword.iot_short_notm}}과 통합할 수 있는 외부 서비스에는 디바이스 위치에서 현재 날씨를 찾을 수 있는 The Weather Company 날씨 위치 서비스, Jasper SIM 데이터 및 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}이 포함됩니다. 써드파티 서비스 통합 및 확장기능에 대한 자세한 정보는 [외부 서비스 통합](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)을 참조하십시오.
+
 
 ---
 
@@ -61,9 +62,12 @@ lastupdated: "2018-05-08"
 이 기능 사용에 대한 자세한 정보는 [데이터 관리 소개](GA_information_management/ga_im_device_twin.html)를 참조하십시오.
 
 ---
-
 ## 분석
 {: #analytics}
+
+### 실시간 디바이스 데이터 시각화
+
+대시보드 카드를 사용하여 실시간 디바이스 데이터를 시각화하고 표시할 수 있습니다. 대시보드 카드는 실시간으로 디바이스 데이터를 모니터하고 표시하므로, 키 디바이스 또는 디바이스 데이터를 계속 추적할 수 있습니다. 실시간 디바이스 데이터의 컨텍스트와 상태에 신속하게 액세스할 수 있도록 이러한 시각화는 기본 {{site.data.keyword.iot_short_notm}} 대시보드에 표시됩니다. 자세한 정보는 [실시간 데이터 시각화](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html)를 참조하십시오.
 
 ### 에지 및 클라우드 분석
 

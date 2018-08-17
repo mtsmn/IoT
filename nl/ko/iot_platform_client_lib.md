@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-03-13"
 클라이언트 라이브러리에서는 {{site.data.keyword.iot_full}}에서 디바이스와 애플리케이션을 통합하고 연결하기 위한 코드를 빌드하고 개발하는 데 필요한 도구와 파일을 제공합니다.
 {:shortdesc}
 
-지원되는 각 프로그래밍 언어에 대해 클라이언트 라이브러리가 제공되며 [{{site.data.keyword.iot_short_notm}} GitHub 저장소 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot){:new_window} 또는 다음 직접 링크에서 라이브러리에 액세스할 수 있습니다. 
+지원되는 각 프로그래밍 언어에 대해 클라이언트 라이브러리가 제공되며 [{{site.data.keyword.iot_short_notm}} GitHub 저장소 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot){:new_window} 또는 다음 직접 링크에서 라이브러리에 액세스할 수 있습니다.
 
 ## C++
 
@@ -43,11 +43,10 @@ lastupdated: "2017-03-13"
 - [샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
 - [추가 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
 
-## mBed C++
+## Mbed C++
 
-- [클라이언트 라이브러리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
-- [샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){:new_window}
-- [추가 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://iotf.readthedocs.io/en/latest/devices/libraries/mbedcpp.html){:new_window}
+- [클라이언트 라이브러리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+- [샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){:new_window}
 
 ## Node.js
 - [클라이언트 라이브러리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}

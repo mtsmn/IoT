@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2017-12-21"
 
 ---
 
@@ -38,34 +38,33 @@ lastupdated: "2018-05-08"
 
 서비스를 시작하고 실행하려면 상황에 따라 다음 옵션을 탐색하십시오.
 
-|  |서비스가 배치됨 |서비스가 배치되지 않음
- | -------------| ------------- | -------------
-  |**연결할 디바이스가 있음**|[{{site.data.keyword.iot_short_notm}}에 디바이스 연결](iotplatform_task.html#iotplatform_task).|[{{site.data.keyword.iot_short_notm}}으로 재생 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}에서 디바이스 연결을 탐색합니다.
-  |**I 디바이스가 연결되지 않도록 함** | [Node-RED 디바이스 시뮬레이터 작성 및 연결](nodereddevice_sample.html){:new_window}을 수행합니다. 또는 [스마트폰에 연결 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}합니다. |[Watson IoT Platform 스타터](https://console.bluemix.net/docs/starters/IoT-starter/iot500.html)를 시작합니다.
-  
+   | 서비스가 배치됨 | 서비스가 배치되지 않음
+  ------------- | -------------
+  **I 디바이스가 연결되도록 함** | [{{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task)에 디바이스를 연결합니다.| [조직 데모 재생(![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"))](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}에서 디바이스 연결을 탐색합니다.
+  **I 디바이스가 연결되지 않도록 함** | [Node-RED 디바이스 시뮬레이터 작성 및 연결](nodereddevice_sample.html){:new_window}을 수행합니다. | [Watson IoT Platform 스타터](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html)를 시작합니다.
 특정 디바이스 유형을 {{site.data.keyword.iot_short_notm}}에 연결하는 방법에 대한 자세한 정보는 [developerWorks 레시피 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}를 참조하십시오.  
 
 디바이스 연결 개발자 문서는 다음을 참조하십시오.
 - [디바이스용 MQTT 연결](devices/mqtt.html).
 - [게이트웨이용 MQTT 연결](gateways/mqtt.html).
 
-<!--
-## Step 2: Analyze your device data
+## 2단계: 디바이스 데이터 분석
 {: #analyzing_data}
-Start exploring the real-time data that the devices are sending to {{site.data.keyword.iot_short_notm}}.
-{{site.data.keyword.iot_short_notm}} includes the following analytics tools:  
-- [Boards and cards](data_visualization.html) to visualize your real-time device data.
-- [Rules and actions](analytics.html) that are triggered by real-time device data.
-For a quick getting started example, see the [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window} developerWorks recipe.
--->
 
-## 2단계: 디바이스 데이터를 이용하는 애플리케이션 작성
+디바이스에서 {{site.data.keyword.iot_short_notm}}에 보내는 실시간 데이터 탐색을 시작합니다.
+
+{{site.data.keyword.iot_short_notm}}에는 다음 분석 도구가 있습니다.  
+- 실시간 디바이스 데이터를 시각화하는 [보드 및 카드](data_visualization.html).
+- 실시간 디바이스 데이터에서 트리거하는 [규칙 및 조치](analytics.html).
+
+빠른 시작 예제는 [IBM Watson IoT Platform 클라우드 분석에서 규칙 및 조치 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window} developerWorks 레시피를 참조하십시오.
+
+## 3단계: 디바이스 데이터를 이용하는 애플리케이션 작성
 {: #develop_applications}
 
-디바이스 데이터를 이용하기 위해서 자체 앱을 작성하고 연결합니다. 
+실시간 및 히스토리안 디바이스 데이터를 이용하기 위해 고유 애플리케이션을 작성하고 연결하여 {{site.data.keyword.iot_short_notm}}의 데이터 분석 기능을 확장합니다.
 
 자세한 정보는 다음 주제를 참조하십시오.   
 - [애플리케이션 개발자 문서](applications/api.html) 및 [{{site.data.keyword.iot_short_notm}} API 문서](reference/api.html)를 탐색하십시오.
 - 디바이스와 애플리케이션을 통합하고 연결하는 코드를 빌드하고 개발하기 위한 도구와 파일을 제공하는 [{{site.data.keyword.iot_short_notm}} 클라이언트 라이브러리](iot_platform_client_lib.html)를 탐색합니다.
 - [히스토리 디바이스 데이터를 저장하기 위해 {{site.data.keyword.cloudantfull}} 서비스](cloudant_connector.html)를 {{site.data.keyword.iot_short_notm}}에 연결합니다.
-- [임베디드 규칙(베타)](information_management/im_rules.html) 기능을 사용하여 자체 규칙을 작성합니다. 

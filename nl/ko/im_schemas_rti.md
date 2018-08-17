@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-03-14"
+lastupdated: "2017-03-14"
 
 ---
 
@@ -15,19 +15,12 @@ lastupdated: "2018-03-14"
 # 디바이스 유형 스키마 작성
 {: #iotrtinsights_task}
 
-**중요:** {{site.data.keyword.iot_full}}이 규칙과 조치를 제공하는 방식을 향상하기 위해 폭넓은 프로그램 개선의 일부로 사용자의 IoT 디바이스에서 규칙을 정의하는 새로운 방식에 관한 베타를 출시합니다.   
+규칙 및 조치와 같은 {{site.data.keyword.iot_short}} 기능을 사용하려면 스키마를 작성하여 디바이스 특성을 사용자에게 익숙한 특성 이름에 맵핑하고 특성의 데이터 단위를 설정하며 스키마와 함께 사용할 메시지 유형을 지정해야 합니다.
+{: shortdesc}
 
-더 자세히 알아보려면 [IoT 데이터에서 규칙 정의를 위한 다른 접근 방법 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window} 블로그 게시물을 확인하십시오.   
+**중요:** 스키마는 규칙과 조치를 사용하는 데 필요합니다. 자세한 정보는 [클라우드 분석](cloud_analytics.html#rules)을 참조하십시오.
 
-자체 규칙 정의를 시작하려면 [임베디드 규칙 작성(베타)](information_management/im_rules.html) 문서를 참조하십시오. 
-
-## 이 태스크에 관한 정보
-
-규칙 및 조치와 같은 {{site.data.keyword.iot_short_notm}} 기능을 사용하려면 스키마를 작성하여 디바이스 특성을 사용자에게 익숙한 특성 이름에 맵핑하고 특성의 데이터 단위를 설정하며 스키마와 함께 사용할 메시지 유형을 지정해야 합니다.
-
-스키마는 규칙과 조치를 사용하는 데 필요합니다. 자세한 정보는 [클라우드 분석](cloud_analytics.html#rules)을 참조하십시오.
-
-분석 기능은 {{site.data.keyword.iotrtinsights_full}} 서비스에서 병합됩니다. {{site.data.keyword.iot_short_notm}} 조직이 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스의 데이터 소스로 사용되는 경우 {{site.data.keyword.iotrtinsights_short}} 인스턴스가 마이그레이션된 후에야 클라우드 및 에지 분석이 사용됩니다. 마이그레이션이 완료될 때까지 분석이 필요할 때는 계속 {{site.data.keyword.iotrtinsights_short}} 대시보드를 사용하십시오. 자세한 정보는 IBM developerWorks의 [IBM Watson IoT Platform 블로그 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} 및 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스 대시보드를 참조하십시오.  
+**중요:** 분석 기능은 {{site.data.keyword.iotrtinsights_full}} 서비스에서 병합됩니다. {{site.data.keyword.iot_short_notm}} 조직이 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스의 데이터 소스로 사용되는 경우 {{site.data.keyword.iotrtinsights_short}} 인스턴스가 마이그레이션된 후에야 클라우드 및 에지 분석이 사용됩니다. 마이그레이션이 완료될 때까지 분석이 필요할 때는 계속 {{site.data.keyword.iotrtinsights_short}} 대시보드를 사용하십시오. 자세한 정보는 IBM developerWorks의 [IBM Watson IoT Platform 블로그 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} 및 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스 대시보드를 참조하십시오.  
 
 ## 디바이스 스키마 추가
 {: #add_schema}

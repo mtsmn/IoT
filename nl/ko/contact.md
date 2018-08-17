@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-11-03"
+  years: 2016, 2018
+lastupdated: "2018-01-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-11-03"
 # {{site.data.keyword.iot_short_notm}} 지원에 문의
 {: #gettinghelp}
 
-{{site.data.keyword.iot_full}} 사용 지원을 위해 연락을 취하는 옵션에는 여러 가지가 있습니다(예: 포럼을 통해, Slack을 통해 또는 지원 티켓을 열어 도움 받기). 
+{{site.data.keyword.iot_full}} 사용 지원을 위해 연락을 취하는 옵션에는 여러 가지가 있습니다(예: 포럼을 통해, Slack을 통해 또는 지원 티켓을 열어 도움 받기). 아이디어 포털을 사용하여 {{site.data.keyword.iot_short_notm}}의 개선사항에 대한 아이디어를 제출할 수도 있습니다. 
 
 ## 포럼
 
@@ -30,8 +30,12 @@ lastupdated: "2017-11-03"
 
 * [Slack ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://ibm-developers.slack.com/){:new_window} - #internet-of-things 채널 결합.
 
-Slack 작업공간에 대한 액세스 권한이 아직 없습니까? [지금 액세스 권한 요청 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://bxdevs-slack-invite.mybluemix.net/){:new_window}
 
 ## 지원 티켓
 
-* [지원 문의 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}.
+* [지원 문의 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}
+
+
+## 아이디어 포털
+
+* [IBM Cloud – 체계적인 아이디어 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://ibm.biz/cloudideas){:new_window}
