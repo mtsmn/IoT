@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-05-08"
 
   1. Verbindung - Verbinden von Geräten und Entwickeln von Anwendungen.
   2. Informationsmanagement - Speichern, Normalisieren, Umwandeln und Überprüfen von Gerätedaten und Integration von {{site.data.keyword.iot_short_notm}} mit anderen Services.
-  3. Analyse - Angeben von Regelbedingungen auf der Basis von Echtzeitgerätedaten zum Auslösen von Alerts und Aktionen.
+  3. Analyse - Visualisieren von Gerätedaten in Echtzeit durch Verwendung des {{site.data.keyword.iot_short_notm}}-Dashboards.
   4. Risikomanagement - Konfigurieren einer sicheren Konnektivität und Architektur mit Zugriffssteuerung für Benutzer und Anwendungen.
 
 ## Verbindung
@@ -37,7 +37,8 @@ Gerätemanagementfunktionen können über die Gerätemanagement-API und einen f�
 
 ### Erweiterungen und Serviceintegrationen
 
-Im Rahmen von Erweiterungen und der Serviceintegration können sowohl externe Services als auch benutzerdefinierte Erweiterungen von Kernservices zu einer Instanz von {{site.data.keyword.iot_short_notm}} hinzugefügt werden. Zu den externen Services, die mit {{site.data.keyword.iot_short_notm}} integriert werden können, gehören standortbezogene Wetterservices von 'The Weather Company', die Ihnen ermöglichen, das aktuelle Wetter an einem Gerätestandort zu ermitteln, und Jasper-SIM-Daten. Weitere Informationen zu den Serviceintegrationen von Drittanbietern sowie Erweiterungen finden Sie in der Veröffentlichung [Externe Services integrieren](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
+Im Rahmen von Erweiterungen und der Serviceintegration können sowohl externe Services als auch benutzerdefinierte Erweiterungen von Kernservices zu einer Instanz von {{site.data.keyword.iot_short_notm}} hinzugefügt werden. Zu den externen Services, die mit {{site.data.keyword.iot_short_notm}} integriert werden können, zählen standortbezogene Wetterservices von 'The Weather Company', die Ihnen ermöglichen, das aktuelle Wetter an einer Geräteposition zu ermitteln, Jasper-SIM-Daten und {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. Weitere Informationen zu den Serviceintegrationen von Drittanbietern sowie Erweiterungen finden Sie in der Veröffentlichung [Externe Services integrieren](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
+
 
 ---
 
@@ -56,14 +57,17 @@ Geräteereignisdaten von Ihrem {{site.data.keyword.iot_short_notm}}-Service kön
 
 ### Datenmanagement
 
-Unterschiedliche Marken und Modelle von Geräten führen das Publizieren von Daten in unterschiedlichen Formaten durch. Das Feature für das Datenmanagement ermöglicht Ihnen das Umwandeln und Normalisieren dieser Daten in einer einzigen, logischen Ansicht (sog. *Gerätestatus*), die von Anwendungen nachvollzogen und verarbeitet werden kann. Mit dem Feature für das Datenmanagement kann die Anwendungsentwicklung erheblich vereinfacht werden, da die Anwendung die unterschiedlichen Formate der Ereignisdaten, die von den einzelnen Geräten gesendet werden, nicht mehr interpretieren können muss. Wenn Geräte Ereignisse in {{site.data.keyword.iot_short_notm}} publizieren, dann kann der Inhalt der Ereignisse anhand von Zuordnungen benutzerdefinierten Statuseigenschaften zugewiesen werden. Wenn das eingehende Ereignis zu einer Änderung des Status eines Geräts führt, dann werden die Werte der Gerätestatuseigenschaften aktualisiert und in {{site.data.keyword.iot_short_notm}} gespeichert. Die Werte werden der Anwendung auf Anforderung zur Verfügung gestellt. Dazu wird eine HTTP-Anwendungsprogrammierschnittstelle (API) verwendet oder es wird eine Subskription für ein Thema durchgeführt.
+Unterschiedliche Marken und Modelle von Geräten führen das Publizieren von Daten in unterschiedlichen Formaten durch. Die Funktion für das Datenmanagement ermöglicht Ihnen das Umwandeln und Normalisieren dieser Daten in einer einzigen, logischen Ansicht (sog. *Gerätestatus*), die von Anwendungen nachvollzogen und verarbeitet werden kann. Mit der Funktion für das Datenmanagement kann die Anwendungsentwicklung erheblich vereinfacht werden, da die Anwendung die unterschiedlichen Formate der Ereignisdaten, die von den einzelnen Geräten gesendet werden, nicht mehr interpretieren können muss. Wenn Geräte Ereignisse in {{site.data.keyword.iot_short_notm}} publizieren, dann kann der Inhalt der Ereignisse anhand von Zuordnungen benutzerdefinierten Statuseigenschaften zugewiesen werden. Wenn das eingehende Ereignis zu einer Änderung des Status eines Geräts führt, dann werden die Werte der Gerätestatuseigenschaften aktualisiert und in {{site.data.keyword.iot_short_notm}} gespeichert. Die Werte werden der Anwendung auf Anforderung zur Verfügung gestellt. Dazu wird eine HTTP-Anwendungsprogrammierschnittstelle (API) verwendet oder es wird eine Subskription für ein Thema durchgeführt.
 
-Weitere Informationen zur Verwendung dieses Features finden Sie in [Einführung zum Datenmanagement](GA_information_management/ga_im_device_twin.html).
+Weitere Informationen zur Verwendung dieser Funktion finden Sie in [Einführung zum Datenmanagement](GA_information_management/ga_im_device_twin.html).
 
 ---
-
 ## Analyse
 {: #analytics}
+
+### Echtzeitdaten von Geräten visualisieren
+
+Sie können mithilfe von Dashboardkarten Gerätedaten in Echtzeit visualisieren und anzeigen. Dashboardkarten überwachen Gerätedaten in Echtzeit und zeigen diese an, wodurch Sie wichtige Geräte oder Gerätedaten verfolgen können. Diese Visualisierungen werden im Hauptdashboard von {{site.data.keyword.iot_short_notm}} angezeigt, um Ihnen einen schnellen Zugriff auf den Kontext und den Status von Gerätedaten in Echtzeit zu ermöglichen. Weitere Informationen finden Sie in der Veröffentlichung zum [Visualisieren von Echtzeitdaten](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
 
 ### Edge Analytics und Cloud Analytics
 

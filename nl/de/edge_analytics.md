@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,12 +16,21 @@ lastupdated: "2017-03-13"
 # Edge Analytics
 {: #edge_analytics}
 
+**Wichtig:** Eine Betaversion, mit der eine neue Methode zur Definition von Regeln für IoT-Gerätedaten zur Verfügung steht,
+wird im Rahmen eines umfassenderen Programms mit Änderungen gestartet, das die Bereitstellung von Regeln und Aktionen in {{site.data.keyword.iot_full}} verbessern soll.
+
+Weitere Informationen finden Sie im Blogbeitrag [Alternative Methode zur Definition von Regeln für IoT-Daten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Lesen Sie als ersten Schritt bei der Definition eigener Regeln die Informationen in der Dokumentation [Eingebettete Regeln erstellen (Beta)](information_management/im_rules.html).
+
+## Informationen zu Edge Analytics
+
 Mit Edge Analytics verschieben Sie den regelauslösenden Prozess der Analyse von der Cloud in ein für Edge Analytics aktiviertes Gateway, das den Gerätedatenverkehr zur Cloud stark reduzieren könnte, indem die Analyseverarbeitung gerätenah ausgeführt wird.
-{:shortdesk}
+{:shortdesc}
 
-Geräte senden ihre Daten an ein für Edge Analytics aktiviertes Gateway, in dem die Daten von Edge Analytics-Regeln geparst werden. Je nach Ihrer Regel und deren Aktion können kritische Daten und Alerts an {{site.data.keyword.iot_full}} gesendet werden, einen Alert im Gateway auslösen oder sie werden in eine Textdatei geschrieben, die für das Gateway lokal erreichbar ist.
+Geräte senden ihre Daten an ein für Edge Analytics aktiviertes Gateway, in dem die Daten von Edge Analytics-Regeln geparst werden. Je nach Ihrer Regel und deren Aktion können kritische Daten und Alerts an {{site.data.keyword.iot_short_notm}} gesendet werden, einen Alert im Gateway auslösen oder sie werden in eine Textdatei geschrieben, die für das Gateway lokal erreichbar ist.
 
-Das folgende Diagramm veranschaulicht die allgemeine Architektur einer {{site.data.keyword.iot_full}}-Umgebung mit Edge Analytics.
+Das folgende Diagramm veranschaulicht die allgemeine Architektur einer {{site.data.keyword.iot_short_notm}}-Umgebung mit Edge Analytics.
 ![IBM Watson IoT Platform für Edge Analytics-Architektur](images/architecture_platform_edge.svg "IBM Watson IoT Platform mit Edge Analytics-Architektur")
 
 ## Vorbereitende Schritte
@@ -70,12 +79,10 @@ Sie können Bedingungen in parallelen Reihen hinzufügen, um sie als OR-Bedingun
 
 **Wichtig:** Um eine Bedingung auszulösen, die zwei Eigenschaften vergleicht, oder um mindestens zwei Eigenschaftsbedingungen auszulösen, die sequenziell durch AND verbunden sind, müssen die auslösenden Datenpunkte in dieselbe Gerätenachricht eingeschlossen werden. Wenn die Daten in mehr als einer Nachricht empfangen werden, werden die Bedingung oder die sequenziellen Bedingungen nicht ausgelöst.  
 
-**Beispiele:**  
-Eine einfache Regel kann einen Alert auslösen, wenn ein Parameterwert größer als ein angegebener Wert ist:
-  
+**Beispiele:**   
+Eine einfache Regel kann z. B. einen Alert auslösen, wenn ein Parameterwert größer als ein angegebener Wert ist:  
 `temp>80`  
-Eine komplexere Regel kann zu einem Auslösen führen, wenn eine Übereinstimmung mit einer Kombination aus Schwellenwerten auftritt:
-  
+Eine komplexere Regel kann z. B. einen Alert auslösen, wenn eine Kombination mehrerer Schwellenwerte erreicht ist:  
 `temp>60 AND capacity>50`   
 
 4. Konfigurieren Sie für Ihre Regel Anforderungen für bedingte Auslöser.  
@@ -192,7 +199,7 @@ Gehen Sie wie folgt vor, um Informationen zum Status des Gateways anzuzeigen:
  - Lesen Sie den Abschnitt **Sensorinformationen**, in dem Sie detaillierte Diagnoseinformationen zum Gateway finden. In der folgenden Tabelle werden die verschiedenen Eigenschaften beschrieben, die in den Gerätenachrichten des Gateways enthalten sein können.
 
 
- Eigenschaft| Beschreibung
+ Eigenschaft | Beschreibung
  --- | ---
  `MsgInCount` |Die Anzahl der an den Edge Analytics-Agenten (EAA) gesendeten Nachrichten.
  `MsgInRate` | Die geschätzte Anzahl von Nachrichten pro Sekunde, die in der vergangenen Minute an den Edge Analytics-Agenten gesendet wurden.  

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-02-17"
+  years: 2016, 2018
+lastupdated: "2018-05-22"
 
 ---
 
@@ -12,10 +12,12 @@ lastupdated: "2017-02-17"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Archivierungsfunktion mithilfe von {{site.data.keyword.messagehub}} verbinden und konfigurieren  
+# Archivierungsservice mithilfe von {{site.data.keyword.messagehub}} verbinden und konfigurieren  
 {: #messagehub_main}
 
-Durch eine Verbindung zwischen {{site.data.keyword.messagehub_full}} und {{site.data.keyword.iot_short}} wird ein skalierbarer Nachrichtenbus mit hohem Durchsatz für die Speicherung archivierter Daten bereitgestellt. {{site.data.keyword.messagehub}} basiert auf Apache Kafka, das ein Open-Source-Nachrichtenübertragungssystem mit hohem Durchsatz ist, das eine Plattform mit kurzer Latenzzeit zum Handhaben von Feeds mit Echtzeitdaten bietet.
+Durch eine Verbindung zwischen {{site.data.keyword.messagehub_full}} und {{site.data.keyword.iot_full}} wird ein skalierbarer Nachrichtenbus mit hohem Durchsatz für die Speicherung archivierter Daten bereitgestellt. {{site.data.keyword.messagehub}} basiert auf Apache Kafka, das ein Open-Source-Nachrichtenübertragungssystem mit hohem Durchsatz ist, das eine Plattform mit kurzer Latenzzeit zum Handhaben von Feeds mit Echtzeitdaten bietet.
+
+Die MessageHub-Weiterleitungsfunktion partitioniert Ereignisse mithilfe eines Partitionsschlüssels. Der Schlüssel wird gebildet, indem die sechsstellige {{site.data.keyword.iot_short}}-Organisations-ID mit dem Gerätetyp und der Geräte-ID verknüpft wird. Nutzdatenfelder, wie z. B. Zeitmarke und Ereignis-ID, werden nicht dazu verwendet, den Partitionsschlüssel zu bilden. Durch diese Konfiguration wird sichergestellt, dass alle Ereignisse eines bestimmten Geräts an dieselbe Partition gesendet werden, sodass die Ereignisse in der Reihenfolge verarbeitet werden, in der sie gesendet werden. 
 
 ## Vorbereitende Schritte  
 {: #byb}
@@ -25,6 +27,7 @@ Führen Sie vor dem Herstellen einer Verbindung von {{site.data.keyword.messageh
 - Richten Sie {{site.data.keyword.messagehub}} mithilfe des {{site.data.keyword.Bluemix_notm}}-Katalogs im selben {{site.data.keyword.Bluemix_notm}}-Bereich ein, in dem auch {{site.data.keyword.iot_short_notm}} vorhanden ist. Weitere Informationen zu {{site.data.keyword.messagehub}} finden Sie in [Einführung in {{site.data.keyword.messagehub}}](https://console.{DomainName}/docs/services/MessageHub/index.html).
 
 - Stellen Sie sicher, dass Sie innerhalb der {{site.data.keyword.Bluemix_notm}}-Organisation über Entwicklerberechtigungen verfügen und dass Sie über {{site.data.keyword.Bluemix_notm}} angemeldet sind. Wenn Sie nicht über {{site.data.keyword.Bluemix_notm}} angemeldet sind oder innerhalb dieser {{site.data.keyword.Bluemix_notm}}-Organisation nicht über Entwicklerberechtigungen verfügen, können Sie die Bindung zwischen {{site.data.keyword.messagehub}} und {{site.data.keyword.iot_short_notm}} nicht autorisieren.
+
 
 ## Verbindung herstellen
 

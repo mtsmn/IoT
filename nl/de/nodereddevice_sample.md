@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017
+  years: 2016, 2018
 lastupdated: "2017-11-02"
 
 ---
@@ -17,7 +17,6 @@ Verwenden Sie Node-RED, um einen Gerätesimulator zu erstellen und Daten zum sim
 {:shortdesc}
 
 ## Übersicht
-
 Node-RED ist ein Tool, mit dem Hardware-Geräte, APIs und Online-Services auf eine neue und interessante Weise miteinander verbunden werden können. Weitere Informationen finden Sie auf der Website von [Node-RED ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://nodered.org/){: new_window}.  
 
 Sie können Ihre Node-RED-Instanz in Ihrer eigenen Umgebung ausführen oder Sie können sie als {{site.data.keyword.Bluemix_notm}}-Anwendung verwenden. Die folgenden Schritte enthalten die Anweisungen für {{site.data.keyword.Bluemix_notm}}.
@@ -36,7 +35,8 @@ Erstellen und verbinden Sie den Node-RED-Gerätesimulator, um MQTT-Gerätenachri
      <li> App-Name: myDevice
      <li> Hostname: myDevice  
     </ul>  
-Übernehmen Sie bei den anderen Optionen die Standardwerte. Nach Bereitstellung der Anwendung wird die Seite angezeigt, auf der Sie mit der Node-RED-Codierung beginnen können.**Hinweis:** Der Staging-Prozess benötigt einige Minuten.  
+Übernehmen Sie bei den anderen Optionen die Standardwerte. Nach Bereitstellung der Anwendung wird die Seite angezeigt, auf der Sie mit der Node-RED-Codierung beginnen können.
+**Hinweis:** Der Staging-Prozess benötigt einige Minuten.  
 
 2. Klicken Sie auf den Link 'Routen', um Node-RED zu öffnen, oder besuchen Sie die URL der App. Beispiel: `http://myDevice.mybluemix.net`  
 3. Führen Sie die folgenden Schritte aus, um den **Node-RED-Editor zu sichern**:
@@ -52,7 +52,7 @@ Der Gerätesimulatorablauf wird nun für den Ablaufeditor verfügbar gemacht. De
 7. Senden und empfangen Sie MQTT-Gerätenachrichten, indem Sie die folgenden Schritte ausführen:  
     1. Klicken Sie auf den Einfügeknoten **Daten senden**, um das Senden von Daten an {{site.data.keyword.iot_short_notm}} auszulösen.
        **Hinweis:** Sie können den Debugknoten **Nutzdaten der Debugausgabe** aktivieren, um anzuzeigen, welche Daten gesendet werden, und um den Funktionsknoten **Gerätenutzdaten** zu überprüfen und den Code anzuzeigen, mit dem die Nutzdaten erstellt werden. 
-    2. Nachdem Sie auf **Daten senden** geklickt haben, werden die MQTT-Nachrichten an {{site.data.keyword.iot_short_notm}} gesendet und vom Knoten **IBM IoT App In** empfangen. Der Unterablauf **Temperaturüberwachung** legt fest, ob die Temperatur sich innerhalb der definierten Grenzwerte befindet, und zeigt eine Nachricht auf der Debugregisterkarte an.
+    2. Nachdem Sie auf **Daten senden** geklickt haben, werden die MQTT-Nachrichten an {{site.data.keyword.iot_short_notm}} gesendet und vom Knoten **IBM IoT App In** empfangen. Der Unterablauf **Temperaturüberwachung** legt fest, ob die Temperatur sich innerhalb der definierten Grenzwerte befindet, und zeigt eine Nachricht auf der Debugregisterkarte an. 
        **Hinweis:** Klicken Sie auf den Switchknoten **temp thresh**, um die Grenzwerte zu überprüfen und zu ändern.
     3. Überprüfen Sie die Debugregisterkarte. Das System zeigt eine Nachricht an, z. B. **Temperatur (17) innerhalb der Grenzwerte**.
     

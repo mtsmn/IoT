@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-03-01"
 ---
 
@@ -30,4 +30,4 @@ Klicken Sie auf **Lösungen**, um den Status von ausgewählten Watson IoT-Servic
 
 ![Twitter-Feed https://twitter.com/ibmiotf](images/twitter_logo.png "Twitter-Feed von IBM Watson IoT Platform")
 
-Sie können über die aktuellen News und Updates für {{site.data.keyword.iot_short_notm}} und zugehörige Services auch auf dem Laufenden bleiben, indem Sie unserem [Twitter-Feed ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://twitter.com/ibmiotf) folgen.
+Sie können über die aktuellen News und Updates für {{site.data.keyword.iot_short_notm}} und zugehörige Services auch auf dem Laufenden bleiben, indem Sie unserem [Twitter-Feed ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://twitter.com/ibmiot) folgen. 
