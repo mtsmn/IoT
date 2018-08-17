@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-03-01"---
+  years: 2017, 2018
+lastupdated: "2017-03-01"
+---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -29,4 +30,4 @@ lastupdated: "2017-03-01"---
 
 ![Twitter フィード https://twitter.com/ibmiotf](images/twitter_logo.png "IBM Watson IoT Platform Twitter フィード")
 
-[Twitter フィード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://twitter.com/ibmiotf) をフォローすることによっても、{{site.data.keyword.iot_short_notm}} や関連サービスに関する最新情報や更新情報を入手できます。
+[Twitter フィード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://twitter.com/ibmiot) をフォローすることによっても、{{site.data.keyword.iot_short_notm}} や関連サービスに関する最新情報や更新情報を入手できます。 

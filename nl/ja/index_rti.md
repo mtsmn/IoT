@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2017-12-21"
 
 ---
 
@@ -38,34 +38,33 @@ lastupdated: "2018-05-08"
 
 そのサービスを稼働させるために、各自の状況に応じて以下のオプションを調べてください。
 
-|  |   サービスがデプロイされている | サービスがデプロイされていない
- | -------------| ------------- | -------------
-  |**接続するデバイスがある** | [デバイスを {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task) に接続します。| [Play with {{site.data.keyword.iot_short_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} で、デバイスの接続を試すことができます。
-  |**接続するデバイスがない** | [Node-RED デバイス・シミュレーターを作成して接続します](nodereddevice_sample.html){:new_window}。 または、[スマートフォンを接続します ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}。| [Watson IoT Platform の概説](https://console.bluemix.net/docs/starters/IoT-starter/iot500.html)から始めます。
-  
+   |  サービスがデプロイされている | サービスがデプロイされていない
+  ------------- | -------------
+  **接続するデバイスがある** | [デバイスを {{site.data.keyword.iot_short_notm}} に接続します](iotplatform_task.html#iotplatform_task)。| [組織のプレイ・デモ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} でデバイスの接続を試すことができます。
+  **接続するデバイスがない** | [Node-RED デバイス・シミュレーターを作成して接続します](nodereddevice_sample.html){:new_window}。 | [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html) で作業を開始します。
 特定のデバイス・タイプを {{site.data.keyword.iot_short_notm}} に接続する方法について詳しくは、[developerWorks recipes ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window} を参照してください。  
 
 デバイス接続の開発者資料については、以下のリンク先をご覧ください。
 - [デバイスの MQTT 接続](devices/mqtt.html)。
 - [ゲートウェイの MQTT 接続](gateways/mqtt.html)。
 
-<!--
-## Step 2: Analyze your device data
+## 手順 2: デバイス・データを分析する
 {: #analyzing_data}
-Start exploring the real-time data that the devices are sending to {{site.data.keyword.iot_short_notm}}.
-{{site.data.keyword.iot_short_notm}} includes the following analytics tools:  
-- [Boards and cards](data_visualization.html) to visualize your real-time device data.
-- [Rules and actions](analytics.html) that are triggered by real-time device data.
-For a quick getting started example, see the [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window} developerWorks recipe.
--->
 
-## 手順 2: デバイス・データをコンシュームするアプリケーションを作成します
+デバイスが {{site.data.keyword.iot_short_notm}} に送信しているリアルタイム・データの検討を開始します。
+
+{{site.data.keyword.iot_short_notm}} には、以下の分析ツールが組み込まれています。  
+- [ボードとカード](data_visualization.html)。リアルタイムのデバイス・データを視覚化できます。
+- [ルールとアクション](analytics.html)。リアルタイムのデバイス・データによって起動します。
+
+すぐに作業を開始するためのサンプルについては、developerWorks のレシピ [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window} を参照してください。
+
+## 手順 3: デバイス・データをコンシュームするアプリケーションを作成する
 {: #develop_applications}
 
-デバイス・データをコンシュームする独自のアプリケーションを作成して接続します。
+リアルタイムと履歴のデバイス・データをコンシュームする独自のアプリケーションを作成して接続することで、{{site.data.keyword.iot_short_notm}} のデータ分析機能を拡張します。
 
 詳しくは、以下のトピックを参照してください。   
 - [アプリケーション開発者資料](applications/api.html)と [{{site.data.keyword.iot_short_notm}} API 資料](reference/api.html)を調べてください。
 - [{{site.data.keyword.iot_short_notm}} クライアント・ライブラリー](iot_platform_client_lib.html)を調べてください。デバイスやアプリケーションを統合して接続するコードを作成したり開発したりするためのツールやファイルが用意されています。
 - {{site.data.keyword.iot_short_notm}} に [{{site.data.keyword.cloudantfull}} サービスを接続して](cloudant_connector.html)、デバイスの履歴データを格納してください。
-- 新しい [組み込みルール (ベータ)](information_management/im_rules.html) 機能を使用して、独自のルールを作成します。

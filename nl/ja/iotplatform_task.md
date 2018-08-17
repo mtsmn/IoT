@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-02"
+  years: 2016, 2018
+lastupdated: "2018-03-15"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-10-02"
 # デバイスの接続
 {: #iotplatform_task}
 
-IoT デバイスからデータを受信する操作を開始するには、その前にデバイスを {{site.data.keyword.iot_full}} に接続する必要があります。デバイスを {{site.data.keyword.iot_short_notm}} に接続するには、まずデバイスを {{site.data.keyword.iot_short_notm}} に登録してから、登録情報を使用してデバイスを {{site.data.keyword.iot_short_notm}} に接続するための構成を行います。
+IoT デバイスからデータを受信する操作を開始するには、その前にデバイスを {{site.data.keyword.iot_full}} に接続する必要があります。 デバイスを {{site.data.keyword.iot_short_notm}} に接続するには、まずデバイスを {{site.data.keyword.iot_short_notm}} に登録してから、登録情報を使用してデバイスを {{site.data.keyword.iot_short_notm}} に接続するための構成を行います。
 {:shortdesc}
 
 ## 始めに
@@ -33,7 +33,7 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
 ## 手順 1: デバイスを {{site.data.keyword.iot_short_notm}} に登録する  
 {: #iotplatform_subtask1}
 
-デバイスを登録するには、デバイスをデバイス・タイプごとに分類し、デバイスに名前を付けて、デバイス情報を指定します。その後、接続トークンを指定するか、{{site.data.keyword.iot_short_notm}} によって生成されるトークンを受け入れます。
+デバイスを登録するには、デバイスをデバイス・タイプごとに分類し、デバイスに名前を付けて、デバイス情報を指定します。 その後、接続トークンを指定するか、{{site.data.keyword.iot_short_notm}} によって生成されるトークンを受け入れます。
 
 {{site.data.keyword.iot_short_notm}} ダッシュボードから一度に 1 つずつデバイスを追加するか、[{{site.data.keyword.iot_short_notm}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} を使用して一度に 1 つ以上のデバイスを追加することができます。
 
@@ -52,13 +52,11 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
     ここで、*org_id* は [{{site.data.keyword.iot_short_notm}} 組織](iotplatform_overview.html#organizations){: new_window}の ID です。
 
 3. 「概要」ダッシュボードのメニュー・ペインから**「デバイス」**を選択し、**「デバイスの追加」**をクリックします。
-5. 追加するデバイスのデバイス・タイプを選択するか作成します。
-  
-{{site.data.keyword.iot_short_notm}} に接続する各デバイスには、デバイス・タイプを関連付ける必要があります。デバイス・タイプとは、共通の特性を共有するデバイス・グループのことです。  
-最初のデバイスを {{site.data.keyword.iot_short_notm}} 組織に追加する時点では、**「デバイス・タイプ」**メニューにデバイス・タイプが表示されません。まずデバイス・タイプを作成する必要があります。
+5. 追加するデバイスのデバイス・タイプを選択するか作成します。  
+{{site.data.keyword.iot_short_notm}} に接続する各デバイスには、デバイス・タイプを関連付ける必要があります。 デバイス・タイプとは、共通の特性を共有するデバイス・グループのことです。  
+最初のデバイスを {{site.data.keyword.iot_short_notm}} 組織に追加する時点では、**「デバイス・タイプ」**メニューにデバイス・タイプが表示されません。 まずデバイス・タイプを作成する必要があります。
  1. **「デバイス・タイプの作成」**をクリックします。
- 2. デバイス・タイプ名 (`my_device_type` など) とそのデバイス・タイプの説明を入力します。
-   
+ 2. デバイス・タイプ名 (`my_device_type` など) とそのデバイス・タイプの説明を入力します。   
  **重要:** デバイス・タイプ名は 36 文字以下でなければなりません。以下の文字だけを含めることができます。
  <ul>
   <li>英数字 (a-z、A-Z、0-9)</li>
@@ -66,13 +64,11 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
   <li>下線 (&lowbar;)</li>
   <li>ピリオド (.)</li>
   </ul>
- 3. オプション: デバイス・タイプの属性やメタデータを入力します。
-     
+ 3. オプション: デバイス・タイプの属性やメタデータを入力します。    
  **ヒント:** 属性とメタデータは、後で追加したり編集したりすることもできます。
  4. **「作成」**をクリックして、新しいデバイス・タイプを追加します。
 10. **「次へ」**をクリックして、選択したデバイス・タイプのデバイスを追加するプロセスを開始します。
-11. デバイス ID を入力します (`my_first_device` など)。
-  
+11. デバイス ID を入力します (`my_first_device` など)。  
 デバイス ID は、{{site.data.keyword.iot_short_notm}} ダッシュボードでデバイスを識別するために使用され、デバイスを {{site.data.keyword.iot_short_notm}} に接続するための必須パラメーターでもあります。  
 **重要:** デバイス ID は 36 文字以下でなければなりません。以下の文字だけを含めることができます。
  <ul>
@@ -82,15 +78,12 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
  <li>ピリオド (.)</li>  
  </ul>
  **ヒント:** ネットワークに接続されたデバイスの場合は、デバイス MAC アドレス (区切り文字のコロンは付けない) などをデバイス ID として入力できます。  
-12. オプション: **「追加フィールド」**をクリックして、シリアル番号、製造元、型式などのデバイス情報を追加します。
-   
+12. オプション: **「追加フィールド」**をクリックして、シリアル番号、製造元、型式などのデバイス情報を追加します。  
  **ヒント:** この情報は、後で追加したり編集したりすることもできます。
-12. オプション: デバイスの JSON メタデータを入力します。
-   
+12. オプション: デバイスの JSON メタデータを入力します。  
  **ヒント:** デバイスのメタデータは、後で追加したり編集したりすることもできます。
 13. **「次へ」**をクリックして、デバイスの追加を完了します。
-14. 要約情報が正しいことを確認してから、**「追加」**をクリックして接続を追加します。
-  
+14. 要約情報が正しいことを確認してから、**「追加」**をクリックして接続を追加します。  
 **ヒント:** 自動生成の認証トークンを受け入れることも、自分で認証トークンを指定することもできます。  
 自分でトークンを作成する場合は、長さを 8 文字から 36 文字にして、英数字と以下の特殊文字だけを使用してください。
  - ハイフン (-)
@@ -113,18 +106,18 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
  - 認証トークン (`PtBVriRqIg4uh)_-Kl` など)  
   **ヒント:** {{site.data.keyword.iot_short_notm}} へのデバイスの接続を構成するときに、組織 ID、認証トークン、デバイス・タイプ、デバイス ID が必要になります。  
 
-これで、デバイスを登録できました。次に、デバイスから {{site.data.keyword.iot_short_notm}} に接続するための構成を行います。
+これで、デバイスを登録できました。 次に、デバイスから {{site.data.keyword.iot_short_notm}} に接続するための構成を行います。
 
 ## 手順 2: デバイスを {{site.data.keyword.iot_short_notm}} に接続する
 {: #iotplatform_subtask2}
 
 デバイスを {{site.data.keyword.iot_short_notm}} に登録したら、登録情報を使用してデバイスを接続し、デバイス・データの受信を開始できます。
 
-{{site.data.keyword.iot_short_notm}} は、多くのデバイス・タイプをサポートします。デバイスを接続する基本プロセスには、ほとんどの場合、以下の手順が含まれています。
+{{site.data.keyword.iot_short_notm}} は、多くのデバイス・タイプをサポートします。 デバイスを接続する基本プロセスには、ほとんどの場合、以下の手順が含まれています。
 - MQTT メッセージングを使用するようにデバイスをセットアップし、組織 ID、認証トークン、デバイス・タイプ、デバイス ID を使用して認証します。  
 - MQTT プロトコルを使用して、デバイス・メッセージを {{site.data.keyword.iot_short_notm}} 組織に送信します。
 
-**ヒント:** 一般的なデバイスに対応した多数の接続レシピが用意されています。レシピのリストについては、IBM.com の[デバイス接続のレシピ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} を参照してください。
+**ヒント:** 一般的なデバイスに対応した多数の接続レシピが用意されています。 レシピのリストについては、IBM.com の[デバイス接続のレシピ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} を参照してください。
 
 デバイスを接続するときには、以下の情報が必要になります。
 - URL: *org_id*.messaging.internetofthings.ibmcloud.com  
@@ -140,14 +133,38 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
 - パスワード: *Authentication token*  
 この値は、デバイスの登録時に自分で定義した固有のトークンか、デバイスに割り当てられたトークンです。
 - イベント・トピック形式: iot-2/evt/*event_id*/fmt/*format_string*  
-*event_id* では、{{site.data.keyword.iot_short_notm}} に表示されるイベント名を指定します。*format_string* は、イベントの形式 (JSON など) です。
+ *event_id* では、{{site.data.keyword.iot_short_notm}} に表示されるイベント名を指定します。*format_string* は、イベントの形式 (JSON など) です。
 - メッセージ形式: JSON  
  {{site.data.keyword.iot_short_notm}} は、いくつかの形式 (JSON やテキストなど) に対応しています。
 
 デバイスを接続するための詳細については、技術資料にある[デバイスの MQTT 接続](devices/mqtt.html)を参照してください。
 
-
 [組織管理 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} API 資料にも、必要な情報が記載されています。
+
+## 削除されたデバイスの復元 (ベータ)
+{: #restore_device}
+
+**重要:** {{site.data.keyword.iot_short_notm}} デバイス復元機能は、限定されたベータ・プログラムの一部としてのみ提供されています。今後の更新によって、この機能の現行バージョンと互換性のない変更が行われる可能性があります。 この機能を試して、[ご意見をお寄せください![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
+
+間違えてデバイスを削除した場合、14 日以内であれば復元できます。 
+
+デバイスが削除されると、デバイスの「記憶」が作成されます。記憶とは、デバイスのドキュメントのコピーであり、14 日間存在した後、削除されます。
+
+次のデバイス復元 API を使用すると、この記憶から以前のバージョンのデバイスを復元できます。
+
+    POST /archive/device/types/{typeId}/devices/{deviceId}/restore
+
+
+次の API を使用すると、すべてのデバイスの記憶のリストを取得できます。
+
+    GET /archive/device/types/{typeId}/devices/{deviceId}
+
+デバイス復元 API について詳しくは、[Restore Devices APIs Beta ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html) を参照してください。
+
+## デバイスの再接続
+
+ネットワークの問題や、サービスまたはインフラストラクチャーの定期保守のために、デバイスが {{site.data.keyword.iot_short_notm}} から切断されることがあります。デバイスを再接続する際には、再接続中に生成されるネットワーク・トラフィックの量を最小化したり、時間をずらして同時に再接続する数を減らしたりすることをお勧めします。 
+
 
 ## デバイス接続のレシピ
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-05-08"
 
   1. 接続 - デバイスを接続し、アプリケーションを開発します。
   2. 情報管理 - デバイス・データの保管、正規化、変換、検討を行い、{{site.data.keyword.iot_short_notm}} を他のサービスに統合します。
-  3. 分析 - リアルタイムのデバイス・データに基づいてアラートやアクションをトリガーするルール条件を指定します。
+  3. 分析 - {{site.data.keyword.iot_short_notm}} ダッシュボードを使用して、リアルタイム・デバイス・データを視覚化します。
   4. リスク管理 - ユーザーとアプリケーションに対するアクセス制御により、セキュアな接続とアーキテクチャーを構成します。
 
 ## 接続
@@ -37,7 +37,8 @@ lastupdated: "2018-05-08"
 
 ### 拡張とサービス統合
 
-拡張とサービス統合によって、外部サービスと、コア・サービスのユーザー定義拡張との両方を {{site.data.keyword.iot_short_notm}} のインスタンスに追加できます。 {{site.data.keyword.iot_short_notm}} に統合できる外部サービスとしては、The Weather Company の気象および位置のサービスがあります。統合すると、デバイスの場所の現在の気象情報と Jasper SIM データを取得できます。サード・パーティーのサービスの統合や拡張の詳細については、[外部サービスの統合](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)を参照してください。
+拡張とサービス統合によって、外部サービスと、コア・サービスのユーザー定義拡張との両方を {{site.data.keyword.iot_short_notm}} のインスタンスに追加できます。 {{site.data.keyword.iot_short_notm}} に統合できる外部サービスとしては、デバイスの場所の現在の気象情報を確認できる The Weather Company の気象と位置のサービスがあります。また、Jasper SIM データや、{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}} もあります。 サード・パーティーのサービスの統合や拡張の詳細については、[外部サービスの統合](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)を参照してください。
+
 
 ---
 
@@ -61,9 +62,12 @@ lastupdated: "2018-05-08"
 このフィーチャーの使用について詳しくは、[データ管理の概要](GA_information_management/ga_im_device_twin.html)を参照してください。
 
 ---
-
 ## 分析
 {: #analytics}
+
+### リアルタイム・デバイス・データの視覚化
+
+ダッシュボード・カードを使用して、リアルタイム・デバイス・データを視覚化/表示することができます。 ダッシュボード・カードは、デバイス・データをリアルタイムでモニター/表示します。これにより、重要なデバイスまたはデバイス・データを追跡することができます。 リアルタイム・デバイス・データのコンテキストと状況に素早くアクセスできるよう、これらの視覚化はメインの {{site.data.keyword.iot_short_notm}} ダッシュボードに表示されます。 詳細については、[リアルタイム・データの視覚化の資料](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html)を参照してください。
 
 ### エッジ分析とクラウド分析
 

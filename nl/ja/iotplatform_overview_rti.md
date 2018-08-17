@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-02-22"
+lastupdated: "2017-11-21"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-02-22"
 # {{site.data.keyword.iot_short_notm}} について
 {: #about_iotplatform}
 
-{{site.data.keyword.iot_full}} には、IoT のデバイスやデータにアプリケーションでアクセスするための強力な機能が用意されているので、分析アプリケーションやモバイル IoT アプリを短時間で作成できます。
+{{site.data.keyword.iot_full}} には、IoT のデバイスやデータに対する強力なアプリケーション・アクセス機能が用意されています。この機能は、分析アプリケーション、視覚化ダッシュボード、モバイル IoT アプリを短時間で作成するのに役立ちます。
 {:shortdesc}
 
 {{site.data.keyword.iot_short_notm}} では、強力なデバイス管理操作を実行したり、デバイス・データを格納してそれにアクセスしたり、多種多様なデバイスやゲートウェイ・デバイスを接続したりできます。 {{site.data.keyword.iot_short_notm}} には、MQTT や TLS を使用してデバイスと安全に通信するための機能が備わっています。
@@ -24,7 +24,7 @@ lastupdated: "2018-02-22"
 {: #watsoniotplatform_architecture}
 ![IBM Watson IoT Platform のアーキテクチャー](images/architecture_platform_2.svg "IBM Watson IoT Platform のアーキテクチャー")
 
-<!--**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  -->
+**重要:** 分析機能は、{{site.data.keyword.iotrtinsights_full}} サービスからマージされます。 既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのデータ・ソースとして {{site.data.keyword.iot_short_notm}} 組織を使用する場合は、既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのマイグレーションが完了するまで分析機能が有効になりません。 マイグレーションが完了するまでは、引き続き {{site.data.keyword.iotrtinsights_short}} ダッシュボードを使用して分析要件に対応してください。 詳しくは、IBM developerWorks にある [IBM Watson IoT Platform のブログ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} および既存の {{site.data.keyword.iotrtinsights_short}} インスタンス・ダッシュボードをご覧ください。  
 
 {{site.data.keyword.iot_short_notm}} は、{{site.data.keyword.iot_short_notm}} API と {{site.data.keyword.iot_short_notm}} メッセージ・プロトコルを使用してアプリケーションやデバイスと通信します。 {{site.data.keyword.iot_short_notm}} ダッシュボードは、プラットフォーム内の操作を簡略化するためのフロントエンド・ユーザー・インターフェースとして接続します。 分析ソリューションでは、そのようなデバイス・データを格納したり使用したりできます。
 
