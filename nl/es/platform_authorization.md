@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2017-12-08"
 
 ---
 
@@ -33,11 +33,10 @@ Para crear un nuevo par de clave y señal de autenticación de API:
 4.	Pulse **Finalizar**.
 
 
-
-## Conexión de enlace de Bluemix
+## Conexión de enlace de IBM Cloud
 {: #bluemix-binding}
-Se pueden enlazar aplicaciones a la organización de {{site.data.keyword.iot_short_notm}} desde {{site.data.keyword.Bluemix_notm}}. Al enlazar la aplicación, sólo puede comunicarse con instancias de servicio en el mismo espacio u organización. Encontrará todos los datos necesarios para que la app se comunique con la instancia de servicio en la variable de entorno VCAP_SERVICES. Si su app está enlazada a varios servicios, la variable VCAP_SERVICES contiene la información de conexión para cada instancia de servicio.  
+Se pueden enlazar aplicaciones a la organización de {{site.data.keyword.iot_short_notm}} desde {{site.data.keyword.Bluemix_notm}}. Al enlazar la aplicación, sólo puede comunicarse con instancias de servicio en el mismo espacio u organización. Encontrará todos los datos necesarios para que la aplicación se comunique con la instancia de servicio en la variable de entorno VCAP_SERVICES. Si su aplicación está enlazada a varios servicios, la variable VCAP_SERVICES contiene la información de conexión para cada instancia de servicio.  
 
-Sin embargo, puede utilizar instancias de servicio de otros espacios u organizaciones de la misma forma que lo hace una app externa. En lugar de crear un enlace, utilice las credenciales para configurar directamente la instancia de la app. Para obtener más información, consulte [Solicitud de una nueva instancia de servicio](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) en la documentación de {{site.data.keyword.Bluemix_notm}}.
+Sin embargo, puede utilizar instancias de servicio de otros espacios u organizaciones de la misma forma que lo hace una app externa. En lugar de crear un enlace, utilice las credenciales para configurar directamente la instancia de la app. Para obtener más información, consulte [Solicitud de una nueva instancia de servicio](https://console.{DomainName}/docs/manageapps/reqnsi.html#req_instance) en la documentación de {{site.data.keyword.Bluemix_notm}}.
 
-Para ver los detalles para las aplicaciones de Bluemix que están enlazadas a la instancia de servicio de Bluemix asociada con la organización, vaya a **Apps > Apps Bluemix**.  
+Para ver detalles sobre las aplicaciones de {{site.data.keyword.Bluemix_notm}} que se enlazan con la instancia del servicio {{site.data.keyword.Bluemix_notm}} asociado a su organización, vaya a **Apps > Apps de IBM Cloud**.  

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-03-01"
 ---
 
@@ -30,4 +30,4 @@ Per visualizzare lo stato di servizi Watson IoT selezionati in esecuzione anche 
 
 ![Feed Twitter https://twitter.com/ibmiotf](images/twitter_logo.png "Feed Twitter di IBM Watson IoT Platform")
 
-Puoi anche ottenere le ultime novità sugli aggiornamento per {{site.data.keyword.iot_short_notm}} e i servizi associati seguendo il nostro [Feed Twitter ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://twitter.com/ibmiotf).
+Puoi anche ottenere le ultime novità sugli aggiornamento per {{site.data.keyword.iot_short_notm}} e i servizi associati seguendo il nostro [Feed Twitter ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://twitter.com/ibmiot). 

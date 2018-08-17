@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2017-12-08"
 
 ---
 
@@ -33,11 +33,10 @@ Pour créer une paire clé d'API/jeton d'authentification :
 4.	Cliquez sur **Terminer**.
 
 
-
-## Connexion via une liaison dans Bluemix
+## Connexion via une liaison dans IBM Cloud
 {: #bluemix-binding}
 Vous pouvez lier des applications à votre organisation {{site.data.keyword.iot_short_notm}} à partir de {{site.data.keyword.Bluemix_notm}}. Lorsque vous liez l'application, celle-ci peut uniquement communiquer avec les instances de service figurant dans le même espace ou la même organisation. Toutes les données nécessaires à l'application pour communiquer avec l'instance de service se trouvent dans la variable d'environnement VCAP_SERVICES. Si votre application est liée à plusieurs services, la variable VCAP_SERVICES inclut les informations de connexion pour chaque instance de service.  
 
-Toutefois, vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations, voir [Demande d'une nouvelle instance de service](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) dans la documentation {{site.data.keyword.Bluemix_notm}}.
+Toutefois, vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations, voir [Demande d'une nouvelle instance de service](https://console.{DomainName}/docs/manageapps/reqnsi.html#req_instance) dans la documentation {{site.data.keyword.Bluemix_notm}}.
 
-Pour voir les détails relatifs aux applications Bluemix qui sont liées à l'instance de service Bluemix associée à votre organisation, accédez à **Applications > Applications Bluemix**.  
+Pour plus d'informations concernant les applications {{site.data.keyword.Bluemix_notm}} liées à l'instance de service {{site.data.keyword.Bluemix_notm}} associée à votre organisation, go to **Applications > Applications IBM Cloud**.  

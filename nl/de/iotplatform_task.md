@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-02"
+  years: 2016, 2018
+lastupdated: "2018-03-15"
 
 ---
 
@@ -140,6 +140,31 @@ Dabei gibt *Ereignis-ID* den in {{site.data.keyword.iot_short_notm}} angezeigten
 Weitere Informationen zum Herstellen einer Verbindung für Ihr Gerät finden Sie in der technischen Dokumentation in [MQTT-Konnektivität für Geräte](devices/mqtt.html).
 
 Die Dokumentation zur [Organisationsadministrations-API ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} enthält ebenfalls die erforderlichen Informationen.
+
+## Gelöschte Geräte wiederherstellen (Beta)
+{: #restore_device}
+
+**Wichtig:** Das {{site.data.keyword.iot_short_notm}}-Feature zum Wiederherstellen von Geräten steht nur im Rahmen eines eingeschränkten Betaprogramms zur Verfügung. Zukünftige Aktualisierungen enthalten möglicherweise Änderungen, die mit der aktuellen Version dieser Funktion nicht kompatibel sind. Starten Sie einen Versuch und [senden Sie uns Ihren Erfahrungsbericht ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+
+Wenn ein Gerät versehentlich gelöscht wird, kann es innerhalb von 14 Tagen wiederhergestellt werden. 
+
+Beim Löschen eines Geräts wird ein Erinnerungselement für das Gerät erstellt. Bei diesem Erinnerungselement handelt es sich um eine Kopie des Gerätedokuments; es steht für einen Zeitraum von 14 Tagen nach dem Löschen des Geräts zur Verfügung.
+
+Die folgende API zum Wiederherstellen eines Geräts ermöglicht es Ihnen, mithilfe des Erinnerungselements eine vorherige Version des Geräts wiederherzustellen:
+
+    POST /archive/device/types/{typeId}/devices/{deviceId}/restore
+
+
+Mithilfe der folgenden API können Sie eine Liste aller Erinnerungselemente für Geräte abrufen:
+
+    GET /archive/device/types/{typeId}/devices/{deviceId}
+
+Weitere Informationen zu den APIs zum Wiederherstellen von Geräten finden Sie in [APIs zur Gerätewiederherstellung (Beta) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html).
+
+## Verbindung für Geräte wiederherstellen
+
+Die Verbindung von Geräten zu {{site.data.keyword.iot_short_notm}} kann aufgrund eines Netzproblemens oder aufgrund von Routinewartungsaktivitäten für den Service oder die Infrastruktur unterbrochen werden. Beim Wiederherstellen der Verbindung für das Gerät bzw. die Geräte empfiehlt es sich, den während des erneuten Verbindens generierten Netzdatenverkehr auf ein Minimum zu reduzieren oder eine Zeitverzögerung zu implementieren, die die Anzahl gleichzeitiger Verbindungswiederherstellungen reduziert. 
+
 
 ## Anleitungen zum Verbinden von Geräten
 

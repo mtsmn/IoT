@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017
+  years: 2016, 2018
 lastupdated: "2017-11-02"
 
 ---
@@ -13,14 +13,13 @@ lastupdated: "2017-11-02"
 {:pre: .pre}
 
 # Creazione e collegamento di un simulatore del dispositivo Node-RED
-Utilizza Node-RED per creare un simulatore del dispositivo e per inviare i dati del dispositivo simulato alla tua organizzazione {{site.data.keyword.iot_full}}.   
+Utilizza Node-RED per creare un simulatore del dispositivo e per inviare i dati del dispositivo simulato alla tua organizzazione {{site.data.keyword.iot_full}}.  
 {:shortdesc}
 
 ## Panoramica
-
 Node-RED è uno strumento utilizzato per la connessione di dispositivi hardware, API e servizi in linea con nuove e interessanti modalità. Per ulteriori informazioni, consulta il sito web [Node-RED ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://nodered.org/){: new_window}.  
 
-Puoi eseguire la tua istanza Node-RED nel tuo proprio ambiente o utilizzarla come un'applicazione {{site.data.keyword.Bluemix_notm}}. I seguenti passi includono le istruzioni per {{site.data.keyword.Bluemix_notm}}.
+Puoi eseguire la tua istanza Node-RED nel tuo ambiente o utilizzarla come un'applicazione {{site.data.keyword.Bluemix_notm}}. I seguenti passi includono le istruzioni per {{site.data.keyword.Bluemix_notm}}.
 
 Crea e collega il simulatore del dispositivo Node-RED per inviare i messaggi del dispositivo MQTT a {{site.data.keyword.iot_short_notm}}. Nel seguente esempio, il simulatore del dispositivo simula un invio di dati per un contenitore merci a un broker MQTT, ad esempio {{site.data.keyword.iot_short_notm}}.
 
@@ -53,7 +52,7 @@ Il flusso del simulatore del dispositivo è stato reso disponibile all'editor de
 7. Invia e ricevi i messaggi del dispositivo MQTT completando la seguente procedura:  
     1. Fai clic sul nodo Inject **Send Data** per attivare i dati che devono essere inviati a {{site.data.keyword.iot_short_notm}}.
        **Nota:** puoi attivare il nodo di debug **Debug output payload** per visualizzare quali dati sono inviati e per controllare il nodo della funzione **Device payload** per visualizzare il codice che crea il payload. 
-    2. Dopo aver fatto clic su **Send Data**, i messaggi MQTT vengono inviati a {{site.data.keyword.iot_short_notm}} e sono ricevuti dal nodo **IBM IoT App In**. Il flusso secondario **Temperature Monitor** stabilisce se la temperatura è all'interno dei limiti definiti e visualizza un messaggio nella scheda di debug.
+    2. Dopo aver fatto clic su **Send Data**, i messaggi MQTT vengono inviati a {{site.data.keyword.iot_short_notm}} e sono ricevuti dal nodo **IBM IoT App In**. Il flusso secondario **Temperature Monitor** stabilisce se la temperatura è all'interno dei limiti definiti e visualizza un messaggio nella scheda di debug. 
        **Nota:** Fai clic sul nodo di switch **temp thresh** per controllare e modificare i valori di soglia
     3. Controlla la scheda di debug. Viene visualizzato un messaggio, ad esempio **Temperature (17) within safe limits**.
     

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-07-20"
+  years: 2016, 2018
+lastupdated: "2018-05-08"
 
 ---
 
@@ -17,10 +17,10 @@ lastupdated: "2017-07-20"
 
 El {{site.data.keyword.iot_full}} se crea en las siguientes áreas clave:
 
-  1. Conexión: Conectar dispositivos y desarrollar aplicaciones.
-  2. Gestión de información: Almacenar, normalizar, transformar y revisar datos de dispositivos e integrar el {{site.data.keyword.iot_short_notm}} con otros servicios.
-  3. Analíticas: Visualizar datos de dispositivos en tiempo real utilizando el panel de instrumentos {{site.data.keyword.iot_short_notm}}.
-  4. Gestión de riesgos: Configurar la conectividad y la arquitectura seguras con control de acceso para usuarios y aplicaciones.
+  1. Conexión: conectar dispositivos y desarrollar aplicaciones.
+  2. Gestión de información: almacenar, normalizar, transformar y revisar datos de dispositivos e integrar el {{site.data.keyword.iot_short_notm}} con otros servicios.
+  3. Análisis: especificar condiciones de reglas basadas en datos en tiempo real del dispositivo para activar alertas y acciones.
+  4. Gestión de riesgos: configurar la conectividad y la arquitectura seguras con control de acceso para usuarios y aplicaciones.
 
 ## Conectar
 {: #connect}
@@ -37,8 +37,7 @@ Las funciones de gestión de dispositivos se proporcionan a través de una API d
 
 ### Integraciones de extensiones y servicios
 
-La integración de extensiones y servicios permite añadir servicios externos y extensiones definidas por el usuario de servicios principales a una instancia de {{site.data.keyword.iot_short_notm}}. Los servicios externos que se pueden integrar con {{site.data.keyword.iot_short_notm}} incluyen los servicios de información meteorológica de The Weather Company, que le permiten consultar información meteorológica actual en la ubicación del dispositivo, datos de Jasper SIM y {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. Para obtener más información sobre integraciones y extensiones de servicios de terceros, consulte [integración de servicios externos](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
-
+La integración de extensiones y servicios permite añadir servicios externos y extensiones definidas por el usuario de servicios principales a una instancia de {{site.data.keyword.iot_short_notm}}. Los servicios externos que se pueden integrar con {{site.data.keyword.iot_short_notm}} incluyen los servicios de información meteorológica de The Weather Company, que le permiten consultar información meteorológica actual en la ubicación del dispositivo y datos de Jasper SIM. Para obtener más información sobre integraciones y extensiones de servicios de terceros, consulte [integración de servicios externos](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
 
 ---
 
@@ -49,7 +48,7 @@ La integración de extensiones y servicios permite añadir servicios externos y 
 
 ### Memoria caché de sucesos del último dispositivo
 
-Al utilizar la {{site.data.keyword.iot_short_notm}} Last Event Cache API, puede recuperar el último suceso que ha enviado un dispositivo. Esto funciona si el dispositivo está en línea o fuera de línea, lo que le permite recuperar el estado del dispositivo independientemente de la ubicación física del dispositivo o el estado de uso. Los últimos datos de sucesos de un dispositivo se pueden recuperar para cualquier suceso específico que se ha producido hasta hace un máximo de 365 días.
+Al utilizar la {{site.data.keyword.iot_short_notm}} Last Event Cache API, puede recuperar el último suceso que ha enviado un dispositivo. Esto funciona si el dispositivo está en línea o fuera de línea, lo que le permite recuperar el estado del dispositivo independientemente de la ubicación física del dispositivo o el estado de uso. Los últimos datos de sucesos de un dispositivo se pueden recuperar para cualquier suceso específico que se haya hace 45 días como máximo.
 
 ### Almacenamiento de datos de sucesos de dispositivo
 
@@ -62,12 +61,9 @@ Diferentes marcas y modelos de dispositivos publican datos en formatos diferente
 Para obtener más información acerca del uso de esta característica, consulte [Introducción a la gestión de datos](GA_information_management/ga_im_device_twin.html).
 
 ---
+
 ## Análisis
 {: #analytics}
-
-### Visualizar datos de dispositivos en tiempo real
-
-Puede visualizar y mostrar datos de dispositivos en tiempo real utilizando tarjetas del panel de instrumentos. Las tarjetas del panel de instrumentos supervisan y muestran datos de dispositivos en tiempo real, lo que le permite realizar un seguimiento de los dispositivos clave o de los datos de dispositivos. Estas visualizaciones se muestran en el panel de instrumentos principal de {{site.data.keyword.iot_short_notm}} para darle acceso rápido al contexto y al estado de datos de dispositivos en tiempo real. Para obtener más información, consulte [visualización de datos en tiempo real](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
 
 ### Analíticas de extremo y de nube
 

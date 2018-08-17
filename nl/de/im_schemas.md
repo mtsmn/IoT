@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-14"
+  years: 2016, 2018
+lastupdated: "2018-03-14"
 
 ---
 
@@ -15,12 +15,19 @@ lastupdated: "2017-03-14"
 # Schemas für Gerätetypen erstellen
 {: #iotrtinsights_task}
 
-Zum Verwenden von {{site.data.keyword.iot_short}}-Funktionen wie beispielsweise Regeln und Aktionen müssen Sie ein Schema erstellen, um Geräteeigenschaften benutzerfreundlichen Eigenschaftsnamen zuzuordnen, Dateneinheiten für die Eigenschaften festlegen und einen Nachrichtentyp angeben, der mit dem Schema verwendet werden soll.
-{: shortdesc}
+**Wichtig:** Eine Betaversion, mit der eine neue Methode zur Definition von Regeln für IoT-Gerätedaten zur Verfügung steht, wird im Rahmen eines umfassenderen Programms mit Änderungen gestartet, das die Bereitstellung von Regeln und Aktionen in {{site.data.keyword.iot_full}} verbessern soll.  
 
-**Wichtig:** Zur Verwendung von Regeln und Aktionen sind Schemas erforderlich. Informationen finden Sie in [Cloud Analytics](cloud_analytics.html#rules).
+Weitere Informationen finden Sie im Blogbeitrag [Alternative Methode zur Definition von Regeln für IoT-Daten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.  
 
-**Wichtig:** Die Analysefunktionen stammen aus dem {{site.data.keyword.iotrtinsights_full}}-Service und werden zusammengeführt. Wenn Ihre {{site.data.keyword.iot_short_notm}}-Organisation als Datenquelle für eine vorhandene {{site.data.keyword.iotrtinsights_short}}-Instanz verwendet wird, sind Cloud Analytics und Edge Analytics erst aktiviert, wenn die vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanzen migriert wurden. Verwenden Sie weiterhin das {{site.data.keyword.iotrtinsights_short}}-Dashboard für Ihre Analysevorhaben, bis die Migration abgeschlossen ist. Weitere Informationen finden Sie im [Blog zu IBM Watson IoT Platform ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks und in den Dashboards Ihrer bestehenden {{site.data.keyword.iotrtinsights_short}}-Instanz.  
+Lesen Sie als ersten Schritt bei der Definition eigener Regeln die Informationen in der Dokumentation [Eingebettete Regeln erstellen (Beta)](information_management/im_rules.html).
+
+## Informationen zu diesem Vorgang
+
+Zum Verwenden von {{site.data.keyword.iot_short_notm}}-Funktionen wie beispielsweise Regeln und Aktionen müssen Sie ein Schema erstellen, um Geräteeigenschaften benutzerfreundlichen Eigenschaftsnamen zuzuordnen, Dateneinheiten für die Eigenschaften festlegen und einen Nachrichtentyp angeben, der mit dem Schema verwendet werden soll.
+
+Zur Verwendung von Regeln und Aktionen sind Schemas erforderlich. Informationen finden Sie in [Cloud Analytics](cloud_analytics.html#rules).
+
+Die Analysefeatures werden aus dem {{site.data.keyword.iotrtinsights_full}}-Service integriert. Wenn Ihre {{site.data.keyword.iot_short_notm}}-Organisation als Datenquelle für eine vorhandene {{site.data.keyword.iotrtinsights_short}}-Instanz verwendet wird, sind Cloud Analytics und Edge Analytics erst aktiviert, wenn die vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanzen migriert wurden. Verwenden Sie weiterhin das {{site.data.keyword.iotrtinsights_short}}-Dashboard für Ihre Analysevorhaben, bis die Migration abgeschlossen ist. Weitere Informationen finden Sie im [Blog zu IBM Watson IoT Platform ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks und in den Dashboards Ihrer bestehenden {{site.data.keyword.iotrtinsights_short}}-Instanz.  
 
 ## Geräteschema hinzufügen
 {: #add_schema}
@@ -32,7 +39,7 @@ Gehen Sie wie folgt vor, um ein Schema hinzuzufügen:
 3. Fügen Sie mindestens eine Eigenschaft hinzu:  
     Sie können Eigenschaften aus einem verbundenen Gerät auswählen, virtuelle Eigenschaften erstellen, die vorhandene Eigenschaften ändern oder kombinieren, oder Sie können Eigenschaften manuell hinzufügen.  
 
-    **Tipp:** Die verfügbaren Eigenschaften sind in den Nutzdaten der Nachrichten definiert, die von einem Gerät gesendet werden. Informationen zum {{site.data.keyword.iot_short}}-Nutzdatenformat finden Sie im Abschnitt [Nachrichtennutzdaten](reference/mqtt/index.html#message-payloadl "Nachrichtennutzdaten.").   
+    **Tipp:** Die verfügbaren Eigenschaften sind in den Nutzdaten der Nachrichten definiert, die von einem Gerät gesendet werden. Informationen zum {{site.data.keyword.iot_short}}-Nutzdatenformat finden Sie im Abschnitt [Nachrichtennutzdaten](reference/mqtt/index.html#message-payload "Nachrichtennutzdaten.").   
   <dl>
   <dt>Eigenschaft manuell hinzufügen</dt>
   <p><b>Tipp:</b> Zum Erstellen einer verschachtelten Eigenschaftsstruktur fügen Sie zuerst eine Eigenschaft hinzu, die den Datentyp 'parent' (übergeordnet) aufweist. Sie können in der Eigenschaftentabelle anschließend auf das ![Symbol zum Hinzufügen eines untergeordneten Elements](images/add_child.png "Untergeordnetes Element hinzufügen"), um mindestens eine untergeordnete Eigenschaft hinzuzufügen.</p>

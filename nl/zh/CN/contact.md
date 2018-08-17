@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-11-03"
+  years: 2016, 2018
+lastupdated: "2018-01-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-11-03"
 # 联系 {{site.data.keyword.iot_short_notm}} 支持
 {: #gettinghelp}
 
-使用 {{site.data.keyword.iot_full}}，您有很多选项可联系支持人员，如通过论坛或通过 Slack，或者开具支持凭单，来获取帮助。 
+使用 {{site.data.keyword.iot_full}}，您有很多选项可联系支持人员，如通过论坛或通过 Slack，或者开具支持凭单，来获取帮助。您可以使用构想门户网站，将自己的增强功能构想提交给 {{site.data.keyword.iot_short_notm}}。
 
 ## 论坛
 
@@ -30,8 +30,12 @@ lastupdated: "2017-11-03"
 
 * [Slack ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://ibm-developers.slack.com/){:new_window} - 加入 #internet-of-things 通道。
 
-还没有对该 Slack 工作空间的访问权吗？[立即请求访问权 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://bxdevs-slack-invite.mybluemix.net/){:new_window}
 
 ## 支持凭单
 
-* [联系支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}。
+* [联系支持 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}
+
+
+## 构想门户网站
+
+* [IBM Cloud - Structured Ideas ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/cloudideas){:new_window}

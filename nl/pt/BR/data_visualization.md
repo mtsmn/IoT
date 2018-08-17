@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-08"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,8 +16,16 @@ lastupdated: "2017-05-08"
 # Visualizando dados em tempo real usando placas e cartões
 {: #boards_and_cards}
 
+
+** Importante:** estamos ativando um Beta para uma nova maneira de definir regras em seus dados do dispositivo IoT como parte de um programa mais amplo de mudanças para melhorar a maneira como o {{site.data.keyword.iot_full}} entrega regras e ações.
+
+Para descobrir mais, verifique a postagem do blog [Uma abordagem alternativa para definir Regras em dados do IoT![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para iniciar a definição de suas próprias regras, veja a documentação [Criando regras integradas (Beta)](information_management/im_rules.html).
+
+## Sobre placas e cartões
+
 Crie placas e cartões para criar e compartilhar seus próprios painéis que visualizam os dados de seu dispositivo de tempo real.
-{:shortdesc}
 
 Usando placas e cartões, é possível visualizar graficamente valores do conjunto de dados de um ou mais dispositivos para fornecer uma visão geral rápida e aprimorar o entendimento dos dados. Crie placas e inclua cartões que exibam os dados como números brutos, gráficos em tempo real, medidores e mais. Inclua membros em suas placas para compartilhá-los com outros usuários em sua organização. Organize os cartões e inclua divisórias de texto explicativo para fazer um ajuste fino de sua apresentação.  
 
@@ -27,7 +35,7 @@ Usando placas e cartões, é possível visualizar graficamente valores do conjun
 
 ## Placas padrão
 {: #default_boards}
-O painel do {{site.data.keyword.iot_full}} têm as placas padrão a seguir:
+O painel do {{site.data.keyword.iot_short_notm}} têm as placas padrão a seguir:
 
 |Nome do Painel | Descrição | Cartões incluídos
 |:---|:---|:---|  

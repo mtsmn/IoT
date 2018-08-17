@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,12 +16,21 @@ lastupdated: "2017-03-13"
 # Analisi edge
 {: #edge_analytics}
 
+**Importante:** stiamo facendo partire una beta per definire in un nuovo modo le regole nei tuoi dati del dispositivo IoT come parte
+di un programma di modifiche più grande per migliorare il modo in cui {{site.data.keyword.iot_full}} fornisce le regole e le azioni.
+
+Per ulteriori informazioni, controlla il post del blog [An alternative approach to defining Rules on IoT data ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Per iniziare a definire le tue regole, consulta la documentazione [Creazione delle regole integrate (Beta)](information_management/im_rules.html).
+
+## Informazioni sulle analisi edge 
+
 Con le analisi edge, puoi spostare il processo di attivazione della regola di analisi dal cloud al gateway abilitato per l'analisi edge che riduce drasticamente la quantità di traffico dati del dispositivo nel cloud eseguendo l'elaborazione delle analisi vicino al dispositivo.
-{:shortdesk}
+{:shortdesc}
 
-I dispositivi inviano i loro dati a un gateway abilitato per l'analisi edge in cui le regole di analisi edge analizzano i dati. In base alla tua regola e alle relative azioni, i dati critici e gli avvisi possono essere inviati a {{site.data.keyword.iot_full}}, possono essere attivati nel gateway o essere scritti in un file di testo locale nel gateway.
+I dispositivi inviano i loro dati a un gateway abilitato per l'analisi edge in cui le regole di analisi edge analizzano i dati. In base alla tua regola e alle relative azioni, i dati critici e gli avvisi possono essere inviati a {{site.data.keyword.iot_short_notm}}, possono essere attivati nel gateway o essere scritti in un file di testo locale nel gateway.
 
-Il seguente diagramma illustra l'architettura generale di un ambiente di analisi edge {{site.data.keyword.iot_full}}.
+Il seguente diagramma illustra l'architettura generale di un ambiente di analisi edge {{site.data.keyword.iot_short_notm}}.
 ![IBM Watson IoT Platform per l'architettura di analisi edge](images/architecture_platform_edge.svg "IBM Watson IoT Platform con l'architettura di analisi edge")
 
 ## Prima di cominciare

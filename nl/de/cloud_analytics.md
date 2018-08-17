@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -15,13 +15,21 @@ lastupdated: "2017-03-13"
 # Cloud Analytics
 {: #cloud_analytics}
 
-Mithilfe von Cloud Analytics für {{site.data.keyword.iot_short}} geben Sie Regelbedingungen an, die auf Echtzeitdaten von Geräten basieren, und die Alerts und optionale Aktionen auslösen, wenn die Bedingungen erfüllt sind.    
-{: shortdesc}
+**Wichtig:** Eine Betaversion, mit der eine neue Methode zur Definition von Regeln für IoT-Gerätedaten zur Verfügung steht,
+wird im Rahmen eines umfassenderen Programms mit Änderungen gestartet, das die Bereitstellung von Regeln und Aktionen in {{site.data.keyword.iot_full}} verbessern soll.
 
-Beispielsweise können Sie eine Regel erstellen, um sicherzustellen, dass ein Alert an das Dashboard auf dem Gerät eines Benutzers und eine E-Mail an den Administrator gesendet wird, wenn die Verbindung zum Gerät verloren geht oder die Temperatur des Geräts einen Höchststand erreicht.
+Weitere Informationen finden Sie im Blogbeitrag [Alternative Methode zur Definition von Regeln für IoT-Daten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Lesen Sie als ersten Schritt bei der Definition eigener Regeln die Informationen in der Dokumentation [Eingebettete Regeln erstllen (Beta)](information_management/im_rules.html).
+
 
 ## Vorbereitende Schritte
 {: #byb}
+
+Mithilfe von Cloud Analytics für {{site.data.keyword.iot_short_notm}} geben Sie Regelbedingungen an, die auf Echtzeitdaten von Geräten basieren, und die Alerts und optionale Aktionen auslösen, wenn die Bedingungen erfüllt sind.    
+
+Beispielsweise können Sie eine Regel erstellen, um sicherzustellen, dass ein Alert an das Dashboard auf dem Gerät eines Benutzers und eine E-Mail an den Administrator gesendet wird, wenn die Verbindung zum Gerät verloren geht oder die Temperatur des Geräts einen Höchststand erreicht.
+
 Stellen Sie sicher, dass die Geräteeigenschaften, die Sie als Bedingungen in Ihren Regeln verwenden möchten, Schemas zugeordnet wurden. Weitere Informationen finden Sie in [Geräte verbinden](iotplatform_task.html) und [Schemas erstellen](im_schemas.html).
 
 Lesen Sie außerdem die Anleitung [Regeln und Aktionen mit {{site.data.keyword.iot_short}} Cloud Analytics verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window}, um die in Cloud Analytics verwendeten Regeln und Aktionen kennenzulernen.

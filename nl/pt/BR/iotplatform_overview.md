@@ -1,6 +1,8 @@
 ---
 
-copyright: years: 2016, 2017 lastupdated: "2017-07-20"
+copyright:
+  years: 2016, 2018
+lastupdated: "2018-02-22"
 
 ---
 
@@ -13,8 +15,7 @@ copyright: years: 2016, 2017 lastupdated: "2017-07-20"
 # Sobre {{site.data.keyword.iot_short_notm}}
 {: #about_iotplatform}
 
-O {{site.data.keyword.iot_full}} fornece acesso poderoso ao aplicativo para dispositivos de IoT e dados para ajudá-lo a rapidamente compor aplicativos de analítica, painéis de visualização e
-aplicativos móveis de IoT.
+O {{site.data.keyword.iot_full}} fornece acesso poderoso ao aplicativo para dispositivos IoT e dados para ajudar você a criar aplicativos de analítica e apps móveis IoT com rapidez.
 {:shortdesc}
 
 O {{site.data.keyword.iot_short_notm}} permite executar operações de gerenciamento de dispositivo poderosas e armazenar e acessar dados do dispositivo, conectar uma ampla variedade de dispositivos e
@@ -24,11 +25,7 @@ dispositivos de gateway. O {{site.data.keyword.iot_short_notm}} fornece comunica
 {: #watsoniotplatform_architecture}
 ![Arquitetura do IBM Watson IoT Platform](images/architecture_platform_2.svg "Arquitetura do IBM Watson IoT Platform")
 
-**Importante:** os recursos de análise de dados são mesclados a partir do serviço do {{site.data.keyword.iotrtinsights_full}}. Se
-sua organização do {{site.data.keyword.iot_short_notm}} for usada como origem de
-dados para uma instância existente do {{site.data.keyword.iotrtinsights_short}},
-o Analytics não será ativado até que as instâncias existentes do
-{{site.data.keyword.iotrtinsights_short}} tenham sido migradas. Continue a usar o painel do {{site.data.keyword.iotrtinsights_short}} para suas necessidades de análise de dados até que a migração seja concluída. Para obter mais informações, veja o [blog do IBM Watson IoT Platform ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} no IBM developerWorks e seus painéis de instância existentes do {{site.data.keyword.iotrtinsights_short}}.  
+<!--**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  -->
 
 O {{site.data.keyword.iot_short_notm}} se comunica com seus aplicativos e dispositivos usando a API (interface de programação de aplicativos) do {{site.data.keyword.iot_short_notm}} e o protocolo de sistema de mensagens do {{site.data.keyword.iot_short_notm}}. O painel do {{site.data.keyword.iot_short_notm}} conecta-se como uma interface com o usuário de front-end para simplificar operações dentro da plataforma. Dados do dispositivo podem ser armazenados ou usados com soluções de análise de dados.
 
@@ -39,10 +36,9 @@ O {{site.data.keyword.iot_short_notm}} se comunica com seus aplicativos e dispos
 
 Quando se registrar com o {{site.data.keyword.iot_short_notm}}, você receberá um ID de organização. Seu ID da organização é um identificador exclusivo de seis caracteres para sua conta. As organizações asseguram que seus dados estejam acessíveis apenas para seus dispositivos e aplicativos. Após o registro, dispositivos e chaves API (interface de programação de aplicativos) são ligados a uma única organização. Quando um aplicativo se conecta ao serviço usando uma chave API (interface de programação de aplicativos), ele será registrado na organização que está associada à chave API usada.
 
-Para sua segurança, é impossível a comunicação entre organizações. A única maneira de transmitir dados entre duas organizações é criando um aplicativo em cada organização que irá se comunicar com os aplicativos na outra organização.
+Para sua segurança, a comunicação entre diferentes organizações não é possível. A única maneira de transmitir dados entre duas organizações é criando um aplicativo em cada organização que irá se comunicar com os aplicativos na outra organização.
 
-**Nota:** O ID de sua organização do {{site.data.keyword.iot_short_notm}} é diferente de
-sua [organização do Bluemix](../../docs/admin/orgs_spaces.html#orginfo).
+**Nota:** seu ID da organização do {{site.data.keyword.iot_short_notm}} é diferente de sua [organização do IBM Cloud](../../docs/admin/orgs_spaces.html#orginfo).
 
 ### Dispositivos
 

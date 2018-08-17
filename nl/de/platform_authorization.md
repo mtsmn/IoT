@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2017-12-08"
 
 ---
 
@@ -33,11 +33,10 @@ Gehen Sie wie folgt vor, um eine neue Kombination aus API-Schlüssel und Authent
 4.	Klicken Sie auf **Fertigstellen**.
 
 
-
-## Verbindung für Bluemix-Bindung
+## Verbindung für IBM Cloud-Bindung
 {: #bluemix-binding}
 Sie können Anwendungen über {{site.data.keyword.Bluemix_notm}} an Ihre {{site.data.keyword.iot_short_notm}}-Organisation binden. Durch Binden der Anwendung kann sie nur mit Serviceinstanzen im selben Bereich bzw. derselben Organisation kommunizieren. Sie können alle Daten, die für die Kommunikation zwischen der Anwendung und der Serviceinstanz erforderlich ist, in der Umgebungsvariable VCAP_SERVICES finden. Wenn Ihre Anwendung an mehrere Services gebunden ist, umfasst die Variable Verbindungsinformationen zu jeder einzelnen Serviceinstanz.  
 
-Sie können jedoch Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise verwenden, wie auch eine externe App sie verwenden würde. Verwenden Sie die Berechtigungsnachweise, um eine App-Instanz direkt zu konfigurieren, anstatt eine Bindung zu erstellen. Weitere Informationen finden Sie in der {{site.data.keyword.Bluemix_notm}}-Dokumentation in [Neue Serviceinstanz anfordern](https://console.{DomainName}/docs/services/reqnsi.html#req_instance).
+Sie können jedoch Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise verwenden, wie auch eine externe App sie verwenden würde. Verwenden Sie die Berechtigungsnachweise, um eine App-Instanz direkt zu konfigurieren, anstatt eine Bindung zu erstellen. Weitere Informationen finden Sie in der {{site.data.keyword.Bluemix_notm}}-Dokumentation in [Neue Serviceinstanz anfordern](https://console.{DomainName}/docs/manageapps/reqnsi.html#req_instance).
 
-Wechseln Sie zu **Apps > Bluemix-Apps**, um Details für die Bluemix-Anwendungen anzuzeigen, die an die Ihrer Organisation zugeordnete Serviceinstanz gebunden sind.  
+Wechseln Sie zu **Apps > IBM Cloud-Apps**, um Details für die {{site.data.keyword.Bluemix_notm}}-Anwendungen anzuzeigen, die an die Ihrer Organisation zugeordnete {{site.data.keyword.Bluemix_notm}}-Serviceinstanz gebunden sind.  

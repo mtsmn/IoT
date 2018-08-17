@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-03-01"
 ---
 
@@ -30,4 +30,4 @@ Pour afficher le statut des services Watson IoT sélectionnés qui s'exécutent 
 
 ![Flux Twitter https://twitter.com/ibmiotf](images/twitter_logo.png "Flux Twitter IBM Watson IoT Platform")
 
-Vous pouvez également obtenir les dernières informations et mises à jour concernant {{site.data.keyword.iot_short_notm}} et les services qui lui sont associés en suivant votre [flux Twitter ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://twitter.com/ibmiotf).
+Vous pouvez également obtenir les dernières informations et mises à jour concernant {{site.data.keyword.iot_short_notm}} et les services qui lui sont associés en suivant votre [flux Twitter ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://twitter.com/ibmiot). 

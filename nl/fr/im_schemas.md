@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-14"
+  years: 2016, 2018
+lastupdated: "2018-03-14"
 
 ---
 
@@ -15,12 +15,19 @@ lastupdated: "2017-03-14"
 # Création de schémas de type de terminal
 {: #iotrtinsights_task}
 
-Pour utiliser les fonctions {{site.data.keyword.iot_short}}, telles que des règles et des actions, vous devez créer un schéma pour mapper des propriétés de terminal à des noms de propriété conviviaux, définir les unités de données pour les propriétés et spécifier un type de message à utiliser avec le schéma.
-{: shortdesc}
+**Important :** Nous lançons un nouveau programme bêta proposant une nouvelle façon de définir des règles pour vos données de terminal IoT dans le cadre d'un programme plus vaste de modifications visant à améliorer la manière dont {{site.data.keyword.iot_full}} distribue des règles et des actions.  
 
-**Important :** Des schémas sont requis pour utiliser des règles et des actions. Pour plus d'informations, voir [Cloud Analytics](cloud_analytics.html#rules).
+Pour en savoir plus, consultez l'article de blogue [Une approche alternative pour définir des règles sur les données IoT ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.  
 
-**Important :** Les fonctions d'analyse sont fusionnées à partir du service {{site.data.keyword.iotrtinsights_full}}. Si votre organisation {{site.data.keyword.iot_short_notm}} est utilisée comme source de données pour une instance {{site.data.keyword.iotrtinsights_short}} existante, Cloud and Edge Analytics n'est pas activé tant que les instances {{site.data.keyword.iotrtinsights_short}} existantes n'ont pas été migrées. Continuez d'utiliser le tableau de bord {{site.data.keyword.iotrtinsights_short}} pour vos besoins en analyse tant que la migration n'est pas terminée. Pour plus d'informations, voir le [blogue IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} sur IBM developerWorks et vos tableaux de bord de l'instance {{site.data.keyword.iotrtinsights_short}} existante.  
+Pour commencer à définir vos propres règles, voir la documentation [Création de règles imbriquées (bêta)](information_management/im_rules.html).
+
+## A propos de cette tâche
+
+Pour utiliser les fonctions {{site.data.keyword.iot_short_notm}}, telles que des règles et des actions, vous devez créer un schéma pour mapper des propriétés de terminal à des noms de propriété conviviaux, définir les unités de données pour les propriétés et spécifier un type de message à utiliser avec le schéma.
+
+Des schémas sont requis pour utiliser des règles et des actions. Pour plus d'informations, voir [Cloud Analytics](cloud_analytics.html#rules).
+
+Les fonctions d'analyse sont fusionnées à partir du service {{site.data.keyword.iotrtinsights_full}}. Si votre organisation {{site.data.keyword.iot_short_notm}} est utilisée comme source de données pour une instance {{site.data.keyword.iotrtinsights_short}} existante, Cloud and Edge Analytics n'est pas activé tant que les instances {{site.data.keyword.iotrtinsights_short}} existantes n'ont pas été migrées. Continuez d'utiliser le tableau de bord {{site.data.keyword.iotrtinsights_short}} pour vos besoins en analyse tant que la migration n'est pas terminée. Pour plus d'informations, voir le [blogue IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} sur IBM developerWorks et vos tableaux de bord de l'instance {{site.data.keyword.iotrtinsights_short}} existante.  
 
 ## Ajout d'un schéma de terminal
 {: #add_schema}
@@ -32,7 +39,7 @@ Pour ajouter un schéma :
 3. Ajoutez une ou plusieurs propriétés.  
     Vous pouvez sélectionner des propriétés à partir d'un terminal connecté, créer des propriétés virtuelles qui modifient ou combinent des propriétés existantes, ou ajouter manuellement des propriétés.  
 
-    **Astuce : ** Les propriétés disponibles sont définies dans le contenu des messages qui sont envoyés par un terminal. Pour plus d'informations sur le format de contenu {{site.data.keyword.iot_short}} payload format, voir la rubrique [Contenu de message](reference/mqtt/index.html#message-payloadl "Contenu de message.").   
+    **Astuce : ** Les propriétés disponibles sont définies dans le contenu des messages qui sont envoyés par un terminal. Pour plus d'informations sur le format de contenu {{site.data.keyword.iot_short}} payload format, voir la rubrique [Contenu de message](reference/mqtt/index.html#message-payload "Contenu de message.").   
   <dl>
   <dt>Ajouter manuellement une propriété</dt>
   <p><b>Astuce :</b> Pour créer une structure de propriété imbriquée, commencez par ajouter une propriété dont le type de données est Parent. Dans la table des propriétés, vous pouvez ensuite cliquer sur l'icône ![Ajouter un enfant.](images/add_child.png "Ajouter un enfant") pour ajouter une ou plusieurs propriétés enfant.</p>

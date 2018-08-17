@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-12-12"
+  years: 2016, 2018
+lastupdated: "2018-03-12"
 
 ---
 
@@ -15,10 +15,17 @@ lastupdated: "2016-12-12"
 # Cálculos avançados para propriedades virtuais de borda
 {: #im_vir_calculations}
 
-Amplie os cálculos básicos de propriedade virtual com fórmulas pré-executadas do Edge Analytics.
-{:shortdesc}
+** Importante:** estamos ativando um Beta para uma nova maneira de definir regras em seus dados do dispositivo IoT como parte de um programa mais amplo de mudanças para melhorar a maneira como o {{site.data.keyword.iot_full}} entrega regras e ações.
 
-**Importante:** os cálculos avançados somente retornarão pontos de dados da propriedade se os dados para a propriedade selecionada vierem de um dispositivo conectado a um gateway que tenha um Edge Analytics Agent instalado. Uma regra do Edge pode usar essa propriedade virtual diretamente. Para usar a propriedade com uma regra de nuvem, uma regra do Edge deve enviar o ponto de dados para a nuvem usando a ação Encaminhar para a nuvem. Para obter mais informações, consulte [Instalando o Edge Analytics Agent](gateways/dashboard.html#edge).
+Para descobrir mais, verifique a postagem do blog [Uma abordagem alternativa para definir Regras em dados do IoT![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para iniciar a definição de suas próprias regras, veja a documentação [Criando regras integradas (Beta)](information_management/im_rules.html).
+
+## Sobre cálculos para propriedades virtuais de borda
+
+Amplie os cálculos básicos de propriedade virtual com fórmulas pré-executadas do Edge Analytics.
+
+Os cálculos avançados retornarão pontos de dados de propriedade somente se os dados para a propriedade selecionada vierem de um dispositivo conectado a um gateway com um Edge Analytics Agent instalado. Uma regra do Edge pode usar essa propriedade virtual diretamente. Para usar a propriedade com uma regra de nuvem, uma regra do Edge deve enviar o ponto de dados para a nuvem usando a ação Encaminhar para a nuvem. Para obter mais informações, consulte [Instalando o Edge Analytics Agent](gateways/dashboard.html#edge).
 
 Exemplo: use os pontos de dados virtuais avançados em um cartão de gráfico de linhas para visualizar as tendências de dados com aumentos de dados removidos.  
  ![Pontos de dados reais versus pontos de dados médios.](images/vir_adv_avg_card.svg "Comparação entre pontos de dados reais e ponderados.")

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-12-12"
+  years: 2016, 2018
+lastupdated: "2018-03-12"
 
 ---
 
@@ -15,10 +15,18 @@ lastupdated: "2016-12-12"
 # 边缘虚拟属性的高级计算
 {: #im_vir_calculations}
 
-使用预先编写的边缘分析公式扩展基本虚拟属性计算。
-{:shortdesc}
+**重要信息：**我们即将推出的 Beta 版中提供了对 IoT 设备数据定义规则的新方法，这是更为广泛的变更计划的一部分，旨在改进 {{site.data.keyword.iot_full}} 交付规则和操作的方式。
 
-**重要信息：**仅当所选属性的数据来自连接到网关的设备，并且该网关安装了 Edge Analytics Agent 时，高级计算才会返回属性数据点。边缘规则可以直接使用此虚拟属性。要将属性用于云规则，边缘规则必须使用“转发到云”操作将数据点发送到云。有关更多信息，请参阅[安装 Edge Analytics Agent](gateways/dashboard.html#edge)。
+要了解更多信息，请查看博客帖子 [An alternative approach to defining Rules on IoT data ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}。
+
+要开始定义您自己的规则，请查看[创建嵌入式规则 (Beta)](information_management/im_rules.html) 文档。
+
+## 关于边缘虚拟属性的计算
+
+使用预先编写的边缘分析公式扩展基本虚拟属性计算。
+
+
+仅当所选属性的数据来自连接到网关的设备，并且该网关安装了 Edge Analytics Agent 时，高级计算才会返回属性数据点。边缘规则可以直接使用此虚拟属性。要将属性用于云规则，边缘规则必须使用“转发到云”操作将数据点发送到云。有关更多信息，请参阅[安装 Edge Analytics Agent](gateways/dashboard.html#edge)。
 
 示例：使用折线图卡中的高级虚拟数据点来可视化数据趋势并除去数据峰值。  
  ![实际和平均数据点之间的比较。](images/vir_adv_avg_card.svg "实际和平均数据点之间的比较")
@@ -85,8 +93,7 @@ lastupdated: "2016-12-12"
 <li>属性
 <li>前后数据点数 (half-width)，格式为大于 0 的整数。
 </ul></td>
-<td>对数据点应用框式平滑法会返回在持续移动且以相关数据点为中心的某一时段内数据点的平均值。</br></br>**重要信息：**根据数据频率和 half-width 值，返回的数据点或多或少会延迟。例如，如果 half-width 设置为 `5`，数据频率为 1 条消息/秒，那么返回的虚拟数据点会延迟 5 秒。</br></br>将框式平滑公式用于规则可避免根据包含孤立峰值的噪声数据而触发误报。**重要信息：**创建规则时，请注意数据点延迟。</br></br>使用折线图卡来可视化数据趋势并除去数据峰值。
-</td>
+<td>对数据点应用框式平滑法会返回在持续移动且以相关数据点为中心的某一时段内数据点的平均值。</br></br>**重要信息：**根据数据频率和 half-width 值，返回的数据点或多或少会延迟。例如，如果 half-width 设置为 `5`，数据频率为 1 条消息/秒，那么返回的虚拟数据点会延迟 5 秒。</br></br>将框式平滑公式用于规则可避免根据包含孤立峰值的噪声数据而触发误报。**重要信息：**创建规则时，请注意数据点延迟。</br></br>使用折线图卡来可视化数据趋势并除去数据峰值。</td>
 </tr>
 <tr>
 <td>高斯平滑法</td>

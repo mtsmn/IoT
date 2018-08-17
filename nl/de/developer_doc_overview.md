@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-02-03"
+  years: 2016, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -20,7 +20,7 @@ Anhand von Clientbibliotheken, Inhalten und Beispielen können Sie Code generier
 {:shortdesc}
 
 
-## {{site.data.keyword.iot_short_notm}} entwickeln
+## Entwicklung in {{site.data.keyword.iot_short_notm}}
 {: #goals}
 Sie können Code entwickeln, um Ihre Geräte einzurichten und mit {{site.data.keyword.iot_short_notm}} zu verbinden und die Echtzeitdaten zu analysieren, die für Sie von Interesse sind. Bei der Ausführung der folgenden Tasks werden Sie durch Informationen unterstützt:
 
@@ -53,7 +53,7 @@ Sie können in {{site.data.keyword.iot_short_notm}} Geräte erstellen und verwal
 - Java
 - C#
 - Embedded C
-- mBed C++
+- Mbed C++
 
 ## Gateway-Entwicklung
 {: #gateway-dev}
@@ -72,6 +72,6 @@ Weitere Informationen und Links zu den Clientbibliotheken, die zur Verfügung st
 * [C# ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
 * [Embedded C ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
 * [Java ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-java){:new_window}
-* [mBed C++ ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+* [Mbed C++ ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){:new_window}
 * [Node.js ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
 * [Python ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python){:new_window}

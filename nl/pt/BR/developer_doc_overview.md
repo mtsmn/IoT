@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-02-03"
+  years: 2016, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -53,7 +53,7 @@ Bibliotecas do cliente, conteúdo e amostras estão disponíveis para ajudá-lo 
 - Java
 - C#
 - C Incorporado
-- mBed C++
+- Mbed C++
 
 ## Desenvolvimento do gateway
 {: #gateway-dev}
@@ -72,6 +72,6 @@ Para obter mais informações e links para as bibliotecas do cliente que estão 
 * [C# ![Ícone de link externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
 * [Embedded C ![Ícone de link externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
 * [Java ![Ícone de link externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-java){:new_window}
-* [mBed C++ ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+* [Mbed C++ ![Ícone de link externo](../../icons/launch-glyph.svg)](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){:new_window}
 * [Node.js ![Ícone de link externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
 * [Python ![Ícone de link externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python){:new_window}

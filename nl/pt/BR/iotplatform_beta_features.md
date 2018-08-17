@@ -1,6 +1,8 @@
 ---
 
-copyright: years: 2016, 2017 lastupdated: "2017-10-04"
+copyright:
+years: 2016, 2018
+lastupdated: "2018-05-31"
 
 ---
 
@@ -20,12 +22,13 @@ Os seguintes recursos beta estão disponíveis no {{site.data.keyword.iot_short_
 
 Recurso       | Documentação       
 ------------- | -------------
-Interface com o usuário de gerenciamento de dados | [Introdução ao gerenciamento de dados usando a interface da web (Beta)](GA_information_management/im_ui_flow.html#gs_web)
- | [Configurando dispositivos para uso com o recurso de gerenciamento de dados usando a interface da web (Beta)](GA_information_management/im_config_devices.html#im_config_devices)
-Controle de acesso do gateway | [Controle de acesso ao gateway (beta)](gateways/gateway-access-control.html#gateway-access-control)
-Domínios customizados | [Domínios customizados (beta)](reference/security/set_up_certificates.html#custom-domains)
-Relatório de drill down | [Relatório de drill-down (Beta)](reference/security/RM_security.html#drill-down)
-Controle de acesso de nível de recursos | [Visão geral do RLAC (Beta)](reference/rlac_overview.html#RLAC_overview) 
- | [Configurando o RLAC (Beta)](reference/rlac.html#configure_RLAC)
-Pacote de gateway da Internet of Things| [Pacote de gateway do da Internet of Things (Beta)](gateways/iotgw.html#gw_package)
+Relatório de drill down | [ Relatório de drill down (Beta) ](reference/security/RM_security.html#drill_down)
+Pacote de gateway da Internet of Things | [Pacote de gateway do da Internet of Things (Beta)](gateways/iotgw.html#gw_package)
 Simulando dados do dispositivo | [Simulando dados do dispositivo (Beta)](devices/device_sim.html)
+Restaurando dispositivos excluídos | [ Restaurando dispositivos excluídos (Beta) ](iotplatform_task.html#restore_device)
+Regras integradas | [Criando regras integradas(Beta)](information_management/im_rules.html)
+Things | [ Introdução à mansão de dados ](GA_information_management/ga_im_device_twin.html#device_twins)
+{{site.data.keyword.iot_short_notm}} Edge (vizualização) | [ Visão geral do {{site.data.keyword.iot_short_notm}}  Edge (Preview) ](edge/WIoTP_edge.html)
+Autenticação e Autorização do Cloud IAM | [Autenticação e Autorização do Cloud IAM para o {{site.data.keyword.iot_short_notm}} (Beta)](reference/security/cloud_iam.html)
+Autenticação e Autorização do ID do App | [Autenticação e Autorização do ID do app para o {{site.data.keyword.iot_short_notm}} (Beta)](reference/security/app_id.html)
+Interface com o usuário de | [ Gerenciando grupos (Beta) ](manage_groups.html#groups_overview)

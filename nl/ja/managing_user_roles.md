@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-09-16"---
+  years: 2016, 2018
+lastupdated: "2016-09-16"
+
+---
 
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}
@@ -12,7 +14,7 @@ lastupdated: "2016-09-16"---
 
 # ユーザー役割の管理
 
-ユーザー役割によって、ユーザーが実行できる操作を制限できます。ユーザーに割り当てた役割を変更する場合は、{{site.data.keyword.iot_full}} ダッシュボードまたは {{site.data.keyword.iot_short_notm}} API を使用します。
+ユーザー役割によって、ユーザーが実行できる操作を制限できます。 ユーザーに割り当てた役割を変更する場合は、{{site.data.keyword.iot_full}} ダッシュボードまたは {{site.data.keyword.iot_short_notm}} API を使用します。
 
 ## ダッシュボードを使用してユーザー役割を変更する
 

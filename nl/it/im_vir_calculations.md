@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-12-12"
+  years: 2016, 2018
+lastupdated: "2018-03-12"
 
 ---
 
@@ -15,10 +15,18 @@ lastupdated: "2016-12-12"
 # Calcoli avanzati per le proprietà virtuali edge
 {: #im_vir_calculations}
 
-Estendi i calcoli della proprietà virtuale di base con le formule di analisi edge predefinite.
-{:shortdesc}
+**Importante:** stiamo facendo partire una beta per definire in un nuovo modo le regole nei tuoi dati del dispositivo IoT come parte
+di un programma di modifiche più grande per migliorare il modo in cui {{site.data.keyword.iot_full}} fornisce le regole e le azioni.
 
-**Importante:** i calcoli avanzati restituiscono solo i punti dati della proprietà se i dati per la proprietà selezionata provengono da un dispositivo collegato a un gateway con installato un EAA (Edge Analytics Agent). Una regola edge può utilizzare questa proprietà virtuale direttamente. Per utilizzare la proprietà con una regola del cloud, è necessario che una regola edge invii il punto dati al cloud utilizzando l'azione Inoltra a cloud. Per ulteriori informazioni, consulta [Installazione dell'agent di analisi edge](gateways/dashboard.html#edge).
+Per ulteriori informazioni, controlla il post del blog [An alternative approach to defining Rules on IoT data ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Per iniziare a definire le tue regole, consulta la documentazione [Creazione delle regole integrate (Beta)](information_management/im_rules.html).
+
+## Informazioni sui calcoli per le proprietà virtuali edge 
+
+Estendi i calcoli della proprietà virtuale di base con le formule di analisi edge predefinite.
+
+I calcoli avanzati restituiscono solo i punti dati della proprietà se i dati per la proprietà selezionata provengono da un dispositivo collegato a un gateway con installato un EAA (Edge Analytics Agent). Una regola edge può utilizzare questa proprietà virtuale direttamente. Per utilizzare la proprietà con una regola del cloud, è necessario che una regola edge invii il punto dati al cloud utilizzando l'azione Inoltra a cloud. Per ulteriori informazioni, consulta [Installazione dell'agent di analisi edge](gateways/dashboard.html#edge).
 
 Esempio: utilizza i punti dati virtuali avanzati in una scheda grafica a linee per visualizzare gli andamenti dei dati con i malfunzionamenti rimossi.  
  ![Punti dati attuali in confronto ai medi.](images/vir_adv_avg_card.svg "Confronto tra i punti dati attuali e medi.")

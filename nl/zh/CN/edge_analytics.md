@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,12 +16,20 @@ lastupdated: "2017-03-13"
 # 边缘分析
 {: #edge_analytics}
 
+**重要信息：**为了改善 {{site.data.keyword.iot_full}} 提供规则和操作的方式，我们计划了很多改进，其中包括开发一个测试版来探索定义 IoT 设备数据规则的新方法。
+
+要获取更多信息，请参阅博客帖子 [An alternative approach to defining Rules on IoT data ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}。
+
+要开始定义您自己的规则，请参阅[创建嵌入式规则 (Beta)](information_management/im_rules.html) 文档。
+
+## 关于边缘分析
+
 通过边缘分析，可将分析规则触发过程从云移至支持边缘分析的网关，通过执行靠近设备的分析处理，可显著降低上传到云的设备数据流量。
-{:shortdesk}
+{:shortdesc}
 
-设备将其数据发送到支持边缘分析的网关，在该网关中边缘分析规则对数据进行解析。根据规则及其操作，关键数据和警报可能会发送到 {{site.data.keyword.iot_full}}，在网关上触发警报，或者写入网关本地的文本文件。
+设备将其数据发送到支持边缘分析的网关，在该网关中边缘分析规则对数据进行解析。根据规则及其操作，关键数据和警报可能会发送到 {{site.data.keyword.iot_short_notm}}，在网关上触发警报，或者写入网关本地的文本文件。
 
-下图说明了 {{site.data.keyword.iot_full}} 边缘分析环境的一般体系结构。
+下图说明了 {{site.data.keyword.iot_short_notm}} 边缘分析环境的一般体系结构。
 ![适用于边缘分析体系结构的 IBM Watson IoT Platform](images/architecture_platform_edge.svg "具有边缘分析体系结构的 IBM Watson IoT Platform")
 
 ## 开始之前
@@ -45,10 +53,10 @@ lastupdated: "2017-03-13"
 
 要获取有关已对网关连接设备触发的边缘规则和警报的概述，请使用以下板：
 
-|板名称| 描述|  
+|板名称|描述|  
  |:---|:---|  
-  |以规则为中心的分析| 显示组织的规则，包括边缘规则。其他卡会列出已转发的边缘警报、关联的设备、设备属性和已转发的边缘警报信息。|  
- |以设备为中心的分析| 显示连接到组织的设备。其他卡会显示所选边缘设备的已转发警报、所选设备的信息、设备属性和已转发警报信息。|
+  |以规则为中心的分析|显示组织的规则，包括边缘规则。其他卡会列出已转发的边缘警报、关联的设备、设备属性和已转发的边缘警报信息。|  
+ |以设备为中心的分析|显示连接到组织的设备。其他卡会显示所选边缘设备的已转发警报、所选设备的信息、设备属性和已转发警报信息。|
 
 有关缺省分析板的更多信息，请参阅[使用板和卡可视化实时数据](data_visualization.html#default_boards)。
 
@@ -68,7 +76,7 @@ lastupdated: "2017-03-13"
 可以通过并列行的方式添加条件以将其应用为 OR 条件，也可以通过顺序列的方式添加条件以将其应用为 AND 条件。  
 **注：**为了能够选择设备属性作为规则的输入，必须将该属性映射到模式。请参阅[创建模式](im_schemas.html)以获取更多信息。  
 
-**重要信息：**要触发用于比较两个属性的条件，或者触发使用 AND 以顺序方式组合的两个或更多属性条件，触发数据点必须包含在同一设备消息中。如果数据是在多个消息中收到的，那么不会触发该条件或这些顺序条件。  
+**重要信息：**要触发用于比较两个属性的条件，或者触发使用 AND 以顺序方式组合的两个或更多属性条件，触发数据点必须包含在同一设备消息中。如果数据是在多个消息中收到的，就不会触发该条件或这些顺序条件。  
 
 **示例：**   
 如果参数值大于指定的值，可能触发简单的规则：  
@@ -79,7 +87,8 @@ lastupdated: "2017-03-13"
 4. 为规则配置有条件触发需求。  
 要控制一段时间内为某个规则触发的警报数和操作数，可以为该规则配置有条件触发需求。
   
-**重要信息：**有条件触发将作用于该规则中的任何条件。例如，如果某个规则使用 OR 设置了 5 个不同的并行条件，那么每个为 true 的条件都会计入有条件触发器计数。要为规则设置有条件触发，请执行以下操作：
+**重要信息：**有条件触发将作用于该规则中的任何条件。例如，如果某个规则使用 OR 设置了 5 个不同的并行条件，那么每个为 true 的条件都会计入有条件触发器计数。
+要为规则设置有条件触发，请执行以下操作：
  1. 在规则编辑器中，单击缺省的**每次满足条件时触发**链接，以打开“设置频率需求”对话框。
  2. 选择并配置要在规则中使用的有条件触发器。
  <ul>
@@ -159,12 +168,12 @@ lastupdated: "2017-03-13"
 
 除了激活规则外，还可以对网关执行以下规则管理操作：
 
-操作| 描述
+操作|描述
 --- | ---
-激活| 将规则上传到所选网关并激活规则。规则状态会设置为*活动*。
-停用| 停用所选网关上的规则。规则会保留在网关上，并且可以根据需要重新激活。规则状态会设置为*不活动*。
-更新| 将更新版本的规则上传到所选网关。如果网关的规则状态为*活动（较旧）*，使用此操作可使网关处于最新状态。规则状态会设置为*活动*。
-除去| 从所选网关中除去规则。网关的规则状态会还原为*无*。
+激活|将规则上传到所选网关并激活规则。规则状态会设置为*活动*。
+停用|停用所选网关上的规则。规则会保留在网关上，并且可以根据需要重新激活。规则状态会设置为*不活动*。
+更新|将更新版本的规则上传到所选网关。如果网关的规则状态为*活动（较旧）*，使用此操作可使网关处于最新状态。规则状态会设置为*活动*。
+除去|从所选网关中除去规则。网关的规则状态会还原为*无*。
 
 
 ## 与云分析集成
@@ -190,32 +199,32 @@ lastupdated: "2017-03-13"
  - 查看**传感器信息**部分，以获取来自网关的详细诊断信息。下表描述了网关设备消息中可能包含的不同属性。
 
 
- 属性| 描述
+ 属性|描述
  --- | ---
  `MsgInCount` |向 Edge Analytics Agent (EAA) 发送的消息数。
- `MsgInRate` | 在上一分钟，每秒向 EAA 发送的估计消息数。
- `LastHeartBeat` | 上次生成脉动信号消息时的毫秒时间戳记。脉动信号消息至少每 10 秒生成一次。
- `CurrentTimestamp` | 生成当前监视消息时的毫秒时间戳记。
- `IsAlive` | 如果 `LastHeartBeat` 与 `CurrentTimestamp` 之间的差值大于 20 秒，那么此属性为 0。
- `BytesOutCount` | EAA 向 {{site.data.keyword.iot_short}} 发送的消息字节数。
- `BytesOutRate` | 在上一个分钟，每秒 EAA 向 {{site.data.keyword.iot_short}} 发送的估计消息字节数。
- `BytesInCount` | {{site.data.keyword.iot_short}} 向 EAA 发送的消息字节数。
- `BytesInRate` | 在上一分钟，每秒 {{site.data.keyword.iot_short}} 向 EAA 发送的估计消息字节数。
+ `MsgInRate` |在上一分钟，每秒向 EAA 发送的估计消息数。
+ `LastHeartBeat` |上次生成脉动信号消息时的毫秒时间戳记。脉动信号消息至少每 10 秒生成一次。
+ `CurrentTimestamp` |生成当前监视消息时的毫秒时间戳记。
+ `IsAlive` |如果 `LastHeartBeat` 与 `CurrentTimestamp` 之间的差值大于 20 秒，那么此属性为 0。
+ `BytesOutCount` |EAA 向 {{site.data.keyword.iot_short}} 发送的消息字节数。
+ `BytesOutRate` |在上一个分钟，每秒 EAA 向 {{site.data.keyword.iot_short}} 发送的估计消息字节数。
+ `BytesInCount` |{{site.data.keyword.iot_short}} 向 EAA 发送的消息字节数。
+ `BytesInRate` |在上一分钟，每秒 {{site.data.keyword.iot_short}} 向 EAA 发送的估计消息字节数。
  `RuleBytesInCount` |向 EAA 规则引擎核心发送的消息字节数。</br> **注：**如果没有为设备类型设置规则，那么该设备类型的消息不会发送到规则引擎核心。
- `RuleBytesInRate` | 在上一分钟，每秒向 EAA 规则引擎核心发送的估计消息字节数。
- `MsgOutCount` | EAA 向 {{site.data.keyword.iot_short}} 发送的消息数。
- `MsgOutRate` | 在上一分钟，每秒 EAA 向 {{site.data.keyword.iot_short}} 发送的估计消息字节数。
- `MsgReducePercent` | 入局和出局消息之间的百分比差值。</br>以下公式用于计算：`(msgIn - msgOut) / msgIn`
- `BytesReducePercent` | 入局和出局字节之间的百分比差值。</br>以下公式用于计算：`(bytesIn - bytesOut) / bytesIn`
- `MsgRateReduce` | 入局和出局消息速率之间的百分比差值。</br>以下公式用于计算：`(msgInRate - msgOutRate) / msgInRate`
- `BytesRateReduce` | 入局和出局消息字节之间的百分比差值。</br>以下公式用于计算：`(bytesInRate - bytesOutRate) / bytesInRate`
- `SystemLoad` | 运行 EAA 的系统的当前系统负载。**注：**仅当 `mpstat` 命令在运行 EAA 的系统上可用时，才会发送 CPU 速率。否则会发送上一分钟的系统负载平均值。</br>“系统负载平均值等于在一段时间内，排队等待可用处理器的可运行实体数与在可用处理器上运行的可运行实体数之和的平均值。平均负载的计算方法是特定于操作系统的，但通常为呈衰减趋势且与时间相关的平均值。如果负载平均值不可用，那么将返回负值。” - _ManagementFactory.getOperatingSystemMXBean_ 的 javadoc。
- `FreeMemory` | 运行 EAA 的 Java™ 虚拟机 (JVM) 的可用内存字节数。
- `MemoryUsed` | EAA 使用的 JVM 内存的字节数。
- `InQueueSize` | 排队等待 EAA 处理的消息数。
- `RuleNumber` | 在规则引擎核心中定义的规则数。
- `ProcessorNumber` | 用于调试用途。规则引擎核心中定义的处理器数。</br>**注：**处理器是规则引擎核心中的最小执行单元。
- `DataPointsInWindow` | 在时间窗口中缓存的数据点总数。数据点的字节大小根据其数据类型而有所不同。例如，float/int 数据点大小为 8 字节，而 string 数据点大小根据其长度而变化。在大多数情况下，可以使用以下公式来估算时间窗口的内存使用量：`DataPointsInWindow * 8`。
+ `RuleBytesInRate` |在上一分钟，每秒向 EAA 规则引擎核心发送的估计消息字节数。
+ `MsgOutCount` |EAA 向 {{site.data.keyword.iot_short}} 发送的消息数。
+ `MsgOutRate` |在上一分钟，每秒 EAA 向 {{site.data.keyword.iot_short}} 发送的估计消息字节数。
+ `MsgReducePercent` |入局和出局消息之间的百分比差值。</br>以下公式用于计算：`(msgIn - msgOut) / msgIn`
+ `BytesReducePercent` |入局和出局字节之间的百分比差值。</br>以下公式用于计算：`(bytesIn - bytesOut) / bytesIn`
+ `MsgRateReduce` |入局和出局消息速率之间的百分比差值。</br>以下公式用于计算：`(msgInRate - msgOutRate) / msgInRate`
+ `BytesRateReduce` |入局和出局消息字节之间的百分比差值。</br>以下公式用于计算：`(bytesInRate - bytesOutRate) / bytesInRate`
+ `SystemLoad` |运行 EAA 的系统的当前系统负载。**注：**仅当 `mpstat` 命令在运行 EAA 的系统上可用时，才会发送 CPU 速率。否则会发送上一分钟的系统负载平均值。</br>“系统负载平均值等于在一段时间内，排队等待可用处理器的可运行实体数与在可用处理器上运行的可运行实体数之和的平均值。平均负载的计算方法是特定于操作系统的，但通常为呈衰减趋势且与时间相关的平均值。如果负载平均值不可用，那么将返回负值。” - _ManagementFactory.getOperatingSystemMXBean_ 的 javadoc。
+ `FreeMemory` |运行 EAA 的 Java™ 虚拟机 (JVM) 的可用内存字节数。
+ `MemoryUsed` |EAA 使用的 JVM 内存的字节数。
+ `InQueueSize` |排队等待 EAA 处理的消息数。
+ `RuleNumber` |在规则引擎核心中定义的规则数。
+ `ProcessorNumber` |用于调试用途。规则引擎核心中定义的处理器数。</br>**注：**处理器是规则引擎核心中的最小执行单元。
+ `DataPointsInWindow` |在时间窗口中缓存的数据点总数。数据点的字节大小根据其数据类型而有所不同。例如，float/int 数据点大小为 8 字节，而 string 数据点大小根据其长度而变化。在大多数情况下，可以使用以下公式来估算时间窗口的内存使用量：`DataPointsInWindow * 8`。
 
 ## Edge Analytics 社区
 {: #eaa_community}

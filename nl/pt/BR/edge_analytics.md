@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,15 +16,22 @@ lastupdated: "2017-03-13"
 # Edge Analytics
 {: #edge_analytics}
 
+** Importante:** estamos ativando um Beta para uma nova maneira de definir regras em seus dados do dispositivo IoT como parte de um programa mais amplo de mudanças para melhorar a maneira como o {{site.data.keyword.iot_full}} entrega regras e ações.
+
+Para descobrir mais, verifique a postagem do blog [Uma abordagem alternativa para definir Regras em dados do IoT![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para iniciar a definição de suas próprias regras, veja a documentação [Criando regras integradas (Beta)](information_management/im_rules.html).
+
+## Sobre o Edge Analytics
+
 Com Edge Analytics, você move o processo de acionamento da regra de análise de dados da nuvem para um gateway ativado por Edge Analytics que pode reduzir de forma drástica a quantia de tráfego de dados do dispositivo para a nuvem executando o processamento de análise de dados próximo ao dispositivo.
-{:shortdesk}
+{:shortdesc}
 
-Os dispositivos enviam seus dados a um gateway ativado por Edge Analytics em que as regras de Edge Analytics analisam os dados. Dependendo da função e sua ação, dados críticos e alertas podem ser enviados ao {{site.data.keyword.iot_full}}, acionarem um alerta no gateway ou serem gravados em um arquivo de texto que é local para o gateway.
+Os dispositivos enviam seus dados a um gateway ativado por Edge Analytics em que as regras de Edge Analytics analisam os dados. Dependendo da função e sua ação, dados críticos e alertas podem ser enviados ao {{site.data.keyword.iot_short_notm}}, acionarem um alerta no gateway ou serem gravados em um arquivo de texto que é local para o gateway.
 
-O diagrama a seguir ilustra a arquitetura geral de um ambiente de análise de ponta do {{site.data.keyword.iot_full}}
-![IBM Watson IoT Platform para arquitetura de análise
-de ponta](images/architecture_platform_edge.svg "IBM Watson IoT Platform comarquitetura de análise de ponta")
-
+O diagrama a seguir ilustra a arquitetura geral de um ambiente
+{{site.data.keyword.iot_short_notm}} Edge Analytics.
+![IBM Watson IoT Platform para arquitetura do Edge Analytics](images/architecture_platform_edge.svg "IBM Watson IoT Platform com arquitetura do Edge Analytics")
 
 ## Antes de iniciar
 {: #byb}

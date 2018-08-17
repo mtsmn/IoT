@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017
+  years: 2016, 2018
 lastupdated: "2017-11-02"
 
 ---
@@ -17,7 +17,6 @@ lastupdated: "2017-11-02"
 {:shortdesc}
 
 ## 概述
-
 Node-RED 这款工具以全新的有趣方式将硬件设备、API 和在线服务连接在一起。有关更多信息，请参阅 [Node-RED ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://nodered.org/){: new_window} Web 站点。  
 
 可以在您自己的环境中运行 Node-RED 实例或将其用作 {{site.data.keyword.Bluemix_notm}} 应用程序。以下步骤包含 {{site.data.keyword.Bluemix_notm}} 的指示信息。

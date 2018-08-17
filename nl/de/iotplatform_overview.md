@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-07-20"
+  years: 2016, 2018
+lastupdated: "2018-02-22"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-07-20"
 # Informationen zu {{site.data.keyword.iot_short_notm}}
 {: #about_iotplatform}
 
-{{site.data.keyword.iot_full}} bietet einen leistungsfähigen Anwendungszugriff auf IoT-Geräte und -Daten bereit, um Sie bei der schnellen Erstellung von Analyseanwendungen, Visualisierungsdashboards und mobilen IoT-Apps zu unterstützen.
+{{site.data.keyword.iot_full}} bietet einen leistungsfähigen Anwendungszugriff auf IoT-Geräte und -Daten, um Sie bei der schnellen Erstellung von Analyseanwendungen und mobilen IoT-Apps zu unterstützen.
 {:shortdesc}
 
 {{site.data.keyword.iot_short_notm}} ermöglicht Ihnen die Ausführung leistungsfähiger Gerätemanagementoperationen sowie die Speicherung von und den Zugriff auf Gerätedaten und das Herstellen von Verbindungen für eine große Auswahl von Geräten und Gateway-Geräten. {{site.data.keyword.iot_short_notm}} bietet durch die Verwendung von MQTT und TLS eine sichere Kommunikation mit Ihren Geräten.
@@ -24,7 +24,7 @@ lastupdated: "2017-07-20"
 {: #watsoniotplatform_architecture}
 ![Architektur von IBM Watson IoT Platform](images/architecture_platform_2.svg "Architektur von IBM Watson IoT Platform")
 
-**Wichtig:** Die Analysefunktionen stammen aus dem {{site.data.keyword.iotrtinsights_full}}-Service und werden zusammengeführt. Wenn Ihre {{site.data.keyword.iot_short_notm}}-Organisation als Datenquelle für eine vorhandene {{site.data.keyword.iotrtinsights_short}}-Instanz verwendet wird, ist Analytics erst aktiviert, wenn die vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanzen migriert wurden. Verwenden Sie weiterhin das {{site.data.keyword.iotrtinsights_short}}-Dashboard für Ihre Analysevorhaben, bis die Migration abgeschlossen ist. Weitere Informationen finden Sie im [Blog zu IBM Watson IoT Platform ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks und in den Dashboards Ihrer bestehenden {{site.data.keyword.iotrtinsights_short}}-Instanz.  
+<!--**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  -->
 
 {{site.data.keyword.iot_short_notm}} kommuniziert mithilfe der {{site.data.keyword.iot_short_notm}}-API und des {{site.data.keyword.iot_short_notm}}-Nachrichtenprotokolls mit Ihren Anwendungen und Geräten. Das {{site.data.keyword.iot_short_notm}}-Dashboard stellt Verbindungen als Front-End-Benutzerschnittstelle bereit, um Operationen innerhalb der Plattform zu vereinfachen. Gerätedaten können zusammen mit Analyselösungen gespeichert oder verwendet werden.
 
@@ -35,9 +35,9 @@ lastupdated: "2017-07-20"
 
 Wenn Sie sich bei {{site.data.keyword.iot_short_notm}} registrieren, erhalten Sie eine Organisations-ID. Ihre Organisations-ID ist eine aus sechs Zeichen bestehende eindeutige ID für Ihr Konto. Durch Organisationen wird sichergestellt, dass nur Ihre Geräte und Anwendungen auf Ihre Daten zugreifen können. Nach der Registrierung sind Geräte- und API-Schlüssel an eine einzelne Organisation gebunden. Wenn eine Anwendung eine Verbindung zum Service über einen API-Schlüssel herstellt, wird sie bei der Organisation registriert, die dem verwendeten API-Schlüssel zugeordnet ist.
 
-Aus Gründen Ihrer Sicherheit ist es unmöglich, zwischen Organisationen zu kommunizieren. Die einzige Möglichkeit, Daten zwischen zwei Organisationen zu übertragen, besteht darin, innerhalb jeder der Organisationen eine Anwendung zu erstellen, die mit Anwendungen in der anderen Organisation kommuniziert.
+Aus Sicherheitsgründen ist die Kommunikation zwischen verschiedenen Organisationen nicht möglich. Die einzige Möglichkeit, Daten zwischen zwei Organisationen zu übertragen, besteht darin, innerhalb jeder der Organisationen eine Anwendung zu erstellen, die mit Anwendungen in der anderen Organisation kommuniziert.
 
-**Hinweis:** Ihre {{site.data.keyword.iot_short_notm}}-Organisations-ID unterscheidet sich von Ihrer [Bluemix-Organisation](../../docs/admin/orgs_spaces.html#orginfo).
+**Hinweis:** Ihre {{site.data.keyword.iot_short_notm}}-Organisations-ID entspricht nicht Ihrer [IBM Cloud-Organisation](../../docs/admin/orgs_spaces.html#orginfo).
 
 ### Geräte
 

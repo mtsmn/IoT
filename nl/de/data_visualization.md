@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-08"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,8 +16,17 @@ lastupdated: "2017-05-08"
 # Echtzeitdaten mithilfe von Boards und Karten visualisieren
 {: #boards_and_cards}
 
+
+**Wichtig:** Eine Betaversion, mit der eine neue Methode zur Definition von Regeln für IoT-Gerätedaten zur Verfügung steht,
+wird im Rahmen eines umfassenderen Programms mit Änderungen gestartet, das die Bereitstellung von Regeln und Aktionen in {{site.data.keyword.iot_full}} verbessern soll.
+
+Weitere Informationen finden Sie im Blogbeitrag [Alternative Methode zur Definition von Regeln für IoT-Daten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Lesen Sie als ersten Schritt bei der Definition eigener Regeln die Informationen in der Dokumentation [Eingebettete Regeln erstllen (Beta)](information_management/im_rules.html).
+
+## Informationen zu Boards und Karten
+
 Erstellen Sie Boards und Karten, um eigene Dashboards zu erstellen und gemeinsam zu nutzen, die Ihre Gerätedaten in Echtzeit visualisieren.
-{:shortdesc}
 
 Mithilfe von Boards und Karten können Sie Datasetwerte, die von mindestens einem Gerät stammen, grafisch darstellen, um eine schnelle Übersicht bereitzustellen und das Verständnis der Daten zu verbessern. Erstellen Sie Boards und fügen Sie Karten hinzu, die Daten als unbearbeitete Zahlen, Echtzeit-Grafiken, Messanzeigen und anderes anzeigen. Fügen Sie Ihren Boards Mitglieder hinzu, um die Boards mit anderen Benutzern in Ihrer Organisation gemeinsam zu nutzen. Ordnen Sie die Karten an und fügen Sie Trennlinien für den erklärenden Text hinzu, um Ihre Präsentation zu optimieren.  
 
@@ -27,7 +36,7 @@ Sie können den Standardsatz von Karten durch das [Erstellen eigener angepasster
 
 ## Standardboards
 {: #default_boards}
-Das {{site.data.keyword.iot_full}}-Dashboard weist folgende Standardboards auf:
+Das {{site.data.keyword.iot_short_notm}}-Dashboard weist folgende Standardboards auf:
 
 |Boardname | Beschreibung | Enthaltene Karten
 |:---|:---|:---|  

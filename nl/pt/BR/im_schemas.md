@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-14"
+  years: 2016, 2018
+lastupdated: "2018-03-14"
 
 ---
 
@@ -15,12 +15,19 @@ lastupdated: "2017-03-14"
 # Criar esquemas de tipo de dispositivo
 {: #iotrtinsights_task}
 
-Para usar recursos do {{site.data.keyword.iot_short}}, como regras e ações, deve-se criar um esquema para mapear propriedades do dispositivo para nomes de propriedades fáceis e simples, configurar as unidades de dados para as propriedades e especificar um tipo de mensagem para uso com o esquema.
-{: shortdesc}
+** Importante:** estamos ativando um Beta para uma nova maneira de definir regras em seus dados do dispositivo IoT como parte de um programa mais amplo de mudanças para melhorar a maneira como o {{site.data.keyword.iot_full}} entrega regras e ações.  
 
-**Importante:** esquemas são necessários para o uso de regras e ações. Para obter informações, consulte [Cloud Analytics](cloud_analytics.html#rules).
+Para descobrir mais, verifique a postagem do blog [Uma abordagem alternativa para definir Regras em dados do IoT![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.  
 
-**Importante:** os recursos de análise de dados são mesclados a partir do serviço do {{site.data.keyword.iotrtinsights_full}}. Se sua organização do {{site.data.keyword.iot_short_notm}} for usada como uma origem de dados para uma instância existente do {{site.data.keyword.iotrtinsights_short}}, Cloud e Edge Analytics não estarão ativados até após a migração das instâncias existentes do {{site.data.keyword.iotrtinsights_short}}. Continue a usar o painel do {{site.data.keyword.iotrtinsights_short}} para suas necessidades de análise de dados até que a migração seja concluída. Para obter mais informações, veja o [blog do IBM Watson IoT Platform ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} no IBM developerWorks e seus painéis de instância existentes do {{site.data.keyword.iotrtinsights_short}}.  
+Para iniciar a definição de suas próprias regras, veja a documentação [Criando regras integradas (Beta)](information_management/im_rules.html).
+
+## Sobre essa Tarefa
+
+Para usar recursos do {{site.data.keyword.iot_short_notm}}, como regras e ações, deve-se criar um esquema para mapear propriedades do dispositivo para nomes de propriedades fáceis e simples, configurar as unidades de dados para as propriedades e especificar um tipo de mensagem para uso com o esquema.
+
+Os esquemas são obrigatórios para usar regras e ações. Para obter informações, consulte [Cloud Analytics](cloud_analytics.html#rules).
+
+Os recursos de analítica são mesclados no serviço {{site.data.keyword.iotrtinsights_full}}. Se sua organização do {{site.data.keyword.iot_short_notm}} for usada como uma origem de dados para uma instância existente do {{site.data.keyword.iotrtinsights_short}}, Cloud e Edge Analytics não estarão ativados até após a migração das instâncias existentes do {{site.data.keyword.iotrtinsights_short}}. Continue a usar o painel do {{site.data.keyword.iotrtinsights_short}} para suas necessidades de análise de dados até que a migração seja concluída. Para obter mais informações, veja o [blog do IBM Watson IoT Platform ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} no IBM developerWorks e seus painéis de instância existentes do {{site.data.keyword.iotrtinsights_short}}.  
 
 ## Incluindo um esquema de dispositivo
 {: #add_schema}
@@ -32,7 +39,7 @@ Para incluir um esquema:
 3. Inclua uma ou mais propriedades.  
     É possível selecionar propriedades de um dispositivo conectado, criar propriedades virtuais que modifiquem ou combinem propriedades existentes ou incluir propriedades manualmente.  
 
-    **Dica:** as propriedades disponíveis são definidas na carga útil das mensagens que são enviadas por um dispositivo. Para obter informações sobre o formato da carga útil do {{site.data.keyword.iot_short}}, consulte o tópico [Carga útil da mensagem](reference/mqtt/index.html#message-payloadl "Carga útil da carga útil da mensagem.").   
+    **Dica:** as propriedades disponíveis são definidas na carga útil das mensagens que são enviadas por um dispositivo. Para obter informações sobre o formato da carga útil do {{site.data.keyword.iot_short}}, consulte o tópico [Carga útil da mensagem](reference/mqtt/index.html#message-payload "Carga útil da carga útil da mensagem.").   
   <dl>
   <dt>Incluir uma propriedade manualmente</dt>
   <p><b>Dica:</b> para criar uma estrutura de propriedade aninhada, primeiro inclua uma propriedade que tenha o tipo de dados Parent. Na tabela de propriedades, você pode clicar em ![ícone Incluir filho.](images/add_child.png "Incluir filho") para incluir uma ou mais propriedades-filhas.</p>

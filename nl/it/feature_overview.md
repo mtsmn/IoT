@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-07-20"
+  years: 2016, 2018
+lastupdated: "2018-05-08"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2017-07-20"
 
   1. Connect - Connessione dei dispositivi e sviluppo delle applicazioni
   2. Information Management - Archiviare, normalizzare, trasformare e controllare i dati del dispositivo e integrare il tuo {{site.data.keyword.iot_short_notm}} con altri servizi.
-  3. Analytics - Visualizzare i dati del dispositivo in tempo reale utilizzando il dashboard {{site.data.keyword.iot_short_notm}}.
+  3. Analytics - Specificare le condizioni della regola basate sui dati del dispositivo in tempo reale per attivare gli avvisi e le azioni.
   4. Risk Management - Configurare l'architettura e la connettività sicure con il controllo dell'accesso per gli utenti e le applicazioni.
 
 ## Collegamento
@@ -37,8 +37,7 @@ Le funzioni di gestione del dispositivo sono fornite tramite un'API di gestione 
 
 ### Estensioni e integrazioni del servizio
 
-Le estensioni e le integrazioni del servizio permettono ai servizi esterni e alle estensioni definite dall'utente dei servizi core di essere aggiunti a un'istanza di {{site.data.keyword.iot_short_notm}}. I servizi esterni che possono essere integrati con {{site.data.keyword.iot_short_notm}} includono i servizi di rilevamento meteo della Weather Company, i dati SIM Jasper e {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. Per ulteriori informazioni sulle estensioni e le integrazioni dei servizi di terze parti, consulta [integrazione di servizi esterni](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
-
+Le estensioni e le integrazioni del servizio permettono ai servizi esterni e alle estensioni definite dall'utente dei servizi core di essere aggiunti a un'istanza di {{site.data.keyword.iot_short_notm}}. I servizi esterni che possono essere integrati con {{site.data.keyword.iot_short_notm}} includono i servizi di rilevamento meteo della Weather Company che ti consentono di trovare il meteo corrente per un'ubicazione del dispositivo e i dati SIM Jasper. Per ulteriori informazioni sulle estensioni e le integrazioni dei servizi di terze parti, consulta [integrazione di servizi esterni](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
 
 ---
 
@@ -49,25 +48,22 @@ Le estensioni e le integrazioni del servizio permettono ai servizi esterni e all
 
 ### Ultima cache evento del dispositivo
 
-Utilizzando l'API Ultima cache evento {{site.data.keyword.iot_short_notm}}, puoi richiamare l'ultimo evento che è stato inviato a un dispositivo. Funziona sia se il dispositivo è online che offline e ti consente di richiamare lo stato del dispositivo indipendentemente dalla sua ubicazione fisica o stato di utilizzo. Gli ultimi dati evento possono essere richiamati per ogni evento specifico verificatosi negli ultimi 365 giorni.
+Utilizzando l'API Ultima cache evento {{site.data.keyword.iot_short_notm}}, puoi richiamare l'ultimo evento che è stato inviato a un dispositivo. Funziona sia se il dispositivo è online che offline e ti consente di richiamare lo stato del dispositivo indipendentemente dalla sua ubicazione fisica o stato di utilizzo. Gli ultimi dati evento possono essere richiamati per ogni evento specifico verificatosi negli ultimi 45 giorni.
 
 ### Archivio dati evento del dispositivo
 
 I dati evento del dispositivo dal servizio {{site.data.keyword.iot_short_notm}} possono essere archiviati per un utilizzo successivo. L'archivio dati è un primo passo fondamentale per l'esecuzione di analisi approfondite per ottenere informazioni approfondite da tali dati.  Ad esempio, puoi tracciare le modifiche per periodi di tempo più lunghi e archiviare le serie di dati da utilizzare con strumenti di analisi più potenti, incluso l'utilizzo con le API Watson e il calcolo cognitivo. Per ulteriori informazioni, consulta [connecting a {{site.data.keyword.cloudant_short_notm}} historian service](https://console.ng.bluemix.net/docs/services/IoT/cloudant_connector.html) o [connecting a {{site.data.keyword.messagehub}} historian service](https://console.ng.bluemix.net/docs/services/IoT/message_hub.html).
 
-### Gestione dei dati 
+### Gestione dei dati
 
 Diverse marche e modelli di dispositivi pubblicano i dati in formati diversi. La funzione di gestione dei dati ti permette di trasformare e normalizzare questi dati in una sola vista logica denominata *device state*, che può essere compresa ed utilizzata dalle applicazioni. Utilizzando la funzione di gestione dei dati si semplifica sensibilmente lo sviluppo dell'applicazione perché l'applicazione non ha più bisogno di comprendere i diversi formati dei dati dell'evento inviati da ogni dispositivo. Quando i dispositivi pubblicano gli eventi in {{site.data.keyword.iot_short_notm}}, il loro contenuto può essere associato alle proprietà di stato definite dall'utente utilizzando le associazioni. Se l'evento in entrata provoca una modifica allo stato del dispositivo, i valori delle proprietà dello stato del dispositivo vengono aggiornati e archiviati in {{site.data.keyword.iot_short_notm}}. I valori vengono resi disponibili all'applicazione su richiesta utilizzando un'API HTTP o sottoscrivendo un argomento.
 
 Per ulteriori informazioni sull'utilizzo di questa funzione, consulta [Introduzione alla gestione dei dati](GA_information_management/ga_im_device_twin.html).
 
 ---
+
 ## Analytics
 {: #analytics}
-
-### Visualizzare i dati del dispositivo in tempo reale
-
-Puoi visualizzare i dati del dispositivo in tempo reale utilizzando le schede del dashboard. Le schede del dashboard monitorano e visualizzano i dati del dispositivo in tempo reale, il che ti consente di tenere traccia dei dispositivi chiave e dei dati del dispositivo. Queste visualizzazioni vengono mostrate nel dashboard {{site.data.keyword.iot_short_notm}} principale per fornirti un rapido accesso al contesto e allo stato dei dati del dispositivo in tempo reale. Per ulteriori informazioni, consulta [visualizzazione dei dati in tempo reale](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
 
 ### Analisi cloud e edge
 

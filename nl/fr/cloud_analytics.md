@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -15,13 +15,20 @@ lastupdated: "2017-03-13"
 # Cloud Analytics
 {: #cloud_analytics}
 
-En utilisant {{site.data.keyword.iot_short}} Cloud Analytics, vous spécifiez des conditions de règle qui sont basées sur les données de terminal en temps réel et qui déclenchent des alertes et des actions facultatives lorsqu'elles sont réunies.    
-{: shortdesc}
+**Important :** Nous lançons un nouveau programme bêta proposant une nouvelle façon de définir des règles pour vos données de terminal IoT dans le cadre d'un programme plus vaste de modifications visant à améliorer la manière dont {{site.data.keyword.iot_full}} distribue des règles et des actions.
 
-Par exemple, vous pouvez créer une règle garantissant que lorsque le terminal est supprimé ou que la température du terminal augmente, une alerte est envoyée au tableau de bord du terminal de l'utilisateur et un courrier électronique est envoyé à l'administrateur.
+Pour en savoir plus, consultez l'article de blogue [Une approche alternative pour définir des règles sur les données IoT ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Pour commencer à définir vos propres règles, voir la documentation [Création de règles imbriquées (bêta)](information_management/im_rules.html).
+
 
 ## Avant de commencer
 {: #byb}
+
+En utilisant {{site.data.keyword.iot_short_notm}} Cloud Analytics, vous spécifiez des conditions de règle qui sont basées sur les données de terminal en temps réel et qui déclenchent des alertes et des actions facultatives lorsqu'elles sont réunies.    
+
+Par exemple, vous pouvez créer une règle garantissant que lorsque le terminal est supprimé ou que la température du terminal augmente, une alerte est envoyée au tableau de bord du terminal de l'utilisateur et un courrier électronique est envoyé à l'administrateur.
+
 Assurez-vous que les propriétés de terminal que vous souhaitez utiliser comme conditions dans vos règles ont été mappées à des schémas. Pour plus d'informations, voir [Connexion de terminaux](iotplatform_task.html) et [Création de schémas](im_schemas.html).
 
 En outre, consultez la recette [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} pour comprendre les règles et les actions utilisées dans Cloud Analytics.

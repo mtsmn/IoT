@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-20"---
+  years: 2016, 2018
+lastupdated: "2017-03-20"
+
+---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
@@ -24,12 +26,12 @@ lastupdated: "2017-03-20"---
 - デバイスを {{site.data.keyword.iot_short_notm}} 組織に登録する。
 - デバイスがイベントを {{site.data.keyword.iot_short_notm}} に送信していることを確認する。
 - GitHub リポジトリーから[視覚化サンプルをダウンロード](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip)し、.zip ファイルを解凍します。
-- {{site.data.keyword.Bluemix_notm}} から [cf コマンド・ライン・ツールをインストール](../../starters/install_cli.html)します。
+- {{site.data.keyword.Bluemix_notm}} から [cf コマンド・ライン・ツールをインストール](https://console.bluemix.net/docs/starters/install_cli.html)します。
 
 ## {{site.data.keyword.Bluemix_notm}} でのサンプルの実行
 {: #running_sample}
 
-1. Node.js SDK を使用して、{{site.data.keyword.Bluemix_notm}} 内にアプリケーションを作成します。アプリケーション名とアプリケーションのホスト名をメモします。この情報は、アプリケーションを {{site.data.keyword.Bluemix_notm}} にアップロードするために必要です。
+1. Node.js SDK を使用して、{{site.data.keyword.Bluemix_notm}} 内にアプリケーションを作成します。 アプリケーション名とアプリケーションのホスト名をメモします。この情報は、アプリケーションを {{site.data.keyword.Bluemix_notm}} にアップロードするために必要です。
 2. 以下のステップを行って、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の {{site.data.keyword.iot_short_notm}} インスタンスに node.JS アプリケーションをバインドします。
 
   a. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、作成した Node.JS アプリケーションをクリックします。
@@ -69,12 +71,12 @@ cf push <your_application_name>
 http://<your_application_name>.mybluemix.net
 ```
 
-組織内のすべてのデバイスがデバイス・ドロップダウン・メニューにリストされます。ここでデバイスを選択すると、そのデバイスが {{site.data.keyword.iot_short_notm}} サービスに送信中のデータのリアルタイム視覚化が表示されるはずです。履歴データを表示するには、**「履歴データ (Historic Data)」**ボタンをクリックします。
+組織内のすべてのデバイスがデバイス・ドロップダウン・メニューにリストされます。 ここでデバイスを選択すると、そのデバイスが {{site.data.keyword.iot_short_notm}} サービスに送信中のデータのリアルタイム視覚化が表示されるはずです。 履歴データを表示するには、**「履歴データ (Historic Data)」**ボタンをクリックします。
 
 ## サンプルのカスタマイズ
 {: #customize_sample}
 
-このサンプル・アプリケーションは、node.js フレームワークで作成されたスタンドアロン Web アプリケーションです。このサンプルを実行すると、{{site.data.keyword.iot_short_notm}} に登録されたデバイスによって送信されるイベントが視覚化されます。このサンプルでは、以下のツールを使用します。
+このサンプル・アプリケーションは、node.js フレームワークで作成されたスタンドアロン Web アプリケーションです。 このサンプルを実行すると、{{site.data.keyword.iot_short_notm}} に登録されたデバイスによって送信されるイベントが視覚化されます。 このサンプルでは、以下のツールを使用します。
 
 - Express: Node.js Web アプリケーション・フレームワーク
 - JQuery: UI および Ajax 呼び出し
@@ -98,7 +100,7 @@ http://<your_application_name>.mybluemix.net
 ## リアルタイム・データ表示のカスタマイズ
 {: #customize_real_time_display}
 
-リアルタイム・データのグラフィカル視覚化コードがあるディレクトリーは `public/ja/realtime` です。グラフ作成ロジックは、`public/js/historian/realtimeGraph.js` を編集してカスタマイズできます。
+リアルタイム・データのグラフィカル視覚化コードがあるディレクトリーは `public/ja/realtime` です。 グラフ作成ロジックは、`public/js/historian/realtimeGraph.js` を編集してカスタマイズできます。
 
 Paho MQTT ライブラリーを参照してデバイス・トピックへのサブスクライブと {{site.data.keyword.iot_short_notm}} からのデバイス・イベントの受信を行うファイルは、`public/js/historian/realtime.js` にあります。
 

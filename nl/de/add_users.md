@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-07-19"
+  years: 2016, 2018
+lastupdated: "2018-03-14"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2017-07-19"
 ## Benutzer hinzufügen
 {: #adding-new-users}
 
-Über die Registerkarte **Mitglieder** im Dashboard können Sie einzelne Mitglieder mithilfe der <!--Add, Invite, or Register--> Funktionen zum Hinzufügen oder Einladen hinzufügen. Sie können auch <!--add, invite, or register-->mithilfe der Importfunktion mehrere Mitglieder gleichzeitig hinzufügen oder einladen.
+Auf der Registerkarte **Mitglieder** im Dashboard können Sie einzelne Mitglieder mithilfe der Funktion 'Hinzufügen' hinzufügen. Darüber hinaus ist es möglich, Mitglieder gleichzeitig mithilfe der Funktion 'Importieren' hinzuzufügen.
 
 Mitgliederkonten haben standardmäßig kein Ablaufdatum. Wenn Sie Ihrer {{site.data.keyword.iot_short_notm}}-Organisation Mitglieder hinzufügen, können Sie für deren Konto optional ein Ablaufdatum festlegen.
 
@@ -46,31 +46,31 @@ Zum gleichzeitigen Hinzufügen mehrerer Mitglieder müssen Sie eine CSV-Datei (`
 6. Wählen Sie das passende Komma- oder Semikolonspaltentrennzeichen aus, das mit dem Trennzeichen in Ihrer CSV-Datei (`.csv`) übereinstimmt.
 7. Klicken Sie auf **Importieren**, um die IBMids zu importieren, und erstellen Sie die Mitglieder.
 
+<!--
+### Inviting members to your {{site.data.keyword.iot_short_notm}} organization
 
-### Mitglieder in die {{site.data.keyword.iot_short_notm}}-Organisation einladen
+When you invite a user to become a member of your {{site.data.keyword.iot_short_notm}} organization, the user receives an email that contains an invitation link. Invitation links expire 48 hours after they are sent. If an invitation link is not used within 48 hours, the user must be invited again to receive a new invitation link.
 
-Wenn Sie einen Benutzer einladen, Mitglied Ihrer {{site.data.keyword.iot_short_notm}}-Organisation zu werden, empfängt der Benutzer eine E-Mail, die einen Einladungslink enthält. Einladungslinks laufen 48 Stunden nach dem Versenden ab. Wenn ein Einladungslink nicht innerhalb von 48 Stunden verwendet wird, muss der Benutzer erneut eingeladen werden, damit er einen neuen Einladungslink erhält.
+**Important:** The invite feature requires a configured mail service. For more information, see the Email section of the [External service integrations](reference/extensions/index.html#email) topic.
 
-**Wichtig:** Die Funktion zum Einladen setzt einen konfigurierten Mail-Service voraus. Weitere Informationen finden Sie unter dem Stichpunkt 'E-Mail' im Abschnitt [Externe Services integrieren](reference/extensions/index.html#email).
+To invite a member to your {{site.data.keyword.iot_short_notm}} organization:
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Members**.
+2. Select the **Invitations** tab.
+2. Click **Invite Members** and select the **Invite** tab.
+3. Enter the email address of the member.
+4. Select a role for this member.
+5. Optional: Set an expiry date for the member.
+6. Click **Invite Member**.
 
-Gehen Sie wie folgt vor, um ein Mitglied in Ihre {{site.data.keyword.iot_short_notm}}-Organisation einzuladen:
-1. Wechseln Sie im {{site.data.keyword.iot_short_notm}}-Dashboard zu **Mitglieder**.
-2. Wählen Sie die Registerkarte **Einladungen** aus.
-2. Klicken Sie auf **Mitglieder einladen** und wählen Sie die Registerkarte **Einladen** aus.
-3. Geben Sie die E-Mail-Adresse des Mitglieds ein.
-4. Wählen Sie eine Rolle für dieses Mitglied aus.
-5. Optional: Legen Sie ein Ablaufdatum für das Mitglied fest.
-6. Klicken Sie auf **Mitglied einladen**.
-
-Zum gleichzeitigen Einladen mehrerer Mitglieder müssen Sie eine CSV-Datei (`.csv`) hochladen, die für jedes Mitglied die E-Mail-Adresse, die Rolle und das optionale Ablaufdatum enthält. Informationen finden Sie in [CSV-Datei erstellen](#constructing-your-csv).
-1. Wechseln Sie im {{site.data.keyword.iot_short_notm}}-Dashboard zu **Mitglieder**.
-2. Wählen Sie die Registerkarte **Einladungen** aus.
-2. Klicken Sie auf **Mitglieder einladen** und wählen Sie die Registerkarte **Importieren** aus.
-3. Durchsuchen Sie Ihre Dateien oder ziehen Sie die CSV-Datei (`.csv`) in das Fenster **CSV-Upload**.
-4. Wählen Sie eine Standardrolle aus, die verwendet werden soll, wenn eine in der CSV-Datei angegebene Rolle nicht erkannt wird.
-5. Ordnen Sie die Spaltennummern in Ihrer CSV-Datei der entsprechenden Einträgen für E-Mail-Adresse, Rolle und (optional) Ablaufdatum zu.
-6. Wählen Sie das passende Komma- oder Semikolonspaltentrennzeichen aus, das mit dem Trennzeichen in Ihrer CSV-Datei (`.csv`) übereinstimmt.
-7. Klicken Sie auf **Importieren**, um die Einladungen zu senden.
+To invite multiple members simultaneously, you must upload a `.csv` file that contains the email address, role and the optional expiry date of each member. For information, see [Constructing your CSV file](#constructing-your-csv).
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Members**.
+2. Select the **Invitations** tab.
+2. Click **Invite Members** and select the **Import** tab.
+3. Browse your files or drag the `.csv` file into the **Upload CSV** window.
+4. Select a default role to use if a role specified in the CSV file is not recognized.
+5. Map the column numbers in your CSV file to the corresponding email address, role, and (optional) expiry date entries.
+6. Select the appropriate comma or semicolon column separator to match the separator used in your `.csv` file.
+7. Click **Import** to send out the invitations. -->
 
 <!-- ### Registering a member with your {{site.data.keyword.iot_short_notm}} organization
 
@@ -103,11 +103,10 @@ Beim Erstellen einer CSV-Datei für den Import von Mitgliedern in Ihre Organisat
 
 CSV-Beispieldatei mit Kommatrennzeichen:  
 ```
-user1@sample.com,PD_DEVELOPER_USER,1489505652152
-user2@sample.com,PD_OPERATOR_USER,1489505652152
-user3@sample.com,PD_ADMIN_USER,1489505652152
+user1@sample.com,PD_DEVELOPER_USER,2018-03-13
+user2@sample.com,PD_OPERATOR_USER,2018-03-13
+user3@sample.com,PD_ADMIN_USER,2018-03-13
 ```
-
 Wo die folgenden Spalteneinträge verwendet werden:  
 - Spalte 1: Die E-Mail-Adresse des Benutzers.  
 Wenn Sie Mitglieder hinzufügen, stellen Sie sicher, dass die verwendeten E-Mail-Adressen gültigen IBMids entsprechen. Wenn Sie Mitglieder einladen, können Sie alle gültigen E-Mail-Adressen verwenden.
@@ -119,7 +118,7 @@ Geben Sie eine der folgenden Rollen ein:
  - PD_ANALYST_USER
  - PD_READER_USER  
  Weitere Informationen zu Benutzerrollen finden Sie in [Rollen für Benutzer, Anwendungen und Gateways](roles_index.html#user_roles).
-- Spalte 3: Die Unix-Zeitmarke (in Millisekunden ab 1. Januar, 1970 00:00 UTC), die dem Benutzerablaufdatum entspricht.
+- Spalte 3: Datum im ISO 6801-Format (z. B. `2018-03-13`), das dem Benutzerablaufdatum entspricht.
 
 ## Benutzer bearbeiten
 {: #editing-users}
@@ -139,7 +138,7 @@ Sie können den Zugriff von Benutzern auf die {{site.data.keyword.iot_short_notm
 1. Klicken Sie in Ihrem {{site.data.keyword.iot_short_notm}}-Dashboard links in der Navigationsleiste auf **Mitglieder**.
 2. Klicken Sie auf den Schalter neben dem Benutzer, für den der Zugriff auf die {{site.data.keyword.iot_short_notm}}-Organisation gesperrt werden soll.
 
-## Benutzerzugriff einschränken (Beta)
+## Benutzerzugriff einschränken
 {: #limiting-users}
 
 Die Zugriffssteuerung auf Ressourcenebene ermöglicht Ihnen die Einschränkung des Zugriffs auf Geräte innerhalb einer Organisation. Sie können Ressourcengruppen verwenden, um die Geräte anzugeben, die von den einzelnen Benutzern oder API-Schlüsseln verwaltet werden können. Weitere Informationen zur Vorgehensweise bei der Konfiguration der Zugriffssteuerung auf Ressourcenebene finden Sie in [Zugriffssteuerung auf Ressourcenebene konfigurieren](reference/rlac.html#configure_RLAC).

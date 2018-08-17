@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-06-01"---
+  years: 2016, 2018
+lastupdated: "2018-02-22"
+
+---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
@@ -14,7 +16,7 @@ lastupdated: "2017-06-01"---
 # 概説のチュートリアル
 {: #getting-started-with-iotp}
 
-この {{site.data.keyword.iot_full}} の概説のチュートリアルでは、IoT デバイスを {{site.data.keyword.iot_short_notm}} に接続し、分析をセットアップして、リアルタイム・データについて調べます。
+この {{site.data.keyword.iot_full}} の概説のチュートリアルでは、IoT デバイスを {{site.data.keyword.iot_short_notm}} に接続します。
 {:shortdesc}
 
 <div id="prerequisites"></div>
@@ -22,7 +24,7 @@ lastupdated: "2017-06-01"---
 ## 始めに
 {: #prereqs}
 
-[Bluemix アカウント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/registration/){: new_window}、{{site.data.keyword.iot_short_notm}} サービスのインスタンス、および以下の要件を満たすデバイスが必要になります。
+[IBM Cloud アカウント ![外部リンク・アイコン ](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/registration/){: new_window}、{{site.data.keyword.iot_short_notm}} サービスのインスタンス、以下の要件を満たすデバイスが必要になります。
 
 *	デバイスは、HTTP プロトコルまたは MQTT プロトコルを使用して通信できるようでなければなりません。
 
@@ -32,7 +34,7 @@ lastupdated: "2017-06-01"---
 
 ## 手順 1: デバイスの登録
 
-{{site.data.keyword.iot_short_notm}} ダッシュボードから一度に 1 つずつデバイスを追加するか、[Watson IoT プラットフォーム API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} を使用して、複数のデバイスを追加することができます。
+[{{site.data.keyword.iot_short_notm}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://internetofthings.ibmcloud.com){: new_window} から一度に 1 つずつデバイスを追加するか、[Watson IoT プラットフォーム API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} を使用して複数のデバイスを追加することができます。
 
 {{site.data.keyword.iot_short_notm}} ダッシュボードからデバイスを追加するには、以下のようにします。
 
@@ -41,8 +43,8 @@ lastupdated: "2017-06-01"---
     新しいブラウザー・タブで以下の URL の {{site.data.keyword.iot_short_notm}} Web コンソールが開きます。
 
     ```
- https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
- ```
+    https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+    ```
 
     ここで、*org_id* は [{{site.data.keyword.iot_short_notm}} 組織](iotplatform_overview.html#organizations){: new_window}の ID です。
 
@@ -50,7 +52,7 @@ lastupdated: "2017-06-01"---
 
 3. 追加するデバイスのデバイス・タイプを作成します。
 
-    {{site.data.keyword.iot_short_notm}} に接続する各デバイスには、デバイス・タイプを関連付ける必要があります。デバイス・タイプとは、共通の特性を共有するデバイス・グループのことです。
+    {{site.data.keyword.iot_short_notm}} に接続する各デバイスには、デバイス・タイプを関連付ける必要があります。 デバイス・タイプとは、共通の特性を共有するデバイス・グループのことです。
 
     1. **「デバイス・タイプの作成」**をクリックします。
     2. `my_device_type` などのデバイス名と、デバイス・タイプの説明を入力します。
@@ -58,9 +60,9 @@ lastupdated: "2017-06-01"---
         > **注意:** デバイス・タイプ名は 36 文字以内にする必要があり、英数字の文字 (a-z, A-Z, 0-9) と、`_`、`.`、および `-`のいずれかのみを含めることができます。
 
     3. オプション: デバイス・タイプの属性やメタデータを入力します。
- 
 
-        属性とメタデータは、後で追加および編集できます。{: tip}
+        属性とメタデータは、後で追加および編集できます。
+        {: tip}
 
 4. **「次へ」**をクリックして、選択したデバイス・タイプのデバイスを追加するプロセスを開始します。
 
@@ -74,7 +76,7 @@ lastupdated: "2017-06-01"---
 
 5. **「次へ」**をクリックすると、プロセスが完了します。
 
-6. 認証トークンを指定するか、自動生成されたトークンを受け入れます。自分でトークンを作成する場合は、長さを 8 文字から 36 文字の間にして、英数字と、`_`、`.`、`!`、`&`、`@`、`?`、`\*`、`+`、`(`、`)`、`-` だけを使用してください。
+6. 認証トークンを指定するか、自動生成されたトークンを受け入れます。 自分でトークンを作成する場合は、長さを 8 文字から 36 文字の間にして、英数字と、`_`、`.`、`!`、`&`、`@`、`?`、`\*`、`+`、`(`、`)`、`-` だけを使用してください。
 
     反復した文字シーケンスや、辞書に出てくる単語やユーザー名などの事前定義シーケンスをトークンに含めないでください。
 
@@ -83,13 +85,10 @@ lastupdated: "2017-06-01"---
 8. デバイス情報のページで、以下の詳細をコピーして保存します。
 
     * 組織 ID
-  
     * デバイス・タイプ
     * デバイス ID
     * 認証方式
-  
     * 認証トークン
-  
 
     {{site.data.keyword.iot_short_notm}} へのデバイスの接続を構成するときに、組織 ID、デバイス・タイプ、デバイス ID、および認証トークンが必要になります。
 
@@ -120,114 +119,110 @@ lastupdated: "2017-06-01"---
 
   詳しくは、[デバイスの MQTT 接続](/docs/services/IoT/devices/mqtt.html)を参照してください。
 
-## 手順 3: デバイス・データを追跡するためのボードとカードの作成
+<!--## Step 3: Create boards and cards to keep track of device data
 
-ボードとカードを使用すると、1 つ以上のデバイスから取得されたデータ・セットの値を示すグラフィックスを表示し、デバイス・データの概要を簡単に把握できます。
+By using boards and cards, you can view graphics that represent data set values from one or more devices for a quick overview and understanding of the device data.
 
-1. {{site.data.keyword.iot_short_notm}} ダッシュボードで、**「新規ボードの作成」**をクリックします。
+1. In your {{site.data.keyword.iot_short_notm}} dashboard, click **Create New Board**.
 
-2. ボードの名前と説明を入力します。
+2. Enter a name and description for the board.
 
-3. **「次へ」**、**「作成」**の順にクリックします。
+3. Click **Next** and then **Create**.
 
-4. 作成したばかりのボードをクリックし、**「新しいカードの追加」**をクリックします。カード・タイプとして「デバイス」を選択します。次の表は、選択できる視覚化オプションについての説明を示しています。
+4. Click the board you just created, and then click **Add New Card**. Select Devices as the card type. The following table describes the visualization options you can choose from.
 
-| タイプ| 表示されるデータ|
-|---------------|---------------|
-| 汎用視覚化| 1 つ以上のデータ・セットの値。大きいウィジェット・サイズを選択すると、最大 3 つのデータ・ポイント値が小さなテーブルに表示されます。|
-| 折れ線グラフ| リアルタイム・スクロール・グラフの 1 つ以上のデータ・セット。「設定」メニューを使用して、データ範囲、保存、グラフの外観などを設定します。|
-| 棒グラフ| バーのデータ・セット値。水平または垂直バーの方向を切り替えるには「設定」メニューを使用します。|
-| ドーナツ・グラフ| 円形表記の 2 つ以上のデータ・セット。|
-| 値| 1 つ以上のデータ・セットの未加工値。|
-| ゲージ| ゲージで表示されるデータ・セットの値。オプションで低、中、上のデータ範囲にゲージしきい値を設定するには、「設定」メニューを使用します。|
-| デバイス・プロパティー| 1 つ以上のデバイスの特定のプロパティー。|
-| すべてのデバイス・プロパティー| 1 つ以上のデバイスのすべてのプロパティー。|
-| デバイス・リスト| 複数のデバイスをモニターするためのリスト。リストは、他のカードのデータ・ソースとして使用することができます。|
-| デバイス情報| 単一デバイスの基本情報。|
-| デバイス・マップ| デバイス・リスト内のデバイスの場所。|
+| Type | Data that is displayed |
+| Generic visualization | The value of one or more data sets. Choose the large widget size to see up to three data point values in a small table. |
+| Line chart | One or more data sets in a real-time scrolling chart. Use the Settings menu to set the data range and retention, the look and feel of the graphs, and more. |
+| Bar chart | Data set values in labelled bars. Use the Settings menu to toggle horizontal or vertical bar direction. |
+| Donut chart | Two or more data sets in a circular representation. |
+| Value | The raw value of one or more data sets. |
+| Gauge | The value of a data set shown as a gauge. Use the Settings menu to optionally set gauge thresholds for lower, middle, and upper data ranges. |
+| Device properties | Specific properties for one or more devices. |
+| All device properties | All properties for one or more devices. |
+| Device list | A list to monitor multiple devices. A list can be used as a data source for other cards. |
+| Device info | Basic information for a single device. |
+| Device map | The location of devices in a device list. |
 
-{: caption="表 1. 視覚化のオプション" caption-side="top"}
+{: caption="Table 1. Visualization options" caption-side="top"}
 
-## 手順 4: デバイス・タイプ・スキーマの作成
+## Step 4: Create device type schemas
 
-マップされたデバイス・プロパティーのデータポイントに基づいてトリガーされるルールを後で作成するために、この時点で、デバイス・タイプ・スキーマを作成し、デバイスのプロパティーをマップする必要があります。
+At this point, you need to create a device type schema and map device properties to then create rules that are triggered based on the datapoints from your mapped device properties.
 
-1. {{site.data.keyword.iot_short_notm}} ダッシュボードで、**「デバイス」>「スキーマの管理」**に移動し、**「スキーマの追加」**をクリックします。
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Devices > Manage Schemas** and click **Add Schema**.
 
-2. メッセージ・スキーマに関連付けるデバイス・タイプを選択します。1 つのデバイス・タイプには 1 つのスキーマのみを定義できます。
+2. Select a device type to associate with the message schema. Only one schema can be defined for a device type.
 
-3. **「プロパティーの追加」**をクリックし、1 つ以上のプロパティーを追加します。
+3. Click **Add property** and add one or more properties.
 
-    接続先のデバイスからプロパティーを選択することも、既存のプロパティーを変更したり組み合わせたりする仮想プロパティーを作成することも、プロパティーを手動で追加することもできます。
+    You can select properties from a connected device, create virtual properties that modify or combine existing properties, or add properties manually.
 
-    使用可能なプロパティーは、デバイスによって送信されたメッセージのペイロードに定義されています。{: tip}
+    The available properties are defined in the payload of the messages that are sent by a device.
+    {: tip}
 
-    * プロパティーを手動で追加する場合は、**「手動」タブ**を選択し、以下のプロパティーの詳細を定義します。
-        * 名前
-        * データ・タイプ
-        * プロパティー
-        * データの単位 (オプション)
-        * 小数点以下の桁数 (オプション)
+    * To add a property manually, select the **Manual tab** and define the following property details:
+        * Name
+        * Data type
+        * Property
+        * Data unit (optional)
+        * Decimal places (optional)
 
-    * 仮想プロパティーを作成する場合は、**「仮想プロパティー」**タブを選択し、以下のプロパティーの詳細を定義します。
-        * 名前
-        * データ・タイプ
-        * プロパティー
-        * 計算
-        * データの単位 (オプション)
-        * 小数点以下の桁数
+    * To create a virtual property, select the **Virtual Property** tab and define the following property details:
+        * Name
+        * Data type
+        * Property
+        * Calculation
+        * Data unit (optional)
+        * Decimal places
 
-    * 接続されたデバイスからプロパティーを選択する場合は、**「接続先から」**タブを選択し、スキーマに追加する 1 つ以上のプロパティーを選択します。選択したプロパティーが追加され、説明がプロパティーの名前に設定されます。
+    * To select properties from a connected device, select the **From Connected** tab, and then select one or more properties to add to the schema. The selected properties are added and the description is set to the name of the property.
 
-4. **「完了」**をクリックすると、プロパティーが作成されます。
+4. Click **Finish** to create the properties.
 
-## 手順 5: ルールとアクションの作成
+## Step 5: Create rules and actions
 
-ルールは、リアルタイム・デバイス・データを事前定義しきい値または他のプロパティー・データと突き合わせる条件に基づく決定点です。条件が満たされた場合に、アラートがトリガーされます。{{site.data.keyword.iot_short_notm}} ダッシュボードに表示されるアラートに加えて、ルールがトリガーされた場合にビジネス・ロジックを実行する 1 つ以上のアクションを追加できます。
+Rules are condition-based decision points that match real-time device data with predefined threshold values or other property data to trigger an alert if a condition is met. In addition to the alert that's displayed in the {{site.data.keyword.iot_short_notm}} dashboard, you can add one or more actions to run business logic when a rule is triggered.
 
-1. {{site.data.keyword.iot_short_notm}} ダッシュボードで、**「ルール」**に移動し、**「クラウド規則の作成」**をクリックします。
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Rules** and click **Create Cloud Rule**.
 
-2. ルールの名前と説明を入力し、ルールが適用されるデバイス・タイプを選択した後、**「次へ」**をクリックします。
+2. Enter a name and description for the rule, select a device type that the rule applies to, and click **Next**.
 
-3. ルール・ロジックを設定するために、ルールのトリガーとして使用する 1 つ以上の IF 条件を追加します。
+3. To set up the rule logic, add one or more IF conditions to use as triggers for the rule.
 
+    You can add conditions in parallel rows to apply them as OR conditions, or you can add conditions in sequential columns to apply them as AND conditions. Take a look at the following examples:
 
-    並列行に条件を追加して OR 条件として適用したり、順次列に条件を追加して AND 条件として適用したりすることもできます。
-以下の例を見てください。
+      * A simple rule might trigger an alert if a parameter value is larger than a specified value: Condition = `temp_cpu>80`
+      * A more complex rule might trigger when a combination of thresholds are met: Condition = `temp_cpu>60 AND cpu_load>90`
 
-      * 単純ルールにより、パラメーター値が指定された値を超えると、アラートがトリガーされます。条件 = `temp_cpu>80`
-      * より複雑なルールにより、しきい値の組み合わせが満たされた場合にトリガーされます。条件 = `temp_cpu>60 AND cpu_load>90`
+    To trigger a condition that compares two properties, or to trigger two or more property conditions that are combined sequentially by using AND, include the triggering data points in the same device message. If the data is received in more than one message, the condition or sequential conditions don't trigger.
+    {: tip}
 
-    2 つのプロパティーを比較する条件をトリガーするか、AND を使用して順次結合される 2 つ以上のプロパティー条件をトリガーするには、トリガー元のデータ・ポイントを同じデバイス・メッセージに含めます。データが複数のメッセージで受信された場合、そのような条件または順次条件はトリガーされません。{: tip}
+4. Configure conditional trigger requirements for your rule.
 
-4. ルールに対して条件付きトリガー要件を構成します。
+    You can use conditional trigger requirements to control the number of alerts that are triggered for a rule over a time period. The conditional triggering acts on any condition in the rule. For example, if a rule has five parallel conditions set by using OR, each condition that's true counts towards the conditional trigger count.
 
+      1. In the rule editor, click the default **Trigger each time conditions are met** link to open the set frequency requirement dialog.
+      2. Select and configure the conditional trigger you want to use in the rule.
 
-    一定期間にわたってあるルールでトリガーされるアラートの数を制御するために、条件付きトリガー要件を使用できます。条件付きトリガーは、ルール内のすべての条件に対して機能します。例えば、1 つのルールに OR を使用して設定された 5 つの並列条件が含まれる場合、満たされる各条件は条件付きトリガー・カウントに加算されます。
+        * Trigger every time conditions are met
+        * Trigger if conditions are met N times in M _Unit of time_
 
+5. Create or select one or more actions that occur if the rule conditions are met.
 
-      1. ルール・エディターで、デフォルトの**「条件が満たされるたびにトリガーする (Trigger each time conditions are met)」**リンクをクリックし、「頻度要件の設定」ダイアログを開きます。
-      2. ルールで使用する条件付きトリガーを選択して構成します。
+    For example, an action can be to send an email or post a webhook.
 
-        * 条件が満たされるたびにトリガーします。
-        * 条件が M _時間単位_内に N 回満たされたらトリガーします。
+6. Optional: Select an alert priority for the rule.
 
-5. ルールの条件が満たされた場合に発生する 1 つ以上のアクションを作成または選択します。
+    The priority is used to classify the alerts that are displayed in the **Boards > Rule-Based Analytics** board. The default priority is Low.
 
+7. Click **Save** to save without activating,  or click **Activate** to save and activate your rule.
 
-    例として、E メールの送信や、Webhook への通知といったアクションが考えられます。
-
-6. オプション: ルールのアラート優先順位を選択します。
-
-    優先順位は、**「ボード」>「ルール・ベースの分析 (Rule-Based Analytics)」**ボードに表示されるアラートを分類するために使用されます。デフォルトの優先順位は「低 (Low)」です。
-
-7. アクティブ化せずに保存するには**「保存」**をクリックし、ルールを保存してアクティブにするには**「アクティブ化」**をクリックします。
-
-    ルールをアクティブにした場合、ルールの条件が満たされると、アラートが**「ルール・ベースの分析 (Rule-Based Analytics)」**ボードに追加され、該当するルール・アクションが実行されます。
+    When you activate the rule, an alert is added to the **Rule-Based Analytics** board when the conditions are met, and any rule action is run. -->
 
 ## 次の手順
 
-リアルタイムと履歴のデバイス・データをコンシュームする独自のアプリを作成して接続することで、データ分析機能を拡張します。
+デバイスのリアルタイム・データと履歴データをコンシュームする独自のアプリを作成して接続します。
 
   * デバイスとアプリを統合し、接続するためのコードをビルドする場合は、ツールの[クライアント・ライブラリー](/docs/services/IoT/iot_platform_client_lib.html)を参照してください。
 

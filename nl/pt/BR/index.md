@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-06-16"
+  years: 2016, 2018
+lastupdated: "2018-05-08"
 
 ---
 
@@ -21,9 +21,9 @@ O {{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} fornece 
 ## Antes de iniciar
 {: #byb}
 
-Antes de conectar dispositivos e utilizar dados, registre uma conta {{site.data.keyword.Bluemix_notm}} e crie uma instância do serviço {{site.data.keyword.iot_short_notm}} em sua organização {{site.data.keyword.Bluemix_notm}}. É possível criar uma instância do {{site.data.keyword.iot_short_notm}} diretamente da página [{{site.data.keyword.iot_short_notm}} no catálogo de serviços do Bluemix ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
+Antes de conectar dispositivos e usar dados, registre-se para uma conta do {{site.data.keyword.Bluemix_notm}} e crie uma instância do serviço {{site.data.keyword.iot_short_notm}} em sua organização do {{site.data.keyword.Bluemix_notm}}. É possível criar uma instância do {{site.data.keyword.iot_short_notm}} diretamente na página [{{site.data.keyword.iot_short_notm}} no Catálogo de serviços do IBM Cloud ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
 
-Para obter informações detalhadas sobre como inscrever-se em conta no {{site.data.keyword.Bluemix_notm}}, configurar regiões e outras definições de gerenciamento, consulte [Gerenciando sua conta Bluemix](https://console.ng.bluemix.net/docs/admin/account.html#signup).
+Para obter informações detalhadas sobre como inscrever-se para uma conta no {{site.data.keyword.Bluemix_notm}}, configurar regiões e outras configurações de gerenciamento de conta, veja [Gerenciando sua conta do IBM Cloud](https://console.ng.bluemix.net/docs/admin/account.html#signup).
 
 É possível instalar e configurar sua instância do {{site.data.keyword.iot_short_notm}} no painel. Para abrir o painel, acesse sua instância de serviço do {{site.data.keyword.iot_short_notm}} no {{site.data.keyword.Bluemix_notm}} e, em seguida, clique em **Ativar**.
 
@@ -31,41 +31,44 @@ Para obter informações detalhadas sobre como inscrever-se em conta no {{site.d
 
 As etapas a seguir descrevem como você pode começar a usar rapidamente seu serviço do {{site.data.keyword.iot_short_notm}}.
 
-Um conjunto mais detalhado de guias de introdução e aplicativos de amostra que passam pelos fundamentos do desenvolvimento de um sistema de protótipo IoT de ponta a ponta pronto para produção com o {{site.data.keyword.iot_short_notm}} também estão disponíveis. Se você for um desenvolvedor novo no trabalho com {{site.data.keyword.iot_short_notm}}, use os processos passo a passo na seção [Guias de introdução](getting_started/getting-started-iot-overview.md).
+Um conjunto mais detalhado de guias de introdução e aplicativos de amostra que passam pelos fundamentos do desenvolvimento de um sistema de protótipo IoT de ponta a ponta pronto para produção com o {{site.data.keyword.iot_short_notm}} também estão disponíveis. Se você for um desenvolvedor novo no trabalho com {{site.data.keyword.iot_short_notm}}, use os processos passo a passo na seção [Guias de introdução](https://console.bluemix.net/docs/services/IoT/getting_started/getting-started-iot-overview.html#getting-started).
 
 ## Etapa 1: conectar seus dispositivos
 {: #up_and_running}
 
 Para colocar o serviço em funcionamento, explore as opções a seguir, dependendo de sua situação:
 
-   |   O serviço está implementado | O serviço não está implementado
-  ------------- | -------------
-  **Eu tenho um dispositivo para conectar** | [Conecte seu dispositivo ao {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore a conexão de dispositivo no [Reproduzir demo da organização ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  **Eu não tenho um dispositivo para conectar** | [Crie e conecte um simulador de dispositivo Node-RED](nodereddevice_sample.html){:new_window}. | Introdução ao [Iniciador do Watson IoT Platform](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html).
+|  |   O serviço é implementado | O serviço não é implementado
+ | -------------| ------------- | -------------
+  |**Eu tenho um dispositivo para conectar** | [Conecte seu dispositivo ao {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore a conexão de dispositivo no [Play
+com o {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") ](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
+  |**Eu não tenho um dispositivo para conectar** | [Crie e conecte um simulador de dispositivo Node-RED](nodereddevice_sample.html){:new_window}. Ou [Conectar
+seu smartphone ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") ](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Introdução ao [Watson IoT Platform Starter](https://console.bluemix.net/docs/starters/IoT-starter/iot500.html).
+  
 Para obter mais informações sobre como conectar tipos de dispositivo específicos ao {{site.data.keyword.iot_short_notm}}, veja [Orientações do developerWorks ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Para obter a documentação para desenvolvedor de conexão de dispositivo, consulte:
 - [Conectividade MQTT para dispositivos](devices/mqtt.html).
 - [Conectividade MQTT para gateways](gateways/mqtt.html).
 
-## Etapa 2: analisar os dados do dispositivo
+<!--
+## Step 2: Analyze your device data
 {: #analyzing_data}
+Start exploring the real-time data that the devices are sending to {{site.data.keyword.iot_short_notm}}.
+{{site.data.keyword.iot_short_notm}} includes the following analytics tools:  
+- [Boards and cards](data_visualization.html) to visualize your real-time device data.
+- [Rules and actions](analytics.html) that are triggered by real-time device data.
+For a quick getting started example, see the [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window} developerWorks recipe.
+-->
 
-Comece explorando os dados em tempo real que os dispositivos estão enviando ao {{site.data.keyword.iot_short_notm}}.
-
-O {{site.data.keyword.iot_short_notm}} inclui as ferramentas de análise de dados a seguir:  
-- [Placas e cartões](data_visualization.html) para visualizar os dados do dispositivo de tempo real.
-- [Regras e ações](analytics.html) que são acionadas por dados do dispositivo de tempo real.
-
-Para obter um exemplo rápido de introdução, veja a orientação do developerWorks [Usando regras e ações com o IBM Watson IoT Platform Cloud Analytics ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window}.
-
-## Etapa 3: criar aplicativos para consumir os dados do dispositivo
+## Etapa 2: criar aplicativos para consumir seus dados do dispositivo
 {: #develop_applications}
 
-Estenda os recursos de análise de dados do {{site.data.keyword.iot_short_notm}} criando e conectando seus próprios aplicativos para consumir dados do dispositivo em tempo real e históricos.
+Crie e conecte seus próprios aplicativos para consumir dados do dispositivo.
 
 Para obter informações adicionais, consulte os
 seguintes tópicos:   
 - Explore a [documentação do desenvolvedor de aplicativos](applications/api.html) e a [Documentação da API do {{site.data.keyword.iot_short_notm}}](reference/api.html).
 - Explore as [Bibliotecas do cliente do {{site.data.keyword.iot_short_notm}}](iot_platform_client_lib.html) que fornecem ferramentas e arquivos para construir e desenvolver código para integração e conexão de seus dispositivos e aplicativos.
 - [Conecte um serviço do {{site.data.keyword.cloudantfull}}](cloudant_connector.html) a seu {{site.data.keyword.iot_short_notm}} para armazenar dados históricos do dispositivo.
+- Crie suas próprias regras usando o novo recurso de [regras integradas (Beta)](information_management/im_rules.html).

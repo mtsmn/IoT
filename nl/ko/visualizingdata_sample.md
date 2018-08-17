@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017
+  years: 2016, 2018
 lastupdated: "2017-03-20"
 
 ---
@@ -26,7 +26,7 @@ lastupdated: "2017-03-20"
 - {{site.data.keyword.iot_short_notm}} 조직에 디바이스를 등록합니다.
 - 디바이스에서 {{site.data.keyword.iot_short_notm}}에 이벤트를 전송하는지 확인합니다.
 - github 저장소에서 [시각화 샘플 다운로드](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip)를 수행하고 .zip 파일의 압축을 풉니다.
-- {{site.data.keyword.Bluemix_notm}}에서 [cf 명령행 도구 설치](../../starters/install_cli.html)를 수행합니다.
+- {{site.data.keyword.Bluemix_notm}}에서 [cf 명령행 도구 설치](https://console.bluemix.net/docs/starters/install_cli.html)를 수행합니다.
 
 ## {{site.data.keyword.Bluemix_notm}}에서 샘플 실행
 {: #running_sample}
@@ -106,4 +106,4 @@ http://<your_application_name>.mybluemix.net
 
 디바이스 이벤트는 그래프를 작성하기 위해 `realtimeGraph.js` 파일에 전달됩니다.
 
-자세한 개발자 안내서는 [Github 위키 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window}에서 사용 가능합니다. 
+자세한 개발자 안내서는 [Github 위키 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window}에서 사용 가능합니다.

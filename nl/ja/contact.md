@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-11-03"
+  years: 2016, 2018
+lastupdated: "2018-01-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-11-03"
 # {{site.data.keyword.iot_short_notm}} サポートへのお問い合わせ
 {: #gettinghelp}
 
-{{site.data.keyword.iot_full}} の使用におけるサポートについては、フォーラムや Slack を使って支援を受ける方法、サポート・チケットを開いて支援を受ける方法など、問い合わせのオプションがいくつか用意されています。 
+{{site.data.keyword.iot_full}} の使用方法についてサポートに連絡する方法は複数あります。例えば、フォーラムや Slack を使用したり、サポート・チケットを開いたりすることができます。アイデア・ポータルを使用して、{{site.data.keyword.iot_short_notm}} の機能向上についてのアイデアを投稿することもできます。
 
 ## フォーラム
 
@@ -30,8 +30,12 @@ lastupdated: "2017-11-03"
 
 * [Slack ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://ibm-developers.slack.com/){:new_window} - #internet-of-things チャネルに参加します。
 
-まだ Slack ワークスペースへのアクセス権限がありませんか? [すぐにアクセス権限を要請しましょう ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://bxdevs-slack-invite.mybluemix.net/){:new_window}
 
 ## サポート・チケット
 
-* [サポートへのお問い合わせ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}。
+* [サポートへのお問い合わせ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}
+
+
+## アイデア・ポータル
+
+* [IBM Cloud – Structured Ideas ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/cloudideas){:new_window}

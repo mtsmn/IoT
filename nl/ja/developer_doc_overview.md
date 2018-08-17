@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-02-03"---
+  years: 2016, 2018
+lastupdated: "2018-04-19"
+
+---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -20,7 +22,7 @@ lastupdated: "2017-02-03"---
 
 ## {{site.data.keyword.iot_short_notm}} の開発
 {: #goals}
-デバイスをセットアップして {{site.data.keyword.iot_short_notm}} に接続し、目的のリアルタイム・データを取得して分析するためのコードを開発できます。以下の一般的タスクを実行するための情報が記載されています。
+デバイスをセットアップして {{site.data.keyword.iot_short_notm}} に接続し、目的のリアルタイム・データを取得して分析するためのコードを開発できます。 以下の一般的タスクを実行するための情報が記載されています。
 
 -  アプリケーションの作成と管理
 -  デバイスの作成、接続、管理
@@ -51,7 +53,7 @@ lastupdated: "2017-02-03"---
 - Java
 - C#
 - Embedded C
-- mBed C++
+- Mbed C++
 
 ## ゲートウェイの開発
 {: #gateway-dev}
@@ -70,6 +72,6 @@ lastupdated: "2017-02-03"---
 * [C# ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
 * [Embedded C ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
 * [Java ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-java){:new_window}
-* [mBed C++ ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+* [Mbed C++ ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){:new_window}
 * [Node.js ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
 * [Python ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python){:new_window}

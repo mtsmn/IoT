@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -15,13 +15,21 @@ lastupdated: "2017-03-13"
 # Analisi cloud
 {: #cloud_analytics}
 
-Utilizzando le analisi cloud {{site.data.keyword.iot_short}}, specifichi le condizioni della regola basate sui dati del dispositivo in tempo reale e che attivano gli avvisi e le azioni facoltative quando incontrate.    
-{: shortdesc}
+**Importante:** stiamo facendo partire una beta per definire in un nuovo modo le regole nei tuoi dati del dispositivo IoT come parte
+di un programma di modifiche più grande per migliorare il modo in cui {{site.data.keyword.iot_full}} fornisce le regole e le azioni.
 
-Ad esempio, puoi creare una regola per assicurarti che quando viene eliminato un dispositivo o quando aumenta la temperatura del dispositivo, venga inviato un avviso al dashboard in un dispositivo dell'utente e che sia inviata una email all'amministratore.
+Per ulteriori informazioni, controlla il post del blog [An alternative approach to defining Rules on IoT data ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Per iniziare a definire le tue regole, consulta la documentazione [Creazione delle regole integrate (Beta)](information_management/im_rules.html).
+
 
 ## Prima di cominciare
 {: #byb}
+
+Utilizzando le analisi cloud {{site.data.keyword.iot_short_notm}}, specifichi le condizioni della regola basate sui dati del dispositivo in tempo reale e che attivano gli avvisi e le azioni facoltative quando incontrate.    
+
+Ad esempio, puoi creare una regola per assicurarti che quando viene eliminato un dispositivo o quando aumenta la temperatura del dispositivo, venga inviato un avviso al dashboard in un dispositivo dell'utente e che sia inviata una email all'amministratore.
+
 Assicurati che le proprietà del dispositivo che desideri utilizzare come le condizioni nelle tue regole siano state associate agli schemi. Consulta [Connessione dispositivi](iotplatform_task.html) e [Creazione di schemi](im_schemas.html) per ulteriori informazioni.
 
 Inoltre, controlla la ricetta [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} per comprendere le regole e le azioni che vengono utilizzate in Cloud Analytics.
@@ -310,7 +318,7 @@ Includi le seguenti sostituzioni della variabile per includere dinamicamente i d
 
 Variabile | Descrizione
 ---|---
-**URL, Intestazione e Corpo**|
+**URL, Intestazione e Corpo** |
 `{{timestamp}}` | La data/ora dal messaggio.
 `{{orgId}}` | L'ID dell'organizzazione del servizio {{site.data.keyword.iot_short_notm}}.
 `{{tenantId}}` | Obsoleto: l'ID del servizio {{site.data.keyword.iotrtinsights_full}}.

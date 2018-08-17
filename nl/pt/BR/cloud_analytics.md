@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -15,13 +15,20 @@ lastupdated: "2017-03-13"
 # Cloud Analytics
 {: #cloud_analytics}
 
-Usando análise de dados de nuvem do {{site.data.keyword.iot_short}}, você especifica as condições das regras que são baseadas em dados do dispositivo de tempo real e que acionam alertas e ações opcionais quando atendidas.    
-{: shortdesc}
+** Importante:** estamos ativando um Beta para uma nova maneira de definir regras em seus dados do dispositivo IoT como parte de um programa mais amplo de mudanças para melhorar a maneira como o {{site.data.keyword.iot_full}} entrega regras e ações.
 
-Por exemplo, você pode criar uma regra para assegurar que quando o dispositivo for descartado ou quando a temperatura do dispositivo aumentar, um alerta será enviado ao painel do dispositivo de um usuário e um e-mail será enviado ao administrador.
+Para descobrir mais, verifique a postagem do blog [Uma abordagem alternativa para definir Regras em dados do IoT![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para iniciar a definição de suas próprias regras, veja a documentação [Criando regras integradas (Beta)](information_management/im_rules.html).
+
 
 ## Antes de iniciar
 {: #byb}
+
+Usando análise de dados de nuvem do {{site.data.keyword.iot_short_notm}}, você especifica as condições das regras que são baseadas em dados do dispositivo de tempo real e que acionam alertas e ações opcionais quando atendidas.    
+
+Por exemplo, você pode criar uma regra para assegurar que quando o dispositivo for descartado ou quando a temperatura do dispositivo aumentar, um alerta será enviado ao painel do dispositivo de um usuário e um e-mail será enviado ao administrador.
+
 Certifique-se de que as propriedades do dispositivo que você deseja usar como condições em suas regras tenham sido mapeadas para esquemas. Consulte [Conectando dispositivos](iotplatform_task.html) e [Criando esquemas](im_schemas.html) para obter mais informações.
 
 Além disso, revise a orientação [Usando regras e ações com o {{site.data.keyword.iot_short}} Cloud Analytics ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} para entender as regras e ações usadas no Cloud Analytics.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016, 2017
-lastupdated: "2017-10-04"
+years: 2016, 2018
+lastupdated: "2018-05-31"
 
 ---
 
@@ -20,14 +20,15 @@ Dans le cadre du développement permanent d'{{site.data.keyword.iot_full}}, de n
 
 Les fonctions bêta suivantes sont disponibles dans {{site.data.keyword.iot_short_notm}} :
 
-Fonction       | Documentation
+Fonction       | Documentation       
 ------------- | -------------
-Interface utilisateur de gestion des données | [Initiation à la gestion des données à l'aide de l'interface Web (bêta)](GA_information_management/im_ui_flow.html#gs_web)
- | [Configuration des terminaux à utiliser avec la fonction Gestion des données à l'aide de l'interface Web (bêta)](GA_information_management/im_config_devices.html#im_config_devices)
-Contrôle d'accès aux passerelles | [Contrôle d'accès aux passerelles (bêta)](gateways/gateway-access-control.html#gateway-access-control)
-Domaines personnalisés | [Domaines personnalisés (bêta)](reference/security/set_up_certificates.html#custom-domains)
-Rapports détaillés | [Rapports détaillés (bêta)](reference/security/RM_security.html#drill-down)
-Contrôle d'accès au niveau de la ressource | [Présentation de RLAC (bêta)](reference/rlac_overview.html#RLAC_overview) 
- | [Configuration de RLAC (bêta)](reference/rlac.html#configure_RLAC)
+Rapports détaillés | [Rapports détaillés (bêta)](reference/security/RM_security.html#drill_down)
 Package de passerelle IoT | [Package de passerelle IoT (bêta)](gateways/iotgw.html#gw_package)
 Simulation de données de terminal | [Simulation de données de terminal (bêta)](devices/device_sim.html)
+Restauration de terminaux supprimés | [Restauration de terminaux supprimés (bêta)](iotplatform_task.html#restore_device)
+Règles imbriquées | [Création de règles imbriquées (bêta)](information_management/im_rules.html)
+Choses | [Introduction à la gestion de données](GA_information_management/ga_im_device_twin.html#device_twins)
+{{site.data.keyword.iot_short_notm}} Edge (aperçu) | [{{site.data.keyword.iot_short_notm}} Présentation de Edge (aperçu)](edge/WIoTP_edge.html)
+Authentification et autorisation Cloud IAM | [Authentification et autorisation Cloud IAM pour {{site.data.keyword.iot_short_notm}} (bêta)](reference/security/cloud_iam.html)
+Authentification et autorisation d'ID application | [Authentification et autorisation d'ID application pour {{site.data.keyword.iot_short_notm}} (bêta)](reference/security/app_id.html)
+Interface utilisateur de groupes | [Gestion des groupes (bêta)](manage_groups.html#groups_overview)

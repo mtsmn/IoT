@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -16,12 +16,20 @@ lastupdated: "2017-03-13"
 # Edge Analytics
 {: #edge_analytics}
 
+**Importante:** estamos lanzando una versión Beta con una nueva forma de definir reglas en los datos del dispositivo IoT como parte de un programa más ambicioso de cambios para mejorar la forma en que {{site.data.keyword.iot_full}} distribuye reglas y acciones.
+
+Para ver más información, consulte la publicación del blog sobre [Un enfoque alternativo a la definición de reglas en datos de IoT ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para empezar a definir sus propias reglas, consulte la documentación sobre [Creación de reglas incorporadas (Beta)](information_management/im_rules.html).
+
+## Acerca de las analíticas de extremo
+
 Con las analíticas de extremo, mueva el proceso de desencadenamiento de reglas de analíticas desde la nube a una pasarela habilitada para analíticas de extremo que pueden reducir drásticamente la cantidad de tráfico de datos de dispositivo en la nube haciendo que el proceso de analíticas se cierre en el dispositivo.
-{:shortdesk}
+{:shortdesc}
 
-Los dispositivos envían sus datos a una pasarela habilitada para analíticas de extremo donde las reglas de analíticas de extremo analizan los datos. En función de la regla y de su acción, los datos esenciales y las alertas se podrían enviar a {{site.data.keyword.iot_full}}, desencadenar una alerta en la pasarela, o grabarse en un archivo de texto local para la pasarela.
+Los dispositivos envían sus datos a una pasarela habilitada para analíticas de extremo donde las reglas de analíticas de extremo analizan los datos. En función de la regla y de su acción, los datos esenciales y las alertas se podrían enviar a {{site.data.keyword.iot_short_notm}}, desencadenar una alerta en la pasarela, o grabarse en un archivo de texto local para la pasarela.
 
-El diagrama siguiente ilustra la arquitectura general de un entorno de análisis de extremo de {{site.data.keyword.iot_full}}. ![IBM Watson IoT Platform para la arquitectura de analíticas de extremo](images/architecture_platform_edge.svg "IBM Watson IoT Platform para la arquitectura de analíticas de extremo")
+El diagrama siguiente ilustra la arquitectura general de un entorno de análisis de extremo de {{site.data.keyword.iot_short_notm}}. ![IBM Watson IoT Platform para la arquitectura de analíticas de extremo](images/architecture_platform_edge.svg "IBM Watson IoT Platform para la arquitectura de analíticas de extremo")
 
 ## Antes de empezar
 {: #byb}
@@ -89,7 +97,7 @@ Para establecer el desencadenante condicional para una regla:
 5. Cree o seleccione una o varias acciones que se producen si se cumplen las condiciones de la regla.  
 Para obtener más información sobre las acciones de extremo, consulte [Creación de acciones de extremo](#edge_actions "Crear acciones de extremo").   
  Ejemplo: Una acción puede ser enviar datos de dispositivo a la nube o grabar una alerta en un archivo local.
-3. **Opcional:** Seleccionar una prioridad de alerta para la regla.  
+3. **Opcional:** Seleccione una prioridad de alerta para la regla.  
  La prioridad se utiliza para clasificar las alertas que se muestran en el tablero **Herramientas de análisis basadas en reglas**. La prioridad predeterminada es Low.
 6. Cuando esté satisfecho con la regla, pulse **Guardar**.
 
@@ -219,4 +227,4 @@ Para ver información sobre el estado de la pasarela:
 ## Comunidad de Edge Analytics
 {: #eaa_community}
 
-Puede descargar el SDK de Edge Analytics desde la [página de comunidad de IBM Edge Analytics](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true). El SDK incluye el archivo JAR de SDK, javadoc, código de ejemplo, enlaces de recetas y archivos README. En la comunidad, también puede ver vídeos para ponerse en marcha con Edge Analytics y puede utilizar el foro de la comunidad para hacer preguntas.
+Puede descargar el SDK de Edge Analytics desde la [página de la comunidad de IBM Edge Analytics](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true). El SDK incluye el archivo JAR de SDK, javadoc, código de ejemplo, enlaces de recetas y archivos README. En la comunidad, también puede ver vídeos para ponerse en marcha con Edge Analytics y puede utilizar el foro de la comunidad para hacer preguntas.

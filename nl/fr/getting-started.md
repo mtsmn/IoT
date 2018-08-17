@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-06-01"
+  years: 2016, 2018
+lastupdated: "2018-02-22"
 
 ---
 
@@ -16,8 +16,7 @@ lastupdated: "2017-06-01"
 # Tutoriel Initiation
 {: #getting-started-with-iotp}
 
-Dans ce tutoriel d'initiation à {{site.data.keyword.iot_full}}, nous connectons un terminal
-IoT à {{site.data.keyword.iot_short_notm}} et mettons en place une analyse pour explorer les données temps réel.
+Dans ce tutoriel d'initiation à {{site.data.keyword.iot_full}}, nous connectons un terminal IoT à {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
 <div id="prerequisites"></div>
@@ -25,8 +24,7 @@ IoT à {{site.data.keyword.iot_short_notm}} et mettons en place une analyse pour
 ## Avant de commencer
 {: #prereqs}
 
-Vous aurez besoin
-d'un [compte Bluemix ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/registration/){: new_window},
+Vous aurez besoin d'un [compte IBM Cloud ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/registration/){: new_window},
 d'une instance du service {{site.data.keyword.iot_short_notm}} et d'un terminal remplissant les conditions suivantes :
 
 *	Votre terminal doit pouvoir communiquer à l'aide des protocoles HTTP ou MQTT.
@@ -37,10 +35,7 @@ Pour plus d'informations, consultez [Développement de terminaux sur Watson IoT 
 
 ## Etape 1 : enregistrez votre terminal
 
-Vous pouvez ajouter les terminaux un à un à partir du tableau de bord
-{{site.data.keyword.iot_short_notm}}, ou bien vous pouvez en ajouter plusieurs à la fois en
-passant par
-l'[API Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window}.
+Vous pouvez ajouter les terminaux un à un à partir du tableau de bord [{{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://internetofthings.ibmcloud.com){: new_window} ou utiliser l'[API Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} pour ajouter plusieurs terminaux à la fois.
 
 Pour ajouter un terminal depuis le tableau de bord {{site.data.keyword.iot_short_notm}} :
 
@@ -129,127 +124,110 @@ l'ID d'organisation, le type de terminal, l'ID de terminal et le jeton d'authent
 
   Pour plus d'informations, consultez [Connectivité MQTT pour les terminaux](/docs/services/IoT/devices/mqtt.html).
 
-## Etape 3 : créez des tableaux et des cartes pour suivre les données des terminaux
+<!--## Step 3: Create boards and cards to keep track of device data
 
-En utilisant des tableaux et des cartes, vous pouvez visualiser, sous forme
-graphique, les valeurs de jeux de données d'un ou de plusieurs terminaux afin de bénéficier
-d'un aperçu rapide et d'une meilleure compréhension des données.
+By using boards and cards, you can view graphics that represent data set values from one or more devices for a quick overview and understanding of the device data.
 
-1. Dans votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Créer un nouveau tableau**.
+1. In your {{site.data.keyword.iot_short_notm}} dashboard, click **Create New Board**.
 
-2. Entrez un nom et une description pour le tableau.
+2. Enter a name and description for the board.
 
-3. Cliquez sur **Suivant**, puis sur **Créer**.
+3. Click **Next** and then **Create**.
 
-4. Cliquez sur le tableau que vous venez de créer, puis sur **Ajouter une nouvelle carte**. Sélectionnez Terminaux comme type de carte. Le tableau suivant décrit les options de visualisation que vous pouvez choisir.
+4. Click the board you just created, and then click **Add New Card**. Select Devices as the card type. The following table describes the visualization options you can choose from.
 
-| Type | Données affichées |
-|---------------|---------------|
-| Visualisation générique | Valeur d'un ou de plusieurs jeux de données. Pour voir jusqu'à trois valeurs de points de données dans un petit tableau, choisissez la grande taille de widget. |
-| Line chart (graphique à courbes) | Un ou plusieurs jeux de données dans un graphique temps réel défilant. Utilisez le menu Paramètres pour définir la plage et la conservation des données, la présentation des graphiques, etc. |
-| Graphique à barres | Valeurs des jeu de donnéess dans des barres libellées. Utilisez le menu Paramètres pour passer de l'affichage horizontal à l'affichage vertical et inversement pour les barres. |
-| Graphique en anneau | Au moins deux jeux de données dans une représentation circulaire. |
-| Valeur | Valeur brute d'un ou de plusieurs jeux de données. |
-| Jauge | Valeur d'un jeu de données affichée sous forme de jauge. Utilisez le menu Paramètres pour définir éventuellement des seuils de jauge pour les plages de données inférieures, intermédiaires et supérieures. |
-| Propriétés de terminal | Propriétés spécifiques pour un ou plusieurs terminaux. |
-| Toutes les propriétés de terminal | Toutes les propriétés pour un ou plusieurs terminaux. |
-| Liste de terminaux | Liste permettant de surveiller plusieurs terminaux. Elle peut être utilisée comme source de données d'autres cartes. |
-| Informations sur le terminal | Informations de base pour un terminal. |
-| Mappe de terminaux | Emplacement des terminaux d'une liste. |
+| Type | Data that is displayed |
+| Generic visualization | The value of one or more data sets. Choose the large widget size to see up to three data point values in a small table. |
+| Line chart | One or more data sets in a real-time scrolling chart. Use the Settings menu to set the data range and retention, the look and feel of the graphs, and more. |
+| Bar chart | Data set values in labelled bars. Use the Settings menu to toggle horizontal or vertical bar direction. |
+| Donut chart | Two or more data sets in a circular representation. |
+| Value | The raw value of one or more data sets. |
+| Gauge | The value of a data set shown as a gauge. Use the Settings menu to optionally set gauge thresholds for lower, middle, and upper data ranges. |
+| Device properties | Specific properties for one or more devices. |
+| All device properties | All properties for one or more devices. |
+| Device list | A list to monitor multiple devices. A list can be used as a data source for other cards. |
+| Device info | Basic information for a single device. |
+| Device map | The location of devices in a device list. |
 
-{: caption="Tableau 1. Options de visualisation" caption-side="top"}
+{: caption="Table 1. Visualization options" caption-side="top"}
 
-## Etape 4 : créez un schéma de type de terminal
+## Step 4: Create device type schemas
 
-A ce stade, vous devez créer un schéma de type de terminal et mapper les propriétés du terminal pour ensuite
-créer des règles qui seront déclenchées en fonction des points de données de vos propriétés mappées.
+At this point, you need to create a device type schema and map device properties to then create rules that are triggered based on the datapoints from your mapped device properties.
 
-1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, allez à
-**Terminaux > Gérer les schémas**, puis cliquez sur **Ajouter un schéma**.
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Devices > Manage Schemas** and click **Add Schema**.
 
-2. Sélectionnez un type de terminal à associer au schéma de message. Un seul schéma peut être défini pour un type de terminal.
+2. Select a device type to associate with the message schema. Only one schema can be defined for a device type.
 
-3. Cliquez sur **Ajouter une propriété** et ajoutez une ou plusieurs propriétés.
+3. Click **Add property** and add one or more properties.
 
-    Vous pouvez sélectionner des propriétés d'un terminal connecté, créer des propriétés virtuelles qui modifient ou combinent des propriétés existantes, ou ajouter
-des propriétés manuellement.
+    You can select properties from a connected device, create virtual properties that modify or combine existing properties, or add properties manually.
 
-    Les propriétés disponibles sont définies dans la charge utile des messages émis par un terminal.
+    The available properties are defined in the payload of the messages that are sent by a device.
     {: tip}
 
-    * Pour ajouter une propriété manuellement, sélectionnez l'onglet **Manuel** et définissez les détails suivants :
-        * Nom
-        * Type de données
-        * Propriété
-        * Unité de mesure (optionnel)
-        * Nombre de décimales (optionnel)
+    * To add a property manually, select the **Manual tab** and define the following property details:
+        * Name
+        * Data type
+        * Property
+        * Data unit (optional)
+        * Decimal places (optional)
 
-    * Pour créer une propriété virtuelle, sélectionnez l'onglet **Propriété virtuelle** et définissez les détails suivants :
-        * Nom
-        * Type de données
-        * Propriété
-        * Calcul
-        * Unité de mesure (optionnel)
-        * Nombre de décimales
+    * To create a virtual property, select the **Virtual Property** tab and define the following property details:
+        * Name
+        * Data type
+        * Property
+        * Calculation
+        * Data unit (optional)
+        * Decimal places
 
-    * Pour sélectionner des propriétés d'un terminal connecté, choisissez l'onglet **A partir de terminaux connectés**, puis sélectionnez une ou plusieurs propriétés à ajouter au schéma. Les propriétés sélectionnées sont ajoutées et le nom de la propriété est affecté à la description.
+    * To select properties from a connected device, select the **From Connected** tab, and then select one or more properties to add to the schema. The selected properties are added and the description is set to the name of the property.
 
-4. Cliquez sur **Terminer** pour créer les propriétés.
+4. Click **Finish** to create the properties.
 
-## Etape 5 : créez des règles et des actions
+## Step 5: Create rules and actions
 
-Les règles sont des points de décision basés sur une condition qui correspondent aux données de terminal en temps réel avec des valeurs de seuil prédéfinies ou d'autres données de propriété afin de déclencher une alerte si une condition est remplie. Outre l'alerte qui s'affiche dans le tableau de bord {{site.data.keyword.iot_short_notm}}, vous pouvez ajouter une ou plusieurs actions afin d'exécuter une logique métier lorsqu'une règle est déclenchée.
+Rules are condition-based decision points that match real-time device data with predefined threshold values or other property data to trigger an alert if a condition is met. In addition to the alert that's displayed in the {{site.data.keyword.iot_short_notm}} dashboard, you can add one or more actions to run business logic when a rule is triggered.
 
-1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, allez à **Règles** et cliquez
-sur **Créer une règle Cloud**.
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Rules** and click **Create Cloud Rule**.
 
-2. Entrez un nom et une description pour la règle, sélectionnez un type de terminal auquel s'applique la règle et cliquez sur **Suivant**.
+2. Enter a name and description for the rule, select a device type that the rule applies to, and click **Next**.
 
-3. Pour configurer la logique de règle, ajoutez une ou plusieurs conditions IF à utiliser en tant que déclencheurs pour la règle.
+3. To set up the rule logic, add one or more IF conditions to use as triggers for the rule.
 
-    Vous pouvez ajouter les conditions sur des lignes parallèles afin qu'elles s'appliquent selon leur somme logique (OU), ou bien vous pouvez les ajouter dans des colonnes séquentielles pour qu'elles s'appliquent selon leur produit logique (ET). Examinez les exemples suivants :
+    You can add conditions in parallel rows to apply them as OR conditions, or you can add conditions in sequential columns to apply them as AND conditions. Take a look at the following examples:
 
-      * Une règle simple peut déclencher une alerte si une valeur de paramètre est supérieure à une valeur spécifiée :
-Condition = `temp_cpu>80`
-      * Une règle plus complexe peut être déclenchée lorsque plusieurs seuils sont tous franchis :
-Condition = `temp_cpu>60 ET cpu_load>90`
+      * A simple rule might trigger an alert if a parameter value is larger than a specified value: Condition = `temp_cpu>80`
+      * A more complex rule might trigger when a combination of thresholds are met: Condition = `temp_cpu>60 AND cpu_load>90`
 
-    Pour déclencher une condition comparant deux propriétés ou pour déclencher
-plusieurs conditions de propriété combinées séquentiellement par un ET logique,
-incluez les points de données déclencheurs dans le même
-message de terminal. Si les données sont reçues dans plusieurs messages, les conditions censées être évaluées ensemble seront évaluées séparément et les actions prévues ne seront pas déclenchées.
+    To trigger a condition that compares two properties, or to trigger two or more property conditions that are combined sequentially by using AND, include the triggering data points in the same device message. If the data is received in more than one message, the condition or sequential conditions don't trigger.
     {: tip}
 
-4. Configurez les exigences de déclenchement conditionnel pour votre règle.
+4. Configure conditional trigger requirements for your rule.
 
-    Pour contrôler le nombre d'alertes déclenchées pour une règle pendant une période donnée, vous pouvez utiliser des exigences de déclenchement conditionnel. Le déclenchement conditionnel agit sur n'importe quelle condition dans la règle. Par
-exemple, si une règle a cinq conditions parallèles liées par l'opérateur OU, chaque fois que l'une d'entre elles
-se vérifie, elle est décomptée du nombre de
-déclenchements conditionnels.
+    You can use conditional trigger requirements to control the number of alerts that are triggered for a rule over a time period. The conditional triggering acts on any condition in the rule. For example, if a rule has five parallel conditions set by using OR, each condition that's true counts towards the conditional trigger count.
 
-      1. Dans l'éditeur de règles, cliquez sur le lien par défaut
-**Déclencher chaque fois que les conditions sont remplies** pour
-ouvrir la boîte de dialogue Définir une exigence de fréquence.
-      2. Sélectionnez et configurez le déclencheur conditionnel que vous souhaitez utiliser dans la règle.
+      1. In the rule editor, click the default **Trigger each time conditions are met** link to open the set frequency requirement dialog.
+      2. Select and configure the conditional trigger you want to use in the rule.
 
-        * Déclencher chaque fois que les conditions sont remplies
-        * Déclencher si des conditions sont remplies N fois en M _unité de temps_
+        * Trigger every time conditions are met
+        * Trigger if conditions are met N times in M _Unit of time_
 
-5. Créez ou sélectionnez une ou plusieurs actions qui se déclenchent si les conditions de règle sont remplies.
+5. Create or select one or more actions that occur if the rule conditions are met.
 
-    Par exemple, une action pourrait consister à envoyer un e-mail ou à poster un webhook.
+    For example, an action can be to send an email or post a webhook.
 
-6. Optionnel : sélectionnez une priorité d'alerte pour la règle.
+6. Optional: Select an alert priority for the rule.
 
-    La priorité sert à classer les alertes affichées dans **Tableaux > Analyse centrée sur la règle**. La priorité par défaut est Low (faible).
+    The priority is used to classify the alerts that are displayed in the **Boards > Rule-Based Analytics** board. The default priority is Low.
 
-7. Cliquez sur **Sauvegarder** pour sauvegarder la règle sans l'activer ou cliquez sur **Activer** pour sauvegarder la règle et l'activer.
+7. Click **Save** to save without activating,  or click **Activate** to save and activate your rule.
 
-    Lorsque vous activez la règle, si ses conditions viennent à se vérifier, une alerte est ajoutée au tableau **Analyse centrée sur la règle** et toute action associée à la règle est exécutée.
+    When you activate the rule, an alert is added to the **Rule-Based Analytics** board when the conditions are met, and any rule action is run. -->
 
 ## Etapes suivantes
 
-Etendez les fonctions d'analyse de données en créant et en connectant vos propres applications afin qu'elles consomment les données temps réel et historiques des terminaux.
+Créez et connectez vos propres applications pour consommer des données temps réel et historiques.
 
   * Consultez les [bibliothèques client](/docs/services/IoT/iot_platform_client_lib.html) en quête d'outils de construction du
 code pour l'intégration et la connexion de vos terminaux et applis.

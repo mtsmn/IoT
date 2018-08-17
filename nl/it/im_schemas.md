@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-14"
+  years: 2016, 2018
+lastupdated: "2018-03-14"
 
 ---
 
@@ -15,12 +15,20 @@ lastupdated: "2017-03-14"
 # Crea schemi di tipo di dispositivi
 {: #iotrtinsights_task}
 
-Per utilizzare le funzioni {{site.data.keyword.iot_short}} come le regole e le azioni, devi creare uno schema per associare le proprietà del dispositivo ai nomi delle proprietà semplici da usare, impostare le unità di dati per le proprietà e specificare il tipo di messaggio da utilizzare con lo schema.
-{: shortdesc}
+**Importante:** stiamo facendo partire una beta per definire in un nuovo modo le regole nei tuoi dati del dispositivo IoT come parte
+di un programma di modifiche più grande per migliorare il modo in cui {{site.data.keyword.iot_full}} fornisce le regole e le azioni.  
 
-**Importante:** gli schemi sono necessari per utilizzare le regole le azioni. Per informazioni, consulta [Analisi cloud](cloud_analytics.html#rules).
+Per ulteriori informazioni, controlla il post del blog [An alternative approach to defining Rules on IoT data ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.  
 
-**Importante:** le funzioni di analisi vengono unite dal servizio {{site.data.keyword.iotrtinsights_full}} Se la tua organizzazione {{site.data.keyword.iot_short_notm}} viene utilizzata come origine dati per un'istanza {{site.data.keyword.iotrtinsights_short}} esistente, Cloud and Edge Analytics non è abilitato finché non siano state migrate le istanze {{site.data.keyword.iotrtinsights_short}} esistenti. Continuare ad utilizzare il dashboard {{site.data.keyword.iotrtinsights_short}} per le tue analisi finché non viene completata la migrazione. Per ulteriori informazioni, consulta il blog [IBM Watson IoT Platform blog ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks e i tuoi dashboard dell'istanza {{site.data.keyword.iotrtinsights_short}} esistenti.  
+Per iniziare a definire le tue regole, consulta la documentazione [Creazione delle regole integrate (Beta)](information_management/im_rules.html).
+
+## Informazioni su quest'attività
+
+Per utilizzare le funzioni {{site.data.keyword.iot_short_notm}} come le regole e le azioni, devi creare uno schema per associare le proprietà del dispositivo ai nomi delle proprietà semplici da usare, impostare le unità di dati per le proprietà e specificare il tipo di messaggio da utilizzare con lo schema.
+
+Gli schemi sono necessari per utilizzare le regole e le azioni. Per informazioni, consulta [Analisi cloud](cloud_analytics.html#rules).
+
+Le funzioni di analisi vengono unite dal servizio {{site.data.keyword.iotrtinsights_full}}. Se la tua organizzazione {{site.data.keyword.iot_short_notm}} viene utilizzata come origine dati per un'istanza {{site.data.keyword.iotrtinsights_short}} esistente, Cloud and Edge Analytics non è abilitato finché non siano state migrate le istanze {{site.data.keyword.iotrtinsights_short}} esistenti. Continuare ad utilizzare il dashboard {{site.data.keyword.iotrtinsights_short}} per le tue analisi finché non viene completata la migrazione. Per ulteriori informazioni, consulta il blog [IBM Watson IoT Platform blog ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks e i tuoi dashboard dell'istanza {{site.data.keyword.iotrtinsights_short}} esistenti.  
 
 ## Aggiunta di uno schema del dispositivo
 {: #add_schema}
@@ -32,7 +40,7 @@ Per aggiungere uno schema:
 3. Aggiungi una o più proprietà.  
     Puoi selezionare le proprietà dal dispositivo collegato, creare proprietà virtuali per modificare o da combinare a proprietà esistenti o aggiungere le proprietà manualmente.  
 
-    **Suggerimento:** le proprietà disponibili sono definite nel payload dei messaggi inviati da un dispositivo. Per informazioni sul formato del payload {{site.data.keyword.iot_short}}, consulta l'argomento [Message payload](reference/mqtt/index.html#message-payloadl "Message payload.").   
+    **Suggerimento:** le proprietà disponibili sono definite nel payload dei messaggi inviati da un dispositivo. Per informazioni sul formato del payload {{site.data.keyword.iot_short}}, consulta l'argomento [Message payload](reference/mqtt/index.html#message-payload "Message payload.").   
   <dl>
   <dt>Aggiungi una proprietà manualmente</dt>
   <p><b>Suggerimento:</b> per creare una struttura della proprietà nidificata, aggiungi prima una proprietà con il tipo di dati Prent. Nella tabella delle proprietà, puoi quindi fare clic su ![icona Aggiungi child.](images/add_child.png "Aggiungi child") per aggiungere una o più proprietà secondarie.</p>

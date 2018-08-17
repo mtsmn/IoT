@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016, 2017
-lastupdated: "2017-10-04"
+years: 2016, 2018
+lastupdated: "2018-05-31"
 
 ---
 
@@ -12,22 +12,23 @@ lastupdated: "2017-10-04"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Watson IoT Platform-Betafunktionen
+# Watson IoT Platform -Betafeatures
 {: #beta_features}
 
-Im Rahmen der kontinuierlichen Weiterentwicklung von {{site.data.keyword.iot_full}} werden fortlaufend neue Funktionen hinzugefügt und gegebenenfalls zunächst als Betafunktionen bereitgestellt. Für manche dieser Funktionen kann eine Registrierung für die Betaversion erforderlich sein.  
+Im Rahmen der kontinuierlichen Weiterentwicklung von {{site.data.keyword.iot_full}} werden fortlaufend neue Features hinzugefügt und gegebenenfalls zunächst als Betafeatures bereitgestellt. Für manche dieser Features kann eine Registrierung für die Betaversion erforderlich sein.  
 {:shortdesc}
 
-Die folgenden Betafunktionen stehen in {{site.data.keyword.iot_short_notm}} zur Verfügung:
+Die folgenden Betafeatures stehen in {{site.data.keyword.iot_short_notm}} zur Verfügung:
 
-Funktion      | Dokumentation       
+Feature       | Dokumentation       
 ------------- | -------------
-Benutzerschnittstelle für Datenmanagement | [Einführung zum Datenmanagement mithilfe der Webschnittstelle (Beta)](GA_information_management/im_ui_flow.html#gs_web)
- | [Geräte zur Verwendung mit Funktion für das Datenmanagement über Webschnittstelle (Beta) konfigurieren](GA_information_management/im_config_devices.html#im_config_devices)
-Gateway-Zugriffssteuerung | [Gateway-Zugriffssteuerung (Beta)](gateways/gateway-access-control.html#gateway-access-control)
-Angepasste Domänen | [Angepasste Domänen (Beta)](reference/security/set_up_certificates.html#custom-domains)
-Erstellung von Drilldown-Berichten | [Erstellung von Drilldown-Berichten (Beta)](reference/security/RM_security.html#drill-down)
-Zugriffssteuerung auf Ressourcenebene | [Übersicht zu RLAC (Beta)](reference/rlac_overview.html#RLAC_overview) 
- | [RLAC (Beta) konfigurieren](reference/rlac.html#configure_RLAC)
+Erstellung von Drilldown-Berichten | [Drilldown-Berichterstellung (Beta)](reference/security/RM_security.html#drill_down)
 IoT-Gateway-Paket | [IoT-Gateway-Paket (Beta)](gateways/iotgw.html#gw_package)
 Simulieren von Gerätedaten | [Simulieren von Gerätedaten (Beta)](devices/device_sim.html)
+Wiederherstellen gelöschter Geräte | [Gelöschte Geräte wiederherstellen (Beta)](iotplatform_task.html#restore_device)
+Eingebettete Regeln | [Eingebettete Regeln erstellen (Beta)](information_management/im_rules.html)
+Dinge | [Einführung in das Datenmanagement](GA_information_management/ga_im_device_twin.html#device_twins)
+{{site.data.keyword.iot_short_notm}} Edge (Vorschau) | [{{site.data.keyword.iot_short_notm}} Edge - Übersicht (Vorschau)](edge/WIoTP_edge.html)
+Authentifizierung und Berechtigung mit Cloud IAM | [Authentifizierung und Berechtigung mit Cloud IAM für {{site.data.keyword.iot_short_notm}} (Beta)](reference/security/cloud_iam.html)
+Authentifizierung und Berechtigung mit App ID | [Authentifizierung und Berechtigung mit App ID für {{site.data.keyword.iot_short_notm}} (Beta)](reference/security/app_id.html)
+Gruppenbenutzerschnittstelle | [Gruppen verwalten (Beta)](manage_groups.html#groups_overview)

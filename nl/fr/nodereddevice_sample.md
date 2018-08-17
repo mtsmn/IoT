@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017
+  years: 2016, 2018
 lastupdated: "2017-11-02"
 
 ---
@@ -17,8 +17,7 @@ Utilisez Node-RED pour créer un simulateur de terminal et envoyer des données 
 {:shortdesc}
 
 ## Présentation
-
-Node-RED est un outil qui permet de relier des terminaux matériels, des API et des services en ligne de façon inédite et intéressant. Pour plus d'informations, voir le site Web [Node-RED ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://nodered.org/){: new_window}.  
+Node-RED est un outil qui permet de relier des terminaux matériels, des API et des services en ligne de façon inédite et intéressante. Pour plus d'informations, voir le site Web [Node-RED ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://nodered.org/){: new_window}.  
 
 Vous pouvez exécuter votre instance Node-RED dans votre propre environnement ou l'utiliser en tant qu'application {{site.data.keyword.Bluemix_notm}}. La procédure suivante inclut les instructions relatives à {{site.data.keyword.Bluemix_notm}}.
 
@@ -53,8 +52,8 @@ Le flux du simulateur de terminal est disponible dans l'éditeur de flux. Le flu
 7. Envoyez et recevez des messages de terminal MQTT en procédant comme indiqué ci-après :  
     1. Cliquez sur le noeud d'injection **Send Data** pour déclencher l'envoi des données à {{site.data.keyword.iot_short_notm}}.
        **Remarque :** Vous pouvez activer le noeud de débogage **Debug output payload** pour voir quelles sont les données envoyées et vérifier le noeud de fonction **Device payload** pour voir le code qui génère le contenu. 
-    2. Après avoir cliqué sur **Send Data**, les messages MQTT sont envoyés à {{site.data.keyword.iot_short_notm}} et sont reçus par le noeud **IBM IoT App In**. Le flux secondaire **Temperature Monitor** détermine si la température est comprise dans la plage et affiche un message sur l'onglet de débogage.
-       **Remarque :** Cliquez sur le noeud de commutation **temp thresh** pour vérifier et modifier les valeurs de seuil. 
+    2. Après avoir cliqué sur **Send Data**, les messages MQTT sont envoyés à {{site.data.keyword.iot_short_notm}} et sont reçus par le noeud **IBM IoT App In**. Le flux secondaire **Temperature Monitor** détermine si la température est comprise dans la plage et affiche un message sur l'onglet de débogage. 
+       **Remarque :** Cliquez sur le noeud de commutation **temp thresh** pour vérifier et modifier les valeurs de seuil.
     3. Vérifiez l'onglet de débogage. Un message s'affiche, par exemple **Temperature (17) within safe limits**.
     
 Vous avez connecté votre exemple de terminal IoT à {{site.data.keyword.iot_short_notm}} et vous pouvez voir les données le concernant.

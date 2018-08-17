@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-07-19"
+  years: 2016, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -27,9 +27,8 @@ Están disponibles los siguientes roles de usuario estándares:
 Rol de usuario | Descripción
 ------------- | -------------
 Administrador | Un rol 'superusuario' que otorga acceso a todas las API relacionadas con el usuario. Los administradores no pueden acceder a operaciones restringidas a dispositivos y aplicaciones.
-Operador | Pensado para usuarios de organizaciones frontales. Otorga acceso a la mayoría de las operaciones de organización, operaciones de control de acceso, operaciones de analíticas, operaciones de terceros y operaciones de gestión de riesgos.
-Desarrollador | Otorga acceso no restringido a operaciones de dispositivo, operaciones de registro, operaciones de memoria caché, operaciones de historian, operaciones de analíticas y operaciones de servicio de terceros. El rol proporciona acceso limitado a las operaciones de la organización, control de acceso y gestión de riesgos.
-Analista | Otorga acceso a las operaciones de analíticas, incluidas la creación, actualización y supresión de reglas, acciones y esquemas.
+Operador | Pensado para usuarios de organizaciones frontales. Otorga acceso a la mayoría de las operaciones de organización, operaciones de control de acceso, operaciones de terceros y operaciones de gestión de riesgos.
+Desarrollador | Otorga acceso no restringido a operaciones de dispositivo, operaciones de registro, operaciones de memoria caché, operaciones históricas y operaciones de servicio de terceros. El rol proporciona acceso limitado a las operaciones de la organización, control de acceso y gestión de riesgos.
 Lector | El rol de usuario predeterminado. Otorga un acceso limitado a operaciones que están disponibles para todos los usuarios.
 
 Para obtener más información sobre los roles de usuario, consulte [Roles de usuario](reference/roles_access.html).
@@ -50,7 +49,7 @@ Rol de aplicación | Descripción
 Estándar | El rol de aplicación predeterminado. Otorga acceso a la mayor parte de las operaciones de las aplicaciones, pero no a las operaciones de usuario o de rol.   
 Operaciones | Otorga acceso a la gama más amplia de operaciones, pero deniega el acceso para suscribirse o publicar operaciones.
 Programa de fondo de confianza | Está pensado para aplicaciones que no requieren interacción desde el operador de sistemas. Deniega el acceso a las operaciones de gestión de dispositivos, organizaciones, roles o extensión.
-Procesador de datos | Está pensado para las aplicaciones que realizan el proceso de analíticas y de datos. Se ha otorgado acceso limitado a las aplicaciones del procesador de datos a operaciones de organizaciones y de usuarios, pero tienen acceso completo a las operaciones de analíticas, incluidas las reglas de creación y de gestión, las reglas, acciones y esquemas.
+Procesador de datos | Está pensado para las aplicaciones que realizan el proceso de analíticas y de datos. Se ha otorgado acceso limitado a las aplicaciones del procesador de datos a operaciones de organizaciones y de usuarios.
 Visualización | Está pensada para aplicaciones que son responsables de generar visualizaciones de datos. Las aplicaciones de visualización tienen acceso a operaciones activas y almacenadas y a operaciones de panel de instrumentos.
 Dispositivo | Pensado para aplicaciones que toman el rol de dispositivos; es decir, que proporcionan un origen de los datos que se envían al {{site.data.keyword.iot_short_notm}} como si se tratara de un dispositivo. Sólo se otorga a las aplicaciones de dispositivo acceso limitado a las operaciones.
 
@@ -64,8 +63,7 @@ Están disponibles los siguientes roles de pasarela estándares:
 
 Rol de pasarela | Descripción
 ------------- | -------------
-Estándar | Otorga acceso restringido a las operaciones.
-Las pasarelas estándar están limitadas a actuar en nombre de los dispositivos contenidos en la pasarela asignada al grupo de recursos.
+Estándar | Otorga acceso restringido a las operaciones. Las pasarelas estándar están limitadas a actuar en nombre de los dispositivos contenidos en la pasarela asignada al grupo de recursos.
 Privilegiado | El rol de pasarela predeterminado. Pensado para pasarelas de confianza y permite a las pasarelas privilegiadas añadir dispositivos al {{site.data.keyword.iot_short_notm}}. Otorga acceso a las operaciones relevantes para añadir, actualizar y gestionar dispositivos y propiedades de dispositivos, pero no tiene acceso a otras operaciones.  
 
 Para obtener más información sobre el acceso de las operaciones de los roles de pasarela, consulte [Roles de pasarela](reference/gateway_roles_access.html).

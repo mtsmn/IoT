@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-12-12"
+  years: 2016, 2018
+lastupdated: "2018-03-12"
 
 ---
 
@@ -15,10 +15,18 @@ lastupdated: "2016-12-12"
 # Erweiterte Berechnungen für virtuelle Edge-Eigenschaften
 {: #im_vir_calculations}
 
-Erweitern Sie die Basisberechnungen für virtuelle Eigenschaften durch vordefinierte Edge Analytics-Formeln.
-{:shortdesc}
+**Wichtig:** Eine Betaversion, mit der eine neue Methode zur Definition von Regeln für IoT-Gerätedaten zur Verfügung steht,
+wird im Rahmen eines umfassenderen Programms mit Änderungen gestartet, das die Bereitstellung von Regeln und Aktionen in {{site.data.keyword.iot_full}} verbessern soll.
 
-**Wichtig:** Die erweiterten Berechnungen geben Eigenschaftsdatenpunkte nur zurück, wenn die Daten für die ausgewählte Eigenschaft von einem Gerät stammen, das mit einem Gateway verbunden ist, auf dem ein Edge Analytics-Agent installiert ist. Eine Edge-Regel kann diese virtuelle Eigenschaft direkt verwenden. Um die Eigenschaft mit einer Cloud-Regel zu verwenden, muss eine Edge-Regel den Datenpunkt mithilfe der Aktion 'An Cloud weiterleiten' an die Cloud senden. Weitere Informationen finden Sie in [Edge Analytics-Agent installieren](gateways/dashboard.html#edge).
+Weitere Informationen finden Sie im Blogbeitrag [Alternative Methode zur Definition von Regeln für IoT-Daten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Lesen Sie als ersten Schritt bei der Definition eigener Regeln die Informationen in der Dokumentation [Eingebettete Regeln erstllen (Beta)](information_management/im_rules.html).
+
+## Informationen zu Berechnungen für virtuelle Edge-Eigenschaften
+
+Erweitern Sie die Basisberechnungen für virtuelle Eigenschaften durch vordefinierte Edge Analytics-Formeln.
+
+Die erweiterten Berechnungen geben Eigenschaftsdatenpunkte nur zurück, wenn die Daten für die ausgewählte Eigenschaft von einem Gerät stammen, das mit einem Gateway verbunden ist, auf dem ein Edge Analytics-Agent installiert ist. Eine Edge-Regel kann diese virtuelle Eigenschaft direkt verwenden. Um die Eigenschaft mit einer Cloud-Regel zu verwenden, muss eine Edge-Regel den Datenpunkt mithilfe der Aktion 'An Cloud weiterleiten' an die Cloud senden. Weitere Informationen finden Sie in [Edge Analytics-Agent installieren](gateways/dashboard.html#edge).
 
 Beispiel: Verwenden Sie die erweiterten virtuellen Datenpunkte in einer Kurvendiagrammkarte, um Datentrends ohne Spitzenwerte darzustellen.  
  ![Tatsächliche Datenpunkte vs. durchschnittliche Datenpunkte.](images/vir_adv_avg_card.svg "Vergleich zwischen tatsächlichen und durchschnittlichen Datenpunkten.")

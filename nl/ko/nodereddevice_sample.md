@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017
+  years: 2016, 2018
 lastupdated: "2017-11-02"
 
 ---
@@ -17,19 +17,18 @@ lastupdated: "2017-11-02"
 {:shortdesc}
 
 ## 개요
+Node-RED는 새롭고 흥미로운 방식으로 하드웨어 디바이스, API 및 온라인 서비스를 함께 연결하는 데 사용되는 도구입니다. 자세한 정보는 [Node-RED ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://nodered.org/){: new_window} 웹 사이트를 참조하십시오.  
 
-Node-RED는 새롭고 흥미로운 방식으로 하드웨어 디바이스, API 및 온라인 서비스를 함께 연결하는 데 사용되는 도구입니다. 자세한 정보는 [Node-RED ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://nodered.org/){: new_window} 웹 사이트를 참조하십시오.   
-
-고유 환경에서 Node-RED 인스턴스를 실행하고 {{site.data.keyword.Bluemix_notm}} 애플리케이션으로 사용할 수 있습니다. 다음 단계에는 {{site.data.keyword.Bluemix_notm}}에 대한 지시사항이 포함됩니다.
+자체 환경에서 Node-RED 인스턴스를 실행하거나 이를 {{site.data.keyword.Bluemix_notm}} 애플리케이션으로 사용할 수 있습니다. 다음 단계에는 {{site.data.keyword.Bluemix_notm}}에 대한 지시사항이 포함됩니다.
 
 MQTT 디바이스 메시지를 {{site.data.keyword.iot_short_notm}}에 보내려면 Node-RED 디바이스 시뮬레이터를 작성하고 연결하십시오. 다음 예제에서는 디바이스 시뮬레이터가 MQTT 브로커(예: {{site.data.keyword.iot_short_notm}})로 운송 컨테이너의 데이터 전송을 시뮬레이션합니다.
 
 ## 단계
 
 1. 다음 단계를 완료하여 Node-RED 디바이스 시뮬레이터를 작성합니다.   
-    1. https://console.ng.bluemix.net에서 {{site.data.keyword.Bluemix_notm}}에 로그인합니다.
+    1. https://console.ng.bluemix.net 사이트에서 {{site.data.keyword.Bluemix_notm}}에 로그인합니다.
     2. **카탈로그** 탭을 선택합니다.
-    3. 서비스 카탈로그의 표준 유형 섹션을 찾아 **Internet of Things Platform 스타터**를 클릭하십시오. **팁:** Internet of Things Platform 스타터 페이지로 바로 이동하려면 [여기(![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://console.ng.bluemix.net/catalog/starters/internet-of-things-platform-starter){: new_window}를 클릭하십시오.
+    3. 서비스 카탈로그의 표준 유형 섹션을 찾아 **Internet of Things Platform 스타터**를 클릭하십시오. **팁:** Internet of Things Platform 스타터 페이지로 바로 이동하려면 [여기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/catalog/starters/internet-of-things-platform-starter){: new_window}를 클릭하십시오.
     4. Internet of Things Platform 스타터 페이지에서 Node-RED를 배치할 영역을 선택하고 앱 작성 선택사항을 확인하고 **작성**을 클릭하여 Node-RED를 Bluemix 조직에 추가하십시오. 예를 들어 다음과 같습니다.
     <ul>
      <li> 영역: dev
@@ -53,7 +52,7 @@ MQTT 디바이스 메시지를 {{site.data.keyword.iot_short_notm}}에 보내려
 7. 다음 단계를 완료하여 MQTT 디바이스 메시지를 전송하고 수신하십시오.  
     1. **Send Data** 삽입 노드를 클릭하여 {{site.data.keyword.iot_short_notm}}으로 보낼 데이터를 트리거하십시오.
        **참고:** **Debug output payload** 디버그 노드를 활성화하여 전송되는 데이터를 확인하고 **Device payload** 기능 노드를 검사하여 페이로드를 빌드하는 코드를 확인하십시오. 
-    2. **데이터 전송**을 클릭하면 MQTT 메시지가 {{site.data.keyword.iot_short_notm}}으로 전송되고 **IBM IoT App In** 노드에서 수신됩니다. **온도 모니터** 서브플로우는 온도가 정의된 한계 내에 있는지 여부를 설정하고 디버그 탭에 메시지를 표시합니다.
+    2. **데이터 전송**을 클릭하면 MQTT 메시지가 {{site.data.keyword.iot_short_notm}}으로 전송되고 **IBM IoT App In** 노드에서 수신됩니다. **온도 모니터** 서브플로우는 온도가 정의된 한계 내에 있는지 여부를 설정하고 디버그 탭에 메시지를 표시합니다. 
        **참고:** **temp thresh** 스위치 노드를 클릭하여 임계값을 확인하고 변경하십시오.
     3. 디버그 탭을 확인하십시오. 메시지가 표시됩니다(예: **Temperature (17) within safe limits**).
     
