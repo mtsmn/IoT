@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-02-17"
+  years: 2016, 2018
+lastupdated: "2018-05-22"
 
 ---
 
@@ -15,7 +15,12 @@ lastupdated: "2017-02-17"
 # Conectando e configurando um serviço de historiador usando {{site.data.keyword.messagehub}}  
 {: #messagehub_main}
 
-Conectar o {{site.data.keyword.messagehub_full}} ao {{site.data.keyword.iot_short}} fornece um barramento de mensagem escalável, de alto rendimento para armazenamento de dados históricos. O {{site.data.keyword.messagehub}} é construído no Apache Kafka, que é um software livre, um sistema de mensagens de alto rendimento que fornece uma plataforma de baixa latência para a manipulação de feeds de dados em tempo real.
+Conectar o {{site.data.keyword.messagehub_full}} ao {{site.data.keyword.iot_full}} fornece um barramento de mensagem escalável, de alto rendimento para armazenamento de dados históricos. O {{site.data.keyword.messagehub}} é construído no Apache Kafka, que é um software livre, um sistema de mensagens de alto rendimento que fornece uma plataforma de baixa latência para a manipulação de feeds de dados em tempo real.
+
+MessageHub redirecionando eventos de partições usando uma chave de partição. A chave
+é formada concatenando o ID da organização com seis caracteres do {{site.data.keyword.iot_short}} com o tipo de dispositivo e o ID do dispositivo. Os campos de carga útil, incluindo o
+registro de data e hora e o ID do evento, não são usados para formar a chave de partição. Essa configuração assegura que todos os eventos de um dispositivo específico sejam enviados para a
+mesma partição, para que os eventos sejam processados na ordem em que eles são enviados. 
 
 ## Antes de iniciar  
 {: #byb}
@@ -26,6 +31,7 @@ Antes de conectar um {{site.data.keyword.messagehub}} ao seu serviço {{site.dat
 
 - Assegure-se de ter privilégios de desenvolvedor na organização do {{site.data.keyword.Bluemix_notm}} e de estar conectado por meio do {{site.data.keyword.Bluemix_notm}}. Se você não estiver conectado por meio do {{site.data.keyword.Bluemix_notm}} ou não tiver privilégios de desenvolvedor nessa organização do {{site.data.keyword.Bluemix_notm}}, você não será capaz de
 autorizar a ligação do {{site.data.keyword.messagehub}} e o {{site.data.keyword.iot_short_notm}}.
+
 
 ## Conectar
 

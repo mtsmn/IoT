@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017
+  years: 2016, 2018
 lastupdated: "2017-11-02"
 
 ---
@@ -17,10 +17,10 @@ Use o Node-RED para criar um simulador de dispositivo para enviar dados do dispo
 {:shortdesc}
 
 ## Visão geral
-
 Node-RED é uma ferramenta que é usada para ligar dispositivos de hardware, APIs e serviços on-line de maneiras novas e interessantes. Para obter mais informações, veja o website do [Node-RED ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://nodered.org/){: new_window}.  
 
-É possível executar sua instância do Node-RED em seu próprio ambiente ou utilizá-la como um aplicativo do {{site.data.keyword.Bluemix_notm}}. As etapas a seguir incluem instruções para o {{site.data.keyword.Bluemix_notm}}.
+É possível executar sua instância Node-RED em seu próprio ambiente ou usá-la como
+um aplicativo {{site.data.keyword.Bluemix_notm}}. As etapas a seguir incluem instruções para o {{site.data.keyword.Bluemix_notm}}.
 
 Crie e conecte o simulador de dispositivo Node-RED para enviar mensagens do dispositivo MQTT para o {{site.data.keyword.iot_short_notm}}. No exemplo a seguir, o simulador de dispositivo simula o envio de dados de um contêiner de frete para um broker MQTT, por exemplo, {{site.data.keyword.iot_short_notm}}.
 
@@ -53,7 +53,7 @@ O fluxo do simulador de dispositivo é disponibilizado ao editor de fluxo. O flu
 7. Envie e receba mensagens do dispositivo MQTT concluindo as etapas a seguir:  
     1. Clique no nó de injeção **Enviar dados** para acionar dados a serem enviados ao {{site.data.keyword.iot_short_notm}}.
        **Nota:** É possível ativar o nó de depuração **Depurar carga útil de saída** para ver quais dados são enviados e verificar o nó de função **Carga útil do dispositivo** para ver o código que constrói a carga útil. 
-    2. Depois que você clica em **Enviar dados**, as mensagens MQTT são enviadas para o {{site.data.keyword.iot_short_notm}} e são recebidas pelo nó **Entrada de app IBM IoT**. O subfluxo **Monitor de temperatura** estabelece se a temperatura está dentro dos limites definidos e exibe uma mensagem na guia de depuração.
+    2. Depois que você clica em **Enviar dados**, as mensagens MQTT são enviadas para o {{site.data.keyword.iot_short_notm}} e são recebidas pelo nó **Entrada de app IBM IoT**. O subfluxo **Monitor de temperatura** estabelece se a temperatura está dentro dos limites definidos e exibe uma mensagem na guia de depuração. 
        **Nota:** Clique no nó de comutação **limite de temperatura** para verificar e mudar os valores do limite
     3. Verifique a guia de depuração. Uma mensagem é exibida, por exemplo, **Temperatura (17) dentro dos limites de segurança**.
     

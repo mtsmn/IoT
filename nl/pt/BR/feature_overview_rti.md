@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -19,8 +19,7 @@ O {{site.data.keyword.iot_full}} é construído com base nas áreas-chave a segu
 
   1. Connect - Conecte dispositivos e desenvolva aplicativos.
   2. Gerenciamento de informações - armazene, normalize, transforme e revise dados do dispositivo e integre seu {{site.data.keyword.iot_short_notm}} com outros serviços.
-  3. Analytics - Especifique condições de regra que são baseadas em dados do dispositivo
-em tempo real para acionar alertas e ações.
+  3. Analytics - Visualize dados do dispositivo de tempo real usando o painel do {{site.data.keyword.iot_short_notm}}.
   4. Risk Management - Configure conectividade e arquitetura seguras com controle de acesso para usuários e aplicativos.
 
 ## Conectar
@@ -38,10 +37,8 @@ Os recursos de gerenciamento de dispositivo são fornecidos por meio de uma API 
 
 ### Extensões e integrações de serviço
 
-Extensões e integrações de serviço permitem que serviços externos e extensões definidas pelo usuário de serviços principais sejam incluídos em uma instância do {{site.data.keyword.iot_short_notm}}. Os serviços externos que podem ser integrados
-com o {{site.data.keyword.iot_short_notm}} incluem os serviços de localização de clima
-The Weather Company, permitindo que você saiba o clima atual em uma localização de dispositivo
-e dados SIM Jasper. Para obter mais informações sobre extensões e integrações de serviços de terceiros, consulte [integrando serviços externos](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
+Extensões e integrações de serviço permitem que serviços externos e extensões definidas pelo usuário de serviços principais sejam incluídos em uma instância do {{site.data.keyword.iot_short_notm}}. Os serviços externos que podem ser integrados ao {{site.data.keyword.iot_short_notm}} incluem os serviços de localização meteorológica da The Weather Company, permitindo localizar o clima atual em um local do dispositivo, dados Jasper SIM e {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. Para obter mais informações sobre extensões e integrações de serviços de terceiros, consulte [integrando serviços externos](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
+
 
 ---
 
@@ -79,9 +76,12 @@ Para obter mais informações sobre como usar esse recurso, consulte
 de dados](GA_information_management/ga_im_device_twin.html).
 
 ---
-
 ## Analytics
 {: #analytics}
+
+### Visualizar dados do dispositivo de tempo real
+
+É possível visualizar e exibir dados do dispositivo de tempo real usando cartões do painel. Os cartões do painel monitoram e exibem dados em tempo real, o que permite rastrear dispositivos ou dados do dispositivo importantes. Essas visualizações são exibidas no painel principal do {{site.data.keyword.iot_short_notm}} para fornecer acesso rápido ao contexto e status de dados do dispositivo de tempo real. Para obter mais informações, consulte [visualizando dados em tempo real](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
 
 ### Edge e análise de nuvem
 

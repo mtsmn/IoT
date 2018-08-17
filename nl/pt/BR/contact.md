@@ -1,6 +1,8 @@
 ---
 
-copyright: years: 2016, 2017 lastupdated: "2017-11-03"
+copyright:
+  years: 2016, 2018
+lastupdated: "2018-01-17"
 
 ---
 
@@ -13,7 +15,7 @@ copyright: years: 2016, 2017 lastupdated: "2017-11-03"
 # Contatando o suporte {{site.data.keyword.iot_short_notm}}
 {: #gettinghelp}
 
-Você tem várias opções para entrar em contato com o suporte usando o {{site.data.keyword.iot_full}}, como obter ajuda por meio de um fórum, por meio do Slack ou abrindo um chamado de suporte. 
+Você tem várias opções para entrar em contato com o suporte usando o {{site.data.keyword.iot_full}}, como obter ajuda por meio de um fórum, por meio do Slack ou abrindo um chamado de suporte. É possível até mesmo enviar suas próprias ideias para aprimoramentos para o {{site.data.keyword.iot_short_notm}} usando o portal de ideias.
 
 ## Fóruns
 
@@ -30,8 +32,12 @@ ajuda](https://www.{DomainName}/docs/support/index.html#getting-help) para obter
 
 * [Slack ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://ibm-developers.slack.com/){:new_window} - associe-se ao canal #internet-of-things.
 
-Não tem acesso a essa área de trabalho de folga ainda?  [Solicitar acesso agora ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://bxdevs-slack-invite.mybluemix.net/){:new_window}
 
 ## Chamados de Suporte
 
-* [Entrando em contato com o suporte ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}.
+* [Entrando em contato com o suporte![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") ](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}
+
+
+## Portal de Ideias
+
+* [IBM Cloud – Ideias estruturadas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/cloudideas){:new_window}

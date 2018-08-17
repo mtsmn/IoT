@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2017-12-08"
 
 ---
 
@@ -33,11 +33,12 @@ Para criar um novo par de chave API (interface de programação de aplicativos) 
 4.	Clique em **Concluir**.
 
 
-
-## Conexão de ligação do Bluemix
+## Conexão de ligação do IBM Cloud
 {: #bluemix-binding}
 É possível fazer a ligação de aplicativos com sua organização do {{site.data.keyword.iot_short_notm}} a partir do {{site.data.keyword.Bluemix_notm}}. Ao fazer a ligação do aplicativo, ele poderá se comunicar apenas com instâncias de serviço no mesmo espaço ou organização. É possível localizar todos os dados necessários para que o aplicativo se comunique com a instância de serviço na variável de ambiente VCAP_SERVICES. Se o aplicativo estiver ligado a vários serviços, a variável VCAP_SERVICES incluirá as informações de conexão de cada instância de serviço.  
 
-No entanto, é possível usar instâncias de serviço de outros espaços ou organizações da mesma maneira que um app externo. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações, consulte [Solicitando uma nova instância de serviço](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) na documentação do {{site.data.keyword.Bluemix_notm}}.
+No entanto, é possível usar instâncias de serviço de outros espaços ou organizações da mesma maneira que um app externo. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações, consulte [Solicitando uma nova instância de serviço](https://console.{DomainName}/docs/manageapps/reqnsi.html#req_instance) na documentação do {{site.data.keyword.Bluemix_notm}}.
 
-Para ver detalhes dos aplicativos Bluemix ligados à instância de serviço do Bluemix associada à sua organização, acesse **Aplicativos > Aplicativos Bluemix**.  
+Para ver detalhes para os aplicativos do {{site.data.keyword.Bluemix_notm}}
+que estão ligados à instância de serviço do {{site.data.keyword.Bluemix_notm}} associada
+à sua organização, acesse **Apps > IBM Cloud Apps**.  

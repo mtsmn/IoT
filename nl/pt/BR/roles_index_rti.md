@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-02-23"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -27,10 +27,9 @@ As funções de usuário padrão a seguir estão disponíveis:
 Atribuição de usuário | Descrição
 ------------- | -------------
 Administrador | Uma função 'super usuário' que concede acesso a todas as APIs (interfaces de programação de aplicativos) relacionados ao usuário. Os administradores não podem acessar operações que são restritas a dispositivos e aplicativos.
-Operador | Destinada a usuários da organização de front-end. Concede acesso à maioria das
-operações da organização, operações de controle de acesso, operações de terceiro e operações
-de gerenciamento de risco.
-Developer | Concede acesso irrestrito a operações do dispositivo, operações de log, operações de cache, operações do historiador e operações de serviço de terceiros. A função fornece acesso limitado às operações de organização, de controle de acesso e de gerenciamento de risco.
+Operador | Destinada a usuários da organização de front-end. Concede acesso à maioria das operações da organização, controle de acesso de controle de acesso, operações de análise de dados, operações de terceiros e operações de gerenciamento de risco.
+Developer | Concede acesso sem restrição a operações de dispositivo, operações de log, operações de cache, operações de historiador, operações de análise de dados e operações de serviços de terceiros. A função fornece acesso limitado às operações de organização, de controle de acesso e de gerenciamento de risco.
+Analista | Concede acesso a operações de análise de dados, incluindo criar, atualizar e excluir regras, ações e esquemas.
 Leitor | A função do usuário padrão. Concede acesso limitado a operações que estão disponíveis a todos os usuários.
 
 Para obter mais informações sobre as funções de usuário, consulte [Funções de usuário](reference/roles_access.html).
@@ -51,7 +50,7 @@ Função do Aplicativo | Descrição
 Padrão | A função de aplicativo padrão. Concede acesso à maioria das operações de aplicativo, mas a nenhuma operação de usuário ou função.   
 Operations | Concede acesso à gama mais ampla de operações, mas nega acesso às operações de assinatura ou publicação.
 Backend confiável | Destinada a aplicativos que não requerem interação do operador do sistema. Nega acesso às operações de gerenciamento de dispositivo, de organização, de função ou extensão.
-Processador de Dados | Destinada a aplicativos que executam análise de dados e processamento de dados. Os aplicativos do processador de dados recebem acesso limitado às operações da organização e às operações do usuário.
+Processador de Dados | Destinada a aplicativos que executam análise de dados e processamento de dados. Os aplicativos processadores de dados recebem acesso limitado a operações de organização e operações de usuário, mas têm acesso total às operações de análise de dados, incluindo a criação e gerenciamento de regras, ações e esquemas.
 Visualização | Destinada a aplicativos responsáveis por gerar as visualizações de dados. Os aplicativos de visualização têm acesso às operações de dados ativos e armazenados e às operações do painel.
 Dispositivo | Destinada a aplicativos que assumem o papel de dispositivos; ou seja, eles fornecem uma fonte de dados que são enviados ao {{site.data.keyword.iot_short_notm}} como se fosse um dispositivo. Aplicativos de dispositivo recebem apenas acesso limitado às operações.
 

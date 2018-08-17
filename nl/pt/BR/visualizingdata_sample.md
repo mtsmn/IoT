@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017
+  years: 2016, 2018
 lastupdated: "2017-03-20"
 
 ---
@@ -26,7 +26,8 @@ Antes que seja possível visualizar seus dados, deve-se executar as ações a se
 - Registre seus dispositivos em sua organização do {{site.data.keyword.iot_short_notm}}.
 - Assegure que seus dispositivos estejam enviando eventos ao {{site.data.keyword.iot_short_notm}}.
 - [Faça download da amostra de visualização](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip) a partir do repositório github e extraia o arquivo .zip.
-- [Instale a ferramenta de linha de comandos cf](../../starters/install_cli.html) a partir do {{site.data.keyword.Bluemix_notm}}.
+- [Instale
+a ferramenta de linha de comandos cf](https://console.bluemix.net/docs/starters/install_cli.html) do {{site.data.keyword.Bluemix_notm}}.
 
 ## Executando a amostra no {{site.data.keyword.Bluemix_notm}}
 {: #running_sample}

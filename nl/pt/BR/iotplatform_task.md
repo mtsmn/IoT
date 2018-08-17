@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-02"
+  years: 2016, 2018
+lastupdated: "2018-03-15"
 
 ---
 
@@ -142,6 +142,35 @@ Esse valor é o token exclusivo que você definiu ou que foi designado a seu dis
 Para obter mais informações sobre como conectar seu dispositivo, consulte [Conectividade MQTT para dispositivos](devices/mqtt.html) na documentação técnica.
 
 A documentação da API da [Administração da organização ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} também contém as informações necessárias.
+
+## Restaurando dispositivos excluídos (Beta)
+{: #restore_device}
+
+** Importante: ** o recurso de dispositivos de restauração do {{site.data.keyword.iot_short_notm}} está disponível
+somente como parte de um programa beta limitado. Atualizações futuras podem incluir mudanças incompatíveis com a versão atual desse recurso. Experimente e [nos forneça sua opinião ![External link icon](../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+
+Se um dispositivo é excluído por engano, é possível restaurá-lo dentro de 14 dias. 
+
+Quando o dispositivo é excluído, um dispositivo "memento" é criado. O memento é uma cópia
+do documento do dispositivo e está disponível por 14 dias, depois disso, ele é excluído.
+
+A API de Restauração de um dispositivo a seguir permite o uso de memento para restaurar uma versão anterior do dispositivo:
+
+    POST /archive/device/types/{typeId}/devices/{deviceId}/restore
+
+
+É possível usar a API a seguir para recuperar uma lista de todos os mementos de dispositivo:
+
+    GET /archive/device/types/{typeId}/devices/{deviceId}
+
+Para obter mais informações sobre as APIs de restauração de dispositivos, veja [APIs de restauração de dispositivos Beta ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") ](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html).
+
+## Reconectando dispositivos
+
+Os dispositivos podem se desconectar do {{site.data.keyword.iot_short_notm}}
+devido a um problema de rede ou devido à manutenção de rotina no serviço ou na infraestrutura. Quando o dispositivo ou os dispositivos se reconectam, talvez você considere minimizar a quantia de tráfego de rede que é gerada durante uma reconexão ou introduzir um tempo de
+espera para reduzir o número de reconexões simultâneas. 
+
 
 ## Orientações sobre a Conexão de dispositivos
 
