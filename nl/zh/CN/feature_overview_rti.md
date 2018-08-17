@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-01-17"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-05-08"
 
   1. Connect - 连接设备并开发应用程序。
   2. 信息管理 - 存储、规范化、转换和复查设备数据，并将 {{site.data.keyword.iot_short_notm}} 与其他服务集成。
-  3. 分析 - 指定基于实时设备数据来触发警报和操作的规则条件。
+  3. 分析 - 通过使用 {{site.data.keyword.iot_short_notm}} 仪表板可视化实时设备数据。
   4. 风险管理 - 通过对用户和应用程序的访问控制来配置安全的连接和体系结构。
 
 ## Connect
@@ -37,7 +37,8 @@ lastupdated: "2018-05-08"
 
 ### 扩展和服务集成
 
-扩展和服务集成支持将外部服务和核心服务的用户定义扩展添加到 {{site.data.keyword.iot_short_notm}} 实例。可以与 {{site.data.keyword.iot_short_notm}} 集成的外部服务包括 The Weather Company 天气位置服务（可用于查找设备所在位置的当前天气）和 Jasper SIM 数据。有关第三方服务集成和扩展的更多信息，请参阅[集成外部服务](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)。
+扩展和服务集成支持将外部服务和核心服务的用户定义扩展添加到 {{site.data.keyword.iot_short_notm}} 实例。可以与 {{site.data.keyword.iot_short_notm}} 集成的外部服务包括 The Weather Company 天气位置服务（可用于查找设备所在位置的当前天气）、Jasper SIM 数据以及 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}。有关第三方服务集成和扩展的更多信息，请参阅[集成外部服务](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)。
+
 
 ---
 
@@ -61,9 +62,12 @@ lastupdated: "2018-05-08"
 有关使用此功能的更多信息，请参阅[数据管理简介](GA_information_management/ga_im_device_twin.html)。
 
 ---
-
 ## 分析
 {: #analytics}
+
+### 可视化实时设备数据
+
+您可以通过使用仪表板卡，可视化和显示实时设备数据。仪表板卡实时监视和显示设备数据，这样您可以跟踪关键设备或设备数据。这些可视化内容显示在主 {{site.data.keyword.iot_short_notm}} 仪表板上，便于您快速访问实时设备数据的上下文和状态。有关更多信息，请参阅[可视化实时数据](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html)。
 
 ### 边缘与云分析
 

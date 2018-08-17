@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016, 2017
-lastupdated: "2017-10-04"
+years: 2016, 2018
+lastupdated: "2018-05-31"
 
 ---
 
@@ -20,14 +20,15 @@ lastupdated: "2017-10-04"
 
 以下 Beta 功能在 {{site.data.keyword.iot_short_notm}} 中提供：
 
-功能| 文档
+功能|文档
 ------------- | -------------
-数据管理用户界面| [使用 Web 界面 (Beta) 开始进行数据管理](GA_information_management/im_ui_flow.html#gs_web)
- | [使用 Web 界面配置设备以与数据管理功能配合使用 (Beta) ](GA_information_management/im_config_devices.html#im_config_devices)
-网关访问控制| [网关访问控制 (Beta)](gateways/gateway-access-control.html#gateway-access-control)
-定制域| [定制域 (Beta)](reference/security/set_up_certificates.html#custom-domains)
-向下钻取报告| [向下钻取报告 (Beta)](reference/security/RM_security.html#drill-down)
-资源级别访问控制| [RLAC 概述 (Beta)](reference/rlac_overview.html#RLAC_overview)
- | [配置 RLAC (Beta)](reference/rlac.html#configure_RLAC)
-IoT 网关软件包| [IoT 网关软件包 (Beta)](gateways/iotgw.html#gw_package)
-模拟设备数据| [模拟设备数据 (Beta)](devices/device_sim.html)
+向下钻取报告|[向下钻取报告 (Beta)](reference/security/RM_security.html#drill_down)
+IoT 网关软件包|[IoT 网关软件包 (Beta)](gateways/iotgw.html#gw_package)
+模拟设备数据|[模拟设备数据 (Beta)](devices/device_sim.html)
+复原已删除的设备|[复原已删除的设备 (Beta)](iotplatform_task.html#restore_device)
+嵌入式规则|[创建嵌入式规则 (Beta)](information_management/im_rules.html)
+物体|[数据管理简介](GA_information_management/ga_im_device_twin.html#device_twins)
+{{site.data.keyword.iot_short_notm}} Edge（预览）|[{{site.data.keyword.iot_short_notm}} Edge 概述（预览）](edge/WIoTP_edge.html)
+Cloud IAM 认证和授权|[{{site.data.keyword.iot_short_notm}} 的 Cloud IAM 认证和授权 (Beta)](reference/security/cloud_iam.html)
+App ID 认证和授权|[{{site.data.keyword.iot_short_notm}} 的 App ID 认证和授权 (Beta)](reference/security/app_id.html)
+组用户界面| [管理组 (Beta)](manage_groups.html#groups_overview)

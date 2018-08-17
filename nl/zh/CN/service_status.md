@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-03-01"
 ---
 
@@ -30,4 +30,4 @@ lastupdated: "2017-03-01"
 
 ![Twitter 订阅源 https://twitter.com/ibmiotf](images/twitter_logo.png "IBM Watson IoT Platform Twitter 订阅源")
 
-您还可以通过关注我们的 [Twitter 订阅源 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://twitter.com/ibmiotf)，来获取 {{site.data.keyword.iot_short_notm}} 及其相关联服务的最新消息和更新。
+您还可以通过关注我们的 [Twitter 订阅源 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://twitter.com/ibmiot)，来获取 {{site.data.keyword.iot_short_notm}} 及其相关联服务的最新消息和更新。 

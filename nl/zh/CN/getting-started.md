@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-06-01"
+  years: 2016, 2018
+lastupdated: "2018-02-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-06-01"
 # 入门教程
 {: #getting-started-with-iotp}
 
-在此 {{site.data.keyword.iot_full}} 入门教程中，我们将 IoT 设备连接到 {{site.data.keyword.iot_short_notm}} 并设置分析，以探索实时数据。
+在此 {{site.data.keyword.iot_full}} 入门教程中，我们将 IoT 设备连接到 {{site.data.keyword.iot_short_notm}}。
 {:shortdesc}
 
 <div id="prerequisites"></div>
@@ -24,8 +24,8 @@ lastupdated: "2017-06-01"
 ## 开始之前
 {: #prereqs}
 
-我们将需要 [Bluemix 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/registration/){: new_window}、{{site.data.keyword.iot_short_notm}}
-服务的实例和满足以下需求的设备：
+我们将需要一个 [IBM Cloud 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/registration/){: new_window}、{{site.data.keyword.iot_short_notm}}
+服务的实例，以及满足以下需求的设备：
 
 *	您的设备必须能够使用 HTTP 或 MQTT 协议进行通信。
 
@@ -35,7 +35,7 @@ lastupdated: "2017-06-01"
 
 ## 步骤 1：注册设备
 
-可以从 {{site.data.keyword.iot_short_notm}} 仪表板一次添加一个设备，也可使用 [WatsonIoT Platform API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} 添加多个设备。
+您可以从 [{{site.data.keyword.iot_short_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://internetofthings.ibmcloud.com){: new_window} 一次添加一个设备，也可以使用 [WatsonIoT Platform API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} 添加多个设备。
 
 要从 {{site.data.keyword.iot_short_notm}} 仪表板添加设备，请执行以下操作：
 
@@ -44,7 +44,7 @@ lastupdated: "2017-06-01"
     此时，{{site.data.keyword.iot_short_notm}} Web 控制台将在新浏览器选项卡中打开，URL 如下：
 
     ```
-    https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+        https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
     ```
 
     其中，*org_id* 是 [{{site.data.keyword.iot_short_notm}} 组织](iotplatform_overview.html#organizations){: new_window}的标识。
@@ -120,111 +120,110 @@ lastupdated: "2017-06-01"
 
   有关更多信息，请参阅[设备的 MQTT 连接](/docs/services/IoT/devices/mqtt.html)。
 
-## 步骤 3：创建板和卡以跟踪设备数据
+<!--## Step 3: Create boards and cards to keep track of device data
 
-通过使用板和卡，可以查看表示来自一个或多个设备的数据集值的图形，以快速概览和了解设备数据。
+By using boards and cards, you can view graphics that represent data set values from one or more devices for a quick overview and understanding of the device data.
 
-1. 在 {{site.data.keyword.iot_short_notm}} 仪表板中，单击**创建新板**。
+1. In your {{site.data.keyword.iot_short_notm}} dashboard, click **Create New Board**.
 
-2. 输入板的名称和描述。
+2. Enter a name and description for the board.
 
-3. 单击**下一步**，然后单击**创建**。
+3. Click **Next** and then **Create**.
 
-4. 单击刚创建的板，然后单击**添加新卡**。选择“设备”作为卡类型。下表描述可以选择的可视化选项。
+4. Click the board you just created, and then click **Add New Card**. Select Devices as the card type. The following table describes the visualization options you can choose from.
 
-| 类型| 显示的数据|
-|---------------|---------------|
-| 通用可视化| 一个或多个数据集的值。选择较大的窗口小部件大小，以在小型表中查看最多三个数据点值。|
-| 折线图| 实时滚动图表中的一个或多个数据集。使用“设置”菜单可设置数据范围和保留时间、图形外观等。|
-| 条形图| 以带标签的条形显示的数据集值。使用“设置”菜单可切换水平或垂直条形方向。|
-| 圆环图| 以圆环图显示的两个或更多数据集。|
-| 值| 一个或多个数据集的原始值。|
-| 量表| 显示为量表的数据集值。使用“设置”菜单可选择设置低、中、高数据范围的量表阈值。|
-| 设备属性| 一个或多个设备的特定属性。|
-| 所有设备属性| 一个或多个设备的所有属性。|
-| 设备列表| 要监视的多个设备的列表。列表可用作其他卡的数据源。|
-| 设备信息| 单个设备的基本信息。|
-| 设备地图| 设备列表中设备的位置。|
+| Type | Data that is displayed |
+| Generic visualization | The value of one or more data sets. Choose the large widget size to see up to three data point values in a small table. |
+| Line chart | One or more data sets in a real-time scrolling chart. Use the Settings menu to set the data range and retention, the look and feel of the graphs, and more. |
+| Bar chart | Data set values in labelled bars. Use the Settings menu to toggle horizontal or vertical bar direction. |
+| Donut chart | Two or more data sets in a circular representation. |
+| Value | The raw value of one or more data sets. |
+| Gauge | The value of a data set shown as a gauge. Use the Settings menu to optionally set gauge thresholds for lower, middle, and upper data ranges. |
+| Device properties | Specific properties for one or more devices. |
+| All device properties | All properties for one or more devices. |
+| Device list | A list to monitor multiple devices. A list can be used as a data source for other cards. |
+| Device info | Basic information for a single device. |
+| Device map | The location of devices in a device list. |
 
-{: caption="表 1. 可视化选项" caption-side="top"}
+{: caption="Table 1. Visualization options" caption-side="top"}
 
-## 步骤 4：创建设备类型模式
+## Step 4: Create device type schemas
 
-此时，您需要创建设备类型模式和映射设备属性，从而创建规则。基于来自所映射设备属性的数据点，可以触发这些规则。
+At this point, you need to create a device type schema and map device properties to then create rules that are triggered based on the datapoints from your mapped device properties.
 
-1. 在 {{site.data.keyword.iot_short_notm}} 仪表板中，转至**设备 > 管理模式**，并单击**添加模式**。
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Devices > Manage Schemas** and click **Add Schema**.
 
-2. 选择要与此消息模式关联的设备类型。对于一种设备类型，仅可定义一个模式。
+2. Select a device type to associate with the message schema. Only one schema can be defined for a device type.
 
-3. 单击**添加属性**并添加一个或多个属性。
+3. Click **Add property** and add one or more properties.
 
-    您可以从连接的设备选择属性，创建用于修改或组合现有属性的虚拟属性，或手动添加属性。
+    You can select properties from a connected device, create virtual properties that modify or combine existing properties, or add properties manually.
 
-    设备所发送的消息的有效内容中定义了可用属性。
+    The available properties are defined in the payload of the messages that are sent by a device.
     {: tip}
 
-    * 要手动添加属性，请选择**手动**选项卡，然后定义以下属性详细信息：
-        * 名称
-        * 数据类型
-        * 属性
-        * 数据单位（可选）
-        * 小数位（可选）
+    * To add a property manually, select the **Manual tab** and define the following property details:
+        * Name
+        * Data type
+        * Property
+        * Data unit (optional)
+        * Decimal places (optional)
 
-    * 要创建虚拟属性，请选择**虚拟属性**选项卡，然后定义以下属性详细信息：
-        * 名称
-        * 数据类型
-        * 属性
-        * 计算
-        * 数据单位（可选）
-        * 小数位
+    * To create a virtual property, select the **Virtual Property** tab and define the following property details:
+        * Name
+        * Data type
+        * Property
+        * Calculation
+        * Data unit (optional)
+        * Decimal places
 
-    * 要从所连接的设备选择属性，请选择**来自连接的设备**选项卡，然后选择要添加到模式的一个或多个属性。已添加所选属性，并且描述已设置为属性的名称。
+    * To select properties from a connected device, select the **From Connected** tab, and then select one or more properties to add to the schema. The selected properties are added and the description is set to the name of the property.
 
-4. 单击**完成**以创建属性。
+4. Click **Finish** to create the properties.
 
-## 步骤 5：创建规则和操作
+## Step 5: Create rules and actions
 
-规则是基于条件的决策点，用于使实时设备数据与预定义的阈值或其他属性数据相匹配，以在满足条件时触发警报。除了在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的警报外，还可以添加一个或多个操作，用于在触发规则时运行业务逻辑。
+Rules are condition-based decision points that match real-time device data with predefined threshold values or other property data to trigger an alert if a condition is met. In addition to the alert that's displayed in the {{site.data.keyword.iot_short_notm}} dashboard, you can add one or more actions to run business logic when a rule is triggered.
 
-1. 在 {{site.data.keyword.iot_short_notm}} 仪表板中，转至**规则**，并单击**创建云规则**。
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Rules** and click **Create Cloud Rule**.
 
-2. 输入规则的名称和描述，选择规则适用的设备类型，然后单击**下一步**。
+2. Enter a name and description for the rule, select a device type that the rule applies to, and click **Next**.
 
-3. 要设置规则逻辑，请添加一个或多个 IF 条件以用作规则的触发器。
+3. To set up the rule logic, add one or more IF conditions to use as triggers for the rule.
 
-    可以通过并列行的方式添加条件以将其应用为 OR 条件，也可以通过顺序列的方式添加条件以将其应用为 AND 条件。请参考以下示例：
+    You can add conditions in parallel rows to apply them as OR conditions, or you can add conditions in sequential columns to apply them as AND conditions. Take a look at the following examples:
 
-      * 如果参数值大于指定的值，可能触发简单的规则：条件 = `temp_cpu>80`
-      * 当满足阈值组合时，可能触发更复杂的规则：条件 = `temp_cpu>60 AND cpu_load>90`
+      * A simple rule might trigger an alert if a parameter value is larger than a specified value: Condition = `temp_cpu>80`
+      * A more complex rule might trigger when a combination of thresholds are met: Condition = `temp_cpu>60 AND cpu_load>90`
 
-    要触发用于比较两个属性的条件，或者触发使用 AND 以顺序方式组合的两个或更多属性条件，请在同一设备消息中包含触发数据点。如果数据是在多个消息中收到的，那么不会触发该条件或这些顺序条件。
+    To trigger a condition that compares two properties, or to trigger two or more property conditions that are combined sequentially by using AND, include the triggering data points in the same device message. If the data is received in more than one message, the condition or sequential conditions don't trigger.
     {: tip}
 
-4. 为规则配置有条件触发需求。
+4. Configure conditional trigger requirements for your rule.
 
-    您可以使用有条件触发需求，来控制一段时间内为某个规则触发的警报数。有条件触发将作用于该规则中的任何条件。例如，如果某个规则使用 OR 设置了 5 个并行条件，那么每个为 true 的条件都会计入有条件触发器计数。
+    You can use conditional trigger requirements to control the number of alerts that are triggered for a rule over a time period. The conditional triggering acts on any condition in the rule. For example, if a rule has five parallel conditions set by using OR, each condition that's true counts towards the conditional trigger count.
 
-      1. 在规则编辑器中，单击缺省的**每次满足条件时触发**链接，以打开“设置频率需求”对话框。
-      2. 选择并配置要在规则中使用的有条件触发器。
+      1. In the rule editor, click the default **Trigger each time conditions are met** link to open the set frequency requirement dialog.
+      2. Select and configure the conditional trigger you want to use in the rule.
 
-        * 每次满足条件时触发
-        * 在 M _时间单位_内条件满足 N 次时触发
+        * Trigger every time conditions are met
+        * Trigger if conditions are met N times in M _Unit of time_
 
-5. 创建或选择在满足规则条件时执行的一个或多个操作。
+5. Create or select one or more actions that occur if the rule conditions are met.
 
-    例如，操作可以是发送电子邮件或发布 Webhook。
+    For example, an action can be to send an email or post a webhook.
 
-6. 可选：为规则选择警报优先级。
+6. Optional: Select an alert priority for the rule.
 
-    优先级用于对**板 > 基于规则的分析**板中显示的警报分类。缺省优先级为“低”。
+    The priority is used to classify the alerts that are displayed in the **Boards > Rule-Based Analytics** board. The default priority is Low.
 
-7. 单击**保存**以保存而不激活规则，或者单击**激活**以保存并激活规则。
+7. Click **Save** to save without activating,  or click **Activate** to save and activate your rule.
 
-    如果激活规则，那么在满足条件时，将向**基于规则的分析**板中添加警报，并运行任何规则操作。
+    When you activate the rule, an alert is added to the **Rule-Based Analytics** board when the conditions are met, and any rule action is run. -->
 
 ## 后续步骤
 
-通过创建并连接您自己的应用程序以使用实时和历史设备数据，从而扩展数据分析功能。
+创建并连接您自己的应用程序以使用实时和历史设备数据。
 
   * 检查[客户机库](/docs/services/IoT/iot_platform_client_lib.html)，以获取构建代码的工具，用于集成和连接设备和应用程序。
 

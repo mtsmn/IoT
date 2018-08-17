@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-03-14"
+lastupdated: "2017-03-14"
 
 ---
 
@@ -15,20 +15,12 @@ lastupdated: "2018-03-14"
 # 创建设备类型模式
 {: #iotrtinsights_task}
 
-**重要信息：**我们即将推出的 Beta 版中提供了对 IoT 设备数据定义规则的新方法，这是更为广泛的变更计划的一部分，旨在改进 {{site.data.keyword.iot_full}} 交付规则和操作的方式。  
+要使用诸如规则和操作之类的 {{site.data.keyword.iot_short}} 功能，必须创建模式以将设备属性映射到用户友好的属性名称，为这些属性设置数据单位，并指定要用于模式的消息类型。
+{: shortdesc}
 
-要了解更多信息，请查看博客帖子 [An alternative approach to defining Rules on IoT data ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}。  
+**重要信息：**需要模式才能使用规则和操作。有关信息，请参阅 [Cloud Analytics](cloud_analytics.html#rules)。
 
-要开始定义您自己的规则，请查看[创建嵌入式规则 (Beta)](information_management/im_rules.html) 文档。
-
-## 关于此任务
-
-要使用诸如规则和操作之类的 {{site.data.keyword.iot_short_notm}} 功能，必须创建模式以将设备属性映射到用户友好的属性名称，为这些属性设置数据单位，并指定要用于模式的消息类型。
-
-
-需要模式才能使用规则和操作。有关信息，请参阅 [Cloud Analytics](cloud_analytics.html#rules)。
-
-分析功能是从 {{site.data.keyword.iotrtinsights_full}} 服务合并进来的。如果您的 {{site.data.keyword.iot_short_notm}} 组织用作现有 {{site.data.keyword.iotrtinsights_short}} 实例的数据源，那么在迁移现有 {{site.data.keyword.iotrtinsights_short}} 实例后，才会启用 Cloud Analytics 和 Edge Analytics。继续使用 {{site.data.keyword.iotrtinsights_short}} 仪表板来满足分析需要，直到迁移完成。有关更多信息，请参阅 IBM developerWorks 上的 [IBM Watson IoT Platform 博客 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} 以及现有 {{site.data.keyword.iotrtinsights_short}} 实例仪表板。  
+**重要信息：**分析功能是从 {{site.data.keyword.iotrtinsights_full}} 服务合并进来的。如果您的 {{site.data.keyword.iot_short_notm}} 组织用作现有 {{site.data.keyword.iotrtinsights_short}} 实例的数据源，那么在迁移现有 {{site.data.keyword.iotrtinsights_short}} 实例后，才会启用 Cloud Analytics 和 Edge Analytics。继续使用 {{site.data.keyword.iotrtinsights_short}} 仪表板来满足分析需要，直到迁移完成。有关更多信息，请参阅 IBM developerWorks 上的 [IBM Watson IoT Platform 博客 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} 以及现有 {{site.data.keyword.iotrtinsights_short}} 实例仪表板。  
 
 ## 添加设备模式
 {: #add_schema}

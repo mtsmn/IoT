@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-02"
+  years: 2016, 2018
+lastupdated: "2018-03-15"
 
 ---
 
@@ -58,22 +58,21 @@ lastupdated: "2017-10-02"
 向 {{site.data.keyword.iot_short_notm}} 组织添加第一个设备时，**设备类型**菜单中没有任何设备类型。必须先创建一种设备类型：
  1. 单击**创建设备类型**。
  2. 输入设备类型名称（如 `my_device_type`）以及设备类型描述。   
- **重要信息**：设备类型名称不得超过 36 个字符，仅可包含以下字符：
+ **重要信息：**设备类型名称不得超过 36 个字符，仅可包含以下字符：
  <ul>
   <li>字母数字字符（a-z、A-Z 和 0-9）</li>
   <li>连字符（-）</li>
   <li>下划线 (&lowbar;)</li>
   <li>句点 (.)</li>
   </ul>
- 3. 可选：输入设备类型属性和元数据。
-     
+ 3. 可选：输入设备类型属性和元数据。    
  **提示：**您可以稍后添加和编辑属性及元数据。
  4. 单击**创建**以添加新设备类型。
 10. 单击**下一步**以开始添加具有所选设备类型的设备的过程。
 11. 输入设备标识（如 `my_first_device`）。
   
 设备标识用于在 {{site.data.keyword.iot_short_notm}} 仪表板中标识设备，还是用于将设备连接到 {{site.data.keyword.iot_short_notm}} 的必需参数。  
-**重要信息**：设备标识不得超过 36 个字符，仅可包含以下字符：
+**重要信息：**设备标识不得超过 36 个字符，仅可包含以下字符：
  <ul>
  <li>字母数字字符（a-z、A-Z 和 0-9）</li>
  <li>连字符 (-)</li>
@@ -144,6 +143,31 @@ lastupdated: "2017-10-02"
 
 
 [组织管理 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} API 文档还包含所需信息。
+
+## 复原已删除的设备 (Beta)
+{: #restore_device}
+
+**重要信息：**{{site.data.keyword.iot_short_notm}} 复原设备功能只作为受限 Beta 程序的一部分提供。未来更新可能会包含与此功能当前版本不兼容的更改。请尝试此功能，[让我们了解您的想法 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
+
+如果错误地删除了设备，您可以在 14 天内复原该设备。 
+
+删除设备时，将创建设备“备忘录”。备忘录是该设备文档的副本，在 14 天内可用，14 天后将被删除。
+
+通过以下“复原设备 API”，可以使用备忘录来复原设备的先前版本：
+
+    POST /archive/device/types/{typeId}/devices/{deviceId}/restore
+
+
+可以使用以下 API 来检索所有设备备忘录的列表：
+
+    GET /archive/device/types/{typeId}/devices/{deviceId}
+
+有关“复原设备 API”的更多信息，请参阅[复原设备 API Beta ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html)。
+
+## 重新连接设备
+
+由于网络问题，或者服务或基础架构的日常维护，可能会导致设备与 {{site.data.keyword.iot_short_notm}} 断开连接。重新连接设备时，您可能需要考虑最大程度降低重新连接期间生成的网络流量，或者引入时间延迟以减少同时建立重新连接的数量。 
+
 
 ## 关于连接设备的诀窍
 

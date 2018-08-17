@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017
+  years: 2016, 2018
 lastupdated: "2017-03-20"
 
 ---
@@ -26,7 +26,7 @@ lastupdated: "2017-03-20"
 - 向 {{site.data.keyword.iot_short_notm}} 组织注册设备。
 - 确保设备是向 {{site.data.keyword.iot_short_notm}} 发送事件。
 - 从 github 存储库[下载可视化样本](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip)并解压缩 .zip 文件。
-- 从 {{site.data.keyword.Bluemix_notm}} [安装 cf 命令行工具](../../starters/install_cli.html)。
+- 在 {{site.data.keyword.Bluemix_notm}} 中[安装 cf 命令行工具](https://console.bluemix.net/docs/starters/install_cli.html)。
 
 ## 在 {{site.data.keyword.Bluemix_notm}} 中运行样本
 {: #running_sample}

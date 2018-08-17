@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+  years: 2016, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -43,11 +43,10 @@ lastupdated: "2017-03-13"
 - [样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
 - [更多文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
 
-## mBed C++
+## Mbed C++
 
-- [客户机库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
-- [样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){:new_window}
-- [更多文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://iotf.readthedocs.io/en/latest/devices/libraries/mbedcpp.html){:new_window}
+- [客户机库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+- [样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){:new_window}
 
 ## Node.js
 - [客户机库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}

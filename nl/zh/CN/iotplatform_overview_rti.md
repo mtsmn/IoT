@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-02-22"
+lastupdated: "2017-11-21"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-02-22"
 # 关于 {{site.data.keyword.iot_short_notm}}
 {: #about_iotplatform}
 
-{{site.data.keyword.iot_full}} 提供对 IoT 设备和数据的强大应用程序访问功能，可帮助您快速编写分析应用程序和移动 IoT 应用程序。
+{{site.data.keyword.iot_full}} 提供对 IoT 设备和数据的强大应用程序访问功能，可帮助您快速编写分析应用程序、可视化仪表板和移动 IoT 应用程序。
 {:shortdesc}
 
 通过 {{site.data.keyword.iot_short_notm}}，您可以执行强大的设备管理操作，并存储和访问设备数据，连接各种设备和网关设备。{{site.data.keyword.iot_short_notm}} 通过使用 MQTT 和 TLS，提供与设备之间的安全通信。
@@ -24,7 +24,7 @@ lastupdated: "2018-02-22"
 {: #watsoniotplatform_architecture}
 ![IBM Watson IoT Platform 体系结构](images/architecture_platform_2.svg "IBM Watson IoT Platform 体系结构")
 
-<!--**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  -->
+**重要信息：**分析功能是从 {{site.data.keyword.iotrtinsights_full}} 服务合并进来的。如果您的 {{site.data.keyword.iot_short_notm}} 组织用作现有 {{site.data.keyword.iotrtinsights_short}} 实例的数据源，那么在迁移现有 {{site.data.keyword.iotrtinsights_short}} 实例后，才会启用 Analytics。继续使用 {{site.data.keyword.iotrtinsights_short}} 仪表板来满足分析需要，直到迁移完成。有关更多信息，请参阅 IBM developerWorks 上的 [IBM Watson IoT Platform 博客 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} 以及现有 {{site.data.keyword.iotrtinsights_short}} 实例仪表板。  
 
 {{site.data.keyword.iot_short_notm}} 通过使用 {{site.data.keyword.iot_short_notm}} API 和 {{site.data.keyword.iot_short_notm}} 消息传递协议与您的应用程序和设备通信。{{site.data.keyword.iot_short_notm}} 仪表板作为前端用户界面进行连接，以简化平台内的操作。可以存储设备数据或将其用于分析解决方案。
 
