@@ -2,7 +2,7 @@
 
 copyright:
 years: 2017, 2018
-lastupdated: "2018-03-22"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -26,7 +26,7 @@ For example, a group of temperature, humidity and ambient light reporting device
 
 ## Device twins
 
-A device twin is a cloud-based digital representation of a physical device that is connected to {{site.data.keyword.iot_short_notm}}. A device twin represents a logical model of the events that are publish by a device. Once defined and instantiated, the device twin provides a consistent means of interacting with a device in a REST-like manner, regardless of whether the device is online or offline. The properties of a device, including information about the current state of the device (device state), can be retrieved with an HTTP request, or by subscribing to an IoT topic.
+A device twin is a cloud-based digital representation of a physical device that is connected to {{site.data.keyword.iot_short_notm}}. A device twin represents a logical model of the events that are published by a device. Once defined and instantiated, the device twin provides a consistent means of interacting with a device in a REST-like manner, regardless of whether the device is online or offline. The properties of a device, including information about the current state of the device (device state), can be retrieved with an HTTP request, or by subscribing to an IoT topic.
 
 Device twins can help you:
 - Provide your application developers with consistent interfaces to access event-driven device data in a REST-like manner.
