@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2018-07-11"
+  years: 2018
+lastupdated: "2018-09-05"
 
 ---
 
@@ -37,6 +37,8 @@ When you query the connection status, you can view the following information:
  - the entity that caused the disconnection, if the client is disconnected (client, server, or network)
  - the MQTT reason code for the disconnection, if the client is disconnected
 
+When you monitor devices that connect once and stay connected, or that infrequently disconnect and reconnect, a combination of the last connection time and the last activity event can provide insight in to the overall connection status.
+
 **Examples**
 
 To retrieve the client connection status for a single client:
@@ -62,7 +64,7 @@ For more information about the API, including all of the available query filters
 ## Monitoring client connection status
 {: #monitor_status}
 
- All clients have a monitor topic that enables you to subscribe to receive live connectivity status updates for the client. For more information see [Subscribing to device status messages](../../applications/mqtt.html#subscribe_device_commands).
+All clients have a monitor topic that enables you to subscribe to receive live connectivity status updates for the client. For more information see [Subscribing to device status messages](../../applications/mqtt.html#subscribe_device_commands).
 
 ## Troubleshooting client connectivity issues
 
