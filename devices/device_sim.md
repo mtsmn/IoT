@@ -21,7 +21,7 @@ lastupdated: "2018-09-06"
 By using the {{site.data.keyword.iot_full}} device simulator, you can set up simulated events for devices. You can use the simulated event data to learn about, test, and demonstrate fully functioning {{site.data.keyword.iot_short_notm}} features.
 {: shortdesc}
 
-You can use existing device types and devices and the simulator enables you to generate new devices for existing types. You can configure the event details for each device or set a default configuration that is applied to all devices. You can export a simulated event configuration so that it can be reused or shared to set up other simulations.
+You can use existing device types and devices and the simulator enables you to generate new devices for existing types. You can configure the event details for each device or set a default configuration that is applied to all devices. You can export a simulated event configuration so that it can be reused or shared to set up other simulations. 
 
 To simulate device data:
 
