@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-09-14"
 
 ---
 
@@ -32,3 +32,4 @@ Cloud IAM Authentication and Authorization | [Cloud IAM Authentication and Autho
 App ID Authentication and Authorization | [App ID Authentication and Authorization for {{site.data.keyword.iot_short_notm}} (Beta)](reference/security/app_id.html)
 Groups user interface | [Managing groups (Beta)](manage_groups.html#groups_overview)
 Monitoring client connectivity | [Monitoring client connectivity (Beta)](reference/security/client_connect.html)
+MQTT Version 5 | [MQTT Standards](reference/standards_and_requirements.html)
