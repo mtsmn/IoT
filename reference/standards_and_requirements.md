@@ -60,7 +60,7 @@ long after a disconnect to keep a session.</dd></dt>
 <dd>Messages can be set to expire without being delivered by including an expiration time in the message. This feature is particularly useful if the message that is being sent to a device is only important if that device is online. </dd></dt>
 
 <dt>Message properties including user properties
-<dd>Message properties can now be included in the message header; for example, whether the content is text or binary, the content type, and application defined user properties. The metadata can be changed without modifying the message content, enabling rapid routing in the back-end application by removing the need to parse the message payload. If the payload is encrypted, the additional information that is contained in the header outside of the encrypted envelope can be used to maximise processing efficiency.</dd></dt>
+<dd>Message properties can now be included in the message header, for example, whether the content is text or binary, the content type, and application-defined user properties. The metadata can be changed without modifying the message content, which enables rapid routing in the back-end application by removing the need to parse the message payload. If the payload is encrypted, the additional information that is contained in the header outside of the encrypted envelope can be used to maximize processing efficiency.</dd></dt>
 
 <dt>Subscription identifiers
 <dd>Subscriptions can be tagged with an identifier which is returned along with messages that are received by that subscription. This feature enables the routing of messages in the client application.</dd></dt>
@@ -73,6 +73,6 @@ and also includes options for handling retained messages on subscribing to a top
 <dd>Topic alias is used to decrease the number of bytes that are sent across the network by encoding long topic names into a short integer encoding. </dd></dt>
 
 <dt>Capability discovery
-<dd>Clients can discover the capabilities of the MQTT server; for example, the maximum packet size that is accepted. 
+<dd>Clients can discover the capabilities of the MQTT server, for example, the maximum packet size that is accepted. 
 Many capabilities are handled by the client library but are now made available to the client application.</dd></dt></dl>
 
