@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-17"
 
 ---
 
@@ -59,7 +59,7 @@ The quality of service (QoS) that is used by an MQTT device to send messages to 
 ## Before you begin  
 {: #byb}
 
-Before connecting an {{site.data.keyword.cloudant_short_notm}} service to {{site.data.keyword.iot_short}}, complete the following tasks:
+Before connecting an {{site.data.keyword.cloudant_short_notm}} service to {{site.data.keyword.iot_short_notm}}, complete the following tasks:
 
 - Set up an {{site.data.keyword.cloudant_short_notm}} service in the same {{site.data.keyword.Bluemix_notm}} space as your {{site.data.keyword.iot_short_notm}} by using the {{site.data.keyword.Bluemix_notm}} Catalog.
 
@@ -69,9 +69,9 @@ Ensure that you have developer privileges in the {{site.data.keyword.Bluemix_not
 
 Complete the following steps to connect an {{site.data.keyword.cloudant_short_notm}} service:
 
-1. On your {{site.data.keyword.iot_short}} dashboard click **Extensions** in the navigation bar.
+1. On your {{site.data.keyword.iot_short_notm}} dashboard click **Extensions** in the navigation bar.
 2. In the Historical Data Storage tile, click **Setup**.
-2. All available {{site.data.keyword.cloudant_short_notm}} services within the same {{site.data.keyword.Bluemix_notm}} space as your {{site.data.keyword.iot_short}} service are listed in the Configure historical data storage section.
+2. All available {{site.data.keyword.cloudant_short_notm}} services within the same {{site.data.keyword.Bluemix_notm}} space as your {{site.data.keyword.iot_short_notm}} service are listed in the Configure historical data storage section.
 3. Select the {{site.data.keyword.cloudant_short_notm}} service that you wish to connect.
 4. Select your {{site.data.keyword.cloudant_short_notm}} configuration options:
 
@@ -96,10 +96,10 @@ Your device data can now be stored in {{site.data.keyword.cloudant}}.
 ## Recipes on using Historian Service  
 {: #recipes}
 
-The following recipes describe how to use {{site.data.keyword.cloudant_short_notm}} to store data that is received from {{site.data.keyword.iot_short}}:
+The following recipes describe how to use {{site.data.keyword.cloudant_short_notm}} to store data that is received from {{site.data.keyword.iot_short_notm}}:
 
 - [Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} recipe demonstrates how to configure and store device data on {{site.data.keyword.cloudant_short_notm}}.
 
-- [Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} recipe shows how to query and perform data processing operations on the device data that is stored in {{site.data.keyword.cloudant_short_notm}}.
+- [Query and Process {{site.data.keyword.iot_short_notm}} Device Data from {{site.data.keyword.cloudant_short_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} recipe shows how to query and perform data processing operations on the device data that is stored in {{site.data.keyword.cloudant_short_notm}}.
 
 
