@@ -15,7 +15,7 @@ Paid {{site.data.keyword.iot_full}} service plans (plans other than 'Lite'), are
 
 For information about the cost of each megabyte of data exchanged, see the {{site.data.keyword.iot_short_notm}} service in the {{site.data.keyword.Bluemix_notm}} catalog for the region required.
 
-You can use the [Pricing Calculator ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://iot-cost-calculator.ng.bluemix.net/) to help you to calculate the cost of an {{site.data.keyword.iot_short_notm}} service.
+You can use the [Pricing Calculator ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/pricing/configure/service/iotf-service-id) to help you to calculate the cost of an {{site.data.keyword.iot_short_notm}} service.
 
 The following items are metered and billed according to usage: 
 
