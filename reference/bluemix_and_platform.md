@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-17"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -26,7 +26,7 @@ Instances of the {{site.data.keyword.iot_short_notm}} can be created in the {{si
 ## {{site.data.keyword.iot_short_notm}} Service Level Agreement
 {: #iot-sla}
 
-The {{site.data.keyword.iot_short_notm}} has provisions for a specified level of service. For details of the service level agreement, see [{{site.data.keyword.iot_short_notm}} service level agreement ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf){: new_window}.
+The {{site.data.keyword.iot_short_notm}} has provisions for a specified level of service. For details of the service level agreement, see [{{site.data.keyword.iot_short_notm}} service level agreement ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/62a7eae9288fddcc862581d0007c2583/$FILE/i126-6738-05_12-2017_en_US.pdf){: new_window}.
 
 ## {{site.data.keyword.Bluemix_notm}} Service Level Agreement
 
@@ -39,7 +39,7 @@ The {{site.data.keyword.iot_short_notm}} offers two pricing models: Free and Sta
 
 ### IoT Pricing calculator
 For more information on the available {{site.data.keyword.iot_short_notm}} plans and pricing models:
-1. Go to the [IoT Pricing calculator ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://iot-cost-calculator.ng.bluemix.net/){: new_window}.  
+1. Go to the [IoT Pricing calculator ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/pricing/configure/service/iotf-service-id){: new_window}.  
 2. Click **Add** or **Configure** next to the Internet of Things Platform item.
 3. Select a **Pricing tier** and then enter estimated values for the amount of data that you plan to exchange, analyze on the cloud, and analyze on edge devices.  
 The price estimate for the selected tier and data load is displayed.
