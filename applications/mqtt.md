@@ -198,8 +198,7 @@ This table shows less common closing reasons:
 |271|The length of the message is not correct|The MQTT data is not valid and contains lengths which do not match the packet size.  This is commonly due to an error in the client.|
 |276|The topic is not valid|The connection is closed because it used a topic name or topic filter which is not valid. The problem must be fixed before a retry.|
 
-
-##Maintaining connection status using monitoring messages
+## Maintaining connection status using monitoring messages
 {: #maintaining_connection_status}
 
 In order to maintain the connection status of devices using monitong messages, you can subscribe to the monitoring topic.  At subscribe you will receive all of the retained messages.  For devices (not including quickstart) this gives either a Connect or Disconnect action.  Any device for which you do not get a mesasge at subscribe is in unknown state.  To find the state of a single device you can subscribe to the monitoring message for only that device.
