@@ -155,7 +155,7 @@ The message are a JSON object and contain the following fields:
 |``WriteMsg``|Integer|The messages sent from server to client|
 
 
-##IBM Watson IoT Platform Messaging Connection Closing Codes
+## Watson IoT Platform Messaging Connection Closing Codes
 {: #connection_closing_codes}
 
 When a messaging connection to IBM Watson IoT Platform (WIoTP) closes, the reason for the closing is logged.  The reason consists for a Reason Code and a Reason String. These same fields are included in the monitoring messages send when a connection closes. 
