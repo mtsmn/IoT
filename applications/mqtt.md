@@ -180,6 +180,7 @@ This table shows the most common closing reasons, but others are possible
 
 This table shows less common closing reasons:
 |Reason Code|Reason String|Description|
+|:---|:---|:---|
 |104|The sever capacity is reached|The server is unable to make or continue with this connection due to server constraints.  A reconnect can be made at a later time.|
 |105|The data from the client is not valid|The MQTT data stream is not valid.  This generally is due to a bad client implementation but could be due to a network error.|
 |154|Too many producers or consumers in a single connection|The limit on the number of subscriptions in an MQTT connection is exceeded.|
