@@ -12,19 +12,19 @@ lastupdated: "2018-07-19"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Connecting and configuring a historian service by using {{site.data.keyword.messagehub}}  
+# Connecting and configuring a historian connector to use {{site.data.keyword.messagehub}}  
 {: #messagehub_main}
 
 Connecting {{site.data.keyword.messagehub_full}} to {{site.data.keyword.iot_full}} provides a scalable, high-throughput message bus for historical data storage. {{site.data.keyword.messagehub}} is built on Apache Kafka, which is an open-source, high-throughput messaging system that provides a low-latency platform for handling real-time data feeds.
 
-MessageHub forwarding partitions events by using a partition key. The key is formed by concatenating the {{site.data.keyword.iot_short}} 6 character organization ID with the device type and device ID. Payload fields, including timestamp and event ID, are not used to form the partition key. This configuration ensures that all events from a specific device are sent to the same partition, so that the events are processed in the order in which they are sent. 
+{{site.data.keyword.messagehub}} forwarding partitions events by using a partition key. The key is formed by concatenating the {{site.data.keyword.iot_short}} 6 character organization ID with the device type and device ID. Payload fields, including timestamp and event ID, are not used to form the partition key. This configuration ensures that all events from a specific device are sent to the same partition, so that the events are processed in the order in which they are sent. 
 
 The quality of service (QoS) that is used by an MQTT device to send messages to {{site.data.keyword.iot_short_notm}} does not apply when messages are sent from {{site.data.keyword.iot_short_notm}} to {{site.data.keyword.messagehub}}. Typically, a message is sent to {{site.data.keyword.messagehub}} once. Rarely, it might be possible for a message to be sent more than once or not at all.
 
 ## Before you begin  
 {: #byb}
 
-Before connecting a {{site.data.keyword.messagehub}} to your {{site.data.keyword.iot_short}} service, complete the following tasks:
+Before connecting an {{site.data.keyword.messagehub}} instance to {{site.data.keyword.iot_short}}, complete the following tasks:
 
 - Set up {{site.data.keyword.messagehub}} in the same {{site.data.keyword.Bluemix_notm}} space as your {{site.data.keyword.iot_short_notm}} by using the {{site.data.keyword.Bluemix_notm}} Catalog. For more information about {{site.data.keyword.messagehub}}, see the [Getting started with {{site.data.keyword.messagehub}}](https://console.{DomainName}/docs/services/MessageHub/index.html).
 
@@ -53,4 +53,4 @@ All available {{site.data.keyword.messagehub}} services within the same {{site.d
 5. Click **Authorize**.
 6. In the Authorization dialog box, click **Confirm**.
 
-Your device data is now stored in your {{site.data.keyword.messagehub}}.
+Your device data is now stored in your {{site.data.keyword.messagehub}} instance.
