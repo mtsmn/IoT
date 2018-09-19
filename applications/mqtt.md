@@ -179,6 +179,7 @@ This table shows the most common closing reasons, but others are possible
 |288|The clientID was reused|A second connection was made using the same ClientID.  The initial connection is closed with this reason.  This is normal in the case that a client dropped a connection but the server was not notified.  It indicates an error if two devices are trying to use the same ClientID.|
 
 This table shows less common closing reasons:
+
 |Reason Code|Reason String|Description|
 |:---|:---|:---|
 |104|The sever capacity is reached|The server is unable to make or continue with this connection due to server constraints.  A reconnect can be made at a later time.|
