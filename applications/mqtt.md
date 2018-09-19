@@ -167,6 +167,7 @@ The Reason String is a human readable string giving the reason for the disconnec
 This table shows the most common closing reasons, but others are possible
 
 |Reason Code|Reason String|Description|
+|:---|:---|:---|
 |0|The connection has completed normally|The client sent a disconnect to complete the connection.  All connection closes other than this are considered abnormal.|
 |91|The connection was closed by the client|The connection was closed by something other than the server.  This is due to receiving an error or no data available on a socket read.  The replacement data may include more information in the case of an error.|
 |92|The connection was closed by the server|The connection was closed due to a problem found by the server.  One of the more specific reason codes is preferred.  The client can restart the connection but if the problem is not fixed this might happen again.|
