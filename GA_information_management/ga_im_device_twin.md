@@ -2,7 +2,7 @@
 
 copyright:
 years: 2017, 2018
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -80,7 +80,7 @@ Use the mappings resource to map events to properties.
 
 The following diagram shows temperature and humidity sensors on different devices that are publishing temperature and humidity event data to {{site.data.keyword.iot_short_notm}}. Two device twins, each representing a physical device, have associated logical interfaces and are created in {{site.data.keyword.iot_short_notm}}. The data that is published from the temperature device is mapped to the "IThermometer" logical interface. The data that is published from the humidity device is mapped to the "IHygrometer" logical interface. The logical interfaces are aggregated into a *Room* Thing type with an "IRoom" logical interface. The "IRoom" logical interface defines temperature and humidity properties and enables you to create your own logical model by aggregating devices into a single Thing with which your application can interact.  
 
-![Overview of managing data in {{site.data.keyword.iot_short_notm}}.](../information_management/images/Thing overview.svg "Overview of managing data in {{site.data.keyword.iot_short_notm}}")
+![Overview of managing data in {{site.data.keyword.iot_short_notm}}.](../information_management/images/Thing_overview.svg "Overview of managing data in {{site.data.keyword.iot_short_notm}}")
 
 **Important:** The {{site.data.keyword.iot_short_notm}} Thing feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
