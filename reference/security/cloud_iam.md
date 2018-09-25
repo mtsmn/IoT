@@ -45,7 +45,7 @@ Then, when a user calls a {{site.data.keyword.iot_short_notm}} API, they can pro
 You can choose how to automate the creation of the IAM token, depending on how you authenticate with IBM Cloud and the type of IBM Cloud ID that you use.
 
 If you use an unfederated ID, you can choose one of the following options for creating an IAM token:
- - **IBM Cloud user name and password:** You can create a token and to fully automate the creation of your IAM access token.
+ - **IBM Cloud user name and password:** You can create a token to fully automate the creation of your IAM access token.
  - **Generate an IBM Cloud API key:** Use IBM Cloud API keys which are dependent on the IBM Cloud account that they are generated for. You cannot combine your IBM Cloud API key with a different account ID in the same IAM token. To access clusters that were created with an account other than the one your IBM Cloud API key is based on, you must log in to the account to generate a new API key.
 
 If you use a federated ID, you can choose one of the following options for creating an IAM token:
