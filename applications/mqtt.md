@@ -121,40 +121,40 @@ An application can subscribe to monitor status of one or more applications, for 
 ## Monitoring messages
 {: #monitoring_messages}
 
-{{site.data.keyword.iot_full}} sends monitoring messages when a device or application connects, disconnects, or fails to connect.  These monitoring messages can be subscribed to by gateways and applications.  Use monitoring messages to keep track of connection status and to debug connection issues.  All monitoring messages are sent as QoS=0.  
+{{site.data.keyword.iot_short_notm}} sends monitoring messages when a device or application connects, disconnects, or fails to connect.  These monitoring messages can be subscribed to by gateways and applications. Use monitoring messages to keep track of connection status and to debug connection issues. All monitoring messages are sent as QoS=0.  
 
 When a device or application connects successfully, a retained message of type Action=Connect is sent.
 
-When a device or application fails to connect, a non-retained message of type Action=FailedConnect is sent.  A failed connection might be due to an authorization error, or because the client disconnects between the server receiving the first packet and the server completing authorization.
+When a device or application fails to connect, a non-retained message of type Action=FailedConnect is sent.  A failed connection might be due to an authorization error, or because the client disconnects between the time that the server receives the first packet and the time that the server completes authorization.
 
-When a device disconnects, a retained message of type Action=Disconnect is sent.  These messages are also sent during server recovery for devices which were connection at the time of failure.
+When a device disconnects, a retained message of type Action=Disconnect is sent. This type of message is also sent during server recovery for devices which were connected at the time of failure.
 
-When a application disconnects, a non-retained message of type Action=Disconnect is sent. {{site.data.keyword.iot_full}} also clears all existing retained messages associated with this disconnected application.
+When an application disconnects, a non-retained message of type Action=Disconnect is sent. {{site.data.keyword.iot_short_notm}} clears all existing retained messages that are associated with the disconnected application.
 
-For gateways, subscribe to topic *iot-2/type/{type}/id/{id}/mon* to receive monitoring messages for devices that are in the resource group belonging to that gateway.
+For gateways, subscribe to topic ```iot-2/type/{type}/id/{id}/mon``` to receive monitoring messages for devices that are in the resource group belonging to that gateway.
 
-For applications, subscribe to topic *iot-2/type/{type}/id/{id}/mon* to see monitoring messages for devices that are in the resource group belonging to that application, or in the application's organization if the device does not have a group. To receive monitoring messages for other applications in the same organization, subscribe to topic *iot-2/app/{appid}/mon*.
+For applications, subscribe to topic ```iot-2/type/{type}/id/{id}/mon``` to see monitoring messages for devices that are in the resource group belonging to that application, or in the application's organization if the device does not have a group. To receive monitoring messages for other applications in the same organization, subscribe to topic ```iot-2/app/{appid}/mon```.
 
 The monitoring message is a JSON object which contains the following fields:
 
 |Name|Data type|Optional|Description|
 |:---|:---|:---|:---|
 |``Action``|`Connect`, `FailedConnect`, `Disconnect`|No|The type of message|
-|``Time``|ISO timestamp|No|The time the monitoring message is sent|
+|``Time``|ISO timestamp|No|The time that the monitoring message is sent|
 |``ClientAddr``|String|No|The IP address of the client as known to the server|
 |``ClientID``|String|No|The clientID of the client|
 |``Port``|Integer|No|The port number on the server|
 |``Secure``|Boolean|No|Whether the connection uses TLS|
-|``Protocol``|`mqtt3`, `mqtt4`, `mqtt5`, `mqtt3-ws`, `mqtt4-ws`, `mqttv5-ws`|No|The protocol used.  The `-ws` suffix indicates that it uses websockets.|
+|``Protocol``|`mqtt3`, `mqtt4`, `mqtt5`, `mqtt3-ws`, `mqtt4-ws`, `mqttv5-ws`|No|The protocol used. The `-ws` suffix indicates that it uses websockets.|
 |``User``|String|Yes|The user name, if specified|
 |``Certname``|String|Yes|The client certificate common name, if specified|
 |``ConnectTime``|ISO timestamp|Yes|The time of connection|
-|``CloseCode``|Integer|Yes|The closing code of the connection.  This is not used by `Connect` or if the code is 0 (good)|
-|``Reason``|String|Yes|The closing reason string.  This is not used by `Connect` or by if the code is 0 (good)|
-|``ReadBytes``|Integer|No|The bytes sent from client to server|
-|``ReadMsg``|Integer|No|The messages sent from client to server|
-|``WriteBytes``|Integer|No|The bytes sent from server to client|
-|``WriteMsg``|Integer|No|The messages sent from server to client|
+|``CloseCode``|Integer|Yes|The closing code of the connection. This is not used by `Connect`, or if the code is 0 (normal)|
+|``Reason``|String|Yes|The closing reason string. This is not used by `Connect`, or if the code is 0 (normal)|
+|``ReadBytes``|Integer|No|The number of bytes that are sent from client to server|
+|``ReadMsg``|Integer|No|The number of messages that are sent from client to server|
+|``WriteBytes``|Integer|No|The number of bytes that are sent from server to client|
+|``WriteMsg``|Integer|No|The number of messages that are sent from server to client|
 
 
 ## {{site.data.keyword.iot_short_notm}} messaging connection closing codes
@@ -171,14 +171,14 @@ The following table shows the most common closing reasons:
 |Reason Code|Reason String|Description|
 |:---|:---|:---|
 |0|The connection has completed normally|The client sent a disconnect action to the server. Other connection closes indicate that the close is not normal.|
-|91|The connection was closed by the client|The connection was closed by something other than the server.  The connection was closed by something other than the server, for example because an error was received on the socket.  The Reason String may include more information on the error.|
-|92|The connection was closed by the server|The connection was closed because a problem was found by the server. The client can retry the connection but if the problem might reoccur if a fix is not implemented.|
-|93|The connection was closed because the server was shutdown|When a server is shut down, all connections are closed. A server might be shut down when the server ID is updated. The server can consist of multiple physical servers, so connection can close when one of the servers is shut down. You can retry the connection, but it might take some time before the server is available.|
-|94|The connection was closed by an administrator|An explicit action was taken by an administrator to close one connection or a set of connections, for example because an organization is disabled.  The administrator might need to take an administrative action to allow a new connection.|
+|91|The connection was closed by the client|The connection was closed by something other than the server. The connection was closed by something other than the server, for example because an error was received on the socket.  The Reason String might include more information about the error.|
+|92|The connection was closed by the server|The connection was closed because a problem was found by the server. The client can retry the connection, but the problem might reoccur if a fix is not implemented.|
+|93|The connection was closed because the server was shutdown|When a server is shut down, all connections are closed. A server might be shut down when the server ID is updated. The server can consist of multiple physical servers, so connections can close when one of the servers is shut down. You can retry the connection, but it might take some time before the server is available.|
+|94|The connection was closed by an administrator|An explicit action was taken by an administrator to close one connection or a set of connections, for example because an organization is disabled. The administrator might need to take an administrative action to allow a new connection.|
 |160|The connection timed out|The client has not sent a packet in the time negotiated between the client and server as a keep alive.|
-|180|The operation is not authorized|The connection is closed because the connection or an action that is taken in the connection is not authorized. The problem must be fixed or authorization added before retrying.|
-|287|The message size is too large for this endpoint|A message larger than that allowed has been sent by the client causing the connection to be closed.|
-|288|The clientID was reused|A second connection was made using the same ClientID.  The initial connection is closed with this reason.  This is normal in the case that a client dropped a connection but the server was not notified.  It indicates an error if two devices are trying to use the same ClientID.|
+|180|The operation is not authorized|The connection is closed because the connection, or an action that is taken in the connection, is not authorized. The problem must be fixed or authorization added before retrying the connection.|
+|287|The message size is too large for this endpoint|A message larger than that allowed has been sent by the client, causing the connection to be closed.|
+|288|The clientID was reused|A second connection was made using the same ClientID.  The initial connection is closed with this reason.  This is normal in the case where a client dropped a connection but the server was not notified. It indicates an error if two devices are trying to use the same ClientID.|
 
 The following table shows less common closing reasons:
 
@@ -189,23 +189,23 @@ The following table shows less common closing reasons:
 |154|Too many producers or consumers in a single connection|The limit on the number of subscriptions in an MQTT connection is exceeded.|
 |163|Closed during TLS handshake|The connection was closed before the secure connection completed. This reason is usually not used when the server detects a problem in the credentials.|
 |164|No data was received on a connection|A connection was made but no data was sent on the connection within the required time.|
-|165|The initial packet is too large|The initial packet exceeds the maximum size.  This can also happen when too many bytes are sent before the connection is authorized.  This might indicate a denial-of-service attack, or a problem with one of the clients.|
+|165|The initial packet is too large|The initial packet exceeds the maximum size. This can also happen when too many bytes are sent before the connection is authorized. This might indicate a denial-of-service attack, or a problem with one of the clients.|
 |166|The ClientID is not valid|The connection is not allowed because the ClientID is invalid.|
-|167|Server not available|The server is temporarily not available.  This reason is returned during the short period of time that the server is up but not accepting connections.  A retry should work.|
+|167|Server not available|The server is temporarily not available. This reason is returned during the short period of time that the server is available but not accepting connections. Try connecting to the server again.|
 |169|Certificate missing|A client certificate is required and is not specified.|
 |170|Certificate not valid|A client certificate is returned but is not valid.|
-|173|Too many connections for an organizaton|The number of connections exceeds the number allowed for this organization.|
-|175|The HTTP Authorization header cannot be changed in a connection|An HTTP messaging connection is commonly only authorized once and subsequent requests should use the same authorization header.|
-|176|Authorization request is in delay or too many authentication requests|There are too many authentication requests in the queue so it might take some time for the connection to be authorized. Retry the connection later.|
-|271|The length of the message is not correct|The MQTT data is not valid and the length of the message does not match the packet size. This might indicate an error in the client.|
+|173|Too many connections for an organizaton|The number of connections exceeds the number that are allowed for this organization.|
+|175|The HTTP Authorization header cannot be changed in a connection|An HTTP messaging connection is usually only authorized once. Subsequent requests should use the same authorization header.|
+|176|Authorization request is in delay or too many authentication requests|There are too many authentication requests in the queue so there might be a delay for the connection to be authorized. Try the connection later.|
+|271|The length of the message is not correct|The MQTT data is not valid and the length of the message does not match the packet size. This might indicate a client error.|
 |276|The topic is not valid|The connection is closed because it used a topic name or topic filter which is not valid. Fix the problem before retrying the connection.|
 
 ## Tracking connection status using monitoring messages
 {: #tracking_connection_status}
 
-To track the connection status of devices by using monitoring messages, subscribe to the monitoring topic. All retained messages are received on subscribing the to the topic. For devices, not including Quickstart, a message type of either Action=Connect or Action=Disconnect is received. If a message is not received for a device on subscribing to the topic, the device state is unknown. To find the state of a specific device, subscribe to the monitoring message for that device.
+To track the connection status of devices by using monitoring messages, subscribe to the monitoring topic. All retained messages are received on subscribing the to the topic. For devices other than Quickstart, a message type of either Action=Connect or Action=Disconnect is received. If a message is not received for a device on subscribing to the topic, the device state is unknown. To find the state of a specific device, subscribe to the monitoring message for that device.
 
-Keep the subscription open to receive monitoring messages when the connection status changes.  A Connect message shows that the device is connected to {{site.data.keyword.iot_short_notm}}. A Disconnect message means that the device is disconnected from {{site.data.keyword.iot_short_notm}},  unless the CloseCode is set to 288. A 288 CloseCode indicates that the client dropped a connection and a then reconnected by using the same client ID.
+Keep the subscription open to receive monitoring messages when the connection status changes.  A Connect message shows that the device is connected to {{site.data.keyword.iot_short_notm}}. A Disconnect message means that the device is disconnected from {{site.data.keyword.iot_short_notm}}, unless the CloseCode is set to *288*. A 288 CloseCode indicates that the client dropped a connection and then reconnected by using the same client ID.
 
 ## Quickstart restrictions
 {: #quickstart_restrictions}
