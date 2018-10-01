@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -55,7 +55,7 @@ To retrieve all connected clients:
 
 To retrieve all clients that have been active within the past two days:
 
-`GET {orgId}.internetofthings.ibmcloud.com/api/v0002/clientconnectionstates?lastConnectedAfter={currentTime-2D}`
+`GET {orgId}.internetofthings.ibmcloud.com/api/v0002/clientconnectionstates?connectedAfter={currentTime-2D}`
 
 **Note:** There might be a brief delay between the time that a client connects and the time that the connection status from the API reflects the correct status.
 
