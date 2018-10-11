@@ -116,4 +116,4 @@ You can also configure the Data Management feature by using the APIs. For detail
 After you have created the draft physical and logical interfaces, you must activate the configuration.
 
 - Click **Activate** to activate the configuration. The configuration status is set to activated.
-![Active deployment](images/active_deployment.png) If you make changes to the interfaces, the interfaces become drafts again and you must reactivate them.
+![Active configuration](images/active_deployment.png) If you make changes to the interfaces, the interfaces become drafts again and you must reactivate them.
