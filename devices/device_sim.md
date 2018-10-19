@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-06"
+lastupdated: "2018-10-18"
 ---
 
 ---
@@ -30,7 +30,7 @@ To simulate device data:
 3. In the **Data and Devices** section, activate the device simulator.
 4. From the main navigation pane, select **Devices**. A message in the lower right corner of the screen indicates that no simulations are running.
 5. Click on the "0 Simulations running" message.
-6. In the **Simulations** pop-up window, click **Creat a Simulation**.
+6. In the **Simulations** pop-up window, click **Create Simulation**.
 7. Select an existing device type that you want to simulate data for, or create a new device type by typing the device type name.
 8. Click **Import/Export Simulation** to use an existing configuration, or manually configure the simulation details for the device type:
    1. Click **+ New Event Type** to add an event type to the device type.
