@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-10-25"
 
 ---
 
@@ -307,13 +307,11 @@ event.addProperty("mem",  70);
 boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-To view the entire code, see the [HttpDeviceEventPublish ![External link icon](../../../../icons/launch-glyph.svg "External link icon")] device example.{: new_window}
+To view the entire code, see the [HttpDeviceEventPublish ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java/blob/master/samples/device-samples/src/main/java/com/ibm/iotf/sample/client/device/HttpDeviceEventPublish.java) device example.{: new_window}
 
 Based on the settings in the properties file, the ``publishEventOverHTTP()`` method publishes the event in either Quickstart mode or in registered flow mode. When the organization ID in the properties file is set to `quickstart`, the ``publishEventOverHTTP()`` method publishes the event to the device example quickstart service and publishes the event in plain HTTP format. When a valid registered organization is specified in the properties file, events are securely published through HTTPS.
 
 The HTTP protocol provides 'at most once' delivery, which is similar to the 'at most once' (QoS 0) quality of service level of the MQTT protocol. When you use 'at most once' delivery to publish events, the application must implement retry logic whenever there is an error.
-
-[HttpDeviceEventPublish]: https://github.com/ibm-messaging/iot-device-samples/blob/master/java/device-samples/src/main/java/com/ibm/iotf/sample/client/device/HttpDeviceEventPublish.java
 
 ## Handling commands
 {: #handling_commands}
@@ -406,4 +404,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## Samples
 {: #samples}
 
-For a list of device and device management samples that are developed by using the {{site.data.keyword.iot_short_notm}} Java client library, see the [iot-device-samples GitHub repository ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}.
+For a list of device and device management samples that are developed by using the {{site.data.keyword.iot_short_notm}} Java client library, see the [iot-device-samples GitHub repository ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java/tree/master/samples){: new_window}.
