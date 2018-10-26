@@ -2,7 +2,7 @@
 
 copyright:
 years: 2018
-lastupdated: "2018-08-01"
+lastupdated: "2018-10-25"
 
 ---
 
@@ -19,7 +19,7 @@ App ID is used for authenticating users who need access to applications that are
 {: shortdesc}
 
 **Important:** The App ID Authentication and Authorization for {{site.data.keyword.iot_short_notm}} feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
-
+ 
 {{site.data.keyword.iot_short_notm}} also supports authenticating users through Cloud IAM. Cloud IAM is built in to the IBM Cloud and is used for authenticating and authorizing administrative and developer users who need to configure and manage their IBM services. For more information about Cloud IAM, see [Cloud IAM Authentication and Authorization for Watson IoT Platform](cloud_iam.html#cloud_iam).
 
 App ID users do not typically perform administrative or development activities on a cloud service, and they cannot log in to the {{site.data.keyword.iot_short_notm}} web dashboard. Only Cloud IAM users can log in to the dashboard.
@@ -28,7 +28,7 @@ The {{site.data.keyword.iot_short_notm}} APIs support the authentication of user
 
 The current App ID support is for non-messaging REST APIs, including APIs for configuring and managing devices, users, and other {{site.data.keyword.iot_short_notm}} capabilities. App ID cannot be used to publish and subscribe to messages.
 
-Typically, you use App ID to authenticate REST APIs that are called on behalf of a non-administrative user. A developer can create an application that uses an App ID token to invoke a REST API on behalf of a registered user, such as a maintenance technician, who does not have administrative access. The advantage to using App ID to authenticate non-administrative users rather than using a single authentication token is that the audit trail in {{site.data.keyword.iot_short_notm}} shows the user that invoked the REST APIs instead of a shared authentication token. App ID is also useful for authenticating non-administrators who need to use the {{site.data.keyword.iot_short_notm}} command-line interface (CLI).
+Typically, you use App ID to authenticate REST APIs that are called on behalf of non-administrative users. A developer can create an application that uses an App ID token to invoke a REST API on behalf of a registered user, such as a maintenance technician, who does not have administrative access. The use of App ID allows the non-administrative users to be authenticated individually rather than by using a shared authentication token in {{site.data.keyword.iot_short_notm}}. App ID is also useful for authenticating non-administrative users who need to use the {{site.data.keyword.iot_short_notm}} command-line interface (CLI).
 
 **Important:** The invocation of {{site.data.keyword.iot_short_notm}} REST APIs should be done by using a user application and not directly from a browser or mobile apps. The user application can provide an additional level of access control to determine which device functions a particular user is allowed to access, as well as validating the MQTT messages that are sent to devices. The following image shows this invocation flow:
 
