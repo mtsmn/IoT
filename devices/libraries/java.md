@@ -307,7 +307,7 @@ event.addProperty("mem",  70);
 boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-To view the entire code, see the [HttpDeviceEventPublish ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java/blob/master/samples/device-samples/src/main/java/com/ibm/iotf/sample/client/device/HttpDeviceEventPublish.java) device example.{: new_window}
+To view the entire code, see the [HttpDeviceEventPublish device example ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java/blob/master/samples/device-samples/src/main/java/com/ibm/iotf/sample/client/device/HttpDeviceEventPublish.java){: new_window}.
 
 Based on the settings in the properties file, the ``publishEventOverHTTP()`` method publishes the event in either Quickstart mode or in registered flow mode. When the organization ID in the properties file is set to `quickstart`, the ``publishEventOverHTTP()`` method publishes the event to the device example quickstart service and publishes the event in plain HTTP format. When a valid registered organization is specified in the properties file, events are securely published through HTTPS.
 
