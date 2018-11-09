@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -75,7 +75,7 @@ Para incluir um pacote de gerenciamento de dispositivo customizado usando o pain
 3. Clique no botão **Incluir pacote**.
 4. Selecione seu arquivo de pacote e clique em **Abrir**.
 
-Para incluir um pacote de gerenciamento de dispositivo customizado usando a API, veja a documentação da API do [{{site.data.keyword.iot_short_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para incluir um pacote de gerenciamento de dispositivo customizado usando a API, veja a [{{site.data.keyword.iot_short_notm}}documentação da API do ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Propriedades do pacote de extensão
 

@@ -1,14 +1,14 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="iot-platform" audience="service" href="/docs/services/IoT/index.html"}
+{: .toc subcollection="iot-platform" audience="service" arm="328" href="/docs/services/IoT/index.html"}
 物联网平台
 
     {: .navgroup id="learn"}
     getting-started.md
 
     {: .topicgroup}
-    关于
+关于
         iotplatform_overview.md
         feature_overview.md
         reference/standards_and_requirements.md
@@ -67,11 +67,12 @@
         getting_started/getting-started-iot-large-scale-simulation.md
 
     {: .topicgroup}
-    连接 Watson IoT Platform
+    连接到 Watson IoT Platform
         iotplatform_task.md
         gateways/dashboard.md
         platform_authorization.md
         reference/security/connect_devices_apps_gw.md
+        reference/security/client_connect.md
         reference/security/cloud_iam.md
         reference/security/app_id.md
 
@@ -172,13 +173,14 @@
     Watson IoT Platform Edge
         edge/WIoTP_edge.md
         edge/WIoTP_edge_config.md
+        edge/WIoTP_edge_rules.md
         edge/WIoTP_edge_install.md
         edge/WIoTP_edge_dev.md
 
     {: .topicgroup}
     诀窍
         [连接设备的诀窍](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)
-        [Watson IoT Platform 使用组织](https://play.internetofthings.ibmcloud.com/)
+        [Watson IoT Platform Play 组织](https://play.internetofthings.ibmcloud.com/)
         [将 Intel Galileo 连接到 Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/)
         [将 Raspberry Pi 连接到 Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/)
     {: .navgroup-end}

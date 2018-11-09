@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-04"
+  years: 2016, 2018
+lastupdated: "2018-02-27"
 
 ---
 
@@ -29,7 +29,7 @@ Le document suivant répond à certaines questions courantes relatives à la fa�
 ## {{site.data.keyword.iot_short_notm}} et {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}} s'exécute dans la plateforme {{site.data.keyword.Bluemix_notm}} et s'appuie donc à la fois sur {{site.data.keyword.Bluemix_notm}} et sur {{site.data.keyword.BluSoftlayer_full}} pour l'accès et la connectivité. La dépendance à {{site.data.keyword.Bluemix_notm}} et à {{site.data.keyword.BluSoftlayer_notm}} rend la sécurité et la fiabilité de {{site.data.keyword.Bluemix_notm}} et d'{{site.data.keyword.BluSoftlayer_notm}} essentielles pour les utilisateurs de {{site.data.keyword.iot_short_notm}}.
+{{site.data.keyword.iot_short_notm}} s'exécute dans la plateforme {{site.data.keyword.Bluemix_notm}} et s'appuie donc à la fois sur l'infrastructure {{site.data.keyword.Bluemix_notm}} et sur l'infrastructure {{site.data.keyword.BluSoftlayer_notm}} pour l'accès et la connectivité. La dépendance à l'infrastructure {{site.data.keyword.Bluemix_notm}} et à l'infrastructure {{site.data.keyword.BluSoftlayer_notm}} rend la sécurité et la fiabilité de l'infrastructure {{site.data.keyword.Bluemix_notm}} et {{site.data.keyword.BluSoftlayer_notm}} essentielles pour les utilisateurs de {{site.data.keyword.iot_short_notm}}
 
 Pour plus d'informations sur la sécurité de {{site.data.keyword.Bluemix_notm}}, voir [Sécurité de la plateforme {{site.data.keyword.Bluemix_notm}}](index.html#platform-security). 
 
@@ -50,7 +50,7 @@ Pour plus d'informations sur la sécurité de {{site.data.keyword.Bluemix_notm}}
 ## Comment sécurisons-nous la gestion des informations IoT au sein de votre organisation ?
 {: #secure-org}
 
-L'interface graphique reposant sur un navigateur et les API REST sont protégées par HTTPS, avec un certificat signé par DigiCert qui vous permet de vous assurer que vous vous connectez réellement au service {{site.data.keyword.iot_short_notm}} habilité. L'accès à l'interface graphique reposant sur le Web est authentifié par votre IBMid ou via la fonction {{site.data.keyword.ssoshort}} {{site.data.keyword.Bluemix_notm}}. L'utilisation de l'API REST requiert une clé d'API, générée via l'interface graphique. Vous pouvez utiliser cette clé pour effectuer des appels d'API REST authentifiés vers votre organisation.
+L'interface graphique reposant sur un navigateur et les API REST sont protégées par HTTPS, avec un certificat signé par DigiCert qui vous permet de vous assurer que vous vous connectez réellement au service {{site.data.keyword.iot_short_notm}} habilité. L'accès à l'interface graphique reposant sur le Web est authentifié par votre IBMid. L'utilisation de l'API REST requiert une clé d'API, générée via l'interface graphique. Vous pouvez utiliser cette clé pour effectuer des appels d'API REST authentifiés vers votre organisation.
 
 ![image](management_platform.svg)
 
@@ -69,7 +69,7 @@ Les données d'identification de terminal et les clés d'API peuvent être révo
 
 Les terminaux se connectent à l'aide d'un ID client et du jeton d'authentification généré lorsqu'ils sont ajoutés à votre plateforme. MQTT permet une interopérabilité simple entre plusieurs plateformes et plusieurs langues. {{site.data.keyword.iot_short_notm}} prend en charge la connectivité via TLS v1.2.
 
-**Important :** Les nouvelles organisations sont automatiquement configurées de manière à forcer les terminaux à se connecter à l'aide de la sécurité TLS par défaut, ce qui permet de vérifier que les terminaux se connectent uniquement par le biais d'un canal chiffré sécurisé. Toutefois, {{site.data.keyword.iot_short_notm}} prend également en charge les situations dans lesquelles les organisations doivent permettre aux périphériques de se connecter sans le protocole TLS. Par exemple, une organisation peut utiliser des terminaux dépourvus de prise en charge TLS ou des terminaux IoT de faible puissance qui ne parviennent pas à économiser la puissance de traitement nécessaire au chiffrement ou au déchiffrement des transmissions. Le plan de l'organisation détermine les paramètres à utiliser dans ces situations.
+**Important :** Les nouvelles organisations sont automatiquement configurées de manière à forcer les terminaux à se connecter à l'aide de la sécurité TLS par défaut, ce qui permet de vérifier que les terminaux se connectent uniquement par le biais d'un canal chiffré sécurisé. Toutefois, {{site.data.keyword.iot_short_notm}} prend également en charge les situations dans lesquelles les organisations doivent permettre aux terminaux de se connecter sans le protocole TLS. Par exemple, une organisation peut utiliser des terminaux dépourvus de prise en charge TLS ou des terminaux IoT de faible puissance qui ne parviennent pas à économiser la puissance de traitement nécessaire au chiffrement ou au déchiffrement des transmissions. Le plan de l'organisation détermine les paramètres à utiliser dans ces situations.
 
 Pour plus d'informations sur la configuration de la sécurité de connexion, voir [Configuration des politiques de sécurité](set_up_policies.html).
 
@@ -102,7 +102,7 @@ Le code de réponse de réussite est 200.
 
 Lorsqu'une passerelle effectue une publication pour un terminal qui est désactivé, elle reçoit une notification d'erreur avec un code de réponse de 180. Pour plus d'informations, voir [Notifications de la passerelle](../../gateways/mqtt.html#notification). 
 
-Pour en savoir plus sur l'API, voir [Device Security Beta APIs ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){:new_window} et accédez à **Autorisation - Gestion des terminaux**.
+Pour en savoir plus sur l'API, voir [Device Security Beta APIs ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){:new_window} et accédez à **Autorisation - Gestion des terminaux**.
 
 ## Comment évitons-nous les fuites de données entre terminaux IoT ?
 {: #prevent-leak-devices}
@@ -135,8 +135,8 @@ L'espace de sujet dans lequel les terminaux et les applications fonctionnent est
 ## Liens connexes
 {: #general}
 * [Initiation à {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Sécurité {{site.data.keyword.Bluemix_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [Sécurité de plateforme {{site.data.keyword.Bluemix_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [Sécurité {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
+* [Sécurité de la plateforme {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [Conformité {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Sécurité {{site.data.keyword.BluSoftlayer_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/security){:new_window}
-* [Conformité {{site.data.keyword.BluSoftlayer_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/compliance){:new_window}
+* [Sécurité {{site.data.keyword.BluSoftlayer_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](http://www.softlayer.com/security){:new_window}
+* [Conformité {{site.data.keyword.BluSoftlayer_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](http://www.softlayer.com/compliance){:new_window}

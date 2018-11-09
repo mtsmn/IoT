@@ -2,7 +2,7 @@
 
 copyright:
 years: 2018
-lastupdated: "2018-04-21"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -16,10 +16,12 @@ lastupdated: "2018-04-21"
 # Gruppen verwalten (Beta)
 {: #groups_overview}
 
-Sie können {{site.data.keyword.iot_full}}-Gruppen dazu verwenden, Mitgliedern und API-Schlüsseln Zugriff auf bestimmte Geräte zu erteilen. Nachdem Sie eine Gruppe erstellt und Geräte zu dieser Gruppe hinzugefügt haben, können Sie Mitglieder und API-Schlüssel hinzufügen und ihnen Rollen innerhalb der Gruppe zuweisen. Die Kombination aus Rollen und Gruppen bestimmt, auf welche Geräte die Benutzer und API-Schlüssel zugreifen und welche Aktionen sie für die Geräte ausführen können.
+Benutzer mit der Administratorrolle können {{site.data.keyword.iot_full}}-Gruppen verwenden, um Mitgliedern und API-Schlüsseln Zugriff auf bestimmte Geräte zu erteilen. Nachdem Sie eine Gruppe erstellt und Geräte zu dieser Gruppe hinzugefügt haben, können Sie Mitglieder und API-Schlüssel hinzufügen und ihnen Rollen innerhalb der Gruppe zuweisen. Die Kombination aus Rollen und Gruppen bestimmt, auf welche Geräte die Benutzer und API-Schlüssel zugreifen und welche Aktionen sie für die Geräte ausführen können.
 {: shortdesc}
 
 Sie können Gruppen über die {{site.data.keyword.iot_short_notm}}-Dashboardbenutzerschnittstelle oder mithilfe der {{site.data.keyword.iot_short_notm}}-Zugriffssteuerungs-APIs verwalten.
+
+Details zur Verwaltung von Rollen finden Sie in [Benutzerrollen verwalten](managing_user_roles.html#managing-user-roles).
 
 **Wichtig:** Das Gruppenfeature in der {{site.data.keyword.iot_short_notm}}-Benutzerschnittstelle ist nur im Rahmen eines begrenzten Betaprogramms verfügbar. Zukünftige Aktualisierungen enthalten möglicherweise Änderungen, die mit der aktuellen Version dieses Features nicht kompatibel sind. Starten Sie einen Versuch und [senden Sie uns Ihren Erfahrungsbericht ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 

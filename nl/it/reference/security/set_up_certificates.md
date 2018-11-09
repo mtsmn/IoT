@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-06-13"
+  years: 2016, 2018
+lastupdated: "2018-01-11"
 ---
 
 {:new_window: target="\_blank"}
@@ -43,7 +43,7 @@ Per ulteriori informazioni sui certificati client, consulta [the Connect Raspber
 
 ## Certificati del server di messaggistica
 
-I certificati del server di messaggistica accettano il dominio predefinito, internetofthings.ibmcloud.com. È necessario rispettare il seguente formato per il CN certificato o perSubjectAltName:
+I certificati del server di messaggistica accettano il dominio predefinito, internetofthings.ibmcloud.com. È necessario rispettare il seguente formato per il CN certificato o per il SubjectAltName:
 
 - `orgId.messaging.internetofthings.ibmcloud.com` (dominio IoTP)
 
@@ -53,12 +53,10 @@ Il seguente esempio mostra un CN valido per il certificato server:
 
 Per ulteriori informazioni sui certificati del server di messaggistica, consulta [the Connect Raspberry Pi to IBM Watson IoT Platform using Self-Signed Server Certificate recipe ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
 
-### Custom domains (Beta)
-{: #custom_domains}
+### Domini personalizzati
+{: #custom-domains}
 
-**Importante**: La funzione Custom domains per i certificati del server di messaggistica è disponibile solo come parte di un programma Beta limitato. Per abilitare i domini personalizzati, attiva **Experimental Features** nella pagina **Settings**.
-
-Come parte della funzione Beta, i certificati del server di messaggistica accettano i domini personalizzati. È necessario rispettare il seguente formato per il CN certificato o perSubjectAltName:
+I certificati del server di messaggistica accettano i domini personalizzati. È necessario rispettare il seguente formato per il CN certificato o per il SubjectAltName:
 
 - `orgId.messaging.<custom domain>`
 
@@ -73,7 +71,7 @@ Il campo **CN** accetta i caratteri jolly per i domini personalizzati, come most
 
 1. Accedi a {{site.data.keyword.iot_short_notm}} e passa a **General Settings**.
 2. Nella sezione **Security**, in **CA Certificates**, fai clic su **Add Certificate**.
-3. Individua e seleziona un file del certificato da caricare o trascina un file nella finestra **Add Certificate**. Il file può avere solo un certificato al suo interno e le date del certificato devono essere valide. Sono accettati solo i certificati nel formato .pem o. der. Puoi visualizzare in anteprima le informazioni del certificato nel file selezionato.
+3. Individua e seleziona un file del certificato da caricare o trascina un file nella finestra **Add Certificate**. Il file può avere solo un certificato al suo interno e le date del certificato devono essere valide. Sono accettati solo i certificati nel formato .pem o .der. Puoi visualizzare in anteprima le informazioni del certificato nel file selezionato.
 4. Immetti una descrizione del file del certificato.
 5. Conferma che il file corretto sia selezionato e fai clic su **Save**. Il certificato selezionato viene elencato nella tabella ed è attivo per impostazione predefinita.
 

@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-27"
+  years: 2015, 2018
+lastupdated: "2018-03-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}  
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
@@ -27,17 +27,41 @@ lastupdated: "2017-04-27"
 ## 使用 REST API 发起设备管理请求
 {: #initiating-dm-api}
 
-请求可以使用以下 REST API 样本来发起：  
+可以使用以下 REST API 来发起请求：
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
 有关设备管理请求的主体的更多信息，请参阅 [ API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}。
 
+## 设置设备管理请求到期
+{: #timeout-requests}
+
+如果设备管理请求在一定时间后仍在进行，那么可以将这些请求设置为超时到期。启动设备管理请求时，可以指定超时值（以秒为单位）。达到指定的秒数后，设备管理服务器将自动取消该请求。
+
+有关启动请求 API 中超时参数的更多信息，请参阅 [API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}。
+
+## 取消设备管理请求
+{: #cancel-requests}
+
+可以使用以下 API 请求来取消进行中的设备管理请求：
+
+`POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests/{requestId}/cancel`
+
+此请求将清除所有进行中的设备的当前操作，并将请求标记为完成。
+
+有关取消设备管理请求 API 的更多信息，请参阅 [API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests_requestId_cancel){: new_window}。
+
+## 覆盖阻止新请求的进行中请求
+{: #force-override}
+
+缺省情况下，如果设备具有未完成的固件下载或更新请求，那么无法为该设备启动新的请求。启动设备管理请求时，可以设置 `override=true` 查询参数以指定取消进行中的请求，以便可以启动新请求。使用此查询参数时，将取消所有进行中的请求。要选择取消特定请求，请使用[取消设备管理请求 API](#cancel-requests)。
+
+有关启动请求 API 中覆盖参数的更多信息，请参阅 [API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}。
+
 ## 设备操作
 {: #device-actions}
 
-设备可以在发布管理请求时，指定其支持的设备操作。设备操作请求向 {{site.data.keyword.iot_short_notm}} 指示，设备能够响应设备重新引导和设备重置操作。
-
+设备可以在发布管理请求时，指定其支持的设备操作。为此，设备可将“管理设备”请求中的 deviceActions 标志设置为 true，以指示设备可以对设备重新引导和设备重置操作做出响应。
 
 ## 设备操作 - 重新引导
 {: #device-actions-reboot}
@@ -48,7 +72,7 @@ lastupdated: "2017-04-27"
 
 `https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-提供以下信息：
+在请求中提供以下信息：
 
 - 操作 ``device/reboot``
 - 要重新引导的设备列表，最多包含 5000 台设备
@@ -67,9 +91,7 @@ lastupdated: "2017-04-27"
 }
 ```
 
-发起请求后，会向重新引导请求主体中指定的所有设备发布一条 MQTT 消息。对于每个设备，都必须发回一个响应，以指示是否可以启动重新引导操作。如果此操作可以立即启动，那么将 `rc` 参数设置为 `202`。如果重新引导尝试失败，那么将 `rc` 参数设置为 `500`，并相应地设置 `message` 参数。如果不支持重新引导，那么将 `rc` 参数设置为 `501`，并可选择相应地设置 `message` 参数。
-
-设备在重新引导后发送“管理设备”请求时，重新引导操作即完成。
+发起请求后，会向重新引导请求主体中指定的所有设备发布一条 MQTT 消息。对于每个设备，都必须发回一个响应，以指示是否可以启动重新引导操作。如果此操作可以立即启动，那么将 `rc` 参数设置为 `202`。如果重新引导尝试失败，请将 `rc` 参数设置为 `500`，并在 `message` 参数中设置相应的错误。如果不支持重新引导，那么将 `rc` 参数设置为 `501`，并可选择相应地设置 `message` 参数。
 
 ### 设备重新引导请求的主题
 
@@ -100,11 +122,13 @@ Topic: iotdm-1/mgmt/initiate/device/reboot
 
 Topic: iotdevice-1/response
 {
-    "rc": "response_code",
+    "rc": response_code,
     "message": "string",
     "reqId": "string"
 }
 ```
+设备在重新引导后发送“管理设备”请求时，重新引导操作即完成。
+
 
 ## 设备操作 - 恢复出厂设置
 {: #device-actions-factory-reset}
@@ -168,12 +192,11 @@ Topic: iotdm-1/mgmt/initiate/device/factory_reset
 
 Topic: iotdevice-1/response
 {
-    "rc": "response_code",
+    "rc": response_code,
     "message": "string",
     "reqId": "string"
 }
 ```
-
 
 ## 固件操作
 {: #firmware-actions}
@@ -182,30 +205,32 @@ Topic: iotdevice-1/response
 
 **重要信息：**受管设备必须支持观察 ``mgmt.firmware`` 属性，才能支持固件操作。
 
-固件更新过程分为不同的操作：
+固件更新过程可以分为不同的操作：
 - 下载固件
 - 更新固件
 
-每个固件操作的状态都会存储在设备上的单独属性中。``mgmt.firmware.state`` 属性描述了固件下载的状态。下表描述了可以为 ``mgmt.firmware.state`` 属性设置的可能的值：
+固件操作的状态存储在 ``mgmt.firmware.state`` 和 ``mgmt.firmware.updateStatus`` 属性中。
 
- |值|状态| 含义|
+下表描述了可以为 ``mgmt.firmware.state`` 属性设置的可能的值：
+
+ |值|状态|含义|
  |:---|:---|:---|
- |0| 空闲| 设备未在下载固件。|  
- |1| 正在下载| 设备正在下载固件。|
- |2| 已下载| 设备已成功下载固件更新，随时可进行安装。|
+ |0|空闲|设备未在下载固件。|
+ |1|正在下载|设备正在下载固件。|
+ |2|已下载|设备已成功下载固件更新，随时可进行安装。|
 
 
-``mgmt.firmware.updateStatus`` 属性描述了固件更新的状态。``mgmt.firmware.updateStatus`` 属性可能的值为：
+``mgmt.firmware.updateStatus`` 属性可能的值为：
 
-|值|状态| 含义|  
+|值|状态|含义|
 |:---|:---|:---|
-|0| 成功| 固件已成功更新。|
-|1| 正在进行| 固件更新已启动，但尚未完成。|
-|2| 内存耗尽| 操作期间检测到内存耗尽情况。|
-|3| 连接断开| 固件下载期间连接断开。|
-|4| 验证失败| 固件未通过验证。|
-|5| 不受支持的映像| 设备不支持所下载的固件映像。|
-|6| URI 无效| 设备无法从提供的 URI 下载固件。|
+|0|成功|固件已成功更新。|
+|1|正在进行|固件更新已启动，但尚未完成。|
+|2|内存耗尽|操作期间检测到内存耗尽情况。|
+|3|连接断开|固件下载期间连接断开。|
+|4|验证失败|固件未通过验证。|
+|5|不受支持的映像|设备不支持所下载的固件映像。|
+|6|URI 无效|设备无法从提供的 URI 下载固件。|
 
 ## 固件操作 - 下载
 {: #firmware-actions-download}
@@ -257,8 +282,7 @@ Topic: iotdevice-1/response
 {{site.data.keyword.iot_short_notm}} 中的设备管理服务器使用设备管理协议向设备发送请求，以启动固件下载操作。下载过程由以下步骤组成：
 
 1. 在 ``iotdm-1/device/update`` 主题上发送固件详细信息更新请求。
-更新请求让设备验证请求的固件是否不同于当前安装的固件。如果有差异，那么将 ``rc`` 参数设置为 ``204``，这会转换为状态“``已更改``”。
-  
+更新请求让设备验证请求的固件是否不同于当前安装的固件。如果有差异，那么设备将发送包含 rc ``204`` 的响应，这意味着状态“``已更改``”。
 以下示例显示了对于先前发送的示例固件下载请求应该会收到的消息，以及检测到差异时发送的响应：
 ```
    来自 {{site.data.keyword.iot_short_notm}} 的入局请求：
@@ -320,7 +344,7 @@ Topic: iotdevice-1/response
       "reqId" : "909b477c-cd37-4bee-83fa-1d568664fbe8"
    }
    ```
-此交换会触发最后一个步骤。  
+此交换会触发最后一个步骤。
 
 3. 在 ``iotdm-1/mgmt/initiate/firmware/download`` 主题上发送下载请求：
 

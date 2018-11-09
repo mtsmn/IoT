@@ -1,6 +1,8 @@
 ---
 
-copyright: years: 2016, 2017 lastupdated: "2017-06-13"
+copyright:
+  years: 2016, 2018
+lastupdated: "2018-01-11"
 ---
 
 {:new_window: target="\_blank"}
@@ -51,12 +53,10 @@ O exemplo a seguir mostra uma CN válido para o certificado do servidor:
 
 Para obter mais informações sobre certificados do servidor de sistema de mensagens, consulte [a receita Conectar o Raspberry Pi ao IBM Watson IoT Platform usando certificado de servidor autoassinado ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
 
-### Domínios customizados (beta)
-{: #custom_domains}
+### Domínios customizados
+{: #custom-domains}
 
-**Importante**: o recurso de domínios customizados para certificados do servidor de sistema de mensagens está disponível somente como parte de um programa Beta limitado. Para ativar domínios customizados, ative os **Recursos experimentais** na página **Configurações**.
-
-Como parte do recurso Beta, os certificados do servidor de sistema de mensagens aceitam domínios customizados. O formato a seguir deve ser seguido para o CN ou SubjectAltName do certificado:
+Os certificados do servidor de mensagens aceitam domínios customizados. O formato a seguir deve ser seguido para o CN ou SubjectAltName do certificado:
 
 - `orgId.messaging.<custom domain>`
 

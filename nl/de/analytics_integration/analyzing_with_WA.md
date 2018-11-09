@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-09-18"
 ---
 
@@ -71,7 +71,7 @@ Zum Simulieren realer Sensordatenereignisse für Ihre Organisationen mithilfe de
 1. [Stellen Sie die Web-App des Wettersensorensimulators mit einer Instanz von {{site.data.keyword.iot_short_notm}} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window} bereit und befolgen Sie die detaillierten Anweisungen.
 
    Weitere Informationen zu den Wettersensoren finden Sie im [Leitfaden zum Wettersensorensimulator ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
-2. Warten Sie, bis das System die Bereitstellung abgeschlossen hat, und navigieren Sie dann zum Bluemix-Dashboard.
+2. Warten Sie, bis das System die Bereitstellung abgeschlossen hat, und navigieren Sie dann zum IBM Cloud-Dashboard.
 3. Starten Sie den {{site.data.keyword.iot_short_notm}}-Service 'wiotp-for-weather-sensors-simulator', der vom Bereitstellungsprozess erstellt wurde.
 4. Fahren Sie mit [Schritt 2. Datenbankconnector konfigurieren](#WA_config_db) fort.
 
@@ -91,7 +91,7 @@ Gehen Sie wie folgt vor, um reale Sensordatenereignisse für Ihre Organisationen
 Zur Verwendung von {{site.data.keyword.cloudant_short_notm}} mit Watson Analytics müssen Sie den Plattformdatenspeicher so konfigurieren, dass als Archivierungsfunktion Cloudant NoSQL DB verwendet wird.
 
 1. Klicken Sie im {{site.data.keyword.cloudant_short_notm}}-Dashboard in der Navigationsleiste auf **Erweiterungen**.
-2. Klicken Sie unter **Speicherung archivierter Daten** auf **Einrichtung**. Daraufhin werden im Abschnitt **Speicherung archivierter Daten konfigurieren** alle Cloudant NoSQL DB-Services aufgelistet, die innerhalb desselben Bluemix-Bereichs wie {{site.data.keyword.cloudant_short_notm}} verfügbar sind.
+2. Klicken Sie unter **Speicherung archivierter Daten** auf **Einrichtung**. Daraufhin werden im Abschnitt **Speicherung archivierter Daten konfigurieren** alle Cloudant NoSQL DB-Services aufgelistet, die innerhalb desselben IBM Cloud-Bereichs wie {{site.data.keyword.cloudant_short_notm}} verfügbar sind.
 3. Wählen Sie den Cloudant NoSQL DB-Service aus, zu dem eine Verbindung hergestellt werden soll.
 4. Geben Sie die folgenden Cloudant NoSQL DB-Konfigurationsoptionen an:
   - Bucketintervall = Tag

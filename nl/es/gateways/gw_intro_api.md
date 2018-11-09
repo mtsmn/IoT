@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2015, 2017
-lastupdated: "2017-10-04"
+ years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -35,10 +35,12 @@ Además de utilizar el protocolo de mensajería MQTT, también puede configurar 
 
 Para enviar una solicitud ``POST`` desde un dispositivo conectado a {{site.data.keyword.iot_short_notm}}, utilice uno de los URL siguientes:
 
-### Solicitud POST no segura
+### Solicitud POST no segura para publicar sucesos
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-### Solicitud POST segura
+### Solicitud POST segura para publicar sucesos
+
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **Notas importantes:**
@@ -47,7 +49,7 @@ Para enviar una solicitud ``POST`` desde un dispositivo conectado a {{site.data.
 - Si a una pasarela no se le ha asignado el rol *Pasarela estándar*, puede publicar sucesos en nombre de cualquiera de los dispositivos de la organización. Si el dispositivo que está conectado a la pasarela no está registrado, la pasarela automáticamente registra ese dispositivo.
 - Asigne el rol *Pasarela estándar* si quiere comprobar los niveles de autorización del dispositivo.
 
-Para obtener más información sobre el rol de las pasarelas y los grupos de recursos, consulte [Control de acceso de pasarela (Beta)](../gateways/gateway-access-control.html).
+Para obtener más información sobre el rol de las pasarelas y los grupos de recursos, consulte [Control de acceso de pasarela](../gateways/gateway-access-control.html).
 
 ### Autenticación
 
@@ -96,14 +98,15 @@ Para obtener más información sobre la gestión de dispositivos de pasarela med
 ## Recepción de mandatos
 {: #receive_commands}
 
-Además de utilizar el protocolo de mensajería MQTT, es posible configurar los dispositivos de pasarela para recibir mandatos desde {{site.data.keyword.iot_short_notm}} sobre HTTP utilizando mandatos de API de mensajería HTTP. Un dispositivo de pasarela puede recibir mandatos dirigidos a otros dispositivos dentro de su grupo de recursos asociado. Para obtener más información sobre los grupos de recursos de pasarela, consulte [Control de acceso de pasarela (Beta)](../gateways/gateway-access-control.html).
+Además de utilizar el protocolo de mensajería MQTT, es posible configurar los dispositivos de pasarela para recibir mandatos desde {{site.data.keyword.iot_short_notm}} sobre HTTP utilizando mandatos de API de mensajería HTTP. Un dispositivo de pasarela puede recibir mandatos dirigidos a otros dispositivos dentro de su grupo de recursos asociado. Para obtener más información sobre los grupos de recursos de pasarela, consulte [Control de acceso de pasarela](../gateways/gateway-access-control.html).
 
 Utilice uno de los URL siguientes para enviar una solicitud ``POST`` desde una pasarela conectada a {{site.data.keyword.iot_short_notm}}:
 
-### Solicitud POST no segura
+### Solicitud POST no segura para recibir mandatos
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
-### Solicitud POST segura
+### Solicitud POST segura para recibir mandatos
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 

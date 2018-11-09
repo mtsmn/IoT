@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-21"
+  years: 2015, 2018
+lastupdated: "2018-01-22"
 
 ---
 
@@ -94,9 +94,9 @@ Die Unterstützung für das Lebenszyklusmanagement von Geräten ist optional. Da
 
 ### Servicequalitätsstufen und bereinigte Sitzung
 
-Verwaltete Geräte können Nachrichten publizieren, deren Servicequalitätsstufe (QoS) '0' oder '1' ist.
+Verwaltete Geräte können Nachrichten publizieren, deren Servicequalitätsstufe (QoS) '0', '1' oder '2' ist.
 
-Nachrichten, für die 'QoS=0' gilt, können verworfen werden; sie bleiben nach dem Neustart des Nachrichtenservers nicht bestehen. Nachrichten, für die 'QoS=1' gilt, können in die Warteschlange gestellt werden; sie bleiben nach dem Neustart des Nachrichtenservers bestehen. Durch die für eine Subskription geltende Permanenz ist festgelegt, ob eine Anforderung in die Warteschlange gestellt wird. Durch den Parameter ``cleansession`` der Verbindung, die die Subskription vorgenommen hat, wird die Permanenz der Subskription festgelegt.  
+Nachrichten, für die 'QoS=0' gilt, können verworfen werden; sie bleiben nach dem Neustart des Nachrichtenservers nicht bestehen. Nachrichten, für die 'QoS=1' gilt, können in die Warteschlange gestellt werden; sie bleiben nach dem Neustart des Nachrichtenservers bestehen. Durch die für eine Subskription geltende Permanenz ist festgelegt, ob eine Anforderung in die Warteschlange gestellt wird. Durch den Parameter ``cleansession`` der Verbindung, die die Subskription vorgenommen hat, wird die Permanenz der Subskription festgelegt. Geräte können Nachrichten auf Stufe 2 (QoS2) publizieren, aber der Gerätemanagementserver publiziert und subskribiert auf Stufe 1 (QoS1), sodass die Antwortnachrichten nur Nachrichten der Stufe 1 (QoS1) sind.
 
 {{site.data.keyword.iot_short_notm}} publiziert Anforderungen, die die Servicequalitätsstufe '1' aufweisen, um das Einreihen von Nachrichten in die Warteschlange zu unterstützen. Um Nachrichten in die Warteschlange einzureihen, die gesendet werden, während ein verwaltetes Gerät nicht verbunden ist, konfigurieren Sie das Gerät mithilfe der Einstellung 'false' für den Parameter ``cleansession`` so, dass keine bereinigten Sitzungen verwendet werden.
 

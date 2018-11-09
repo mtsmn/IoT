@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-16"
+  years: 2016, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -23,7 +23,7 @@ As tabelas mostram níveis de acesso para:
 <!-- [Historian Operations](#user-historian) -->
 - [Operações de organização](#user-org-ops)
 - [Operações de controle de acesso](#user-access-ops)
-- [Operações de análise de dados](#user-analytics-ops)
+<!-- - [Analytics Operations](#user-analytics-ops)-->
 - [Operações de terceiros](#user-third-party)  
 <!-- - [Risk Management Operations](#user-risk-mgt) -->
 
@@ -94,26 +94,13 @@ Visualizar propriedades próprias dos usuários, incluindo direitos de acesso	|P
 Gerenciar usuários, incluindo direitos de acesso	|X	|X	|-|-|-		
 Visualizar propriedades da chave API, incluindo direitos de acesso|	P|	P|	P|	P|-
 Visualizar propriedades próprias da chave API, incluindo direitos de acesso	|-|	-|	-| -| -		
-Criar, atualizar, excluir a chave API, incluindo direitos de acesso |X	|X	|-|-|-		
+Criar, atualizar, excluir a chave API, incluindo direitos de acesso	|X	|X	|-|-|-		
 Visualizar propriedades do dispositivo, incluindo direitos de acesso	|P|	P|	P|	P|	P
 Visualizar propriedades próprias do dispositivo, incluindo direitos de acesso	|-	|- |- |- |-
 Criar, atualizar, excluir dispositivo, incluindo direitos de acesso	|P|	P|	P|	-| -
 Visualizar funções	|X	|X	|X	|X	|P
 Criar, atualizar, excluir funções customizadas	|X	|P |- |- |-
 Visualizar operações*	|X	|X	|X	|X	|P
-
-### Operações de análise de dados {: #user-analytics-ops}
-
-Operações de análise de dados ||| Papéis do usuário|||
-:--------: | -------------|-------------|---------------|-----|---
-           | **Administrador** | **Operador** | **Desenvolvedor** | **Analista** | **Leitor**
-Visualizar regras de análise de dados|	P|	P|	P|	P|	P
-Gerenciar regras de analítica|	P|	P|	P|	P| -
-Visualizar ações de analítica|	P|	P|	P|	P|	P
-Gerenciar ações de analítica|	P|	P|	P|	P| -
-Visualizar alertas de analítica|	P|	P|	P|	P|	P
-Visualizar esquemas de mensagens de analítica|	P|	P|	P|	P|	P
-Gerenciar esquemas de mensagens de analítica|	P|	P|	P|	P| -
 
 ### Operações de serviço de terceiro {: #user-third-party}
 

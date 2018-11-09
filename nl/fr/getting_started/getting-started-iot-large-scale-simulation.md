@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-08"
+  years: 2017, 2018
+lastupdated: "2018-08-18"
 
 ---
 
@@ -13,20 +13,22 @@ lastupdated: "2017-11-08"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guide 4 : Simulation d'un grand nombre de terminaux
-Dans le premier guide, vous avez configuré un simulateur de terminal basique afin de simuler manuellement un ou plusieurs tapis roulants. A présent, vous allez étendre cette simulation en ajoutant un grand nombre de simulateurs à exécution automatique à votre environnement à des fins de test des analyses et de surveillance d'un environnement plus réaliste comportant plusieurs terminaux.
+# Guide 3 : Simulation d'un grand nombre de terminaux
+Dans le premier guide, vous avez configuré un simulateur de terminal basique afin de simuler manuellement un ou un petit nombre de tapis roulants. A présent, vous allez étendre cette simulation en ajoutant un grand nombre de simulateurs à exécution automatique à votre environnement à des fins de test des analyses et de surveillance d'un environnement plus réaliste comportant plusieurs terminaux.
 {:shortdesc}
 
-**Important :** L'application nécessite 512 Mo de mémoire, ce qui est plus que la valeur allouée par défaut et que la quantité disponible pour les comptes d'essai gratuits, y compris le compte d'essai et le compte standard Bluemix. Les titulaires d'un compte d'abonnement ou de paiement à la carte peuvent accroître la mémoire allouée de 512 Mo. Les titulaires de compte gratuit doivent effectuer une mise à niveau vers un compte d'abonnement ou de paiement à la carte. Pour plus d'informations sur les types de compte {{site.data.keyword.Bluemix_notm}}, voir [Types de compte](/docs/pricing/index.html#pricing).
+**Important :** l'application nécessite 512 Mo de mémoire, ce qui est plus que la valeur allouée par défaut et que la quantité disponible pour les comptes d'essai gratuits, y compris le compte d'essai et le compte standard {{site.data.keyword.Bluemix}}. Les titulaires d'un compte d'abonnement ou de paiement à la carte peuvent accroître la mémoire allouée de 512 Mo. Les titulaires de compte gratuit doivent effectuer une mise à niveau vers un compte d'abonnement ou de paiement à la carte. Pour plus d'informations sur les types de compte {{site.data.keyword.Bluemix_notm}}, voir [Types de compte](/docs/pricing/index.html#pricing).
+
+**Remarque :** Bluemix est maintenant IBM Cloud. Consultez le [IBM Cloud Blog](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") pour plus de détails.
 
 ## Présentation et objectif
 {: #overview}
 
-Dans le présent guide, vous allez configurer une application {{site.data.keyword.Bluemix_notm}} afin de simuler plusieurs terminaux de tapis roulants à l'aide d'un système de back end [Node-RED ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://nodered.org){: new_window}.
+Dans le présent guide, vous allez configurer une application {{site.data.keyword.Bluemix_notm}} afin de simuler plusieurs terminaux de tapis roulants à l'aide d'un système de back end [Node-RED ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://nodered.org){: new_window}.
 
 L'application comporte trois flux destinés à :   
 1. Créer plusieurs terminaux.   
-2. Simuler des publications d'événements simultanés.
+2. Simuler des publications d'événements simultanées.
 3. Supprimer des terminaux.   
 
 ![Création et suppression de terminaux](images/device_creation.png "Création et suppression de terminaux")
@@ -37,7 +39,7 @@ Dans le cadre de ce guide, vous allez :
 - Utiliser Cloud Foundry pour déployer une application simulateur de terminal webhook et Node-RED.
 - Utiliser des appels API pour créer et enregistrer des terminaux, publier des événements de terminaux et supprimer des terminaux.
 
-**Important :** Le fait de simuler un très grand nombre de terminaux qui envoient simultanément des données de terminaux à {{site.data.keyword.iot_short_notm}} peut consommer une grande quantité de données. Servez-vous du tableau de bord {{site.data.keyword.iot_short_notm}} *Utilisation* pour surveiller la quantité de données utilisées par vos terminaux et applications. Ces données sont actualisées toutes les deux heures.
+**Important :** Le fait de simuler un très grand nombre de terminaux qui envoient simultanément des données de terminaux à {{site.data.keyword.iot_full}} peut consommer une grande quantité de données. 
 
 ## Prérequis
 {: #prereqs}  
@@ -47,10 +49,10 @@ Vous devez préalablement disposer des comptes et outils suivants :
  - Plus de 512 Mo de mémoire RAM   
  - Plus de 1 Go de quota de disque  
  - Deux services disponibles
-* [Une interface de ligne de commande Cloud Foundry (CLI CF) ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
+* [Une interface de ligne de commande Cloud Foundry (CLI CF) ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
 Utilisez l'interface de ligne de commande CF pour déployer et gérer vos applications {{site.data.keyword.Bluemix_notm}}.
-* Facultatif : [Git ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}  
-Si vous choisissez d''utiliser Git pour télécharger les exemples de code, vous devez disposer d'un [compte GitHub.com ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com){: new_window}. Vous pouvez aussi télécharger le code sous forme de fichier compressé si vous n'avez pas de compte GitHub.com.
+* Facultatif : [Git ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads){: new_window}  
+Si vous choisissez d''utiliser Git pour télécharger les exemples de code, vous devez disposer d'un [compte GitHub.com ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com){: new_window}. Vous pouvez aussi télécharger le code sous forme de fichier compressé si vous n'avez pas de compte GitHub.com.
 
 Pour les appels REST présentés dans les étapes ci-dessous, vous pouvez soit utiliser cURL ou le plug-in de module complémentaire du client REST disponible dans Mozilla.  
 {: tip}
@@ -62,10 +64,10 @@ Suivez la procédure ci-dessous pour créer et déployer votre application manue
 
 1. Clonez le référentiel GitHub du modèle d'application *Lesson4*.  
 Servez-vous de votre outil Git favori pour cloner le référentiel ci-dessous :  
-https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 Dans l'interpréteur de commande Git, exécutez la commande suivante :
 ```bash
-$ git clone https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+$ git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 ```
 3. Configurez l'application associée à votre environnement en éditant le fichier manifest.yml.  
 Eléments à éditer :
@@ -130,7 +132,7 @@ Si le système vous y invite, sélectionnez l'organisation et l'espace où vous 
 **Important :** Si vous utilisez un service {{site.data.keyword.iot_short_notm}} existant et que vous avez mis à jour le fichier manifest.yml en conséquence, assurez-vous d'utiliser le nom de service existant. Par exemple, utilisez `iotp-for-conveyor` du guide 1 à la place de `lesson4-simulate-iotf-service` dans l'appel CF.
 7. Exécutez la commande `cf push` pour générer le projet et l'envoyer à votre organisation.  
 Votre modèle d'application est déployé sur {{site.data.keyword.Bluemix_notm}}.  
-Une fois le déploiement terminé, un message s'affiche pour indiquer que votre application est en cours d'exécution.    
+Une fois le déploiement terminé, un message s'affiche pour indiquer que votre application est en cours d'exécution.   
 Exemple :  
   ```
 requested state: started
@@ -148,7 +150,7 @@ details
   ```
 8. Récupérez les données d'identification du service pour votre application.
  1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} à l'adresse :  
- [https://bluemix.net ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net){: new_window}.
+ [https://bluemix.net ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://bluemix.net){: new_window}.
  2. Sélectionnez le compte et l'espace où vous avez déployé l'application.
  3. Dans le menu, sélectionnez **Applications** et choisissez **Tableau de bord**.
  4. Dans les applications Cloud Foundry, cliquez sur le nom de l'application que vous venez de déployer.
@@ -177,10 +179,10 @@ Lorsque votre flux Node-RED est sécurisé, si vous prévoyez d'utiliser des com
 
 Vous pouvez utiliser l'interface de flux Node-RED ou l'API REST d'application pour effectuer les tâches ci-dessous.
 
-### Node-RED  
+### Création et connexion de terminaux à l'aide de Node-RED  
 Pour enregistrer plusieurs terminaux :  
 1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} à l'adresse :  
-[https://bluemix.net ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net){: new_window}.
+[https://bluemix.net ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://bluemix.net){: new_window}.
 2. Sélectionnez le compte et l'espace où vous avez déployé l'application.
 3. Dans le menu, sélectionnez **Applications** et choisissez **Tableau de bord**.
 4. Dans les applications Cloud Foundry, cliquez sur l'URL **ROUTE** de l'application que vous venez de déployer.  
@@ -190,13 +192,8 @@ L'interface Node-RED s'ouvre.
 5. Cliquez sur **Go to your Node-RED flow editor**.
 6. Dans l'éditeur de flux, sélectionnez l'onglet **Device Type and Instance**.
 7. Pour enregistrer 5 terminaux, cliquez sur le noeud d'injection nommé **Register 5 motorController devices**.
-8. Vérifiez que vos terminaux ont été enregistrés.
- 1. Dans le menu du tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Tableaux**.
- 3. Sélectionnez le tableau **Device Centric Analytics**.
- 4. Recherchez la carte **Terminaux qui m'intéressent**.  
-Les noms de terminaux s'affichent.
 
-### API REST  
+### Création et connexion de terminaux à l'aide de l'API REST  
 Pour enregistrer plusieurs terminaux :  
 
 1. Faites une demande d'envoi HTTP POST à l'adresse URL suivante : `ROUTE_URL/rest/devices`  
@@ -217,29 +214,20 @@ Exemple : `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/devices`
     - Facultatif : authToken est le jeton d'autorisation avec lequel sont enregistrés les terminaux.
     - Facultatif : Si chunkSize n'est pas renseigné, il est défini sur 500 par défaut. La valeur 'chunksize' doit être inférieure à un facteur de numberDevices.
     - deviceName correspond au modèle de deviceID pour les terminaux créés.
-2. Vérifiez que vos terminaux ont été enregistrés.
- 1. Dans le menu du tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Tableaux**.
- 3. Sélectionnez le tableau **Device Centric Analytics**.
- 4. Recherchez la carte **Terminaux qui m'intéressent**.  
-Les noms de terminaux s'affichent.
 
 ## Etape 4 - Simulation des événements de terminaux
 {: #step4}
 
 Etant donné que les terminaux simulés sont enregistrés avec {{site.data.keyword.iot_short_notm}}, vous pouvez maintenant exécuter le simulateur afin de démarrer l'envoi d'événements de terminal.
 
-### Node-RED  
+### Simulation d'événements de terminaux à l'aide de Node-RED  
 Pour envoyer des événements de terminaux :  
 1. Dans l'éditeur de flux Node-RED, sélectionnez l'onglet **Simulate multiple devices**.
 7. Pour simuler 5 terminaux, cliquez sur le noeud d'injection nommé **Simulate 5 devices**.
-8. Vérifiez que vos terminaux envoient des données.
- 1. Dans le menu du tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Tableaux**.
- 3. Sélectionnez le tableau **Device Centric Analytics**.
- 4. Recherchez la carte **Terminaux qui m'intéressent**.  
- 5. Sélectionnez l'un des terminaux et vérifiez que les points de données de terminal mis à jour correspondant au message publié sont affichés dans la carte **Propriétés de terminal**.  
+ 
 
 
-### API REST  
+### Simulation d'événements de terminaux à l'aide de l'API REST  
 Pour envoyer des événements de terminaux :
 
 1. Faites une demande d'envoi HTTP POST à l'adresse URL suivante : `ROUTE_URL/rest/runtest`  
@@ -259,11 +247,7 @@ Où :
     - timeInterval représente l'intervalle, en millisecondes, entre chaque événement.
     - deviceType est le type de terminal pour lequel vous avez créé des terminaux simulés.
     - deviceName correspond au modèle de deviceID pour les terminaux créés.
-8. Vérifiez que vos terminaux envoient des données.
- 1. Dans le menu du tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Tableaux**.
- 3. Sélectionnez le tableau **Device Centric Analytics**.
- 4. Recherchez la carte **Terminaux qui m'intéressent**.  
- 5. Sélectionnez l'un des terminaux et vérifiez que les points de données de terminal mis à jour correspondant au message publié sont affichés dans la carte **Propriétés de terminal**.   
+ 
 
 ## Etape 5 - Suppression de terminaux
 {: #deleting}
@@ -272,11 +256,7 @@ Où :
 Pour supprimer des terminaux :  
 1. Dans l'éditeur de flux Node-RED, sélectionnez l'onglet **Device Type and Instance**.
 2. Pour supprimer 5 terminaux, cliquez sur le noeud d'injection nommé **Delete 5 devices**.
-3. Vérifiez que les terminaux ont été supprimés.
- 1. Dans le menu du tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Tableaux**.
- 3. Sélectionnez le tableau **Device Centric Analytics**.
- 4. Recherchez la carte **Terminaux qui m'intéressent**.  
- 5. Vérifiez que les terminaux n'apparaissent plus dans la liste.  
+
 
 
 ### API REST  
@@ -290,19 +270,13 @@ Exemple : `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevic
 "deviceType":"iot-conveyor-belt",  
 "deviceName": "belt"  
 }</code></pre>
-2. Vérifiez que les terminaux ont été supprimés.
- 1. Dans le menu du tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Tableaux**.
- 3. Sélectionnez le tableau **Device Centric Analytics**.
- 4. Recherchez la carte **Terminaux qui m'intéressent**.  
- 5. Vérifiez que les terminaux n'apparaissent plus dans la liste.  
+  
 
 
 ## Etape suivante ?
 {: @whats_next}  
 Passez à une autre rubrique qui vous intéresse :
-- [Guide 2 : Utilisation des règles et actions de base en temps réel](getting-started-iot-rules.html)  
-Maintenant que vous avez correctement configuré votre tapis roulant, que vous l'avez connecté à {{site.data.keyword.iot_short_notm}} et que vous avez envoyé certaines données , il est temps d'exploiter ces données en utilisant des règles et des actions.
-- [Guide 3 : Surveillance des données de votre terminal](getting-started-iot-monitoring.html)  
+- [Guide 2 : Surveillance des données de votre terminal](getting-started-iot-monitoring.html)  
 Maintenant que vous avez connecté un ou plusieurs terminaux et que vous avez commencé à exploiter les données de terminal, vous pouvez commencer à surveiller une collection de terminaux.
 - [En savoir plus sur {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [En savoir plus sur les {{site.data.keyword.iot_short_notm}} API](/docs/services/IoT/reference/api.html){:new_window}

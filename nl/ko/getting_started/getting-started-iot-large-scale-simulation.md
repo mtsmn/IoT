@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-08"
+  years: 2017, 2018
+lastupdated: "2018-08-18"
 
 ---
 
@@ -13,16 +13,18 @@ lastupdated: "2017-11-08"
 {:screen: .screen}
 {:tip: .tip}
 
-# 안내서 4: 많은 디바이스 시뮬레이션
+# 안내서 3: 많은 수의 디바이스 시뮬레이션
 첫 번째 안내서에서 하나 이상의 컨베이어 벨트를 수동으로 시뮬레이션하도록 기본 디바이스 시뮬레이터를 설정합니다. 이 안내서에서는 좀 더 현실적인 다중 디바이스 환경에서 분석 및 모니터링을 테스트하도록 사용자 환경에 많은 수의 자체 실행 시뮬레이터를 추가하여 이 시뮬레이션을 확장합니다.
 {:shortdesc}
 
-**중요:** 애플리케이션에는 512MB의 메모리가 필요하며, 이 양은 기본적으로 할당되는 메모리보다 많고 무료 평가판 계정(Bluemix 평가판 계정 및 표준 계정 포함)에서 사용할 수 있는 양을 초과합니다. 구독 및 종량과금제 계정 보유자는 할당된 메모리를 512MB로 늘릴 수 있습니다. 무료 평가판 계정 보유자는 구독 또는 종량과금제 계정으로 업그레이드해야 합니다. {{site.data.keyword.Bluemix_notm}} 계정 유형에 대한 자세한 정보는 [계정 유형](/docs/pricing/index.html#pricing)을 참조하십시오.
+**중요:** 애플리케이션에서는 512MB의 메모리가 필요합니다. 이는 기본적으로 할당되는 양보다 많으며 {{site.data.keyword.Bluemix}} 평가판 계정 및 표준 계정을 포함하여 무료 평가판 계정에서 사용할 수 있는 양도 초과합니다. 구독 및 종량과금제 계정 보유자는 할당된 메모리를 512MB로 늘릴 수 있습니다. 무료 평가판 계정 보유자는 구독 또는 종량과금제 계정으로 업그레이드해야 합니다. {{site.data.keyword.Bluemix_notm}} 계정 유형에 대한 자세한 정보는 [계정 유형](/docs/pricing/index.html#pricing)을 참조하십시오.
+
+**참고:** Bluemix는 이제 IBM Cloud입니다. 세부사항은 [IBM Cloud 블로그](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")를 체크아웃하십시오. 
 
 ## 개요 및 목표
 {: #overview}
 
-이 안내서에서는 [Node-RED ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://nodered.org){: new_window} "백엔드"를 사용하여 다중 컨베이어 벨트 디바이스를 시뮬레이션하도록 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 설정합니다.
+이 안내서에서는 [Node-RED ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://nodered.org){: new_window} "백엔드"를 사용하여 다중 컨베이어 벨트 디바이스를 시뮬레이션하도록 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 설정합니다. 
 
 애플리케이션에는 다음을 수행하는 세 가지 플로우가 있습니다.   
 1. 다중 디바이스를 작성합니다.   
@@ -37,7 +39,7 @@ lastupdated: "2017-11-08"
 - Cloud Foundry를 사용하여 Node-RED 기반 및 웹훅 사용 디바이스 시뮬레이터 애플리케이션을 배치합니다.
 - API 호출을 사용하여 디바이스를 작성하고 등록하며 디바이스 이벤트를 공개하고 디바이스를 삭제합니다.
 
-**중요:** 디바이스 데이터를 동시에 {{site.data.keyword.iot_short_notm}}에 전송하는 많은 디바이스를 시뮬레이션하면 많은 양의 데이터가 소비될 수 있습니다. {{site.data.keyword.iot_short_notm}} *사용량* 대시보드를 사용하여 디바이스 및 애플리케이션이 사용하는 데이터 양을 모니터할 수 있습니다. 메트릭은 2시간 간격으로 새로 고쳐집니다.
+**중요:** 디바이스 데이터를 동시에 {{site.data.keyword.iot_full}}에 전송하는 많은 디바이스를 시뮬레이션하면 많은 양의 데이터가 소비될 수 있습니다. 
 
 ## 전제조건
 {: #prereqs}  
@@ -50,7 +52,7 @@ lastupdated: "2017-11-08"
 * [Cloud Foundry 명령 인터페이스(cf CLI) ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 배치하고 관리하려면 cf CLI를 사용하십시오.
 * 선택사항: [Git ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git-scm.com/downloads){: new_window}  
-Git을 사용하여 코드 샘플을 다운로드하도록 선택하는 경우 [GitHub.com 계정(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://github.com){: new_window}이 있어야 합니다. GitHub.com 계정 없이 코드를 압축 파일로 다운로드할 수도 있습니다.
+Git을 사용하여 코드 샘플을 다운로드하도록 선택하는 경우 [GitHub.com 계정 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com){: new_window}이 있어야 합니다. GitHub.com 계정 없이 코드를 압축 파일로 다운로드할 수도 있습니다.
 
 다음 단계의 REST 호출에 대해 Mozilla에서 사용 가능한 REST 클라이언트 추가 기능 플러그인 또는 cURL을 사용할 수 있습니다.  
 {: tip}
@@ -62,10 +64,10 @@ Git을 사용하여 코드 샘플을 다운로드하도록 선택하는 경우 [
 
 1. *Lesson4* 샘플 앱 GitHub 저장소를 복제하십시오.  
 원하는 git 도구를 사용하여 다음 저장소를 복제하십시오.  
-https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 Git 쉘에서 다음 명령을 사용하십시오.
 ```bash
-$ git clone https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+$ git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 ```
 3. manifest.yml 파일을 편집하여 환경에 맞는 애플리케이션을 구성하십시오.  
 편집할 내용:
@@ -123,7 +125,7 @@ cf login
   ```
 프롬프트가 표시되면 {{site.data.keyword.iot_short_notm}} 및 샘플 앱을 배치할 조직과 영역을 선택하십시오.
 6. {{site.data.keyword.Bluemix_notm}}에서 필수 서비스를 작성하십시오.   
- 1. 다음 명령을 사용하여 cloudantNoSQLDB 라이트 서비스를 작성하십시오.
+ 1. 다음 명령을 사용하여 cloudantNoSQLDB Lite 서비스를 작성하십시오.
 <pre><code>$ cf create-service cloudantNoSQLDB Lite lesson4-simulate-cloudantNoSQLDB</code></pre>    
  2. 다음 명령을 사용하여 {{site.data.keyword.iot_short_notm}} 서비스를 작성하십시오.
 <pre><code>$ cf create-service iotf-service iotf-service-free lesson4-simulate-iotf-service </code></pre>   
@@ -146,16 +148,16 @@ buildpack: SDK for Node.js(TM) (ibm-node.js-4.8.2, buildpack-v3.12-20170505-0656
 details
 #0   running   2017-05-30 09:25:41 AM   23.9%   194.9M of 512M   378.4M of 1G
   ```
-8. 앱에 대한 서비스 신임 정보를 가져오십시오.
+8. 앱에 대한 서비스 인증 정보를 가져오십시오.
  1. 다음에서 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오.  
  [https://bluemix.net ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://bluemix.net){: new_window}.
  2. 앱을 배치한 계정 및 영역을 선택하십시오.
  3. 메뉴에서 **앱**을 선택한 다음 **대시보드**를 선택하십시오.
  4. Cloud Foundry 앱에서 배치된 애플리케이션의 이름을 클릭하십시오.
  4. **연결**을 선택하십시오.
- 5. 앱에서 사용하는 iotf-service를 찾고 **신임 정보 보기**를 클릭하십시오.  
- 6. 서비스 신임 정보에서 `apiKey` 및 `apiToken`을 찾으십시오.   
-API 키 및 인증 토큰은 앱 API를 사용하여 시뮬레이션된 디바이스를 작성하고 실행할 때 신임 정보로 사용됩니다.
+ 5. 앱에서 사용하는 iotf-service를 찾고 **인증 정보 보기**를 클릭하십시오.  
+ 6. 서비스 인증 정보에서 `apiKey` 및 `apiToken`을 찾으십시오.   
+API 키 및 인증 토큰은 앱 API를 사용하여 시뮬레이션된 디바이스를 작성하고 실행할 때 인증 정보로 사용됩니다.
 
 ## 2단계 - Node-RED 플로우 보안
 {: #step2}
@@ -170,14 +172,14 @@ API 키 및 인증 토큰은 앱 API를 사용하여 시뮬레이션된 디바�
     b. NODE_RED_PASSWORD
 5. 플로우를 저장하십시오.
 
-Node-RED 플로우가 보안되는 경우 REST API 명령을 사용하여 여러 디바이스를 작성하거나 삭제하거나 시뮬레이션하려면 기본 인증 중에 Node-RED 사용자 이름 및 비밀번호 신임 정보를 제공해야 합니다.
+Node-RED 플로우가 보안되는 경우 REST API 명령을 사용하여 여러 디바이스를 작성하거나 삭제하거나 시뮬레이션하려면 기본 인증 중에 Node-RED 사용자 이름 및 비밀번호 인증 정보를 제공해야 합니다.
 
 ## 3단계 - 디바이스 작성 및 연결
 {: #step3}
 
 Node-RED 플로우 인터페이스 또는 애플리케이션 REST API를 사용하여 다음 태스크를 완료할 수 있습니다.
 
-### Node-RED  
+### Node-RED를 사용하여 디바이스 작성 및 연결  
 여러 디바이스를 등록하려면 다음을 수행하십시오.  
 1. 다음에서 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오.  
 [https://bluemix.net ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://bluemix.net){: new_window}.
@@ -190,13 +192,8 @@ Node-RED 인터페이스가 열립니다.
 5. **Node-RED 플로우 편집기로 이동**을 클릭하십시오.
 6. 플로우 편집기에서 **디바이스 유형 및 인스턴스** 탭을 선택하십시오.
 7. 5개의 디바이스를 등록하려면 **Register 5 motorController devices**라고 레이블 지정된 삽입 노드를 클릭하십시오.
-8. 디바이스가 등록되었는지 확인하십시오.
- 1. {{site.data.keyword.iot_short_notm}} 대시보드의 메뉴에서 **보드**를 선택하십시오.
- 3. **디바이스 중심 분석** 보드를 선택하십시오.
- 4. **디바이스 I 관리** 카드를 찾으십시오.  
-디바이스 이름이 표시됩니다.
 
-### REST API  
+### REST API를 사용하여 디바이스 작성 및 연결  
 여러 디바이스를 등록하려면 다음을 수행하십시오.  
 
 1. 다음 URL에 대한 HTTP POST 요청을 작성하십시오. `ROUTE_URL/rest/devices`  
@@ -211,35 +208,26 @@ Node-RED 인터페이스가 열립니다.
 "deviceName":"belt"  </br>
 }
 </code></pre>  
-여기서,   
+여기서,  
     - numberDevices는 작성하고 등록할 디바이스 수입니다.
     - 선택사항: typeId는 디바이스가 등록될 디바이스 유형입니다. typeId가 제공되지 않으면 기본값은 "iotp-for-conveyor"로 설정됩니다. **팁:** 디바이스 유형 이름을 입력할 수 있지만 시리즈의 다른 안내서에서는 디바이스 유형 `iotp-for-conveyor`의 디바이스를 요구합니다. 다른 디바이스 유형을 사용하는 경우 안내서의 설정을 적절하게 수정해야 합니다.
     - 선택사항: authToken은 디바이스가 등록하는 데 사용하는 인증 토큰입니다.
     - 선택사항: chunkSize가 제공되지 않으면 기본값 500으로 설정됩니다. 'chunksize'는 더 작아야 하며 numberDevices의 요인이어야 합니다.
     - deviceName은 작성된 디바이스의 deviceID에 대한 패턴입니다.
-2. 디바이스가 등록되었는지 확인하십시오.
- 1. {{site.data.keyword.iot_short_notm}} 대시보드의 메뉴에서 **보드**를 선택하십시오.
- 3. **디바이스 중심 분석** 보드를 선택하십시오.
- 4. **디바이스 I 관리** 카드를 찾으십시오.  
-디바이스 이름이 표시됩니다.
 
 ## 4단계 - 디바이스 이벤트 시뮬레이션
 {: #step4}
 
 시뮬레이션된 디바이스가 {{site.data.keyword.iot_short_notm}}에 등록되어 있으므로 시뮬레이터를 실행하여 디바이스 이벤트 전송을 시작할 수 있습니다.
 
-### Node-RED  
+### Node-RED를 사용하여 디바이스 이벤트 시뮬레이션  
 디바이스 이벤트를 전송하려면 다음을 수행하십시오.  
 1. Node-RED 플로우 편집기에서 **여러 디바이스 시뮬레이션** 탭을 선택하십시오.
 7. 5개의 디바이스를 시뮬레이션하려면 **Simulate 5 devices**라고 레이블 지정된 삽입 노드를 클릭하십시오.
-8. 디바이스가 데이터를 전송하는지 확인하십시오.
- 1. {{site.data.keyword.iot_short_notm}} 대시보드의 메뉴에서 **보드**를 선택하십시오.
- 3. **디바이스 중심 분석** 보드를 선택하십시오.
- 4. **디바이스 I 관리** 카드를 찾으십시오.  
- 5. 디바이스 중 하나를 선택하고 공개된 메시지에 해당하는 업데이트된 디바이스 데이터 점이 **디바이스 특성** 카드에 표시되는지 확인하십시오.  
+ 
 
 
-### Rest API  
+### Rest API를 사용하여 디바이스 이벤트 시뮬레이션  
 디바이스 이벤트를 전송하려면 다음을 수행하십시오.
 
 1. 다음 URL에 대한 HTTP POST 요청을 작성하십시오. `ROUTE_URL/rest/runtest`  
@@ -259,11 +247,7 @@ Node-RED 인터페이스가 열립니다.
     - timeInterval은 이벤트의 간격(밀리초)입니다.
     - deviceType은 사용자가 작성한 시뮬레이션된 디바이스의 디바이스 유형입니다.
     - deviceName은 작성된 디바이스의 deviceID에 대한 패턴입니다.
-8. 디바이스가 데이터를 전송하는지 확인하십시오.
- 1. {{site.data.keyword.iot_short_notm}} 대시보드의 메뉴에서 **보드**를 선택하십시오.
- 3. **디바이스 중심 분석** 보드를 선택하십시오.
- 4. **디바이스 I 관리** 카드를 찾으십시오.  
- 5. 디바이스 중 하나를 선택하고 공개된 메시지에 해당하는 업데이트된 디바이스 데이터 점이 **디바이스 특성** 카드에 표시되는지 확인하십시오.   
+ 
 
 ## 5단계 - 디바이스 삭제
 {: #deleting}
@@ -272,11 +256,7 @@ Node-RED 인터페이스가 열립니다.
 디바이스를 삭제하려면 다음을 수행하십시오.  
 1. Node-RED 플로우 편집기에서 **디바이스 유형 및 인스턴스** 탭을 선택하십시오.
 2. 5개의 디바이스를 삭제하려면 **Delete 5 devices**라고 레이블 지정된 삽입 노드를 클릭하십시오.
-3. 디바이스가 삭제되었는지 확인하십시오.
- 1. {{site.data.keyword.iot_short_notm}} 대시보드의 메뉴에서 **보드**를 선택하십시오.
- 3. **디바이스 중심 분석** 보드를 선택하십시오.
- 4. **디바이스 I 관리** 카드를 찾으십시오.  
- 5. 디바이스가 더 이상 나열되지 않는지 확인하십시오.  
+
 
 
 ### Rest API  
@@ -290,19 +270,13 @@ Node-RED 인터페이스가 열립니다.
 "deviceType":"iot-conveyor-belt",  
 "deviceName": "belt"  
 }</code></pre>
-2. 디바이스가 삭제되었는지 확인하십시오.
- 1. {{site.data.keyword.iot_short_notm}} 대시보드의 메뉴에서 **보드**를 선택하십시오.
- 3. **디바이스 중심 분석** 보드를 선택하십시오.
- 4. **디바이스 I 관리** 카드를 찾으십시오.  
- 5. 디바이스가 더 이상 나열되지 않는지 확인하십시오.  
+  
 
 
 ## 다음 항목
 {: @whats_next}  
 관심 있는 다른 주제로 건너뛰십시오.
-- [안내서 2: 기본 실시간 규칙 및 조치 사용](getting-started-iot-rules.html)  
-컨베이어 벨트를 설정하고 {{site.data.keyword.iot_short_notm}}에 연결하며 일부 데이터를 전송했으므로, 규칙 및 조치를 사용하여 해당 데이터가 작동되도록 합니다.
-- [안내서 3: 디바이스 데이터 모니터링](getting-started-iot-monitoring.html)  
+- [안내서 2: 디바이스 데이터 모니터링](getting-started-iot-monitoring.html)  
 하나 이상의 디바이스에 연결했고 디바이스 데이터를 잘 이용하기 시작했으므로 디바이스 콜렉션 모니터링을 시작합니다.
 - [{{site.data.keyword.iot_short_notm}}에 대해 자세히 보기](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [{{site.data.keyword.iot_short_notm}} API에 대해 자세히 보기](/docs/services/IoT/reference/api.html){:new_window}

@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-05-31"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -24,7 +24,6 @@ Fonction       | Documentation
 ------------- | -------------
 Rapports détaillés | [Rapports détaillés (bêta)](reference/security/RM_security.html#drill_down)
 Package de passerelle IoT | [Package de passerelle IoT (bêta)](gateways/iotgw.html#gw_package)
-Simulation de données de terminal | [Simulation de données de terminal (bêta)](devices/device_sim.html)
 Restauration de terminaux supprimés | [Restauration de terminaux supprimés (bêta)](iotplatform_task.html#restore_device)
 Règles imbriquées | [Création de règles imbriquées (bêta)](information_management/im_rules.html)
 Choses | [Introduction à la gestion de données](GA_information_management/ga_im_device_twin.html#device_twins)
@@ -32,3 +31,4 @@ Choses | [Introduction à la gestion de données](GA_information_management/ga_i
 Authentification et autorisation Cloud IAM | [Authentification et autorisation Cloud IAM pour {{site.data.keyword.iot_short_notm}} (bêta)](reference/security/cloud_iam.html)
 Authentification et autorisation d'ID application | [Authentification et autorisation d'ID application pour {{site.data.keyword.iot_short_notm}} (bêta)](reference/security/app_id.html)
 Interface utilisateur de groupes | [Gestion des groupes (bêta)](manage_groups.html#groups_overview)
+Surveillance de la connectivité des clients | [Surveillance de la connectivité des clients (bêta)](reference/security/client_connect.html)

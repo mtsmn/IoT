@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -14,13 +14,20 @@ lastupdated: "2017-06-16"
 {:tip: .tip}
 
 # Guia 2: Usando regras e ações básicas em tempo real
-Use as instruções neste guia para configurar um conjunto de regras e ações básicas
-para algumas análises em tempo real de seus dados do IoT da esteira transportadora.
-{:shortdesc}
+
+** Importante:** estamos ativando um Beta para uma nova maneira de definir regras em seus dados do dispositivo IoT como parte de um programa mais amplo de mudanças para melhorar a maneira como o {{site.data.keyword.iot_full}} entrega regras e ações.
+
+Para descobrir mais, verifique a postagem do blog [Uma abordagem alternativa para definir Regras em dados do IoT![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para iniciar a definição de suas próprias regras, veja a documentação [Criando regras integradas (Beta)](../information_management/im_rules.html).
 
 ## Visão geral e objetivo
 {: #overview}  
-Agora que você configurou com êxito sua esteira transportadora, a conectou com {{site.data.keyword.iot_short_notm}} e enviou alguns dados, é hora de fazer esses dados trabalharem por você usando regras e ações.
+
+Use as instruções neste guia para configurar um conjunto de regras e ações básicas
+para algumas análises em tempo real de seus dados do IoT da esteira transportadora.
+
+Agora que você configurou com êxito sua esteira transportadora, a conectou com {{site.data.keyword.iot_full}} e enviou alguns dados, é hora de fazer esses dados trabalharem por você usando regras e ações.
 
 ![Exemplo de regra](images/slow_rule.svg "Exemplo de regra")
 

@@ -31,7 +31,7 @@ Par exemple, vous pouvez créer une règle garantissant que lorsque le terminal 
 
 Assurez-vous que les propriétés de terminal que vous souhaitez utiliser comme conditions dans vos règles ont été mappées à des schémas. Pour plus d'informations, voir [Connexion de terminaux](iotplatform_task.html) et [Création de schémas](im_schemas.html).
 
-En outre, consultez la recette [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} pour comprendre les règles et les actions utilisées dans Cloud Analytics.
+En outre, consultez la recette [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} pour comprendre les règles et les actions utilisées dans Cloud Analytics.
 
 ## Gestion des règles et des actions  
 {: #managing_rules}
@@ -167,7 +167,7 @@ Pour créer l'action Envoyer un courrier électronique :
 ### IFTTT  
 {: #ifttt}
 
-Utilisez l'action IFTTT pour déclencher une recette IFTTT lorsqu'une règle est déclenchée. Pour plus d'informations sur le déclenchement d'actions, telles que les recettes IFTTT, voir l'article [Maker Channel ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://ifttt.com/maker){: new_window} sur le site IFTTT.
+Utilisez l'action IFTTT pour déclencher une recette IFTTT lorsqu'une règle est déclenchée. Pour plus d'informations sur le déclenchement d'actions, telles que les recettes IFTTT, voir l'article [Maker Channel ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://ifttt.com/maker){: new_window} sur le site IFTTT.
 
 Exemple : [Utiliser IFTTT pour publier une carte Trello](#iftttex).
 
@@ -236,7 +236,7 @@ Corps | Par défaut, le corps du texte est prérempli avec toutes les variables 
 Dans cet exemple, l'action est configurée pour utiliser Node-Red avec un noeud Twilio afin d'envoyer un message texte au technicien de maintenance.
 
 Pour créer l'action Envoyer un message texte :
-1. Dans Twilio, localisez ou créez un nouveau service de messagerie à utiliser pour envoyer des messages texte depuis votre compte Twilio. Pour plus d'informations, voir la [documentation Twilio ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.twilio.com/help){: new_window}.
+1. Dans Twilio, localisez ou créez un nouveau service de messagerie à utiliser pour envoyer des messages texte depuis votre compte Twilio. Pour plus d'informations, voir la [documentation Twilio ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.twilio.com/help){: new_window}.
 2. Dans Bluemix, configurez votre compte Node-RED et connectez-vous à ce compte à l'aide de l'URL Node-RED `http://mynodered.mybluemix.net/red/`. Pour plus d'informations, voir la rubrique [Creating apps with Node-RED Starter](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html) dans la documentation Bluemix.
 3. Dans Node-RED, créez un simple flux à deux noeuds, tel que [RTI-alert]->[SMS],  
 où le premier noeud est un noeud HTTP et le second noeud est un noeud Twilio.
@@ -297,7 +297,7 @@ Corps | Corps de l'appel Webhook.  Disponible pour les méthodes OPTIONS, PATCH,
 Dans cet exemple, l'action est configurée pour utiliser un Webhook afin de publier un message sur le canal Slack #service-requests.
 
 Pour créer l'action de publication sur Slack :
-1. Dans Slack, configurez l'intégration de Webhooks entrants pour le canal #service-requests. Notez l'URL des Webhooks. Pour plus d'informations, voir la [documentation Slack ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
+1. Dans Slack, configurez l'intégration de Webhooks entrants pour le canal #service-requests. Notez l'URL des Webhooks. Pour plus d'informations, voir la [documentation Slack ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://api.slack.com/incoming-webhooks){: new_window}.
 2. Dans le tableau de bord {{site.data.keyword.iot_short}}, accédez à **Règles > Actions** et créez une nouvelle action dotée des paramètres suivants :
  - Nom - `Publier une demande de maintenance sur Slack`
  - Type - **Webhook**
@@ -335,12 +335,12 @@ Variable | Description
 
 Les recettes suivantes expliquent comment utiliser les fonctions Cloud Analytics pour différents scénarios d'utilisation :
 
-- [Real Time Data Analysis Using IBM Watson™ IoT Platform Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
+- [Real Time Data Analysis Using IBM Watson™ IoT Platform Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
 
-- [Predictive Analytics on IOT Sample Data ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
+- [Predictive Analytics on IOT Sample Data ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
 
-- [Device List Card SIMPLIFIES Real Time Device Monitoring on WIoTP Dashboard ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
+- [Device List Card SIMPLIFIES Real Time Device Monitoring on WIoTP Dashboard ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
 
-- [Perform Actions in IBM Watson IoT Platform Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
+- [Perform Actions in IBM Watson IoT Platform Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
 
-- [Use IBM Data Science Experience to detect time series anomalies ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}
+- [Use IBM Data Science Experience to detect time series anomalies ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}

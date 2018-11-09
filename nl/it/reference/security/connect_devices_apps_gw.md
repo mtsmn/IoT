@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-05"
+  years: 2015, 2018
+lastupdated: "2018-07-19"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-04-05"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Connessione di applicazioni, dispositivi e gateway utilizzando l'API
+# Connessione applicazioni, dispositivi e gateway
 {: #connect_devices_apps_gw}
 
 Puoi collegare le applicazioni, i dispositivi e i gateway a {{site.data.keyword.iot_full}} tramite il protocollo MQTT. Puoi anche utilizzare l'API REST HTTP per collegare i dispositivi a {{site.data.keyword.iot_short_notm}}.
@@ -42,7 +42,9 @@ Per collegare i client dispositivo, applicazione e gateway alla tua stanza {{sit
 ## Porta di sicurezza
 {: #client_port_security}
 
-Assicurati che le porte richieste siano aperte e abilitate per la comunicazione. Le porte 8883 e 443 supportano le connessioni sicure utilizzando TLS con il protocollo MQTT e HTTP. La porta 1883 supporta le connessioni non sicure con il protocollo MQTT e HTTP. Le informazioni sul tipo di connessione associata ai numeri di porta viene riepilogata nella seguente tabella:   
+Assicurati che le porte richieste siano aperte e abilitate per la comunicazione. Le porte 8883 e 443 supportano le connessioni sicure utilizzando TLS con il protocollo MQTT e HTTP. La porta 1883 supporta le connessioni non sicure con il protocollo MQTT e HTTP. La porta HTTP 1883 è disabilitata per impostazione predefinita. Per informazioni sulla modifica dell'impostazione predefinita, vedi [Configurazione delle politiche di sicurezza](set_up_policies.html#set_up_policies.html).
+
+Le informazioni sul tipo di connessione associata ai numeri di porta viene riepilogata nella seguente tabella:   
 
 |Tipo di connessione |Numero di porta|
 |:---|:---|
@@ -60,45 +62,37 @@ Quando utilizzi la messaggistica MQTT sicura sulle porte 8883 o 443, le librerie
 
 Alcune librerie client TLS (Transport Layer Security) non supportano i domini che includono un carattere jolly. Se non puoi modificare correttamente le librerie, disabilita il controllo del certificato.
 
-I tuoi requisiti TLS dipendono se ti stai collegando a {{site.data.keyword.iot_short_notm}} con il protocollo MQTT o HTTP. Le seguenti sezioni mostrano le suite di cifratura supportate se viene utilizzato il certificato server predefinito. Se stai utilizzando il tuo proprio certificato,
-le suite di cifratura supportate dipendono dal certificato utilizzato.
+I tuoi requisiti TLS dipendono se ti stai collegando a {{site.data.keyword.iot_short_notm}} con il protocollo MQTT o HTTP. Le seguenti sezioni mostrano le suite di crittografia supportate se viene utilizzato il certificato server predefinito. Se stai utilizzando il tuo proprio certificato,
+le suite di crittografia supportate dipendono dal certificato utilizzato.
 
 ### Requisiti TLS per le connessioni MQTT
 
-{{site.data.keyword.iot_short_notm}} richiede TLS v1.2 e le seguenti suite di cifratura:
+{{site.data.keyword.iot_short_notm}} richiede TLS v1.2. Assicurati che sia consentita almeno una delle seguenti suite di crittografia: 
 
-
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
-- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
-- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
 - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
 
 ### Requisiti TLS per le connessioni HTTP
 
-Se stai utilizzando il certificato server predefinito, {{site.data.keyword.iot_short_notm}} richiede TLS v1.1 o TLS v1.2 e le seguenti suite di cifratura:
+Se stai utilizzando il certificato server predefinito, {{site.data.keyword.iot_short_notm}} richiede TLS v1.2. Assicurati che sia consentita almeno una delle seguenti suite di crittografia: 
 
 
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
 - TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
+- TLS_RSA_WITH_AES_128_CBC_SHA
 
+Aumenta l'efficacia della tua codifica utilizzando i forward secrecy ECDHE o DHE nel tuo elenco di crittografie. 
 
 ## Autenticazione client MQTT
 {: #mqtt_authentication}
@@ -134,6 +128,8 @@ I valori *appId*, *type_id*, *device_type* e *device_id* non devono essere maggi
 **Note:**
 - Quando ti colleghi al servizio Quickstart, l'autenticazione non è richiesta.
 - Non hai bisogno di registrare un'applicazione prima del collegamento.
+
+Per informazioni sul formato delle sottoscrizioni condivise, consulta [Connettività MQTT per le applicazioni](../../applications/mqtt.html).
 
 
 ### Connessione delle applicazioni utilizzando MQTT

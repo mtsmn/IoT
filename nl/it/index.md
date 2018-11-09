@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-08-29"
 
 ---
 
@@ -23,7 +23,8 @@ lastupdated: "2018-05-08"
 
 Prima di collegare i dispositivi utilizzando i dati, registra un account {{site.data.keyword.Bluemix_notm}} e crea un'istanza del servizio {{site.data.keyword.iot_short_notm}} nella tua organizzazione {{site.data.keyword.Bluemix_notm}}. Puoi creare un'istanza {{site.data.keyword.iot_short_notm}} direttamente dalla pagina [{{site.data.keyword.iot_short_notm}} nel catalogo dei servizi IBM Cloud ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
 
-Per informazioni dettagliate su come registrare un account in {{site.data.keyword.Bluemix_notm}}, configura le regioni e le altre impostazioni di gestione dell'account, consulta [Gestione del tuo account IBM Cloud](https://console.ng.bluemix.net/docs/admin/account.html#signup).
+Per informazioni dettagliate su come registrare un account in {{site.data.keyword.Bluemix_notm}}, configurare le regioni e altre impostazioni di gestione dell'account, consulta [Signing up for IBM Cloud](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
+
 
 Puoi configurare la tua istanza {{site.data.keyword.iot_short_notm}} dal dashboard. Per aprire il dashboard, vai alla tua istanza del servizio {{site.data.keyword.iot_short_notm}} in  {{site.data.keyword.Bluemix_notm}} e fai quindi clic su **Launch**.
 
@@ -62,7 +63,7 @@ For a quick getting started example, see the [Using Rules and Actions with IBM W
 ## Passo 2: Crea applicazioni che utilizzano i tuoi dati del dispositivo
 {: #develop_applications}
 
-Crea e collega le tue applicazioni per utilizzare i dati del dispositivo. 
+Crea e collega le tue applicazioni per utilizzare i dati del dispositivo.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:   
 - Esplora la [documentazione dello sviluppatore dell'applicazione](applications/api.html) e la documentazione API [{{site.data.keyword.iot_short_notm}}](reference/api.html).

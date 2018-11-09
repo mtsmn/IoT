@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-06-13"
+  years: 2016, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -17,7 +17,18 @@ lastupdated: "2017-06-13"
 
 Puoi migliorare la sicurezza per abilitare la creazione, la definizione e l'invio di notifiche sulla sicurezza della connessione del dispositivo. Con questa sicurezza migliorata, vengono utilizzati i certificati e l'autenticazione TLS (transport layer security) in aggiunta all'utilizzo di token e ID utente utilizzati da {{site.data.keyword.iot_short_notm}} per determinare come e dove i dispositivi si connettono alla piattaforma.
 
-## Certificati
+## Elenchi di revoche di certificati (CRL) e certificati client
+{: #CRLs}
+
+Gli elenchi di revoche di certificati (CRL) sono supportati per le configurazioni che utilizzano i certificati client per autenticare i dispositivi. L'ubicazione specificata come punto di distribuzione del CRL deve supportare l'accesso HTTP o HTTPS e il sito deve essere raggiungibile. La connessione client viene rifiutata se non è possibile raggiungere il punto di distribuzione del CRL o se il CRL non è valido o non è stato trovato nel punto di distribuzione. 
+ 
+
+I certificati client devono essere firmati dai certificati dell'autorità di certificazione (CA, Certificate Authority) con "Certificate Sign" specificato nella sezione "X509v3 Key Usage" in "X509v3 extensions". Per utilizzare i CRL per revocare i certificati client, il certificato CA che firma un certificato client deve includere anche "CRL Sign" nella sezione "X509v3 Key Usage" in "X509v3 extensions". Questa configurazione consente al certificato CA di emettere e firmare aggiornamenti del CRL quando richiesto. Solo il CRL specificato nel punto di distribuzione del certificato client viene utilizzato per determinare se un certificato è stato revocato.
+
+Assicurati di verificare i certificati e i CRL, in particolare se generi i tuoi propri certificati e CRL invece di utilizzare i certificati da un'autorità di certificazione riconosciuta.
+
+
+## Configurazione dei certificati
 {: #certificates}
 
 Quando i certificati vengono abilitati, durante la comunicazione tra i dispositivi e il server, a tutti i dispositivi che non dispongono di certificati validi configurati nelle impostazioni di sicurezza non viene consentito l'accesso, anche se utilizzano password e ID utente validi.

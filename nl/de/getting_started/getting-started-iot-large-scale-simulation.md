@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-08"
+  years: 2017, 2018
+lastupdated: "2018-08-18"
 
 ---
 
@@ -13,11 +13,13 @@ lastupdated: "2017-11-08"
 {:screen: .screen}
 {:tip: .tip}
 
-# Anleitung 4: Große Anzahl von Geräten simulieren
+# Anleitung 3: Große Anzahl von Geräten simulieren
 In der ersten Anleitung haben Sie einen Basisgerätesimulator konfiguriert, um manuell einzelne oder mehrere Laufbänder zu simulieren. In dieser Anleitung wird auf dieser Simulation aufgebaut, indem eine große Anzahl selbstausführender Simulatoren zu Ihrer Umgebung hinzugefügt wird, um die Analyse und die Überwachung in einer realistischeren Umgebung mit mehreren Geräten zu testen.
 {:shortdesc}
 
-**Wichtig:** Für die Anwendung sind 512 MB Speicherplatz erforderlich, was das standardmäßig zugeordnete Speicherplatzvolumen und auch das Speicherplatzvolumen überschreitet, das für kostenlose Testkonten (einschließlich Bluemix-Testkonto und -Standardkonto) bereitgestellt wird. Inhaber von Subskriptionskonten und nutzungsabhängigen Konten können den zugeordneten Speicherplatz auf 512 MB erhöhen. Inhaber kostenloser Testkonten müssen ihr System auf ein Subskriptionskonto oder ein nutzungsabhängiges Konto aufrüsten. Weitere Informationen zu den {{site.data.keyword.Bluemix_notm}}-Kontotypen finden Sie in [Kontotypen](/docs/pricing/index.html#pricing).
+**Wichtig:** Für die Anwendung sind 512 MB Speicherplatz erforderlich, was das standardmäßig zugeordnete Speicherplatzvolumen und auch das Speicherplatzvolumen überschreitet, das für kostenlose Testkonten (einschließlich {{site.data.keyword.Bluemix}}-Testkonto und -Standardkonto) bereitgestellt wird. Inhaber von Subskriptionskonten und nutzungsabhängigen Konten können den zugeordneten Speicherplatz auf 512 MB erhöhen. Inhaber kostenloser Testkonten müssen ihr System auf ein Subskriptionskonto oder ein nutzungsabhängiges Konto aufrüsten. Weitere Informationen zu den {{site.data.keyword.Bluemix_notm}}-Kontotypen finden Sie in [Kontotypen](/docs/pricing/index.html#pricing).
+
+**Hinweis:** Bluemix ist jetzt IBM Cloud. Weitere Informationen finden Sie im [IBM Cloud-Blog](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link").
 
 ## Übersicht und Ziel
 {: #overview}
@@ -37,7 +39,7 @@ Wenn Sie die Anweisungen in der vorliegenden Anleitung ausführen, dann gehen Si
 - Verwenden Sie Cloud Foundry zur Bereitstellung einer Node-RED-basierten und webhookfähigen Anwendung für einen Gerätesimulator.
 - Verwenden Sie API-Aufrufe zur Erstellung und Registrierung von Geräten, zum Publizieren von Geräteereignissen und zum Löschen von Geräten.
 
-**Wichtig:** Die Simulation einer großen Anzahl von Geräten, die gleichzeitig Gerätedaten an {{site.data.keyword.iot_short_notm}} senden, kann mit dem Verbrauch großer Datenvolumen verbunden sein. Sie können das Dashboard {{site.data.keyword.iot_short_notm}} *Nutzung* verwenden, um zu überwachen, welche Datenvolumen von Ihren Geräten und Anwendungen verbraucht werden. Die Metriken werden in Intervallen von zwei Stunden aktualisiert.
+**Wichtig:** Die Simulation einer großen Anzahl von Geräten, die gleichzeitig Gerätedaten an {{site.data.keyword.iot_full}} senden, kann mit dem Verbrauch großer Datenvolumen verbunden sein. 
 
 ## Voraussetzungen
 {: #prereqs}  
@@ -62,10 +64,10 @@ Führen Sie die folgenden Schritte aus, um Ihre App manuell zu erstellen und ber
 
 1. Klonen Sie das GitHub-Repository der Beispielapp, das in *Lektion 4* beschrieben wird.  
 Verwenden Sie das bevorzugte Git-Tool, um das folgende Repository zu klonen:  
-https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 Verwenden Sie in der Git-Shell den folgenden Befehl:
 ```bash
-$ git clone https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+$ git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 ```
 3. Konfigurieren Sie die Anwendung für Ihre Umgebung, indem Sie die Datei 'manifest.yml' bearbeiten.  
 Zu bearbeitende Elemente:
@@ -177,7 +179,7 @@ Wenn Sie den Einsatz von REST-API-Befehlen zum Erstellen, Löschen oder Simulier
 
 Sie können die Schnittstelle des Node-RED-Ablaufs oder die REST-API der Anwendung benutzen, um die folgenden Tasks auszuführen.
 
-### Node-RED  
+### Geräte mithilfe von Node-RED erstellen und verbinden  
 Gehen Sie wie folgt vor, um mehrere Geräte zu registrieren:  
 1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an:  
 [https://bluemix.net ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://bluemix.net){: new_window}.
@@ -190,13 +192,8 @@ Die Node-RED-Schnittstelle wird geöffnet.
 5. Klicken Sie auf **Zu Node-RED-Ablaufeditor wechseln**.
 6. Wählen Sie im Ablaufeditor die Registerkarte für **Gerätetyp und Instanz** aus.
 7. Klicken Sie zum Registrieren von fünf Geräten auf den Einfügeknoten mit der Kennzeichnung **Register 5 motorController devices**.
-8. Überprüfen Sie, ob Ihre Geräte registriert wurden.
- 1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard im Menü die Option **Boards** aus.
- 3. Wählen Sie das Board **Device Centric Analytics** aus.
- 4. Suchen Sie die Karte **Für mich relevante Geräte**.  
-Die Gerätenamen werden angezeigt.
 
-### REST-API  
+### Geräte mithilfe der REST-API erstellen und verbinden  
 Gehen Sie wie folgt vor, um mehrere Geräte zu registrieren:  
 
 1. Erstellen Sie eine HTTP POST-Anforderung an die folgende URL: `ROUTE_URL/rest/devices`.  
@@ -217,30 +214,20 @@ Beispiel: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/devices`
     - Optional: 'authToken' gibt das Berechtigungstoken an, mit dem die Geräte registriert werden.
     - Optional: Wird 'chunkSize' nicht angegeben, dann wird standardmäßig die Einstellung '500' verwendet. Für 'chunksize' muss ein Wert kleiner als 'numberDevices' angegeben werden, der außerdem einen Faktor von 'numberDevices' darstellt.
     - 'deviceName' gibt das Muster für 'deviceID' für die erstellten Geräte an.
-2. Überprüfen Sie, ob Ihre Geräte registriert wurden.
- 1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard im Menü die Option **Boards** aus.
- 3. Wählen Sie das Board **Device Centric Analytics** aus.
- 4. Suchen Sie die Karte **Für mich relevante Geräte**.  
-Die Gerätenamen werden angezeigt.
 
 ## Schritt 4 - Geräteereignisse simulieren
 {: #step4}
 
 Da die simulierten Geräte bei {{site.data.keyword.iot_short_notm}} registriert sind, können Sie den Simulator jetzt ausführen, um mit dem Senden von Geräteereignissen zu beginnen.
 
-### Node-RED  
+### Geräteereignisse mithilfe von Node-RED simulieren  
 Gehen Sie wie folgt vor, um Geräteereignisse zu senden:  
 1. Wählen Sie im Node-RED-Ablaufeditor die Registerkarte zum **Simulieren mehrerer Geräte** aus.
 7. Klicken Sie zum Simulieren von fünf Geräten auf den Einfügeknoten mit der Kennzeichnung **Simulate 5 devices**.
-8. Überprüfen Sie, ob Ihre Geräte Daten senden.
- 1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard im Menü die Option **Boards** aus.
- 3. Wählen Sie das Board **Device Centric Analytics** aus.
- 4. Suchen Sie die Karte **Für mich relevante Geräte**.  
- 5. Wählen Sie eines der Geräte aus und überprüfen Sie, ob die aktualisieren Gerätedatenpunkte, die der publizierten Nachricht entsprechen, auf der Karte **Geräteeigenschaften** angezeigt werden.
-  
+ 
 
 
-### REST-API  
+### Geräteereignisse mithilfe der REST-API simulieren  
 Gehen Sie wie folgt vor, um Geräteereignisse zu senden:
 
 1. Erstellen Sie eine HTTP POST-Anforderung an die folgende URL: `ROUTE_URL/rest/runtest`.  
@@ -248,7 +235,7 @@ Beispiel: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/runtest`
  - Geben Sie für 'Content-Type' und 'Accept' den Wert 'application/json' an.  
  - Verwenden Sie die folgenden JSON-Nutzdaten:   
 <pre><code>{  </br>
-"numberDevices":5, </br>
+"numberDevices":5,  </br>
 "numberEvents":10,  </br>
 "timeInterval":1000,  </br>
 "deviceType":"iotp-for-conveyor",  </br>
@@ -259,12 +246,8 @@ Dabei gilt:
     - 'numberEvents' gibt die Anzahl der Ereignisse an, die von jedem der simulierten Geräte gesendet werden.
     - 'timeInterval' gibt den Abstand der Ereignisse in Millisekunden an.
     - 'deviceType' ist der Gerätetyp, für den Sie simulierte Geräte erstellt haben.
-    - 'deviceName' ist das Muster für 'deviceID' für die erstellten Geräte.
-8. Überprüfen Sie, ob Ihre Geräte Daten senden.
- 1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard im Menü die Option **Boards** aus.
- 3. Wählen Sie das Board **Device Centric Analytics** aus.
- 4. Suchen Sie die Karte **Für mich relevante Geräte**.  
- 5. Wählen Sie eines der Geräte aus und überprüfen Sie, ob die aktualisieren Gerätedatenpunkte, die der publizierten Nachricht entsprechen, auf der Karte **Geräteeigenschaften** angezeigt werden.   
+    - 'deviceName' gibt das Muster für 'deviceID' für die erstellten Geräte an.
+ 
 
 ## Schritt 5 - Geräte löschen
 {: #deleting}
@@ -273,11 +256,7 @@ Dabei gilt:
 Gehen Sie wie folgt vor, um Geräte zu löschen:  
 1. Wählen Sie im Node-RED-Ablaufeditor die Registerkarte für **Gerätetyp und Instanz** aus.
 2. Klicken Sie zum Löschen von fünf Geräten auf den Einfügeknoten mit der Kennzeichnung **Delete 5 devices**.
-3. Überprüfen Sie, ob Ihre Geräte gelöscht wurden.
- 1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard im Menü die Option **Boards** aus.
- 3. Wählen Sie das Board **Device Centric Analytics** aus.
- 4. Suchen Sie die Karte **Für mich relevante Geräte**.  
- 5. Überprüfen Sie, dass die Geräte nicht mehr aufgelistet werden.  
+
 
 
 ### REST-API  
@@ -291,21 +270,13 @@ Beispiel: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevic
 "deviceType":"iot-conveyor-belt",  
 "deviceName": "belt"  
 }</code></pre>
-2. Überprüfen Sie, ob Ihre Geräte gelöscht wurden.
- 1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard im Menü die Option **Boards** aus.
- 3. Wählen Sie das Board **Device Centric Analytics** aus.
- 4. Suchen Sie die Karte **Für mich relevante Geräte**.  
- 5. Überprüfen Sie, dass die Geräte nicht mehr aufgelistet werden.  
+  
 
 
 ## Weitere Schritte
 {: @whats_next}  
 Springen Sie zu einem anderen Thema, das für Sie von Interesse ist:
-- [Anleitung 2: Grundlegende Echtzeitregeln und -aktionen verwenden](getting-started-iot-rules.html)  
-Nachdem Sie das Laufband erfolgreich konfiguriert, es mit {{site.data.keyword.iot_short_notm}} verbunden und Daten gesendet haben, sollten Sie mit der Nutzung der Daten beginnen, indem Sie Regeln und Aktionen verwenden.
-
-- [Anleitung 3: Gerätedaten überwachen](getting-started-iot-monitoring.html)  
+- [Anleitung 2: Gerätedaten überwachen](getting-started-iot-monitoring.html)  
 Nachdem Sie nun mindestens ein Gerät verbunden und mit der effizienten Nutzung der Gerätedaten begonnen haben, sollten Sie nun eine Gruppe von Geräten überwachen.
-
 - [Weitere Informationen zu {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [Weitere Informationen zu {{site.data.keyword.iot_short_notm}}-APIs](/docs/services/IoT/reference/api.html){:new_window}

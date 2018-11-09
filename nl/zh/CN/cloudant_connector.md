@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-10-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -54,15 +54,18 @@ lastupdated: "2017-10-18"
 }
 
 ```
+消息从 {{site.data.keyword.iot_short_notm}} 发送到 {{site.data.keyword.cloudant_short_notm}} 时，MQTT 设备用于将消息发送到 {{site.data.keyword.iot_short_notm}} 的服务质量 (QoS) 不适用。通常，消息会发送到 {{site.data.keyword.cloudant_short_notm}} 一次。在很罕见的情况下，可能某条消息会发送多次或者根本不发送。 
 
 ## 开始之前  
 {: #byb}
 
 将 {{site.data.keyword.cloudant_short_notm}} 连接到 {{site.data.keyword.iot_short}} 服务之前，请完成以下任务：
 
-- 使用 {{site.data.keyword.Bluemix_notm}}“目录”，在 {{site.data.keyword.iot_short_notm}} 所在的 {{site.data.keyword.Bluemix_notm}} 空间中设置 {{site.data.keyword.cloudant_short_notm}}。
+- 使用 {{site.data.keyword.Bluemix_notm}}“目录”在 {{site.data.keyword.iot_short_notm}} 所在的 {{site.data.keyword.Bluemix_notm}} 空间中设置 {{site.data.keyword.cloudant_short_notm}}。
 
 确保您在已通过 {{site.data.keyword.Bluemix_notm}} 登录的 {{site.data.keyword.Bluemix_notm}} 组织中具有开发者特权。如果没有通过 {{site.data.keyword.Bluemix_notm}} 登录，或者在此 {{site.data.keyword.Bluemix_notm}} 组织中不具有开发者特权，那么您无法授权绑定 {{site.data.keyword.cloudant_short_notm}} 和 {{site.data.keyword.iot_short_notm}}。
+
+## 使用 {{site.data.keyword.iot_short_notm}} 仪表板将 {{site.data.keyword.cloudant_short_notm}} 服务绑定到 {{site.data.keyword.iot_short_notm}}
 
 要连接 {{site.data.keyword.cloudant_short_notm}}，请完成以下步骤：
 
@@ -78,12 +81,12 @@ lastupdated: "2017-10-18"
 
   c. 选择用于确定数据库名称的选项。数据库名称将为 `iotp_<orgID>_<dbname>_<bucket_name>` 其中：
 
- +  * `<orgID>` 是组织标识。
- +  * `<dbname>` 是您为数据库名称中由“`数据库名称`”字段控制的这一部分选择的值。
- +  * `<bucket_name>` 是根据您为“`存储区时间间隔`”字段选择的值确定的字符串：
- +    * 对于“`天`”存储区时间间隔，`<bucket_name>` 将为 `yyyy-mm-dd`。例如，`2016-07-06` 表示 2016 年 7 月 6 日的事件。
- +    * 对于“`周`”存储区时间间隔，`<bucket_name>` 将为 `yyyy-'w'ww`，其中 `'w'ww` 指示第几周。例如，`2016-w03` 表示 2016 年第 3 周的事件。
- +    * 对于“`月`”存储区时间间隔，`<bucket_name>` 将为 `yyyy-mm`。例如，`2016-07` 表示 2016 年 7 月的事件。
+   * `<orgID>` 是组织标识。
+   * `<dbname>` 是您为数据库名称中由“`数据库名称`”字段控制的这一部分选择的值。
+   * `<bucket_name>` 是根据您为“`存储区时间间隔`”字段选择的值确定的字符串：
+     * 对于“`天`”存储区时间间隔，`<bucket_name>` 将为 `yyyy-mm-dd`。例如，`2016-07-06` 表示 2016 年 7 月 6 日的事件。
+     * 对于“`周`”存储区时间间隔，`<bucket_name>` 将为 `yyyy-'w'ww`，其中 `'w'ww` 指示第几周。例如，`2016-w03` 表示 2016 年第 3 周的事件。
+     * 对于“`月`”存储区时间间隔，`<bucket_name>` 将为 `yyyy-mm`。例如，`2016-07` 表示 2016 年 7 月的事件。
 
 5. 单击**授权**。
 6. 单击“授权”对话框中的**确认**。

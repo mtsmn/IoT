@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-10"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -50,7 +50,7 @@ Per accedere alla documentazione dell'API di messaggistica HTTP {{site.data.keyw
 ## Pubblicazione di eventi e comandi
 {: #event_command_publication}
 
-In aggiunta all'utilizzo del protocollo di messaggistica MQTT, puoi anche configurare le tue applicazioni a pubblicare eventi e comandi per {{site.data.keyword.iot_short_notm}} nell'HTTP utilizzando uno dei seguenti comandi API REST HTTP:
+In aggiunta all'utilizzo del protocollo di messaggistica MQTT, puoi anche configurare le tue applicazioni per pubblicare eventi e comandi su {{site.data.keyword.iot_short_notm}} tramite HTTP utilizzando uno dei seguenti comandi API REST HTTP:
 
 ### Richiesta POST event non sicura
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>

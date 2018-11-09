@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -66,7 +66,7 @@ L'exemple de code suivant présente le format standard d'un package d'extension 
 
 ### Ajout d'un package de gestion des terminaux personnalisé
 
-Vous pouvez ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} ou de l'API.
+Vous pouvez ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de nord {{site.data.keyword.iot_short_notm}} ou de l'API.
 
 Pour ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} :
 
@@ -75,7 +75,7 @@ Pour ajouter un package de gestion des terminaux personnalisé à l'aide du tabl
 3. Cliquez sur le bouton **Ajouter un package**.
 4. Sélectionnez votre fichier de package et cliquez sur **Ouvrir**.
 
-Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la documentation de l'API [{{site.data.keyword.iot_short_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la documentation de l'API [{{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Propriétés de package d'extension
 
@@ -128,7 +128,7 @@ Utilisez les commandes d'API REST {{site.data.keyword.iot_short_notm}} suivantes
 - Pour supprimer un package d'extension de gestion des terminaux :
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-Pour plus d'informations sur les API REST pour les packages d'extension de gestion des terminaux, voir la documentation de l'[API V2 {{site.data.keyword.iot_short_notm}}  ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Pour plus d'informations sur les API REST pour les packages d'extension de gestion des terminaux, voir la documentation de l'[API V2 {{site.data.keyword.iot_short_notm}}  ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ## Prise en charge des actions de gestion des terminaux personnalisées
@@ -468,4 +468,4 @@ Utilisez les demandes d'API suivantes pour gérer vos terminaux :
 
 Les recettes suivantes décrivent le flux requis pour gérer les extensions de gestion des terminaux :
 
-- La recette [Device Management Extension Packages in WIoT Platform ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} explique comment enregistrer un terminal géré auprès de {{site.data.keyword.iot_short}} afin qu'il puisse recevoir et traiter des actions d'extension de gestion des terminaux. Les exemples de code décrits dans la recette sont écrits à l'aide de la bibliothèque client Python.
+- La recette [Device Management Extension Packages in WIoT Platform ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} explique comment enregistrer un terminal géré auprès de {{site.data.keyword.iot_short}} afin qu'il puisse recevoir et traiter des actions d'extension de gestion des terminaux. Les exemples de code décrits dans la recette sont écrits à l'aide de la bibliothèque client Python.

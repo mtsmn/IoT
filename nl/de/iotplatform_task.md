@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -39,8 +39,9 @@ Sie können Geräte im {{site.data.keyword.iot_short_notm}}-Dashboard einzeln hi
 
 Gehen Sie wie folgt vor, um ein Gerät über das {{site.data.keyword.iot_short_notm}}-Dashboard hinzuzufügen:
 
-1. Klicken Sie auf die Kachel des {{site.data.keyword.iot_short_notm}}-Service in Ihrem {{site.data.keyword.Bluemix}}-Dashboard.
-
+1. Wählen Sie in der IBM Cloud-Konsole **IoT** im Menü aus und klicken Sie auf den Link für {{site.data.keyword.iot_short_notm}}.  
+2. Melden Sie sich an oder klicken Sie auf **Für Erstellung registrieren**.  
+3. Wählen Sie auf der {{site.data.keyword.iot_short_notm}}-Seite eine Region, eine Organisation und einen Bereich aus und klicken Sie auf **Erstellen**.  
 2. Klicken Sie auf der Serviceseite auf **Starten**, um mit der Verwaltung Ihrer {{site.data.keyword.iot_short_notm}}-Organiation zu beginnen.
 
   Die {{site.data.keyword.iot_short_notm}}-Webkonsole wird in einer neuen Browserregisterkarte unter der folgenden URL geöffnet:

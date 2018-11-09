@@ -16,11 +16,11 @@ lastupdated: "2017-03-13"
 # 实时 IoT 数据分析
 {: #analytics}  
 
-**重要信息：**我们即将推出的 Beta 版中提供了对 IoT 设备数据定义规则的新方法，这是更为广泛的变更计划的一部分，旨在改进 {{site.data.keyword.iot_full}} 交付规则和操作的方式。
+**重要信息：**作为更广泛的更改计划的一部分，我们将推出 Beta，以一种全新的方式对 IoT 设备数据定义规则，以改进 {{site.data.keyword.iot_full}} 交付规则和操作的方式。
 
 要了解更多信息，请查看博客帖子 [An alternative approach to defining Rules on IoT data ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}。
 
-要开始定义您自己的规则，请查看[创建嵌入式规则 (Beta)](information_management/im_rules.html) 文档。
+要开始定义自己的规则，请参阅[创建嵌入式规则 (Beta)](information_management/im_rules.html) 文档。
 
 ## 关于实时 IoT 数据分析
 

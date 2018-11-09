@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-13"
+  years: 2017, 2018
+lastupdated: "2018-01-18"
 
 ---
 
@@ -13,12 +13,10 @@ lastupdated: "2017-10-13"
 {:pre: .pre}
 
 
-# 资源级别访问控制概述 (Beta)
+# 资源级别访问控制概述
 {: #RLAC_overview}
 
 资源级别的访问控制使您能够控制对管理设备的用户和 API 密钥访问权。您可以使用资源组来指定每个用户或 API 密钥可管理的组织中的设备。有关如何配置资源级别访问控制的信息，请参阅[配置资源级别访问控制](rlac.html#configure_RLAC)。
-
-**重要信息：**{{site.data.keyword.iot_full}} 资源级别访问控制功能只作为受限 Beta 程序的一部分提供。未来更新可能会包含与此功能当前版本不兼容的更改。请尝试此功能，[让我们了解您的想法 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
 
 ## 资源级别访问控制概念 
 {: #RLAC_concepts}
@@ -58,7 +56,7 @@ lastupdated: "2017-10-13"
 ### 资源
 {: #resources}
 
-资源是主体对其执行操作的实体。主体请求对资源进行授权平台访问。设备是资源级别访问控制 Beta 发行版中唯一支持的资源。
+资源是主体对其执行操作的实体。主体请求对资源进行授权平台访问。 
 
 ### 操作
 {: #actions}
@@ -118,7 +116,7 @@ API 密钥是用于调用 {{site.data.keyword.iot_short_notm}} 平台 HTTP API �
 {: #RLAC_enforced_APIs}
 如果启用资源级别的访问控制，那么仅当调用者可以访问指定的设备时，此部分中包括的与设备相关的 API 才有效。
 
-### 设备 API（个别）
+### 设备 API（单个）
 
 **列出特定类型的设备**
 
@@ -277,3 +275,9 @@ API 密钥是用于调用 {{site.data.keyword.iot_short_notm}} 平台 HTTP API �
     GET /api/v0002/device/types/${typeId}/devices/${deviceId}/events/${eventId}
 
 如果调用者无法访问设备，那么返回 404 错误。
+
+**获取设备的逻辑接口**
+
+    GET /api/v0002/device/types/{typeId}/devices/{deviceId}/state/{logicalInterfaceId}
+
+如果设备不在调用者的组中，那么返回 404 错误。

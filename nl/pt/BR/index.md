@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-08-29"
 
 ---
 
@@ -23,7 +23,8 @@ O {{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} fornece 
 
 Antes de conectar dispositivos e usar dados, registre-se para uma conta do {{site.data.keyword.Bluemix_notm}} e crie uma instância do serviço {{site.data.keyword.iot_short_notm}} em sua organização do {{site.data.keyword.Bluemix_notm}}. É possível criar uma instância do {{site.data.keyword.iot_short_notm}} diretamente na página [{{site.data.keyword.iot_short_notm}} no Catálogo de serviços do IBM Cloud ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
 
-Para obter informações detalhadas sobre como inscrever-se para uma conta no {{site.data.keyword.Bluemix_notm}}, configurar regiões e outras configurações de gerenciamento de conta, veja [Gerenciando sua conta do IBM Cloud](https://console.ng.bluemix.net/docs/admin/account.html#signup).
+Para obter informações detalhadas sobre como se inscrever para uma conta no {{site.data.keyword.Bluemix_notm}}, configurar regiões e outras configurações de gerenciamento de conta, veja [Inscrevendo-se para o IBM Cloud](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
+
 
 É possível instalar e configurar sua instância do {{site.data.keyword.iot_short_notm}} no painel. Para abrir o painel, acesse sua instância de serviço do {{site.data.keyword.iot_short_notm}} no {{site.data.keyword.Bluemix_notm}} e, em seguida, clique em **Ativar**.
 

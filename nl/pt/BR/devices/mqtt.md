@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-21"
+  years: 2015, 2018
+lastupdated: "2018-01-22"
 
 ---
 
@@ -94,9 +94,9 @@ Suporte para gerenciamento de ciclo de vida de dispositivo é opcional. O Protoc
 
 ### Níveis de qualidade de serviço e sessão limpa
 
-Os dispositivos gerenciados podem publicar mensagens que tenham um nível de qualidade de serviço (QoS) 0 ou 1.
+Os dispositivos gerenciados podem publicar mensagens que tenham um nível de qualidade de serviço (QoS) de 0, 1 ou 2.
 
-As mensagens com QoS=0 podem ser descartadas e não persistem após a reinicialização do servidor de sistema de mensagens. As mensagens com QoS=1 podem ser enfileiradas e persistem após a reinicialização do servidor de sistema de mensagens. A durabilidade da assinatura determina se uma solicitação será enfileirada. O parâmetro ``cleansession`` da conexão que fez a assinatura determina a durabilidade da assinatura.  
+As mensagens com QoS=0 podem ser descartadas e não persistem após a reinicialização do servidor de sistema de mensagens. As mensagens com QoS=1 podem ser enfileiradas e persistem após a reinicialização do servidor de sistema de mensagens. A durabilidade da assinatura determina se uma solicitação será enfileirada. O parâmetro ``cleansession`` da conexão que fez a assinatura determina a durabilidade da assinatura. Os dispositivos podem publicar mensagens em QoS2, mas o servidor de gerenciamento de dispositivo publica e assina em QoS1, portanto, as mensagens de resposta são somente QoS1.
 
 O {{site.data.keyword.iot_short_notm}} publica solicitações que têm um nível de QoS (qualidade de serviço) igual a 1 para suportar o enfileiramento de mensagens. Para enfileirar mensagens enviadas enquanto um dispositivo gerenciado não está conectado, configure o dispositivo para não usar sessões limpas, configurando o parâmetro ``cleansession`` como false.
 

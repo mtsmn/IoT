@@ -28,7 +28,6 @@ Rôle d'utilisateur | Description
 ------------- | -------------
 Administrateur | Rôle de superutilisateur qui accorde un accès à toutes les API liées aux utilisateurs. Les administrateurs ne peuvent pas accéder à des opérations qui sont limitées à des terminaux et à des applications.
 Opérateur | Destiné aux utilisateurs de l'organisation principale. Accorde un accès à la plupart des opérations d'organisation, de contrôle d'accès, de service de tiers et de gestion des risques.
-
 Développeur | Accorde un accès illimité aux opérations de terminal, de journal, de cache, d'historique et de service de tiers. Il fournit un accès limité aux opérations d'organisation, de contrôle d'accès et de gestion des risques.
 Lecteur | Rôle d'utilisateur par défaut. Accorde un accès limité aux opérations disponibles pour tous les utilisateurs.
 

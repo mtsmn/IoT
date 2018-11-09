@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-04-24"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
+
 ---
 
 {:new_window: target="\_blank"}
@@ -15,8 +16,7 @@ lastupdated: "2017-04-24"
 {: #gettingstartedtemplate}
 <!-- Provide an appropriate ID above -->
 
-通过使用 {{site.data.keyword.iot_short_notm}} Starter GitHub 项目开始使用 {{site.data.keyword.iot_full}}。通过使用该入门模板，您可以快速模拟设备，创建卡，生成数据，开始分析数据并在 {{site.data.keyword.iot_short_notm}} 仪表板中显示数据。  
-{:shortdesc}
+通过使用 {{site.data.keyword.iot_short_notm}} Starter GitHub 项目开始使用 {{site.data.keyword.iot_full}}。{:shortdesc}
 
 ## 概述
 {: #overview}  
@@ -24,10 +24,11 @@ lastupdated: "2017-04-24"
 该入门模板会自动部署并连接这些服务：
 <dl>
 <dt>**{{site.data.keyword.iot_short_notm}}**</dt>
-<dd>包含网关管理、设备管理和应用程序访问在内的 IoT Web 服务。通过使用 {{site.data.keyword.iot_short_notm}}，您可以从组织收集已连接的设备数据，并运行实时数据分析。</dd>
+<dd>包含网关管理、设备管理和应用程序访问在内的 IoT Web 服务。通过使用 {{site.data.keyword.iot_short_notm}}，您可以从组织收集已连接设备的数据和实时数据。
+</dd>
 <dt>**{{site.data.keyword.sdk4nodefull}}**</dt>
 <dd>Node-RED 在其中运行的运行时环境。</br>有关更多信息，请参阅 [{{site.data.keyword.sdk4nodefull}} 入门模板文档](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html)。</dd>
-<dd>Node-RED 这款工具以全新的有趣方式将硬件设备、API 和在线服务连接在一起。您可以使用 Node-RED 来创建模拟温度调节装置，该装置将模拟数据发送到 {{site.data.keyword.iot_short_notm}} 服务。您可以创建用于在 {{site.data.keyword.iot_short_notm}} 仪表板中显示实时数据的卡。</br>有关更多信息，请参阅 [Node-RED 文档](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered)。</dd>
+<dd>Node-RED 这款工具以全新的有趣方式将硬件设备、API 和在线服务连接在一起。您可以使用 Node-RED 来创建模拟温度调节装置，该装置将模拟数据发送到 {{site.data.keyword.iot_short_notm}} 服务。</br>有关更多信息，请参阅 [Node-RED 文档](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered)。</dd>
 <dt>**{{site.data.keyword.cloudantfull}}**</dt><dd>Node-RED 在其中存储元数据的数据库。</dd>
 </dl>
 
@@ -43,7 +44,7 @@ lastupdated: "2017-04-24"
 <dt>*{{site.data.keyword.Bluemix_notm}} 仪表板*</dt>
 <dd>查看部署状态，阅读文档，并启动仪表板。</dd>
 <dt>*{{site.data.keyword.iot_short_notm}} 仪表板*</dt>
-<dd>定义设备类型，注册设备，监视传入传感器数据，创建数据可视化卡，并查看实时数据可视化。</dd>
+<dd>定义设备类型并注册设备。</dd>
 <dt>*Node-RED*</dt>
 <dd>配置并运行设备模拟器流程，使用其他流程来处理来自 {{site.data.keyword.iot_short_notm}} 的数据。</dd>
 </dl>
@@ -54,7 +55,7 @@ lastupdated: "2017-04-24"
 执行下列步骤以部署该入门模板样本应用程序：
 
 1. 部署入门模板应用程序。
- 1. 单击 <a href="https://bluemix.net/devops/setup/deploy?repository=https://github.com/ibm-watson-iot/iot-platform-bluemix-starter"><img src="https://bluemix.net/devops/graphics/create_toolchain_button.png" height=25></a> 在 Bluemix 中创建新的 Continuous Delivery 工具链：（通过 Continuous Delivery）  
+ 1. 单击**创建工具链**以在 Bluemix 中创建新的 Continuous Delivery 工具链：（通过 Continuous Delivery）  
  **提示：**如果更希望从命令行进行部署，那么可以在 GitHub 的 IBM Watson IoT 组织中[查找 {{site.data.keyword.iot_short_notm}} 入门模板](https://github.com/ibm-watson-iot/iot-platform-bluemix-starter)。
  2. 在系统提示时，登录 IBM Bluemix。
  3. 如果需要，可以选择要部署入门模板应用程序的 Bluemix 组织。
@@ -141,51 +142,6 @@ lastupdated: "2017-04-24"
     3. 单击“调试”选项卡以查看消息。
   8. 在“{{site.data.keyword.iot_short_notm}} 设备信息”页面中，验证在“传感器信息”部分中能否看到设备的数据点。
 
-
-## 步骤 4：在 {{site.data.keyword.iot_short_notm}} 中创建用于显示实时数据的卡  
-{: #createcards}  
-创建板和卡以在 {{site.data.keyword.iot_short_notm}} 仪表板中显示设备数据。有关板和卡的更多信息，请参阅[使用板和卡实现实时数据可视化](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html)。
-
-1. 创建板
-  1. 打开 {{site.data.keyword.iot_short_notm}} 仪表板。  
-  **提示：**如果 {{site.data.keyword.iot_short_notm}} 仪表板尚未在其他选项卡中打开，请返回 {{site.data.keyword.Bluemix_notm}} 仪表板，单击 {{site.data.keyword.iot_short_notm}} 实例的名称，然后单击**启动仪表板**。  
-  2. 创建用于包含模拟设备卡的板。
-    1. 如果未显示“全部板”页面，请在 {{site.data.keyword.iot_short_notm}} 仪表板主菜单中选择**板**，然后单击**新建板**。
-    2. 输入板的名称（例如`住宅环境`），然后单击**下一步**。
-    3. 在下一个页面上，单击**提交**。  
-  3. 单击刚刚创建的板以将其打开。
-2. 创建用于显示温度的卡
-  1. 在“设备”部分中，单击**添加新卡**，然后选择**折线图**卡类型。
-  2. 从设备列表中选择设备，然后单击**下一步**。
-  3. 单击**连接新数据集**。
-  4. 在“创建值卡”页面中，选择或输入下列值，然后单击**下一步**。
-    - 事件：update
-    - 属性：temp
-    - 名称：温度
-    - 类型：浮点数
-    - 单位：°C
-    - 精度：2
-    - 最小：0
-    - 最大：50
-  5. 在“卡预览”页面中，为折线图大小选择 **L**，然后单击**下一步**。
-  6. 在“卡信息”页面中，将卡名称更改为**温度**，然后单击**提交**。   
-温度卡会显示在仪表板上，其中包含实时温度数据的折线图。
-3. 创建用于显示湿度的卡
-  1. 在“设备”部分中，单击**添加新卡**，然后选择**标尺**卡类型。
-  2. 从设备列表中选择设备，然后单击**下一步**。
-  3. 单击**连接新数据集**。
-  4. 在“创建值卡”页面中，选择或输入下列值，然后单击**下一步**。事件：update
-     - 属性：humidity
-     - 名称：湿度
-     - 类型：浮点数
-     - 单位：%
-     - 精度：1
-     - 最小：10
-     - 最大：95
-  5. 在“卡预览”页面中，为标尺大小选择 **M**，然后单击**下一步**。
-  6. 在“卡信息”页面中，将卡名称更改为**湿度**，然后单击**提交**。   
-湿度卡会显示在仪表板上，其中包含显示实时温度数据的标尺。  
-
 <!-- 4. Create a card to display location
   1. Click **Add New Card**, and then select the **Value** card type, which is located in the Devices section.
   2. Select your device from the list, then click **Next**.
@@ -215,9 +171,7 @@ The location card appears on the dashboard and shows the live latitude and longi
 
 ## 后续步骤  
 {: #whats-next}  
-现在您的模拟设备已经在向 {{site.data.keyword.iot_short_notm}} 发送数据，因此您可以继续迭代 IoT 项目。
- - 观察卡是否显示 node-RED 流程所生成的数据。  
-Node-Red 会一直发送数据，直到您将其停止为止。要停止模拟数据，请停止下列步骤：
+现在您的模拟设备已经在向 {{site.data.keyword.iot_short_notm}} 发送数据，因此您可以继续迭代 IoT 项目。Node-Red 会一直发送数据，直到您将其停止为止。要停止模拟数据，请停止下列步骤：
     1.	在 Node-RED 流程编辑器中，双击灰色的**发送数据**节点，将“重复”值设为**时间间隔**，将频率设为每 **3** 秒。
     2. 单击**完成**。
     3. 单击**部署**以部署更改。
@@ -225,8 +179,6 @@ Node-Red 会一直发送数据，直到您将其停止为止。要停止模拟�
  - 连接物理设备。  
 [搜索 IoT 诀窍](https://developer.ibm.com/recipes/?post_type=tutorials&s=watson+iot)以连接如 Raspberry Pi 等物理设备，并将数据发送到 {{site.data.keyword.iot_short_notm}}。
 
- - 体验可视化选项。  
-[部署样本 node.js 应用程序以实现设备数据可视化](https://www.bluemix.net/docs/services/IoT/visualizingdata_sample.html)。
 
  -	密码保护 Node-RED 流程编辑器。   
 缺省情况下，编辑器会为访问和修改流程的所有用户打开。要使用密码保护编辑器，请执行下列任务：

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-19"
+  years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -102,9 +102,9 @@ Le caractère générique `+` MQTT sera utilisé pour `typeId`, `deviceId`, `com
 ## Enregistrement automatique de la passerelle
 {: #auto-reg}
 
-Les terminaux passerelle peuvent enregistrer automatiquement les terminaux qui leur sont connectés. Lorsqu'une passerelle publie un message ou s'abonne à un sujet pour le compte d'un terminal non enregistré, ce terminal est automatiquement enregistré.
+Les terminaux de passerelle peuvent enregistrer automatiquement les terminaux qui leur sont connectés. Lorsqu'une passerelle publie un message ou s'abonne à un sujet pour le compte d'un terminal non enregistré, ce terminal est automatiquement enregistré.
 
-Le nombre de demandes d'enregistrement en attente simultanées provenant des terminaux passerelle ne peut pas être supérieur à 128. Essayer de connecter un grand nombre de nouveaux terminaux peut retarder l'enregistrement des terminaux via la passerelle.
+Le nombre de demandes d'enregistrement en attente simultanées provenant des terminaux de passerelle ne peut pas être supérieur à 128. Essayer de connecter un grand nombre de nouveaux terminaux peut retarder l'enregistrement des terminaux via la passerelle.
 
 **Avertissement**
 
@@ -113,11 +113,8 @@ Si la passerelle ne parvient pas à enregistrer un terminal automatiquement, ell
 ## Notifications de la passerelle
 {: #notification}
 
-Lorsque des erreurs se produisent lors de la validation du sujet de publication ou d'abonnement ou lors de l'enregistrement automatique, une notification est envoyée au terminal passerelle. Une passerelle peut recevoir ces notifications en s'abonnant au sujet suivant, en remplaçant les valeurs `typeId` et `deviceId` :
+Lorsque des erreurs se produisent lors de la validation du sujet de publication ou d'abonnement ou lors de l'enregistrement automatique, une notification est envoyée au terminal de passerelle. Une passerelle peut recevoir ces notifications en s'abonnant au sujet suivant, en remplaçant les valeurs de passerelle `typeId` et `deviceId` :
 
-```
-iot-2/type/**typeId**/id/**deviceId**/notify
-```
 <pre class="pre">iot-2/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/notify</pre>
 {: codeblock}
 
@@ -154,6 +151,8 @@ Une passerelle peut recevoir les notifications suivantes :
 -   Le nombre maximal de terminaux par organisation a été atteint.
 -   Echec de la création du terminal en raison d'erreurs internes.
 
+Si un terminal publie sur une chaîne de rubrique non valide, les valeurs *Device_Type* et *Device_Id* ne sont pas connues et ces paramètres ne sont renvoyés dans le message qui est reçu sur la rubrique de notification.
+
 ## Passerelles gérées
 {: #managed_gateways}
 
@@ -174,7 +173,7 @@ Lorsqu'une passerelle gérée utilise un abonnement durable, les commandes de ge
 
 La passerelle possède la session MQTT, quels que soient les terminaux qui sont derrière elle. Lorsqu'un terminal soumet une demande d'abonnement via une passerelle, la demande ne passe pas par les autres passerelles, que l'option ``cleansession=false`` soit définie ou non.
 
-### Rubriques
+### Sujets
 {: #topics}
 
 Une passerelle gérée doit s'abonner aux sujets suivants pour traiter ses propres demandes et réponses depuis {{site.data.keyword.iot_short_notm}} :
@@ -197,7 +196,7 @@ Une passerelle gérée effectue des publications sur des sujets qui sont propres
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
 {: codeblock}
 
-Pour connaître les autres sujets sur lesquels une passerelle gérée peut effectuer des publications, voir [Protocole de gestion des terminaux](device_mgmt/index.html) et [Demandes de gestion des terminaux](../devices/device_mgmt/requests.html). 
+Pour connaître les autres sujets sur lesquels une passerelle gérée peut effectuer des publications, voir [Protocole de gestion des terminaux](../devices/device_mgmt/index.html) et [Demandes de gestion des terminaux](../devices/device_mgmt/requests.html). 
 - Le protocole reste le même pour les passerelles, si ce n'est que les sujets dont le nom commence par **iotdevice-1/** sont remplacés par :
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}

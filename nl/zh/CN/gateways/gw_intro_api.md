@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2015, 2017
-lastupdated: "2017-10-04"
+ years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -35,10 +35,12 @@ lastupdated: "2017-10-04"
 
 要从连接到 {{site.data.keyword.iot_short_notm}} 的设备提交 ``POST`` 请求，请使用以下其中一个 URL：
 
-### 非安全 POST 请求
+### 用于发布事件的非安全 POST 请求
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-### 安全 POST 请求
+### 用于发布事件的安全 POST 请求
+
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **重要说明：**
@@ -47,7 +49,7 @@ lastupdated: "2017-10-04"
 - 如果未向网关分配*标准网关*角色，那么它可以代表组织中的任何设备发布事件。如果连接到网关的设备未注册，网关会自动注册该设备。
 - 如果想要检查设备授权级别，请分配*标准网关*角色。
 
-有关网关和资源组角色的更多信息，请参阅[网关访问控制 (Beta)](../gateways/gateway-access-control.html)。
+有关网关和资源组角色的更多信息，请参阅[网关访问控制](../gateways/gateway-access-control.html)。
 
 ### 认证
 
@@ -55,8 +57,10 @@ lastupdated: "2017-10-04"
 
 |凭证|必需的输入|
 |:---|:---|
-|用户名| `g/{orgId}/{gwType}/{gwDevId}` 或 `g-{orgId}-{gwType}-{gwDevId}`
-|密码| 注册网关设备时自动生成或手动指定的认证令牌。
+|用户名|`g/{orgId}/{gwType}/{gwDevId}` 或 `g-{orgId}-{gwType}-{gwDevId}`
+|密码|注册网关设备时自动生成或手动指定的认证令牌。
+
+
 
 其中：
 
@@ -81,13 +85,15 @@ lastupdated: "2017-10-04"
 |Content-Type 头|{{site.data.keyword.iot_short_notm}} 中的格式|
 |:---|:---|
 |text/plain|"text"
-|application/json| "json"
-|application/xml| "xml"
+|application/json|"json"
+|application/xml|"xml"
 |application/octet-stream|"bin"
+
+
 
 ### 服务质量
 
-与 MQTT 服务质量“至多一次”传递服务级别 0 类似，HTTP REST 消息传递提供了非持久性消息传递，但它会验证请求是否正确，并在发送 HTTP 响应之前，验证其是否可以传递到服务器。包含 HTTP 状态码 200 的回复将确认消息已传递到服务器。使用“至多一次”MQTT 服务质量级别或 HTTP 同等级别来传递事件消息时，设备或应用程序必须实现重试逻辑以保证传递。
+与 MQTT 服务质量“最多一次”传递服务级别 0 类似，HTTP REST 消息传递提供了非持久性消息传递，但它会验证请求是否正确，并在发送 HTTP 响应之前，验证其是否可以传递到服务器。包含 HTTP 状态码 200 的回复将确认消息已传递到服务器。使用“最多一次”MQTT 服务质量级别或 HTTP 同等级别来传递事件消息时，设备或应用程序必须实现重试逻辑以保证传递。
 
 有关 {{site.data.keyword.iot_short_notm}} 的 MQTT 协议和服务质量级别的更多信息，请参阅 [MQTT 消息传递](../reference/mqtt/index.html)。
 
@@ -96,14 +102,15 @@ lastupdated: "2017-10-04"
 ## 接收命令
 {: #receive_commands}
 
-除了使用 MQTT 消息传递协议外，还可以配置网关设备，以使用 HTTP 消息传递 API 命令通过 HTTP 从 {{site.data.keyword.iot_short_notm}} 接收命令。网关设备可以接收导向到其相关联资源组内设备的命令。有关网关资源组的更多信息，请参阅[网关访问控制 (Beta)](../gateways/gateway-access-control.html)。
+除了使用 MQTT 消息传递协议外，还可以配置网关设备，以使用 HTTP 消息传递 API 命令通过 HTTP 从 {{site.data.keyword.iot_short_notm}} 接收命令。网关设备可以接收导向到其相关联资源组内设备的命令。有关网关资源组的更多信息，请参阅[网关访问控制](../gateways/gateway-access-control.html)。
 
 使用以下某个 URL 提交来自连接到 {{site.data.keyword.iot_short_notm}} 的网关的 ``POST`` 请求：
 
-### 非安全 POST 请求
+### 用于接收命令的非安全 POST 请求
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
-### 安全 POST 请求
+### 用于接收命令的安全 POST 请求
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 

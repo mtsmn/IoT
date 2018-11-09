@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-08-25"
+  years: 2016, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -12,20 +12,28 @@ lastupdated: "2017-08-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Control de acceso de pasarela (Beta)
+# Control de acceso de pasarela
 {: #gateway-access-control}
 
-Los dispositivos de pasarela son una clase especializada de dispositivo y pueden actuar en nombre de otro dispositivo. Los grupos de recursos de pasarela definen los dispositivos de una organización en cuyo nombre puede actuar cada pasarela. Se puede asignar a las pasarelas el rol *Pasarela estándar*. Las pasarelas estándar solo pueden publicar o suscribirse a mensajes en nombre de los dispositivos de su grupo de recursos.
+Los dispositivos de pasarela son una clase especializada de dispositivo y pueden actuar en nombre de otro dispositivo. Los grupos de recursos de pasarela definen los dispositivos de una organización en cuyo nombre puede actuar cada pasarela. Los roles de pasarela determinan la capacidad de la pasarela para registrar dispositivos en la plataforma Watson IoT Platform.
 {: #shortdesc}
 
-**Importante:** La característica de Control de acceso de pasarela de {{site.data.keyword.iot_full}} únicamente está disponible como parte de un programa beta limitado. Las actualizaciones futuras pueden incluir cambios que no son compatibles con la versión actual de esta característica. Pruébela y [denos su opinión ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+Los grupos de recursos se utilizan para permitir a las pasarelas actuar en nombre de un subconjunto de los dispositivos de una organización. Las pasarelas solo pueden publicar o suscribirse a mensajes para ellas mismas y en nombre de dispositivos que se encuentran en su grupo de recursos. 
 
-Para obtener información sobre la publicación de sucesos desde dispositivos de pasarela mediante API, consulte [API de mensajería HTTP para dispositivos de pasarela](../gateways/gw_intro_api.html).
+Cuando se crea una nueva pasarela, también se crea un grupo de recursos predeterminado y se asigna a la pasarela. El grupo de recursos predeterminado no se puede eliminar de la pasarela. Las pasarelas existentes sin ningún grupo de recursos pueden continuar actuando en nombre de todos los dispositivos de la organización.
+
+Para obtener información sobre la publicación de sucesos desde dispositivos de pasarela utilizando las API, consulte [API HTTP para dispositivos de pasarela](gw_api.html).
 
 ## Asignación de un rol a una pasarela
 {: #gw_roles}
 
-La asignación de un rol a una pasarela es obligatoria para que la pasarela tenga un grupo de recursos. Las pasarelas sin un grupo de recursos pueden actuar en nombre de todos los dispositivos de la organización. Al asignar el rol *Pasarela estándar* se crea de forma automática un nuevo grupo de recursos para la pasarela. Una vez se asigna una pasarela a un grupo de recursos, solo puede actuar en nombre de los dispositivos de ese grupo de recursos y de sí misma, incluso si se modifica su rol.
+Para asignar una pasarela a un grupo de recursos, debe asignar en primer lugar la pasarela a un rol. Las pasarelas creadas recientemente tienen asignado el rol *Pasarela privilegiada* de forma predeterminada y se asignan a un grupo de recursos predeterminado. Las pasarelas con el rol privilegiado pueden registrar automáticamente dispositivos, que se añaden al grupo de recursos predeterminado.
+
+Las pasarelas con el rol *Pasarela estándar* no pueden registrar automáticamente dispositivos. 
+
+Una vez que se ha asignado a una pasarela un grupo de recursos, la pasarela solo puede actuar el nombre de los dispositivos de dicho grupo de recursos y en sí misma, incluso si su rol se cambia.
+
+Para obtener más información sobre los roles de pasarela, consulte [Roles de pasarela](../roles_index.html#gateway_roles).
 
 Para asignar un rol a una pasarela, utilice la siguiente API, donde *${clientID}* es el ID de cliente codificado como URL en formato *d:${orgId}:${typeId}:${deviceId}* para dispositivos o *g:${orgId}:${typeId}:${deviceId}* para pasarelas:
 

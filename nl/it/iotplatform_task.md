@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -39,8 +39,9 @@ Puoi aggiungere un dispositivo alla volta dal dashboard {{site.data.keyword.iot_
 
 Per aggiungere un dispositivo dal dashboard {{site.data.keyword.iot_short_notm}}:
 
-1. Fai clic sul tile del servizio {{site.data.keyword.iot_short_notm}} nel tuo dashboard {{site.data.keyword.Bluemix}}.
-
+1. Nella console di IBM Cloud, seleziona **IoT** dal menu e fai clic sul link {{site.data.keyword.iot_short_notm}}.  
+2. Effettua l'accesso o fai clic su **Sign up to Create**.  
+3. Nella pagina {{site.data.keyword.iot_short_notm}}, scegli una regione, un'organizzazione e uno spazio e fai clic su **Create**.  
 2. Nella pagina del servizio, fai clic su **Launch** per avviare la gestione della tua organizzazione {{site.data.keyword.iot_short_notm}}.
 
   Si apre la console web {{site.data.keyword.iot_short_notm}} in una nuova scheda del browser al seguente URL:
@@ -142,21 +143,21 @@ Per ulteriori informazioni sulla connessione del tuo dispositivo, consulta [Conn
 
 La documentazione API [Organization Administration ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} contiene inoltre le informazioni richieste.
 
-## Ripristino dei dispositivi eliminati (Beta) 
+## Ripristino dei dispositivi eliminati (Beta)
 {: #restore_device}
 
 **Importante:** la funzione del ripristino dei dispositivi {{site.data.keyword.iot_short_notm}} è disponibile solo come parte di un programma beta limitato. Futuri aggiornamenti possono includere modifiche incompatibili con la versione corrente di questa funzione. Provala e [facci sapere cosa ne pensi ![Icona link esterno](../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
-Se un dispositivo viene eliminato per errore, puoi ripristinarlo entro 14 giorni.  
+Se un dispositivo viene eliminato per errore, puoi ripristinarlo entro 14 giorni. 
 
-Quando il dispositivo viene eliminato, viene creato un dispositivo “memento”. Il memento è una copia del documento del dispositivo ed è disponibile per 14 giorni, dopodiché viene eliminato. 
+Quando il dispositivo viene eliminato, viene creato un dispositivo “memento”. Il memento è una copia del documento del dispositivo ed è disponibile per 14 giorni, dopodiché viene eliminato.
 
 La seguente API di ripristino di un dispositivo ti abilita ad utilizzare il memento per ripristinare una versione precedente del dispositivo:
 
     POST /archive/device/types/{typeId}/devices/{deviceId}/restore
 
 
-Puoi utilizzare la seguente API per richiamare un elenco di tutti i memento del dispositivo: 
+Puoi utilizzare la seguente API per richiamare un elenco di tutti i memento del dispositivo:
 
     GET /archive/device/types/{typeId}/devices/{deviceId}
 

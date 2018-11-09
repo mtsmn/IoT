@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-07-19"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -12,12 +12,10 @@ lastupdated: "2017-07-19"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Configurando o controle de acesso no nível de recursos (Beta)
+# Configurando o controle de acesso no nível do recurso
 {: #configure_RLAC}
 
-**Importante:** o recurso de controle de acesso de nível de recursos de {{site.data.keyword.iot_full}} está disponível somente como parte de um programa beta limitado. Atualizações futuras podem incluir mudanças incompatíveis com a versão atual desse recurso. Experimente e [nos forneça sua opinião ![External link icon](../../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
-
-O controle de acesso de nível de recursos permite controlar o acesso do usuário e da chave API para gerenciar dispositivos. Você usa grupos de recursos para definir quais dispositivos em uma organização cada usuário ou chave API pode gerenciar. Os usuários e as chaves API podem ser designados a um par de "função para grupos", que define se eles podem executar apenas as operações que são cobertas pela função especificada em dispositivos que estão nos grupos especificados. Para obter mais informações sobre o controle de acesso no nível de recursos, consulte [Visão geral do controle de acesso no nível de recursos](rlac_overview.md) e a [documentação da API de controle de acesso do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}.
+O controle de acesso de nível de recursos permite controlar o acesso do usuário e da chave API para gerenciar dispositivos. Você usa grupos de recursos para definir quais dispositivos em uma organização cada usuário ou chave API pode gerenciar. Os usuários e as chaves API podem ser designados a um par de "função para grupos", que define se eles podem executar apenas as operações que são cobertas pela função especificada em dispositivos que estão nos grupos especificados. Para obter mais informações sobre controle de acesso no nível de recursos, veja [Visão geral do controle de acesso no nível de recursos](rlac_overview.html) e a [Documentação da API de controle de acesso do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}.
 
 ## Configurando o controle de acesso no nível de recursos - fluxo do processo
 {: #RLAC_process}
@@ -26,7 +24,7 @@ O fluxo do processo a seguir é geralmente usado para ativar e usar o controle d
 1. [Criar uma organização](../iotplatform_overview.html#organizations).
 2. [Criar usuários](../add_users.html#adding-new-users) e [Chaves API](../platform_authorization.html#api-key).
 3. [Criar grupos de recursos](rlac.html#create_delete_group).
-4. [Designar mapeamentos de função para grupos para os usuários e as chaves API](rlac.html#assign_roletoegroup).
+4. [Designar mapeamentos de função para grupos para os usuários e chaves API](rlac.html#assign_roletogroup).
 5. [Incluir dispositivos nos grupos de recursos](rlac.html#add_device).
 6. [Ativar controle de acesso no nível de recursos](rlac.html#RLAC_enable).
 

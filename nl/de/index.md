@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-08-29"
 
 ---
 
@@ -23,7 +23,8 @@ lastupdated: "2018-05-08"
 
 Bevor Geräte verbunden und Daten verwendet werden können, müssen Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Konto registrieren und eine Instanz des {{site.data.keyword.iot_short_notm}}-Service in Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation erstellen. Sie können eine {{site.data.keyword.iot_short_notm}}-Instanz direkt über die [{{site.data.keyword.iot_short_notm}}-Seite im IBM Cloud-Servicekatalog ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window} erstellen.  
 
-Detaillierte Informationen zur Vorgehensweise beim Anmelden eines Kontos in {{site.data.keyword.Bluemix_notm}}, beim Konfigurieren von Regionen sowie andere Einstellungen für die Kontoverwaltung finden Sie in [IBM Cloud-Konto verwalten](https://console.ng.bluemix.net/docs/admin/account.html#signup).
+Detaillierte Informationen zur Vorgehensweise beim Anmelden eines Kontos in {{site.data.keyword.Bluemix_notm}}, beim Konfigurieren von Regionen sowie andere Einstellungen für die Kontoverwaltung finden Sie in [Für IBM Cloud registrieren](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
+
 
 Sie können Ihre {{site.data.keyword.iot_short_notm}}-Instanz im Dashboard einrichten und konfigurieren. Zum Öffnen des Dashboards wechseln Sie zu Ihrer Instanz des {{site.data.keyword.iot_short_notm}}-Service in {{site.data.keyword.Bluemix_notm}} und klicken Sie anschließend auf **Starten**.
 

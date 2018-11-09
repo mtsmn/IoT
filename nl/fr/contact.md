@@ -19,16 +19,16 @@ Plusieurs options d'assistance s'offrent à vous lorsque vous utilisez {{site.da
 
 ## Forums
 
-* [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} - ajoutez les balises "ibm-cloud" et "watson-iot"à votre publication.
+* [Stack Overflow ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} - ajoutez les balises "ibm-cloud" et "watson-iot"à votre publication.
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} - ajoutez les balises "ibm-cloud" et "watson-iot" à votre publication.
+* [IBM developerWorks dW Answers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} - ajoutez les balises "ibm-cloud" et "watson-iot" à votre publication.
 
 Pour plus d'informations sur l'utilisation des forums, voir la rubrique décrivant [comment obtenir de l'aide](https://www.{DomainName}/docs/support/index.html#getting-help).
 
 
 ## Slack
 
-* [Slack ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-developers.slack.com/){:new_window} - rejoignez le canal #internet-of-things.
+* [Slack ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://ibm-developers.slack.com/){:new_window} - rejoignez le canal #internet-of-things.
 
 
 ## Tickets de demande de service

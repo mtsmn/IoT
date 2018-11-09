@@ -360,7 +360,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
        id="text4147"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4414">Mon terminal</tspan></text>
+         id="tspan4414">My Device</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cfd4dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
@@ -372,7 +372,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
          id="tspan4158"
          x="233.5022"
          y="135.13846"
-         style="-inkscape-font-specification:'sans-serif, Normal';font-family:sans-serif;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">Nom</tspan></text>
+         style="-inkscape-font-specification:'sans-serif, Normal';font-family:sans-serif;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">Name</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fdfdfd;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'sans-serif, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
@@ -383,7 +383,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
          sodipodi:role="line"
          id="tspan4168"
          x="562.03986"
-         y="104.87842">TEMPERATURE UC</tspan></text>
+         y="104.87842">CPU TEMPERATURE</tspan></text>
     <rect
        style="opacity:1;fill:#067f92;fill-opacity:1;stroke:none;stroke-width:1.61300004;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4246"
@@ -402,7 +402,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
          sodipodi:role="line"
          id="tspan4168-8"
          x="855.15515"
-         y="105.40009">STOCKAGE</tspan></text>
+         y="105.40009">STORAGE</tspan></text>
     <rect
        style="opacity:1;fill:#068375;fill-opacity:1;stroke:none;stroke-width:1.61300004;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4250"
@@ -420,7 +420,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
          sodipodi:role="line"
          id="tspan4168-8-0"
          x="271.14368"
-         y="198.00845">CHARGE UC</tspan></text>
+         y="198.00845">CPU LOAD</tspan></text>
     <rect
        style="opacity:1;fill:#9e215f;fill-opacity:1;stroke:none;stroke-width:1.61300004;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4248"
@@ -438,7 +438,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
          sodipodi:role="line"
          id="tspan4168-8-0-8"
          x="562.94421"
-         y="483.82678">GRAPHIQUE TEMPERATURE UC</tspan></text>
+         y="483.82678">CPU TEMPERATURE GRAPH</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#929ba0;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -449,7 +449,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
          sodipodi:role="line"
          id="tspan4302"
          x="540.42554"
-         y="144.37791">Le seuil est satisfaisant</tspan></text>
+         y="144.37791">Threshold is fair</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#929ba0;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
@@ -458,7 +458,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
        id="text4300-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4322">Le seuil est correct</tspan></text>
+         id="tspan4322">Threshold is good</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#929ba0;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
@@ -467,7 +467,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
        id="text4300-2-9"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4342">Performances</tspan></text>
+         id="tspan4342">Performance</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#142a36;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
@@ -476,7 +476,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
        id="text4300-2-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4352">Température</tspan></text>
+         id="tspan4352">Temperature</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#41d6c3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
@@ -485,7 +485,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
        id="text4300-2-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4362">0,33 %</tspan></text>
+         id="tspan4362">0.33 Percent</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#929ba0;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -496,7 +496,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
          sodipodi:role="line"
          id="tspan4434"
          x="592.48517"
-         y="312.90921">Degrés Celsius</tspan></text>
+         y="312.90921">Centigrades</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#929ba0;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -507,7 +507,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
          sodipodi:role="line"
          id="tspan4463"
          x="926.88232"
-         y="315.45026">Mo</tspan></text>
+         y="315.45026">Mb</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#929ba0;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -527,7 +527,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
        id="text4300-2-7-3-1-5"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4238">CHARGE</tspan></text>
+         id="tspan4238">LOAD</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#929ba0;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
@@ -536,7 +536,7 @@ ABhB2AAY+T97actNDLB/FAAAAABJRU5ErkJggg==
        id="text4300-2-7-3-1-5-8"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4258">STOCKAGE</tspan></text>
+         id="tspan4258">STORAGE</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#fdfdfd;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"

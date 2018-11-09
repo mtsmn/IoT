@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -21,6 +21,8 @@ MessageHub redirecionando eventos de partições usando uma chave de partição.
 é formada concatenando o ID da organização com seis caracteres do {{site.data.keyword.iot_short}} com o tipo de dispositivo e o ID do dispositivo. Os campos de carga útil, incluindo o
 registro de data e hora e o ID do evento, não são usados para formar a chave de partição. Essa configuração assegura que todos os eventos de um dispositivo específico sejam enviados para a
 mesma partição, para que os eventos sejam processados na ordem em que eles são enviados. 
+
+A qualidade de serviço (QoS) que é usada por um dispositivo MQTT para enviar mensagens para o {{site.data.keyword.iot_short_notm}} não se aplica quando as mensagens são enviadas do {{site.data.keyword.iot_short_notm}} para o {{site.data.keyword.messagehub}}. Geralmente, uma mensagem é enviada para o {{site.data.keyword.messagehub}} uma vez. Raramente, pode ser possível que uma mensagem seja enviada mais de uma vez ou nem seja enviada.
 
 ## Antes de iniciar  
 {: #byb}

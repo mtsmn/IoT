@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-08-25"
+  years: 2016, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -12,20 +12,28 @@ lastupdated: "2017-08-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Contrôle d'accès aux passerelles (bêta)
+# Contrôle d'accès aux passerelles
 {: #gateway-access-control}
 
-Les terminaux passerelle représentent une classe spécialisée de terminal et sont habilités à agir pour le compte d'autres terminaux. Les groupes de ressources de passerelle définissent les terminaux d'une organisation pour le compte desquels les passerelles sont autorisées à agir. Les passerelles peuvent se voir attribuer le rôle *Passerelle standard*. Les passerelles standard peuvent uniquement publier ou s'abonner à des messages pour le compte de terminaux présents dans leur groupe de ressources.
+Les terminaux de passerelle représentent une classe spécialisée de terminal et sont habilités à agir pour le compte d'autres terminaux. Les groupes de ressources de passerelle définissent les terminaux d'une organisation pour le compte desquels les passerelles sont autorisées à agir. Les rôles de passerelle déterminent la capacité de la passerelle à enregistrer les terminaux dans Watson IoT Platform.
 {: #shortdesc}
 
-**Important :** La fonction {{site.data.keyword.iot_full}} Contrôle d'accès aux passerelles est disponible uniquement dans le cadre d'un programme bêta limité. Il est possible que des mises à jour ultérieures incluent des modifications incompatibles avec la version en cours de cette fonction. Essayez-la et [dites-nous ce que vous en pensez![External link icon](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+Les groupes de ressources sont utilisés pour permettre aux passerelles d'agir pour le compte d'un sous-ensemble des terminaux d'une organisation. Les passerelles peuvent uniquement publier ou souscrire des messages pour eux-mêmes et pour le compte de terminaux présents dans leur groupe de ressources. 
 
-Pour plus d'informations sur la publication d'événements à partir de terminaux passerelle à l'aide d'API, voir [API de messagerie HTTP pour des terminaux passerelle](../gateways/gw_intro_api.html).
+Lorsqu'une nouvelle passerelle est créée, un groupe de ressources par défaut est également créé et affecté à la passerelle. Le groupe de ressources par défaut ne peut pas être supprimé de la passerelle. Les passerelles existantes qui ne possèdent pas de groupes de ressources peuvent continuer d'agir pour le compte de tous les terminaux de l'organisation.
+
+Pour obtenir des informations sur la publication d'événements à partir de terminaux de passerelle à l'aide d'API, voir [API HTTP pour les terminaux de passerelle](gw_api.html).
 
 ## Affectation d'un rôle à une passerelle
 {: #gw_roles}
 
-L'affectation d'un rôle à une passerelle est obligatoire pour la création d'un groupe de ressources pour cette dernière. Les passerelles sans groupe de ressources peuvent agir pour le compte de tous les terminaux de l'organisation. L'affectation du rôle *Passerelles standard* crée automatiquement un nouveau groupe de ressources pour la passerelle. Dès lors d'une passerelle est affectée à un groupe de ressources, elles peut uniquement agir pour le compte des terminaux de ce groupe de ressources et pour elle-même si son rôle est modifié.
+Afin d'affecter une passerelle à un groupe de ressources, vous devez d'abord affecter la passerelle à un rôle. Les passerelles nouvellement créées sont affectées au rôle *Passerelle privilégiée* par défaut et sont assignées à un groupe de ressources par défaut. Les passerelles disposant d'un rôle privilégié peuvent enregistrer automatiquement les terminaux qui sont ajoutés au groupe de ressources par défaut.
+
+Les passerelles possédant le rôle *Passerelle standard* ne peuvent pas enregistrer automatiquement les terminaux. 
+
+Une fois qu'une passerelle a été affectée à un groupe de ressources, elle peut uniquement agir pour le compte des terminaux dans ce groupe de ressources et pour elle-même, même si sont rôle est modifié.
+
+Pour plus d'informations sur les rôles de passerelle, voir [Rôles de passerelle](../roles_index.html#gateway_roles).
 
 Pour attribuer un rôle à une passerelle, utilisez l'API suivante où *${clientID}* est l'ID client avec codage d'URL au format *d:${orgId}:${typeId}:${deviceId}* pour les terminaux ou *g:${orgId}:${typeId}:${deviceId}* pour les passerelles :
 
@@ -56,7 +64,7 @@ Request Response: 200
 }
 ```
 
-Pour plus d'informations sur le schéma de demande, consultez la [documentation de l'API {{site.data.keyword.iot_full}} Limited Gateway ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}.
+Pour plus d'informations sur le schéma de demande, consultez la [documentation de l'API {{site.data.keyword.iot_full}} Limited Gateway ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}.
 
 ## Ajout et retrait de terminaux dans un groupe de ressources
 {: #devices_groups}
@@ -67,7 +75,7 @@ Pour qu'une passerelle dotée du rôle *Passerelle standard* puisse agir pour le
  PUT /bulk/devices/{groupId}/add
 ```
 
-Le groupe auquel ajouter des terminaux doit être spécifié dans le chemin de la demande, et les terminaux à ajouter doivent être spécifiés dans le corps de la demande. Pour plus d'informations sur le schéma de demande et les réponses, consultez la [documentation de l'API {{site.data.keyword.iot_short_notm}} Limited Gateway ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}.
+Le groupe auquel ajouter des terminaux doit être spécifié dans le chemin de la demande, et les terminaux à ajouter doivent être spécifiés dans le corps de la demande. Pour plus d'informations sur le schéma de demande et les réponses, consultez la [documentation de l'API {{site.data.keyword.iot_short_notm}} Limited Gateway ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}.
 
 Pour retirer plusieurs terminaux d'un groupe de ressources, utilisez l'API suivante :
 
@@ -75,7 +83,7 @@ Pour retirer plusieurs terminaux d'un groupe de ressources, utilisez l'API suiva
 PUT /bulk/devices/{groupId}/remove
 ```
 
-Les terminaux spécifiés dans le corps de la demande seront retirés du groupe spécifié dans le chemin de la demande. Pour plus d'informations sur le schéma de demande et la réponse, consultez la [documentation de l'API {{site.data.keyword.iot_short_notm}} Limited Gateway ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}.
+Les terminaux spécifiés dans le corps de la demande seront retirés du groupe spécifié dans le chemin de la demande. Pour plus d'informations sur le schéma de demande et la réponse, consultez la [documentation de l'API {{site.data.keyword.iot_short_notm}} Limited Gateway ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}.
 
 ## Recherche d'un groupe de ressources
 {: #finding_groups}
@@ -94,7 +102,7 @@ L'ID d'un groupe de ressources attribué à une passerelle peut être obtenu en 
 GET /authorization/devices/${clientId}
 ```
 
-Cette API renvoie l'identificateur unique du ou des groupes de ressources affecté(s) à ce terminal. Vous trouverez davantage d'informations sur cette API dans la [documentation de l'API {{site.data.keyword.iot_short_notm}} Limited Gateway ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
+Cette API renvoie l'identificateur unique du ou des groupes de ressources affecté(s) à ce terminal. Vous trouverez davantage d'informations sur cette API dans la [documentation de l'API {{site.data.keyword.iot_short_notm}} Limited Gateway ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
 
 
 ## Analyse d'un groupe de ressources
@@ -108,7 +116,7 @@ Pour renvoyer les propriétés complètes de tous les terminaux du groupe de res
 GET /bulk/devices/{groupId}
 ```
 
-Cette API renvoie la liste des propriétés complètes de tous les membres du groupe de ressources spécifié. Pour plus d'informations sur le schéma de demande et les réponses, et la façon de parcourir les  résultats, consultez la [documentation de l'API {{site.data.keyword.iot_short_notm}} Limited Gateway ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}.
+Cette API renvoie la liste des propriétés complètes de tous les membres du groupe de ressources spécifié. Pour plus d'informations sur le schéma de demande et les réponses, et la façon de parcourir les  résultats, consultez la [documentation de l'API {{site.data.keyword.iot_short_notm}} Limited Gateway ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}.
 
 Pour renvoyer uniquement les identificateurs uniques des membres du groupe de ressources, utilisez l'API suivante :
 

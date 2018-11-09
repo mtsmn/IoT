@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-10"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -125,7 +125,7 @@ MP$08VKz!8rXwnR-Q*
 
 - 发布命令
 - 预订命令
-- 在 **deviceType** 或 **appId** 组件中使用 MQTT“任意”通配符 (+)
+- 在 **device_id** 或 **appId** 组成部分中使用 MQTT“任意”通配符 (+)
 - 通过传输层安全性 (TLS) 建立 MQTT 连接
 - 可扩展应用程序
 

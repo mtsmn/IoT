@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-09-18"
 ---
 
@@ -71,7 +71,7 @@ Per simulare i dati del sensore reali nelle tue organizzazioni utilizzando il si
 1. [Distribuisci l'applicazione web del simulatore Weather Sensors con un'istanza di {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window} e segui le istruzioni dettagliate.
 
    Per ulteriori informazioni su Weather Sensors, consulta [the Weather Sensors simulator guide ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
-2. Attendi che la distribuzione venga completata e passa al dashboard Bluemix.
+2. Attendi il completamento della distribuzione e quindi accedi al dashboard di IBM Cloud.
 3. Avvia il servizio {{site.data.keyword.iot_short_notm}} "wiotp-for-weather-sensors-simulator" che è stato creato dal processo di distribuzione.
 4. Procedi al [Passo 2. Configura il connettore al database](#WA_config_db).
 
@@ -79,7 +79,7 @@ Per simulare i dati del sensore reali nelle tue organizzazioni utilizzando il si
 ### Utilizzo dei dati del sensore da un file CSV di esempio già pronto
 {: #WA_sensor_premade}
 
-Per simulare i dati del sensore reali nelle tue organizzazioni utilizzando un file CSV di esempio già pronto: 
+Per simulare i dati del sensore reali nelle tue organizzazioni utilizzando un file CSV di esempio già pronto:
 
 1. [Download the Cloudant CSV file ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator/releases/download/v1.0/cloudant.csv){: new_window}.
 2. Procedi al [Passo 5. Configura WA e visualizza i dati](#WA_import_data).
@@ -91,13 +91,13 @@ Per simulare i dati del sensore reali nelle tue organizzazioni utilizzando un fi
 Per utilizzare {{site.data.keyword.cloudant_short_notm}} con Watson Analytics, devi configurare l'archivio dei dati della piattaforma in modo che venga utilizzato Cloudant NoSQL DB come servizio storico.
 
 1. Nel dashboard {{site.data.keyword.cloudant_short_notm}}, fai clic su **Extensions** nella barra di navigazione.
-2. In **Historical Data Storage**, fai clic su **Setup**. La sezione **Configure Historical Data Storage** elenca tutti i servizi Cloudant NoSQL DB disponibili nello stesso spazio Bluemix come {{site.data.keyword.cloudant_short_notm}}.
+2. In **Historical Data Storage**, fai clic su **Setup**. La sezione **Configure Historical Data Storage** elenca tutti i servizi Cloudant NoSQL DB disponibili nello stesso spazio IBM Cloud di {{site.data.keyword.cloudant_short_notm}}.
 3. Seleziona il servizio Cloudant NoSQL DB che desideri collegare.
 4. Specifica le seguenti opzioni di configurazione Cloudant NoSQL DB:
   - Intervallo bucket = Day
   - Fuso orario zone = UTC
   - Nome database = default
-5. Fai clic su **Done** e conferma l'autorizzazione alla connessione al servizio Cloudant. Assicurati di aver abilitato i popup nel tuo browser per poter avere accesso alla finestra di conferma. Dopo aver correttamente configurato Cloudant NoSQL DB, lo stato di Spazio di archiviazione dei dati cronologici viene modificato in Configurato e i dati del dispositivo vengono archiviati in {{site.data.keyword.cloudant_short_notm}} NoSQL DB. 
+5. Fai clic su **Done** e conferma l'autorizzazione alla connessione al servizio Cloudant. Assicurati di aver abilitato i popup nel tuo browser per poter avere accesso alla finestra di conferma. Dopo aver correttamente configurato Cloudant NoSQL DB, lo stato di Spazio di archiviazione dei dati cronologici viene modificato in Configurato e i dati del dispositivo vengono archiviati in {{site.data.keyword.cloudant_short_notm}} NoSQL DB.
 6. Procedi al [Passo 3. Esegui il simulatore](#run_simulator).
 
 
@@ -117,7 +117,7 @@ Il simulatore pubblica i dati dei sensori meteo reali, da 17 stazioni meteo ubic
 5. Procedi al [Passo 4. Esporta il database Cloudant](#WA_export_csv).
 
 
-## Passo 4. Esporta il database Cloudant 
+## Passo 4. Esporta il database Cloudant
 {: #WA_export_csv}
 
 Quando configuri un {{site.data.keyword.cloudant_short_notm}} NoSQL DB per archiviare i dati del dispositivo, vengono automaticamente creati tre database dal connettore. Un database viene creato per l'intervallo bucket corrente, uno per l'intervallo in entrata e un database per la configurazione. Quando viene raggiunto il termine di un intervallo, i dati del dispositivo vengono archiviati nel database bucket per il nuovo intervallo e viene creato un nuovo database per il bucket successivo.
@@ -179,7 +179,7 @@ Per esportare il database Cloudant nel formato CSV:
 6. Procedi al [Passo 5. Configura WA e visualizza i dati](#WA_import_data).
 
 
-## Passo 5. Configura WA e visualizza i dati 
+## Passo 5. Configura WA e visualizza i dati
 {: #WA_import_data}
 
 Per configurare WA e avviare la visualizzazione dei dati:
@@ -204,7 +204,7 @@ Questa sezione illustra gli esempi di analisi dei dati utilizzando WA come strum
 
 In questa sezione impariamo come popolare i dispositivi IoT e rispondiamo a domande come:
 
-1. Quanti dispositivi sono stati riportati? 
+1. Quanti dispositivi sono stati riportati?
 2. Quale è la suddivisione dei dispositivi per tipo di dispositivo?
 3. Quanti report ha un dispositivo?
 4. Quanti report sono stati inviati ad ogni dispositivo?
@@ -240,7 +240,7 @@ In questo esempio, contiamo il numero di report effettuati da un dispositivo per
 
 *"How many rows are there? filtered by deviceId: Ahuza"*
 
-**Nota:** non hai bisogno di digitare i nomi campo completi. WA tenta di indovinare il nome del campo completo, ma i valori di filtro (ad es. "Ahuza") devono essere scritti in modo completo e correttamente. Se non visualizzi un suggerimento corretto con il filtro, ai clic sul link **Show Next** e prova la domanda *"How many rows are there?"*. Quindi, apri il diagramma, fai clic sulla casella **Multiplier** sotto il diagramma e seleziona il parametro deviceId dall'elenco. Deseleziona tutti i deviceId non pertinenti.
+**Nota:** non hai bisogno di digitare i nomi campo completi. WA tenta di indovinare il nome del campo completo, ma i valori di filtro (ad es. "Ahuza") devono essere scritti in modo completo e correttamente. Se non visualizzi un suggerimento corretto con il filtro, fai clic sul link **Show Next** o prova la domanda *"How many rows are there?"*. Quindi, apri il diagramma, fai clic sulla casella **Multiplier** sotto il diagramma e seleziona il parametro deviceId dall'elenco. Deseleziona tutti i deviceId non pertinenti.
 
 Questo è il risultato che mostra che ci sono 25 righe o report effettuati dal dispositivo Ahuza:
 
@@ -301,11 +301,11 @@ Questo è il risultato che mostra il confronto del numero di righe:
 
 **Quale è la correlazione tra due sensori?**
 
-In questo esempio impariamo come avvengono le correlazioni nell'ambiente confrontando le misurazioni da due sensori del dispositivo in tutti i dispositivi del tipo di dispositivo. Per completare questa analisi, copia e incolla o digita una delle seguenti domande in WA: 
+In questo esempio impariamo come avvengono le correlazioni nell'ambiente confrontando le misurazioni da due sensori del dispositivo in tutti i dispositivi del tipo di dispositivo. Per completare questa analisi, copia e incolla o digita una delle seguenti domande in WA:
 
 *"What is the relationship between NO2 and NOX?"* o *"How are the values of NO2 and NOX associated?"*
 
-Questo è il risultato che mostra la correlazione tra i due sensori: 
+Questo è il risultato che mostra la correlazione tra i due sensori:
 
 ![Risultato correlazione sensori](images/sensor_relationship.png)
 
@@ -321,18 +321,18 @@ Questo è il risultato che mostra un sottoinsieme limitato di dispositivi:
 In questa sezione studiamo i parametri specifici riportati da un dispositivo specifico, rispondendo alle seguenti domande:
 
 1.	Quale è il valore Medio/Min/Mas riportato?
-2.	Posso visualizzare un istogramma di un output del sensore di un dispositivo? 
+2.	Posso visualizzare un istogramma di un output del sensore di un dispositivo?
 3.	Come si modifica nel tempo un valore del sensore del dispositivo specifico?
 4.	Come si confrontano nel tempo i valori del sensore di due dispositivi?
-5.	Come si confrontano nel tempo i valori del sensore dello stesso dispositivo? 
-6.	Quale è la correlazione tra due sensori di un dispositivo? 
+5.	Come si confrontano nel tempo i valori del sensore dello stesso dispositivo?
+6.	Quale è la correlazione tra due sensori di un dispositivo?
 
 
 **Quale è il valore Medio/Min/Mas riportato?**
 
 In questo esempio, riepiloghiamo i parametri numerici riportati da un dispositivo specifico in una tabella per imparare, ad esempio, come l'intervallo di valori viene percepito nell'ambiente o come si verificano i malfunzionamenti del sensore.
 
-Questa visualizzazione deve essere integrata manualmente, utilizzando la seguente procedura: 
+Questa visualizzazione deve essere integrata manualmente, utilizzando la seguente procedura:
 
 1)	Nella sezione **Create your own visualization**, seleziona **Table**.
 2)	Fai clic sul pulsante con il segno più "create new column" e seleziona **Calculation**.
@@ -340,23 +340,23 @@ Questa visualizzazione deve essere integrata manualmente, utilizzando la seguent
 4)	Fai clic con il tasto destro sul titolo della nuova colonna, seleziona un tipo di aggregazione (min, max o average) e chiudi la finestra **Properties**.
 6)	Ripeti il processo per aggiungere più di una colonna e nascondi la barra dei dati.
 7)	Fai clic su **Columns** e seleziona **Measures**.
-8)	Fai clic su **Aggregated by** e seleziona tutti i calcoli che hai aggiunto. 
+8)	Fai clic su **Aggregated by** e seleziona tutti i calcoli che hai aggiunto.
 9)	Fai clic su **Done**.
 10)	Nella casella del moltiplicatore, seleziona il parametro deviceId e i dispositivi rilevanti da visualizzare.
 11)	Salva la visualizzazione.
 
-Questo è il risultato che mostra i valori specificati: 
+Questo è il risultato che mostra i valori specificati:
 
 ![Risultato approfondito valori report](images/deep_avg_min_max.png)
 
 
 **Posso visualizzare un istogramma di un output del sensore di un dispositivo? **
 
-In questo esempio valutiamo il comportamento di un sensore del dispositivo specifico, identificando la distribuzione dei valori percepiti nell'ambiente. Possiamo utilizzare questa visualizzazione per imparare come l'ambiente viene percepito dal sensore così come i malfunzionamenti nel sensore. Per completare questa analisi, copia e incolla o digita una delle seguenti domande in WA: 
+In questo esempio valutiamo il comportamento di un sensore del dispositivo specifico, identificando la distribuzione dei valori percepiti nell'ambiente. Possiamo utilizzare questa visualizzazione per imparare come l'ambiente viene percepito dal sensore così come i malfunzionamenti nel sensore. Per completare questa analisi, copia e incolla o digita una delle seguenti domande in WA:
 
 *"What is the distribution of TEMP? filtered by deviceId: Ahuza"* o *"How does the number of Rows compare by TEMP? filtered by deviceId: Ahuza"*
 
-Questo è il risultato che mostra i dati del sensore del dispositivo nell'istogramma: 
+Questo è il risultato che mostra i dati del sensore del dispositivo nell'istogramma:
 
 ![Risultato istogramma dell'output del sensore del dispositivo](images/deep_histogram.png)
 
@@ -367,18 +367,18 @@ In questo esempio, impariamo come le letture di un sensore specifico di un dispo
 
 *"What is the trend of TEMP over time? filtered by deviceId: Ahuza".*
 
-Questo è il risultato che mostra la tendenza dei dati del sensore nel tempo: 
+Questo è il risultato che mostra la tendenza dei dati del sensore nel tempo:
 
 ![Risultato tendenza dati sensore dispositivo nel tempo](images/deep_sensor_trend.png)
 
 
 **Come si confrontano nel tempo i valori del sensore di due dispositivi?**
 
-In questo esempio, confrontiamo le tendenze delle letture del sensore di diversi dispositivi, identificando le correlazioni tra i dispositivi per individuare le anomalie, i malfunzionamenti del dispositivo e così via. Per completare questa analisi, copia e incolla o digita una delle seguenti domande in WA: 
+In questo esempio, confrontiamo le tendenze delle letture del sensore di diversi dispositivi, identificando le correlazioni tra i dispositivi per individuare le anomalie, i malfunzionamenti del dispositivo e così via. Per completare questa analisi, copia e incolla o digita una delle seguenti domande in WA:
 
 *"What is the trend of TEMP over time by deviceId?"* o *"What is the trend of TEMP over time by deviceId?  filtered by deviceId: Ahuza, Igud"*
 
-Questo è il risultato che mostra il confronto dei valori del sensore nel tempo: 
+Questo è il risultato che mostra il confronto dei valori del sensore nel tempo:
 
 ![Confronto dati sensore tra dispositivi nel tempo](images/deep_sensor_compare.png)
 
@@ -397,25 +397,25 @@ In questo esempio visualizziamo reciprocamente la tendenza di due sensori del di
 
 *"What is the trend of NO2 and NOX over time by deviceId?  filtered by deviceId: Ahuza"*
 
-Questo è il risultato che mostra la tendenza di due sensori del dispositivo nel tempo: 
+Questo è il risultato che mostra la tendenza di due sensori del dispositivo nel tempo:
 
 ![Confronto della tendenza di due sensori del dispositivo nel tempo](images/deep_two_devices.png)
 
 
 **Quale è la correlazione tra due sensori di un dispositivo? **
 
-In questo esempio impariamo come avvengono le correlazioni nell'ambiente confrontando le misurazioni da due sensori del dispositivo. Per completare questa analisi, copia e incolla o digita una delle seguenti domande in WA: 
+In questo esempio impariamo come avvengono le correlazioni nell'ambiente confrontando le misurazioni da due sensori del dispositivo. Per completare questa analisi, copia e incolla o digita una delle seguenti domande in WA:
 
 *"What is the relationship between NO2 and NOX? filtered by deviceId: Ahuza"* o *"How are the values of NO2 and NOX associated? filtered by deviceId: Ahuza"*
 
-Questo è il risultato che mostra la correlazione tra due sensori di un dispositivo: 
+Questo è il risultato che mostra la correlazione tra due sensori di un dispositivo:
 
 ![Confronto tra due sensori di un dispositivo](images/deep_two_sensors.png)
 
 
 ## Operazioni successive
 
-Per ulteriori informazioni su WA, consulta le seguenti risorse: 
+Per ulteriori informazioni su WA, consulta le seguenti risorse:
 - [Watson Analytics Developer Center ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/watson-analytics/){: new_window}
 - [Watson Analytics community ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/communities/analytics/watson-analytics/){: new_window}
 - [Watson Analytics forum ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://community.watsonanalytics.com/discussions/spaces/15/view.html){: new_window}

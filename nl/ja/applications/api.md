@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-10"---
+  years: 2015, 2018
+lastupdated: "2018-01-11"
+
+---
 
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}
@@ -74,7 +76,7 @@ Quickstart サービスにデバイスまたはアプリケーションを接続
 
 ### 認証
 
-すべての要求には許可ヘッダーを組み込む必要があります。基本認証が、唯一サポートされる方法です。アプリケーションは、API キーを使用して認証されます。アプリケーションが {{site.data.keyword.iot_short_notm}} HTTP REST API を使用して要求を行う場合、以下の資格情報が必要です。
+すべての要求には許可ヘッダーを組み込む必要があります。 基本認証が、唯一サポートされる方法です。 アプリケーションは、API キーを使用して認証されます。 アプリケーションが {{site.data.keyword.iot_short_notm}} HTTP REST API を使用して要求を行う場合、以下の資格情報が必要です。
 
 ```
 ユーザー名 = API キー (例: a/orgId/a84ps90Ajs)
@@ -83,18 +85,18 @@ Quickstart サービスにデバイスまたはアプリケーションを接続
 
 ### Content-Type 要求ヘッダー
 
-`Content-Type` 要求ヘッダーを要求に含める必要があります。以下の表に、サポート対象タイプがどのように {{site.data.keyword.iot_short_notm}} 内部フォーマットにマップされるかを示します。
+`Content-Type` 要求ヘッダーを要求に含める必要があります。 以下の表に、サポート対象タイプがどのように {{site.data.keyword.iot_short_notm}} 内部フォーマットにマップされるかを示します。
 
-|Content-Type ヘッダー|{{site.data.keyword.iot_short_notm}} での形式 |
+|Content-Type ヘッダー|{{site.data.keyword.iot_short_notm}} での形式|
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml| "xml"
+|application/xml | "xml"
 |application/octet-stream|"bin"
 
 ### サービス品質
 
-HTTP REST メッセージングは、MQTT サービス品質における「最高 1 回」送信サービス・レベル 0 と同じように、非永続メッセージ送信を行いますが、HTTP 応答を送信する前に、要求が正しいことと、サーバーに送信可能であることを検証します。HTTP 状況コード 200 を含む応答によって、メッセージがサーバーに届いたことを確認できます。「最高 1 回」の MQTT サービス品質レベルまたは HTTP の同等機能を使用してイベント・メッセージを送信する場合、デバイスまたはアプリケーションが送信を保証するための再試行ロジックを実装している必要があります。
+HTTP REST メッセージングは、MQTT サービス品質における「最高 1 回」送信サービス・レベル 0 と同じように、非永続メッセージ送信を行いますが、HTTP 応答を送信する前に、要求が正しいことと、サーバーに送信可能であることを検証します。 HTTP 状況コード 200 を含む応答によって、メッセージがサーバーに届いたことを確認できます。 「最高 1 回」の MQTT サービス品質レベルまたは HTTP の同等機能を使用してイベント・メッセージを送信する場合、デバイスまたはアプリケーションが送信を保証するための再試行ロジックを実装している必要があります。
 
 
 {{site.data.keyword.iot_short_notm}} の MQTT プロトコルおよびサービス品質レベルについて詳しくは、[MQTT メッセージング](../reference/mqtt/index.html)を参照してください。

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-11-29"
+  years: 2016, 2018
+lastupdated: "2018-03-11"
 
 ---
 
@@ -14,6 +14,14 @@ lastupdated: "2016-11-29"
 
 # Sécurisation du serveur de cartes personnalisées
 {: #securing_custom_cards}
+
+**Important :** Nous lançons un nouveau programme bêta proposant une nouvelle façon de définir des règles pour vos données de terminal IoT dans le cadre d'un programme plus vaste de modifications visant à améliorer la manière dont {{site.data.keyword.iot_full}} distribue des règles et des actions.
+
+Pour en savoir plus, consultez l'article de blogue [Une approche alternative pour définir des règles sur les données IoT ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Pour commencer à définir vos propres règles, voir la documentation [Création de règles imbriquées (bêta)](../../information_management/im_rules.html).
+
+## A propos des serveurs de cartes personnalisées
 
 Les serveurs de cartes personnalisées sont des serveurs Web standard qui hébergent le code javascript de cartes personnalisées. Pour assurer l'intégrité de votre environnement {{site.data.keyword.iot_short_notm}}, vous devez sécuriser votre serveur de cartes personnalisées en exécutant les étapes de sécurisation des données source de carte décrites dans cette rubrique.
 {:shortdesc}

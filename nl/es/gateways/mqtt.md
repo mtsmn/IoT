@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-19"
+  years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -113,11 +113,8 @@ Si la pasarela no puede registrar un dispositivo automáticamente, no intentará
 ## Notificaciones de pasarelas
 {: #notification}
 
-Cuando se producen errores durante la validación del tema de publicación o suscripción o durante el registro automático, se enviará una notificación al dispositivo de pasarela. Una pasarela puede recibir estas notificaciones si se suscribe al tema siguiente, sustituyendo los valores `typeId` y `deviceId`:
+Cuando se producen errores durante la validación del tema de publicación o suscripción o durante el registro automático, se enviará una notificación al dispositivo de pasarela. Una pasarela puede recibir estas notificaciones suscribiéndose al tema siguiente, sustituyendo los valores de `typeId` y `deviceId` de pasarela:
 
-```
-iot-2/type/**typeId**/id/**deviceId**/notify
-```
 <pre class="pre">iot-2/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/notify</pre>
 {: codeblock}
 
@@ -153,6 +150,8 @@ Una pasarela puede recibir las siguientes notificaciones:
 -   Se ha alcanzado el número máximo de dispositivos por pasarela.
 -   Se ha alcanzado el número máximo de dispositivos por organización.
 -   No se ha podido crear el dispositivo debido a errores internos.
+
+Si un dispositivo publica en una serie de tema no válida, los valores *Device_Type* y *Device_Id* no se conocen, y estos parámetros no se devuelven en el mensaje que se recibe en el tema de notificación.
 
 ## Pasarelas gestionadas
 {: #managed_gateways}
@@ -197,7 +196,7 @@ Una pasarela gestionada publica en los temas específicos del tipo de solicitud 
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
 {: codeblock}
 
-Para otros temas en los que puede publicar una pasarela gestionada, consulte [Protocolo de gestión de dispositivos](device_mgmt/index.html) y [Solicitudes de gestión de dispositivos](../devices/device_mgmt/requests.html). 
+Para otros temas en los que puede publicar una pasarela gestionada, consulte [Protocolo de gestión de dispositivos](../devices/device_mgmt/index.html) y [Solicitudes de gestión de dispositivos](../devices/device_mgmt/requests.html). 
 - El protocolo sigue siendo el mismo para las pasarelas, excepto que cualquier tema que empiece por **iotdevice-1/** en su lugar empezará por:
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}

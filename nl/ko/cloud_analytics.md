@@ -15,11 +15,11 @@ lastupdated: "2018-03-13"
 # 클라우드 분석
 {: #cloud_analytics}
 
-**중요:** {{site.data.keyword.iot_full}}이 규칙과 조치를 제공하는 방식을 향상하기 위해 폭넓은 프로그램 개선의 일부로 사용자의 IoT 디바이스에서 규칙을 정의하는 새로운 방식에 관한 베타를 출시합니다. 
+**중요:** {{site.data.keyword.iot_full}}이 규칙과 조치를 제공하는 방식을 향상하기 위해 폭넓은 프로그램 개선의 일부로 사용자의 IoT 디바이스에서 규칙을 정의하는 새로운 방식에 관한 베타를 출시합니다.
 
-더 자세히 알아보려면 [IoT 데이터에서 규칙 정의를 위한 다른 접근 방법 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window} 블로그 게시물을 확인하십시오. 
+더 자세히 알아보려면 [IoT 데이터에서 규칙 정의를 위한 다른 접근 방법 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window} 블로그 게시물을 확인하십시오.
 
-자체 규칙 정의를 시작하려면 [임베디드 규칙 작성(베타)](information_management/im_rules.html) 문서를 참조하십시오. 
+자체 규칙 정의를 시작하려면 [임베디드 규칙 작성(베타)](information_management/im_rules.html) 문서를 참조하십시오.
 
 
 ## 시작하기 전에
@@ -31,7 +31,7 @@ lastupdated: "2018-03-13"
 
 규칙에서 조건으로 사용할 디바이스 특성이 스키마에 맵핑되었는지 확인하십시오. 자세한 정보는 [디바이스 연결](iotplatform_task.html) 및 [스키마 작성](im_schemas.html)을 참조하십시오.
 
-또한 레시피 [{{site.data.keyword.iot_short}} Cloud Analytics에서 규칙 및 조치 사용(![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window}을 검토하여 Cloud Analytics에서 사용되는 규칙 및 조치를 파악하십시오.
+또한 레시피 [{{site.data.keyword.iot_short}} Cloud Analytics에서 규칙 및 조치 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window}을 검토하여 Cloud Analytics에서 사용되는 규칙 및 조치를 파악하십시오.
 
 ## 규칙 및 조치 관리  
 {: #managing_rules}
@@ -138,11 +138,11 @@ lastupdated: "2018-03-13"
 
 매개변수 |설명
 ---|---
-이름 |경보 대시보드에서 사용되는 조치의 이름입니다.
-설명 |조치에 대한 간략한 설명입니다.
-제목 |이메일의 제목 행입니다. 기본 제목 행은 "IBM Watson IoT 경보: 메일 조치"입니다.
-수신 |경보를 본인에게만 또는 이메일 주소의 쉼표로 분리된 목록으로 발송하도록 선택하십시오. 본인에게 발송하도록 선택하는 경우, 이메일은 자신이 로그인한 {{site.data.keyword.iot_short}}의 이메일 주소로 발송됩니다.
-참조 |없음 또는 이메일 주소의 쉼표로 분리된 목록입니다.
+Name |경보 대시보드에서 사용되는 조치의 이름입니다.
+Description |조치에 대한 간략한 설명입니다.
+Subject |이메일의 제목 행입니다. 기본 제목 행은 "IBM Watson IoT 경보: 메일 조치"입니다.
+To |경보를 본인에게만 또는 이메일 주소의 쉼표로 분리된 목록으로 발송하도록 선택하십시오. 본인에게 발송하도록 선택하는 경우, 이메일은 자신이 로그인한 {{site.data.keyword.iot_short}}의 이메일 주소로 발송됩니다.
+Cc |없음 또는 이메일 주소의 쉼표로 분리된 목록입니다.
 이메일의 본문은 규칙이 트리거된 시점에 디바이스의 메시지로부터 자동으로 작성됩니다.  
 **중요:** 기본적으로, 이메일에는 민감한 정보가 포함될 수 있는 디바이스 데이터가 포함되지 않습니다. 디바이스 데이터를 포함하도록 **데이터 포함** 설정을 변경하십시오.
 
@@ -175,11 +175,11 @@ IFTTT 조치를 사용하여 규칙이 트리거될 때 IFTTT 레시피를 트�
 
 매개변수 |설명
 ---|---
-이름 |경보 대시보드에서 사용되는 조치의 이름입니다.
-설명 |조치에 대한 간략한 설명입니다.
-키 |이벤트를 트리거하는 데 사용할 Maker 채널 키입니다.
-이벤트 |Maker 이벤트의 트리거로서 구성된 이벤트 이름입니다. 서로 다른 트리거로 여러 레시피를 작성할 수 있으며, 여기서 각각의 이벤트 이름은 상이합니다.
-값 1-3 |이러한 매개변수에서 임의의 컨텐츠를 전달할 수 있으며, 이는 IFTTT 레시피의 조치에 전달됩니다. **팁:** [변수 대체](#variable_substitution)를 사용하여 헤더에 추가 데이터를 동적으로 포함할 수 있습니다.
+Name |경보 대시보드에서 사용되는 조치의 이름입니다.
+Description |조치에 대한 간략한 설명입니다.
+Key |이벤트를 트리거하는 데 사용할 Maker 채널 키입니다.
+Event |Maker 이벤트의 트리거로서 구성된 이벤트 이름입니다. 서로 다른 트리거로 여러 레시피를 작성할 수 있으며, 여기서 각각의 이벤트 이름은 상이합니다.
+Value 1-3 |이러한 매개변수에서 임의의 컨텐츠를 전달할 수 있으며, 이는 IFTTT 레시피의 조치에 전달됩니다. **팁:** [변수 대체](#variable_substitution)를 사용하여 헤더에 추가 데이터를 동적으로 포함할 수 있습니다.
 
 #### 예제: IFTTT를 사용하여 Trello 카드 게시 {: #iftttex}
 
@@ -223,12 +223,12 @@ Node-RED 조치를 사용하여 규칙이 트리거될 때 Node-RED 애플리케
 
 매개변수 |설명
 ---|---
-이름 |경보 대시보드에서 사용되는 조치의 이름입니다.
-설명 |조치에 대한 간략한 설명입니다.
+Name |경보 대시보드에서 사용되는 조치의 이름입니다.
+Description |조치에 대한 간략한 설명입니다.
 URL |대상 Node-RED HTTP 입력 노드의 URL입니다.
-사용자 이름 |Node-RED 서비스에서 필요하면 포함됩니다.
-비밀번호 |Node-RED 서비스에서 필요하면 포함됩니다. **중요:** 비밀번호는 일반 텍스트로 전송됩니다.
-본문 |기본적으로, 본문 필드는 [변수 대체](#variable_substitution)에 나열된 모든 변수로 사전에 채워집니다.
+User name |Node-RED 서비스에서 필요하면 포함됩니다.
+Password |Node-RED 서비스에서 필요하면 포함됩니다. **중요:** 비밀번호는 일반 텍스트로 전송됩니다.
+Body |기본적으로, 본문 필드는 [변수 대체](#variable_substitution)에 나열된 모든 변수로 사전에 채워집니다.
 
 #### 예제: Node-RED를 사용하여 문자 메시지 전송
 {: #noderedex}
@@ -262,7 +262,7 @@ URL |대상 Node-RED HTTP 입력 노드의 URL입니다.
  - 이름 - `Send text using Node-RED and Twilio`
  - 설명 - `Send a text message alert to the service engineer.`
  - URL - `http://mynodered.mybluemix.net/RTI-alert`
- - BODY   
+ - 본문   
  ```json
  {"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iot_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}
  ```  
@@ -281,15 +281,15 @@ URL |대상 Node-RED HTTP 입력 노드의 URL입니다.
 
 매개변수 |설명
 ---|---
-이름 |경보 대시보드에서 사용되는 조치의 이름입니다.
-설명 |조치에 대한 간략한 설명입니다.
+Name |경보 대시보드에서 사용되는 조치의 이름입니다.
+Description |조치에 대한 간략한 설명입니다.
 URL |대상 웹훅 사용 서버의 URL입니다. **팁:** [변수 대체](#variable_substitution)를 사용하여 URL에 추가 데이터를 동적으로 포함할 수 있습니다.
-메소드 |실행할 웹훅 호출의 유형입니다. GET, HEAD, OPTIONS, PATCH, PUT, POST 또는 DELETE 유형 중에서 하나를 선택하십시오.
-사용자 이름 |웹 서비스에서 필요하면 포함됩니다.
-비밀번호 |웹 서비스에서 필요하면 포함됩니다. **중요:** 비밀번호는 일반 텍스트로 전송됩니다.
-헤더 |헤더는 키 및 값 쌍에서 구성됩니다. **팁:** [변수 대체](#variable_substitution)를 사용하여 헤더에 추가 데이터를 동적으로 포함할 수 있습니다.
-컨텐츠 유형 |본문의 컨텐츠 유형입니다(JSON, XML, WWW 양식 URL 인코딩 또는 일반 텍스트).  OPTIONS, PATCH, PUT, POST 및 DELETE 메소드에 사용할 수 있습니다.
-본문 |웹훅 호출의 본문입니다.  OPTIONS, PATCH, PUT, POST 및 DELETE 메소드에 사용할 수 있습니다. 기본적으로, 본문 필드는 [변수 대체](#variable_substitution)에 나열된 모든 변수로 사전에 채워집니다. **중요:** 별도의 특정 필드를 본문에 포함하도록 웹훅 서버에서 요구할 수 있습니다. 예를 들어, Slack 웹훅에는 "텍스트" 필드가 포함되어야 합니다.   
+Method |실행할 웹훅 호출의 유형입니다. GET, HEAD, OPTIONS, PATCH, PUT, POST 또는 DELETE 유형 중에서 하나를 선택하십시오.
+User name |웹 서비스에서 필요하면 포함됩니다.
+Password |웹 서비스에서 필요하면 포함됩니다. **중요:** 비밀번호는 일반 텍스트로 전송됩니다.
+Header |헤더는 키 및 값 쌍에서 구성됩니다. **팁:** [변수 대체](#variable_substitution)를 사용하여 헤더에 추가 데이터를 동적으로 포함할 수 있습니다.
+Content type |본문의 컨텐츠 유형입니다(JSON, XML, WWW 양식 URL 인코딩 또는 일반 텍스트).  OPTIONS, PATCH, PUT, POST 및 DELETE 메소드에 사용할 수 있습니다.
+Body |웹훅 호출의 본문입니다.  OPTIONS, PATCH, PUT, POST 및 DELETE 메소드에 사용할 수 있습니다. 기본적으로, 본문 필드는 [변수 대체](#variable_substitution)에 나열된 모든 변수로 사전에 채워집니다. **중요:** 별도의 특정 필드를 본문에 포함하도록 웹훅 서버에서 요구할 수 있습니다. 예를 들어, Slack 웹훅에는 "텍스트" 필드가 포함되어야 합니다.   
 
 #### 예제: 웹훅을 사용하여 Slack에 게시
 {: #webhookex}

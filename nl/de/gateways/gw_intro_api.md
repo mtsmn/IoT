@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2015, 2017
-lastupdated: "2017-10-04"
+ years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -35,10 +35,12 @@ Zusätzlich zum MQTT-Nachrichtenprotokoll können Sie Ihre Gateway-Geräte auch 
 
 Verwenden Sie eine der folgenden URLs, um eine ``POST``-Anforderung von einem Gerät zu übergeben, das mit {{site.data.keyword.iot_short_notm}} verbunden ist:
 
-### Nicht sichere POST-Anforderung
+### Nicht sichere POST-Anforderung für das Publizieren von Ereignissen
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
 
-### Sichere POST-Anforderung
+### Sichere POST-Anforderung zum Publizieren von Ereignissen
+
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
 
 **Wichtige Hinweise:**
@@ -47,7 +49,7 @@ Verwenden Sie eine der folgenden URLs, um eine ``POST``-Anforderung von einem Ge
 - Falls einem Gateway nicht die Rolle *Standardgateway* zugewiesen ist, kann es Ereignisse im Namen aller Geräte in der Organisation publizieren. Falls das mit dem Gateway verbundene Gerät nicht registriert ist, führt das Gateway automatisch eine Registrierung für dieses Gerät durch.
 - Weisen Sie die Rolle *Standardgateway* zu, wenn Sie Geräteberechtigungsstufen prüfen möchten.
 
-Weitere Informationen zur Rolle von Gateways und Ressourcengruppen finden Sie in [Gateway Access Control (Beta)](../gateways/gateway-access-control.html).
+Weitere Informationen zur Rolle von Gateways und Ressourcengruppen finden Sie unter [Gateway-Zugriffssteuerung](../gateways/gateway-access-control.html).
 
 ### Authentifizierung
 
@@ -96,14 +98,15 @@ Weitere Informationen zum Verwalten von Gateway-Geräten mithilfe von APIs finde
 ## Befehle empfangen
 {: #receive_commands}
 
-Zusätzlich zur Verwendung des MQTT-Nachrichtenprotokolls können Sie Ihre Gateway-Geräte auch so konfigurieren, dass Befehle von {{site.data.keyword.iot_short_notm}} über HTTP mithilfe von HTTP-Messaging-API-Befehlen empfangen werden. Ein Gateway-Gerät kann Befehle empfangen, die an Geräte innerhalb der zugehörigen Ressourcengruppe gerichtet sind. Weitere Informationen zu Gateway-Ressourcengruppen finden Sie unter [Gateway-Zugriffssteuerung (Beta)](../gateways/gateway-access-control.html).
+Zusätzlich zur Verwendung des MQTT-Nachrichtenprotokolls können Sie Ihre Gateway-Geräte auch so konfigurieren, dass Befehle von {{site.data.keyword.iot_short_notm}} über HTTP mithilfe von HTTP-Messaging-API-Befehlen empfangen werden. Ein Gateway-Gerät kann Befehle empfangen, die an Geräte innerhalb der zugehörigen Ressourcengruppe gerichtet sind. Weitere Informationen zu Gateway-Ressourcengruppen finden Sie unter [Gateway-Zugriffssteuerung](../gateways/gateway-access-control.html).
 
 Verwenden Sie eine der folgenden URLs, um eine ``POST``-Anforderung von einem Gateway zu übergeben, das mit {{site.data.keyword.iot_short_notm}} verbunden ist:
 
-### Nicht sichere POST-Anforderung
+### Nicht sichere POST-Anforderung zum Empfangen von Befehlen
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/commands/<var class="keyword varname">Befehl</var>/request</code></pre>
 
-### Sichere POST-Anforderung
+### Sichere POST-Anforderung zum Empfangen von Befehlen
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/commands/<var class="keyword varname">Befehl</var>/request</code></pre>
 

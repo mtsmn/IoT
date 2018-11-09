@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-09-28"
+  years: 2017, 2018
+lastupdated: "2018-05-07"
 ---
 
 ---
@@ -15,19 +15,17 @@ lastupdated: "2017-09-28"
 {:tip: .tip}
 
 
-# Simulation de données de terminal (bêta)
+# Simulation de données de terminal 
 {: #sim_device_data}
 
-Le simulateur de terminal {{site.data.keyword.iot_full}} vous permet de configurer des événements simulés pour les terminaux. Vous pouvez exploiter les données d'événements simulés pour découvrir, tester et démontrer pleinement le fonctionnement de {{site.data.keyword.iot_short_notm}}.
+Le simulateur de terminal {{site.data.keyword.iot_full}} permet de configurer les événements simulés de terminaux. Vous pouvez exploiter les données d'événements simulés pour découvrir, tester et démontrer pleinement le fonctionnement de {{site.data.keyword.iot_short_notm}}.
 {: shortdesc}
 
-Vous pouvez vous servir des terminaux et types de terminaux existants ou vous pouvez générer de nouveaux terminaux pour des types existants. Vous avez la possibilité de configurer les détails d'événement de chaque terminal ou d'appliquer une configuration par défaut à l'ensemble des terminaux. Enfin, vous pouvez exporter une configuration d'événement simulé afin de la réutiliser ou de la partager à des fins de configuration d'autres simulations.
-
-**Important :** La fonction de simulateur de terminal {{site.data.keyword.iot_full}} est disponible uniquement dans le cadre d'un programme bêta limité. Il est possible que des mises à jour ultérieures incluent des modifications incompatibles avec la version en cours de cette fonction. Essayez-la et [dites-nous ce que vous en pensez ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+Vous pouvez vous servir des terminaux et types de terminal existants ou vous pouvez générer de nouveaux terminaux pour des types existants. Vous avez la possibilité de configurer les détails d'événement de chaque terminal ou d'appliquer une configuration par défaut à l'ensemble des terminaux. Enfin, vous pouvez exporter une configuration d'événement simulé afin de la réutiliser ou de la partager à des fins de configuration d'autres simulations.
 
 Pour simuler des données de terminal : 
 
-1. Connectez-vous à {{site.data.keyword.iot_short_notm}}. 
+1. Connectez-vous à {{site.data.keyword.iot_short_notm}}.
 2. Dans le panneau de navigation principal, sélectionnez **Paramètres**.
 3. Dans la section **Fonctions expérimentales**, activez le simulateur de terminal.
 4. Dans le panneau de navigation principal, sélectionnez **Terminaux**. Un message dans le coin inférieur droit de l'écran indique qu'aucune simulation n'est en cours d'exécution.

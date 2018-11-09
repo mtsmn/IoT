@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-16"
+  years: 2016, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -23,7 +23,7 @@ Les tableaux répertorient les niveaux d'accès pour :
 <!-- [Historian Operations](#app-historian) -->
 - Les [opérations d'organisation](#app-org-ops)
 - Les [opérations de contrôle d'accès](#app-access-ops)
-- Les [opérations d'analyse](#app-analytics-ops)
+<!-- - [Analytics Operations](#app-analytics-ops) -->
 - Les [opérations de service de tiers](#app-third-party)  
 <!-- - [Risk Management Operations](#app-risk-mgt) -->
 
@@ -46,8 +46,8 @@ Lancer une action de gestion des terminaux|X|X|-|-|-|-
 Afficher des actions de gestion des terminaux|X|X|-|-|-|X
 Effacer des actions de gestion des terminaux|X|X|-|-|-|-
 Gérer les regroupements d'actions de gestion des terminaux|X|X|-|-|-|-
-Créer, mettre à jour ou supprimer des types de terminaux|X|X|X|-|-|-
-Afficher des types de terminaux|X|X|X|X|-|-
+Créer, mettre à jour ou supprimer des types de terminal|X|X|X|-|-|-
+Afficher des types de terminal|X|X|X|X|-|-
 Gérer des journaux de diagnostic|X|X|-|-|-|X
 Afficher des journaux de diagnostic|X|X|X|-|-|-
 
@@ -56,7 +56,7 @@ Afficher des journaux de diagnostic|X|X|X|-|-|-
 Opérations de journal ||| Rôles d'application||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Application standard ** | **Application d'opérations** | **Application sécurisée de back end** | **Application de processeur de données** | **Application de visualisation** | **Application de terminal**
-Afficher les journaux serveur|X|X|X|-|-|-
+Afficher des journaux serveur|X|X|X|-|-|-
 
 ### Opérations de cache {: #app-cache-ops}
 
@@ -103,18 +103,16 @@ Afficher les rôles|X|X|-|-|-|-
 Créer, mettre à jour, supprimer des rôles personnalisés|-|X|-|-|-|-
 Afficher les opérations*|X|X|-|-|-|-
 
-### Opérations d'analyse {: #app-analytics-ops}
-
-Opérations d'analyse ||| Rôles d'application||||
-:--------: | -------------|-------------|---------------|-----|---
-           | **Application standard ** | **Application d'opérations** | **Application sécurisée de back end** | **Application de processeur de données** | **Application de visualisation** | **Application de terminal**
-Afficher les règles d'analyse|X|X|-|X|X|-
-Gérer les règles d'analyse|X|X|-|X|-|-
-Afficher les actions d'analyse|X|X|-|X|X|-
-Gérer les actions d'analyse|X|X|-|X|X|-
-Afficher les alertes d'analyse|X|X|-|X|X|X
-Afficher les schémas de message d'analyse|X|X|-|X|X|-
-Gérer les schémas de message d'analyse|X|X|-|X|-|-
+<!-- ### Analytics Operations {: #app-analytics-ops}
+Analytics Operations ||| Application Roles||||
+           | **Standard Application** | **Operations Application** | **Backend Trusted Application** | **Data Processor Application** | **Visualization Application** | **Device Application**
+View analytics rules|X|X|-|X|X|-
+Manage analytics rules|X|X|-|X|-|-
+View analytics actions|X|X|-|X|X|-
+Manage analytics actions|X|X|-|X|X|-
+View analytics alerts|X|X|-|X|X|X
+View analytics message schemas|X|X|-|X|X|-
+Manage analytics message schemas|X|X|-|X|-|- -->
 
 ### Opérations de service de tiers {: #app-third-party}
 

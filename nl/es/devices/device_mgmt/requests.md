@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-27"
+  years: 2015, 2018
+lastupdated: "2018-03-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}  
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
@@ -27,17 +27,41 @@ Se pueden iniciar solicitudes mediante el panel de control utilizando al separad
 ## Iniciación de las solicitudes de gestión de dispositivos mediante la API REST
 {: #initiating-dm-api}
 
-Las solicitudes se pueden iniciar utilizando el siguiente ejemplo API REST:  
+Las solicitudes se pueden iniciar utilizando la API REST siguiente:
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
 Para obtener más información sobre el cuerpo de una solicitud de gestión de dispositivos, consulte la [Documentación de la API ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
 
+## Configuración de las solicitudes de gestión de dispositivos para expirar
+{: #timeout-requests}
+
+Puede configurar las solicitudes de gestión de dispositivos para que caduquen por tiempo de espera si todavía están en curso después de una determinada cantidad de tiempo. Cuando inicia una solicitud de gestión de dispositivos, puede especificar un valor de tiempo de espera en segundos. Una vez que se ha alcanzado el número de segundos especificado, el servidor de gestión de dispositivos cancela la solicitud automáticamente.
+
+Para obtener más información sobre el parámetro de tiempo de espera en la API de solicitud de iniciación, consulte la [documentación de la API ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}.
+
+## Cancelación de solicitudes de gestión de dispositivos
+{: #cancel-requests}
+
+Puede cancelar las solicitudes de gestión de dispositivos que están en curso utilizando la solicitud de API siguiente:
+
+`POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests/{requestId}/cancel`
+
+Esta solicitud borra las operaciones actuales para todos los dispositivos en curso y marca las solicitudes como completas.
+
+Para obtener más información sobre de la API de solicitud de gestión de dispositivos de cancelación, consulte la [documentación de la API ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests_requestId_cancel){: new_window}.
+
+## Alteración temporal de las solicitudes en curso que están bloqueando una nueva solicitud
+{: #force-override}
+
+De forma predeterminada, si un dispositivo tiene una solicitud de actualización o de descarga de firmware pendiente, no se puede iniciar una nueva solicitud para dicho dispositivo. Cuando inicia una solicitud de gestión de dispositivos, puede establecer el parámetro de consulta `override=true` para especificar que las solicitudes en curso se cancelen para que se pueda iniciar la nueva solicitud. Cuando se utiliza este parámetro de consulta, todas las solicitudes en curso se cancelan. Para seleccionar solicitudes específicas para cancelar, utilice la [API de solicitud de cancelación de gestión de dispositivos](#cancel-requests).
+
+Para obtener más información sobre el parámetro de alteración temporal en la API de solicitud de iniciación, consulte la [documentación de la API ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}.
+
 ## Acciones de dispositivos
 {: #device-actions}
 
-Un dispositivo puede especificar que da soporte a las acciones de dispositivos cuando publica una solicitud de gestión. Una solicitud device action indica a la {{site.data.keyword.iot_short_notm}} que el dispositivo está disponible para responder a acciones de rearranque de dispositivo y de restablecimiento de dispositivo.
-
+Un dispositivo puede especificar que da soporte a las acciones de dispositivos cuando publica una solicitud de gestión. El dispositivo hace esto estableciendo el distintivo deviceActions en la solicitud Gestionar dispositivo en true para indicar que el dispositivo puede responder a las acciones de rearranque de dispositivos y de restablecimiento de dispositivo gestionados.
 
 ## Acciones de dispositivos: rearrancar
 {: #device-actions-reboot}
@@ -48,7 +72,7 @@ Para iniciar un rearranque de dispositivo utilizando la API REST, emita una soli
 
 `https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Proporcione la siguiente información:
+Proporcione la información siguiente en la solicitud:
 
 - La acción ``device/reboot``
 - Una lista de dispositivos que se rearrancan, con un máximo de 5000 dispositivos
@@ -67,9 +91,7 @@ Ejemplo de solicitud de rearranque de dispositivo:
 }
 ```
 
-Una vez que se inicie una solicitud, se publicará un mensaje MQTT en todos los dispositivos especificados en el cuerpo de la solicitud de reinicio. Para cada dispositivo, se debe enviar de vuelta una respuesta para indicar si se puede iniciar la acción de reinicio. Si esta operación se puede iniciar inmediatamente, establezca el parámetro `rc` en `202`. Si falla el intento de reinicio, establezca el parámetro `rc` en `500` y establezca el parámetro `message` en consonancia. Si el rearranque no está soportado, establezca el parámetro `rc` en `501` y establezca opcionalmente el parámetro `message` en consonancia.
-
-La acción de reinicio se completa cuando el dispositivo envía una solicitud Manage Device después del rearranque.
+Una vez que se inicie una solicitud, se publicará un mensaje MQTT en todos los dispositivos especificados en el cuerpo de la solicitud de reinicio. Para cada dispositivo, se debe enviar de vuelta una respuesta para indicar si se puede iniciar la acción de reinicio. Si esta operación se puede iniciar inmediatamente, establezca el parámetro `rc` en `202`. Si el intento de rearranque falla, establezca el parámetro `rc` en `500` y establezca el error adecuado en el parámetro `message`. Si el rearranque no está soportado, establezca el parámetro `rc` en `501` y establezca opcionalmente el parámetro `message` en consonancia.
 
 ### Tema para la solicitud device reboot
 
@@ -100,11 +122,13 @@ Mensaje saliente del dispositivo:
 
 Tema: iotdevice-1/response
 {
-    "rc": "response_code",
+    "rc": response_code,
     "message": "string",
     "reqId": "string"
 }
 ```
+La acción de reinicio se completa cuando el dispositivo envía una solicitud Manage Device después del rearranque.
+
 
 ## Acciones de dispositivos: restablecimiento de fábrica
 {: #device-actions-factory-reset}
@@ -168,12 +192,11 @@ El tema siguiente muestra un mensaje saliente del dispositivo:
 
 Tema: iotdevice-1/response
 {
-    "rc": "response_code",
+    "rc": response_code,
     "message": "string",
     "reqId": "string"
 }
 ```
-
 
 ## Acciones de firmware
 {: #firmware-actions}
@@ -182,22 +205,24 @@ El nivel de firmware conocido para estar en un dispositivo se almacena en el atr
 
 **Importante:** El dispositivo gestionado debe dar soporte a la observación del atributo ``mgmt.firmware`` para dar soporte a las acciones de firmware.
 
-El proceso de actualización de firmware está separado en acciones distintas:
+El proceso de actualización de firmware se puede separar en acciones distintas:
 - Descarga de firmware
 - Actualización de firmware
 
-El estado de cada acción de firmware se almacena en otro atributo en el dispositivo. El atributo ``mgmt.firmware.state`` describe el estado de la descarga de firmware. En la tabla siguiente se describen los valores posibles que se pueden establecer para el atributo ``mgmt.firmware.state``:
+El estado de las acciones de firmware se almacena en los atributos ``mgmt.firmware.state`` y ``mgmt.firmware.updateStatus``.
+
+En la tabla siguiente se describen los valores posibles que se pueden establecer para el atributo ``mgmt.firmware.state``:
 
  |Valor |Estado  | Significado |
  |:---|:---|:---|
- |0  | Desocupado        | El dispositivo no está descargando firmware. |  
+ |0  | Desocupado        | El dispositivo no está descargando firmware. |
  |1  | Descargando | El dispositivo está descargando firmware. |
  |2  | Descargado  | El dispositivo ha descargado satisfactoriamente una actualización de firmware y está preparado para instalarla. |
 
 
-El atributo ``mgmt.firmware.updateStatus`` describe el estado de la actualización de firmware. Los valores posibles del atributo ``mgmt.firmware.updateStatus`` son:
+Los valores posibles del atributo ``mgmt.firmware.updateStatus`` son:
 
-|Valor |Estado | Significado |  
+|Valor |Estado | Significado |
 |:---|:---|:---|
 |0 | Correcto | El firmware se ha actualizado correctamente. |
 |1 | En curso | La actualización de firmware se ha iniciado pero no se ha completado todavía.|
@@ -257,7 +282,7 @@ Si no se especifica ningún parámetro opcional, se omitirá el primer paso del 
 El servidor de gestión de dispositivos de {{site.data.keyword.iot_short_notm}} utiliza el Protocolo de gestión de dispositivos para enviar una solicitud a los dispositivos, lo que inicia la descarga de firmware. El proceso de descarga consta de los pasos siguientes:
 
 1. Se envía una solicitud de actualización de detalles de firmware en el tema ``iotdm-1/device/update``.
-La solicitud de actualización permite validarse al dispositivo si el firmware solicitado difiere del firmware actualmente instalado. Si hay una diferencia, establezca el parámetro ``rc`` en ``204``, que se convierte en el estado ``Changed``.  
+La solicitud de actualización permite validarse al dispositivo si el firmware solicitado difiere del firmware actualmente instalado. Si hay una diferencia, el dispositivo envía una respuesta que contiene el rc ``204``, que se traduce en el estado ``Changed``.
 En el ejemplo siguiente se muestra qué mensaje se espera para la solicitud de descarga de firmware de ejemplo enviada anteriormente y qué respuesta se envía cuando se detecta una diferencia:
 ```
    Solicitud entrante de la {{site.data.keyword.iot_short_notm}}:
@@ -269,7 +294,7 @@ En el ejemplo siguiente se muestra qué mensaje se espera para la solicitud de d
       "d" : {
          "fields" : [{
                "field" : "mgmt.firmware",
-               "value" : {
+            "value" : {
                   "version" : "some firmware version",
                   "name" : "some firmware name",
                   "uri" : "some uri for firmware location",
@@ -311,7 +336,7 @@ La solicitud de observación verifica si el dispositivo está preparado para ini
       }
    }
 
-   Respuesta saliente del dispositivo:
+Respuesta saliente del dispositivo:
 
    Tema: iotdevice-1/response
    Mensaje:
@@ -320,7 +345,7 @@ La solicitud de observación verifica si el dispositivo está preparado para ini
       "reqId" : "909b477c-cd37-4bee-83fa-1d568664fbe8"
    }
    ```
-Este intercambio desencadena el último paso.  
+Este intercambio desencadena el último paso.
 
 3. La solicitud de descarga se envía en el tema ``iotdm-1/mgmt/initiate/firmware/download``:
 
@@ -358,7 +383,7 @@ Mensaje:
    "d" : {
       "fields" : [ {
          "field" : "mgmt.firmware",
-         "value" : {
+            "value" : {
                  "state" : 1
              }
       } ]
@@ -378,7 +403,7 @@ Mensaje:
    "d" : {
       "fields" : [ {
          "field" : "mgmt.firmware",
-         "value" : {
+            "value" : {
                  "state" : 2
              }
       } ]

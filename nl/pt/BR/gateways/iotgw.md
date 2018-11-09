@@ -1,6 +1,8 @@
 ---
 
-copyright: years: 2016, 2017 lastupdated: "2017-10-04"
+copyright:
+years: 2016, 2018
+lastupdated: "2018-07-11"
 
 ---
 
@@ -10,16 +12,15 @@ copyright: years: 2016, 2017 lastupdated: "2017-10-04"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Pacote de gateway da Internet of Things (Beta)
+# Pacote de gateway da Internet of Things 
 {: #gw_package}
 
 O pacote de gateway da Internet of Things do {{site.data.keyword.iot_full}} permite que um
 gateway registrado no {{site.data.keyword.iot_short_notm}} envie eventos para a
 plataforma de seus dispositivos que estão no grupo de recursos que está associado ao
-gateway.
+gateway. 
 {:shortdesc}
 
-**Importante:** O pacote de gateway da Internet of Things está disponível somente como parte de um programa beta limitado. Atualizações futuras podem incluir mudanças incompatíveis com a versão atual desse recurso. Experimente e [informe-nos o que acha ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Visão geral
 
@@ -42,12 +43,8 @@ Para criar uma ligação de pacote de gateway da Internet of Things, deve-se esp
 
 
 Conclua as etapas a seguir para criar uma ligação de pacote:  
-1. [Efetue login no console do Bluemix
-![Ícone de link externo](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/).
-2. Crie o [Internet of Things
-Platform Service](https://console.bluemix.net/docs/services/IoT/index.html) no Bluemix e
-[anote
-a chave API e o token da API](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#connecting-applications). Essas
+1. [Efetue login no console do IBM Cloud ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/).
+2. Crie o [Serviço Internet of Things Platform](https://console.bluemix.net/docs/services/IoT/index.html) no IBM Cloud e [anote o `API Key` e o `API Token`](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#connecting-applications). Essas
 informações são necessárias para criar um tipo de gateway e para registrar um gateway.
 3. [Crie
 um tipo de gateway](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), por exemplo myGWType, em sua organização do
@@ -55,18 +52,16 @@ Watson IoT e [registre
 uma instância do gateway](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), por exemplo myGWId. Anote o Token de gateway para o gateway registrado.
 4. Crie uma ligação de pacote com o pacote de gateway do da Internet of Things usando o exemplo de comando a seguir:
    ```
-   wsk package bind /watson/iotgw myGW -p org myorg -p gatewayTypeId myGWType -p gatewayId myGWId -p gatewayToken myGWToken
+   bx wsk package bind /watson-iot/iot-gateway myGW -p org myorg -p gatewayTypeId myGWType -p gatewayId myGWId -p gatewayToken myGWToken
    ```
 5. Verifique se a ligação do pacote existe usando o comando a seguir:  
    ```
-   wsk package list
+   lista de pacotes bx wsk
    ```
 
 ## Publicando eventos de dispositivo
 
-A ação `/watson/iotgw/publishEvent` publica eventos de um gateway
-do {{site.data.keyword.iot_short_notm}} registrado, em nome de seus dispositivos
-associados. A tabela a seguir descreve os parâmetros que são usados ao publicar eventos:  
+A ação `/watson-iot/iot-gateway/publishEvent` publica eventos de um gateway do {{site.data.keyword.iot_short_notm}} registrado, em nome de seus dispositivos associados. A tabela a seguir descreve os parâmetros que são usados ao publicar eventos:  
 
 Parâmetro |  Descrição | Exemplo
 ------------- | ------------- | -------------
@@ -86,8 +81,8 @@ O exemplo a seguir mostra como publicar eventos do pacote *iotgw*:
 Publicar um evento de dispositivo usando a ação *publishEvent* na
 ligação de pacote que você criou. Deve-se substituir `/myNamespace/myGateway` pelo nome do seu pacote.
 
- ```
-  wsk action invoke /myNamespace/myGateway/publishEvent -i --result --blocking -p org ORG_ID -p eventType value -p payload '{"test":"etsd"}' -p typeId myDeviceType -p deviceId 00aabbccde03_0001 -p gatewayTypeId myGatewayType -p gatewayId 00aabbccde03 -p gatewayToken "ZZZ"
+ ``` 
+ bx wsk action invoke /myNamespace/myGateway/publishEvent -i --result --blocking -p org ORG_ID -p eventType value -p payload '{"test":"etsd"}' -p typeId myDeviceType -p deviceId 00aabbccde03_0001 -p gatewayTypeId myGatewayType -p gatewayId 00aabbccde03 -p gatewayToken "ZZZ"
  ```
 
  ## Trabalhando com o repositório
@@ -97,4 +92,4 @@ Conclua as etapas a seguir para implementar o pacote usando `installCatalog.sh`
 2. `cd openwhisk-package-watsoniotp/packages`
 3. `./installCatalog.sh AUTH APIHOST WSK_CLI`
 
-em que *AUTH* é a chave de autorização, *APIHOST* é o nome do host do OpenWhisk e *WSK_CLI* é o local do binário da CLI do Openwhisk.
+em que *AUTH* é sua chave de autorização, *APIHOST* é o nome do host do IBM Cloud Functions e *WSK_CLI* é o local do binário da CLI do IBM Cloud Functions.

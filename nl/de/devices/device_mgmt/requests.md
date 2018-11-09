@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-27"
+  years: 2015, 2018
+lastupdated: "2018-03-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}  
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
@@ -27,17 +27,41 @@ Anforderungen können über das Dashboard durch Verwenden der Registerkarte **Ak
 ## Gerätemanagementanforderungen mithilfe der REST-API initiieren
 {: #initiating-dm-api}
 
-Anforderungen können mithilfe des folgenden REST-API-Beispiels initiiert werden:  
+Anforderungen können mithilfe der folgenden REST-API eingeleitet werden:
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-ere Informationen zum Hauptteil einer Gerätemanagementanforderung finden Sie in der [API-Dokumentation ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
+Weitere Informationen zum Hauptteil einer Gerätemanagementanforderung finden Sie in der [API-Dokumentation ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
+
+## Gerätemanagementanforderungen für Ablaufsteuerung einrichten
+{: #timeout-requests}
+
+Sie können Gerätemanagementanforderungen so einrichten, dass sie ablaufen, wenn sie nach einer gewissen Zeit noch in Bearbeitung sind. Wenn Sie eine Gerätemanagementanforderung einleiten, können Sie einen Zeitlimitwert in Sekunden angeben. Nachdem die angegebene Anzahl an Sekunden erreicht wurde, bricht der Gerätemanagement-Server die Anforderung automatisch ab.
+
+Weitere Informationen zum Parameter für das Zeitlimit in der Initialisierungsanforderungs-API finden Sie in der [API-Dokumentation ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link") ](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}.
+
+## Gerätemanagementanforderungen abbrechen
+{: #cancel-requests}
+
+Sie können mithilfe der folgenden API-Anforderung Gerätemanagementanforderungen abbrechen, die in Bearbeitung sind:
+
+`POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests/{requestId}/cancel`
+
+Mit dieser Anforderung werden die aktuellen Operationen für alle Geräte, die in Bearbeitung sind, gelöscht und die Anforderungen als abgeschlossen markiert.
+
+Weitere Informationen zur API für das Abbrechen von Gerätemanagementanforderungen finden Sie in der [API-Dokumentation ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests_requestId_cancel){: new_window}.
+
+## Anforderungen überschreiben, die in Bearbeitung sind, und eine neue Anforderung blockieren
+{: #force-override}
+
+Wenn ein Gerät über eine ausstehende Download- oder Aktualisierungsanforderung für Firmware verfügt, kann standardmäßig keine neue Anforderung für dieses Gerät initiiert werden. Wenn Sie eine Gerätemanagementanforderung einleiten, können Sie den Abfrageparameter `override=true` festlegen, um anzugeben, dass sich in Bearbeitung befindliche Anforderungen abgebrochen werden, damit die neue Anforderung eingeleitet werden kann. Wenn Sie diesen Abfrageparameter verwenden, werden alle Anforderungen, die sich in Bearbeitung befinden, abgebrochen. Um bestimmte Anforderungen auszuwählen, die abgebrochen werden sollen, verwenden Sie die [API zum Abbrechen von Gerätemanagementanforderungen](#cancel-requests).
+
+Weitere Informationen zum Parameter für das Überschreiben in der Initialisierungsanforderungs-API finden Sie in der [API-Dokumentation ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link") ](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}.
 
 ## Geräteaktionen
 {: #device-actions}
 
-Ein Gerät kann beim Publizieren einer Managementanforderung angeben, dass es Geräteaktionen unterstützt. Eine Geräteaktionsanforderung gibt für {{site.data.keyword.iot_short_notm}} an, dass das Gerät auf die Aktionen 'Geräteneustart' und 'Zurücksetzen des Geräts' antworten kann.
-
+Ein Gerät kann beim Publizieren einer Managementanforderung angeben, dass es Geräteaktionen unterstützt. Dies wird erreicht, indem das Gerät das Flag 'deviceActions' in der Anforderung 'Gerät verwalten' auf 'true' setzt, um anzuzeigen, dass das Gerät auf die Aktionen zum Neustart und Zurücksetzen von Geräten reagieren kann.
 
 ## Geräteaktionen - Neu starten
 {: #device-actions-reboot}
@@ -48,7 +72,7 @@ Zum Initiieren eines Geräteneustarts mithilfe der REST-API setzen Sie eine POST
 
 `https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Geben Sie folgende Informationen an:
+Geben Sie in der Anforderung die folgenden Informationen an:
 
 - Die Aktion ``device/reboot``.
 - Eine Liste der Geräte, für die ein Neustart ausgeführt werden soll, mit maximal 5000 Geräten.
@@ -67,9 +91,7 @@ Beispielanforderung für einen Geräteneustart:
 }
 ```
 
-Nach dem Initiieren einer Anforderung wird an alle Geräte, die im Hauptteil der Anforderung für einen Neustart angegeben sind, eine MQTT-Nachricht publiziert. Von jedem Gerät muss eine Antwort zurückgesendet werden, um anzugeben, ob die Aktion für den Neustart initiiert werden kann. Wenn diese Operation sofort initiiert werden kann, legen Sie den Parameter `rc` auf `202` fest. Wenn der Versuch des Neustarts fehlschlägt, legen Sie für den Parameter `rc` den Wert `500` fest und stellen Sie den Parameter `message` entsprechend ein. Wenn ein Neustart (reboot) nicht unterstützt wird, legen Sie für den Parameter `rc` den Wert `501` fest und stellen Sie den Parameter `message` optional entsprechend ein.
-
-Die Aktion für den Neustart ist abgeschlossen, wenn das Gerät nach dem erfolgten Neustart die Anforderung 'Gerät verwalten' sendet.
+Nach dem Initiieren einer Anforderung wird an alle Geräte, die im Hauptteil der Anforderung für einen Neustart angegeben sind, eine MQTT-Nachricht publiziert. Von jedem Gerät muss eine Antwort zurückgesendet werden, um anzugeben, ob die Aktion für den Neustart initiiert werden kann. Wenn diese Operation sofort initiiert werden kann, legen Sie den Parameter `rc` auf `202` fest. Wenn der Versuch des Neustarts fehlschlägt, legen Sie für den Parameter `rc` den Wert `500` fest und geben Sie den entsprechenden Fehler im Parameter `message` an. Wenn ein Neustart (reboot) nicht unterstützt wird, legen Sie für den Parameter `rc` den Wert `501` fest und stellen Sie den Parameter `message` optional entsprechend ein.
 
 ### Topic für die Anforderung für einen Geräteneustart
 
@@ -100,11 +122,13 @@ Ausgehende Nachricht vom Gerät:
 
 Topic: iotdevice-1/response
 {
-    "rc": "response_code",
+    "rc": response_code,
     "message": "string",
     "reqId": "string"
 }
 ```
+Die Aktion für den Neustart ist abgeschlossen, wenn das Gerät nach dem erfolgten Neustart die Anforderung 'Gerät verwalten' sendet.
+
 
 ## Geräteaktionen - Zurücksetzen auf Werkseinstellungen
 {: #device-actions-factory-reset}
@@ -168,12 +192,11 @@ Das folgende Topic zeigt eine ausgehende Nachricht vom Gerät:
 
 Topic: iotdevice-1/response
 {
-    "rc": "response_code",
+    "rc": response_code,
     "message": "string",
     "reqId": "string"
 }
 ```
-
 
 ## Firmwareaktionen
 {: #firmware-actions}
@@ -182,22 +205,24 @@ Die Firmwareversion, die ein Gerät aktuell aufweist, ist im Attribut ``deviceIn
 
 **Wichtig:** Das verwaltete Gerät muss die Beobachtung der ``mgmt.firmware``-Attribute unterstützen, damit Firmwareaktionen unterstützt sind.
 
-Der Prozess für das Firmware-Update ist in unterschiedliche Aktionen aufgeteilt:
+Der Prozess für das Firmware-Update kann in unterschiedliche Aktionen aufgeteilt werden:
 - Herunterladen der Firmware
 - Aktualisieren der Firmware
 
-Der Status der einzelnen Firmwareaktionen wird in einem separaten Attribut auf dem Gerät gespeichert. Das Attribut ``mgmt.firmware.state`` beschreibt den Status des Herunterladens der Firmware. In der folgenden Tabelle werden die möglichen Werte beschrieben, die für das Attribut ``mgmt.firmware.state`` eingestellt werden können:
+Der Status der Firmwareaktionen wird in den Attributen ``mgmt.firmware.state`` und ``mgmt.firmware.updateStatus`` gespeichert.
+
+In der folgenden Tabelle werden die möglichen Werte beschrieben, die für das Attribut ``mgmt.firmware.state`` eingestellt werden können:
 
  |Wert |Status  | Bedeutung |
  |:---|:---|:---|
- |0  | Inaktiv        | Das Gerät lädt keine Firmware herunter. |  
+ |0  | Inaktiv        | Das Gerät lädt keine Firmware herunter. |
  |1  | Download läuft | Das Gerät lädt Firmware herunter. |
  |2  | Heruntergeladen  | Das Firmware-Update wurde von dem Gerät erfolgreich heruntergeladen und kann jetzt installiert werden. |
 
 
-Das Attribut ``mgmt.firmware.updateStatus`` beschreibt den Status des Firmware-Updates. Folgende Werte sind für das Attribut ``mgmt.firmware.updateStatus`` möglich:
+Folgende Werte sind für das Attribut ``mgmt.firmware.updateStatus`` möglich:
 
-|Wert |Status | Bedeutung |  
+|Wert |Status | Bedeutung |
 |:---|:---|:---|
 |0 | Erfolg | Die Firmware wurde erfolgreich aktualisiert. |
 |1 | In Bearbeitung | Das Firmware-Update wurde initiiert, ist aber noch nicht abgeschlossen.|
@@ -257,7 +282,7 @@ Wenn keine optionalen Parameter angegeben sind, wird der erste Schritt im folgen
 Der Gerätemanagementserver in {{site.data.keyword.iot_short_notm}} verwendet das Gerätemanagementprotokoll, um eine Anforderung an die Geräte zu senden, mit der der Download von Firmware initiiert wird. Der Prozess zum Herunterladen besteht aus den folgenden Schritten:
 
 1. An das Topic ``iotdm-1/device/update`` wird eine Anforderung zum Aktualisieren von Firmwaredetails gesendet.
-Die Aktualisierungsanforderung veranlasst das Gerät zu prüfen, ob sich die angeforderte Firmware von der aktuell installierten Firmware unterscheidet. Falls ein Unterschied besteht, müssen Sie den Parameter ``rc`` auf den Wert ``204`` festlegen, wodurch der Status in 'Geändert' (``Changed``) umgesetzt wird.  
+Die Aktualisierungsanforderung veranlasst das Gerät zu prüfen, ob sich die angeforderte Firmware von der aktuell installierten Firmware unterscheidet. Falls ein Unterschied besteht, sendet das Gerät eine Antwort mit ``204`` für 'rc', wodurch der Status in 'Geändert' (``Changed``) umgesetzt wird.
 Das folgende Beispiel zeigt, welche Nachricht für die zuvor gesendete Beispielanforderung zum Herunterladen von Firmware zu erwarten ist und welche Antwort gesendet wird, wenn ein Unterschied festgestellt wird:
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -319,7 +344,7 @@ Die Beobachtungsanforderung prüft, ob das Gerät zum Starten des Firmware-Downl
       "reqId" : "909b477c-cd37-4bee-83fa-1d568664fbe8"
    }
    ```
-Dieser Austausch löst den letzten Schritt aus.  
+Dieser Austausch löst den letzten Schritt aus.
 
 3. Die Anforderung zum Herunterladen wird im Topic ``iotdm-1/mgmt/initiate/firmware/download`` gesendet:
 

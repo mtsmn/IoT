@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-08"
+  years: 2016, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-05-08"
 # {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
 
-{{site.data.keyword.iot_full}} 是 {{site.data.keyword.Bluemix}} 中提供的服务。您可以通过使用 {{site.data.keyword.Bluemix_notm}} 仪表板访问 {{site.data.keyword.iot_short_notm}} 组织仪表板。作为 {{site.data.keyword.Bluemix_notm}} 服务，{{site.data.keyword.iot_short_notm}} 可与 {{site.data.keyword.Bluemix_notm}} 上托管的其他服务集成。可以在[外部服务集成](extensions/index.html)主题中找到特定第三方服务集成的详细信息。
+{{site.data.keyword.iot_full}} 是 {{site.data.keyword.Bluemix_notm}} 中提供的服务。您可以通过使用 {{site.data.keyword.Bluemix_notm}} 仪表板访问 {{site.data.keyword.iot_short_notm}} 组织仪表板。作为 {{site.data.keyword.Bluemix_notm}} 服务，{{site.data.keyword.iot_short_notm}} 可与 {{site.data.keyword.Bluemix_notm}} 上托管的其他服务集成。可以在[外部服务集成](extensions/index.html)主题中找到特定第三方服务集成的详细信息。
 {:shortdesc}
 
 ## {{site.data.keyword.iot_short_notm}} 如何用于 {{site.data.keyword.Bluemix_notm}}
@@ -30,7 +30,7 @@ lastupdated: "2017-05-08"
 
 ## {{site.data.keyword.Bluemix_notm}} 服务级别协议
 
-{{site.data.keyword.Bluemix_notm}} 发布使用条款，这些使用条款根据用户所适用的是 [IBM Cloud Services 协议 ![外部链接图标](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} 还是 [IBM International Passport Advantage 协议 ![外部链接图标](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} 而有所不同。有关 {{site.data.keyword.Bluemix_notm}} 服务级别协议的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 条款 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.{DomainName}/docs/navigation/notices.html#terms){:new_window}。
+{{site.data.keyword.Bluemix_notm}} 发布使用条款，这些使用条款根据用户所适用的是 [IBM Cloud Services 协议 ![外部链接图标](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} 还是 [IBM International Passport Advantage 协议 ![外部链接图标](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} 而有所不同。 
 
 ## {{site.data.keyword.iot_short_notm}} 定价
 {: #iot-pricing}
@@ -47,7 +47,7 @@ lastupdated: "2017-05-08"
 ### 当前套餐信息
 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，单击需要其当前套餐信息的 {{site.data.keyword.iot_short_notm}} 组织的 Internet of Things Platform 磁贴。
 2. 选择**套餐**选项卡。  
-这将显示当前定价套餐的详细信息。
+这将显示当前价格套餐的详细信息。
 
 # 相关链接
 {: #rellinks}

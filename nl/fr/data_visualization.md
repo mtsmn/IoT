@@ -41,7 +41,7 @@ Le tableau de bord {{site.data.keyword.iot_short_notm}} comporte les tableaux pa
 
 |Nom de tableau | Description | Cartes incluses
 |:---|:---|:---|  
-|Présentation de l'utilisation  | Statistiques d'utilisation pour votre organisation. Répertorie les types de terminaux, ainsi que les données consommées. | <ul><li>Types de terminaux<li>Données transférées</ul>
+|Présentation de l'utilisation  | Statistiques d'utilisation pour votre organisation. Répertorie les types de terminal, ainsi que les données consommées. | <ul><li>types de terminal<li>Données transférées</ul>
 |Analyse centrée sur la règle | Règles pour votre organisation. Des cartes supplémentaires recensent les alertes déclenchées, les terminaux associés, les propriétés de terminal et les informations d'alerte. | <ul><li>Règles que je gère<li>Alertes de règle<li>Informations sur l'alerte de règle<li>Terminaux associés<li>Informations sur le terminal<li>Propriétés de terminal</ul>  
 |Analyse centrée sur le terminal | Les terminaux connectés à votre organisation. Des cartes supplémentaires affichent des alertes pour un terminal sélectionné, des informations relatives à un terminal sélectionné, et des informations d'alerte. | <ul><li>Terminaux qui m'intéressent<li>Informations sur le terminal<li>Alertes de règle pour ce terminal<li>Informations sur l'alerte de règle<li>Propriétés de terminal</ul>
 |Présentation de la sécurité et des risques (bêta) | L'état général de la sécurité de votre organisation. Les opérateurs système et les analystes de sécurité peuvent afficher des détails sur la conformité, l'état de connexion des terminaux, les causes des échecs de connexion et les terminaux bloqués par liste noire ou autorisés par liste blanche.  À partir de la carte Conformité à la sécurité de connexion, l'utilisateur peut obtenir un rapport détaillé sur les terminaux non conformes et exporter le rapport vers Excel. | <ul><li>Conformité à la politique<li>Sécurité de connexion<li>Conformité liste noire/liste blanche</ul>
@@ -184,7 +184,7 @@ cliquez sur l'icône de filtre dans la carte. Les entrées du filtre peuvent êt
 </thead>
 <tbody>
 <tr>
-<td>Types de terminaux</td>
+<td>types de terminal</td>
 <td>Graphique à secteurs affichant le nombre de terminaux enregistrés par type de terminal, pour votre organisation.</td>
 </tr><tr>
 <td>Données transférées</td>

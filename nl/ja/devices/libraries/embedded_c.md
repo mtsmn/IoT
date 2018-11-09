@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-13"---
+  years: 2015, 2018
+lastupdated: "2018-04-19"
+
+---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -14,7 +16,7 @@ lastupdated: "2017-03-13"---
 # デバイス開発者のための Embedded C
 {: #embedded_c}
 
-Embedded C を使用して、{{site.data.keyword.iot_full}} 上で組織と対話するデバイスを構築してカスタマイズできます。Embedded C を使用してデバイスの開発を始める場合は、提供されている情報と例を活用してください。
+Embedded C を使用して、{{site.data.keyword.iot_full}} 上で組織と対話するデバイスを構築してカスタマイズできます。 Embedded C を使用してデバイスの開発を始める場合は、提供されている情報と例を活用してください。
 {:shortdesc}
 
 ## Embedded C クライアントおよびリソースのダウンロード
@@ -26,9 +28,10 @@ Embedded C を使用して、{{site.data.keyword.iot_full}} 上で組織と対�
 ## 従属関係
 {: #dependencies}
 
-|従属関係|説明|
+|従属関係 |説明|
 |:---|:---|
-|[Eclipse Paho Embedded C ライブラリー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |MQTT C クライアント・ライブラリーを提供します。詳しくは、[MQTT クライアント・パッケージ - 組み込みデバイス用 C ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window} を参照してください。|
+|[Eclipse Paho Embedded C ライブラリー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |MQTT C クライアント・ライブラリーを提供します。 詳しくは、[MQTT クライアント・パッケージ - 組み込みデバイス用 C ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window} を参照してください。|
+|[Mbed TLS 2.4.1 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.4.1.tar.gz){: new_window} |TLS サポートおよびクライアント・サイド証明書ベースの認証を有効にするための SSL ライブラリーを提供します。詳しくは、[Mbed TLS の SSL ライブラリー![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://tls.mbed.org/ssl-library){: new_window} を参照してください。|
 
 
 ## インストール
@@ -66,20 +69,19 @@ Embedded C 用 {{site.data.keyword.iot_short_notm}} クライアント・ライ�
 ## クライアント・ライブラリーの初期化
 {: #initialize_client_library}
 
-クライアント・ライブラリーをダウンロードしたら、初期化して {{site.data.keyword.iot_short_notm}} に接続する必要があります。パラメーターを渡すか構成ファイルを使用して、Embedded C 用 {{site.data.keyword.iot_short_notm}} クライアント・ライブラリーを初期化できます。
+クライアント・ライブラリーをダウンロードしたら、初期化して {{site.data.keyword.iot_short_notm}} に接続する必要があります。 パラメーターを渡すか構成ファイルを使用して、Embedded C 用 {{site.data.keyword.iot_short_notm}} クライアント・ライブラリーを初期化できます。
 
 ### パラメーターの引き渡し
 
 `initialize` 関数は、{{site.data.keyword.iot_short_notm}} サービスに接続するために、以下のパラメーターを使用します。
 
-|定義|説明
-|
+|定義 |説明 |
 |:---|:---|
 |`client`|*iotfclient* へのポインター。|
 |`org`|組織 ID。|
 |`type` |デバイスのタイプ。|
 |`id` |デバイス ID。|
-|`auth-method` |使用する認証の方式。現在サポートされている値は、`token` のみです。|
+|`auth-method` |使用する認証の方式。 現在サポートされている値は、`token` のみです。|
 |`auth-token`|デバイスを Watson IoT Platform に安全に接続するための認証トークン。|
 
 
@@ -150,14 +152,13 @@ Embedded C 用 {{site.data.keyword.iot_short_notm}} クライアント・ライ�
 ## コマンドの処理
 {: #handling_commands}
 
-デバイス・クライアントは、接続時に、このデバイスに対するコマンドに自動的にサブスクライブします。特定のコマンドを処理するには、`setCommandHandler` 関数を呼び出して、コマンド・コールバック関数を登録する必要があります。コールバック関数には、以下のプロパティーがあります。
+デバイス・クライアントは、接続時に、このデバイスに対するコマンドに自動的にサブスクライブします。 特定のコマンドを処理するには、`setCommandHandler` 関数を呼び出して、コマンド・コールバック関数を登録する必要があります。 コールバック関数には、以下のプロパティーがあります。
 
-|プロパティー|説明|
+|プロパティー |説明|
 |:---|:---|
-|`commandName`  |呼び出されたコマンドの名前。|  
-|`format`  |イベントの形式。形式は任意のストリング (JSON など) となります。|
-|`payload`  |コマンド・ペイロードのデータ。最大長は 131072 バイトです。
-|
+|`commandName`  |呼び出されたコマンドの名前。 |  
+|`format`  |イベントの形式。 形式は任意のストリング (JSON など) となります。|
+|`payload`  |コマンド・ペイロードのデータ。 最大長は 131072 バイトです。 |
 
 
 ```
@@ -179,20 +180,19 @@ Embedded C 用 {{site.data.keyword.iot_short_notm}} クライアント・ライ�
 	....
 
 ```
-**注:** ``yield()`` 関数は、デバイスが Watson IoT Platform からコマンドを受け取ることができるようにし、接続を維持します。キープアライブ間隔によって指定された時間フレーム内に ``yield()`` 関数が呼び出されなければ、プラットフォームから送られるコマンドはデバイスで受け取られなくなります。``yield()`` 関数に割り当てる値で、ソケットからデータを読み取ることができる時間の長さ (ミリ秒単位) を指定します。この時間が経過すると、制御がアプリケーションに戻されます。
+**注:** ``yield()`` 関数は、デバイスが Watson IoT Platform からコマンドを受け取ることができるようにし、接続を維持します。 キープアライブ間隔によって指定された時間フレーム内に ``yield()`` 関数が呼び出されなければ、プラットフォームから送られるコマンドはデバイスで受け取られなくなります。 ``yield()`` 関数に割り当てる値で、ソケットからデータを読み取ることができる時間の長さ (ミリ秒単位) を指定します。この時間が経過すると、制御がアプリケーションに戻されます。
 
 ## イベントのパブリッシュ
 {: #publishing_events}
 
 イベントは、以下のプロパティーでパブリッシュすることができます。
 
-|プロパティー|説明|
+|プロパティー |説明|
 |:---|:---|
-|eventType|パブリッシュされるイベントのタイプ (例えば、status や gps)。|  
-|eventFormat|形式は任意のストリング (`json` など) となります。|
-|data|ペイロードのデータ。最大長は 131072 バイトです。
-|
-|QoS|パブリッシュ・イベントのサービス品質レベル。サポートされる値は、`0`、`1`、`2` です。|
+|eventType  |パブリッシュされるイベントのタイプ (例えば、status や gps)。 |  
+|eventFormat  |形式は任意のストリング (`json` など) となります。 |
+|data  |ペイロードのデータ。 最大長は 131072 バイトです。 |
+|QoS  |パブリッシュ・イベントのサービス品質レベル。 サポートされる値は、`0`、`1`、`2` です。|
 
 
 ```

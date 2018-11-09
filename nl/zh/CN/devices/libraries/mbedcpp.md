@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -13,40 +13,39 @@ lastupdated: "2017-03-14"
 {:pre: .pre}
 
 
-# 针对设备开发者的 mBed C++
+# 针对设备开发者的 Mbed C++
 {: #mbedcpp}
 
-使用 [mBed C++ 客户机库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window} 可轻松将 [mBed 设备 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://www.mbed.com/en/){: new_window}（如 [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) 或 [FRDM-K64F ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/platforms/FRDM-K64F/){: new_window}）连接到 {{site.data.keyword.iot_full}} 服务。
+使用 [Mbed C++ 客户机库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){: new_window} 可轻松将 [Mbed 设备 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://www.mbed.com/en/){: new_window}（如 [LPC1768](https://os.mbed.com/platforms/mbed-LPC1768/) 或 [FRDM-K64F ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/platforms/FRDM-K64F/){: new_window}）连接到 {{site.data.keyword.iot_full}} 服务。
 {:shortdesc}
 
-有关更多信息，请参阅 [developer.mbed.org ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/){: new_window} 上的 [ibmiotf ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window}。
+有关更多信息，请参阅 [os.mbed.com ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/){: new_window} 上的 [ibmiotf ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){: new_window}。
 
-虽然库使用的是 C++，但仍会避免动态内存分配，也不会使用 STL 函数，因为有时 mBed 设备有特殊的内存型号，会使移植变得困难。在任何情况下，库都允许您尽可能使内存使用情况可预测。
+虽然库使用的是 C++，但仍会避免动态内存分配，也不会使用 STL 函数，因为有时 Mbed 设备有特殊的内存型号，会使移植变得困难。在任何情况下，库都允许您尽可能使内存使用情况可预测。
 
 ## 依赖关系
 {: #dependencies}
 
 |依赖关系|描述|
 |:---|:---|
-|[Eclipse Paho MQTT 库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/teams/mqtt/code/MQTT/){: new_window}|为 mBed 设备提供 MQTT 客户机库。有关更多信息，请参阅 [Embedded MQTT C/C++ ClientLibraries ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}|
-|[EthernetInterface 库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/){: new_window}|基于以太网的 mBed IP 库。|
+|[Eclipse Paho MQTT 库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/teams/mqtt/code/MQTT/){: new_window}|为 Mbed 设备提供 MQTT 客户机库。有关更多信息，请参阅 [Embedded MQTT C/C++ ClientLibraries ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}|
+|[EthernetInterface 库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/users/mbed_official/code/EthernetInterface/){: new_window}|基于以太网的 Mbed IP 库。|
 
 ## 如何使用库
 {: #library_use}
 
-使用 mBed C++ IBMIoTF 客户机库时，请使用 [mBed 编译器 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/compiler/){: new_window} 来创建应用程序。mBed 编译器提供了轻量级在线 C/C++ IDE，此 IDE 配置用于编写、编译和下载程序以在 mBed 微控制器上运行。
+使用 Mbed C++ IBMIoTF 客户机库时，请使用 [Mbed 编译器 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/compiler/){: new_window} 来创建应用程序。Mbed 编译器提供了轻量级在线 C/C++ IDE，此 IDE 配置用于编写、编译和下载程序以在 Mbed 微控制器上运行。
 
-**注：**您不必安装或设置任何内容就能开始运行 mBed。
+**注：**您不必安装或设置任何内容就能开始运行 Mbed。
 
-有关如何将 ARM mBed NXP LPC 1768 微控制器连接到 {{site.data.keyword.iot_short_notm}} 的信息，请参阅 [mBed C++ Client Library for IBM Watson IoT Platform ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/){: new_window} 诀窍。
+有关如何将 Arm Mbed NXP LPC 1768 微控制器连接到 {{site.data.keyword.iot_short_notm}} 的信息，请参阅 [Mbed C++ Client Library for IBM Watson IoT Platform ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/){: new_window} 诀窍。
 
 ## 构造方法
 {: #constructor}
 
 构造方法用于构建客户机实例，并接受以下参数：
 
-|参数|描述
-|
+|参数|描述|
 |:---|:---|
 |`org` |组织标识。此值是必需的。如果使用的是 Quickstart 流，请指定 `quickstart`。|
 |`type`   |设备类型。此字段是必填的。|
@@ -118,6 +117,8 @@ lastupdated: "2017-03-14"
 
 ```
 成功连接后，设备可以将事件发布到 {{site.data.keyword.iot_short_notm}}，并可以侦听命令。
+
+
 此外，设备还可以使用 `isConnected()` 方法来查询连接的状态，如以下示例中所示：
 
 ```
@@ -155,14 +156,16 @@ lastupdated: "2017-03-14"
 
 	// Construct an event message with desired datapoints in JSON format
 	sprintf(buf,
-            "{\"d\":{\"myName\":\"IoT mbed\",\"accelX\":%0.4f,\"accelY\":%0.4f,\"accelZ\":%0.4f,
+            "{\"d\":{\"myName\":\"IoT Mbed\",\"accelX\":%0.4f,\"accelY\":%0.4f,\"accelZ\":%0.4f,
             \"temp\":%0.4f,\"joystick\":\"%s\",\"potentiometer1\":%0.4f,\"potentiometer2\":%0.4f}}",
             MMA.x(), MMA.y(), MMA.z(), sensor.temp(), joystickPos, ain1.read(), ain2.read());
 
         status = client.publishEvent("blink", buf);
 	....
 ```
-有关完整样本，请参阅 [IBMIoTClientLibrarySample![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}。
+有关完整样本，请参阅 [IBMIoTClientLibrarySample![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}。
+
+
 
 ### 提高事件的 QoS 级别
 
@@ -180,7 +183,7 @@ lastupdated: "2017-03-14"
 
 	// Construct an event message with desired datapoints in JSON format
 	sprintf(buf,
-            "{\"d\":{\"myName\":\"IoT mbed\",\"accelX\":%0.4f,\"accelY\":%0.4f,\"accelZ\":%0.4f,
+            "{\"d\":{\"myName\":\"IoT Mbed\",\"accelX\":%0.4f,\"accelY\":%0.4f,\"accelZ\":%0.4f,
             \"temp\":%0.4f,\"joystick\":\"%s\",\"potentiometer1\":%0.4f,\"potentiometer2\":%0.4f}}",
             MMA.x(), MMA.y(), MMA.z(), sensor.temp(), joystickPos, ain1.read(), ain2.read());
 
@@ -210,6 +213,9 @@ lastupdated: "2017-03-14"
 ```
 库不会存储在未连接状态期间发布的事件，所以在连接重新建立后，设备需要再次调用 `publishEvent()` 方法来发送这些事件。
 
+
+
+
 ## 处理命令
 {: #handling_commands}
 
@@ -218,7 +224,7 @@ lastupdated: "2017-03-14"
 
 |属性|描述|
 |:---|:---|
-|`command` | 调用的命令的名称。|  
+|`command` |调用的命令的名称。|  
 |`format`  |事件的格式。格式可以为任意字符串，例如 JSON。
 |
 |`payload`  |命令有效内容的数据。最大长度为 131072 字节。
@@ -259,7 +265,9 @@ WARN("Unsupported command: %s\n", cmd.getCommand());
     client.yield(1000);  // allow the MQTT client to receive messages
     ....
 ```
-有关完整样本，请参阅 [IBMIoTClientLibrarySample![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}。
+有关完整样本，请参阅 [IBMIoTClientLibrarySample![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}。
+
+
 
 **注：**必须定期调用 `client.yield()` 函数来接收命令。通过 `client.yield()` 函数，设备能接收来自 Watson IoT Platform 的命令，并使连接保持活动。如果未在 keepAlive 时间间隔指定的时间范围内调用 `client.yield()` 函数，那么设备不会接收到从该平台发出的任何命令。分配给 `client.yield()` 函数的值指定在将控制返回给应用程序之前，可以从套接字读取数据的时间长度（以毫秒为单位）。
 
@@ -278,4 +286,4 @@ WARN("Unsupported command: %s\n", cmd.getCommand());
 ## 样本
 {: #samples}
 
-[IBMIoTClientLibrarySample ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){: new_window} 是一个代码样本，显示了如何使用 {{site.data.keyword.iot_short_notm}} 客户机库将 mbed LPC1768 或 FRDM-K64F 设备连接到服务实例。
+[IBMIoTClientLibrarySample ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){: new_window} 是一个代码样本，显示了如何使用 {{site.data.keyword.iot_short_notm}} 客户机库将 Mbed LPC1768 或 FRDM-K64F 设备连接到服务实例。

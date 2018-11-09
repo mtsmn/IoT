@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-07-19"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -12,12 +12,10 @@ lastupdated: "2017-07-19"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 配置资源级别访问控制 (Beta)
+# 配置资源级别访问控制
 {: #configure_RLAC}
 
-**重要信息：**{{site.data.keyword.iot_full}} 资源级别访问控制功能只作为受限 Beta 程序的一部分提供。未来更新可能会包含与此功能当前版本不兼容的更改。请尝试此功能，[让我们了解您的想法 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
-
-资源级别的访问控制使您能够控制对管理设备的用户和 API 密钥访问权。您可以使用资源组来定义每个用户或 API 密钥可管理的组织中的设备。可以为用户和 API 密钥分配“角色到组”对，这可定义他们只能执行在指定组中的设备上指定的角色所涵盖的操作。有关资源级别访问控制的更多信息，请参阅[资源级别访问控制概述](rlac_overview.md)和[{{site.data.keyword.iot_short_notm}}访问控制 API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}。
+资源级别的访问控制使您能够控制对管理设备的用户和 API 密钥访问权。您可以使用资源组来定义每个用户或 API 密钥可管理的组织中的设备。可以为用户和 API 密钥分配“角色到组”对，这可定义他们只能执行在指定组中的设备上指定的角色所涵盖的操作。有关资源级别访问控制的更多信息，请参阅[资源级别访问控制概述](rlac_overview.html)和[{{site.data.keyword.iot_short_notm}}访问控制 API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}。
 
 ## 配置资源级别访问控制 - 过程流
 {: #RLAC_process}
@@ -26,7 +24,7 @@ lastupdated: "2017-07-19"
 1. [创建组织](../iotplatform_overview.html#organizations)。
 2. [创建用户](../add_users.html#adding-new-users)和 [API 密钥](../platform_authorization.html#api-key)。
 3. [创建资源组](rlac.html#create_delete_group)。
-4. [为用户和 API 密钥指定角色到组的映射](rlac.html#assign_roletoegroup)。
+4. [为用户和 API 密钥指定角色到组的映射](rlac.html#assign_roletogroup)。
 5. [将设备添加到资源组](rlac.html#add_device)。
 6. [启用资源级别访问控制](rlac.html#RLAC_enable)。
 

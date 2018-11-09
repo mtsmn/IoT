@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-09-28"
+  years: 2017, 2018
+lastupdated: "2018-05-07"
 ---
 
 ---
@@ -15,15 +15,13 @@ lastupdated: "2017-09-28"
 {:tip: .tip}
 
 
-# Gerätedaten simulieren (Beta)
+# Simulieren von Gerätedaten 
 {: #sim_device_data}
 
 Mithilfe des {{site.data.keyword.iot_full}}-Gerätesimulators können Sie simulierte Ereignisse für Geräte einrichten. Sie können die Daten für simulierte Ereignisse verwenden, um mit allen Funktionen versehene {{site.data.keyword.iot_short_notm}}-Komponenten zu untersuchen, zu testen und vorzuführen.
 {: shortdesc}
 
 Sie können vorhandene Gerätetypen und Geräte verwenden. Der Simulator ermöglicht Ihnen das Generieren neuer Geräte für vorhandene Typen. Sie können die Ereignisdetails für jedes Gerät konfigurieren oder eine Standardkonfiguration einrichten, die auf alle Geräte angewendet wird. Sie können eine Konfiguration für simulierte Ereignisse exportieren, sodass sie wiederverwendet oder gemeinsam genutzt werden kann, um andere Simulationen einzurichten.
-
-**Wichtig:** Die {{site.data.keyword.iot_full}}-Funktion für den Gerätesimulator steht nur als Bestandteil eines eingeschränkten Betaprogramms zur Verfügung. Zukünftige Aktualisierungen enthalten möglicherweise Änderungen, die mit der aktuellen Version dieser Funktion nicht kompatibel sind. Starten Sie einen Versuch und [senden Sie uns Ihren Erfahrungsbericht ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 Gehen Sie wie folgt vor, um die Gerätedaten zu simulieren: 
 

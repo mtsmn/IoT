@@ -23,7 +23,7 @@ lastupdated: "2017-12-21"
 
 连接设备并利用数据之前，请注册 {{site.data.keyword.Bluemix_notm}} 帐户，并在您的 {{site.data.keyword.Bluemix_notm}} 组织中创建 {{site.data.keyword.iot_short_notm}} 服务的实例。可以直接从 [IBM Cloud 服务目录中的 {{site.data.keyword.iot_short_notm}} 页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}，创建 {{site.data.keyword.iot_short_notm}} 实例。  
 
-有关如何在 {{site.data.keyword.Bluemix_notm}} 上注册帐户并配置区域以及有关其他帐户管理设置的详细信息，请参阅[管理 IBM Cloud 帐户](https://console.ng.bluemix.net/docs/admin/account.html#signup)。
+有关如何在 {{site.data.keyword.Bluemix_notm}} 上注册帐户、配置区域以及有关其他帐户管理设置的详细信息，请参阅[管理 IBM Cloud 帐户](https://console.ng.bluemix.net/docs/admin/account.html#signup)。
 
 可以在仪表板中设置并配置 {{site.data.keyword.iot_short_notm}} 实例。要打开仪表板，请转至 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.iot_short_notm}} 服务实例，然后单击**启动**。
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-11-09"
+  years: 2016, 2018
+lastupdated: "2018-03-26"
 
 ---
 
@@ -15,42 +15,100 @@ lastupdated: "2017-11-09"
 # 了解映射表达式语言
 {: #mapping_expression}
 
-您可以使用映射表达式语言来操作和组合数据，以及格式化可能对已处理数据运行的任何查询的结果。映射表达式语言是 [JSONata ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.jsonata.org/index.html){:new_window} 的子集，可在定义[映射](ga_im_definitions.html#definitions_resources)时使用。JSONata 是用于 JSON 数据的轻量级查询和转换语言。
+您可以使用映射表达式语言来处理和组合数据，以及格式化可能对已处理数据运行的任何查询的结果。映射表达式语言是 [JSONata ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.jsonata.org/index.html){:new_window} 的子集，可在定义[映射](ga_im_definitions.html#resources)或创建[规则](../information_management/im_rules.html)时使用。 
+
+JSONata 是用于 JSON 数据的轻量级查询和转换语言。此外，还提供了 [JSONata Exerciser ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://try.jsonata.org/){:new_window} 工具，用于快速、方便地试用 JSONata。
 
 以下信息显示当前受支持的关键运算符和函数，以及您可以如何使用它们的一些示例。 
 
-## 受支持的 JSONata 运算符
+## JSONata 运算符
 {: #operators}
 
-支持以下 JSONata 运算符子集： 
+支持所有 [JSONata 运算符 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.jsonata.org/operators.html){:new_window}，但以下运算符除外：
 
-运算符的类型                   | 受支持的运算符    | 注释
-
-------------- | ------------- | -------------
-算术 | *+* - / * % | % 运算符返回余数。
-比较 | < <= > >= != = | 等式运算符为 =，就像在 JSONata 中一样。
-布尔 | *in*、*and* | 布尔常量为 *true* 或 *false*。
-条件三元 | ? | ? 运算符基于测试条件的结果，求两个可选表达式其中一个的值。运算符采用以下格式 *expression*？*value_if_true* : *value_if_false*
-字符串| & | & 运算符将操作数的字符串值连接到单个结果字符串中。
-序列生成器| .. | 创建递增整数的数组，从 LHS 上的数字开始，到 RHS 上的数字结束，例如 [1..4] -> [1,2,3,4]。操作数必须求值为整数。序列生成器只能在数组构造函数 [] 中使用。
-其他 | . | 点运算符用于带有字面值键的对象访问，例如 $event.object.hh。*
-e:* 左侧的表达式受限于事件 ($event) 或状态 ($state) 或元数据 ($instance) 中的特定属性。
+- ~>（函数链接）
+- ^(…)（排序依据）
+- :=（变量绑定）
 
 **注：** 
 - 对表达式分组使用括号 ( ) 并更改运算符优先顺序
-- 使用单引号将包含空格的属性名称括起来，例如 $event.object.'a b' 
+- 使用单引号或双引号将字符串和属性名括起，例如 event.object.'ab' 
+- 使用反引号将包含特殊字符（包括空格）的属性名括起，例如： 
+```
+{"x y":22}.`x y`
+```
+- 使用反引号将以数字开头的属性名括起，例如：
+```
+`7emperature`
+```
+
+## JSONata 函数
+{: #functions}
+支持以下 JSONata 函数： 
+
+ - 所有[字符串 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.jsonata.org/string-functions.html){:new_window} 函数
+ - 所有[数字 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.jsonata.org/numeric-functions.html){:new_window} 函数 	
+ - 所有[数字汇总 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.jsonata.org/aggregation-functions.html){:new_window} 函数 
+ - 所有[布尔值 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.jsonata.org/boolean-functions.html){:new_window} 函数  
+ - [$count 和 $append 数组 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.jsonata.org/array-functions.html){:new_window} 函数 	
 
 ## 扩展映射表达式语言
 
 已扩展映射表达式语言，通过引入 $event、$state 和 $instance 变量，与数据管理功能配合使用。在对表达式求值之前，JSON 会绑定到这些变量。下表提供了这些变量的概述，这些变量定义为在表达式中使用：
 
-变量| 示例输入 JSON| 作为表达式的示例| 用于...
+变量|示例输入 JSON|作为表达式的示例|用于...
 ------------- | ------------- | -------------
-$event | *{"t": 34.5}*  | $event.t | 选择要在表达式中使用的入站事件的属性。
-$state | *{"temperature": 34.5,"humidity": 78 }*  | $state.temperature | 选择设备状态上要在表达式中使用的属性。
-$instance | *{"deviceId": "TemperatureSensor1","typeId": "EnvSensor1","metadata": {"temp_adjustment": 50}}*  | $instance.metadata.temp_adjustment | 选择要在表达式中使用的设备或设备类型属性。
+$event |*{"t": 34.5}*  |$event.t |选择要在表达式中使用的入站事件的属性。
+$state |*{"temperature": 34.5,"humidity": 78 }*  |$state.temperature |选择设备状态上要在表达式中使用的属性。
+$instance |*{"deviceId": "tSensor","typeId": "humiditySensor","metadata": {"temp_adjustment": 50}}*|$instance.metadata.temp_adjustment |选择要在表达式中使用的设备或设备类型属性。
 
-您还可以定义一个将这些变量的使用组合在一起的表达式。在以下示例中，*temp_adjustment* 属性在设备元数据中定义，用于校准事件读取。属性在一个映射中定义，但可以应用到许多设备。 
+以下示例使用以下对象作为事件的输入：  
+```
+ {
+    "temperature": 35,
+    "humidity": 72,
+    "pressure": 1024
+  }
+
+```
+通过使用以下表达式将对象转换为数组：
+
+```
+  [$event.temperature, $event.humidity, $event.pressure]
+```  
+此表达式将生成以下输出：
+```
+ [
+    35,
+    72,
+    1024
+  ]
+```
+
+您可以反转此示例，并将数组从输入转换为对象。以下示例使用以下数组作为事件的输入：
+```
+{
+    "readings": [
+      35,
+      72,
+      1024
+    ]
+  }
+```
+通过使用以下表达式将数组转换为对象：
+```
+ {"temperature": $event.readings[0], "humidity": $event.readings[1], "pressure": $event.readings[2]}
+```
+ 此表达式将生成以下输出：
+  ```
+  {
+    "temperature": 35,
+    "humidity": 72,
+    "pressure": 1024
+  }
+  
+ ```
+您还可以定义一个将这些变量的使用组合在一起的表达式。在以下示例中，*temp_adjustment* 属性在设备元数据中定义，用于校准事件读数。属性在一个映射中定义，但可以应用到许多设备。
 
 ```
 "propertyMappings" : {
@@ -61,44 +119,31 @@ $instance | *{"deviceId": "TemperatureSensor1","typeId": "EnvSensor1","metadata"
      
 ```
 
-## 受支持的 JSONata 函数
-{: #functions}
-支持以下 JSONata 函数子集： 
 
-函数的类型 |函数 | 描述
-| 示例
-------------- | ------------- | ------------- 
-字符串| $substring(string, start_index[, length]) | 提取子字符串。例如 *$substring("Hello World", 3, 5) => "lo Wo"*。
-字符串| $string(arg) | 将自变量强制转换为字符串值，例如 *$string(2) => "2"*。
-数值 | $number(arg) | 果可能，将参数强制转换为数字值，例如 *$number(2) => 2*。
-数值 | $sum(array) | 返回数字数组的算术和，例如 *([1,2,3]) = 6*。
-数值 | $average(array) | 返回数字数组的平均值，例如 *([1,2,3]) = 2.0*。
-布尔 | $exists(expression) | 如果属性在表达式中存在则返回 *true*，否则返回 *false*。
-数组 | $count(array) | 回数组参数中的项数，例如 *([1,2,3,4]) = 4*。如果数组参数不是数组，而是另一 JSON 类型的值，那么该参数将被视为包含该值的单个数组，并且此函数返回 *1*。
-数组 | $append(array1, array2) | 返回一个数组，该数组包含 *array1* 中值，后跟 *array2* 中的值，例如 *([1,2], [3,4]) = [1,2,3,4]*。如果任一参数不是数组，那么会将其视为包含该值的单个数组，例如 *$append("Hello", "World") => ["Hello", "World"]*。
+点运算符“.”用于带有字面值键的对象访问，例如 $event.object.hh。左侧的表达式受限于事件 ($event)、状态 ($state) 或元数据 ($instance) 中的特定属性。右侧的表达式包含您可能要访问的信息。
 
-## 数组
-使用 JSON 数组按指定顺序放置值的集合。数组使数组中的每个值与索引或位置相关联。要处理数组中的各个值，必须使用数组的字段名称后的方括号来指定索引。如果方括号包含数字或者求值为数字的表达式，那么该数字代表要选择的值的索引。数字数组也可以用作索引，例如 *["a","b","c"][[1,2]] -> ["b", "c"]*。数组 *[1,2]* 用作标识要从数组 *["a","b","c"]* 中选择的值的索引。 
+有关点运算符的更多信息，请参阅 JSONata 文档的[运算符 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.jsonata.org/operators.html){:new_window} 部分。
 
-索引为零偏移量，因此数组 *arr* 中的第一个值为 *arr[0]*，例如 *[1,2,3][0] -> 1*。如果数字不是整数，那么会向下舍入为整数，例如 *[1,2,3][0.9] -> [1]*。
 
-使用负索引从数组末尾进行计数，例如 *[1,2,3][-1] -> 3*。 
+## 语言指南
 
-如果指定的索引超过数组的大小，那么不会选择任何内容。
+- 支持所有[基本选择 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.jsonata.org/basic.html){:new_window}。
+- 支持所有[复杂选择 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.jsonata.org/complex.html){:new_window}，但通配符除外。
+- 支持条件表达式和带括号的表达式作为[编程构造 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.jsonata.org/programming.html){:new_window} 的一部分。通过将 $instance、$state 和 $event 变量作为扩展映射语言（特定于 Watson IoT Platform 数据管理）的一部分，支持变量。当前不支持在 JSONata 中使用的“$”和“$$”变量。 
 
 ## 构造输出
-您可以使用数组构造函数或对象构造函数，来指定如何在输出中显示处理的数据。
+您可以使用数组构造函数或对象构造函数来指定如何在输出中显示处理的数据。
 
-### 受支持的数组构造
-通过将以逗号分隔的文字或表达式列表括在方括号 [] 中，可以构造数组。逗号用来分隔数组构造函数中的多个表达式，例如 *[1, 3-1] = [1,2]*。
+### 支持的数组构造函数
+通过将以逗号分隔的文字或表达式列表括在方括号 [] 中，可以构造数组。逗号用来分隔数组构造函数中的多个表达式，包括序列生成，例如：*[1, 3-1] = [1,2]*、*[1..3] -> [1,2,3]* 和 *[1..3, 7..9] -> [1,2,3,7,8,9]*.
 
-### 受支持的对象构造函数
+### 支持的对象构造函数
 {: #constructors}
-您可以使用一对花括号 {} 在输出中构造 JSON 对象，方法是在花括号中包含由逗号分隔的键值或对，并以冒号分隔每个键和值，例如 *{key1 : value1, key2:value2}* 或 *{"hello" : "world"}*。对象键必须是字符串。  
+您可以使用一对花括号 {} 在输出中构造 JSON 对象，方法是在花括号中包含由逗号分隔的键值或对，并以冒号分隔每个键和值，例如 *{key1 : value1, key2:value2}* or *{"hello" : "world"}*。对象键必须是字符串。
 
 
 ## 示例：使用数组处理和报告温度数据
-以下各部分以[数据管理入门](ga_im_example.html)中的示例为基础构建，用于说明如何使用数组来维护温度读数的滑动窗口，并计算该窗口中包含的读数的当前总和或平均值。 
+以下场景基于[使用 REST API 开始进行数据管理](ga_im_example.html) 中的示例构建，显示可如何使用数组来维护温度读数的滑动窗口，并计算该窗口中所包含读数的当前总和或平均值。
 
 滑动窗口以到达顺序存储数据。滑动窗口可以配置为以递增方式逐出数据，而不是保留所有插入的数据。当滑动窗口填满时，任何未来插入都会导致逐出该窗口中最旧的数据项。
 
@@ -107,17 +152,17 @@ $instance | *{"deviceId": "TemperatureSensor1","typeId": "EnvSensor1","metadata"
 () -> (1) -> (2, 1) -> (3, 2, 1) -> (4, 3, 2, 1) -> (5, 4, 3, 2, 1) -> (6, 5, 4, 3, 2) -> (7, 6, 5, 4, 3) -> ...
 ```
 
-以下示例显示了如何通过添加名为 *tempReadings* 的数组，来修改[逐步指南](ga_im_index_scenario.html#step4)步骤 7 中显示的逻辑接口模式文件配置。此数组用于针对最后 5 个事件，维护从设备发送的最后 5 个值的窗口。如果没有值存储在 *tempReadings* 中，那么会将该数组设置为 [0]，并且会将下一个接收的读数追加到该数组，该数组会增大，直到接收到 5 个读数为止。接收到 5 个读数后，新读数会使最早的读数从窗口中除去。 
+以下示例显示了如何通过添加名为 *tempReadings* 的数组，修改[逐步指南 1](ga_im_index_scenario.html#step4) 的步骤 7 中显示的逻辑接口模式文件配置。此数组用于针对最后 5 个事件，维护从设备发送的最后 5 个值的窗口。如果没有值存储在 *tempReadings* 中，那么会将该数组设置为 [0]，并且会将下一个接收的读数追加到该数组，该数组会增大，直到接收到 5 个读数为止。接收到 5 个读数后，新读数会使最早的读数从窗口中除去。
 
-**重要注意事项：**必须将 *tempReadings* 设置为“required”，并在缺省情况下将其设置为数组。 
+**重要说明：**必须将 *tempReadings* 设置为“required”，并在缺省情况下将其设置为数组。
 
 ```
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {},
   "properties": {
-      "temperature" : {
-            "description" : "latest temperature reading in degrees Celsius",
+      "temperature": {
+          "description" : "latest temperature reading in degrees Celsius",
           "type" : "number",
           "minimum" : -273.15,
           "default" : 0.0
@@ -136,8 +181,8 @@ $instance | *{"deviceId": "TemperatureSensor1","typeId": "EnvSensor1","metadata"
           "type": "number"
       }
   },
-   "required" : [
-       "tempReadings"
+  "required": [
+      "tempReadings"
   ],
   "type": "object"
 }
@@ -151,8 +196,8 @@ $instance | *{"deviceId": "TemperatureSensor1","typeId": "EnvSensor1","metadata"
        "logicalInterfaceId": "5846ec826522050001db0e12",
        "notificationStrategy": "on-state-change",
        "propertyMappings": {
-           "tevt" : {
-       "tempAverage": "$average($count($state.tempReadings)<5?$append($state.tempReadings, $event.t):$append($state.tempReadings[[1..4]], $event.t))",
+           "tevt": {
+               "tempAverage": "$average($count($state.tempReadings)<5?$append($state.tempReadings, $event.t):$append($state.tempReadings[[1..4]], $event.t))",
                "tempReadings": "$count($state.tempReadings)<5?$append($state.tempReadings, $event.t):$append($state.tempReadings[[1..4]], $event.t)",
                "tempSum": "$sum($count($state.tempReadings)<5?$append($state.tempReadings, $event.t):$append($state.tempReadings[[1..4]], $event.t))"
            }
@@ -184,3 +229,32 @@ $instance | *{"deviceId": "TemperatureSensor1","typeId": "EnvSensor1","metadata"
 }
 ```
 
+## 处理映射表达式与输入数据之间的不匹配问题
+
+当某个映射表达式包含对所发布事件中未指定的输入数据的引用时，状态更新可能会失败。
+
+例如，您可能配置了以下表达式：
+```
+temperature = $event.t 
+humidity = $event.hum
+```
+其中，*t* 是事件的可选属性。
+
+如果收到仅包含湿度数据的事件（例如 `{"humidity":22}`），那么表达式 `temperature = $event.t` 会求值失败，因为在发布的设备事件中未指定可选的 *t* 属性。
+
+状态更新失败。湿度状态属性未更新，并且会将错误消息发布到设备的 MQTT 错误主题：
+```
+iot-2/type/${typeId}/id/${deviceId}/err/data
+```
+要防止由于未指定的可选数据而导致状态更新失败，可以将 $exists 函数与一个三元条件配合使用，以指定可选属性的缺省值。以下示例为 *t* 属性定义了缺省值 *0*：
+```
+"tempEvent:
+    {
+      "temperature": "$exists($event.t)?$event.t:0",
+      "humidity": "$event.hum"
+    }
+```
+
+通过以这种方式为可选属性定义缺省值，表达式将成功求值，即使在发布的设备事件中未指定 *t* 属性也是如此。
+
+因此，如果收到事件 `{"humidity":22}`，说明状态更新成功完成，并且设备状态会设置为 `{"humidity":22, "temperature":0}`。

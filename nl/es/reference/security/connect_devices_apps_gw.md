@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-05"
+  years: 2015, 2018
+lastupdated: "2018-07-19"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-04-05"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Conexión de aplicaciones, dispositivos y pasarelas utilizando la API
+# Conexión de aplicaciones, dispositivos y pasarelas
 {: #connect_devices_apps_gw}
 
 Puede conectar aplicaciones, dispositivos y pasarelas a {{site.data.keyword.iot_full}} mediante el protocolo de MQTT. También puede utilizar la API REST HTTP para conectar dispositivos a {{site.data.keyword.iot_short_notm}}.
@@ -41,7 +41,9 @@ Para conectar clientes de dispositivos, aplicaciones y pasarelas a la instancia 
 ## Seguridad de puerto
 {: #client_port_security}
 
-Asegúrese de que los puertos requeridos estén abiertos y habilitados para la comunicación. Los puertos 8883 y 443 dan soporte a conexiones seguras mediante TLS con el protocolo MQTT y HTTP. El puerto 1883 da soporte a conexiones no seguras con el protocolo MQTT y HTTP. En la tabla siguiente se resume la información sobre tipo de conexión y números de puerto asociados:   
+Asegúrese de que los puertos requeridos estén abiertos y habilitados para la comunicación. Los puertos 8883 y 443 dan soporte a conexiones seguras mediante TLS con el protocolo MQTT y HTTP. El puerto 1883 da soporte a conexiones no seguras con el protocolo MQTT y HTTP. El puerto HTTP 1883 está inhabilitado de forma predeterminada. Para obtener información sobre cómo cambiar el valor predeterminado, consulte [Configuración de políticas de seguridad](set_up_policies.html#set_up_policies.html).
+
+En la tabla siguiente se resume la información sobre tipo de conexión y números de puerto asociados:   
 
 |Tipo de conexión |Número de puerto|
 |:---|:---|
@@ -63,40 +65,32 @@ Los requisitos de TLS dependen de si está conectando a {{site.data.keyword.iot_
 
 ### Requisitos de TLS para conexiones MQTT
 
-{{site.data.keyword.iot_short_notm}} necesita TLS v1.2 y las siguientes suites de cifrado:
+{{site.data.keyword.iot_short_notm}} requiere TLS v1.2. Asegúrese de que se permita al menos una de las suites de cifrado siguientes: 
 
-
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
-- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
-- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
 - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
 
 ### Requisitos de TLS para conexiones HTTP
 
-Si utiliza el certificado de servidor predeterminado, {{site.data.keyword.iot_short_notm}} necesita TLS v1.1 o TLS v1.2 y las siguientes suites de cifrado:
+Si está utilizando el certificado de servidor predeterminado, {{site.data.keyword.iot_short_notm}} requiere TLS v1.2. Asegúrese de que se permita al menos una de las suites de cifrado siguientes: 
 
 
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
 - TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
+- TLS_RSA_WITH_AES_128_CBC_SHA
 
+Aumente la fuerza de su cifrado usando los cifrados de secreto de reenvío ECDHE o DHE en su lista de cifrado. 
 
 ## Autenticación de cliente de MQTT
 {: #mqtt_authentication}
@@ -132,6 +126,8 @@ Los valores *appId*, *type_id*, *device_type* y *device_id* no deben tener más 
 **Notas:**
 - Cuando se conecta al servicio de Inicio rápido, no se necesita autenticación.
 - No es necesario registrar una aplicación antes de establecer la conexión.
+
+Para obtener información sobre el formato de las suscripciones compartidas, consulte [Conectividad de MQTT para aplicaciones](../../applications/mqtt.html).
 
 
 ### Conexión de aplicaciones utilizando MQTT

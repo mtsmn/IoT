@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -14,12 +14,12 @@ lastupdated: "2017-03-14"
 
 # Quickstart
 
-[Quickstart ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://quickstart.internetofthings.ibmcloud.com/#/){: new_window} est un bac à sable ouvert que vous pouvez utiliser pour connecter rapidement vos terminaux à {{site.data.keyword.iot_full}}. Si vos terminaux prennent en charge le protocole de messagerie MQTT, ils peuvent être facilement connectés au service Quickstart.
+[Quickstart ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://quickstart.internetofthings.ibmcloud.com/#/){: new_window} est un bac à sable ouvert que vous pouvez utiliser pour connecter rapidement vos terminaux à {{site.data.keyword.iot_full}}. Si vos terminaux prennent en charge le protocole de messagerie MQTT, ils peuvent être facilement connectés au service Quickstart.
 
-Pour consulter les exemples, les recettes et les tutoriels qui expliquent comment vous pouvez connecter différents terminaux au service Quickstart, accédez à [DeveloperWorks Recipes ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/){: new_window}, par exemple :
+Pour consulter les exemples, les recettes et les tutoriels qui expliquent comment vous pouvez connecter différents terminaux au service Quickstart, accédez à [DeveloperWorks Recipes ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/){: new_window}, par exemple :
 
-- [OpenBlocks IoT BX1G ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
-- [Reactive Blocks ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
+- [OpenBlocks IoT BX1G ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
+- [Reactive Blocks ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
 
 
 **Important :** Si votre instance {{site.data.keyword.iot_short_notm}} utilise le service Quickstart, les applications évolutives ne sont pas prises en charge.
@@ -54,7 +54,7 @@ A mesure que vous ajustez les valeurs de détection dans votre terminal simulé,
 
 ## Démonstration Mosquitto
 
-[Mosquitto ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://mosquitto.org/){: new_window} est un client MQTT open source multiplateforme que vous pouvez utiliser pour expérimenter le service {{site.data.keyword.iot_short}}. Après avoir installé le client Mosquitto, choisissez un ID d'application et un ID de terminal uniques. Si les ID d'application et de terminal ne sont pas uniques, votre test de connexion peut générer un conflit avec un autre utilisateur qui exécute la même procédure de test Quickstart.
+[Mosquitto ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](http://mosquitto.org/){: new_window} est un client MQTT open source multiplateforme que vous pouvez utiliser pour expérimenter le service {{site.data.keyword.iot_short}}. Après avoir installé le client Mosquitto, choisissez un ID d'application et un ID de terminal uniques. Si les ID d'application et de terminal ne sont pas uniques, votre test de connexion peut générer un conflit avec un autre utilisateur qui exécute la même procédure de test Quickstart.
 
 Les valeurs *appId*, *type_id*, *device_type* et *device_id* ne doivent pas comporter plus de 36 caractères et ne peuvent contenir que les caractères suivants :
 - Caractères alphanumériques (a-z, A-Z, 0-9)
@@ -90,9 +90,9 @@ Le tour est joué ! En exécutant l'exemple de procédure Quickstart, vous avez 
 
 ## Liens connexes
 
-- [Quickstart ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://quickstart.internetofthings.ibmcloud.com){: new_window}
-- [Recettes DeveloperWorks ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes){: new_window}
-- [OpenBlocks IoT BX1G ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
-- [Reactive Blocks ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
-- [Application Quickstart ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://quickstart.internetofthings.ibmcloud.com){: new_window}
-- [Mosquitto ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://mosquitto.org/){: new_window}
+- [Quickstart ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [Recettes DeveloperWorks ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes){: new_window}
+- [OpenBlocks IoT BX1G ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
+- [Reactive Blocks ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
+- [Application Quickstart ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](http://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [Mosquitto ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](http://mosquitto.org/){: new_window}

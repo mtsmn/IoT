@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2016-11-22"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -90,7 +90,7 @@ Erstellen Sie mithilfe des folgenden Codebeispiels ein `DeviceData`-Objekt, in d
 
 Konstruktor 1 erstellt eine `ManagedDevice`-Instanz in {{site.data.keyword.iot_short_notm}}, indem `DeviceData` und alle folgenden erforderlichen Eigenschaften akzeptiert werden:
 
-|Eigenschaft|Beschreibung |
+|Eigenschaft |Beschreibung |
 |:---|:---|
 |``Organization-ID`` |Die ID Ihrer Organisation.|
 |``Device-Type`` |Der Typ Ihres Geräts. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'.|
@@ -162,7 +162,7 @@ managedDevice.manage(3600);
 
 Weitere Informationen zur Operation `Manage` finden Sie in der [Dokumentation].
 
-  [documentation]: ../device_mgmt/operations/manage.html
+  [documentation]:../device_mgmt/operations/manage.html
 
 ## Nicht verwalten
 
@@ -174,7 +174,7 @@ managedDevice.unmanage();
 
 Weitere Informationen zur Operation `Unmanage` finden Sie in der [Dokumentation].
 
-  [documentation]: ../device_mgmt/operations/manage.html
+  [documentation]:../device_mgmt/operations/manage.html
 
 ## Positionsaktualisierung
 {: #construct_location_update}

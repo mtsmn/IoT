@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-19"
+  years: 2015, 2018
+lastupdated: "2018-03-08"
 
 ---
 
@@ -19,11 +19,11 @@ lastupdated: "2017-07-19"
 ## Introducción
 {: #introduction}
 
-El {{site.data.keyword.iot_full}} reconoce dos clases de dispositivos: **dispositivos gestionados** y **dispositivos no gestionados**.
+El {{site.data.keyword.iot_full}} reconoce los dispositivos y las pasarelas como las dos clases de dispositivo. La clase de dispositivo se identifica utilizando el campo "classId". Los dispositivos de la clase de dispositivo pueden ser dispositivos gestionados o dispositivos no gestionados.
 
 **Dispositivos gestionados** se definen como dispositivos que contienen un agente de gestión de dispositivos. Un agente de gestión de dispositivos es un conjunto de lógicas que permiten al dispositivo interactuar con el servicio de Gestión de dispositivos de {{site.data.keyword.iot_short_notm}} mediante el Protocolo de gestión de dispositivos. Los dispositivos gestionados pueden realizar operaciones de gestión de dispositivos incluidas actualizaciones de ubicación, descargas y actualizaciones de firmware, rearranques y restablecimientos de fábrica.
 
-El protocolo de gestión de dispositivos define un conjunto de operaciones admitidas. Un agente de gestión de dispositivos puede dar soporte a un subconjunto de las operaciones, pero deben estar soportadas las operaciones **gestionar** y **no gestionar**. Un dispositivo que da soporte a las operaciones de acción de firmware también deben dar soporte a la observación.
+El protocolo de gestión de dispositivos define un conjunto de operaciones admitidas. Un agente de gestión de dispositivos puede dar soporte a un subconjunto de las operaciones, pero debe hacer la solicitud Gestionar dispositivo. Un dispositivo que da soporte a las operaciones de acción de firmware también deben dar soporte a la observación.
 
 El Protocolo de gestión de dispositivos se crea en la parte superior del protocolo de mensajería MQTT. Para obtener más información sobre cómo interactúa el Protocolo de gestión de dispositivos con MQTT, consulte [Conectividad de MQTT para dispositivos](../mqtt.html).
 
@@ -31,38 +31,17 @@ El Protocolo de gestión de dispositivos se crea en la parte superior del protoc
 ### El ciclo de vida de gestión de dispositivos
 
 1. Un dispositivo y su tipo de dispositivo asociado se crean en el {{site.data.keyword.iot_short_notm}} mediante el panel de instrumentos o la API REST.
-2. Un dispositivo se conecta al {{site.data.keyword.iot_short_notm}} y utiliza la operación **dispositivos gestionados** para convertirse en un dispositivo gestionado.
-3. Puede ver y manipular los metadatos para un dispositivo utilizando las operaciones de dispositivos. Estas operaciones (por ejemplo, operaciones de actualización de firmware y de reinicio de dispositivos) se describen en la documentación 'Modelo del dispositivo'. Para obtener más información sobre el modelo del dispositivo, consulte [Modelo del dispositivo](https://console.ng.bluemix.net/docs/services/IoT/reference/device_model.html).
+2. Un dispositivo se conecta a la {{site.data.keyword.iot_short_notm}} y hace una solicitud de gestión de dispositivos se convierta en un dispositivo gestionado.
+3. Puede ver y manipular los metadatos para un dispositivo utilizando la API REST {{site.data.keyword.iot_short_notm}}. Estas operaciones de API (por ejemplo, actualización de firmware y reinicio de dispositivos) se describen en la documentación [Solicitudes de gestión de dispositivos](https://console.ng.bluemix.net/docs/services/IoT/devices/device_mgmt/requests.html).
 4. Un dispositivo puede comunicar actualizaciones sobre su ubicación, información de diagnóstico y códigos de error mediante el Protocolo de gestión de dispositivos.
-5. Para manejar dispositivos anómalos en grandes poblaciones de dispositivos, la solicitud de operaciones **dispositivos gestionados** incluye un parámetro lifetime opcional. El parámetro lifetime es el número de segundos en los que el dispositivo debe realizar otra solicitud **dispositivos gestionados** para evitar que se clasifique como inactivo y que se convierta en un dispositivo no gestionado.
-6. Cuando un dispositivo está desactivado, puede eliminarlo del {{site.data.keyword.iot_short_notm}} utilizando el panel de instrumentos o la API REST.
+5. Cuando un dispositivo está desactivado, puede eliminarlo del {{site.data.keyword.iot_short_notm}} utilizando el panel de instrumentos o la API REST.
 
 Consulte la receta [Conexión de Raspberry Pi como dispositivo gestionado a IBM Watson IoT Platform ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/){: new_window}.
-
-### Resumen de código de retorno
-
-
-La tabla siguiente muestra los códigos de retorno que se generan en varias etapas durante el ciclo de vida de gestión de dispositivos.
-
-|Código de retorno |Mensaje |
-|:---|:---|
-|200   |Operación satisfactoria|
-|202   |Aceptado (para iniciar mandatos)|
-|204   |Modificado (para actualizaciones de atributos)|
-|400   |Solicitud incorrecta (por ejemplo, si un dispositivo no se encuentra en el estado adecuado para este mandato)|
-|404   |No se ha encontrado el atributo (también se utiliza si la operación se ha publicado en un tema no válido)|
-|409   |El recurso no se ha podido actualizar debido a un conflicto (por ejemplo, el recurso lo están actualizando dos solicitudes simultáneas, para que la actualización se pueda volver a intentar más tarde)|
-|500   |Error de dispositivo inesperado|
-|501   |Operación no implementada|
-
 
 ## Solicitudes Manage Device
 {: #manage_device_request}
 
-Un dispositivo utiliza la solicitud Manage Device para convertirse en un dispositivo gestionado. La solicitud Manage Device debe ser la primera solicitud de gestión de dispositivos enviada por el dispositivo tras conectarse al {{site.data.keyword.iot_short_notm}}. Un agente de gestión de dispositivos suele enviar este tipo de solicitud siempre que se inicie o reinicie.
-
-**Importante:** El soporte para esta operación es obligatorio para cualquier dispositivo gestionado.
-
+Un dispositivo utiliza la solicitud Manage Device para convertirse en un dispositivo gestionado. Un agente de gestión de dispositivos debe enviar una solicitud de gestión de dispositivo antes de que pueda recibir las solicitudes del servidor. Un agente de gestión de dispositivos suele enviar este tipo de solicitud siempre que se inicie o reinicie.
 
 ### Tema para una solicitud Manage Device
 
@@ -126,7 +105,7 @@ Mensaje entrante del servidor:
 
 Tema: iotdm-1/response
 {
-    "rc": 200,
+    "rc": number,
     "reqId": "string"
 }
 ```
@@ -138,16 +117,16 @@ Tema: iotdm-1/response
 |:---|:---|
 |200   |La operación ha sido satisfactoria.|
 |400   |El mensaje de entrada no coincide con el formato esperado, o uno de los valores está fuera del rango válido.|
-|404   |El nombre del tema es incorrecto, o el dispositivo no se encuentra en la base de datos.|
-|409   |Se ha producido un conflicto durante la actualización de la base de datos del dispositivo. Para resolver este conflicto, simplifique la operación si es necesario.|
+|403   |Prohibido (si un dispositivo intenta publicar una solicitud de gestión que solicita soporte para un conjunto de acciones no válido)|
+|404   |El dispositivo no se ha registrado con {{site.data.keyword.iot_short_notm}}.|
+|409   |El recurso no se ha podido actualizar debido a un conflicto (por ejemplo, el recurso se está actualizando mediante dos solicitudes simultáneas). La actualización se puede volver a intentar más tarde.|
 
 
 ## Solicitudes Unmanage Device
 {: #manage-unmanage}
 
 
-Un dispositivo utiliza una solicitud Unmanage Device cuando ya no necesita ser gestionado. Cuando un dispositivo se convierte en no gestionado, {{site.data.keyword.iot_short_notm}} dejará de enviar nuevas solicitudes de gestión de dispositivos al dispositivo. Los dispositivos no gestionados siguen publicando códigos de error, mensajes de registro y mensajes de ubicación.
-**Importante:** El soporte para esta operación es obligatorio para cualquier dispositivo gestionado.
+Un dispositivo utiliza una solicitud Unmanage Device cuando ya no necesita ser gestionado. Cuando un dispositivo se convierte en no gestionado, {{site.data.keyword.iot_short_notm}} dejará de enviar nuevas solicitudes de gestión de dispositivos al dispositivo. Los dispositivos no gestionados pueden seguir publicando códigos de error, mensajes de registro y mensajes de ubicación.
 
 ### Tema para una solicitud Unmanage Device
 
@@ -184,7 +163,7 @@ Mensaje entrante del servidor:
 
 Tema: iotdm-1/response
 {
-    "rc": 200,
+    "rc": number,
     "reqId": "string"
 }
 ```
@@ -195,24 +174,20 @@ Tema: iotdm-1/response
 |:---|:---|
 |200   |La operación ha sido satisfactoria.|
 |400   |El mensaje de entrada no coincide con el formato esperado, o uno de los valores está fuera del rango válido.|
-|404   |El nombre del tema es incorrecto, o el dispositivo no se encuentra en la base de datos.|
-|409   |Se ha producido un conflicto durante la actualización de la base de datos del dispositivo. Para resolver este conflicto, simplifique la operación si es necesario.|
+|404   |El dispositivo no se ha registrado con {{site.data.keyword.iot_short_notm}}.|
+|409   |El recurso no se ha podido actualizar debido a un conflicto (por ejemplo, el recurso se está actualizando mediante dos solicitudes simultáneas). La actualización se puede volver a intentar más tarde.|
 
 
 ## Solicitudes Update Location
 {: #update-location}
 
-Un dispositivo utiliza una solicitud Update Location para gestionar los datos de la ubicación para un dispositivo. Los metadatos de ubicación para un dispositivo pueden actualizarse en {{site.data.keyword.iot_short_notm}} de las siguientes maneras:
+Los metadatos de ubicación para un dispositivo pueden actualizarse en {{site.data.keyword.iot_short_notm}} de las siguientes maneras:
 
 ### Actualizaciones automáticas de la ubicación de dispositivo
-- El dispositivo notifica a {{site.data.keyword.iot_short_notm}} sobre la actualización de la ubicación. El dispositivo recupera su ubicación de un receptor GPS y envía un mensaje de gestión de dispositivos a la instancia de {{site.data.keyword.iot_short_notm}} para actualizar su ubicación. La indicación de fecha y hora captura la hora a la que se ha recuperado la ubicación desde el receptor GPS. La indicación de fecha y hora es válida aunque haya un retraso en el envío del mensaje de actualización de la ubicación. Si se omite la indicación de fecha y hora del mensaje de gestión de dispositivos, la fecha y hora de la recepción del mensaje se utiliza para actualizar los metadatos de ubicación.
+- Los dispositivos que pueden determinar su ubicación pueden elegir notificar al servidor de gestión de dispositivos de {{site.data.keyword.iot_short_notm}} sobre los cambios de ubicación. El dispositivo notifica a {{site.data.keyword.iot_short_notm}} sobre la actualización de la ubicación. El dispositivo recupera su ubicación, de un receptor de GPS, por ejemplo, y envía un mensaje de gestión de dispositivos a la instancia de {{site.data.keyword.iot_short_notm}} para actualizar su ubicación. La indicación de fecha y hora captura la hora a la que se ha recuperado la ubicación desde el receptor GPS. La indicación de fecha y hora es válida aunque haya un retraso en el envío del mensaje de actualización de la ubicación. El servidor registra la fecha y la hora del recibo de mensaje y utiliza dicha información para actualizar los metadatos de ubicación si no se ha utilizado una indicación de fecha y hora.
 
 ### Actualizaciones manuales de ubicación de dispositivos utilizando la API REST
 - Puede establecer manualmente los metadatos de ubicación para un dispositivo estático utilizando la API REST de {{site.data.keyword.iot_short_notm}} cuando el dispositivo esté registrado. También puede modificar la ubicación más adelante. El valor de indicación de fecha y hora es opcional, pero cuando se omite, la fecha y hora actuales se establece en los metadatos de ubicación para el dispositivo.
-
-### Actualizaciones de ubicación desencadenadas por dispositivos
-
-Los dispositivos que pueden determinar su ubicación pueden elegir notificar al servidor de gestión de dispositivos de {{site.data.keyword.iot_short_notm}} sobre los cambios de ubicación.
 
 ### Tema para una solicitud Update Location desencadenada mediante un dispositivo:
 
@@ -232,7 +207,7 @@ iotdm-1/response
 ### Actualización de ubicación desencadenada por usuarios o apps
 
 
-Cuando un usuario o aplicación actualiza la ubicación de un dispositivo gestionado activo, el dispositivo recupera un mensaje de actualización.
+Cuando un usuario o aplicación actualiza la ubicación de un dispositivo gestionado activo, el dispositivo recibe un mensaje de actualización.
 
 
 
@@ -249,13 +224,11 @@ iotdm-1/device/update
 ### Formato de mensaje para una solicitud Update location
 
 
-El campo ``measuredDateTime`` es la fecha de medida de ubicación. El campo ``updatedDateTime`` es la fecha de la actualización a la información de dispositivo. Por motivos de eficiencia, {{site.data.keyword.iot_short_notm}} a veces procesa actualizaciones a la información de ubicación de modo que las actualizaciones se retrasan ligeramente. La latitud y longitud deben especificarse en grados decimales utilizando World Geodetic System 1984 (WGS84).
+El campo ``measuredDateTime`` es la fecha y la hora de la medición de la ubicación.
 
-Siempre que se actualiza la ubicación, los valores que se proporcionan para latitud, longitud, elevación e incertidumbre se consideran una sola actualización de varios valores. La latitud y la longitud son obligatorios y ambos deben proporcionarse con cada actualización.  La elevación y la incertidumbre son opcionales y se pueden omitir.
+Siempre que se actualiza la ubicación, los valores que se proporcionan para la latitud, la longitud, la elevación y la precisión se consideran una única actualización de varios valores. La latitud y la longitud son obligatorios y ambos deben proporcionarse con cada actualización. La latitud y longitud deben especificarse en grados decimales utilizando World Geodetic System 1984 (WGS84). La elevación y la precisión se miden en metros y son opcionales.
 
 Si se suministra un valor opcional en una actualización y posteriormente se omite en una actualización posterior, el valor más antiguo se suprime por la actualización posterior. Cada actualización se considera un conjunto de varios valores completo.
-
-### Las actualizaciones de ubicación que están desencadenadas por el dispositivo
 
 
 Formato de solicitud:
@@ -285,7 +258,7 @@ Mensaje entrante del servidor:
 
 Tema: iotdm-1/response
 {
-    "rc": 200,
+    "rc": number,
     "reqId": "string"
 }
 ```
@@ -296,8 +269,8 @@ Tema: iotdm-1/response
 |:---|:---|
 |200   |La operación ha sido satisfactoria.|
 |400   |El mensaje de entrada no coincide con el formato esperado, o uno de los valores está fuera del rango válido.|
-|404   |El nombre del tema es incorrecto, o el dispositivo no se encuentra en la base de datos.|
-|409   |Se ha producido un conflicto durante la actualización de la base de datos del dispositivo. Para resolver este conflicto, simplifique la operación si es necesario.|
+|404   |El dispositivo no se ha registrado con {{site.data.keyword.iot_short_notm}}.|
+|409   |El recurso no se ha podido actualizar debido a un conflicto (por ejemplo, el recurso se está actualizando mediante dos solicitudes simultáneas). La actualización se puede volver a intentar más tarde.|
 
 
 ### Actualizaciones de ubicación desencadenadas por usuarios o apps
@@ -312,7 +285,7 @@ Topic: iotdm-1/device/update
 {
     "d": {
         "fields": [
-            {
+         {
                 "field": "location",
                 "value": {
                     "latitude": number,
@@ -320,6 +293,8 @@ Topic: iotdm-1/device/update
                     "elevation": number,
                     "accuracy": number,
                     "measuredDateTime": "string in ISO8601 format"
+                    "updatedDateTime": "string in ISO8601 format",
+
                 }
             }
         ]
@@ -364,7 +339,7 @@ Topic: iotdm-1/device/update
 {
     "d": {
         "fields": [
-            {
+         {
                 "field": "location",
                 "value": ""
             }
@@ -414,7 +389,7 @@ Mensaje entrante del servidor:
 
 Tema: iotdm-1/response
 {
-    "rc": 200,
+    "rc": number,
     "reqId": "string"
 }
 ```
@@ -425,8 +400,8 @@ Tema: iotdm-1/response
 |:---|:---|
 |200   |La operación ha sido satisfactoria.|
 |400   |El mensaje de entrada no coincide con el formato esperado, o uno de los valores está fuera del rango válido.|
-|404   |El nombre del tema es incorrecto, o el dispositivo no se encuentra en la base de datos.|
-|409   |Se ha producido un conflicto durante la actualización de la base de datos del dispositivo. Para resolver este conflicto, simplifique la operación si es necesario.|
+|404   |El dispositivo no se ha registrado con {{site.data.keyword.iot_short_notm}}.
+|409   |El recurso no se ha podido actualizar debido a un conflicto (por ejemplo, el recurso se está actualizando mediante dos solicitudes simultáneas). La actualización se puede volver a intentar más tarde.|
 
 
 ## Solicitudes Clear Error Codes
@@ -475,8 +450,8 @@ Tema: iotdm-1/response
 |:---|:---|
 |200   |La operación ha sido satisfactoria.|
 |400   |El mensaje de entrada no coincide con el formato esperado, o uno de los valores está fuera del rango válido.|
-|404   |El nombre del tema es incorrecto, o el dispositivo no se encuentra en la base de datos.|
-|409   |Se ha producido un conflicto durante la actualización de la base de datos del dispositivo. Para resolver este conflicto, simplifique la operación si es necesario.|
+|404   |El dispositivo no se ha registrado con {{site.data.keyword.iot_short_notm}}.|
+|409   |El recurso no se ha podido actualizar debido a un conflicto (por ejemplo, el recurso se está actualizando mediante dos solicitudes simultáneas). La actualización se puede volver a intentar más tarde.|
 
 
 ## Solicitudes Add Log
@@ -512,9 +487,9 @@ Mensaje saliente del dispositivo:
 Topic: iotdevice-1/add/diag/log
 {
     "d": {
-        "message": string,
-        "timestamp": string,
-        "data": string,
+        "message": "string",
+        "timestamp": "string",
+        "data": "string",
         "severity": number
     },
     "reqId": "string"
@@ -528,7 +503,7 @@ Mensaje entrante del servidor:
 
 Tema: iotdm-1/response
 {
-    "rc": 200,
+    "rc": number,
     "reqId": "string"
 }
 ```
@@ -540,8 +515,8 @@ Tema: iotdm-1/response
 |:---|:---|
 |200   |La operación ha sido satisfactoria.|
 |400   |El mensaje de entrada no coincide con el formato esperado, o uno de los valores está fuera del rango válido.|
-|404   |El nombre del tema es incorrecto, o el dispositivo no se encuentra en la base de datos.|
-|409   |Se ha producido un conflicto durante la actualización de la base de datos del dispositivo. Para resolver este conflicto, simplifique la operación si es necesario.|
+|404   |El dispositivo no se ha registrado con {{site.data.keyword.iot_short_notm}}.|
+|409   |El recurso no se ha podido actualizar debido a un conflicto (por ejemplo, el recurso se está actualizando mediante dos solicitudes simultáneas). La actualización se puede volver a intentar más tarde.|
 
 ## Solicitudes Clear Logs
 {: #diag-clear-logs}
@@ -578,7 +553,7 @@ Mensaje entrante del dispositivo:
 
 Tema: iotdm-1/response
 {
-    "rc": 200,
+    "rc": number,
     "reqId": "string"
 }
 ```
@@ -589,15 +564,15 @@ Tema: iotdm-1/response
 |:---|:---|
 |200   |La operación ha sido satisfactoria.|
 |400   |El mensaje de entrada no coincide con el formato esperado, o uno de los valores está fuera del rango válido.|
-|404   |El nombre del tema es incorrecto, o el dispositivo no se encuentra en la base de datos.|
-|409   |Se ha producido un conflicto durante la actualización de la base de datos del dispositivo. Para resolver este conflicto, simplifique la operación si es necesario.|
+|404   |El dispositivo no se ha registrado con {{site.data.keyword.iot_short_notm}}.|
+|409   |El recurso no se ha podido actualizar debido a un conflicto (por ejemplo, el recurso se está actualizando mediante dos solicitudes simultáneas). La actualización se puede volver a intentar más tarde.|
 
 ## Solicitudes Observe Attribute Changes
 {: #observations-observe}
 
 {{site.data.keyword.iot_short_notm}} puede enviar una solicitud Observe Attribute Change a un dispositivo para observar los cambios de uno o varios atributos de dispositivos utilizando el tipo de solicitud Observe Attribute Changes. Cuando el dispositivo reciba la solicitud, debe enviar una solicitud de notificación a {{site.data.keyword.iot_short_notm}} siempre que los valores de los atributos observados cambien.
 
-**Importante:** Los dispositivos deben implementar, observar, notificar y cancelar operaciones para dar soporte a los tipos de solicitud [Firmware Actions- Update](requests.html#firmware-actions-update). Las solicitudes Observe Attribute Changes solo se utilizan en el contexto de solicitudes de firmware.
+**Importante:** Los dispositivos deben implementar, observar, notificar y cancelar operaciones para dar soporte a los tipos de solicitud [Firmware Actions- Update](requests.html#firmware-actions-update).
 
 ### Tema para una solicitud Observe Attribute Changes
 
@@ -611,9 +586,9 @@ iotdm-1/observe
 ### Formato de mensaje para una solicitud Observe Attribute Changes
 
 
-La matriz `fields` es una matriz del atributo de dispositivos del modelo de dispositivo. Si se especifica un campo complejo, como por ejemplo `mgmt.firmware`, se espera que sus campos subyacentes se actualicen al mismo tiempo para que sólo se genere un mensaje de notificación único.
+La matriz `fields` es una matriz de los atributos de dispositivo del modelo de dispositivo. Si se especifica un campo complejo, como por ejemplo `mgmt.firmware`, se espera que sus campos subyacentes se actualicen al mismo tiempo para que sólo se genere un mensaje de notificación único.
 
-El parámetro `message` que se utiliza en la respuesta puede especificarse si el valor del parámetro `rc` no es `200`. Si no se puede recuperar ningún valor de parámetro especificado, el valor del parámetro `rc` debe establecerse en `404` si no se encuentra el dispositivo, o en `500` por cualquier otro motivo. Cuando no se pueden encontrar los valores para los parámetros, la matriz `fields` debería contener elementos que tengan `field` establecido en el nombre de cada parámetro que no se podía leer. El parámetro `value` debería omitirse. Para que el parámetro response code se establezca en `200`, se deben especificar `field` y `value`, donde `value` es el valor actual de un atributo especificado por el valor del parámetro `field`.
+El parámetro `message` que se utiliza en la respuesta puede especificarse si el valor del parámetro `rc` no es `200`. Si no se puede recuperar ningún valor de parámetro especificado, el valor del parámetro `rc` debe establecerse en `404` si no se encuentra el atributo, o en `500` por cualquier otro motivo. Cuando no se pueden encontrar los valores para los parámetros, la matriz `fields` debería contener elementos que tengan `field` establecido en el nombre de cada parámetro que no se podía leer. El parámetro `value` debería omitirse. Para que el parámetro response code se establezca en `200`, se deben especificar `field` y `value`, donde `value` es el valor actual de un atributo especificado por el valor del parámetro `field`.
 
 Formato de solicitud:
 
@@ -624,7 +599,7 @@ Topic: iotdm-1/observe
 {
     "d": {
         "fields": [
-            {
+         {
                 "field": "field_name"
             }
         ]
@@ -644,7 +619,7 @@ Tema: iotdevice-1/response
     "message": "string",
     "d": {
         "fields": [
-            {
+         {
                 "field": "field_name",
                 "value": "field_value"
             }
@@ -660,9 +635,9 @@ Tema: iotdevice-1/response
 
 {{site.data.keyword.iot_short_notm}} puede enviar una solicitud a un dispositivo para cancelar la observación actual de uno o varios atributos de dispositivos utilizando el tipo de solicitud Cancel Attribute Observation. La parte `fields` de la solicitud es una matriz de los nombres de atributos de dispositivos del modelo de dispositivos, como por ejemplo los parámetros `location`, `mgmt.firmware` o `mgmt.firmware.state`.
 
-El parámetro `message` debe especificarse si el valor del parámetro `rc` no es `200`.
+El parámetro `message` se puede especificar si el valor del parámetro `rc` no es `200`.
 
-**Importante:** Los dispositivos deben implementar, observar, notificar y cancelar operaciones para dar soporte a los tipos de solicitud [Firmware Actions- Update](requests.html#firmware-actions-update). Las solicitudes Cancel Attribute Observation solo se utilizan en el contexto de solicitudes de firmware.
+**Importante:** Los dispositivos deben implementar, observar, notificar y cancelar operaciones para dar soporte a los tipos de solicitud [Firmware Actions- Update](requests.html#firmware-actions-update).
 
 ### Tema para una solicitud Cancel Attribute Observation
 
@@ -686,7 +661,7 @@ Topic: iotdm-1/cancel
 {
     "d": {
         "fields": [
-            {
+         {
                 "field": "field_name"
             }
         ]
@@ -715,11 +690,9 @@ Tema: iotdevice-1/response
 
 {{site.data.keyword.iot_short_notm}} puede solicitar una solicitud de observación para un atributo específico o un conjunto de valores utilizando el tipo de solicitud Notify Attribute Changes. Cuando el valor del atributo o atributos cambia, el dispositivo debe enviar una notificación que contenga el valor más reciente.
 
-El valor del parámetro `field_name` es el nombre del atributo que ha cambiado, y el `field_value` es el valor actual del atributo. El atributo puede ser un campo complejo. Si se actualizan varios valores de un campo complejo como resultado de una sola operación, sólo se enviará un único mensaje de notificación.
+El valor del parámetro `field` es el nombre del atributo que ha cambiado, y el valor `value` es el valor actual del atributo. El atributo puede ser un campo complejo. Si se actualizan varios valores de un campo complejo como resultado de una sola operación, sólo se enviará un único mensaje de notificación.
 
-Cuando la solicitud de notificación se haya procesado correctamente, el valor del parámetro `rc` se establece en `200`. Si la solicitud no es correcta, el valor del parámetro `rc` se establece en `400`. Si el parámetro que se especifica en la solicitud de notificación no se observa, el valor del parámetro `rc` se establece en `404`.
-
-**Importante:** Los dispositivos deben implementar, observar, notificar y cancelar operaciones para dar soporte a los tipos de solicitud [Firmware Actions- Update](requests.html#firmware-actions-update). Las solicitudes Notify Attribute Observation solo se utilizan en el contexto de solicitudes de firmware.
+**Importante:** Los dispositivos deben implementar, observar, notificar y cancelar operaciones para dar soporte a los tipos de solicitud [Firmware Actions- Update](requests.html#firmware-actions-update).
 
 
 ### Tema para una solicitud Notify Attribute Change
@@ -744,7 +717,7 @@ Topic: iotdevice-1/notify
 {
     "d": {
         "fields": [
-            {
+         {
                 "field": "field_name",
                 "value": "field_value"
             }
@@ -772,6 +745,6 @@ Tema: iotdm-1/response
 |:---|:---|
 |200   |La operación ha sido satisfactoria.|
 |400   |El mensaje de entrada no coincide con el formato esperado, o uno de los valores está fuera del rango válido.|
-|404   |El nombre del tema es incorrecto, o el dispositivo no está en la base de datos, o no hay ninguna observación para el campo del que se ha informado.|
-|409   |Se ha producido un conflicto durante la actualización de la base de datos del dispositivo. Para resolver este conflicto, simplifique la operación si es necesario.|
+|404   |El dispositivo no se ha registrado con {{site.data.keyword.iot_short_notm}}.|
+|409   |El recurso no se ha podido actualizar debido a un conflicto (por ejemplo, el recurso se está actualizando mediante dos solicitudes simultáneas). La actualización se puede volver a intentar más tarde.|
 |500   |Se ha producido un error interno.|

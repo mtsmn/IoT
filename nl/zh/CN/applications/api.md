@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-10"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -90,13 +90,15 @@ password = 认证令牌
 |Content-Type 头|{{site.data.keyword.iot_short_notm}} 中的格式|
 |:---|:---|
 |text/plain|"text"
-|application/json| "json"
-|application/xml| "xml"
+|application/json|"json"
+|application/xml|"xml"
 |application/octet-stream|"bin"
+
+
 
 ### 服务质量
 
-与 MQTT 服务质量“至多一次”传递服务级别 0 类似，HTTP REST 消息传递提供了非持久性消息传递，但它会验证请求是否正确，并在发送 HTTP 响应之前，验证其是否可以传递到服务器。包含 HTTP 状态码 200 的回复将确认消息已传递到服务器。使用“至多一次”MQTT 服务质量级别或 HTTP 同等级别来传递事件消息时，设备或应用程序必须实现重试逻辑以保证传递。
+与 MQTT 服务质量“最多一次”传递服务级别 0 类似，HTTP REST 消息传递提供了非持久性消息传递，但它会验证请求是否正确，并在发送 HTTP 响应之前，验证其是否可以传递到服务器。包含 HTTP 状态码 200 的回复将确认消息已传递到服务器。使用“最多一次”MQTT 服务质量级别或 HTTP 同等级别来传递事件消息时，设备或应用程序必须实现重试逻辑以保证传递。
 
 
 有关 {{site.data.keyword.iot_short_notm}} 的 MQTT 协议和服务质量级别的更多信息，请参阅 [MQTT 消息传递](../reference/mqtt/index.html)。

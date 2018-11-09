@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-08"
+  years: 2017, 2018
+lastupdated: "2018-08-18"
 
 ---
 
@@ -13,16 +13,18 @@ lastupdated: "2017-11-08"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guía 4: Simulación de un gran número de dispositivos
+# Guía 3: Simulación de un gran número de dispositivos
 En la primera guía, ha configurado un simulador de dispositivo básico para simular manualmente una o varias cintas transportadoras. En esta guía, expandiremos esta simulación añadiendo una mayor cantidad de simuladores automáticos a su entorno para probar análisis y supervisar en un entorno más realista y multi-dispositivo.
 {:shortdesc}
 
-**Importante:** La aplicación requiere 512 MB de memoria, que es más de lo asignado por defecto y que también excede la cantidad disponible en las cuentas de prueba gratuita, incluyendo la cuenta de prueba de Bluemix y la cuenta estándar. Los titulares de una cuenta de Subscripción o de Pago según uso pueden aumentar la memoria asignada a 512 MB. Los titulares de una cuenta de prueba gratuita deben actualizar a una cuenta de Subscripción o de Pago según uso. Para obtener más información acerca de los tipos de cuenta de {{site.data.keyword.Bluemix_notm}}, consulte [Tipos de cuentas](/docs/pricing/index.html#pricing).
+**Importante:** La aplicación requiere 512 MB de memoria, que es más de lo asignado por defecto y que también excede la cantidad disponible en las cuentas de prueba gratuita, incluyendo la cuenta de prueba y la cuenta estándar de {{site.data.keyword.Bluemix}}. Los titulares de una cuenta de Subscripción o de Pago según uso pueden aumentar la memoria asignada a 512 MB. Los titulares de una cuenta de prueba gratuita deben actualizar a una cuenta de Subscripción o de Pago según uso. Para obtener más información acerca de los tipos de cuenta de {{site.data.keyword.Bluemix_notm}}, consulte [Tipos de cuentas](/docs/pricing/index.html#pricing).
+
+**Nota:** Bluemix es ahora IBM Cloud. Consulte el [IBM Cloud Blog](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo") para obtener más detalles.
 
 ## Visión general y objetivo
 {: #overview}
 
-En esta guía, configurará una aplicación de {{site.data.keyword.Bluemix_notm}} para simular varios dispositivos de cinta transportadora utilizando un [Node-RED de fondo ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://nodered.org){: new_window}.
+En esta guía, configurará una aplicación de {{site.data.keyword.Bluemix_notm}} para simular varios dispositivos de cinta transportadora utilizando un "programa de fondo" [Node-RED ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://nodered.org){: new_window}.
 
 La aplicación contiene tres flujos que:   
 1. Crean varios dispositivos.   
@@ -37,16 +39,16 @@ Al completar las instrucciones de esta guía:
 - Utilizará Cloud Foundry para desplegar una aplicación de simulador de dispositivo basado en Node-RED y habilitada para webhook.
 - Utilizará llamadas API para crear y registrar dispositivos, publicar sucesos de dispositivo y suprimir dispositivos.
 
-**Importante:** Es posible que simular un gran número de dispositivos que envían datos de dispositivo de forma simultánea a {{site.data.keyword.iot_short_notm}} utilice una gran cantidad de datos. Puede utilizar el panel de control {{site.data.keyword.iot_short_notm}} *Uso* para supervisar cuantos datos están utilizando sus dispositivos y aplicaciones. Las medidas se actualizan en intervalos de 2 horas.
+**Importante:** Es posible que simular un gran número de dispositivos que envían datos de dispositivo de forma simultánea a {{site.data.keyword.iot_full}} utilice una gran cantidad de datos. 
 
 ## Requisitos previos
 {: #prereqs}  
 Necesitará las siguientes cuentas y herramientas:
 
 * [Cuenta {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/registration/) con:    
- - Más de 512 MB de RAM.   
- - Más de 1 GB de cuota de disco.  
- - Dos servicios disponibles.
+ - Más de 512 MB de RAM   
+ - Más de 1 GB de cuota de disco  
+ - Dos servicios disponibles
 * [Interfaz de línea de mandatos de Cloud Foundry (cf CLI) ![icono de enlace externo](../../../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
 Utilice la CLI de cf para desplegar y gestionar sus aplicaciones de {{site.data.keyword.Bluemix_notm}}.
 * Opcional: [Git ![icono de enlace externo](../../../icons/launch-glyph.svg "icono de enlace externo")](https://git-scm.com/downloads){: new_window}  
@@ -60,12 +62,12 @@ Para cualquiera de las llamadas REST en los pasos siguientes, puede utilizar tan
 
 Siga los pasos siguientes para crear y desplegar su app de forma manual.   
 
-1. Clone el repositorio de GitHub de aplicación de muestra *Lesson4*.  
+1. Clone el repositorio de GitHub de la app de muestra *Lesson4*.  
 Utilice su herramienta Git favorita para clonar el siguiente repositorio:  
-https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 En Git Shell, utilice el siguiente mandato:
 ```bash
-$ git clone https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+$ git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 ```
 3. Configure la aplicación para su entorno editando el archivo manifest.yml.  
 Qué editar:
@@ -129,12 +131,9 @@ Si se le solicita, seleccione la organización y el espacio donde desea desplega
 <pre><code>$ cf create-service iotf-service iotf-service-free lesson4-simulate-iotf-service </code></pre>   
 **Importante:** Si está utilizando un servicio de {{site.data.keyword.iot_short_notm}} existente y ha actualizado el archivo manifest.yml, asegúrese de que utiliza el nombre de servicio existente. Por ejemplo, de la guía 1, utilice `iotp-for-conveyor` en lugar de `lesson4-simulate-iotf-service` en la llamada cf.
 7. Ejecute el mandato `cf push` para crear el proyecto y enviar por push su organización.  
-Su aplicación de muestra está desplegada en {{site.data.keyword.Bluemix_notm}}.
-  
-Cuando el despliegue finaliza, se muestra un mensaje para indicar que su aplicación está en ejecución.
-   
-Ejemplo:
-  
+Su aplicación de muestra está desplegada en {{site.data.keyword.Bluemix_notm}}.  
+Cuando el despliegue finaliza, se muestra un mensaje para indicar que su app está en ejecución.   
+Ejemplo:  
   ```
 requested state: started
 instances: 1/1
@@ -180,7 +179,7 @@ Cuando su flujo Node-RED esté protegido, si planea utilizar mandatos de API RES
 
 Puede utilizar la interfaz del flujo Node-RED o la API REST de aplicación para completar las siguientes tareas.
 
-### Node-RED  
+### Creación y conexión de dispositivos mediante Node-RED  
 Para registrar varios dispositivos:  
 1. Inicie sesión en {{site.data.keyword.Bluemix_notm}} en:  
 [https://bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://bluemix.net){: new_window}.
@@ -193,13 +192,8 @@ Se abre la interfaz de Node-RED.
 5. Pulse **Ir al editor de flujos de Node-RED**.
 6. En el editor de flujos, seleccione el separador **Tipo de dispositivo e instancia**.
 7. Para registrar cinco dispositivos, pulse el nodo inyectar etiquetado como **Registrar 5 dispositivos motorController**.
-8. Verifique que sus dispositivos están registrados.
- 1. En el panel de control de {{site.data.keyword.iot_short_notm}}, en el menú, seleccione **Paneles**.
- 3. Seleccione el panel **Analítica centrada en dispositivo**.
- 4. Localice la tarjeta **Dispositivos que me interesan**.  
-Se visualizan los nombres de dispositivo.
 
-### API REST  
+### Creación y conexión de dispositivos mediante la API REST  
 Para registrar varios dispositivos:  
 
 1. Realice una solicitud HTTP POST sobre el siguiente URL: `ROUTE_URL/rest/devices`  
@@ -220,29 +214,20 @@ Ejemplo: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/devices`
     - Opcional: authToken es la señal de autorización con la que se registrarán los dispositivos.
     - Opcional: Si no se proporciona chunkSize, se establece en 500 de forma predeterminada. El 'chunksize' debe ser menor que y un factor de numberDevices.
     - deviceName es el patrón para el deviceID de los dispositivos creados.
-2. Verifique que sus dispositivos están registrados.
- 1. En el panel de control de {{site.data.keyword.iot_short_notm}}, en el menú, seleccione **Paneles**.
- 3. Seleccione el panel **Analítica centrada en dispositivo**.
- 4. Localice la tarjeta **Dispositivos que me interesan**.  
-Se visualizan los nombres de dispositivo.
 
 ## Paso 4: Simular sucesos de dispositivo
 {: #step4}
 
 Puesto que los dispositivos simulados se registran con {{site.data.keyword.iot_short_notm}}, puede ejecutar ahora el simulador para empezar a enviar sucesos de dispositivo.
 
-### Node-RED  
+### Simulación de sucesos de dispositivo utilizando Node-RED  
 Para enviar sucesos de dispositivo:  
 1. En el editor de flujos de Node-RED, seleccione el separador **Simular varios dispositivos**.
 7. Para simular cinco dispositivos, pulse el nodo inyectar etiquetado como **Simular 5 dispositivos**.
-8. Verifique que sus dispositivos están enviando datos.
- 1. En el panel de control de {{site.data.keyword.iot_short_notm}}, en el menú, seleccione **Paneles**.
- 3. Seleccione el panel **Analítica centrada en dispositivo**.
- 4. Localice la tarjeta **Dispositivos que me interesan**.  
- 5. Seleccione uno de los dispositivos y verifique que los puntos de datos de dispositivo actualizados que corresponden con el mensaje publicado se visualizan en la tarjeta **Propiedades de dispositivo**.  
+ 
 
 
-### API Rest  
+### Simulación de sucesos de dispositivo utilizando la API REST  
 Para enviar sucesos de dispositivo:
 
 1. Realice una solicitud HTTP POST sobre el siguiente URL: `ROUTE_URL/rest/runtest`  
@@ -262,11 +247,7 @@ Donde:
     - timeInterval es el espaciado entre sucesos en milisegundos.
     - deviceType es el tipo de dispositivo para el que ha creado dispositivos simulados.
     - deviceName es el patrón para el deviceID de los dispositivos creados.
-8. Verifique que sus dispositivos están enviando datos.
- 1. En el panel de control de {{site.data.keyword.iot_short_notm}}, en el menú, seleccione **Paneles**.
- 3. Seleccione el panel **Analítica centrada en dispositivo**.
- 4. Localice la tarjeta **Dispositivos que me interesan**.  
- 5. Seleccione uno de los dispositivos y verifique que los puntos de datos de dispositivo actualizados que corresponden con el mensaje publicado se visualizan en la tarjeta **Propiedades de dispositivo**.   
+ 
 
 ## Paso 5: Supresión de dispositivos
 {: #deleting}
@@ -275,11 +256,7 @@ Donde:
 Para suprimir dispositivos:  
 1. En el editor de flujos de Node-RED, seleccione el separador **Tipo de dispositivo e instancia**.
 2. Para suprimir cinco dispositivos, pulse el nodo inyectar etiquetado como **Suprimir 5 dispositivos**.
-3. Verifique que sus dispositivos están suprimidos.
- 1. En el panel de control de {{site.data.keyword.iot_short_notm}}, en el menú, seleccione **Paneles**.
- 3. Seleccione el panel **Analítica centrada en dispositivo**.
- 4. Localice la tarjeta **Dispositivos que me interesan**.  
- 5. Verifique que los dispositivos ya no se enumeran.  
+
 
 
 ### API Rest  
@@ -293,19 +270,13 @@ Ejemplo: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevice
 "deviceType":"iot-conveyor-belt",  
 "deviceName": "belt"  
 }</code></pre>
-2. Verifique que sus dispositivos están suprimidos.
- 1. En el panel de control de {{site.data.keyword.iot_short_notm}}, en el menú, seleccione **Paneles**.
- 3. Seleccione el panel **Analítica centrada en dispositivo**.
- 4. Localice la tarjeta **Dispositivos que me interesan**.  
- 5. Verifique que los dispositivos ya no se enumeran.  
+  
 
 
 ## ¿Qué hacer a continuación?
 {: @whats_next}  
 Salte a otro tema que le interese:
-- [Guía 2: Utilización de reglas y acciones básicas en tiempo real](getting-started-iot-rules.html)  
-Ahora que ha configurado correctamente su cinta transportadora, la ha conectado con {{site.data.keyword.iot_short_notm}} y ha enviado algunos datos, es hora de hacer que esos datos trabajen para usted utilizando reglas y acciones.
-- [Guía 3: Supervisión de los datos de dispositivo](getting-started-iot-monitoring.html)  
+- [Guía 2: Supervisión de los datos de dispositivo](getting-started-iot-monitoring.html)  
 Ahora que ha conectado uno o varios dispositivos y ha empezado a realizar un buen uso de los datos de dispositivo, es hora de empezar a supervisar una colección de dispositivos.
 - [Obtenga más información acerca de {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [Obtenga más información acerca de las API de {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/reference/api.html){:new_window}

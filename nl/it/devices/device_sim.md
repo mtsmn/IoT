@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-09-28"
+  years: 2017, 2018
+lastupdated: "2018-05-07"
 ---
 
 ---
@@ -15,15 +15,13 @@ lastupdated: "2017-09-28"
 {:tip: .tip}
 
 
-# Simulazione dei dati del dispositivo (Beta)
+# Simulazione dei dati del dispositivo 
 {: #sim_device_data}
 
 Utilizzando il simulatore del dispositivo {{site.data.keyword.iot_full}}, puoi configurare gli eventi simulati per i dispositivi. Puoi anche utilizzare i dati dell'evento simulato per informazioni, verifica e per dimostrare la funzionalità completa delle funzioni {{site.data.keyword.iot_short_notm}}.
 {: shortdesc}
 
 Puoi utilizzare i dispositivi e i tipi di dispositivo esistenti e il simulatore ti abilita a generare nuovi dispositivi per i tipi esistenti. Puoi configurare i dettagli dell'evento di ogni dispositivo o impostare una configurazione predefinita che si applica a tutti i dispositivi. Puoi esportare una configurazione dell'evento simulata in modo che possa essere riutilizzata o condivisa per configurare altre simulazioni.
-
-**Importante:** la funzione del simulatore del dispositivo {{site.data.keyword.iot_full}} è disponibile solo come parte di un programma beta limitato. Futuri aggiornamenti possono includere modifiche incompatibili con la versione corrente di questa funzione. Provala e [facci sapere cosa ne pensi ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 Per simulare i dati del dispositivo: 
 

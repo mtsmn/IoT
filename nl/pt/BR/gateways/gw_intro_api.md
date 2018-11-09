@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2015, 2017
-lastupdated: "2017-10-04"
+ years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -31,14 +31,16 @@ Para obter informações sobre a segurança do cliente e como conectar clientes 
 ## Publicando eventos
 {: #event_publication}
 
-Além de usar o protocolo de sistema de mensagens MQTT, também é possível configurar seus dispositivos de gateway para publicar eventos no {{site.data.keyword.iot_short_notm}} sobre HTTP usando comandos da API de sistema de mensagens HTTP.
+Além de usar o protocolo de sistema de mensagens MQTT, também é possível configurar seus dispositivos de gateway para publicar eventos no {{site.data.keyword.iot_short_notm}} sobre HTTP usando comandos da API do sistema de mensagens HTTP.
 
 Para enviar uma solicitação de ``POST`` de um dispositivo que está conectado ao {{site.data.keyword.iot_short_notm}}, use uma das URLs a seguir:
 
-### Solicitação de POST não segura
+### Solicitação de POST não segura para eventos de publicação
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-### Solicitação de POST segura
+### Solicitação de POST segura para eventos de publicação
+
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **Notas importantes:**
@@ -47,7 +49,7 @@ Para enviar uma solicitação de ``POST`` de um dispositivo que está conectado 
 - Se um gateway não estiver designado à função *Gateway padrão*, ele poderá publicar eventos em nome de qualquer dispositivo na organização. Se o dispositivo que está conectado ao gateway não estiver registrado, o gateway registrará esse dispositivo automaticamente.
 - Designe a função *Gateway padrão* se você desejar verificar os níveis de autorização do dispositivo.
 
-Para obter mais informações sobre a função de gateways e grupos de recursos, veja [Controle de acesso ao gateway (Beta)](../gateways/gateway-access-control.html).
+Para obter mais informações sobre a função de gateways e grupos de recursos, consulte [Controle de acesso ao gateway](../gateways/gateway-access-control.html).
 
 ### Authentication
 
@@ -96,14 +98,15 @@ Para obter mais informações sobre como gerenciar dispositivos de gateway usand
 ## Recebendo comandos
 {: #receive_commands}
 
-Além de usar o protocolo de sistema de mensagens MQTT, também é possível configurar seus dispositivos de gateway para receber comandos do {{site.data.keyword.iot_short_notm}} sobre HTTP usando comandos da API de sistema de mensagens HTTP. Um dispositivo de gateway pode receber comandos que são direcionados para dispositivos dentro de seu grupo de recursos associado. Para obter mais informações sobre grupos de recursos do gateway, veja [Controle de acesso ao gateway (beta)](../gateways/gateway-access-control.html).
+Além de usar o protocolo de sistema de mensagens MQTT, também é possível configurar seus dispositivos de gateway para receber comandos do {{site.data.keyword.iot_short_notm}} sobre HTTP usando comandos da API do sistema de mensagens HTTP. Um dispositivo de gateway pode receber comandos que são direcionados para dispositivos dentro de seu grupo de recursos associado. Para obter mais informações sobre grupos de recursos de gateway, consulte [Controle de acesso ao gateway](../gateways/gateway-access-control.html).
 
 Use uma das URLs a seguir para enviar uma solicitação de ``POST`` de um gateway que está conectado ao {{site.data.keyword.iot_short_notm}}:
 
-### Solicitação de POST não segura
+### Solicitação de POST não segura para comandos de recebimento
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
-### Solicitação de POST segura
+### Solicitação de POST segura para comandos de recebimento
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 

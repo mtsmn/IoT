@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2016-11-22"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -19,17 +19,17 @@ lastupdated: "2016-11-22"
 {: #introduction}
 
 {{site.data.keyword.iot_full}}에서 관리 디바이스는 디바이스 관리 오퍼레이션(예: 펌웨어, 위치 및 진단 업데이트)을 수행할 수 있는 디바이스입니다.
-{{site.data.keyword.iot_short}} Java™ 클라이언트 라이브러리 및 제공된 정보를 사용하여 사용자는 연결된 디바이스를 관리 디바이스로 전환하기 위한 Java 코드를 개발할 수 있습니다. 또한 디바이스 관리 서비스에 디바이스를 연결하고 디바이스 관리 오퍼레이션을 실행하기 위한 Java 코드를 개발하는 데 도움이 되도록 샘플이 제공됩니다. 
+{{site.data.keyword.iot_short}} Java™ 클라이언트 라이브러리 및 제공된 정보를 사용하여 사용자는 연결된 디바이스를 관리 디바이스로 전환하기 위한 Java 코드를 개발할 수 있습니다. 또한 디바이스 관리 서비스에 디바이스를 연결하고 디바이스 관리 오퍼레이션을 실행하기 위한 Java 코드를 개발하는 데 도움이 되도록 샘플이 제공됩니다.
 
-애플리케이션이 Java 클라이언트 라이브러리를 사용하여 디바이스와 상호작용하는 방법에 대한 자세한 정보는 [애플리케이션 개발자용 Java](../../applications/libraries/java.html)를 참조하십시오. 
+애플리케이션이 Java 클라이언트 라이브러리를 사용하여 디바이스와 상호작용하는 방법에 대한 자세한 정보는 [애플리케이션 개발자용 Java](../../applications/libraries/java.html)를 참조하십시오.
 
 ## 디바이스 관리
 {: #device_management}
 
 [디바이스 관리](../reference/device_mgmt.html) 기능은 디바이스를 관리하는 기능을 더 많이 추가하여 {{site.data.keyword.iot_short_notm}} 서비스를 개선합니다. 디바이스 관리에서는 다음과 같이 관리 디바이스와 비관리 디바이스를 명확하게 구분합니다.
 
--   **관리 디바이스**는 관리 에이전트가 설치된 디바이스로 정의됩니다. 관리 에이전트는 디바이스 메타데이터를 전송하고 수신하며 {{site.data.keyword.iot_short_notm}}의 디바이스 관리 명령에 응답합니다. 
--   **비관리 디바이스**는 디바이스 관리 에이전트가 없는 디바이스입니다. 모든 디바이스는 비관리 디바이스로서 자체 라이프사이클을 시작하며, 디바이스 관리 에이전트의 메시지를 {{site.data.keyword.iot_short_notm}}에 전송하여 관리 디바이스로 상태 전이할 수 있습니다. 
+-   **관리 디바이스**는 관리 에이전트가 설치된 디바이스로 정의됩니다. 관리 에이전트는 디바이스 메타데이터를 전송하고 수신하며 {{site.data.keyword.iot_short_notm}}의 디바이스 관리 명령에 응답합니다.
+-   **비관리 디바이스**는 디바이스 관리 에이전트가 없는 디바이스입니다. 모든 디바이스는 비관리 디바이스로서 자체 라이프사이클을 시작하며, 디바이스 관리 에이전트의 메시지를 {{site.data.keyword.iot_short_notm}}에 전송하여 관리 디바이스로 상태 전이할 수 있습니다.
 
 ## {{site.data.keyword.iot_short_notm}} 디바이스 관리 서비스에 연결
 {: #connecting_dm_service}
@@ -93,8 +93,8 @@ Constructor One은 `DeviceData`와 다음 필수 특성을 모두 승인하여 {
 |특성 |설명 |
 |:---|:---|
 |``Organization-ID`` |조직 ID|
-|``Device-Type`` |디바이스 유형입니다. 일반적으로, deviceType은 특정 태스크를 수행하는 디바이스의 그룹화입니다(예: "weatherballoon"). |
-|``Device-ID`` |디바이스 ID입니다. 일반적으로, 제공된 디바이스 유형의 경우 deviceId는 해당 디바이스의 고유 ID입니다(예: 일련 번호 또는 MAC 주소). |
+|``Device-Type`` |디바이스 유형입니다. 일반적으로, deviceType은 특정 태스크를 수행하는 디바이스의 그룹화입니다(예: "weatherballoon").|
+|``Device-ID`` |디바이스 ID입니다. 일반적으로, 제공된 디바이스 유형의 경우 deviceId는 해당 디바이스의 고유 ID입니다(예: 일련 번호 또는 MAC 주소).|
 |`Authentication-Method` |사용할 인증 메소드입니다. 현재 지원되는 값은 `token`입니다.|
 |``Authentication-Token`` |디바이스를 Watson IoT Platform에 안전하게 연결하기 위한 인증 토큰입니다.|
 
@@ -327,7 +327,7 @@ if(rc == 200) {
 * 펌웨어 다운로드
 * 펌웨어 업데이트
 
-디바이스는 펌웨어 조치를 지원하기 위해 다음 활동을 수행해야 합니다. 
+디바이스는 펌웨어 조치를 지원하기 위해 다음 활동을 수행해야 합니다.
 
 **1. DeviceFirmware 오브젝트 생성**
 
@@ -443,7 +443,7 @@ public void downloadFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-디바이스에서 검사기를 사용하여 다운로드한 펌웨어 이미지의 무결성을 확인하고 상태를 다시 {{site.data.keyword.iot_short_notm}}에 보고합니다. 시작 중(DeviceFirmware 오브젝트를 작성하는 중) 또는 애플리케이션의 펌웨어 다운로드 요청의 일부분으로 디바이스에서 검사기를 설정할 수 있습니다. 동일하게 검사하기 위한 샘플 코드는 다음과 같습니다. 
+디바이스에서 검사기를 사용하여 다운로드한 펌웨어 이미지의 무결성을 확인하고 상태를 다시 {{site.data.keyword.iot_short_notm}}에 보고합니다. 시작 중(DeviceFirmware 오브젝트를 작성하는 중) 또는 애플리케이션의 펌웨어 다운로드 요청의 일부분으로 디바이스에서 검사기를 설정할 수 있습니다. 동일하게 검사하기 위한 샘플 코드는 다음과 같습니다.
 
 ```
 private boolean verifyFirmware(File file, String verifier) throws IOException {
@@ -483,7 +483,7 @@ private boolean verifyFirmware(File file, String verifier) throws IOException {
 `* OUT_OF_MEMORY
 * UNSUPPORTED_IMAGE`
 
-Raspberry Pi 디바이스의 샘플 펌웨어 업데이트 구현은 다음과 같습니다. 
+Raspberry Pi 디바이스의 샘플 펌웨어 업데이트 구현은 다음과 같습니다.
 
 ```
 public void updateFirmware(DeviceFirmware deviceFirmware) {
@@ -541,7 +541,7 @@ deviceData.addFirmwareHandler(fwHandler);
 
 **1. 서버에 디바이스 조치 지원에 대해 알림**
 
-재부팅 및 팩토리 재설정을 수행하려면 디바이스에서 먼저 {{site.data.keyword.iot_short_notm}}에 해당 지원에 대해 알려야 합니다. 부울 값으로 다음 메소드를 호출하면 가능합니다. 
+재부팅 및 팩토리 재설정을 수행하려면 디바이스에서 먼저 {{site.data.keyword.iot_short_notm}}에 해당 지원에 대해 알려야 합니다. 부울 값으로 다음 메소드를 호출하면 가능합니다.
 
 ```
 managedDevice.supportsDeviceActions(true);
@@ -561,7 +561,7 @@ public abstract void handleFactoryReset(DeviceAction action);
 
 **2.1 handleReboot의 샘플 구현**
 
-구현 시 DeviceAction 오브젝트를 통해 디바이스를 재부팅하고 재부팅 상태를 보고하는 로직을 추가해야 합니다. 디바이스는 실패한 경우에만 선택적 메시지와 함께 상태를 업데이트해야 합니다(오퍼레이션에 성공하면 디바이스를 재부팅하고 디바이스 코드를 통해 {{site.data.keyword.iot_short_notm}}을 업데이트할 제어 기능이 없기 때문). Raspberry Pi 디바이스의 샘플 재부팅 구현은 다음과 같습니다. 
+구현 시 DeviceAction 오브젝트를 통해 디바이스를 재부팅하고 재부팅 상태를 보고하는 로직을 추가해야 합니다. 디바이스는 실패한 경우에만 선택적 메시지와 함께 상태를 업데이트해야 합니다(오퍼레이션에 성공하면 디바이스를 재부팅하고 디바이스 코드를 통해 {{site.data.keyword.iot_short_notm}}을 업데이트할 제어 기능이 없기 때문). Raspberry Pi 디바이스의 샘플 재부팅 구현은 다음과 같습니다.
 
 ```
 public void handleReboot(DeviceAction action) {
@@ -590,7 +590,7 @@ public void handleReboot(DeviceAction action) {
 
 **2.2 handleFactoryReset의 샘플 구현**
 
-구현 시 DeviceAction 오브젝트를 통해 디바이스를 팩토리 설정으로 재설정하고 상태를 보고하는 로직을 추가해야 합니다. 디바이스는 실패한 경우에만 선택적 메시지와 함께 상태를 업데이트해야 합니다(이 프로세스의 일부로 디바이스가 재부팅되고 디바이스에서 {{site.data.keyword.iot_short_notm}}의 상태를 업데이트할 제어 기능이 없기 때문). 팩토리 재설정 구현의 스켈레톤은 다음과 같습니다. 
+구현 시 DeviceAction 오브젝트를 통해 디바이스를 팩토리 설정으로 재설정하고 상태를 보고하는 로직을 추가해야 합니다. 디바이스는 실패한 경우에만 선택적 메시지와 함께 상태를 업데이트해야 합니다(이 프로세스의 일부로 디바이스가 재부팅되고 디바이스에서 {{site.data.keyword.iot_short_notm}}의 상태를 업데이트할 제어 기능이 없기 때문). 팩토리 재설정 구현의 스켈레톤은 다음과 같습니다.
 
 ```
 public void handleFactoryReset(DeviceAction action) {
@@ -621,7 +621,7 @@ deviceData.addDeviceActionHandler(actionHandler);
 ## 디바이스 속성 변경 청취
 {: #listen_device_attribute}
 
-{{site.data.keyword.iot_short_notm}}에서 업데이트 요청이 있을 때마다 이 ibmiotf 클라이언트 라이브러리에서 해당 오브젝트를 업데이트합니다. 이러한 업데이트 요청은 애플리케이션이 직접 시작하거나 {{site.data.keyword.iot_short_notm}} REST API를 통해 간접적(펌웨어 업데이트)으로 시작합니다. 이러한 속성의 업데이트 외에도 라이브러리는 디바이스 속성이 업데이트될 때마다 디바이스에 알릴 수 있는 메커니즘을 제공합니다. 
+{{site.data.keyword.iot_short_notm}}에서 업데이트 요청이 있을 때마다 이 ibmiotf 클라이언트 라이브러리에서 해당 오브젝트를 업데이트합니다. 이러한 업데이트 요청은 애플리케이션이 직접 시작하거나 {{site.data.keyword.iot_short_notm}} REST API를 통해 간접적(펌웨어 업데이트)으로 시작합니다. 이러한 속성의 업데이트 외에도 라이브러리는 디바이스 속성이 업데이트될 때마다 디바이스에 알릴 수 있는 메커니즘을 제공합니다.
 
 이 오퍼레이션을 통해 업데이트할 수 있는 속성은 `위치`, `메타데이터`, `디바이스 정보` 및 `펌웨어`입니다.
 
@@ -682,7 +682,7 @@ public void propertyChange(PropertyChangeEvent evt) {
 -   [DeviceAttributesUpdateListenerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceAttributesUpdateListenerSample.java) - 다양한 디바이스 속성 변경을 청취하는 방법을 보여주는 샘플 리스너 코드입니다.
 -   [NonBlockingDiagnosticsErrorCodeUpdateSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/NonBlockingDiagnosticsErrorCodeUpdateSample.java) - 서버로부터의 응답을 기다리지 않고 ErrorCode를 추가하는 방법을 보여주는 샘플입니다.
 
-##지침서
+##레시피
 {: #Recipes}
 
-이 클라이언트 라이브러리를 사용하여 단계별로 다양한 디바이스 관리 오퍼레이션을 수행하기 위해 Raspberry Pi 디바이스를 관리 디바이스로 {{site.data.keyword.iot_short_notm}}에 연결하는 방법을 보여주는 [지침서](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/)를 참조하십시오.
+이 클라이언트 라이브러리를 사용하여 단계별로 다양한 디바이스 관리 오퍼레이션을 수행하기 위해 Raspberry Pi 디바이스를 관리 디바이스로 {{site.data.keyword.iot_short_notm}}에 연결하는 방법을 보여주는 [레시피](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/)를 참조하십시오.

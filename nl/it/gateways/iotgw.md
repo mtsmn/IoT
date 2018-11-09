@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016, 2017
-lastupdated: "2017-10-04"
+years: 2016, 2018
+lastupdated: "2018-07-11"
 
 ---
 
@@ -12,22 +12,21 @@ lastupdated: "2017-10-04"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Pacchetto gateway IoT  (Beta)
+# Pacchetto gateway IoT 
 {: #gw_package}
 
-Il pacchetto gateway IoT {{site.data.keyword.iot_full}} abilita un gateway registrato con {{site.data.keyword.iot_short_notm}} ad inviare gli eventi alla piattaforma per i dispositivi nel gruppo di risorse associato al gateway.
+Il pacchetto gateway IoT {{site.data.keyword.iot_full}} abilita un gateway registrato con {{site.data.keyword.iot_short_notm}} ad inviare gli eventi alla piattaforma per i dispositivi nel gruppo di risorse associato al gateway. 
 {:shortdesc}
 
-**Importante** il pacchetto gateway IoT è disponibile solo come parte di un programma beta limitato. Futuri aggiornamenti possono includere modifiche incompatibili con la versione corrente di questa funzione. Provala e [facci sapere cosa ne pensi ![Icona link esterno](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Panoramica
 
 Il pacchetto gateway IoT include le seguenti entità:
 
-| Entità| Tipo | Parametri | Descrizione |
+| Entità | Tipo | Parametri | Descrizione |
 | --- | --- | --- | --- |
-| `/watson-iot/iot-gateway` | pacchetto| org, domain, gatewayTypeId, gatewayId, gatewayToken  | Utilizza con gateway {{site.data.keyword.iot_short_notm}} |
-| `/watson-iot/iot-gateway/publishEvent` | azione| org, domain, gatewayTypeId, gatewayId, gatewayToken, eventType, typeId, deviceId, payload | Invia gli eventi da un gateway registrato al posto dei relativi dispositivi associati a {{site.data.keyword.iot_short_notm}}   |
+| `/watson-iot/iot-gateway` | pacchetto | org, domain, gatewayTypeId, gatewayId, gatewayToken  | Utilizza con gateway {{site.data.keyword.iot_short_notm}} |
+| `/watson-iot/iot-gateway/publishEvent` | azione | org, domain, gatewayTypeId, gatewayId, gatewayToken, eventType, typeId, deviceId, payload | Invia gli eventi da un gateway registrato al posto dei relativi dispositivi associati a {{site.data.keyword.iot_short_notm}}   |
 
 ## Creazione di un bind al pacchetto gateway IoT
 Per creare un bind al pacchetto gateway IoT, devi specificare i seguenti parametri:
@@ -41,21 +40,21 @@ Per creare un bind al pacchetto gateway IoT, devi specificare i seguenti paramet
 
 
 Completa la seguente procedura per creare un bind al pacchetto:  
-1. [Accedi alla console Bluemix ![Icona link esterno](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/).
-2. Crea il [Servizio della piattaforma Internet of Things](https://console.bluemix.net/docs/services/IoT/index.html) in Bluemix e [prendi nota di `Chiave API` e `Token API`](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#connecting-applications). Queste informazioni sono necessarie per creare un tipo di gateway e per registrarlo.
+1. [Accedi alla console IBM Cloud ![Icona link esterno](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/).
+2. Crea il [Servizio della piattaforma Internet of Things](https://console.bluemix.net/docs/services/IoT/index.html) in IBM Cloud e [prendi nota del valori `API Key` e `API Token`](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#connecting-applications). Queste informazioni sono necessarie per creare un tipo di gateway e per registrarlo.
 3. [Crea un tipo di gateway](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), ad esempio, *myGWType* nella tua organizzazione Watson IoT e [registra un'istanza del gateway](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), ad esempio, *myGWId*. Prendi nota del *Token gateway* del gateway registrato.
 4. Crea un bind al pacchetto con un pacchetto gateway IoT utilizzando il seguente comando di esempio:
    ```
-   wsk package bind /watson/iotgw myGW -p org myorg -p gatewayTypeId myGWType -p gatewayId myGWId -p gatewayToken myGWToken
+   bx wsk package bind /watson-iot/iot-gateway myGW -p org myorg -p gatewayTypeId myGWType -p gatewayId myGWId -p gatewayToken myGWToken
    ```
 5. Verifica che il bind al pacchetto esista utilizzando il seguente comando:  
    ```
-   wsk package list
+   bx wsk package list
    ```
 
-## Pubblicazione eventi dispositivo 
+## Pubblicazione eventi dispositivo
 
-L'azione `/watson/iotgw/publishEvent` pubblica gli eventi da un gateway {{site.data.keyword.iot_short_notm}} registrato, al posto dei relativi dispositivi associati. La seguente tabella illustra i parametri utilizzati durante la pubblicazione degli eventi:   
+L'azione `/watson-iot/iot-gateway/publishEvent` pubblica gli eventi da un gateway {{site.data.keyword.iot_short_notm}} registrato, per conto dei suoi dispositivi associati. La seguente tabella illustra i parametri utilizzati durante la pubblicazione degli eventi:  
 
 Parametro |  Descrizione | Esempio
 ------------- | ------------- | -------------
@@ -74,8 +73,8 @@ Il seguente esempio mostra come pubblicare gli eventi dal pacchetto *iotgw*:
 
 Pubblica un evento utilizzando l'azione *publishEvent* nel bind al pacchetto che hai creato. Devi sostituire `/myNamespace/myGateway` con il tuo nome del pacchetto.
 
- ```
-  wsk action invoke /myNamespace/myGateway/publishEvent -i --result --blocking -p org ORG_ID -p eventType value -p payload '{"test":"etsd"}' -p typeId myDeviceType -p deviceId 00aabbccde03_0001 -p gatewayTypeId myGatewayType -p gatewayId 00aabbccde03 -p gatewayToken "ZZZ"
+ ``` 
+ bx wsk action invoke /myNamespace/myGateway/publishEvent -i --result --blocking -p org ORG_ID -p eventType value -p payload '{"test":"etsd"}' -p typeId myDeviceType -p deviceId 00aabbccde03_0001 -p gatewayTypeId myGatewayType -p gatewayId 00aabbccde03 -p gatewayToken "ZZZ"
  ```
 
  ## Utilizzo del repository
@@ -85,4 +84,4 @@ Completa la seguente procedura per distribuire il pacchetto utilizzando `install
 2. `cd openwhisk-package-watsoniotp/packages`
 3. `./installCatalog.sh AUTH APIHOST WSK_CLI`
 
-dove *AUTH* è la tua chiave di autorizzazione, *APIHOST* è il nome host OpenWhisk e *WSK_CLI* è l'ubicazione del binario della CLI Openwhisk.
+dove *AUTH* è la tua chiave di autorizzazione, *APIHOST* è il nome host di IBM Cloud Functions e *WSK_CLI* è l'ubicazione del binario della CLI IBM Cloud Functions.

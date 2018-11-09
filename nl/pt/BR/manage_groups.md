@@ -2,7 +2,7 @@
 
 copyright:
 years: 2018
-lastupdated: "2018-04-21"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -16,12 +16,14 @@ lastupdated: "2018-04-21"
 # Gerenciando grupos (Beta)
 {: #groups_overview}
 
-É possível usar grupos do {{site.data.keyword.iot_full}} para conceder acesso aos membros e às chaves API o acesso a dispositivos específicos. Depois de criar um grupo e incluir dispositivos nele, inclua membros e chaves API e designe a eles funções dentro do grupo. A combinação de funções e grupos determina quais dispositivos os usuários e as chaves API podem acessar e as ações que eles podem executar nos dispositivos.
+Os usuários com a função de administrador podem usar grupos do {{site.data.keyword.iot_full}} para conceder aos membros e às chaves de API acesso a dispositivos específicos. Depois de criar um grupo e incluir dispositivos nele, inclua membros e chaves API e designe a eles funções dentro do grupo. A combinação de funções e grupos determina quais dispositivos os usuários e as chaves API podem acessar e as ações que eles podem executar nos dispositivos.
 {: shortdesc}
 
 É possível gerenciar grupos usando a interface com o usuário do painel do
 {{site.data.keyword.iot_short_notm}} ou usando as APIs de controle de acesso
 do {{site.data.keyword.iot_short_notm}}.
+
+Para obter detalhes sobre como gerenciar funções, veja [Gerenciando funções de usuário](managing_user_roles.html#managing-user-roles).
 
 **Importante:** o recurso de grupos na UI do {{site.data.keyword.iot_short_notm}} está disponível somente como parte de um
 programa beta limitado. Atualizações futuras podem incluir mudanças incompatíveis com a versão atual desse recurso. Experimente e [informe-nos o que acha ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.

@@ -150,7 +150,7 @@ Utilizzando tabelle e schede, puoi visualizzare dei grafici che rappresentano i 
 
 ## Passo 4: crea schemi di tipo di dispositivo
 
-A questo punto, dovrai creare uno schema di tipo di dispositivo e associare le proprietà dispositivo per creare quindi le regole attivate in base ai punti di dati dalle tue proprietà dispositivo associate.
+A questo punto, dovrai creare uno schema del tipo di dispositivo e associare le proprietà dispositivo per creare quindi le regole attivate in base ai punti di dati dalle tue proprietà dispositivo associate.
 
 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Devices > Manage Schemas** e fai clic su **Add Schema**.
 
@@ -184,7 +184,7 @@ A questo punto, dovrai creare uno schema di tipo di dispositivo e associare le p
 
 ## Passo 5: crea regole e azioni
 
-Le regole sono punti di decisione che corrispondono ai dati in tempo reale con valori di soglia predefiniti o altri dati della proprietà per attivare un avviso se viene riscontrata una condizione. In aggiunta all'avviso che viene visualizzato nel dashboard {{site.data.keyword.iot_short_notm}}, puoi aggiungere una o più azioni per eseguire la logica di business quando viene attivata una regola.
+Le regole sono punti di decisione basati sulle condizioni che mettono in corrispondenza i dati in tempo reale con valori di soglia predefiniti o altri dati di proprietà per attivare un avviso se viene soddisfatta una condizione. In aggiunta all'avviso che viene visualizzato nel dashboard {{site.data.keyword.iot_short_notm}}, puoi aggiungere una o più azioni per eseguire la logica di business quando viene attivata una regola.
 
 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Rules** e fai clic su **Create Cloud Rule**.
 
@@ -222,7 +222,7 @@ Le regole sono punti di decisione che corrispondono ai dati in tempo reale con v
 
     Quando attivi la regola, alla tabella **Rule-Based Analytics** viene aggiunto un avviso quando vengono soddisfatte le condizioni e vengono eseguire tutte le azioni della regola.
 
-## Fasi successive
+## Passi successivi
 
 Estendi le funzioni di analisi dati creando e connettendo le tue proprie applicazioni per utilizzare i dati del dispositivo cronologici e in tempo reale.
 

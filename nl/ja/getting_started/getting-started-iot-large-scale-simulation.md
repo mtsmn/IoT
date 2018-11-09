@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-08"
+  years: 2017, 2018
+lastupdated: "2018-08-18"
 
 ---
 
@@ -13,11 +13,13 @@ lastupdated: "2017-11-08"
 {:screen: .screen}
 {:tip: .tip}
 
-# ガイド 4: 多数のデバイスのシミュレート
-最初のガイドでは、1 つ以上のコンベヤー・ベルトを手動でシミュレートするための基本的なデバイス・シミュレーターをセットアップしました。このガイドでは、そのシミュレーションを拡張するために、多数の自己実行型のシミュレーターを環境に追加し、現実に近いマルチデバイス環境で分析機能とモニター機能をテストします。
+# ガイド 3: 多数のデバイスのシミュレート
+最初のガイドでは、1 つ以上のコンベヤー・ベルトを手動でシミュレートするための基本的なデバイス・シミュレーターをセットアップしました。 このガイドでは、そのシミュレーションを拡張するために、多数の自己実行型のシミュレーターを環境に追加し、現実に近いマルチデバイス環境で分析機能とモニター機能をテストします。
 {:shortdesc}
 
-**重要:** このアプリケーションでは、512 MB のメモリーが必要です。この量は、デフォルトで割り振られる量を超えており、無料の試用版のアカウント (Bluemix の試用版アカウントや標準アカウントなど) で利用できる量も超えています。サブスクライブ・アカウントや従量制課金アカウントの保有者であれば、メモリーの割り振り量を 512 MB に増やせます。無料の試用版のアカウントの保有者は、サブスクライブ・アカウントや従量制課金アカウントにアップグレードする必要があります。{{site.data.keyword.Bluemix_notm}} アカウント・タイプの詳細については、[アカウント・タイプ](/docs/pricing/index.html#pricing)を参照してください。
+**重要:** このアプリケーションでは、512 MB のメモリーが必要です。この量は、デフォルトで割り振られる量を超えており、無料の試用版のアカウント ({{site.data.keyword.Bluemix}} の試用版アカウントや標準アカウントなど) で利用できる量も超えています。 サブスクライブ・アカウントや従量制課金アカウントの保有者であれば、メモリーの割り振り量を 512 MB に増やせます。 無料の試用版のアカウントの保有者は、サブスクライブ・アカウントや従量制課金アカウントにアップグレードする必要があります。 {{site.data.keyword.Bluemix_notm}} アカウント・タイプの詳細については、[アカウント・タイプ](/docs/pricing/index.html#pricing)を参照してください。
+
+**注:** Bluemix は IBM Cloud になりました。詳しくは、[IBM Cloud ブログ](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
 ## 概説と目標
 {: #overview}
@@ -37,7 +39,7 @@ lastupdated: "2017-11-08"
 - Cloud Foundry を使用して、Node-RED ベースの Webhook 対応デバイス・シミュレーター・アプリケーションをデプロイします。
 - API 呼び出しを使用して、デバイスを作成/登録したり、デバイス・イベントをパブリッシュしたり、デバイスを削除したりします。
 
-**重要:** 多数のデバイスから {{site.data.keyword.iot_short_notm}} にデバイス・データを同時に送信する状況をシミュレートすると、データ使用量が非常に多くなる可能性があります。{{site.data.keyword.iot_short_notm}} の*「使用状況」*ダッシュボードを使用すれば、デバイスやアプリケーションのデータ使用量をモニターできます。このメトリックは 2 時間間隔で最新表示されます。
+**重要:** 多数のデバイスから {{site.data.keyword.iot_full}} にデバイス・データを同時に送信する状況をシミュレートすると、データ使用量が非常に多くなる可能性があります。 
 
 ## 前提条件
 {: #prereqs}  
@@ -50,7 +52,7 @@ lastupdated: "2017-11-08"
 * [Cloud Foundry コマンド・ライン・インターフェース (cf CLI) ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
 cf CLI によって、{{site.data.keyword.Bluemix_notm}} アプリケーションをデプロイして管理します。
 * オプション: [Git ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads){: new_window}  
-Git を使用してコード・サンプルをダウンロードする場合は、[GitHub.com アカウント ![外部リンク・アイコン](../../../icons/launch-glyph.svg " 外部リンク・アイコン")](https://github.com){: new_window} も必要です。ただし、GitHub.com アカウントがなくても、コードを圧縮ファイルとしてダウンロードすることは可能です。
+Git を使用してコード・サンプルをダウンロードする場合は、[GitHub.com アカウント ![外部リンク・アイコン](../../../icons/launch-glyph.svg " 外部リンク・アイコン")](https://github.com){: new_window} も必要です。 ただし、GitHub.com アカウントがなくても、コードを圧縮ファイルとしてダウンロードすることは可能です。
 
 以下の手順の REST 呼び出しでは、cURL を使用することも、Mozilla の REST クライアント・アドオン・プラグインを使用することもできます。  
 {: tip}
@@ -62,14 +64,14 @@ Git を使用してコード・サンプルをダウンロードする場合は�
 
 1. *Lesson4* サンプル・アプリケーションの GitHub リポジトリーを複製します。  
 好みの git ツールを使用して以下のリポジトリーを複製します。  
-https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 Git シェルでは、次のコマンドを使用します。
 ```bash
-$ git clone https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+$ git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 ```
 3. manifest.yml ファイルを編集して、ご使用の環境に合わせてアプリケーションを構成します。  
 編集内容は以下のとおりです。
- - 既存の {{site.data.keyword.iot_short_notm}} サービスを使用する場合は、`lesson4-simulate-iotf-service` のすべてのインスタンスをそのサービス名に更新します。例えば、ガイド 1 で作成した {{site.data.keyword.iot_short_notm}} サービスを使用する場合は、サービス名を `iotp-for-conveyor` にしてください。    
+ - 既存の {{site.data.keyword.iot_short_notm}} サービスを使用する場合は、`lesson4-simulate-iotf-service` のすべてのインスタンスをそのサービス名に更新します。 例えば、ガイド 1 で作成した {{site.data.keyword.iot_short_notm}} サービスを使用する場合は、サービス名を `iotp-for-conveyor` にしてください。    
  - デバイス名とホストを設定します。   
 applications セクションで、`name` と `host` の項目を固有の値 (`YOUR_NAME-lesson4-simulate` など) にしてください。   
 **ヒント:** アプリケーションへのアクセス時に使用する経路 URL は、`host` 項目から作成されます。例えば、`https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net` のようになります。  
@@ -127,12 +129,11 @@ cf login
 <pre><code>$ cf create-service cloudantNoSQLDB Lite lesson4-simulate-cloudantNoSQLDB</code></pre>    
  2. 以下のコマンドを使用して、{{site.data.keyword.iot_short_notm}} サービスを作成します。
 <pre><code>$ cf create-service iotf-service iotf-service-free lesson4-simulate-iotf-service </code></pre>   
-**重要:** 既存の {{site.data.keyword.iot_short_notm}} サービスを使用していて、それに応じて manifest.yml ファイルを更新した場合は、既存のサービス名を使用していることを確認してください。例えば、ガイド 1 で作成したサービスを使用する場合は、cf 呼び出しで `lesson4-simulate-iotf-service` の代わりに `iotp-for-conveyor` を使用する必要があります。
+**重要:** 既存の {{site.data.keyword.iot_short_notm}} サービスを使用していて、それに応じて manifest.yml ファイルを更新した場合は、既存のサービス名を使用していることを確認してください。 例えば、ガイド 1 で作成したサービスを使用する場合は、cf 呼び出しで `lesson4-simulate-iotf-service` の代わりに `iotp-for-conveyor` を使用する必要があります。
 7. `cf push` コマンドを実行し、プロジェクトを作成して組織にプッシュします。  
 サンプル・アプリケーションが {{site.data.keyword.Bluemix_notm}} にデプロイされます。  
 デプロイメントが完了すると、アプリケーションが稼働していることを示すメッセージが表示されます。   
-例:
-    
+例:  
   ```
 requested state: started
 instances: 1/1
@@ -178,7 +179,7 @@ Node-RED フローを保護した場合は、REST API コマンドを使用し�
 
 Node-RED のフロー・インターフェースやアプリケーションの REST API を使用して、以下の作業を実行できます。
 
-### Node-RED  
+### Node-RED を使用してデバイスを作成および接続する  
 複数のデバイスを登録するには、次の手順を実行します。  
 1. 以下の {{site.data.keyword.Bluemix_notm}} にログインします。  
 [https://bluemix.net ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://bluemix.net){: new_window}
@@ -191,13 +192,8 @@ Node-RED インターフェースが表示されます。
 5. **「Go to your Node-RED flow editor」**をクリックします。
 6. フロー・エディターで**「Device Type and Instance」**タブを選択します。
 7. 5 つのデバイスを登録するために、**「Register 5 motorController devices」**というラベルの挿入ノードをクリックします。
-8. デバイスが登録されたことを確認します。
- 1. {{site.data.keyword.iot_short_notm}} ダッシュボードのメニューから**「ボード」**を選択します。
- 3. **「デバイス中心型の分析」**ボードを選択します。
- 4. **「観察しているデバイス」**カードを見つけます。  
-デバイス名が表示されます。
 
-### REST API  
+### REST API を使用してデバイスを作成および接続する  
 複数のデバイスを登録するには、次の手順を実行します。  
 
 1. URL `ROUTE_URL/rest/devices` に HTTP POST 要求を送信します。  
@@ -212,35 +208,26 @@ Node-RED インターフェースが表示されます。
 "deviceName":"belt"  </br>
 }
 </code></pre>  
-各部の意味は以下のとおりです。  
+  各部の意味は以下のとおりです。  
     - numberDevices は、作成して登録するデバイスの数です。
-    - オプション: typeId は、デバイス登録時に設定するデバイス・タイプです。typeId を指定しなければ、デフォルトで iotp-for-conveyor になります。**ヒント:** どんなデバイス・タイプ名でも入力できますが、このシリーズの他のガイドでは、デバイス・タイプが `iotp-for-conveyor` であるという前提で作業を進めます。別のデバイス・タイプを使用する場合は、その名前に合わせて他のガイドの設定を変更してください。
+    - オプション: typeId は、デバイス登録時に設定するデバイス・タイプです。 typeId を指定しなければ、デフォルトで iotp-for-conveyor になります。 **ヒント:** どんなデバイス・タイプ名でも入力できますが、このシリーズの他のガイドでは、デバイス・タイプが `iotp-for-conveyor` であるという前提で作業を進めます。 別のデバイス・タイプを使用する場合は、その名前に合わせて他のガイドの設定を変更してください。
     - オプション: authToken は、デバイス登録時に設定する許可トークンです。
-    - オプション: chunkSize を指定しなければ、デフォルトで 500 に設定されます。chunkSize は、numberDevices より少なく、またその因数でなければなりません。
+    - オプション: chunkSize を指定しなければ、デフォルトで 500 に設定されます。 chunkSize は、numberDevices より少なく、またその因数でなければなりません。
     - deviceName は、作成したデバイスの deviceID のパターンです。
-2. デバイスが登録されたことを確認します。
- 1. {{site.data.keyword.iot_short_notm}} ダッシュボードのメニューから**「ボード」**を選択します。
- 3. **「デバイス中心型の分析」**ボードを選択します。
- 4. **「観察しているデバイス」**カードを見つけます。  
-デバイス名が表示されます。
 
 ## 手順 4 - デバイス・イベントをシミュレートする
 {: #step4}
 
 シミュレートするデバイスが {{site.data.keyword.iot_short_notm}} に登録されたので、シミュレーターを実行してデバイス・イベントの送信を開始できます。
 
-### Node-RED  
+### Node-RED を使用してデバイス・イベントをシミュレートする  
 デバイス・イベントを送信するには、以下のようにします。  
 1. Node-RED のフロー・エディターで**「Simulate multiple devices」**タブを選択します。
 7. 5 つのデバイスをシミュレートするために、**「Simulate 5 devices」**というラベルの挿入ノードをクリックします。
-8. デバイスからデータが送信されていることを確認します。
- 1. {{site.data.keyword.iot_short_notm}} ダッシュボードのメニューから**「ボード」**を選択します。
- 3. **「デバイス中心型の分析」**ボードを選択します。
- 4. **「観察しているデバイス」**カードを見つけます。  
- 5. いずれかのデバイスを選択し、パブリッシュされたメッセージに相当する更新後のデバイス・データ・ポイントが**「デバイス・プロパティー」**カードに表示されていることを確認します。  
+ 
 
 
-### Rest API  
+### Rest API を使用してデバイス・イベントをシミュレートする  
 デバイス・イベントを送信するには、以下のようにします。
 
 1. URL `ROUTE_URL/rest/runtest` に HTTP POST 要求を送信します。  
@@ -248,7 +235,7 @@ Node-RED インターフェースが表示されます。
  - Content-Type と Accept を application/json に設定します。  
  - 以下の JSON ペイロードを使用します。   
 <pre><code>{  </br>
-"numberDevices":5, </br>
+"numberDevices":5,  </br>
 "numberEvents":10,  </br>
 "timeInterval":1000,  </br>
 "deviceType":"iotp-for-conveyor",  </br>
@@ -260,11 +247,7 @@ Node-RED インターフェースが表示されます。
     - timeInterval は、イベントの間隔 (ミリ秒) です。
     - deviceType は、シミュレートするデバイスを作成した時のデバイス・タイプです。
     - deviceName は、作成したデバイスの deviceID のパターンです。
-8. デバイスからデータが送信されていることを確認します。
- 1. {{site.data.keyword.iot_short_notm}} ダッシュボードのメニューから**「ボード」**を選択します。
- 3. **「デバイス中心型の分析」**ボードを選択します。
- 4. **「観察しているデバイス」**カードを見つけます。  
- 5. いずれかのデバイスを選択し、パブリッシュされたメッセージに相当する更新後のデバイス・データ・ポイントが**「デバイス・プロパティー」**カードに表示されていることを確認します。   
+ 
 
 ## 手順 5 - デバイスを削除する
 {: #deleting}
@@ -273,11 +256,7 @@ Node-RED インターフェースが表示されます。
 デバイスを削除するには、以下のようにします。  
 1. Node-RED のフロー・エディターで**「Device Type and Instance」**タブを選択します。
 2. 5 つのデバイスを削除するために、**「Delete 5 devices」**というラベルの挿入ノードをクリックします。
-3. デバイスが削除されたことを確認します。
- 1. {{site.data.keyword.iot_short_notm}} ダッシュボードのメニューから**「ボード」**を選択します。
- 3. **「デバイス中心型の分析」**ボードを選択します。
- 4. **「観察しているデバイス」**カードを見つけます。  
- 5. デバイスがリストされなくなっていることを確認します。  
+
 
 
 ### Rest API  
@@ -289,21 +268,15 @@ Node-RED インターフェースが表示されます。
 <pre><code>{
 "numberDevices":500,   
 "deviceType":"iot-conveyor-belt",  
-"deviceName":"belt"    
+"deviceName":"belt"  
 }</code></pre>
-2. デバイスが削除されたことを確認します。
- 1. {{site.data.keyword.iot_short_notm}} ダッシュボードのメニューから**「ボード」**を選択します。
- 3. **「デバイス中心型の分析」**ボードを選択します。
- 4. **「観察しているデバイス」**カードを見つけます。  
- 5. デバイスがリストされなくなっていることを確認します。  
+  
 
 
 ## 次の作業
 {: @whats_next}  
 興味のある別のトピックにジャンプします。
-- [ガイド 2: リアルタイムの基本的なルールとアクションの使用](getting-started-iot-rules.html)  
-コンベヤー・ベルトのセットアップ、{{site.data.keyword.iot_short_notm}} への接続、データの送信まで成功したので、ルールとアクションによってそのデータを活用します。
-- [ガイド 3: デバイス・データのモニター](getting-started-iot-monitoring.html)  
+- [ガイド 2: デバイス・データのモニター](getting-started-iot-monitoring.html)  
 1 つ以上のデバイスを接続してデバイス・データを活用するところまで完了したので、一連のデバイスのモニターを開始します。
 - [{{site.data.keyword.iot_short_notm}} の詳細を確認してください。](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [{{site.data.keyword.iot_short_notm}} API の詳細を確認してください。](/docs/services/IoT/reference/api.html){:new_window}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016, 2017
-lastupdated: "2017-10-04"
+years: 2016, 2018
+lastupdated: "2018-07-11"
 
 ---
 
@@ -12,13 +12,12 @@ lastupdated: "2017-10-04"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Package de passerelle IoT (bêta)
+# Package de passerelle IoT 
 {: #gw_package}
 
-Le package de passerelle {{site.data.keyword.iot_full}} IoT permet à une passerelle qui est enregistrée auprès de {{site.data.keyword.iot_short_notm}} d'envoyer des événements à la plateforme pour des terminaux qui se trouvent dans le groupe de ressources associé à la passerelle.
+Le package de passerelle {{site.data.keyword.iot_full}} IoT permet à une passerelle qui est enregistrée auprès de {{site.data.keyword.iot_short_notm}} d'envoyer des événements à la plateforme pour des terminaux qui se trouvent dans le groupe de ressources associé à la passerelle. 
 {:shortdesc}
 
-**Important :** Le package de passerelle IoT est disponible uniquement dans le cadre d'un programme bêta limité. Il est possible que des mises à jour ultérieures incluent des modifications incompatibles avec la version en cours de cette fonction. Essayez-la et [dites-nous ce que vous en pensez![External link icon](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Présentation
 
@@ -29,7 +28,7 @@ Le package de passerelle IoT inclut les entités suivantes :
 | `/watson-iot/iot-gateway` | package | org, domain, gatewayTypeId, gatewayId, gatewayToken  | Fonctionne avec {{site.data.keyword.iot_short_notm}} Gateway |
 | `/watson-iot/iot-gateway/publishEvent` | action | org, domain, gatewayTypeId, gatewayId, gatewayToken, eventType, typeId, deviceId, payload | Envoie des événements depuis une passerelle enregistrée pour le compte de ses terminaux associés à {{site.data.keyword.iot_short_notm}}   |
 
-## Création d'une liaison de package de passerelle IoT 
+## Création d'une liaison de package de passerelle IoT
 Pour créer une liaison de package de passerelle IoT, spécifiez les paramètres suivants :
 
 | Paramètre |  Description |
@@ -41,21 +40,21 @@ Pour créer une liaison de package de passerelle IoT, spécifiez les paramètres
 
 
 Pour créer une liaison de package, procédez comme suit :  
-1. [Connectez-vous à la console Bluemix ![External link icon](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/).
-2. Créez le [service Internet of Things Platform](https://console.bluemix.net/docs/services/IoT/index.html) dans Bluemix et [notez la `clé d'API` et le `jeton d'API`](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#connecting-applications). Ces informations sont requises pour créer un type de passerelle et enregistrer une passerelle.
-3. [Créez un type de passerelle](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), par exemple, *myGWType* dans votre organisation Watson IoT et[enregistrez une instance de la passerelle](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), par exemple, *myGWId*. Notez le *jeton de passerelle* de la passerelle enregistrée.
-4. Créez une liaison de package avec le package de passerelle IoT en utilisant l'exemple de commande suivant : 
+1. [Connectez-vous à la console IBM Cloud ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/).
+2. Créez le [service Internet of Things Platform](https://console.bluemix.net/docs/services/IoT/index.html) dans IBM Cloud et [notez la `clé d'interface de programmation` et le `jeton d'API`](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#connecting-applications). Ces informations sont requises pour créer un type de passerelle et enregistrer une passerelle.
+3. [Créez un type de passerelle](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), par exemple, *myGWType* dans votre organisation Watson IoT et [enregistrez une instance de la passerelle](https://console.bluemix.net/docs/services/IoT/gateways/dashboard.html), par exemple, *myGWId*. Notez le *jeton de passerelle* de la passerelle enregistrée.
+4. Créez une liaison de package avec le package de passerelle IoT en utilisant l'exemple de commande suivant :
    ```
-   wsk package bind /watson/iotgw myGW -p org myorg -p gatewayTypeId myGWType -p gatewayId myGWId -p gatewayToken myGWToken
+   bx wsk package bind /watson-iot/iot-gateway myGW -p org myorg -p gatewayTypeId myGWType -p gatewayId myGWId -p gatewayToken myGWToken
    ```
 5. Vérifiez que la liaison de package existe en utilisant la commande suivante :  
    ```
-   wsk package list
+   bx wsk package list
    ```
 
 ## Publication d'événements de terminaux
 
-L'action `/watson/iotgw/publishEvent` publie des événements depuis une passerelle {{site.data.keyword.iot_short_notm}} enregistrée, pour le compte des terminaux qui lui sont associés. Le tableau ci-dessous décrit les paramètres qui sont utilisés lors de la publication d'événements :  
+L'action `/watson-iot/iot-gateway/publishEvent` publie les événements d'une passerelle {{site.data.keyword.iot_short_notm}} enregistrée pour le compte de ses terminaux associés. Le tableau ci-dessous décrit les paramètres qui sont utilisés lors de la publication d'événements :  
 
 Paramètre |  Description | Exemple
 ------------- | ------------- | -------------
@@ -74,8 +73,8 @@ L'exemple ci-dessous montre comment publier des événements à partir du packag
 
 Publiez un événement de terminal à l'aide de l'action *publishEvent* dans la liaison de package que vous avez créée précédemment. Prenez soin de remplacer `/myNamespace/myGateway` par votre nom de package.
 
- ```
-  wsk action invoke /myNamespace/myGateway/publishEvent -i --result --blocking -p org ORG_ID -p eventType value -p payload '{"test":"etsd"}' -p typeId myDeviceType -p deviceId 00aabbccde03_0001 -p gatewayTypeId myGatewayType -p gatewayId 00aabbccde03 -p gatewayToken "ZZZ"
+ ``` 
+ bx wsk action invoke /myNamespace/myGateway/publishEvent -i --result --blocking -p org ORG_ID -p eventType value -p payload '{"test":"etsd"}' -p typeId myDeviceType -p deviceId 00aabbccde03_0001 -p gatewayTypeId myGatewayType -p gatewayId 00aabbccde03 -p gatewayToken "ZZZ"
  ```
 
  ## Utilisation du référentiel
@@ -85,4 +84,4 @@ Effectuez les étapes suivantes pour déployer le package en utilisant `installC
 2. `cd openwhisk-package-watsoniotp/packages`
 3. `./installCatalog.sh AUTH APIHOST WSK_CLI`
 
-où *AUTH* désigne votre clé d'autorisation, *APIHOST* le nom d'hôte OpenWhisk et *WSK_CLI* l'emplacement de l'interface de ligne de commande binaire Openwhisk.
+où *AUTH* est votre clé d'autorisation, *APIHOST* est le nom d'hôte d'IBM Cloud Functions et *WSK_CLI* l'emplacement de l'interface de ligne de commande binaire d'IBM Cloud Functions.

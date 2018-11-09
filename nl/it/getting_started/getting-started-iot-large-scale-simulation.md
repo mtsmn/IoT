@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-08"
+  years: 2017, 2018
+lastupdated: "2018-08-18"
 
 ---
 
@@ -13,11 +13,13 @@ lastupdated: "2017-11-08"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guida 4: Simulazione di un grande numero di dispositivi
+# Guida 3: Simulazione di un grande numero di dispositivi
 Nella prima guida, hai configurato un simulatore del dispositivo di base per simulare manualmente uno o più nastri trasportatore. In questa guida, espandiamo questa simulazione aggiungendo un grande numero di simulatori in esecuzione automatica al tuo ambiente per verificare le analisi e il monitoraggio in un ambiente a più dispositivi più realistico.
 {:shortdesc}
 
-**Importante:** l'applicazione richiede 512 MB di memoria, che è maggiore alla quantità allocata per impostazione predefinita e potrebbe anche superare la quantità disponibile per gli account di prova gratuita, incluso l'account standard e di prova Bluemix. I possessori degli account a pagamento a consumo e di sottoscrizione possono aumentare la memoria assegnata fino a 512 MB. I possessori degli account di prova gratuita devono eseguire l'aggiornamento a un account a pagamento a consumo o di sottoscrizione. Per ulteriori informazioni sui tipi di account {{site.data.keyword.Bluemix_notm}}, consulta [Tipi di account](/docs/pricing/index.html#pricing).
+**Importante:** l'applicazione richiede 512 MB di memoria, che è superiore a quella assegnata per impostazione predefinita e che supera anche la quantità disponibile per gli account di prova gratuiti, incluso l'account standard e di prova {{site.data.keyword.Bluemix}}. I possessori degli account a pagamento a consumo e di sottoscrizione possono aumentare la memoria assegnata fino a 512 MB. I possessori degli account di prova gratuita devono eseguire l'aggiornamento a un account a pagamento a consumo o di sottoscrizione. Per ulteriori informazioni sui tipi di account {{site.data.keyword.Bluemix_notm}}, consulta [Tipi di account](/docs/pricing/index.html#pricing).
+
+**Nota:** Bluemix è ora IBM Cloud. Per ulteriori dettagli, consulta il [Blog di IBM Cloud ](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno").
 
 ## Panoramica e obiettivi
 {: #overview}
@@ -37,7 +39,7 @@ Completando le istruzioni presenti in questa guida, effettuerai le seguenti oper
 - Utilizzare Cloud Foundry per distribuire un'applicazione simulatore del dispositivo abilitato con il webhook e basata su Node-RED.
 - Utilizzare le chiamate API per creare e registrare i dispositivi, pubblicare gli eventi del dispositivo ed eliminare i dispositivi.
 
-**Importante:** la simulazione di un gran numero di dispositivi che contemporaneamente invia i dati del dispositivo a {{site.data.keyword.iot_short_notm}} potrebbe utilizzare un gran quantitativo di dati. Puoi utilizzare il dashboard {{site.data.keyword.iot_short_notm}} *Usage* per monitorare quanti dati i tuoi dispositivi e applicazioni stanno utilizzando. Le metriche vengono aggiornate ogni 2 ore.
+**Importante:** la simulazione di un gran numero di dispositivi che contemporaneamente invia i dati del dispositivo a {{site.data.keyword.iot_full}} potrebbe utilizzare un gran quantitativo di dati. 
 
 ## Prerequisiti
 {: #prereqs}  
@@ -62,10 +64,10 @@ Utilizza le seguenti istruzioni per creare e distribuire la tua applicazione man
 
 1. Clona il repository GitHub dell'applicazione di esempio *Lesson4*.  
 Utilizza il tuo strumento git preferito per clonare il seguente repository:  
-https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 Nella shell Git, utilizza il seguente comando:
 ```bash
-$ git clone https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+$ git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 ```
 3. Configura l'applicazione per il tuo ambiente modificando il file manifest.yml.  
 Cosa devi modificare:
@@ -177,7 +179,7 @@ Dopo aver protetto il tuo flusso Node-RED, se pensi di utilizzare i comandi API 
 
 Puoi utilizzare l'interfaccia del flusso Node-RED o l'API REST dell'applicazione per completare le seguenti attività.
 
-### Node-RED  
+### Creazione e collegamento di dispositivi utilizzando Node-RED  
 Per registrare più dispositivi:  
 1. Accedi a {{site.data.keyword.Bluemix_notm}} all'indirizzo:  
 [https://bluemix.net ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://bluemix.net){: new_window}.
@@ -190,13 +192,8 @@ Viene aperta l'interfaccia Node-RED.
 5. Fai clic su **Go to your Node-RED flow editor**.
 6. Nell'editor del flusso, seleziona la scheda **Device Type and Instance**.
 7. Per registrare cinque dispositivi, fai clic sul nodo Inject etichettato **Register 5 motorController devices**.
-8. Verifica che i tuoi dispositivi siano registrati.
- 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, dal menu, seleziona **Boards**.
- 3. Seleziona la tabella **Device Centric Analytics**.
- 4. Individua la scheda **Devices I Care About**.  
-I nomi del dispositivo vengono visualizzati.
 
-### API REST  
+### Creazione e collegamento di dispositivi utilizzando l'API REST  
 Per registrare più dispositivi:  
 
 1. Effettua una chiamata HTTP POST al seguente URL: `ROUTE_URL/rest/devices`  
@@ -213,33 +210,24 @@ Esempio: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/devices`
 </code></pre>  
   Dove:  
     - numberDevices è il numero di dispositivi da creare e registrare.
-    - Facoltativo: typeId è il tipo di dispositivo con cui saranno registrati i dispositivi. Se typeId non viene fornito, viene utilizzato il valore predefinito "iotp-for-conveyor". **Suggerimento:** puoi immettere qualsiasi nome di tipo di dispositivo, ma le altre guide nella serie si aspettano dispositivi del tipo `iotp-for-conveyor`. Se utilizzi un tipo di dispositivo diverso, devi modificare le impostazioni nelle guide di conseguenza. 
+    - Facoltativo: typeId è il tipo di dispositivo con cui saranno registrati i dispositivi. Se typeId non viene fornito, viene utilizzato il valore predefinito "iotp-for-conveyor". **Suggerimento:** puoi immettere qualsiasi nome di tipo di dispositivo, ma le altre guide nella serie si aspettano dispositivi del tipo `iotp-for-conveyor`. Se utilizzi un tipo di dispositivo diverso, devi modificare le impostazioni nelle guide di conseguenza.
     - Facoltativo: authToken è il token di autorizzazione con cui saranno registrati i dispositivi.
     - Facoltativo: se chunkSize non viene fornito, viene impostato sul valore predefinito di 500. 'chunksize' deve essere inferiore e un fattore di numberDevices.
     - deviceName è il modello per deviceID per i dispositivi creati.
-2. Verifica che i tuoi dispositivi siano registrati.
- 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, dal menu, seleziona **Boards**.
- 3. Seleziona la tabella **Device Centric Analytics**.
- 4. Individua la scheda **Devices I Care About**.  
-I nomi del dispositivo vengono visualizzati.
 
 ## Passo 4 - Simula gli eventi del dispositivo
 {: #step4}
 
 Poiché i dispositivi simulati sono registrati con {{site.data.keyword.iot_short_notm}}, puoi ora eseguire il simulatore per iniziare a inviare gli eventi del dispositivo.
 
-### Node-RED  
+### Simulazione degli eventi del dispositivo utilizzando Node-RED  
 Per inviare gli eventi del dispositivo:  
 1. Nell'editor del flusso Node-RED, seleziona la scheda **Simulate multiple devices**.
 7. Per simulare cinque dispositivi, fai clic sul nodo Inject etichettato **Simulate 5 devices**.
-8. Verifica che i tuoi dispositivi stiano inviando dati. 
- 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, dal menu, seleziona **Boards**.
- 3. Seleziona la tabella **Device Centric Analytics**.
- 4. Individua la scheda **Devices I Care About**.  
- 5. Seleziona uno dei dispositivi e verifica che i punti dei dati del dispositivo aggiornato che corrispondono al messaggio pubblicato vengano visualizzati nella scheda **Device Properties**.  
+ 
 
 
-### API REST  
+### Simulazione degli eventi del dispositivo utilizzando l'API REST  
 Per inviare gli eventi del dispositivo:
 
 1. Effettua una chiamata HTTP POST al seguente URL: `ROUTE_URL/rest/runtest`  
@@ -259,11 +247,7 @@ Dove:
     - timeInterval è la spaziatura degli eventi in millisecondi.
     - deviceType è il tipo di dispositivo per cui hai creato i dispositivi simulati.
     - deviceName è il modello per deviceID per i dispositivi creati.
-8. Verifica che i tuoi dispositivi stiano inviando dati. 
- 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, dal menu, seleziona **Boards**.
- 3. Seleziona la tabella **Device Centric Analytics**.
- 4. Individua la scheda **Devices I Care About**.  
- 5. Seleziona uno dei dispositivi e verifica che i punti dei dati del dispositivo aggiornato che corrispondono al messaggio pubblicato vengano visualizzati nella scheda **Device Properties**.   
+ 
 
 ## Passo 5 - Eliminazione dei dispositivi
 {: #deleting}
@@ -272,11 +256,7 @@ Dove:
 Per eliminare i dispositivi:  
 1. Nell'editor del flusso Node-RED, seleziona la scheda **Device Type and Instance**.
 2. Per eliminare cinque dispositivi, fai clic sul nodo Inject etichettato **Delete 5 devices**.
-3. Verifica che i tuoi dispositivi siano stati eliminati. 
- 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, dal menu, seleziona **Boards**.
- 3. Seleziona la tabella **Device Centric Analytics**.
- 4. Individua la scheda **Devices I Care About**.  
- 5. Verifica che i dispositivi non siano più elencati.  
+
 
 
 ### API REST  
@@ -290,19 +270,13 @@ Esempio: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevice
 "deviceType":"iot-conveyor-belt",  
 "deviceName": "belt"  
 }</code></pre>
-2. Verifica che i tuoi dispositivi siano stati eliminati. 
- 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, dal menu, seleziona **Boards**.
- 3. Seleziona la tabella **Device Centric Analytics**.
- 4. Individua la scheda **Devices I Care About**.  
- 5. Verifica che i dispositivi non siano più elencati.  
+  
 
 
 ## Operazioni successive
 {: @whats_next}  
 Passa a un altro argomento di tuo interesse:
-- [Guida 2: Utilizzo delle azioni e delle regole in tempo reale di base](getting-started-iot-rules.html)  
-Ora che hai correttamente configurato il tuo nastro trasportatore, lo hai collegato a {{site.data.keyword.iot_short_notm}} e inviato alcuni dati, è ora di rendere tali dati utili utilizzando le regole e le azioni. 
-- [Guida 3: Monitoraggio dei tuoi dati del dispositivo](getting-started-iot-monitoring.html)  
-Ora che hai collegato uno o più dispositivi a iniziato a fare buon uso dei dati del dispositivo, è ora di iniziare a monitorare una raccolta di dispositivi. 
+- [Guida 2: Monitoraggio dei dati del tuo dispositivo ](getting-started-iot-monitoring.html)  
+Ora che hai collegato uno o più dispositivi a iniziato a fare buon uso dei dati del dispositivo, è ora di iniziare a monitorare una raccolta di dispositivi.
 - [Ulteriori informazioni su {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [Ulteriori informazioni sulle API {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/reference/api.html){:new_window}

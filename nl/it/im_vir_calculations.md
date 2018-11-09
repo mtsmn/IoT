@@ -22,7 +22,7 @@ Per ulteriori informazioni, controlla il post del blog [An alternative approach 
 
 Per iniziare a definire le tue regole, consulta la documentazione [Creazione delle regole integrate (Beta)](information_management/im_rules.html).
 
-## Informazioni sui calcoli per le proprietà virtuali edge 
+## Informazioni sui calcoli per le proprietà virtuali edge
 
 Estendi i calcoli della proprietà virtuale di base con le formule di analisi edge predefinite.
 

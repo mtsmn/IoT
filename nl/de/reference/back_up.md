@@ -2,8 +2,8 @@
 
 copyright:
 
-years: 2017
-lastupdated: "2017-08-07"
+years: 2017, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -30,14 +30,16 @@ Momentan werden im Rahmen der {{site.data.keyword.iot_short_notm}}-Strategie die
 - Alle Datensätze von Gerätemanagementanforderungen einschließlich des Protokolls der initialisierten Anforderungen, z. B. der aktuelle Status der Anforderung
 - Definitionen von Anforderungsbundles für das angepasste Gerätemanagement
 
+**Hinweis:** Alle Daten für eine Organisation werden 14 Tage lang nach der Servicebereitstellung aufbewahrt. Um eine Organisation wiederherzustellen, wenden Sie sich innerhalb des 14-Tage-Fensters an den Support.
+
 ## Welche Datentypen werden nicht gesichert?
 
 Die folgenden Datentypen werden in {{site.data.keyword.iot_short_notm}} nicht gesichert:
 
 - Geräteereignisse
 - Daten zum transienten Nachrichtenstatus, z. B. für momentan ausgeführte Daten
-- Analyseregeln und Alertkonfiguration
 - MQTT-Nachrichten, die im Rahmen einer Gerätemanagementanforderung gesendet und empfangen werden
+<!-- - Analytics rules and alert configuration -->
 
 ## Wie häufig werden Daten gesichert und wo werden sie gespeichert?
 
@@ -47,11 +49,11 @@ Die Daten werden getrennt vom {{site.data.keyword.iot_short_notm}}-Hauptservice 
 
 Momentan werden die folgenden Auslagerungsstandorte für die Datensicherung verwendet:
 
-Standort                   | Sicherungsstandort                   
+Standort                   | Sicherungsstandort                      
 ------------- | -------------
-Bluemix - Vereinigte Staaten (Süden) (Dallas)| Washington
-Bluemix - Großbritannien (London) | Frankfurt
-Bluemix - Deutschland (Frankfurt) | London
-Bluemix Dedicated | Auf Basis der Kundenanforderung bei Bestellung von {{site.data.keyword.iot_short_notm}} Dedicated
+IBM Cloud - Vereinigte Staaten (Süden) (Dallas)| Washington
+IBM Cloud - Großbritannien (London) | Frankfurt
+IBM Cloud - Deutschland (Frankfurt) | London
+IBM Cloud Dedicated | Auf Basis der Kundenanforderung bei Bestellung von {{site.data.keyword.iot_short_notm}} Dedicated
 
 **Hinweis:** Zukünftige Standorte können sich ändern, um den Gesetzen zum Datenschutz Rechnung zu tragen, z. B. in Bezug auf die möglichen Auswirkungen des Brexit auf die Regelungen der EU-Datensouveränität.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-06-13"
+  years: 2016, 2018
+lastupdated: "2018-01-11"
 ---
 
 {:new_window: target="\_blank"}
@@ -18,7 +18,7 @@ Les certificats sont utilisés pour l'authentification de terminal ou pour rempl
 
 Pour configurer les certificats et l'accès au serveur pour les terminaux, l'opérateur du système enregistre les certificats d'autorité de certification associés et enregistre éventuellement les certificats du serveur de messages dans la plateforme {{site.data.keyword.iot_short_notm}}.
 
-Pour des informations sur l'utilisation des API de gestion des certificats d'AC et des certificats de serveur de messagerie, voir [IBM Watson IoT Platform Authentication and Authorization APIs ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
+Pour des informations sur l'utilisation des API de gestion des certificats d'AC et des certificats de serveur de messagerie, voir [IBM Watson IoT Platform Authentication and Authorization APIs ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window}.
 
 ## Certificats d'autorité de certification
 Les certificats d'autorité de certification (AC) permettent à l'organisation de faire confiance aux
@@ -53,7 +53,7 @@ et celui du champ **SubjectAltName** est SubjectAltName=email:g:*devtype:devid*
 Remarque : Pour les certificats de terminal ou de passerelle,
 l'élément `orgId` ne doit pas être inclus dans le champ **CN** ou **SubjectAltName**. L'`orgId` doit faire partie des informations SNI fournies par l'implémentation du client lors de la connexion au serveur de messagerie.
 
-Pour plus d'informations sur les certificats client, voir [Connect Raspberry Pi to IBM Watson IoT Platform using Client side Certificates ![External link  icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
+Pour plus d'informations sur les certificats client, voir [Connect Raspberry Pi to IBM Watson IoT Platform using Client side Certificates ![External link  icon](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-client-side-certificates/){: new_window}
 
 ## Certificats de serveur de messagerie
 
@@ -65,16 +65,12 @@ L'exemple suivant montre un CN valide pour le certificat de serveur :
 
 `mtxpd0.messaging.internetofthings.ibmcloud.com`
 
-Pour plus d'informations sur les certificats de serveur de messagerie, voir [Connect Raspberry Pi to IBM Watson IoT Platform using Self-Signed Server Certificate ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
+Pour plus d'informations sur les certificats de serveur de messagerie, voir [Connect Raspberry Pi to IBM Watson IoT Platform using Self-Signed Server Certificate ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
 
-### Domaines personnalisés (bêta)
-{: #custom_domains}
+### Domaines personnalisés
+{: #custom-domains}
 
-**Important** : La fonction Domaines personnalisés pour les certificats de serveur de messagerie
-n'est disponible que dans le cadre d'un programme bêta limité. Pour en bénéficier,
-activez les **Fonctions expérimentales** sur la page **Paramètres**.
-
-Avec la fonction Bêta, les certificats de serveur de messagerie acceptent les domaines personnalisés. Le format suivant doit être respecté pour le champ CN ou SubjectAltName du certificat :
+Les certificats de serveur de messagerie acceptent les domaines personnalisés. Le format suivant doit être respecté pour le champ CN ou SubjectAltName du certificat :
 
 - `orgId.messaging.<custom domain>`
 

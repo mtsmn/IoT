@@ -12,14 +12,11 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg4136"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.48.4 r9939"
    width="1454"
    height="479"
    viewBox="0 0 1454 479"
-   sodipodi:docname="slow_rule.svg"
-   inkscape:export-filename="T:\PUB\ABD142\ART\WORK\ship8\getting_started\images\slow_rule.png"
-   inkscape:export-xdpi="299.98099"
-   inkscape:export-ydpi="299.98099">
+   sodipodi:docname="slow_rule.svg">
   <metadata
      id="metadata4142">
     <rdf:RDF>
@@ -44,12 +41,12 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1015"
+     inkscape:window-height="1012"
      id="namedview4138"
      showgrid="false"
-     inkscape:zoom="0.9085282"
-     inkscape:cx="727"
-     inkscape:cy="239.5"
+     inkscape:zoom="0.94"
+     inkscape:cx="769.18658"
+     inkscape:cy="278.57415"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -86,9 +83,7 @@
        x="71.479568"
        y="110.68165"
        style="font-size:25px;line-height:125%;letter-spacing:0px;fill:#919796;fill-opacity:1"
-       dx="0">RPM <tspan
-   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:25px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4186">규칙</tspan></tspan></text>
+       dx="0">RPM 규칙</tspan></text>
   <rect
      style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
      id="rect4150-2"
@@ -98,7 +93,7 @@
      y="126.84068" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:16.25px;line-height:125%;font-family:Gulim;letter-spacing:0px;word-spacing:0px;fill:#919796;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'Gulim, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#919796;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="73.321114"
      y="150.07625"
      id="text4146-6"
@@ -109,7 +104,7 @@
        id="tspan4148-4"
        x="73.321114"
        y="150.07625"
-       style="font-size:16.25px;line-height:125%;letter-spacing:0px;fill:#919796;fill-opacity:1;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;">컨베이어 벨트가 느리게 실행 중임</tspan></text>
+       style="font-size:16.25px;line-height:125%;letter-spacing:0px;fill:#919796;fill-opacity:1">컨베이어 벨트가 느리게 실행 중임</tspan></text>
   <rect
      style="opacity:1;fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
      id="rect4150-2-6"
@@ -133,7 +128,7 @@
      y="207.37572" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:16.25px;line-height:125%;font-family:Gulim;letter-spacing:0px;word-spacing:0px;fill:#5596e6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'Gulim, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#5596e6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="359.84308"
      y="229.89468"
      id="text4146-6-1"
@@ -144,7 +139,7 @@
        id="tspan4148-4-9"
        x="359.84308"
        y="229.89468"
-       style="font-size:16.25px;line-height:125%;letter-spacing:0px;fill:#5596e6;fill-opacity:1;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;">조건이 충족될 때마다 트리거</tspan></text>
+       style="font-size:16.25px;line-height:125%;letter-spacing:0px;fill:#5596e6;fill-opacity:1">조건이 충족될 때마다 트리거</tspan></text>
   <rect
      style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
      id="rect4150-2-8"
@@ -165,9 +160,7 @@
        id="tspan4148-4-5"
        x="523.64069"
        y="151.9236"
-       style="font-size:16.25px;line-height:125%;letter-spacing:0px;fill:#565351;fill-opacity:1"><tspan
-   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16.25px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4190">적용 대상</tspan>: iot-conveyor-belt</tspan></text>
+       style="font-size:16.25px;line-height:125%;letter-spacing:0px;fill:#565351;fill-opacity:1">적용 대상: iot-conveyor-belt</tspan></text>
   <rect
      style="opacity:0;fill:#565351;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
      id="rect4290"
@@ -184,7 +177,7 @@
      y="131.4102" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:16.25px;line-height:125%;font-family:Gulim;letter-spacing:0px;word-spacing:0px;fill:#3d4747;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'Gulim, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#3d4747;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="974.78748"
      y="152.5162"
      id="text4146-6-4"
@@ -195,7 +188,7 @@
        id="tspan4148-4-3"
        x="974.78748"
        y="152.5162"
-       style="font-size:16.25px;line-height:125%;letter-spacing:0px;fill:#3d4747;fill-opacity:1;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;">경보 우선순위:</tspan></text>
+       style="font-size:16.25px;line-height:125%;letter-spacing:0px;fill:#3d4747;fill-opacity:1">경보 우선순위:</tspan></text>
   <rect
      style="opacity:1;fill:#4178be;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
      id="rect4150-2-8-2-9"
@@ -205,7 +198,7 @@
      y="15.336178" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:sans-serif"
      x="1166.0991"
      y="41.642029"
      id="text4146-6-4-6"
@@ -216,7 +209,7 @@
        id="tspan4148-4-3-9"
        x="1166.0991"
        y="41.642029"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1">취소</tspan></text>
+       style="font-size:17.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;fill:#ffffff;fill-opacity:1;font-family:sans-serif;-inkscape-font-specification:sans-serif">취소</tspan></text>
   <rect
      style="opacity:1;fill:#4178be;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
      id="rect4150-2-8-2-9-0"
@@ -226,8 +219,8 @@
      y="16.198242" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="1259.626"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:sans-serif"
+     x="1257.626"
      y="41.825851"
      id="text4146-6-4-6-5"
      sodipodi:linespacing="125%"
@@ -235,9 +228,9 @@
      inkscape:transform-center-y="-32.76147"><tspan
        sodipodi:role="line"
        id="tspan4148-4-3-9-4"
-       x="1259.626"
+       x="1257.626"
        y="41.825851"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1">저장</tspan></text>
+       style="font-size:17.5px;line-height:125%;letter-spacing:0px;fill:#ffffff;fill-opacity:1">저장</tspan></text>
   <rect
      style="opacity:1;fill:#4178be;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
      id="rect4150-2-8-2-9-6"
@@ -247,8 +240,8 @@
      y="16.198244" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="1350.7294"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:sans-serif"
+     x="1346.7294"
      y="42.412056"
      id="text4146-6-4-6-1"
      sodipodi:linespacing="125%"
@@ -256,9 +249,9 @@
      inkscape:transform-center-y="-32.76147"><tspan
        sodipodi:role="line"
        id="tspan4148-4-3-9-8"
-       x="1350.7294"
+       x="1346.7294"
        y="42.412056"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1">비활성화 </tspan></text>
+       style="font-size:17.5px;line-height:125%;letter-spacing:0px;fill:#ffffff;fill-opacity:1">비활성화 </tspan></text>
   <rect
      style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
      id="rect4150-2-8-2-6"
@@ -268,7 +261,7 @@
      y="132.8428" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:Gulim;letter-spacing:0px;word-spacing:0px;fill:#615f5e;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'Gulim, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#615f5e;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="1109.5116"
      y="154.42596"
      id="text4146-6-7"
@@ -279,7 +272,7 @@
        id="tspan4148-4-0"
        x="1109.5116"
        y="154.42596"
-       style="font-size:17.5px;line-height:125%;letter-spacing:0px;fill:#615f5e;fill-opacity:1;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;">중간</tspan></text>
+       style="font-size:17.5px;line-height:125%;letter-spacing:0px;fill:#615f5e;fill-opacity:1">중간</tspan></text>
   <rect
      style="opacity:1;fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
      id="rect4150-2-6-8"
@@ -357,7 +350,7 @@
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">rpm</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#3c4646;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#3c4646;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="33.189583"
      y="230.24008"
      id="text4784-8"
@@ -366,14 +359,10 @@
        id="tspan4786-1"
        x="33.189583"
        y="230.24008"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.25px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none">IF: <tspan
-   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16.25px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke:#000000;stroke-opacity:1"
-   id="tspan4188">하나 이상의 조건을 추가합니다</tspan><tspan
-   style="stroke:#000000;stroke-opacity:1"
-   id="tspan4196">.</tspan></tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.25px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">IF: 하나 이상의 조건을 추가합니다.</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#3c4646;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#3c4646;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="902.60284"
      y="230.4601"
      id="text4784-8-2"
@@ -382,9 +371,7 @@
        id="tspan4786-1-1"
        x="902.60284"
        y="230.4601"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.25px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none">THEN: <tspan
-   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16.25px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
-   id="tspan4192">하나 이상의 조치를 추가하거나 선택합니다.</tspan></tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.25px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">THEN: 하나 이상의 조치를 추가하거나 선택합니다.</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#3c4646;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -399,7 +386,7 @@
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">&lt;0.5</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#3c4646;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#3c4646;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="1005.2904"
      y="318.77893"
      id="text4784-8-2-2"
@@ -408,17 +395,15 @@
        id="tspan4786-1-1-8"
        x="1005.2904"
        y="318.77893"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke:#000000;stroke-opacity:1">운영자에게 낮은 </tspan><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.25px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">운영자에게 낮은 </tspan><tspan
        sodipodi:role="line"
        x="1005.2904"
        y="339.09143"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.25px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
-       id="tspan4860">RPM<tspan
-   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16.25px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
-   id="tspan4194">에 대해 알림</tspan></tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.25px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
+       id="tspan4860">RPM에 대해 알림</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:16.25px;line-height:125%;font-family:Gulim;letter-spacing:0px;word-spacing:0px;fill:#3c4646;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'Gulim, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;stroke-miterlimit:4;stroke-dasharray:none"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#3c4646;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="1004.631"
      y="367.3432"
      id="text4784-8-2-2-4"
@@ -426,11 +411,11 @@
        sodipodi:role="line"
        x="1004.631"
        y="367.3432"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;font-family:sans-serif;-inkscape-font-specification:sans-serif"
        id="tspan4860-9">운영자에게 이메일</tspan><tspan
        sodipodi:role="line"
        x="1004.631"
        y="387.6557"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;font-family:sans-serif;-inkscape-font-specification:sans-serif"
        id="tspan4885">발송</tspan></text>
 </svg>

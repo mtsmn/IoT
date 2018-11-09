@@ -221,7 +221,7 @@ Rules are condition-based decision points that match real-time device data with 
 
     When you activate the rule, an alert is added to the **Rule-Based Analytics** board when the conditions are met, and any rule action is run. -->
 
-## Fasi successive
+## Passi successivi
 
 Crea e collega le tue applicazioni per utilizzare i dati del dispositivo cronologici e in tempo reale.
 

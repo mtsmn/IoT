@@ -16,11 +16,11 @@ lastupdated: "2018-03-13"
 # 에지 분석
 {: #edge_analytics}
 
-**중요:** {{site.data.keyword.iot_full}}이 규칙과 조치를 제공하는 방식을 향상하기 위해 폭넓은 프로그램 개선의 일부로 사용자의 IoT 디바이스에서 규칙을 정의하는 새로운 방식에 관한 베타를 출시합니다. 
+**중요:** {{site.data.keyword.iot_full}}이 규칙과 조치를 제공하는 방식을 향상하기 위해 폭넓은 프로그램 개선의 일부로 사용자의 IoT 디바이스에서 규칙을 정의하는 새로운 방식에 관한 베타를 출시합니다.
 
-더 자세히 알아보려면 [IoT 데이터에서 규칙 정의를 위한 다른 접근 방법 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window} 블로그 게시물을 확인하십시오. 
+더 자세히 알아보려면 [IoT 데이터에서 규칙 정의를 위한 다른 접근 방법 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window} 블로그 게시물을 확인하십시오.
 
-자체 규칙 정의를 시작하려면 [임베디드 규칙 작성(베타)](information_management/im_rules.html) 문서를 참조하십시오. 
+자체 규칙 정의를 시작하려면 [임베디드 규칙 작성(베타)](information_management/im_rules.html) 문서를 참조하십시오.
 
 ## 에지 분석 정보
 
@@ -39,8 +39,8 @@ lastupdated: "2018-03-13"
 - 게이트웨이가 {{site.data.keyword.iot_short}}에 연결되고 디바이스 데이터가 전송되는지 확인하십시오. 자세한 정보는 [게이트웨이 연결](gateways/dashboard.html)을 참조하십시오.
 - 게이트웨이에 EAA(Edge Analytics Agent)를 설치하십시오. 자세한 정보는 [Edge Analytics Agent 설치](gateways/dashboard.html#edge)를 참조하십시오. </br> **팁:** EAA 사용 게이트웨이에서는 게이트웨이 디바이스 메시지의 양식으로 EAA 진단 데이터를 제공합니다. 자세한 정보는 [Edge Analytics Agent 진단 메트릭](#eaa_metrics)을 참조하십시오.
 - 규칙에서 조건으로 사용할 디바이스 특성이 스키마에 맵핑되었는지 확인하십시오. 자세한 정보는 [디바이스 연결](iotplatform_task.html) 및 [스키마 작성](im_schemas.html)을 참조하십시오.
-- 에지 분석 레시피 검토  
-레시피 포털에서 한 쌍의 레시피는 IBM 에지 분석을 수행하는 데 필요한 단계를 설명합니다. 레시피는 IoT 데이터 소스에 인접하여 분석을 실행하기 위해 Apache Edgent 위에 빌드된 디바이스에서 IBM Edge Analytics Agent를 설치하고 구성하는 방법에 대해 명료하게 설명합니다.
+- Edge Analytics 레시피 검토  
+레시피 포털에서 한 쌍의 레시피는 IBM Edge Analytics를 수행하는 데 필요한 단계를 설명합니다. 레시피는 IoT 데이터 소스에 인접하여 분석을 실행하기 위해 Apache Edgent 위에 빌드된 디바이스에서 IBM Edge Analytics Agent를 설치하고 구성하는 방법에 대해 명료하게 설명합니다.
  - [Getting Started with Edge Analytics in IBM Watson IoT Platform ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window} 레시피가 이 시리즈의 시작입니다. 이 레시피에서는 랩탑 시스템과 Raspberry Pi 3 디바이스에서 Cisco DSA 플랫폼 설정, {{site.data.keyword.iot_short}}에 연결하기 위한 IBM Edge Analytics Agent의 설치와 구성, 시스템 DS 링크 설치 및 연결된 디바이스로서 {{site.data.keyword.iot_short}}의 에지 게이트웨이에 연결하도록 이를 구성, 에지 게이트웨이에서 에지 규칙의 정의와 활성화, 그리고 {{site.data.keyword.iot_short}}에서 에지 규칙의 관리를 설명합니다.
  - Edge Analytics의 고급 사용을 설명하기 위해 [Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} 레시피는 연결된 Arduino Uno 디바이스의 데이터를 Raspberry Pi 3 디바이스로 전송하기 위한 자체 DS 링크를 빌드하는 방법을 보여줍니다. 이 레시피는 에지 규칙 경보의 일부로서 데이터 필터링 및 핸들링 로컬 디바이스 조치도 보여줍니다.
 
@@ -79,9 +79,9 @@ lastupdated: "2018-03-13"
 **중요:** 두 개의 특성을 비교하는 조건을 트리거하거나 AND를 사용하여 순차적으로 결합된 둘 이상의 특성 조건을 트리거하려면 트리거링 데이터 점이 동일한 디바이스 메시지에 포함되어 있어야 합니다. 데이터가 둘 이상의 메시지에서 수신되면, 조건 또는 순차 조건이 트리거되지 않습니다.  
 
 **예:**   
-매개변수 값이 지정된 값보다 큰 경우 단순 규칙이 경보를 트리거할 수 있음:   
+매개변수 값이 지정된 값보다 큰 경우 단순 규칙이 경보를 트리거할 수 있음:  
 `temp>80`  
-임계값의 조합이 충족될 때 더 복잡한 규칙이 트리거할 수 있음:   
+임계값의 조합이 충족될 때 더 복잡한 규칙이 트리거할 수 있음:  
 `temp>60 AND capacity>50`   
 
 4. 규칙에 대한 조건부 트리거 요구사항을 구성하십시오.  
@@ -228,4 +228,4 @@ EAA 사용 게이트웨이에서 실행되는 에지 규칙 트리거 조치를 
 ## Edge Analytics 커뮤니티
 {: #eaa_community}
 
-[IBM Edge Analytics 커뮤니티 페이지](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true)에서 Edge Analytics SDK를 다운로드할 수 있습니다. SDK에는 SDK JAR 파일, javadoc, 샘플 코드, 레시피 링크 및 README 파일이 포함됩니다. 커뮤니티에서 비디오를 보고 Edge Analytics를 시작하고 실행할 수 있으며 커뮤니티 포럼을 사용하여 질문할 수 있습니다.
+[IBM Edge Analytics 커뮤니티 페이지](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true)에서 Edge Analytics SDK를 다운로드할 수 있습니다. SDK에는 SDK JAR 파일, javadoc, 샘플 코드, 레시피 링크 및 README 파일이 포함됩니다. 커뮤니티에서 동영상을 보고 Edge Analytics를 시작하고 실행할 수 있으며 커뮤니티 포럼을 사용하여 질문할 수 있습니다.

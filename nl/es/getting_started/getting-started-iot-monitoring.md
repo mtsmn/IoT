@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -13,14 +13,14 @@ lastupdated: "2017-06-16"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guía 3: Supervisión de los datos de dispositivo
+# Guía 2: Supervisión de los datos de dispositivo
 Ahora que tiene uno o varios dispositivos conectados, es hora de empezar a supervisar los datos de dispositivo en tiempo real.
 {:shortdesc}
 
 ## Visión general y objetivo
 {: #overview}  
 
-En esta guía, desplegará una aplicación de supervisión en {{site.data.keyword.Bluemix_notm}} para ver los datos de sus dispositivos.
+En esta guía, desplegará una aplicación de supervisión en {{site.data.keyword.Bluemix}} para ver los datos de sus dispositivos.
 
 Como en la guía 1, puede seguir una o ambas de las siguientes vías de acceso:
 - Vía de acceso A: [Paso 1A: Desplegar y conectar la aplicación web de supervisión](#deploy_app)  
@@ -60,7 +60,7 @@ Si ha completado la [Guía 1: Iniciación a {{site.data.keyword.iot_short_notm}}
 ## Paso 1A: Desplegar y conectar la aplicación web de supervisión
 {: #deploy_app}
 
-La app de muestra Plant Floor Monitoring enumera todos los dispositivos de tipo iot-conveyor-belt conectados con su organización de {{site.data.keyword.iot_short_notm}} junto con un subconjunto de los datos de sucesos como RPM, última actualización e ID de dispositivo.
+La app de muestra Plant Floor Monitoring enumera todos los dispositivos de tipo iot-conveyor-belt conectados con su organización de {{site.data.keyword.iot_full}} junto con un subconjunto de los datos de sucesos como RPM, última actualización e ID de dispositivo.
 
 La app de muestra se compila utilizando las bibliotecas de cliente de Node.js en: [https://github.com/ibm-watson-iot/iot-nodejs ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 
@@ -71,14 +71,13 @@ Como parte de este paso aprenderá a:
 - Configurar la app de muestra para conectarse con {{site.data.keyword.iot_short_notm}} utilizando una clave de API y una señal de autenticación.
 - Utilizar la aplicación web para supervisar sus dispositivos de cinta transportadora conectados.  
 
-### Pasos detallados
+### Pasos detallados para desplegar y conectar la aplicación web de supervisión
 Los siguientes pasos le guían a través de la creación y el despliegue de la app en {{site.data.keyword.Bluemix_notm}}. Para obtener información acerca de la ejecución de la app de forma local, consulte el archivo README en GitHub.
-1. Clone el repositorio de GitHub de la aplicación de muestra *Plant Floor Monitoring* de Node.js.  
+1. Clone el repositorio de GitHub de la app de muestra *Plant Floor Monitoring* de Node.js.  
 Utilice su herramienta Git favorita para clonar el siguiente repositorio:  
 https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
 En Git shell, utilice el siguiente mandato:
-
-```bash
+  ```bash
 git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
   ```
 2. Cree una combinación de clave de API y señal de autenticación para su app.  
@@ -147,12 +146,9 @@ cd guide-conveyor-ui-angular
 7. Ejecute `npm install -g @angular/cli` para instalar la CLI de Angular.
 8. Ejecute `npm install`.
 9. Ejecute `npm run push` para crear el proyecto y enviar por push a su organización.  
-Su aplicación web de muestra está desplegada en {{site.data.keyword.Bluemix_notm}}.
-  
-Cuando el despliegue finaliza, se muestra un mensaje para indicar que su aplicación está en ejecución.
-   
-Ejemplo:
-  
+Su aplicación web de muestra está desplegada en {{site.data.keyword.Bluemix_notm}}.  
+Cuando el despliegue finaliza, se muestra un mensaje para indicar que su app está en ejecución.   
+Ejemplo:  
   ```
 requested state: started
 instances: 1/1
@@ -173,7 +169,7 @@ El URL predeterminado es similar a:
 ## Paso 1B: Crear una interfaz de usuario de supervisión utilizando la biblioteca de widgets
 {: #widget-library}
 
-La aplicación de muestra basada en la biblioteca de widgets incluye un indicador de la velocidad del motor, un indicador de los datos de acelerómetro y un diagrama de velocidad del motor que muestra los datos de un único dispositivo de tipo iot-conveyor-belt conectado con su organización de {{site.data.keyword.iot_short_notm}}. Puede utilizar el código de ejemplo para crear una aplicación frontal completa para sus dispositivos conectados de {{site.data.keyword.iot_short_notm}}.
+La app de muestra basada en la biblioteca de widgets incluye un indicador de la velocidad del motor, un indicador de los datos de acelerómetro y un diagrama de velocidad del motor que muestra los datos de un único dispositivo de tipo iot-conveyor-belt conectado con su organización de {{site.data.keyword.iot_short_notm}}. Puede utilizar el código de ejemplo para crear una aplicación frontal completa para sus dispositivos conectados de {{site.data.keyword.iot_short_notm}}.
 
 ![App de supervisión basada en biblioteca de widgets](images/app_monitor_b.png "App de supervisión basada en biblioteca de widgets")
 
@@ -183,9 +179,9 @@ Como parte de este paso aprenderá a:
 - Configurar tres widgets de interfaz de usuario para visualizar datos de dispositivo como indicadores y gráficos.
 - Utilizar la aplicación web para supervisar su dispositivo de cinta transportadora conectado.  
 
-### Pasos detallados
+### Pasos detallados para crear una interfaz de usuario de supervisión utilizando la biblioteca de widgets
 Los siguientes pasos le guían a través de la creación y el despliegue de la app en {{site.data.keyword.Bluemix_notm}}. Para obtener información acerca de la ejecución de la app de forma local, consulte el archivo README en GitHub.
-1. Clone el repositorio de GitHub de la aplicación de muestra *Widget Library Monitoring*.  
+1. Clone el repositorio de GitHub de la app de muestra *Widget Library Monitoring*.  
 Utilice su herramienta Git favorita para clonar el siguiente repositorio:  
 https://github.com/ibm-watson-iot/guide-conveyor-ui-html
 En Git Shell, utilice el siguiente mandato:
@@ -213,7 +209,7 @@ La siguiente tabla proporciona las descripciones de los parámetros:
 | DEVICE_ID | El ID del dispositivo que proporciona los datos a visualizar. Ejemplo: `belt1` |
 | PROPERTY | La propiedad de carga útil de mensaje de dispositivo a visualizar. Ejemplo: `rpm` |
 | WIDGET_DEFAULT_OVERRIDE | Los valores de configuración del widget para sustituir los valores predeterminados.|
-| WIDGET_SPECIFIC_SETTINGS | Uno o varios parámetros adicionales para el widget, vea ejemplos.|
+| WIDGET_SPECIFIC_SETTINGS | Uno o varios parámetros adicionales para el widget, vea ejemplos. |
 
 Para obtener detalles acerca de cada tipo de widget, consulte los ejemplos siguientes y la documentación en [Repositorio GitHub de widgets de IoT ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-widgets){: new_page}.
  1. Añada un indicador de RPM.  
@@ -295,19 +291,19 @@ applications:  </br>
   \- YOUR_IOT_PLATFORM_NAME  </br>
 </pre></code>
  2. Inicie la sesión en la cuenta de {{site.data.keyword.Bluemix_notm}} utilizando la CLI de Cloud Foundry.  
-Para obtener más información, consulte la [Documentación de la CLI de Cloud Foundry ![icono de enlace externo](../../../icons/launch-glyph.svg "icono de enlace externo")](https://docs.cloudfoundry.org/cf-cli/){: new_window}  
-En la línea de mandatos, especifique el mandato siguiente:  
+ Para obtener más información, consulte la [Documentación de la CLI de Cloud Foundry ![icono de enlace externo](../../../icons/launch-glyph.svg "icono de enlace externo")](https://docs.cloudfoundry.org/cf-cli/){: new_window}  
+ En la línea de mandatos, especifique el mandato siguiente:  
    ```
  cf login
    ```
-Si se le solicita, seleccione la organización y el espacio donde desea desplegar la app de muestra de supervisión.
+ Si se le solicita, seleccione la organización y el espacio donde desea desplegar la app de muestra de supervisión.
  5. Si es necesario, defina su punto final de API ejecutando el mandato cf api.   
-Sustituya el valor `API-ENDPOINT` con el punto final de API de su región.
+ Sustituya el valor `API-ENDPOINT` con el punto final de API de su región.
    ```
  cf api API-ENDPOINT
    ```
-Ejemplo: `cf api https://api.ng.bluemix.net`
-<table>
+ Ejemplo: `cf api https://api.ng.bluemix.net`
+ <table>
  <tr>
  <th>Región</th>
  <th>Punto final de API</th>
@@ -358,7 +354,7 @@ Para obtener los detalles técnicos, consulte:
 - Vía de acceso B: Modificar la app de biblioteca de widgets para que se ajuste a sus necesidades.  
 Para obtener los detalles técnicos, consulte:
  - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
-- [Guía 4: Simulación de un gran número de dispositivos](getting-started-iot-large-scale-simulation.html)  
-Expanda la simulación básica añadiendo una mayor cantidad de simuladores automáticos en su entorno. Esta expansión le permitirá realizar pruebas con las analíticas básicas y la supervisión de las guías anteriores en un entorno más realista y multi-dispositivo.
+- [Guía 3: Simulación de un gran número de dispositivos](getting-started-iot-large-scale-simulation.html)  
+Expanda la simulación básica añadiendo una mayor cantidad de simuladores automáticos en su entorno.
 - [Obtenga más información acerca de {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [Obtenga más información acerca de las API de {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/reference/api.html){:new_window}

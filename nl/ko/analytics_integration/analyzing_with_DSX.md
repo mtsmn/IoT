@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-09-18"
+  years: 2017, 2018
+lastupdated: "2018-05-01"
 ---
 
 ---
@@ -41,8 +41,7 @@ DSX는 여러 도구를 사용하여 통찰이 가능하도록 하는 클라우�
 
 ## 전제조건
 
-다음 단계를 완료하려면 [{{site.data.keyword.iot_short_notm}}(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window} 및 [Cloudant NoSQL DB ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/cloudant-nosql-db
-){: new_window}에 대한 액세스 권한 및 [DSX 계정(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://datascience.ibm.com/docs/content/getting-started/get-started.html){: new_window}에 대한 액세스 권한이 있어야 합니다.
+이러한 단계를 완료하려면 [Cloudant NoSQL DB ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/cloudant-nosql-db)가 포함된 [{{site.data.keyword.iot_short_notm}} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")에 대한 액세스](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window}{: new_window}, [Apache Spark ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/apache-spark){:new_window} 서비스에 대한 액세스, 그리고 [DSX 계정 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://datascience.ibm.com/docs/content/getting-started/get-started-wdp.html){: new_window}에 대한 액세스가 가능해야 합니다. 
 
 
 ## 1단계. 시뮬레이터 설정
@@ -59,9 +58,9 @@ DSX는 여러 도구를 사용하여 통찰이 가능하도록 하는 클라우�
 날씨 센서 시뮬레이터를 사용하여 조직에 대해 실제 센서 데이터 이벤트를 시뮬레이션하려면 먼저 시뮬레이터를 설정해야 합니다. 이러한 단계에서는 {{site.data.keyword.iot_short_notm}}의 인스턴스를 이미 시작하고 실행한다고 가정합니다.
 
 1. [시뮬레이터를 실행하는 데 필요한 apikey 및 토큰을 생성하십시오. ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#api-key){: new_window}
-2. [날씨 센서 시뮬레이터 웹 앱 배치(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}를 수행하고 자세한 지시사항을 따르십시오.
+2. [날씨 센서 시뮬레이터 웹 앱 배치 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}를 수행하고 자세한 지시사항을 따르십시오.
 
-   날씨 센서에 대한 자세한 정보는 [날씨 센서 시뮬레이터 안내서(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}를 참조하십시오.
+   날씨 센서에 대한 자세한 정보는 [날씨 센서 시뮬레이터 안내서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}를 참조하십시오.
 3. [2단계. 데이터베이스 커넥터 구성](#DSX_config_db)을 진행하십시오.
 
 
@@ -70,10 +69,10 @@ DSX는 여러 도구를 사용하여 통찰이 가능하도록 하는 클라우�
 
 날씨 센서 시뮬레이터를 사용하여 조직에 대해 실제 센서 데이터 이벤트를 시뮬레이션하려면 먼저 시뮬레이터를 설정해야 합니다. 이러한 단계에는 시뮬레이터와 함께 {{site.data.keyword.iot_short_notm}} 인스턴스를 작성하는 데 대한 지시사항이 포함됩니다.
 
-1. [{{site.data.keyword.iot_short_notm}}의 인스턴스로 날씨 센서 시뮬레이터 웹 앱 배치(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window}를 수행하고 세부 단계를 수행하십시오.
+1. [{{site.data.keyword.iot_short_notm}}의 인스턴스로 날씨 센서 시뮬레이터 웹 앱 배치 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window}를 수행하고 세부 단계를 수행하십시오.
 
-   날씨 센서에 대한 자세한 정보는 [날씨 센서 시뮬레이터 안내서(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}를 참조하십시오.
-2. 배치가 완료되기를 기다린 다음 Bluemix 대시보드로 이동하십시오.
+   날씨 센서에 대한 자세한 정보는 [날씨 센서 시뮬레이터 안내서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}를 참조하십시오.
+2. 배치가 완료되기를 기다린 후에 IBM Cloud 대시보드로 이동하십시오.
 3. 배치 프로세스를 통해 작성된 {{site.data.keyword.iot_short_notm}} 서비스 "wiotp-for-weather-sensors-simulator"를 실행하십시오.
 4. [2단계. 데이터베이스 커넥터 구성](#DSX_config_db)을 진행하십시오.
 
@@ -88,7 +87,7 @@ DSX는 여러 도구를 사용하여 통찰이 가능하도록 하는 클라우�
 DSX와 함께 {{site.data.keyword.cloudant_short_notm}}를 사용하려면 Cloudant NoSQL DB가 히스토리언 서비스로 사용되도록 플랫폼 데이터 스토리지를 구성해야 합니다.
 
 1. {{site.data.keyword.cloudant_short_notm}} 대시보드의 탐색줄에서 **확장**을 클릭하십시오.
-2. **히스토리 데이터 스토리지**에서 **설정**을 클릭하십시오. **히스토리 데이터 스토리지 구성** 섹션에는 {{site.data.keyword.cloudant_short_notm}}와 동일한 Bluemix 영역 내에서 사용 가능한 Cloudant NoSQL DB 서비스가 모두 나열됩니다.
+2. **히스토리 데이터 스토리지**에서 **설정**을 클릭하십시오. **히스토리 데이터 스토리지 구성** 섹션에는 {{site.data.keyword.cloudant_short_notm}}와 동일한 IBM Cloud 영역 내에서 사용 가능한 Cloudant NoSQL DB 서비스가 모두 나열됩니다. 
 3. 연결할 Cloudant NoSQL DB 서비스를 선택하십시오.
 4. 다음 Cloudant NoSQL DB 구성 옵션을 지정하십시오.
   - 버킷 간격 = 일
@@ -121,7 +120,7 @@ DSX를 설정하고 데이터 시각화를 시작하려면 다음을 수행하�
 
 1. [미리 구성된 Jupyter Notebook을 설정](#setup_jupyter_notebook)하여 데이터에 대한 통찰을 얻고 이상 항목을 발견하십시오.
 2. [분석을 실행하십시오.](#run_analysis)
-3. [센서 이상 항목에 대한 경보를 구성하십시오](#config_alerts).
+<!--3. [Configure alerts on sensor anomalies](#config_alerts).-->
 
 
 ### 1. 미리 구성된 Jupyter Notebook 설정
@@ -130,41 +129,36 @@ DSX를 설정하고 데이터 시각화를 시작하려면 다음을 수행하�
 Jupyter Notebook은 실행 코드, 수학 공식, 그래픽/시각화(matplotlib) 및 설명 텍스트가 포함된 문서를 작성하고 공유하는 데 사용할 수 있는 웹 애플리케이션입니다.
 
 미리 구성된 Jupyter Notebook을 설정하여 데이터에 대한 통찰을 얻고 이상 항목을 발견하려면 다음을 수행하십시오.
-1. 지원되는 브라우저를 사용하여 Bluemix ID로 [DSX(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://datascience.ibm.com/){: new_window}에 로그인하십시오.
-2. "+"를 클릭하고 **프로젝트 작성**을 선택하여 프로젝트를 새로 작성하십시오. 프로젝트는 노트북을 수집하고 공유하는 데 사용할 영역을 작성하고 데이터 소스에 연결하고 파이프라인을 작성하고 데이터 세트를 추가합니다.
-3. 프로젝트 이름을 지정하고 **작성**을 클릭하십시오. DSX 계정 설정 중에 Spark 서비스 및 오브젝트 스토리지 인스턴스가 자동으로 작성됩니다. 또는 Bluemix 인터페이스를 사용하여 이러한 서비스와 인스턴스를 작성한 다음 향후 단계에서 DSX 프로젝트와 연관시킬 수 있습니다.
-4. **DSX** 메뉴에서 프로젝트를 선택하고 ![데이터 찾기 및 추가 아이콘](images/find_add_data_icon.png)을 클릭하여 Cloudant 신임 정보를 가져오십시오.
-5. **연결** 탭을 클릭하십시오.
-6. **연결 작성**을 클릭하여 Cloudant 신임 정보를 가져와 프로젝트의 노트북에서 사용 가능하게 하십시오.
-7. 다음 정보를 입력하여 **새 연결** 화면을 완료하십시오.
-   - 연결 이름
-   - **서비스 카테고리**를 `데이터 서비스`로 설정하십시오.
-   - **서비스 인스턴스 대상 지정** 드롭 다운 메뉴에서 Cloudant 서비스를 선택하십시오.
-   - 현재 날짜에 해당하는 Cloudant 데이터베이스를 선택하십시오.
-8. **작성**을 클릭하십시오. 
-9. **노트북 추가**를 클릭하여 Jupyter Notebook을 새로 작성하십시오.
-10. **시작 URL**을 선택하여 기존 노트북을 로드한 다음 노트북의 구체적인 이름을 지정하고 다음 URL을 입력하여 샘플 노트북을 여십시오.
+1. 지원되는 브라우저를 사용하여 IBM Cloud ID로 [DSX ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://datascience.ibm.com/){: new_window}에 로그인하십시오. 
+2. **+ 새 프로젝트**를 클릭하여 새 프로젝트를 작성하고 **Jupyter Notebook** 타일을 선택하십시오. 프로젝트는 노트북을 수집하고 공유하는 데 사용할 영역을 작성하고 데이터 소스에 연결하고 파이프라인을 작성하고 데이터 세트를 추가합니다.
+3. **+ 프로젝트에 추가** 드롭 다운을 클릭하고 **연결**을 선택하십시오. 서비스의 목록에서 **Cloudant**를 선택한 후에 {{site.data.keyword.cloudant_short_notm}} 서비스 페이지의 서비스 인증 정보 탭에서 찾은 Cloudant URL, 사용자 이름 및 비밀번호를 입력하고 표시된 필드에 이를 입력하십시오. 연결의 이름을 지정하고 **작성**을 클릭하십시오. 
+4. 대시보드의 데이터 자산 섹션 아래에서 이제 연결을 사용할 수 있는지 확인하십시오.
+5. **+ 새 노트북**을 클릭하여 새 Jupyter Notebook을 작성하십시오.
+6. 서비스 아래의 런타임 선택 드롭 다운에서 **spark-iw**를 선택하십시오. 존재하지 않는 경우, 이는 Apache Spark 서비스가 제대로 프로비저닝되지 않았음을 의미합니다. IBM Cloud 대시보드에서 이의 존재 여부를 확인하고, 만일 존재하지 않으면 서비스 페이지를 방문하여 이를 프로비저닝하십시오. 
+7. 언어를 **Python 2**로 설정하고 Spark 버전을 **2.1**로 설정하십시오. 
+8. **시작 URL**을 선택하여 기존 노트북을 로드한 다음 노트북의 구체적인 이름을 지정하고 다음 URL을 입력하여 샘플 노트북을 여십시오.
 ```
 https://github.com/ibm-watson-iot/analytics-integration-samples/blob/master/dsx/notebooks/witop_dsx_weather_sensors_sim_notebook.ipynb
 ```
-11. **노트북 작성**을 클릭하십시오. 노트북이 메타데이터와 코드로 작성되었는지 확인하십시오.
-12. '!pip install --upgrade pixiedust, ,'로 시작하는 셀을 선택한 다음 **재생**을 클릭하여 코드를 실행하십시오.
-13. 설치가 완료되면 **커널 다시 시작** 아이콘을 클릭하여 Spark 커널을 다시 시작하십시오.
-14. 커널이 다시 시작되기를 약 10초 동안 기다린 다음 주석이 있는 셀을 클릭하여 선택하십시오.
-15. 다음 단계를 완료하여 Cloudant 신임 정보를 해당 셀로 가져오십시오.
 
-    1. ![데이터 찾기 및 추가 아이콘](images/find_add_data_icon.png)을 클릭하십시오.
+9. **노트북 작성**을 클릭하십시오. 노트북이 메타데이터와 코드로 작성되었는지 확인하십시오.
+10. '!pip install --upgrade pixiedust, ,'로 시작하는 셀을 선택한 후에 **실행**을 클릭하여 코드를 실행하십시오.
+11. 설치가 완료되면 **커널 다시 시작** 아이콘을 클릭하거나 커널 메뉴에서 **다시 시작**을 선택하여 Spark 커널을 다시 시작하십시오. 
+12. 커널이 다시 시작될 때까지 약 10초 정도 기다린 후에 주석과 함께 비어 있는 코드 셀을 클릭하여 이를 선택하십시오. 
+13. 다음 단계를 완료하여 Cloudant 인증 정보를 해당 셀로 가져오십시오.
+
+    1. ![데이터 찾기 및 추가](images/find_add_data_icon.png)를 클릭하십시오. 
     2. **연결** 탭을 선택하십시오.
     3. **코드에 삽입**을 클릭하십시오.
-"credentials_1"이라고 하는 사전이 Cloudant 신임 정보를 사용하여 작성됩니다. 이름이 "credentials_1"으로 지정되지 않은 경우, 이 이름이 노트북 코드를 실행하는 데 필요하므로 사전 이름을 "credentials_1"으로 바꾸십시오.
-16. 데이터베이스 이름(dbname)의 셀에 데이터 소스인 Cloudant 데이터베이스의 이름을 입력하십시오(예: `iotp_yourWIoTPorgId_default_Year-month-day`).
-17. 노트북을 저장하십시오. 이 노트북을 실행할 준비가 되었습니다.
+"credentials_1"이라고 하는 사전이 Cloudant 인증 정보를 사용하여 작성됩니다. 이름이 "credentials_1"으로 지정되지 않은 경우, 이 이름이 노트북 코드를 실행하는 데 필요하므로 사전 이름을 "credentials_1"으로 바꾸십시오.
+14. 데이터베이스 이름(dbname)의 셀에 데이터 소스인 Cloudant 데이터베이스의 이름을 입력하십시오(예: `iotp_yourWIoTPorgId_default_Year-month-day`).
+15. 노트북을 저장하십시오. 이 노트북을 실행할 준비가 되었습니다.
 
 
 ### 2. 분석 실행
 {: #run_analysis}
 
-1.	Cloudant 신임 정보가 포함된 셀을 선택하십시오.
+1.	Cloudant 인증 정보가 포함된 셀을 선택하십시오.
 2.	**재생**을 클릭하여 셀 코드를 실행하십시오.
 3.	실행 결과를 확인하고 각 셀에서 사용된 python 코드를 분석하십시오.
 4.	각 셀에 대해 2와 3단계를 반복하십시오. **사용자 입력 필요**가 지정된 셀의 경우 실행 전에 다음 코드 셀에 정의된 변수에 새 입력 값을 제공해야 합니다.
@@ -172,56 +166,56 @@ https://github.com/ibm-watson-iot/analytics-integration-samples/blob/master/dsx/
 **참고:** 일부 셀은 배경 Spark 작업을 실행하며 완료에 시간이 오래 걸릴 수 있습니다. 셀 내 코드 실행이 완료되면 별표(`*`)가 숫자로 바뀝니다(예: In `[*]`가 In `[1]`로 바뀜). 단계를 완료한 후 {{site.data.keyword.iot_short_notm}}에서 클라우드 규칙을 작성하여 이상 항목 발견 시 자동으로 경보를 생성합니다.
 
 
-### 3. 센서 이상 항목에 대한 경보 구성
+<!-- ### 3. Configure alerts on sensor anomalies
 {: #config_alerts}
 
 
-{{site.data.keyword.iot_short_notm}}에서 클라우드 규칙을 작성할 수 있습니다. 이러한 규칙은 공개된 이벤트가 노트북에서 얻은 임계값을 초과할 때 이상 항목이 발견되는 경우 경보를 생성할 수 있습니다.
+You can create cloud rules in the {{site.data.keyword.iot_short_notm}}. These rules can generate alerts if anomalies are detected when published events cross the threshold values that you derived in the notebook.
 
-이 예제에서는 이산화질소(NO2) 및 하나의 특정 디바이스에 대한 상한/하한 임계값을 사용합니다. NO2 값이 설정한 임계값을 초과할 때마다 지정된 이메일 주소로 이메일을 발송하도록 이메일 조치를 작성합니다.
+In this example, we use Nitrogen Dioxide (NO2) and the upper/lower thresholds for one specific device. We are creating an email action, so that an email is sent to a specified email address whenever the NO2 value crosses the threshold values that we set.
 
-클라우드 규칙을 작성하려면 다음을 수행하십시오.
+To create cloud rules:
 
-1. 스키마를 작성하십시오.
-    1. {{site.data.keyword.iot_short_notm}} 대시보드의 **디바이스** 탭에서 **스키마 관리** 탭을 선택하십시오.
-    2. **스키마 추가**를 클릭하십시오.
-    3. 작성된 스키마에 대한 DeviceType WS를 선택하고 **다음**을 클릭하십시오.
-    4. **특성 추가**를 클릭하여 연결된 디바이스의 데이터 점을 추가하십시오.
-    5. **수동** 탭에서 데이터 유형 필드를 `Float`로 설정하고 특성 필드는 `NO2`로 설정하십시오.
-    6. **확인**을 클릭하십시오.
-    7. **완료**를 클릭합니다.
+1. Create a schema:
+    1. In the **Devices** tab of your {{site.data.keyword.iot_short_notm}} dashboard, select the **Manage Schemas** tab.
+    2. Click **Add Schema**.
+    3. Select the DeviceType WS for which the schema is created and click **Next**.
+    4. Click **Add a property** to add the data point from the connected devices.
+    5. From the **Manual** tab, set the data type field to `Float` and the property field to `NO2`.
+    6. Click **OK**.
+    7. Click **Finish**.
 
-2. 조치를 작성하십시오.
-    1. {{site.data.keyword.iot_short_notm}} 대시보드에서 **규칙** 탭을 선택하십시오.
-    2. **조치** 탭을 선택하십시오.
-    3. **+조치 작성**을 클릭하십시오.
-    4. **조치 새로 작성** 화면에 이름을 입력하고 "이메일 발송"을 조치 유형으로 선택하십시오.
-    5. **다음**을 클릭하십시오. 
-    6. **조치 편집** 화면에서 **데이터 포함** 토글을 켜십시오.
-    7. **완료**를 클릭합니다.
-    8. **규칙** 탭에서 **찾아보기** 탭을 선택하십시오.
-    9. **+클라우드 규칙 작성**을 클릭하십시오.
-    10. **클라우드 규칙 새로 추가** 화면에서 규칙의 이름을 입력하고 **적용 대상** 필드에서 스키마 이름을 선택하십시오. 이 예제에서 스키마 이름은 "WS"입니다.
-    11. **다음**을 클릭하십시오. 
+2. Create an action:
+    1. Select the **Rules** tab in the {{site.data.keyword.iot_short_notm}} dashboard.
+    2. Select the **Actions** tab.
+    3. Click **+Create an Action**.
+    4. In the **Create New Action** screen, enter a name and select "Send email" as the action type.
+    5. Click **Next**.
+    6. In the **Edit Action** screen, turn on the **Include Data** toggle.
+    7. Click **Finish**.
+    8. From the **Rules** tab, select the **Browse** tab.
+    9. Click **+Create Cloud Rule**.
+    10. In the **Add New Cloud Rule** screen, enter a name for your rule and select your schema name in the **Applies to** field. In this example, the schema name is "WS".
+    11. Click **Next**.
 
-3. 조건 설정 - 이러한 단계에서 사용하는 임계값은 NO2 차트 옆, 노트북에서 실행된 마지막 코드 청크에 있습니다.
-    1. 새 조건을 클릭하고 첫 번째 조건을 설정하십시오.
-    - **특성** 필드에 `Nitrogen Dioxide`를 입력하십시오.
-    - **연산자** 필드에서 보다 큼 아이콘(`>`)을 선택하십시오.
-    - **값** 필드에 상한 임계값을 입력하십시오.
-    - **확인**을 클릭하십시오.
-    2. OR를 선택한 다음 두 번째 조건을 추가하십시오.
-    - **특성** 필드에 `Nitrogen Dioxide`를 입력하십시오.
-    - **연산자** 필드에서 보다 작음 아이콘(`<`)을 선택하십시오..
-    - **값** 필드에 하한 임계값을 입력하십시오.
-    - **확인**을 클릭하십시오. 이제 규칙을 트리거하는 조건이 설정됩니다.
-4. 조치를 "이메일 발송"으로 설정하고 **확인**을 클릭하여 규칙을 활성화하십시오. 이메일 경보는 디바이스에서 공개한 이산화질소 측정값이 임계값 중 하나를 초과할 때마다 생성됩니다. 시뮬레이터를 실행하여 경보 이메일을 볼 수 있습니다.
+3. Set the condition - The threshold values that you use in these steps are found in the last code chunk that is executed in the notebook, next to the NO2 chart:
+    1. Click New Condition and set the first condition:
+    - In the **Property** field enter `Nitrogen Dioxide`.
+    - In the **Operator** field select greater than icon `>`.
+    - In the **Value** field enter the upper threshold value.
+    - Click **OK**.
+    2. Select OR and then add the second condition:
+    - In the **Property** field enter `Nitrogen Dioxide`.
+    - In the **Operator** field select less than icon `<`.
+    - In the **Value** field enter the lower threshold value.
+    - Click **OK**. The conditions to trigger the rule are now set.
+4. Set the action to "Send email" and click **OK** to activate the rule. An email alert is generated whenever the value of the Nitrogen Dioxide reading that is published by a device crosses either of the threshold values. You can run the simulator to see the alert emails. -->
 
 
 ## 다음 항목
 
 DSX에 대한 자세한 정보는 다음 리소스를 참조하십시오.
 
- - [WIoTP 클라우드 규칙 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/IoT/cloud_analytics.html#cloud_analytics){: new_window}
+<!-- - [WIoTP Cloud Rules ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/IoT/cloud_analytics.html#cloud_analytics){: new_window} -->
  - [DSX 커뮤니티 노트북 및 튜토리얼 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://idaas.iam.ibm.com/idaas/mtfim/sps/authsvc?PolicyId=urn:ibm:security:authentication:asf:basicldapuser){: new_window}(Jupyter Notebook에 대해 자세히 보려면 링크를 따름).
  - [Watson IoT Platform 쿡북의 분석 레시피 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/iotplatform/resources/watson-iot-analytics-cookbook/)

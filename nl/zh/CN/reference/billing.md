@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-09-06"
+  years: 2016, 2018
+lastupdated: "2018-02-23"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -11,16 +11,13 @@ lastupdated: "2017-09-06"
 
 # 计费
 
-付费 {{site.data.keyword.iot_full}} 服务套餐（非“Lite”套餐）以一个月内交换和分析的兆字节概念为基础。本文档详细描述了 {{site.data.keyword.iot_short_notm}} 如何计量数据，来创建使用情况信息，以确定使用服务的成本。使用情况信息可用来根据设备、应用程序和网关的设计和数量，来估计使用 {{site.data.keyword.iot_short_notm}} 的成本。
+付费 {{site.data.keyword.iot_full}} 服务套餐（非“轻量”套餐）以一个月内交换的兆字节概念为基础。本文档详细描述了 {{site.data.keyword.iot_short_notm}} 如何计量数据，来创建使用情况信息，以确定使用服务的成本。使用情况信息可用来根据设备、应用程序和网关的设计和数量，来估计使用 {{site.data.keyword.iot_short_notm}} 的成本。
 
-有关已交换或分析的每兆字节数据的成本的信息，请参阅 Bluemix 目录中针对所需区域的 {{site.data.keyword.iot_short_notm}} 服务。
+有关交换的每兆字节数据的成本的信息，请参阅 {{site.data.keyword.Bluemix_notm}}“目录”中针对所需区域的 {{site.data.keyword.iot_short_notm}} 服务。
 
 您可以使用[定价计算器 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://iot-cost-calculator.ng.bluemix.net/) 来帮助您计算 {{site.data.keyword.iot_short_notm}} 服务的成本。
 
-以下三个项目分别进行测量，并根据使用情况收费： 
-- 已交换的数据
-- 已分析的数据
-- 已分析的边缘数据
+根据使用情况，将对以下各项进行计量和计费： 
 
 ## 已交换的数据
 *已交换的数据*计算包括通过使用 MQTT 或 HTTP 消息传递，由应用程序、设备和网关交换的帐户数据，以及通过使用 HTTP API，由应用程序交换的数据。
@@ -69,8 +66,7 @@ MQTT 协议设计为尽可能轻量级。虽然在累计*交换的数据*时，{
 
 **注**：使用 {{site.data.keyword.iot_short_notm}} 仪表板时，仪表板将使用这些 HTTP API 来列示包括设备、设备类型和设备连接日志在内的信息。这些 HTTP API 将计入*已交换的数据*中。
 
-## 已分析的数据
-*已分析的数据*计算用于测量平台内规则引擎所处理的事件数据。当根据特定设备和事件类型，由一个或多个规则评估设备事件时，会认为规则引擎已处理数据。 
-
-## 已分析的边缘数据
-*已分析的边缘数据*计算用于测量 {{site.data.keyword.iot_short_notm}} Edge Analytics Agent 在网关设备上处理的事件数据。当根据特定设备和事件类型，由一个或多个边缘规则评估设备事件时，会认为边缘代理程序已处理数据。 
+<!-- ## Data Analyzed
+The *data analyzed* calculation measures event data that is processed by the rules engine within the platform.  Data is considered processed by the rules engine when device events are evaluated by one or more rules, based on a specific device and event type. 
+## Edge Data Analyzed
+The *edge data analyzed* calculation measures event data that is processed on a gateway device by the {{site.data.keyword.iot_short_notm}} Edge Analytics Agent.  Data is considered processed by the edge agent when device events are evaluated by one or more edge rules, based on a specific device and event type.  -->

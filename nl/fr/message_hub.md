@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,6 +18,8 @@ lastupdated: "2018-05-22"
 Le fait de connecter {{site.data.keyword.messagehub_full}} à {{site.data.keyword.iot_full}} permet d'obtenir un bus de messages à débit élevé évolutif pour le stockage de données d'historique. {{site.data.keyword.messagehub}} repose sur Apache Kafka, système de messagerie à débit élevé open source qui fournit une plateforme à faible temps d'attente pour la gestion des flux de données en temps réel.
 
 Evénements d'acheminement de partitions MessageHub en utilisant une clé de partitionnement. La clé est constituée par concaténation de l'ID organisation {{site.data.keyword.iot_short}} en 6 caractères avec le type de terminal et l'ID terminal. Les zones de contenu, incluant horodatage et ID événement, ne sont pas utilisées pour constituer la clé de partitionnement. Cette configuration garantit que tous les événements d'un terminal spécifique sont envoyés à la même partition, de sorte que tous les événements sont traités dans l'ordre où ils sont envoyés. 
+
+La qualité de service (QoS) utilisée par un terminal MQTT pour envoyer des messages à {{site.data.keyword.iot_short_notm}} n'est pas applicable lorsque des messages sont envoyés de {{site.data.keyword.iot_short_notm}} à {{site.data.keyword.messagehub}}. Généralement, un message est envoyé à {{site.data.keyword.messagehub}} une seule fois. Rarement, il est possible qu'un message soit envoyé plus d'une fois ou pas du tout.
 
 ## Avant de commencer  
 {: #byb}

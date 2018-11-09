@@ -37,7 +37,7 @@ lastupdated: "2017-11-21"
 
 보안을 위해 다른 조직 사이의 통신이 가능하지 않습니다. 두 조직 간에 데이터를 전송하는 유일한 방법은 각 조직에서 다른 조직의 애플리케이션과 통신할 애플리케이션을 작성하는 것입니다.
 
-**참고:** {{site.data.keyword.iot_short_notm}} 조직 ID는 [IBM Cloud 조직](../../docs/admin/orgs_spaces.html#orginfo)과는 다릅니다. 
+**참고:** {{site.data.keyword.iot_short_notm}} 조직 ID는 [IBM Cloud 조직](../../docs/admin/orgs_spaces.html#orginfo)과는 다릅니다.
 
 ### 디바이스
 
@@ -61,7 +61,7 @@ lastupdated: "2017-11-21"
 
 ### 이벤트
 
-이벤트는 디바이스가 {{site.data.keyword.iot_short_notm}}에 데이터를 공개하는 데 사용하는 메커니즘입니다. 디바이스에서 메시지 컨텐츠를 제어하고 전송된 각 이벤트의 이름을 지정합니다. {{site.data.keyword.iot_short_notm}}에서는 이벤트를 보낸 디바이스를 판별하기 위해 수신한 각 이벤트에 첨부된 신임 정보를 사용합니다. 이 아키텍처에서는 디바이스가 서로 위장하지 못합니다.
+이벤트는 디바이스가 {{site.data.keyword.iot_short_notm}}에 데이터를 공개하는 데 사용하는 메커니즘입니다. 디바이스에서 메시지 컨텐츠를 제어하고 전송된 각 이벤트의 이름을 지정합니다. {{site.data.keyword.iot_short_notm}}에서는 이벤트를 보낸 디바이스를 판별하기 위해 수신한 각 이벤트에 첨부된 인증 정보를 사용합니다. 이 아키텍처에서는 디바이스가 서로 위장하지 못합니다.
 
 애플리케이션은 이벤트를 실시간으로 처리하고 이벤트의 소스 및 이벤트에 포함된 데이터를 볼 수 있습니다. 구독한 디바이스와 이벤트를 정의하도록 애플리케이션을 구성해야 합니다.
 

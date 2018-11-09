@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-10"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -125,7 +125,7 @@ Se você estiver planejando criar código do aplicativo para uso com o serviço 
 
 - Publicando comandos
 - Assinando comandos
-- Usando o caractere curinga para "qualquer" de MQTT (+) nos componentes **deviceType** ou **appId**
+- Usando o caractere curinga "any" do MQTT (+) nos componentes **device_id** ou **appId**
 - Conexão MQTT por Segurança da Camada de Transporte (TLS)
 - Aplicativos escaláveis
 

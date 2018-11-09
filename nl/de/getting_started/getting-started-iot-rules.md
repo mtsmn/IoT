@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -14,12 +14,20 @@ lastupdated: "2017-06-16"
 {:tip: .tip}
 
 # Anleitung 2: Grundlegende Echtzeitregeln und -aktionen verwenden
-Verwenden Sie die Anweisungen in dieser Anleitung, um eine Gruppe von Basisregeln und -aktionen für die Echtzeitanalyse der IoT-Daten Ihres Laufbands zu konfigurieren.
-{:shortdesc}
+
+**Wichtig:** Eine Betaversion, mit der eine neue Methode zur Definition von Regeln für IoT-Gerätedaten zur Verfügung steht,
+wird im Rahmen eines umfassenderen Programms mit Änderungen gestartet, das die Bereitstellung von Regeln und Aktionen in {{site.data.keyword.iot_full}} verbessern soll.
+
+Weitere Informationen finden Sie im Blogbeitrag [Alternative Methode zur Definition von Regeln für IoT-Daten ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Lesen Sie als ersten Schritt bei der Definition eigener Regeln die Informationen in der Dokumentation [Eingebettete Regeln erstellen (Beta)](../information_management/im_rules.html).
 
 ## Übersicht und Ziel
 {: #overview}  
-Nachdem Sie das Laufband erfolgreich konfiguriert, es mit {{site.data.keyword.iot_short_notm}} verbunden und Daten gesendet haben, sollten Sie mit der Nutzung der Daten beginnen, indem Sie Regeln und Aktionen verwenden.
+
+Verwenden Sie die Anweisungen in dieser Anleitung, um eine Gruppe von Basisregeln und -aktionen für die Echtzeitanalyse der IoT-Daten Ihres Laufbands zu konfigurieren.
+
+Nachdem Sie das Laufband erfolgreich konfiguriert, es mit {{site.data.keyword.iot_full}} verbunden und Daten gesendet haben, sollten Sie mit der Nutzung der Daten beginnen, indem Sie Regeln und Aktionen verwenden.
 
 ![Beispielregel](images/slow_rule.svg "Beispielregel")
 
@@ -99,7 +107,8 @@ Als Status wird nun 'Aktiviert' angezeigt.
 Durch eine Reduzierung des RPM-Werts können Sie Probleme mit dem Laufband simulieren, die eventuell ein Eingreifen des Operators erforderlich machen. Wenn der Grenzwert für RPM erreicht ist, dann wird im Dashboard ein Alert angezeigt.
 1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Boards** aus.
 3. Wählen Sie das Board **Rule-Centric Analytics** aus.
-4. Reduzieren Sie in der Web-App für das Laufband den RPM-Wert auf unter 0,5 RPM. Das Gerät sendet Daten an {{site.data.keyword.iot_short_notm}}, wenn die Sensormesswerte sich ändern. Sie können diesen Datenversand simulieren, indem Sie das Laufband stoppen oder starten oder die Geschwindigkeit des Laufbands ändern.  
+4. Reduzieren Sie in der Web-App für das Laufband den RPM-Wert auf unter 0,5 RPM.
+Das Gerät sendet Daten an {{site.data.keyword.iot_short_notm}}, wenn die Sensormesswerte sich ändern. Sie können diesen Datenversand simulieren, indem Sie das Laufband stoppen oder starten oder die Geschwindigkeit des Laufbands ändern.  
 5. Überprüfen Sie, ob die `RPM-Regel` auf der Karte 'Regeln mit Alerts' erscheint.
 6. Wählen Sie den neuen Alert auf der Karte 'Regelalerts' aus und zeigen Sie die Datenpunkte an, die die Regel auf der Karte 'Regelalerts' ausgelöst haben.  
 Weitere Informationen zum Alert erhalten Sie in den Gerätedetails auf den Karten für die zugeordneten Geräte, Geräteinformationen und Geräteeigenschaften.  

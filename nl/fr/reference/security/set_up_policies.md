@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-11"
+  years: 2016, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -35,7 +35,7 @@ aucun réglage sur le terminal même et n'envoient aucun message à celui-ci. Vo
     - TLS avec authentification par certificat de client
     - TLS avec authentification par jeton et par certificat de client
     - TLS avec certificat de client ou jeton
-3. Si nécessaire, cliquez sur **Ajouter une connexion personnalisée** et sélectionnez les types de terminaux et les niveaux de sécurité personnalisés.
+3. Si nécessaire, cliquez sur **Ajouter une connexion personnalisée** et sélectionnez les types de terminal et les niveaux de sécurité personnalisés.
 3. Cliquez sur **Actualiser la conformité**. En fonction du
 niveau de sécurité sélectionné, le tableau actualisé indique le nombre de terminaux
 concernés et le niveau de conformité prévu au niveau de sécurité défini.

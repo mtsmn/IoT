@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-19"
+  years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -113,11 +113,8 @@ Wenn das Gateway ein Gerät nicht automatisch registrieren kann, versucht es fü
 ## Gateway-Benachrichtigungen
 {: #notification}
 
-Wenn beim Prüfen des Topics 'publish' oder 'subscribe' oder während der automatischen Registrierung Fehler auftreten, wird eine Benachrichtigung an das Gateway-Gerät gesendet. Ein Gateway kann diese Benachrichtigungen durch Subskribieren des folgenden Topics empfangen, wobei `Typ-ID` und `Geräte-ID` durch entsprechende Werte ersetzt werden:
+Wenn beim Prüfen des Topics 'publish' oder 'subscribe' oder während der automatischen Registrierung Fehler auftreten, wird eine Benachrichtigung an das Gateway-Gerät gesendet. Ein Gateway kann diese Benachrichtigungen durch Subskribieren des folgenden Topics empfangen, wobei `Typ-ID` und `Geräte-ID` des Gateways durch entsprechende Werte ersetzt werden:
 
-```
-iot-2/type/**Typ-ID**/id/**Geräte-ID**/notify
-```
 <pre class="pre">iot-2/type/<var class="keyword varname">Typ-ID</var>/id/<var class="keyword varname">Geräte-ID</var>/notify</pre>
 {: codeblock}
 
@@ -153,6 +150,8 @@ Ein Gateway kann folgende Benachrichtigungen empfangen:
 -   Maximale Anzahl Geräte pro Gateway wurde erreicht.
 -   Maximale Anzahl Geräte pro Organisation wurde erreicht.
 -   Geräte konnte aufgrund interner Fehler nicht erstellt werden.
+
+Wenn ein Gerät in einer ungültigen Topic-Zeichenfolge veröffentlicht wird, sind die Werte für *Gerätetyp* und *Geräte-ID* nicht bekannt und werden in der Nachricht, die für das Hinweisthema empfangen wurde, nicht zurückgegeben.
 
 ## Verwaltete Gateways
 {: #managed_gateways}
@@ -197,7 +196,7 @@ Ein verwaltetes Gateway publiziert in Topics, die für den ausgeführten Typ von
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
 {: codeblock}
 
-Weitere Themen, für die ein verwaltetes Gateway publizieren kann, finden Sie im [Gerätemanagementprotokoll](device_mgmt/index.html) und in den [Gerätemanagementanforderungen](../devices/device_mgmt/requests.html). 
+Weitere Themen, für die ein verwaltetes Gateway publizieren kann, finden Sie im [Gerätemanagementprotokoll](../devices/device_mgmt/index.html) und in den [Gerätemanagementanforderungen](../devices/device_mgmt/requests.html). 
 - Das Protokoll bleibt für die Gateways gleich. Eine Ausnahme stellt hierbei die Tatsache dar, dass alle Themen, die mit der Zeichenfolge **iotdevice-1/** beginnen, stattdessen wie folgt beginnen:
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">Typ-ID</var>/id/<var class="keyword varname">Geräte-ID</var>/</pre>
 {: codeblock}

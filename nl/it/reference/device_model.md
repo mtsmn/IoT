@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2016-10-16"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -99,7 +99,7 @@ dalle estensioni devono essere specificamente richieste.
 Nome estensione    | Prefisso degli attributi | Scopo      
 ------------- | ------------- | -------------                                         
  Diagnostica       | diag                 | Log degli errori e informazioni di diagnostica                 
- Ubicazione          | location             | Ubicazione della periferica, potenzialmente aggiornata regolarmente 
+ Ubicazione          | location             | Ubicazione della periferica, potenzialmente aggiornata regolarmente
  Gestione del dispositivo | mgmt                 | Azioni di gestione dispositivo, ad esempio aggiornamento firmware       
 
 

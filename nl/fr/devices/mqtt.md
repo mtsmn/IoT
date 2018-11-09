@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-21"
+  years: 2015, 2018
+lastupdated: "2018-01-22"
 
 ---
 
@@ -94,16 +94,16 @@ La prise en charge de la gestion du cycle de vie des terminaux est facultative. 
 
 ### Niveaux de qualité de service et option 'clean session'
 
-Les terminaux gérés peuvent publier des messages dotés du niveau de qualité de service (QoS) 0 ou 1.
+Les terminaux gérés peuvent publier des messages ayant un niveau de qualité de service (QoS) de 0, 1 ou 2.
 
-Les messages dotés du niveau QoS=0 peuvent être supprimés et ne sont pas conservés après le redémarrage du serveur de messagerie. Les messages dotés du niveau QoS=1 peuvent être placés en file d'attente et ne sont pas conservés après le redémarrage du serveur de messagerie. La durabilité de l'abonnement détermine si une demande a été placée en file d'attente. Le paramètre ``cleansession`` de la connexion qui a effectué l'abonnement détermine la durabilité de l'abonnement.  
+Les messages dotés du niveau QoS=0 peuvent être supprimés et ne sont pas conservés après le redémarrage du serveur de messagerie. Les messages dotés du niveau QoS=1 peuvent être placés en file d'attente et ne sont pas conservés après le redémarrage du serveur de messagerie. La durabilité de l'abonnement détermine si une demande a été placée en file d'attente. Le paramètre ``cleansession`` de la connexion qui a effectué l'abonnement détermine la durabilité de l'abonnement. Les terminaux peuvent publier des messages au niveau QoS2, mais le serveur de gestion de terminal effectue les publications et les abonnements au niveau QoS1, de sorte que les messages de réponse sont toujours QoS1.
 
 {{site.data.keyword.iot_short_notm}} publie les demandes dotées du niveau QoS 1 pour prendre en charge la mise en file d'attente des messages. Pour placer en file d'attente les messages qui sont envoyés alors qu'un terminal géré n'est pas connecté, configurez le terminal pour qu'il n'utilise pas d'options 'clean session' en affectant la valeur false au paramètre ``cleansession``.
 
 **Avertissement :**
   Si votre terminal géré utilise un abonnement durable, les commandes qui sont envoyées à votre terminal alors que celui-ci est hors ligne sont signalées comme des opérations ayant échoué si le terminal ne se reconnecte pas au service avant l'expiration de la demande. En revanche, ces demandes sont traitées par le terminal lorsqu'il se reconnecte. Un abonnement durable est spécifié par le paramètre ``cleansession=false``.
 
-### Rubriques
+### Sujets
 
 Un terminal géré doit s'abonner au sujet suivant pour traiter les demandes et les réponses émanant du service {{site.data.keyword.iot_short_notm}} :
 
@@ -139,8 +139,8 @@ Les réponses sont formatées comme illustré dans l'exemple de code suivant :
 ```
         {
             "rc": 0,
-            "message": "success",
-            "d": {...},
+        "message": "success",
+        "d": {...},
             "reqId": "b53eb43e-401c-453c-b8f5-94b73290c056"
         }
 ```

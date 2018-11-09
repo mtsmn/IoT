@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-05"
+  years: 2015, 2018
+lastupdated: "2018-07-19"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-04-05"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Connexion d'applications, de terminaux et de passerelles à l'aide de l'API
+# Connexion d'applications, de terminaux et de passerelles
 {: #connect_devices_apps_gw}
 
 Vous pouvez connecter des applications, des terminaux et des passerelles à {{site.data.keyword.iot_full}} via le protocole MQTT. Vous pouvez également utiliser l'API REST HTTP pour connecter des terminaux à {{site.data.keyword.iot_short_notm}}.
@@ -41,7 +41,9 @@ Pour connecter des clients de terminal, d'application et de passerelle à votre 
 ## Sécurité du port
 {: #client_port_security}
 
-Assurez-vous que les ports requis sont ouverts et activés pour les communications. Les ports 8883 et 443 prennent en charge les connexions sécurisées en utilisant TLS avec les protocoles MQTT et HTTP. Le port 1883 prend en charge les connexions non sécurisées à l'aide des protocoles MQTT et HTTP. Le tableau suivant contient des informations sur les types de connexion et les numéros de port associés :   
+Assurez-vous que les ports requis sont ouverts et activés pour les communications. Les ports 8883 et 443 prennent en charge les connexions sécurisées en utilisant TLS avec les protocoles MQTT et HTTP. Le port 1883 prend en charge les connexions non sécurisées à l'aide des protocoles MQTT et HTTP. Le port HTTP 1883 est désactivé par défaut. Pour obtenir des informations sur la modification de la configuration par défaut, voir [Configuration des politiques de sécurité](set_up_policies.html#set_up_policies.html).
+
+Le tableau suivant contient des informations sur les types de connexion et les numéros de port associés :   
 
 |Type de connexion |Numéro de port|
 |:---|:---|
@@ -64,40 +66,32 @@ certificat de serveur par défaut est utilisé. Si vous utilisez votre propre ce
 
 ### Exigences TLS pour les connexions MQTT
 
-{{site.data.keyword.iot_short_notm}} requiert TLS v1.2 et les suites de chiffrement suivantes :
+{{site.data.keyword.iot_short_notm}} nécessite TLS v1.2. Vérifiez qu'au moins l'une des suites de chiffrement suivantes sont autorisées : 
 
-
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
-- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
-- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
 - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
 
 ### Exigences TLS pour les connexions HTTP
 
-Si vous utilisez le certificat de serveur par défaut, {{site.data.keyword.iot_short_notm}} requiert TLS v1.1 ou TLS v1.2 et les suites de chiffrement suivantes :
+Si vous utilisez le certificat de serveur par défaut, {{site.data.keyword.iot_short_notm}} nécessite TLS v1.2. Vérifiez qu'au moins l'une des suites de chiffrement suivantes sont autorisées : 
 
 
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
 - TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
+- TLS_RSA_WITH_AES_128_CBC_SHA
 
+Augmentez la puissance de votre chiffrement en utilisant les chiffrements de confidentialité persistante ECDHE ou DHE dans votre liste de chiffrement. 
 
 ## Authentification client MQTT
 {: #mqtt_authentication}
@@ -120,7 +114,7 @@ Pour que les terminaux, les applications et les passerelles puissent s'authentif
 Où
 - *orgId* est l'ID d'organisation unique composé de six caractères ayant été généré lorsque vous avez enregistré le chaîne.
 - *appId* est un identificateur de chaîne unique défini par l'utilisateur pour le client.
-- *deviceId* identifie un terminal ou une passerelle de façon unique parmi tous les types de terminaux et de passerelle, et s'apparente à un numéro de série.
+- *deviceId* identifie un terminal ou une passerelle de façon unique parmi tous les types de terminal et de passerelle, et s'apparente à un numéro de série.
 - *device_type* est l'identificateur du type de terminal qui se connecte, et s'apparente à un numéro de modèle.
 - *typeId* est l'identificateur du type de passerelle qui se connecte, et s'apparente à un numéro de modèle.
 
@@ -133,6 +127,8 @@ Les valeurs pour *appId*, *type_id*, *device_type* et *device_id* ne doivent pas
 **Remarques :**
 - Lorsque vous vous connectez au service Quickstart, l'authentification n'est pas obligatoire.
 - Vous n'avez pas besoin d'enregistrer une application avant de vous connecter.
+
+Pour obtenir des informations sur le format des abonnements partagés, voir [Connectivité MQTT pour les applications](../../applications/mqtt.html).
 
 
 ### Connexion d'applications à l'aide de MQTT
@@ -164,7 +160,7 @@ Pour plus d'informations, voir [Connectivité MQTT pour les applications](../../
 Le service {{site.data.keyword.iot_short_notm}} ne prend en charge que l'authentification basée sur un jeton pour les terminaux ; par conséquent, chaque terminal ne possède qu'un seul nom d'utilisateur valide.
 La valeur `use-token-auth` indique au service que le jeton d'authentification pour la passerelle ou le terminal est utilisé comme mot de passe pour la connexion MQTT.
 
-Pour plus d'informations, voir [Connectivité MQTT pour les terminaux](../../devices/mqtt.html).
+Pour plus d'informations, consultez [Connectivité MQTT pour les terminaux](../../devices/mqtt.html).
 
 #### Mots de passe
 Si le client utilise l'authentification basée sur un jeton, soumettez le jeton d'authentification de terminal comme mot de passe pour toutes les connexions MQTT.

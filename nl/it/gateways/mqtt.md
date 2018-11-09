@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-19"
+  years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -113,11 +113,8 @@ Se il gateway non riesce a registrare un dispositivo automatico, non tenta di re
 ## Notifiche gateway
 {: #notification}
 
-Quando si verificano degli errori durante la convalida della pubblicazione e della sottoscrizione a un argomento o durante la registrazione automatica, viene inviata una notifica al dispositivo gateway. Un gateway può ricevere tali notifiche tramite la sottoscrizione al seguente argomento, sostituendo i valori `typeId` e `deviceId`:
+Quando si verificano degli errori durante la convalida della pubblicazione e della sottoscrizione a un argomento o durante la registrazione automatica, viene inviata una notifica al dispositivo gateway. Un gateway può ricevere tali notifiche tramite la sottoscrizione al seguente argomento, sostituendo i valori `typeId` e `deviceId` del gateway:
 
-```
-iot-2/type/**typeId**/id/**deviceId**/notify
-```
 <pre class="pre">iot-2/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/notify</pre>
 {: codeblock}
 
@@ -154,6 +151,8 @@ Un gateway può ricevere le seguenti notifiche:
 -   È stato raggiunto il numero massimo di dispositivi per organizzazione.
 -   Impossibile creare il dispositivo a causa di errori interni.
 
+Se un dispositivo pubblica su una stringa di argomento non valida, i valori *Device_Type* e *Device_Id* non sono noti e questi parametri non vengono restituiti nel messaggio ricevuto sull'argomento di notifica.
+
 ## Gateway gestiti
 {: #managed_gateways}
 
@@ -185,19 +184,19 @@ Un gateway gestito deve sottoscriversi ai seguenti argomenti per gestire le prop
 
 Un gateway gestito deve sottoscriversi ai seguenti argomenti per gestire le richieste e le risposte da {{site.data.keyword.iot_short_notm}} per i propri dispositivi collegati:
 
--   Il gateway gestito si sottoscrive alle richieste di gestione del dispositivo per i propri dispositivi collegati in:   
+-   Il gateway gestito si sottoscrive alle richieste di gestione del dispositivo per i propri dispositivi collegati in:  
 <pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/#</pre>
 {: codeblock}
 
 Il gateway può elaborare i messaggi del protocollo di gestione del dispositivo per se stesso o per conto dei dispositivi collegati utilizzando i valori **typeId** e **deviceId** rilevanti. Il carattere jolly MQTT **+** può anche essere utilizzato al posto di **typeId** e **deviceId**.
 
-Un gateway gestito pubblica in argomenti specificati dal tipo di richiesta di gestione che sta venendo eseguita: 
+Un gateway gestito pubblica in argomenti specificati dal tipo di richiesta di gestione che sta venendo eseguita:
 
 - I gateway gestiti pubblicano le risposte di gestione dei dispositivi in:
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
 {: codeblock}
 
-Per gli altri argomenti che un gateway gestito può pubblicare, consulta [Protocollo di gestione dispositivo](device_mgmt/index.html) e [Richieste di gestione del dispositivo](../devices/device_mgmt/requests.html). 
+Per gli altri argomenti che un gateway gestito può pubblicare, consulta [Protocollo di gestione dispositivo](../devices/device_mgmt/index.html) e [Richieste di gestione del dispositivo](../devices/device_mgmt/requests.html). 
 - Il protocollo rimane negli stessi gateway, con l'eccezione degli argomenti che iniziano con **iotdevice-1/** che invece inizieranno con:
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}

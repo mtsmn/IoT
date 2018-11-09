@@ -1,6 +1,8 @@
 ---
 
-copyright: years: 2016, 2017 lastupdated: "2017-06-13"
+copyright:
+  years: 2016, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -15,14 +17,24 @@ copyright: years: 2016, 2017 lastupdated: "2017-06-13"
 
 É possível aprimorar a segurança para permitir criar, reforçar e relatar sobre a segurança de conexão de dispositivo. Com essa segurança aprimorada, os certificados e a autenticação de segurança da camada de transporte (TLS) são usados além dos IDs de usuário e tokens usados pelo {{site.data.keyword.iot_short_notm}} para determinar como e onde os dispositivos se conectarão à plataforma.
 
-## Certificados
+## Listas de Revogação de Certificado e Certificados de Cliente
+{: #CRLs}
+
+As Listas de Revogação de Certificado (CRLs) são suportadas para configurações que usam certificados de cliente para autenticar dispositivos. O local que é especificado como o ponto de distribuição de CRL deve suportar acesso de HTTP ou HTTPS e o site deve ser acessível. A conexão do cliente será rejeitada se o ponto de distribuição da CRL não puder ser atingido ou se a CRL não for válida ou não for localizada no ponto de distribuição. 
+ 
+
+Os certificados de cliente devem ser assinados pelos certificados de autoridade de certificação (CA) que possuem "Sinal de certificado" especificado na seção "Uso de Chave X509v3" em "Extensões X509v3". Para usar CRLs para revogar os certificados de cliente, o certificado de CA que assina um certificado de cliente também deve incluir "Sinal de CRL" na seção "Uso de Chave X509v3" em "Extensões X509v3". Essa configuração permite que o certificado de CA emita e assine atualizações de CRL quando necessário. Somente a CRL especificada no ponto de distribuição do certificado de cliente é usada para determinar se um certificado foi revogado.
+
+Assegure-se de testar seus certificados e CRLs, particularmente se você gerar seus próprios certificados e CRLs em vez de usar certificados de uma autoridade de certificação reconhecida.
+
+
+## Configurando Certificados
 {: #certificates}
 
 Quando os certificados estiverem ativados, durante a comunicação entre dispositivos e o servidor, quaisquer dispositivos que não tenham certificados válidos configurados nas configurações de segurança terão o acesso negado, mesmo se usarem IDs de usuário e senhas válidos.
 
 Para configurar certificados e acesso ao servidor para dispositivos, o operador do sistema registra os certificados de autoridade de certificação (CA) associados e registra opcionalmente os certificados do servidor de mensagens na plataforma Watson IoT Platform.
-Para configurar os certificados de cliente e o acesso ao servidor para dispositivos, o operador do sistema importa os certificados de autoridade de certificação (CA) associados e os certificados do servidor do sistema de mensagens para o {{site.data.keyword.iot_short_notm}}. 
-O analista de segurança então configura as políticas de segurança padrão para conexões entre dispositivos e a plataforma. O analista pode incluir diferentes políticas para diferentes tipos de dispositivos.
+Para configurar os certificados de cliente e o acesso ao servidor para dispositivos, o operador do sistema importa os certificados de autoridade de certificação (CA) associados e os certificados do servidor do sistema de mensagens para o {{site.data.keyword.iot_short_notm}}. O analista de segurança então configura as políticas de segurança padrão para conexões entre dispositivos e a plataforma. O analista pode incluir diferentes políticas para diferentes tipos de dispositivos.
 
 Para obter informações sobre como configurar certificados, veja [Configurando certificados](set_up_certificates.html).
 

@@ -11,11 +11,14 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg5443"
    version="1.1"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="0.91 r13725"
    width="1066.7018"
    height="442.19183"
    viewBox="0 0 1066.7018 442.19182"
-   sodipodi:docname="ga_im_resources.svg">
+   sodipodi:docname="ga_im_resources.svg"
+   inkscape:export-filename="E:\BM130\BM130ABD142\S002\de\GA_information_management\images\ga_im_resources.png"
+   inkscape:export-xdpi="100"
+   inkscape:export-ydpi="100">
   <metadata
      id="metadata5449">
     <rdf:RDF>
@@ -24,7 +27,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -351,14 +354,14 @@
      objecttolerance="10"
      gridtolerance="10"
      guidetolerance="10"
-     inkscape:pageopacity="0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:window-width="2179"
-     inkscape:window-height="1093"
+     inkscape:window-width="1500"
+     inkscape:window-height="729"
      id="namedview5445"
      showgrid="false"
      inkscape:zoom="1.256979"
-     inkscape:cx="450.88166"
+     inkscape:cx="638.01503"
      inkscape:cy="269.0236"
      inkscape:window-x="306"
      inkscape:window-y="212"
@@ -380,31 +383,29 @@
      transform="matrix(0,-1,1,0,0,0)" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="-139.8709"
      y="318.35886"
      id="text7210-2"
-     transform="rotate(-90)"><tspan
+     sodipodi:linespacing="125%"
+     transform="matrix(0,-1,1,0,0,0)"><tspan
        sodipodi:role="line"
        x="-139.8709"
        y="318.35886"
-       id="tspan7573-7"
-       style="font-size:11px;line-height:1.25">Zuordnung</tspan></text>
+       id="tspan7573-7">Zuordnung</tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot7760"
-     style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      transform="translate(-43.962588,98.629401)"><flowRegion
        id="flowRegion7762" /><flowPara
-       id="flowPara7766"
-       style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>  <flowRoot
+       id="flowPara7766" /></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot7821"
-     style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      transform="translate(-43.962588,98.629401)"><flowRegion
        id="flowRegion7823" /><flowPara
-       id="flowPara7827"
-       style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>  <rect
+       id="flowPara7827" /></flowRoot>  <rect
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
      id="rect6559-2"
      width="127.59026"
@@ -415,35 +416,32 @@
      ry="0" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="444.02805"
      y="111.4442"
-     id="text5543-1"><tspan
+     id="text5543-1"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="444.02805"
        y="111.4442"
-       id="tspan5361"
-       style="font-size:11.00000095px;line-height:1.25">Gerätetyp 1</tspan><tspan
+       id="tspan5361">Gerätetyp 1</tspan><tspan
        sodipodi:role="line"
        x="444.02805"
        y="125.1942"
-       id="tspan4603"
-       style="font-size:11.00000095px;line-height:1.25">Logische Schnittstelle</tspan></text>
+       id="tspan4603">Logische Schnittstelle</tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot7909"
-     style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      transform="translate(-43.962588,98.629401)"><flowRegion
        id="flowRegion7911" /><flowPara
-       id="flowPara7915"
-       style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>  <flowRoot
+       id="flowPara7915" /></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot7917"
-     style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      transform="translate(-43.962588,98.629401)"><flowRegion
        id="flowRegion7919" /><flowPara
-       id="flowPara7923"
-       style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>  <path
+       id="flowPara7923" /></flowRoot>  <path
      inkscape:connector-curvature="0"
      id="path8199-4-90-8"
      d="m 271.51211,148.64116 14.63952,0"
@@ -543,87 +541,90 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="125.55304"
      y="36.195435"
-     id="text8282"><tspan
+     id="text8282"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan8284"
        x="125.55304"
-       y="36.195435"
-       style="font-size:40px;line-height:1.25"> </tspan></text>
+       y="36.195435" /></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="225.95059"
      y="25.315674"
-     id="text5543-4"><tspan
+     id="text5543-4"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="225.95059"
        y="25.315674"
        id="tspan7758-7"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start">Ordnet die Eigenschaften des eingehenden </tspan><tspan
+       style="text-align:start;text-anchor:start">Ordnet die Eigenschaften des eingehenden </tspan><tspan
        sodipodi:role="line"
        x="225.95059"
        y="39.065674"
        id="tspan8336"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start">Statusereignis der logischen Schnittstelle zu.</tspan><tspan
+       style="text-align:start;text-anchor:start">Statusereignis der logischen Schnittstelle zu.</tspan><tspan
        sodipodi:role="line"
        x="225.95059"
        y="52.815678"
        id="tspan8330"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"> </tspan></text>
+       style="text-align:start;text-anchor:start" /></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="155.11949"
      y="257.31769"
-     id="text5543-4-8"><tspan
+     id="text5543-4-8"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="155.11949"
        y="257.31769"
        id="tspan8330-6"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start">Definiert, welche Ereignisse </tspan><tspan
+       style="text-align:start;text-anchor:start">Definiert, welche Ereignisse </tspan><tspan
        sodipodi:role="line"
        x="155.11949"
        y="271.06769"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       style="text-align:start;text-anchor:start"
        id="tspan8400">und Ereigniseigenschaften </tspan><tspan
        sodipodi:role="line"
        x="155.11949"
        y="284.81769"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       style="text-align:start;text-anchor:start"
        id="tspan8402">verarbeitet werden.</tspan><tspan
        sodipodi:role="line"
        x="155.11949"
        y="298.56769"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
-       id="tspan8398"> </tspan></text>
+       style="text-align:start;text-anchor:start"
+       id="tspan8398" /></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="400.90897"
      y="258.75098"
-     id="text5543-4-6"><tspan
+     id="text5543-4-6"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="400.90897"
        y="258.75098"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       style="text-align:start;text-anchor:start"
        id="tspan5541">Durch Schema und Zuordnung </tspan><tspan
        sodipodi:role="line"
        x="400.90897"
        y="272.50098"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       style="text-align:start;text-anchor:start"
        id="tspan5548">der logischen Schnittstelle </tspan><tspan
        sodipodi:role="line"
        x="400.90897"
        y="286.25098"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       style="text-align:start;text-anchor:start"
        id="tspan5543">definiertes </tspan><tspan
        sodipodi:role="line"
        x="400.90897"
        y="300.00098"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       style="text-align:start;text-anchor:start"
        id="tspan4862">Eigenschaftsformat.</tspan></text>
   <rect
      ry="0"
@@ -635,11 +636,12 @@
      id="rect79371-1-6-6-9-8-7-86-3-9-7"
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
   <text
+     sodipodi:linespacing="125%"
      y="144.93198"
      x="80.760094"
      font-size="12"
      id="text56820-0"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Gerät 1</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Gerät 1</text>
   <g
      id="g5278-5-4"
      transform="matrix(0.7799818,0,0,0.72791181,10.292162,131.60702)">
@@ -670,31 +672,30 @@
      style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="217.07065"
-     y="106.98499"
-     id="text5543-44"><tspan
+     y="108.98499"
+     id="text5543-44"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="218.59604"
-       y="106.98499"
-       id="tspan7758-2"
-       style="font-size:11.00000095px;line-height:1.25">Physische </tspan><tspan
+       y="108.98499"
+       id="tspan7758-2">Physische </tspan><tspan
        sodipodi:role="line"
        x="217.07065"
-       y="120.73499"
-       style="font-size:11.00000095px;line-height:1.25"
-       id="tspan3877">Schnittstelle 1</tspan></text>
+       y="122.73499"
+       id="tspan3514">Schnittstelle 1</tspan></text>
   <text
+     sodipodi:linespacing="125%"
      id="text13959-6-0"
      y="136.84004"
      x="198.10368"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      xml:space="preserve"><tspan
        id="tspan13963-4-6"
        y="136.84004"
        x="198.10368"
-       sodipodi:role="line"
-       style="font-size:11px;line-height:1.25">Ereignistyp</tspan></text>
+       sodipodi:role="line">Ereignistyp</tspan></text>
   <path
      inkscape:connector-curvature="0"
      id="path8199-4-90-6"
@@ -702,20 +703,19 @@
      style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-4-5-90)" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="772.31201"
      y="416.46201"
-     id="text5199"><tspan
+     id="text5199"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan5201"
        x="772.31201"
-       y="416.46201"
-       style="font-size:40px;line-height:1.25"> </tspan><tspan
+       y="416.46201" /><tspan
        sodipodi:role="line"
        x="772.31201"
        y="466.46201"
-       id="tspan5203"
-       style="font-size:40px;line-height:1.25"> </tspan></text>
+       id="tspan5203" /></text>
   <g
      id="g8248-0"
      transform="matrix(1,0,0,-1,-196.13086,265.09664)">
@@ -751,35 +751,36 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-     x="3.8657227"
-     y="32.177254"
-     id="text5543-4-8-2"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="2.2523973"
+     y="27.448322"
+     id="text5543-4-8-2"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="3.8657227"
-       y="32.177254"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       x="2.2523973"
+       y="27.448322"
+       style="text-align:start;text-anchor:start"
        id="tspan8398-3">Geräte, die mit </tspan><tspan
        sodipodi:role="line"
-       x="3.8657227"
-       y="45.927254"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       x="2.2523973"
+       y="41.198322"
+       style="text-align:start;text-anchor:start"
        id="tspan4880">Send-Nachrichtennutzdaten </tspan><tspan
        sodipodi:role="line"
-       x="3.8657227"
-       y="59.677258"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       x="2.2523973"
+       y="54.948326"
+       style="text-align:start;text-anchor:start"
        id="tspan5419">von Watson IoT Platform </tspan><tspan
        sodipodi:role="line"
-       x="3.8657227"
-       y="73.427254"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       x="2.2523973"
+       y="68.698326"
+       style="text-align:start;text-anchor:start"
        id="tspan5423">in Form von Statusereignissen </tspan><tspan
        sodipodi:role="line"
-       x="3.8657227"
-       y="87.177261"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
-       id="tspan3875">integriert sind.</tspan></text>
+       x="2.2523973"
+       y="82.448326"
+       style="text-align:start;text-anchor:start"
+       id="tspan3512">integriert sind.</tspan></text>
   <g
      id="g8248-0-0"
      transform="matrix(1.2943531,0,0,-0.99599658,409.206,263.28899)"
@@ -816,46 +817,47 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="654.52277"
      y="28.558537"
-     id="text5543-4-8-2-5"><tspan
+     id="text5543-4-8-2-5"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="654.52277"
        y="28.558537"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       style="text-align:start;text-anchor:start"
        id="tspan5524">Anwendungen verbrauchen die Daten zur </tspan><tspan
        sodipodi:role="line"
        x="654.52277"
        y="42.308537"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       style="text-align:start;text-anchor:start"
        id="tspan5528">Statuseigenschaft, die von den den Gerätetypen </tspan><tspan
        sodipodi:role="line"
        x="654.52277"
        y="56.05854"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       style="text-align:start;text-anchor:start"
        id="tspan5006">zugeordneten logischen Schnittstellen definiert werden. </tspan><tspan
        sodipodi:role="line"
        x="654.52277"
        y="69.80854"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       style="text-align:start;text-anchor:start"
        id="tspan5532">Es ist nicht erforderlich, das entsprechende </tspan><tspan
        sodipodi:role="line"
        x="654.52277"
        y="83.55854"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start"
+       style="text-align:start;text-anchor:start"
        id="tspan5534">Gerät und seine Eigenschaften zu &quot;verstehen&quot;.</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="416.60867"
      y="175.81032"
-     id="text4440"><tspan
+     id="text4440"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan4442"
        x="416.60867"
-       y="175.81032"
-       style="font-size:40px;line-height:1.25"> </tspan></text>
+       y="175.81032" /></text>
   <rect
      style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#848282;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
      id="rect4538"
@@ -871,11 +873,12 @@
      x="158.89777"
      y="80.588417" />
   <text
+     sodipodi:linespacing="125%"
      y="92.129707"
      x="195.74684"
      font-size="12"
      id="text56820-0-8"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Gerätetyp 1</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Gerätetyp 1</text>
   <rect
      ry="0"
      rx="0"
@@ -887,15 +890,15 @@
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      x="739.69623"
      y="157.92073"
-     id="text18189-5-9-7"><tspan
+     id="text18189-5-9-7"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="739.69623"
        y="157.92073"
-       id="tspan6913-6-6"
-       style="font-size:11px;line-height:1.25">Anwendung</tspan></text>
+       id="tspan6913-6-6">Anwendung</tspan></text>
   <g
      id="g5240-2-8-1"
      transform="matrix(0.09339234,0,0,0.09339234,675.97705,131.16251)"
@@ -984,20 +987,19 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="229.91718"
      y="164.05727"
-     id="text5543-1-29"><tspan
+     id="text5543-1-29"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="229.91718"
        y="164.05727"
-       id="tspan4603-2"
-       style="font-size:11.00000095px;line-height:1.25">Ereignis-</tspan><tspan
+       id="tspan4603-2">Ereignis-</tspan><tspan
        sodipodi:role="line"
        x="229.91718"
        y="177.80727"
-       id="tspan4679"
-       style="font-size:11.00000095px;line-height:1.25">schema</tspan></text>
+       id="tspan4679">schema</tspan></text>
   <g
      id="g60812-9-9"
      transform="translate(399.45825,137.77432)"
@@ -1031,86 +1033,88 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="467.09885"
      y="144.16832"
-     id="text5543-1-29-1"><tspan
+     id="text5543-1-29-1"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="468.62424"
+       x="467.09885"
        y="144.16832"
-       id="tspan4603-2-45"
-       style="font-size:11.00000095px;line-height:1.25">Schema der </tspan><tspan
+       id="tspan4603-2-45">Schema der </tspan><tspan
        sodipodi:role="line"
        x="467.09885"
        y="157.91832"
-       id="tspan4762"
-       style="font-size:11.00000095px;line-height:1.25">logischen</tspan><tspan
+       id="tspan4762">logischen</tspan><tspan
        sodipodi:role="line"
        x="467.09885"
        y="171.66832"
-       id="tspan4679-6"
-       style="font-size:11.00000095px;line-height:1.25">Schnittstelle</tspan></text>
+       id="tspan4679-6">Schnittstelle</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="475.52786"
      y="242.08128"
-     id="text4815"><tspan
+     id="text4815"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan4817"
        x="475.52786"
-       y="242.08128"
-       style="font-size:40px;line-height:1.25"> </tspan></text>
+       y="242.08128" /></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="689.3114"
      y="196.30504"
-     id="text5543-1-2-6"><tspan
+     id="text5543-1-2-6"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="689.3114"
        y="196.30504"
        id="tspan7758-4-5-9"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start">Status von <tspan
+       style="text-align:start;text-anchor:start">Status von <tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
    id="tspan5484">A</tspan> abrufen anhand von:</tspan><tspan
        sodipodi:role="line"
        x="689.3114"
        y="210.05504"
        id="tspan5056"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start">- Gerätetyp</tspan><tspan
+       style="text-align:start;text-anchor:start">- Gerätetyp</tspan><tspan
        sodipodi:role="line"
        x="689.3114"
        y="223.80504"
        id="tspan5226-6"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start">- Geräte-ID</tspan><tspan
+       style="text-align:start;text-anchor:start">- Geräte-ID</tspan><tspan
        sodipodi:role="line"
        x="689.3114"
        y="237.55504"
        id="tspan5062"
-       style="font-size:11.00000095px;line-height:1.25;text-align:start;text-anchor:start">- ID der logischen Schnittstelle</tspan></text>
+       style="text-align:start;text-anchor:start">- ID der logischen Schnittstelle</tspan></text>
   <text
+     sodipodi:linespacing="125%"
      y="158.47548"
      x="77.050568"
      font-size="12"
      id="text56820-0-8-4"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Eig.: <tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Eigensch.: <tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
    id="tspan5432">a</tspan>
 </text>
   <text
+     sodipodi:linespacing="125%"
      y="184.88828"
      x="442.14236"
      font-size="12"
      id="text56820-0-8-4-6"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Eig.: <tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Eigensch.: <tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
    id="tspan5434">A</tspan>
 </text>
   <text
+     sodipodi:linespacing="125%"
      y="184.88829"
      x="314.89871"
      font-size="12"
      id="text56820-0-8-4-6-1"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">a nach A</text>
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">a nach A</text>
 </svg>

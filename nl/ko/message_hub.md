@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -17,7 +17,9 @@ lastupdated: "2018-05-22"
 
 {{site.data.keyword.messagehub_full}}를 {{site.data.keyword.iot_full}}에 연결하면 히스토리 데이터 스토리지에 확장 가능한 대용량 메시지 버스가 제공됩니다. {{site.data.keyword.messagehub}}는 실시간 데이터 피드 처리를 위해 지연시간이 짧은 플랫폼을 제공하는 오픈 소스 대용량 메시징 시스템인 Apache Kafka를 기반으로 빌드됩니다.
 
-파티션 키를 사용하여 메시지 허브가 파티션 이벤트를 전달합니다. 키는 {{site.data.keyword.iot_short}} 조직 ID 6자와 디바이스 유형 및 디바이스 ID를 연결하여 구성됩니다. 시간소인 및 이벤트 ID를 포함한 페이로드 필드는 파티션 키 구성에 사용되지 않습니다. 이 구성은 특정 디바이스에서 오는 모든 이벤트가 동일한 파티션으로 전송되어 이벤트가 전송된 순서로 처리되도록 보장합니다.  
+파티션 키를 사용하여 메시지 허브가 파티션 이벤트를 전달합니다. 키는 {{site.data.keyword.iot_short}} 조직 ID 6자와 디바이스 유형 및 디바이스 ID를 연결하여 구성됩니다. 시간소인 및 이벤트 ID를 포함한 페이로드 필드는 파티션 키 구성에 사용되지 않습니다. 이 구성은 특정 디바이스에서 오는 모든 이벤트가 동일한 파티션으로 전송되어 이벤트가 전송된 순서로 처리되도록 보장합니다. 
+
+{{site.data.keyword.iot_short_notm}}에 메시지를 전송하기 위해 MQTT 디바이스가 사용하는 서비스 품질(QoS)은 메시지가 {{site.data.keyword.iot_short_notm}}에서 {{site.data.keyword.messagehub}}로 전송될 때는 적용되지 않습니다. 일반적으로, 메시지는 {{site.data.keyword.messagehub}}에 한 번만 전송됩니다. 드물지만, 메시지가 두 번 이상 전송되거나 아예 전송되지 않을 수 있습니다. 
 
 ## 시작하기 전에  
 {: #byb}

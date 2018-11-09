@@ -21,7 +21,7 @@ Dal dashboard dei membri, puoi controllare e gestire l'accesso alla tua organizz
 ## Aggiunta di utenti
 {: #adding-new-users}
 
-Dalla scheda **Members** del dashboard, puoi aggiungere singoli membri utilizzando la funzione di aggiunta. Puoi anche aggiungere membri contemporaneamente utilizzando la funzione di importazione. 
+Dalla scheda **Members** del dashboard, puoi aggiungere singoli membri utilizzando la funzione di aggiunta. Puoi anche aggiungere membri contemporaneamente utilizzando la funzione di importazione.
 
 Per impostazione predefinita, gli account dei membri non scadono. Quando aggiungi utenti alla tua organizzazione {{site.data.keyword.iot_short_notm}}, puoi facoltativamente impostare una data di scadenza per i relativi account.
 
@@ -138,7 +138,7 @@ Gli utenti possono essere bloccati dall'accedere all'organizzazione {{site.data.
 1. Dal tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Members** dalla barra di navigazione sulla sinistra.
 2. Fai clic sull'attivazione accanto all'utente che desideri bloccare dall'accedere all'organizzazione {{site.data.keyword.iot_short_notm}}.
 
-## Limitazione dell'accesso utente 
+## Limitazione dell'accesso utente
 {: #limiting-users}
 
 Il controllo dell'accesso al livello della risorsa ti permette di limitare l'accesso ai dispositivi in un'organizzazione. Puoi utilizzare i gruppi di risorse per specificare i dispositivi che ogni utente o chiave API possono gestire. Per informazioni su come configurare il controllo dell'accesso al livello della risorsa, consulta [Configurazione del controllo dell'accesso al livello della risorsa](reference/rlac.html#configure_RLAC).

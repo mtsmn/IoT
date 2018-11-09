@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -365,8 +365,8 @@
      id="namedview5445"
      showgrid="false"
      inkscape:zoom="1.256979"
-     inkscape:cx="535.06371"
-     inkscape:cy="256.63798"
+     inkscape:cx="227.2329"
+     inkscape:cy="364.49059"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -461,12 +461,12 @@
   <text
      sodipodi:linespacing="125%"
      y="263.28772"
-     x="72.121696"
+     x="80.121696"
      font-size="12"
      id="text56820"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SimHei;-inkscape-font-specification:SimHei"
-   id="tspan3160">设备</tspan>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1"><tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan3148">设备</tspan>
  2</text>
   <g
      id="g5278-5"
@@ -522,7 +522,7 @@
        y="247.40448"
        id="tspan7758"><tspan
    style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3172">物理接口</tspan> 2</tspan></text>
+   id="tspan3156">物理接口</tspan> 2</tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot7760"
@@ -556,7 +556,7 @@
        y="111.4442"
        id="tspan5361"><tspan
    style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3180">设备类型</tspan> 1</tspan><tspan
+   id="tspan3164">设备类型</tspan> 1</tspan><tspan
        sodipodi:role="line"
        x="444.02805"
        y="125.1942"
@@ -699,28 +699,24 @@
        y="36.195435" /></text>
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="267.95059"
-     y="31.315674"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="225.95059"
+     y="25.315674"
      id="text5543-4"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="267.95059"
-       y="31.315674"
+       x="225.95059"
+       y="25.315674"
        id="tspan7758-7"
-       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei">将传入状态事件属性</tspan><tspan
+       style="text-align:start;text-anchor:start;-inkscape-font-specification:SimHei;font-family:SimHei">将传入状态事件属性</tspan><tspan
        sodipodi:role="line"
-       x="267.95059"
-       y="45.065674"
+       x="225.95059"
+       y="39.065674"
        id="tspan8336"
-       style="text-align:start;text-anchor:start"><tspan
-         style="font-family:SimHei;-inkscape-font-specification:SimHei"
-         id="tspan3144">映射到应用程序接口</tspan><tspan
-         style="font-family:SimHei;-inkscape-font-specification:SimHei"
-         id="tspan3154">。</tspan></tspan><tspan
+       style="text-align:start;text-anchor:start;-inkscape-font-specification:SimHei;font-family:SimHei">映射到应用程序接口。</tspan><tspan
        sodipodi:role="line"
-       x="267.95059"
-       y="58.815678"
+       x="225.95059"
+       y="52.815678"
        id="tspan8330"
        style="text-align:start;text-anchor:start" /></text>
   <text
@@ -752,28 +748,28 @@
        id="tspan8398" /></text>
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="390.93118"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="396.93118"
      y="386.83585"
      id="text5543-4-6"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="390.93118"
+       x="396.93118"
        y="386.83585"
-       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+       style="text-align:start;text-anchor:start;-inkscape-font-specification:SimHei;font-family:SimHei"
        id="tspan5541">由应用程序接口模式和</tspan><tspan
        sodipodi:role="line"
-       x="390.93118"
+       x="396.93118"
        y="400.58585"
-       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+       style="text-align:start;text-anchor:start;-inkscape-font-specification:SimHei;font-family:SimHei"
        id="tspan5548">映射定义的属性格式。</tspan><tspan
        sodipodi:role="line"
-       x="390.93118"
+       x="396.93118"
        y="414.33585"
        style="text-align:start;text-anchor:start"
        id="tspan5543" /><tspan
        sodipodi:role="line"
-       x="390.93118"
+       x="396.93118"
        y="428.08585"
        style="text-align:start;text-anchor:start"
        id="tspan4862" /></text>
@@ -789,12 +785,12 @@
   <text
      sodipodi:linespacing="125%"
      y="144.93198"
-     x="72.760094"
+     x="80.760094"
      font-size="12"
      id="text56820-0"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SimHei;-inkscape-font-specification:SimHei"
-   id="tspan3156">设备</tspan>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1"><tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan3144">设备</tspan>
  1</text>
   <g
      id="g5278-5-4"
@@ -836,7 +832,7 @@
        y="112.98499"
        id="tspan7758-2"><tspan
    style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3166">物理接口</tspan> 1</tspan></text>
+   id="tspan3142">物理接口</tspan> 1</tspan></text>
   <text
      sodipodi:linespacing="125%"
      id="text13959-6-0"
@@ -947,34 +943,34 @@
      style="fill:none;stroke:#83827f;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="660.08295"
-     y="389.06293"
+     y="387.06293"
      id="text5543-4-64"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="660.08295"
-       y="389.06293"
-       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+       y="387.06293"
+       style="text-align:start;text-anchor:start;-inkscape-font-specification:SimHei;font-family:SimHei"
        id="tspan4986">将事物类型组合的属性</tspan><tspan
        sodipodi:role="line"
        x="660.08295"
-       y="402.81293"
-       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+       y="400.81293"
+       style="text-align:start;text-anchor:start;-inkscape-font-specification:SimHei;font-family:SimHei"
        id="tspan4990">映射到应用程序接口。</tspan><tspan
        sodipodi:role="line"
        x="660.08295"
-       y="416.56293"
+       y="414.56293"
        style="text-align:start;text-anchor:start"
        id="tspan4988" /><tspan
        sodipodi:role="line"
        x="660.08295"
-       y="430.31293"
+       y="428.31293"
        style="text-align:start;text-anchor:start"
        id="tspan4996" /><tspan
        sodipodi:role="line"
        x="660.08295"
-       y="444.06293"
+       y="442.06293"
        id="tspan8330-93"
        style="text-align:start;text-anchor:start" /></text>
   <path
@@ -1018,7 +1014,7 @@
        y="242.18192"
        id="tspan7758-4-5"><tspan
    style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3210">事物类型</tspan> 1 </tspan><tspan
+   id="tspan3184">事物类型</tspan> 1 </tspan><tspan
        sodipodi:role="line"
        x="817.21509"
        y="255.93192"
@@ -1066,33 +1062,33 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="3.8657227"
-     y="54.177254"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="-0.13427736"
+     y="40.177254"
      id="text5543-4-8-2"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="3.8657227"
-       y="54.177254"
+       x="-0.13427736"
+       y="40.177254"
        style="text-align:start;text-anchor:start"
        id="tspan8398-3"><tspan
-   style="font-family:SimHei;-inkscape-font-specification:SimHei"
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
    id="tspan3136">向</tspan> Watson IoT Platform <tspan
-   style="font-family:SimHei;-inkscape-font-specification:SimHei"
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
    id="tspan3138">注册的</tspan></tspan><tspan
        sodipodi:role="line"
-       x="3.8657227"
-       y="69.095535"
-       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+       x="-0.13427736"
+       y="53.927254"
+       style="text-align:start;text-anchor:start;-inkscape-font-specification:SimHei;font-family:SimHei"
        id="tspan4880">设备以状态事件的形式</tspan><tspan
        sodipodi:role="line"
-       x="3.8657227"
-       y="82.845535"
-       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+       x="-0.13427736"
+       y="67.677254"
+       style="text-align:start;text-anchor:start;-inkscape-font-specification:SimHei;font-family:SimHei"
        id="tspan5419">发送消息有效内容。</tspan><tspan
        sodipodi:role="line"
-       x="3.8657227"
-       y="96.595535"
+       x="-0.13427736"
+       y="81.427254"
        style="text-align:start;text-anchor:start"
        id="tspan5423" /></text>
   <g
@@ -1132,29 +1128,29 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="775.60327"
-     y="387.4169"
+     y="385.4169"
      id="text5543-4-6-3"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="775.60327"
-       y="387.4169"
+       y="385.4169"
        id="tspan8330-9-2"
-       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei">由事物类型模式和映射</tspan><tspan
+       style="text-align:start;text-anchor:start;-inkscape-font-specification:SimHei;font-family:SimHei">由事物类型模式和映射</tspan><tspan
        sodipodi:role="line"
        x="775.60327"
-       y="401.1669"
-       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+       y="399.1669"
+       style="text-align:start;text-anchor:start;-inkscape-font-specification:SimHei;font-family:SimHei"
        id="tspan8418-1">定义的外部属性格式。</tspan><tspan
        sodipodi:role="line"
        x="775.60327"
-       y="414.9169"
+       y="412.9169"
        style="text-align:start;text-anchor:start"
        id="tspan5197-4" /><tspan
        sodipodi:role="line"
        x="775.60327"
-       y="428.6669"
+       y="426.6669"
        style="text-align:start;text-anchor:start"
        id="tspan4872" /></text>
   <g
@@ -1196,38 +1192,38 @@
   <text
      xml:space="preserve"
      style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="894.91461"
-     y="31.874027"
+     x="870.91461"
+     y="17.874025"
      id="text5543-4-8-2-5"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="894.91461"
-       y="31.874027"
+       x="870.91461"
+       y="17.874025"
        style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
        id="tspan5524">应用程序使用状态属性数据的方式</tspan><tspan
        sodipodi:role="line"
-       x="894.91461"
-       y="45.624027"
+       x="870.91461"
+       y="31.624025"
        style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
        id="tspan5528">是由与设备类型或事物类型关联的</tspan><tspan
        sodipodi:role="line"
-       x="894.91461"
-       y="59.374031"
+       x="870.91461"
+       y="45.374027"
        style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
        id="tspan4878">应用程序接口定义的。</tspan><tspan
        sodipodi:role="line"
-       x="894.91461"
-       y="73.124031"
+       x="870.91461"
+       y="59.124027"
        style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
        id="tspan5006">无需“了解”底层设备及其属性。</tspan><tspan
        sodipodi:role="line"
-       x="894.91461"
-       y="86.874031"
+       x="870.91461"
+       y="72.874031"
        style="text-align:start;text-anchor:start"
        id="tspan5532" /><tspan
        sodipodi:role="line"
-       x="894.91461"
-       y="100.62403"
+       x="870.91461"
+       y="86.624031"
        style="text-align:start;text-anchor:start"
        id="tspan5534" /></text>
   <rect
@@ -1250,18 +1246,18 @@
      style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="590.99762"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="594.99762"
      y="248.28903"
      id="text5543-3"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="590.99762"
+       x="596.52301"
        y="248.28903"
        id="tspan5547-1"
-       style="font-family:SimHei;-inkscape-font-specification:SimHei">组合</tspan><tspan
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">组合</tspan><tspan
        sodipodi:role="line"
-       x="590.99762"
+       x="594.99762"
        y="262.03903"
        id="tspan7758-25" /></text>
   <text
@@ -1313,20 +1309,20 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="550.67542"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="522.67542"
      y="162.32452"
      id="text5543-4-8-4"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="550.67542"
+       x="522.67542"
        y="162.32452"
-       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+       style="text-align:start;text-anchor:start;-inkscape-font-specification:SimHei;font-family:SimHei"
        id="tspan4598">定义事物类型包含的</tspan><tspan
        sodipodi:role="line"
-       x="550.67542"
+       x="522.67542"
        y="176.07452"
-       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+       style="text-align:start;text-anchor:start;-inkscape-font-specification:SimHei;font-family:SimHei"
        id="tspan4870">应用程序接口。</tspan></text>
   <path
      inkscape:connector-curvature="0"
@@ -1366,7 +1362,7 @@
      id="text56820-0-8"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1"><tspan
    style="-inkscape-font-specification:SimHei;font-family:SimHei;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-   id="tspan3164">设备类型</tspan>
+   id="tspan3140">设备类型</tspan>
  1</text>
   <rect
      style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#848282;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
@@ -1390,7 +1386,7 @@
      id="text56820-0-8-1"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1"><tspan
    style="-inkscape-font-specification:SimHei;font-family:SimHei;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-   id="tspan3170">设备类型</tspan>
+   id="tspan3154">设备类型</tspan>
  2</text>
   <rect
      style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#848282;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
@@ -1414,7 +1410,7 @@
      id="text56820-0-8-1-4"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1"><tspan
    style="-inkscape-font-specification:SimHei;font-family:SimHei;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-   id="tspan3192">事物类型</tspan>
+   id="tspan3172">事物类型</tspan>
  1</text>
   <rect
      ry="0"
@@ -1528,16 +1524,21 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="229.91718"
-     y="172.05727"
+     y="164.05727"
      id="text5543-1-29"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="229.91718"
-       y="172.05727"
+       y="164.05727"
+       id="tspan4603-2"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">事件</tspan><tspan
+       sodipodi:role="line"
+       x="229.91718"
+       y="177.80727"
        id="tspan4679"
-       style="font-family:SimHei;-inkscape-font-specification:SimHei">事件模式</tspan></text>
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">模式</tspan></text>
   <rect
      ry="0"
      rx="0"
@@ -1592,16 +1593,21 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      x="228.93788"
-     y="303.05673"
+     y="295.05673"
      id="text5543-1-29-0"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="228.93788"
-       y="303.05673"
+       y="295.05673"
+       id="tspan4603-2-4"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">事件</tspan><tspan
+       sodipodi:role="line"
+       x="228.93788"
+       y="308.80673"
        id="tspan4679-7"
-       style="font-family:SimHei;-inkscape-font-specification:SimHei">事件模式</tspan></text>
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">模式</tspan></text>
   <g
      id="g60812-9-9"
      transform="translate(399.45825,137.77432)"
@@ -1635,21 +1641,26 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="457.09885"
-     y="152.16832"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="467.09885"
+     y="144.16832"
      id="text5543-1-29-1"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="457.09885"
-       y="152.16832"
+       x="467.09885"
+       y="144.16832"
        id="tspan4603-2-45"
-       style="font-family:SimHei;-inkscape-font-specification:SimHei">应用程序</tspan><tspan
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">应用程序</tspan><tspan
        sodipodi:role="line"
-       x="457.09885"
-       y="165.91832"
+       x="467.09885"
+       y="157.91832"
+       id="tspan4762"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">接口</tspan><tspan
+       sodipodi:role="line"
+       x="467.09885"
+       y="171.66832"
        id="tspan4679-6"
-       style="font-family:SimHei;-inkscape-font-specification:SimHei">接口模式</tspan></text>
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">模式</tspan></text>
   <rect
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
      id="rect6559-2-2"
@@ -1671,7 +1682,7 @@
        y="240.87715"
        id="tspan5361-7"><tspan
    style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3186">设备类型</tspan> 2</tspan><tspan
+   id="tspan3168">设备类型</tspan> 2</tspan><tspan
        sodipodi:role="line"
        x="443.11871"
        y="254.62717"
@@ -1710,21 +1721,26 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="457.39395"
-     y="278.41904"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="465.39395"
+     y="270.41904"
      id="text5543-1-29-1-7"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="457.39395"
-       y="278.41904"
+       x="465.39395"
+       y="270.41904"
        id="tspan4603-2-45-9"
-       style="font-family:SimHei;-inkscape-font-specification:SimHei">应用程序</tspan><tspan
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">应用程序</tspan><tspan
        sodipodi:role="line"
-       x="457.39395"
-       y="292.16904"
+       x="465.39395"
+       y="284.16904"
+       id="tspan4762-9"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">接口</tspan><tspan
+       sodipodi:role="line"
+       x="465.39395"
+       y="297.91904"
        id="tspan4679-6-9"
-       style="font-family:SimHei;-inkscape-font-specification:SimHei">接口模式</tspan></text>
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">模式</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1769,24 +1785,29 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="607.00677"
-     y="297.48404"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="611.00677"
+     y="289.48404"
      id="text5543-1-29-1-7-7"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="607.00677"
-       y="297.48404"
-       id="tspan4679-6-9-4"
-       style="font-family:SimHei;-inkscape-font-specification:SimHei">事物类型</tspan><tspan
+       x="611.00677"
+       y="289.48404"
+       id="tspan4603-2-45-9-5"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">事物</tspan><tspan
        sodipodi:role="line"
-       x="607.00677"
-       y="311.23404"
-       style="font-family:SimHei;-inkscape-font-specification:SimHei"
-       id="tspan3198">模式</tspan></text>
+       x="611.00677"
+       y="303.23404"
+       id="tspan4762-9-8"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">类型</tspan><tspan
+       sodipodi:role="line"
+       x="611.00677"
+       y="316.98404"
+       id="tspan4679-6-9-4"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">模式</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      x="913.65881"
      y="183.57611"
      id="text5543-1-2-6"
@@ -1796,76 +1817,68 @@
        y="183.57611"
        id="tspan7758-4-5-9"
        style="text-align:start;text-anchor:start"><tspan
-         style="-inkscape-font-specification:SimHei;font-family:SimHei"
-         id="tspan3220">获取</tspan><tspan
-         style="-inkscape-font-specification:'Arial Italic';font-family:Arial;font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal"
+         style="font-family:SimHei;-inkscape-font-specification:SimHei"
+         id="tspan3186">获取</tspan><tspan
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial Italic"
          id="tspan5484"> A</tspan><tspan
-         style="-inkscape-font-specification:SimHei;font-family:SimHei"
-         id="tspan3222"> 状态的方式：</tspan></tspan><tspan
+         style="font-family:SimHei;-inkscape-font-specification:SimHei"
+         id="tspan3188"> 状态的方式：</tspan></tspan><tspan
        sodipodi:role="line"
        x="913.65881"
-       y="197.32611"
+       y="198.46133"
        id="tspan5056"
-       style="text-align:start;text-anchor:start">- <tspan
-   style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3224">设备类型</tspan></tspan><tspan
+       style="text-align:start;text-anchor:start">-  <tspan
+   style="font-family:SimHei;-inkscape-font-specification:SimHei"
+   id="tspan3190">设备类型</tspan></tspan><tspan
        sodipodi:role="line"
        x="913.65881"
-       y="211.07611"
+       y="213.37961"
        id="tspan5226-6"
-       style="text-align:start;text-anchor:start">- <tspan
-   style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3226">设备标识</tspan></tspan><tspan
+       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei">- 设备标识</tspan><tspan
        sodipodi:role="line"
        x="913.65881"
-       y="224.82611"
+       y="227.12961"
        id="tspan5062"
-       style="text-align:start;text-anchor:start">- <tspan
-   style="-inkscape-font-specification:SimHei;font-family:SimHei"
-   id="tspan3228">应用程序接口</tspan></tspan></text>
+       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei">- 应用程序接口</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="905.05054"
+     x="903.05054"
      y="315.48648"
      id="text5543-1-2-6-4"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="905.05054"
+       x="903.05054"
        y="315.48648"
        id="tspan7758-4-5-9-6"
        style="text-align:start;text-anchor:start"><tspan
          style="font-family:SimHei;-inkscape-font-specification:SimHei"
-         id="tspan3230">获取</tspan><tspan
+         id="tspan3192">获取</tspan><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial Italic"
          id="tspan5546"> Alpha</tspan><tspan
          style="font-family:SimHei;-inkscape-font-specification:SimHei"
-         id="tspan3232"> 和</tspan><tspan
+         id="tspan3194"> 和</tspan><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial Italic"
          id="tspan5549"> Beta</tspan><tspan
          style="font-family:SimHei;-inkscape-font-specification:SimHei"
-         id="tspan3234"> 状态的方式：</tspan></tspan><tspan
+         id="tspan3196"> 状态的方式：</tspan></tspan><tspan
        sodipodi:role="line"
-       x="905.05054"
+       x="903.05054"
        y="330.3717"
        id="tspan5056-7"
-       style="text-align:start;text-anchor:start">- <tspan
+       style="text-align:start;text-anchor:start">-  <tspan
    style="font-family:SimHei;-inkscape-font-specification:SimHei"
-   id="tspan3236">事物类型</tspan></tspan><tspan
+   id="tspan3198">事物类型</tspan></tspan><tspan
        sodipodi:role="line"
-       x="905.05054"
+       x="903.05054"
        y="345.28998"
        id="tspan5226-6-6"
-       style="text-align:start;text-anchor:start">- <tspan
-   style="font-family:SimHei;-inkscape-font-specification:SimHei"
-   id="tspan3238">事物标识</tspan></tspan><tspan
+       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei">- 事物标识</tspan><tspan
        sodipodi:role="line"
-       x="905.05054"
-       y="360.20825"
+       x="903.05054"
+       y="359.03998"
        id="tspan5062-9"
-       style="text-align:start;text-anchor:start">- <tspan
-   style="font-family:SimHei;-inkscape-font-specification:SimHei"
-   id="tspan3240">应用程序接口</tspan></tspan></text>
+       style="text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei">- 应用程序接口</tspan></text>
   <rect
      ry="0"
      rx="0"
@@ -1877,13 +1890,13 @@
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
   <text
      sodipodi:linespacing="125%"
-     y="383.39578"
-     x="597.15729"
+     y="381.39578"
+     x="599.15729"
      font-size="12"
      id="text56820-0-1"
      style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial"><tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SimHei;-inkscape-font-specification:SimHei"
-   id="tspan3200">事物</tspan>
+   id="tspan3174">事物</tspan>
  1</text>
   <g
      id="g5278-5-4-1"
@@ -1933,21 +1946,26 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:11.00000095px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="823.61456"
-     y="279.11392"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="827.61456"
+     y="269.11392"
      id="text5543-1-29-1-78"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="823.61456"
-       y="279.11392"
+       x="827.61456"
+       y="269.11392"
        id="tspan4603-2-45-3"
-       style="font-family:SimHei;-inkscape-font-specification:SimHei">应用程序</tspan><tspan
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">应用程序</tspan><tspan
        sodipodi:role="line"
-       x="823.61456"
-       y="292.86392"
+       x="827.61456"
+       y="282.86392"
+       id="tspan4762-4"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">接口</tspan><tspan
+       sodipodi:role="line"
+       x="827.61456"
+       y="296.61392"
        id="tspan4679-6-98"
-       style="font-family:SimHei;-inkscape-font-specification:SimHei">接口模式</tspan></text>
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">模式</tspan></text>
   <text
      sodipodi:linespacing="125%"
      y="158.47548"
@@ -1957,7 +1975,7 @@
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">
     <tspan
        style="-inkscape-font-specification:SimHei;font-family:SimHei;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-       id="tspan3158">属性：</tspan>
+       id="tspan3146">属性：</tspan>
     <tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
        id="tspan5432">a</tspan>
@@ -1971,7 +1989,7 @@
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">
     <tspan
        style="-inkscape-font-specification:SimHei;font-family:SimHei;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-       id="tspan3162">属性：</tspan>
+       id="tspan3150">属性：</tspan>
     <tspan
        style="-inkscape-font-specification:'Arial Italic';font-family:Arial;font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal"
        id="tspan5430">b</tspan>
@@ -1985,7 +2003,7 @@
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">
     <tspan
        style="-inkscape-font-specification:SimHei;font-family:SimHei;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-       id="tspan3182">属性：</tspan>
+       id="tspan3166">属性：</tspan>
     <tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
        id="tspan5434">A</tspan>
@@ -1999,7 +2017,7 @@
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">
     <tspan
        style="-inkscape-font-specification:SimHei;font-family:SimHei;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-       id="tspan3190">属性：</tspan>
+       id="tspan3170">属性：</tspan>
     <tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
        id="tspan5454">B</tspan>
@@ -2012,7 +2030,7 @@
      id="text56820-0-8-4-6-1"
      style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">a <tspan
    style="-inkscape-font-specification:SimHei Italic;font-family:SimHei;font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal"
-   id="tspan3176">到</tspan>
+   id="tspan3152">到</tspan>
  A</text>
   <text
      sodipodi:linespacing="125%"
@@ -2022,7 +2040,7 @@
      id="text56820-0-8-4-6-1-8"
      style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">b <tspan
    style="-inkscape-font-specification:SimHei Italic;font-family:SimHei;font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal"
-   id="tspan3178">到</tspan>
+   id="tspan3162">到</tspan>
  B</text>
   <text
      sodipodi:linespacing="125%"
@@ -2032,7 +2050,7 @@
      id="text56820-0-8-4-6-1-5"
      style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">A <tspan
    style="-inkscape-font-specification:SimHei Italic;font-family:SimHei;font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal"
-   id="tspan3202">到</tspan>
+   id="tspan3176">到</tspan>
  Alpha</text>
   <text
      sodipodi:linespacing="125%"
@@ -2042,7 +2060,7 @@
      id="text56820-0-8-4-6-1-5-6"
      style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">B <tspan
    style="-inkscape-font-specification:SimHei Italic;font-family:SimHei;font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal"
-   id="tspan3204">到</tspan>
+   id="tspan3178">到</tspan>
  Beta</text>
   <text
      sodipodi:linespacing="125%"
@@ -2053,7 +2071,7 @@
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">
     <tspan
        style="-inkscape-font-specification:SimHei;font-family:SimHei;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-       id="tspan3212">属性：</tspan>
+       id="tspan3180">属性：</tspan>
     <tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
        id="tspan5434-5">Alpha <tspan

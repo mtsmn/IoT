@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-06-13"
+  years: 2016, 2018
+lastupdated: "2018-01-11"
 ---
 
 {:new_window: target="\_blank"}
@@ -53,12 +53,10 @@ Das folgende Beispiel zeigt einen gültigen CN für das Serverzertifikat:
 
 Weitere Informationen zu Messaging-Server-Zertifikaten finden Sie in der [Anleitung zum Verbinden von Raspberry Pi mit IBM Watson IoT Platform mit selbst signierten Serverzertifikaten ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}.
 
-### Angepasste Domänen (Beta)
-{: #custom_domains}
+### Angepasste Domänen
+{: #custom-domains}
 
-**Wichtig**: Die Funktion 'Angepasste Domänen' für Messaging-Server-Zertifikate steht nur als Teil des eingeschränkten Beta-Programms zur Verfügung. Zur Aktivierung der angepassten Domänen aktivieren Sie **Experimentelle Features** auf der Seite **Einstellungen**.
-
-Als Teil der Beta-Funktion akzeptieren Messaging-Server-Zertifikate angepasste Domänen. Folgendes Format muss für den Zertifikats-CN oder 'SubjectAltName' befolgt werden:
+Messaging-Server-Zertifikate akzeptieren angepasste Domänen. Folgendes Format muss für den Zertifikats-CN oder 'SubjectAltName' befolgt werden:
 
 - `orgId.messaging.<custom domain>`
 

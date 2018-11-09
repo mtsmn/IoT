@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-21"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -21,7 +21,7 @@ Vous pouvez créer et personnaliser des terminaux qui interagissent avec votre o
 ## Téléchargement du client et des ressources Java
 {: #java_client_download}
 
-Pour accéder aux bibliothèques et exemples client Java pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iot-java ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java){: new_window} dans GitHub et exécutez des instructions d'installation.
+Pour accéder aux bibliothèques et exemples client Java pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iot-java ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-java){: new_window} dans GitHub et exécutez des instructions d'installation.
 
 ## Constructeur
 {: #constructor}
@@ -212,8 +212,8 @@ Pour contrôler le nombre de tentatives en cas d'échec d'une connexion, utilise
 
 ```
 DeviceClient myClient = new DeviceClient(options);
-myClient.setKeepAliveInterval(120);
-myClient.connect(10);
+    myClient.setKeepAliveInterval(120);
+    myClient.connect(10);
 ```
 
 Une fois qu'ils sont connectés à {{site.data.keyword.iot_short_notm}}, vos terminaux peuvent publier des événements et s'abonner afin de recevoir des commandes de terminal d'une application.
@@ -307,7 +307,7 @@ event.addProperty("mem",  70);
 boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-Pour visualiser la totalité du code, voir l'exemple de terminal [HttpDeviceEventPublish ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")].{: new_window}
+Pour visualiser la totalité du code, voir l'exemple de terminal [HttpDeviceEventPublish ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")].{: new_window}
 
 En fonction des paramètres définis dans le fichier de propriétés, la méthode ``publishEventOverHTTP()`` publie l'événement en mode Quickstart ou en mode de flux enregistré. Lorsque l'ID d'organisation défini dans le fichier de propriétés a pour valeur ``quickstart``, la méthode ``publishEventOverHTTP()`` publie l'événement sur le service Quickstart de l'exemple de terminal au format HTTP normal. Lorsqu'une organisation enregistrée valide est spécifiée dans le fichier de propriétés, les événements sont publiés de manière sécurisée via HTTPS.
 
@@ -406,4 +406,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## Exemples
 {: #samples}
 
-Pour obtenir une liste d'exemples de terminal et de gestion des terminaux développés à l'aide de la bibliothèque client Java {{site.data.keyword.iot_short_notm}}, voir le [référentiel GitHub iot-device-samples ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}.
+Pour obtenir une liste d'exemples de terminal et de gestion des terminaux développés à l'aide de la bibliothèque client Java {{site.data.keyword.iot_short_notm}}, voir le [référentiel GitHub iot-device-samples ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}.

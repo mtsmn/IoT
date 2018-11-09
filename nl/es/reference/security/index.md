@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-04"
+  years: 2016, 2018
+lastupdated: "2018-02-27"
 
 ---
 
@@ -29,7 +29,7 @@ El siguiente documento responde a algunas preguntas comunes sobre cómo se prote
 ## {{site.data.keyword.iot_short_notm}} y {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}} se ejecuta dentro de la plataforma {{site.data.keyword.Bluemix_notm}} y, por lo tanto, se basa en {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.BluSoftlayer_full}} para su acceso y conectividad. La dependencia en {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer_notm}} hace que la seguridad y la fiabilidad de {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.BluSoftlayer_notm}} sean importantes para los usuarios de {{site.data.keyword.iot_short_notm}}
+{{site.data.keyword.iot_short_notm}} se ejecuta en la plataforma {{site.data.keyword.Bluemix_notm}} y, por lo tanto, se basa en {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.BluSoftlayer_notm}} Infrastructure para el acceso y la conectividad. La dependencia de {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.BluSoftlayer_notm}} Infrastructure hace que la seguridad y la fiabilidad de {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.BluSoftlayer_notm}} Infrastructure sean importantes para los usuarios de {{site.data.keyword.iot_short_notm}}
 
 Para obtener más detalles sobre la seguridad de {{site.data.keyword.Bluemix_notm}}, consulte [Seguridad de la plataforma {{site.data.keyword.Bluemix_notm}}](index.html#platform-security). 
 
@@ -50,7 +50,7 @@ Para obtener más detalles sobre la seguridad de {{site.data.keyword.Bluemix_not
 ## ¿Cómo se protege la gestión de información de IoT dentro de su organización?
 {: #secure-org}
 
-La GUI basada en navegador y las API REST tienen como primer elemento HTTPS, con un certificado firmado por DigiCert, por lo que puede confiar que se está conectando al {{site.data.keyword.iot_short_notm}} genuino. El acceso a la GUI basada en web la autentica su ID de IBM o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. El uso de la API REST requiere una clave de API, generada mediante la GUI, que puede utilizar para realizar llamadas de API REST autenticadas en su organización.
+La GUI basada en navegador y las API REST tienen como primer elemento HTTPS, con un certificado firmado por DigiCert, por lo que puede confiar que se está conectando al {{site.data.keyword.iot_short_notm}} genuino. El acceso a la GUI basada en web la autentica su IBMid. El uso de la API REST requiere una clave de API, generada mediante la GUI, que puede utilizar para realizar llamadas de API REST autenticadas en su organización.
 
 ![imagen](management_platform.svg)
 

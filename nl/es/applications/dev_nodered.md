@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -31,7 +31,7 @@ Watson IoT Node es un par de nodos para conectar los dispositivos o pasarelas al
 
 Para obtener más información sobre Watson IoT Node, consulte los siguientes recursos:
 
-- [Watson IoT Node on GitHub ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-ibm-watson-iot){: new_window}
+- [Watson IoT Node on GitHub ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/node-red-contrib-ibm-watson-iot){: new_window}
 - [Documentación de Watson IoT Node ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.npmjs.com/package/node-red-contrib-ibm-watson-iot){: new_window}
 
 
@@ -45,7 +45,7 @@ IBM IoT App Node es un par de nodos para conectar las aplicaciones a {{site.data
 
 Para obtener más información sobre IBM IoT App Node, consulte los siguientes recursos:
 
-- [IBM IoT App Node on GitHub ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-scx-ibmiotapp){: new_window}
+- [IBM IoT App Node on GitHub ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/node-red-contrib-scx-ibmiotapp){: new_window}
 - [Documentación de IBM IoT App Node ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://flows.nodered.org/node/node-red-contrib-scx-ibmiotapp){: new_window}
 
 

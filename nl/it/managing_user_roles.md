@@ -19,7 +19,7 @@ I ruoli utente dettano le operazioni che è possibile eseguire per l'utente. Puo
 ## Modifica di un ruolo utente utilizzando il dashboard
 
 1. Dal tuo dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Access** > **Members** nella barra di navigazione di sinistra.
-2. Fai clic sull'icona **Edit** vicino all'utente che desideri aggiornare.
+2. Fai clic sull'icona **Edit** accanto all'utente che desideri aggiornare.
 3. Seleziona un ruolo e quindi fai clic su **Done**.
 
 <!--

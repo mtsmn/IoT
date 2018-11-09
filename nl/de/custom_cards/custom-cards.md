@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-13"
+  years: 2016, 2018
+lastupdated: "2018-03-11"
 
 ---
 
@@ -15,11 +15,18 @@ lastupdated: "2016-10-13"
 # Angepasste Karten
 {: #custom_cards}
 
-Verwenden Sie angepasste Karten, um Ihre Daten im Internet der Dinge stärker als durch die in {{site.data.keyword.iot_full}} bereitgestellten generischen Karten möglich zu visualisieren.
-{:shortdesc}
+**Wichtig:** Eine Betaversion, mit der eine neue Methode zur Definition von Regeln für IoT-Gerätedaten zur Verfügung steht,
+wird im Rahmen eines umfassenderen Programms mit Änderungen gestartet, das die Bereitstellung von Regeln und Aktionen in {{site.data.keyword.iot_full}} verbessern soll.
+
+Weitere Informationen finden Sie im Blogbeitrag [Alternative Methode zur Definition von Regeln für IoT-Daten ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Lesen Sie als ersten Schritt bei der Definition eigener Regeln die Informationen in der Dokumentation [Eingebettete Regeln erstellen (Beta)](../information_management/im_rules.html).
+
 
 ## Architektur
 {: #architecture}  
+
+Verwenden Sie angepasste Karten, um Ihre Daten im Internet der Dinge stärker als durch die in {{site.data.keyword.iot_short_notm}} bereitgestellten generischen Karten möglich zu visualisieren.
 
 Angepasste Karten werden von Ihnen erstellt und mithilfe Ihres eigenen HTTP-Server-Repositorys für angepasste Karten implementiert.  Auf diesen Server wird mithilfe des Browsers eines Benutzers zugegriffen, während der Browser {{site.data.keyword.iot_short_notm}}-Dashboards anzeigt und verarbeitet. {{site.data.keyword.iot_short_notm}} verwaltet die Browserverbindung über die Erweiterung für angepasste Karten, stellt jedoch selbst keine Verbindung zum Server für angepasste Karten her.
 
@@ -38,7 +45,7 @@ Zum Erstellen Ihrer Karten müssen Sie eine auf Node.js basierende lokale Entwic
 ## Sicherheit
 {: #security}
 
-Für den JavaScript-Code, mit dem Sie Ihre Karten auf Ihrem Server für angepasste Karten implementieren möchten, bestehen keine Einschränkungen. Mit Javascript-Code in angepassten Karten kann auf alle im Browser enthaltenen Informationen zugegriffen werden, genau wie dies bei allen anderen Karten möglich ist, die im Dashboard ausgeführt werden. Stellen Sie sicher, dass der Code für den Browser zum Anzeigen und Verarbeiten der angepassten Karten vom richtigen Server für angepasste Karten bereitgestellt wird.
+Für den JavaScript-Code, mit dem Sie Ihre Karten auf Ihrem Server für angepasste Karten implementieren möchten, bestehen keine Einschränkungen. Mit Javascript-Code in angepassten Karten kann auf alle im Browser enthaltenen Informationen zugegriffen werden, genau wie dies bei allen anderen Karten möglich ist, die im Dashboard ausgeführt werden.  Stellen Sie sicher, dass der Code für den Browser zum Anzeigen und Verarbeiten der angepassten Karten vom richtigen Server für angepasste Karten bereitgestellt wird.
 
 Der Code der Karten wird in Ihrer {{site.data.keyword.iot_short_notm}}-Browsersitzung genau so ausgeführt, wie er geschrieben wurde. Darüber hinaus wird die Verbindung zum Server für angepasste Karten hergestellt, ohne dass für den Server für angepasste Karten Berechtigungsnachweise bereitgestellt werden. Der Browser eines Benutzers kann eine Verbindung zu jedem konfigurierten Server für angepasste Karten herstellen.
 

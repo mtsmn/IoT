@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-06-13"
+  years: 2016, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -20,7 +20,18 @@ security) sont utilisés, en plus des ID utilisateur et des jetons utilisés par
 {{site.data.keyword.iot_short_notm}}, pour déterminer comment et où les terminaux
 se connectent à la plateforme.
 
-## Certificats
+## Liste de révocations des certificats et certificats client 
+{: #CRLs}
+
+Les listes de révocation des certificats (CRL) sont prises en charge par les configurations qui utilisent les certificats clients pour authentifier les terminaux. L'emplacement spécifié en tant que point de distribution doit prendre en charge l'accès HTTP ou HTTPS et le site doit être accessible. La connexion client est rejetée si le point de distribution de la CRL ne peut pas être atteint ou si la CRL n'est pas valide ou n'est pas trouvée au point de distribution. 
+ 
+
+Les certificats client doivent être signés par les certificats des autorités de certification (CA) qui ont la mention "Certificate Sign" spécifiée dans la section "X509v3 Key Usage" dans "X509v3 extensions". Pour utiliser les CRL pour révoquer les certificats client, le certificat de l'autorité de certification qui signe un certificat client doit également inclure "CRL Sign" dans la section "X509v3 Key Usage" dans "X509v3 extensions". Cette configuration permet au certificat de l'autorité de certification d'émettre et de signer les mises à jour de la CRL lorsque cela est nécessaire. Seule la CRL spécifié dans le point de distribution de certificat client est utilisée pour déterminer si un certificat a été révoqué.
+
+Veillez à tester vos certificats et vos CRL, en particulier si vous générez vos propres certificats et CRL au lieu d'utiliser les certificats d'une autorité de certification reconnue.
+
+
+## Configuration des certificats
 {: #certificates}
 
 Lorsque l'utilisation de certificats est en vigueur, pendant la communication entre les terminaux
@@ -32,7 +43,7 @@ Pour configurer les certificats et l'accès au serveur par les terminaux,
 l'opérateur du système enregistre les certificats de l'autorité de certification (AC) associée et,
 en option, les certificats des serveurs de messagerie dans Watson IoT Platform.
 Pour configurer les certificats de client et l'accès au serveur par les terminaux, l'opérateur du
-système importe les certificats de l'AC associée et les certificats des serveurs de messagerie dans la {{site.data.keyword.iot_short_notm}}. L'analyste de sécurité configure ensuite les politiques de sécurité de connexion par défaut entre les terminaux et la plateforme. L'analyste peut ajouter différentes politiques pour différents types de terminaux.
+système importe les certificats de l'AC associée et les certificats des serveurs de messagerie dans la {{site.data.keyword.iot_short_notm}}. L'analyste de sécurité configure ensuite les politiques de sécurité de connexion par défaut entre les terminaux et la plateforme. L'analyste peut ajouter différentes politiques pour différents types de terminal.
 
 Pour plus d'informations sur la configuration des certificats, voir [Configuration des certificats](set_up_certificates.html).
 
@@ -40,8 +51,7 @@ Pour plus d'informations sur la configuration des certificats, voir [Configurati
 {: #connect_policy}
 
 Les paramètres de sécurité, qui comprennent l'utilisation de politiques de connexion, de certificats d'AC et de certificats
-de serveur de messagerie, déterminent de quelle manière les terminaux se connectent à la plateforme. Vous pouvez configurer des politiques de connexion par défaut pour tous les types de
-terminaux et créer des configurations personnalisées pour des types de terminaux
+de serveur de messagerie, déterminent de quelle manière les terminaux se connectent à la plateforme. Vous pouvez configurer des politiques de connexion par défaut pour tous les types de terminal et créer des configurations personnalisées pour des types de terminal
 spécifiques. La
 politique peut être définie pour autoriser les connexions non chiffrées,
 pour imposer l'emploi de connexions sécurisées par TLS et pour

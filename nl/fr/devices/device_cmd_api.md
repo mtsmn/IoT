@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2015, 2017
-lastupdated: "2017-10-04"
+ years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -29,17 +29,18 @@ consultez [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![Icône de l
 
 Pour plus d'informations sur la sécurité du client et pour savoir comment connecter des clients dans {{site.data.keyword.iot_short_notm}}, voir [Connexion d'applications, de terminaux et de passerelles à {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
 
-## Publication d'événements
+## Publication d'événements 
 {: #event_publication}
 
 Outre l'utilisation du protocole de messagerie MQTT, vous pouvez également configurer vos terminaux pour qu'ils publient des événements sur {{site.data.keyword.iot_short_notm}} via HTTP en exécutant des commandes d'API REST HTTP.
 
 Utilisez l'une des URL suivantes pour soumettre une demande ``POST`` à partir d'un terminal qui est connecté à {{site.data.keyword.iot_short_notm}} :
 
-### Demande POST non sécurisée
+### Demande POST non sécurisée pour la publication d'événements
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-### Demande POST sécurisée
+### Demande POST sécurisée pour la publication d'événements
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
@@ -47,7 +48,7 @@ Utilisez l'une des URL suivantes pour soumettre une demande ``POST`` à partir d
 
 ### Authentification
 
-Toutes les demandes doivent inclure un en-tête d'autorisation. L'authentification de base est la seule méthode prise en charge. Lorsqu'un terminal effectue une demande HTTP via l'API REST HTTP {{site.data.keyword.iot_short_notm}}, les données d'identification suivantes sont requises :
+Toutes les demandes doivent inclure un en-tête d'autorisation. L'authentification de base est la seule méthode prise en charge. Lorsqu'un terminal effectue une demande HTTP via l'API REST HTTP de {{site.data.keyword.iot_short_notm}}, les données d'identification suivantes sont requises :
 
 |Données d'identification|Entrée requise|
 |:---|:---|
@@ -77,10 +78,11 @@ messagerie HTTP. Un terminal peut recevoir des commandes qui lui sont destinées
 
 Utilisez l'une des URL suivantes pour soumettre une demande ``POST`` à partir d'un terminal qui est connecté à {{site.data.keyword.iot_short_notm}} :
 
-### Demande POST non sécurisée
+### Demande POST non sécurisée pour la réception des commandes
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
-### Demande POST sécurisée
+### Demande POST sécurisée pour la réception des commandes
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 

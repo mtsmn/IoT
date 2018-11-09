@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-06-13"
+  years: 2016, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -17,7 +17,18 @@ lastupdated: "2017-06-13"
 
 Sie können die Sicherheit verbessern, um das Erstellen, Durchsetzen und Melden der Verbindungssicherheit von Geräten zu ermöglichen. Dank dieser erhöhten Sicherheit werden neben den von {{site.data.keyword.iot_short_notm}} verwendeten Benutzer-IDs und Tokens Zertifikate und die TLS-Authentifizierung (TLS, Transport Layer Security) verwendet, um festzulegen, wie und wo Geräte eine Verbindung zu der Plattform herstellen.
 
-## Zertifikate
+## Zertifikatswiderrufslisten und Clientzertifikate
+{: #CRLs}
+
+Zertifikatswiderrufslisten (Certificate Revocation Lists, CRLs) werden für Konfigurationen unterstützt, die für die Authentifizierung von Geräten Clientzertifikate verwenden. Die Position, die als CRL-Verteilungspunkt angegeben ist, muss entweder den HTTP- oder HTTPS-Zugriff unterstützen und die Site muss erreichbar sein. Die Clientverbindung wird zurückgewiesen, wenn der Verteilungspunkt der CRL nicht erreicht werden kann oder wenn die CRL nicht gültig ist oder am Verteilungspunkt nicht gefunden wurde. 
+ 
+
+Clientzertifikate müssen von Zertifikaten der Zertifizierungsstelle signiert sein, für die 'Certificate Sign' im Abschnitt 'X509v3 Key Usage' in 'X509v3 extensions' angegeben ist. Wenn Sie CRLs verwenden möchten, um Clientzertifikate zu widerrufen, muss das CA-Zertifikat, das ein Clientzertifikat signieren, auch 'CRL Sign' im Abschnitt 'X509v3 Key Usage' in 'X509v3 extensions' enthalten. Diese Konfiguration ermöglicht es dem CA-Zertifikat, bei Bedarf CRL-Aktualisierungen auszugeben und zu signieren. Nur die CRL, die im Verteilerpunkt des Clientzertifikats angegeben ist, wird verwendet, um festzustellen, ob ein Zertifikat widerrufen wurde.
+
+Stellen Sie sicher, dass Sie Ihre Zertifikate und CRLs testen, insbesondere dann, wenn Sie Ihre eigenen Zertifikate und CRLs generieren, anstatt Zertifikate von einer anerkannten Zertifizierungsstelle zu verwenden.
+
+
+## Zertifikate konfigurieren
 {: #certificates}
 
 Sind Zertifikate aktiviert, wird während der Kommunikation zwischen Geräten und dem Server allen Geräten, die in ihren Sicherheitseinstellungen nicht über gültige Zertifikate verfügen, der Zugriff verweigert, selbst wenn sie über gültige Benutzer-IDs und Kennwörter verfügen.

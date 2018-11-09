@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -13,14 +13,14 @@ lastupdated: "2017-06-16"
 {:screen: .screen}
 {:tip: .tip}
 
-# 指南 3：监视设备数据
+# 指南 2：监视设备数据
 既然您已连接了一个或多个设备，现在是时候开始实时监视设备数据了。
 {:shortdesc}
 
 ## 概述和目标
 {: #overview}  
 
-在本指南中，您将在 {{site.data.keyword.Bluemix_notm}} 上部署监视应用程序以从设备查看数据。
+在本指南中，您将在 {{site.data.keyword.Bluemix}} 上部署监视应用程序以从设备查看数据。
 
 与指南 1 中所示，可以遵循以下一个或两个路径：
 - 路径 A：[步骤 1A - 部署并连接监视 Web 应用程序](#deploy_app)  
@@ -60,7 +60,7 @@ lastupdated: "2017-06-16"
 ## 步骤 1A - 部署和连接监视 Web 应用程序
 {: #deploy_app}
 
-Plant Floor Monitoring 样本应用程序列出所有 iot-conveyor-belt 类型的设备，这些设备使用事件数据的子集（如 RPM、上次更新和设备标识）连接到 {{site.data.keyword.iot_short_notm}} 组织。
+Plant Floor Monitoring 样本应用程序列出所有 iot-conveyor-belt 类型的设备，这些设备使用事件数据的子集（如 RPM、上次更新和设备标识）连接到 {{site.data.keyword.iot_full}} 组织。
 
 样本应用程序是使用 Node.js 客户机库构建的，网址为：[https://github.com/ibm-watson-iot/iot-nodejs ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 
@@ -71,7 +71,7 @@ Plant Floor Monitoring 样本应用程序列出所有 iot-conveyor-belt 类型�
 - 使用 API 密钥和认证令牌配置样本应用程序以连接到 {{site.data.keyword.iot_short_notm}}。
 - 使用 Web 应用程序来监视所连接的传送带设备。  
 
-### 详细步骤
+### 部署和连接监视 Web 应用程序的详细步骤
 以下步骤将指导您在 {{site.data.keyword.Bluemix_notm}} 上创建和部署应用程序。有关在本地运行应用程序的信息，请参阅 GitHub 中的自述文件。
 1. 克隆 Node.js *Plant Floor Monitoring* 样本应用程序 GitHub 存储库。  
 使用您最喜欢的工具来克隆以下存储库：  
@@ -146,8 +146,7 @@ cd guide-conveyor-ui-angular
 8. 运行 `npm install`。
 9. 运行 `npm run push` 以构建项目并推送到您的组织。  
 已在 {{site.data.keyword.Bluemix_notm}} 上部署样本 Web 应用程序。  
-部署完成后，将显示一条消息以指示应用程序正在运行。
-   
+部署完成后，将显示一条消息以指示应用程序正在运行。   
 示例：  
   ```
 requested state: started
@@ -179,7 +178,7 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack
 - 配置三个用户界面窗口小部件，以将设备数据显示为量表和图形。
 - 使用 Web 应用程序来监视所连接的传送带设备。  
 
-### 详细步骤
+### 使用窗口小部件库创建监视用户界面的详细步骤
 以下步骤将指导您在 {{site.data.keyword.Bluemix_notm}} 上创建和部署应用程序。有关在本地运行应用程序的信息，请参阅 GitHub 中的自述文件。
 1. 克隆 *Widget Library Monitoring* 样本应用程序 GitHub 存储库。  
 使用您最喜欢的工具来克隆以下存储库：  
@@ -200,17 +199,16 @@ npm install
 
 下表提供了参数的描述：
 
-| 参数| 描述
-|    
+|参数|描述|    
 | ----- | ---- |   
-| WIDGET_TYPE | 要创建的窗口小部件的类型。示例：`Gauge` 或 `Chart` |
-| ELEMENT_ID | 窗口小部件显示在应用程序中的元素标识。示例：`RPM` |
-| EVENT_NAME | 包含要显示的属性的设备事件名称。示例：`sensorData` |
-| DEVICE_TYPE | 设备类型。示例：`iot-conveyor-belt` |
-| DEVICE_ID | 提供要显示的数据的设备标识。示例：`belt1` |
-| PROPERTY | 要显示的设备消息有效内容属性。示例：`rpm` |
-| WIDGET_DEFAULT_OVERRIDE | 窗口小部件配置设置，用于覆盖缺省设置。|
-| WIDGET_SPECIFIC_SETTINGS | 窗口小部件的一个或多个其他参数，请参阅示例。|
+|WIDGET_TYPE |要创建的窗口小部件的类型。示例：`Gauge` 或 `Chart` |
+|ELEMENT_ID |窗口小部件显示在应用程序中的元素标识。示例：`RPM` |
+|EVENT_NAME |包含要显示的属性的设备事件名称。示例：`sensorData` |
+|DEVICE_TYPE |设备类型。示例：`iot-conveyor-belt` |
+|DEVICE_ID |提供要显示的数据的设备标识。示例：`belt1` |
+|PROPERTY |要显示的设备消息有效内容属性。示例：`rpm` |
+|WIDGET_DEFAULT_OVERRIDE |窗口小部件配置设置，用于覆盖缺省设置。|
+|WIDGET_SPECIFIC_SETTINGS |窗口小部件的一个或多个其他参数，请参阅示例。|
 
 有关每个窗口小部件类型的详细信息，请参阅后面的示例以及 [IoT窗口小部件 GitHub 存储库 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-widgets){: new_page} 中的文档。
  1. 添加 RPM 量表。  
@@ -355,7 +353,7 @@ cf push YOUR_APP_NAME
 - 路径 B：修改窗口小部件库应用程序以满足您的需求。  
 有关技术详细信息，请参阅：
  - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
-- [指南 4：模拟大量设备](getting-started-iot-large-scale-simulation.html)  
-通过向环境中添加大量自运行模拟器来扩展基本模拟。此扩展将使您在更现实的多设备环境中，测试通过之前指南所进行的基本分析和监视。
+- [指南 3：模拟大量设备](getting-started-iot-large-scale-simulation.html)  
+通过向环境中添加大量自运行模拟器来扩展基本模拟。
 - [了解有关 {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window} 的更多信息
 - [了解有关 {{site.data.keyword.iot_short_notm}} API](/docs/services/IoT/reference/api.html){:new_window} 的更多信息

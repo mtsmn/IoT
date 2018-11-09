@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2016-11-22"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -89,8 +89,7 @@ DeviceMetadata metadata = new DeviceMetadata(data);
 
 构造方法一用于通过接受 `DeviceData` 和以下所有必需属性，在 {{site.data.keyword.iot_short_notm}} 中构造 `ManagedDevice` 实例：
 
-|属性|描述
-|
+|属性|描述|
 |:---|:---|
 |``Organization-ID`` |组织的标识|
 |``Device-Type`` |设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
@@ -162,7 +161,7 @@ managedDevice.manage(3600);
 
 有关 `Manage` 操作的更多信息，请参阅[文档]。
 
-  [documentation]: ../device_mgmt/operations/manage.html
+  [documentation]:../device_mgmt/operations/manage.html
 
 ## 取消管理
 
@@ -174,7 +173,7 @@ managedDevice.unmanage();
 
 有关 `Unmanage` 操作的更多信息，请参阅[文档]。
 
-  [documentation]: ../device_mgmt/operations/manage.html
+  [documentation]:../device_mgmt/operations/manage.html
 
 ## 位置更新
 {: #construct_location_update}

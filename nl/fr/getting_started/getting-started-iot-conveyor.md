@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-02-24"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-06-16"
 
 
 # Guide 1 : Connexion d'un terminal de tapis roulant  
-Créez un tapis roulant de base avec un terminal IoT qui envoie des données de surveillance à {{site.data.keyword.iot_short_notm}} sur {{site.data.keyword.Bluemix_notm}}.
+Créez un tapis roulant de base avec un terminal IoT qui envoie des données de surveillance à {{site.data.keyword.iot_full}} sur {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
 ## Présentation et objectif
@@ -33,25 +33,23 @@ Dans le cadre de ce guide, vous allez apprendre à :
 - Créer et déployer une organisation {{site.data.keyword.iot_short_notm}} en utilisant l'interface de ligne de commande Cloud Foundry.
 - Générer et déployer un modèle de terminal de tapis roulant.
 - Connecter le terminal de tapis roulant simulé à {{site.data.keyword.iot_short_notm}}.
-- Surveiller et visualiser des données de terminal à l'aide des tableaux de bord {{site.data.keyword.iot_short_notm}}.
 
-Pour vous familiariser avec {{site.data.keyword.iot_short_notm}} à l'aide d'un terminal IoT différent, voir le [Tutoriel Initiation](/docs/services/IoT/getting-started.html).
+Pour vous familiariser avec {{site.data.keyword.iot_short_notm}} à l'aide d'un terminal IoT différent, voir le [Tutoriel d'initiation](/docs/services/IoT/getting-started.html).
 {: tip}
 
 ## Prérequis
 {: #prereqs}
 
 Vous devez préalablement disposer des comptes et outils suivants :
-* [Un compte {{site.data.keyword.Bluemix_notm}} ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/registration/){: new_window}
-* [Une interface de ligne de commande Cloud Foundry (CLI CF) ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
-Utilisez l'interface CLI CF pour déployer des applications et des services sur {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir la documentation [Cloud Foundry CLI![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/){: new_window}
-* Facultatif : [Git ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}  
-Si vous choisissez d''utiliser Git pour télécharger les exemples de code, vous devez disposer d'un [compte GitHub.com ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com){: new_window}. Vous pouvez aussi télécharger le code sous forme de fichier compressé si vous n'avez pas de compte GitHub.com.
+* [Un compte {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/registration/){: new_window}
+* [Une interface de ligne de commande Cloud Foundry (CLI CF) ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
+Utilisez l'interface CLI CF pour déployer des applications et des services sur {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir la documentation [Cloud Foundry CLI![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudfoundry.org/cf-cli/){: new_window}
+* Facultatif : [Git ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads){: new_window}  
+Si vous choisissez d''utiliser Git pour télécharger les exemples de code, vous devez disposer d'un [compte GitHub.com ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com){: new_window}. Vous pouvez aussi télécharger le code sous forme de fichier compressé si vous n'avez pas de compte GitHub.com.
 * Facultatif : Un téléphone mobile sur lequel exécuter le modèle d'application Web *Tapis roulant* permettant d'envoyer les données de l'accéléromètre.
 
 ## Etape 1 - Déploiement de {{site.data.keyword.iot_short_notm}}  
 {: #deploy_watson_iot_platform_service}
-{{site.data.keyword.iot_short_notm}} fournit aux applications un accès puissant aux terminaux et aux données IoT afin de vous aider à composer rapidement des applications d'analyse, des tableaux de bord de visualisation et des applications IoT mobiles.
 Les étapes décrites ci-après vont vous permettre de déployer une instance du service {{site.data.keyword.iot_short_notm}} nommée `iotp-for-conveyor` au sein de votre environnement {{site.data.keyword.Bluemix_notm}}. Si vous disposez déjà d'une instance en cours d'exécution, vous pouvez l'utiliser dans le cadre de guide et ignorer la première étape. Dans ce cas, assurez-vous simplement d'utiliser le bon nom de service et le bon espace {{site.data.keyword.Bluemix_notm}} lors de votre progression dans les guides.
 {: tip}
 1. A partir de la ligne de commande, définissez le noeud final de votre API en exécutant la commande d'API CF.   
@@ -86,33 +84,33 @@ Si le système vous y invite, sélectionnez l'organisation et l'espace où vous 
 3. Déployez le service {{site.data.keyword.iot_short_notm}} sur {{site.data.keyword.Bluemix_notm}}.  
    ```
 cf create-service iotf-service iotf-service-free YOUR_IOT_PLATFORM_NAME
-  ```
-Pour YOUR_IOT_PLATFORM_NAME, utilisez *iotp-for-conveyor*.
+   ```
+Pour YOUR_IOT_PLATFORM_NAME, utilisez *iotp-for-conveyor*.  
 Exemple : `cf create-service iotf-service iotf-service-free iotp-for-conveyor`
-3. Créez votre modèle de terminal de tapis roulant.
- - Chemin A : [Etape 2A - Utilisation du modèle d'application de simulation depuis GitHub](#deploy_app).
- - Chemin B : [Etape 2B - Génération d'un tapis roulant physique à l'aie d'un Raspberry Pi et d'un moteur électrique](#raspberry).
+3. Créez votre exemple de terminal de tapis roulant.  
+ - Chemin A : [Etape 2A - Utilisez le modèle d'application de simulateur de GitHub](#deploy_app).  
+ - Chemin B : [Etape 2B - Créez un tapis roulant physique avec un Raspberry Pi et un moteur électrique](#raspberry).  
 
-## Etape 2A - Déploiement du modèle d'application Web de tapis roulant
+## Etape 2A - Déploiement d'un modèle d'application Web de tapis roulant  
 {: #deploy_app}
 
 Le modèle d'application vous permet de simuler un tapis roulant industriel connecté {{site.data.keyword.Bluemix_notm}}. Vous pouvez démarrer et arrêter le tapis et ajuster sa vitesse. Chaque modification apportée au tapis est envoyée à {{site.data.keyword.Bluemix_notm}} sous la forme d'un message MQTT qui s'affiche dans l'application. Vous pouvez surveiller le comportement du tapis en utilisant les cartes de tableaux de bord par défaut.
-Le modèle d'application est généré à l'aide des bibliothèques client Node.js qui sont accessibles à l'adresse : [https://github.com/ibm-watson-iot/iot-nodejs ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
+Le modèle d'application repose sur des bibliothèques client Node.js accessibles depuis : [https://github.com/ibm-watson-iot/iot-nodejs ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 
-![Conveyor belt app](images/app_conveyor_belt.png "Conveyor belt app")
+![Application de tapis roulant](images/app_conveyor_belt.png "Application de tapis roulant")
 
-1. Utilisez votre outil Git favori pour cloner le référentiel ci-dessous :
+1. Servez-vous de votre outil Git favori pour cloner le référentiel ci-dessous :  
 https://github.com/ibm-watson-iot/guide-conveyor-simulator
-A partir de l'interpréteur de commande Git, exécutez la commande suivante :
+Dans l'interpréteur de commande Git, exécutez la commande suivante :
   ```bash
 git clone https://github.com/ibm-watson-iot/guide-conveyor-simulator
   ```
-2. Sur la ligne de commande, remplacez le répertoire par celui où se trouve le modèle d'application.
+2. Sur la ligne de commande, accédez au répertoire contenant le modèle d'application.
   ```bash
 cd guide-conveyor-simulator
   ```
-3. A partir du répertoire *guide-conveyor-simulator*, envoyez l'application à {{site.data.keyword.Bluemix_notm}} et attribuez-lui un nouveau nom en remplaçant *YOUR_APP_NAME* dans la commande push cf. Utilisez l'option `--no-start`, car vous devrez redémarrer l'application à l'étape suivante une fois qu'elle sera liée à {{site.data.keyword.iot_short_notm}}.
-**Remarque :** Le déploiement de l'application peut prendre quelques minutes.
+3. Dans le répertoire *guide-conveyor-simulator*, envoyez l'application à {{site.data.keyword.Bluemix_notm}} et attribuez-lui un nouveau nom en remplaçant *YOUR_APP_NAME* dans la commande cf push. Utilisez l'option `--no-start` car vous devrez redémarrer l'application à l'étape suivante une fois qu'elle sera liée à {{site.data.keyword.iot_short_notm}}.
+**Remarque :** Le déploiement de votre application peut prendre quelques minutes.
    ```bash
 cf push YOUR_APP_NAME --no-start
   ```  
@@ -126,7 +124,7 @@ Pour plus d'informations sur la liaison d'applications, voir [Connexion d'applic
 cf start YOUR_APP_NAME
   ```
 A ce stade, votre modèle d'application Web est déployée sur {{site.data.keyword.Bluemix_notm}}.
-Une fois le déploiement terminé, un message s'affiche pour indiquer que votre application est en cours d'exécution.
+Une fois le déploiement terminé, un message s'affiche pour indiquer que votre application est en cours d'exécution.   
 Exemple :
   ```bash
 name:              YOUR_APP_NAME
@@ -149,17 +147,17 @@ cf apps
   ```
 Corrigez les erreurs du processus de déploiement en utilisant la commande `cf logs YOUR_APP_NAME --recent`.
 {: tip}
-1. Accédez à l'application depuis un navigateur.
-Ouvrez l'adresse URL suivante : `https://YOUR_APP_NAME.mybluemix.net`
+1. Accédez à l'application depuis un navigateur.  
+Ouvrez l'adresse URL suivante : `https://YOUR_APP_NAME.mybluemix.net`    
 Exemple : `https://conveyorbelt.mybluemix.net/`.
-2. Entrez un ID de terminal et un jeton pour votre terminal.
+2. Entrez un ID de terminal et un jeton pour votre terminal.  
 Le modèle d'application enregistre automatiquement un terminal de type `iot-conveyor-belt` avec le jeton et l'ID de terminal que vous avez indiqués. Pour en savoir plus sur l'enregistrement de terminaux, voir [Connexion de terminaux](/docs/services/IoT/iotplatform_task.html#iotplatform_subtask1).
 4. Passez à l'[Etape 3 - Visualisation des données brutes dans {{site.data.keyword.iot_short_notm}}](#see_live_data).
 
 ## Etape 2B - Génération d'un tapis roulant à l'aide de Raspberry Pi
 {: #raspberry}
 
-La solution Raspberry Pi est générée à l'aide des bibliothèques client Python qui sont accessibles à l'adresse : [https://github.com/ibm-watson-iot/iot-python ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python){: new_window}
+La solution Raspberry Pi est générée à l'aide des bibliothèques client Python qui sont accessibles à l'adresse : [https://github.com/ibm-watson-iot/iot-python ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-python){: new_window}
 
 ### Schéma du circuit
 
@@ -180,16 +178,16 @@ Les connexions suivantes entre la carte Raspberry Pi et la carte L298N Dual H Br
 
 ### Configuration matérielle
 
-1. [Raspberry Pi(2/3) ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://www.raspberrypi.org/){: new_window} avec Raspbian Jessie (8.x).
-2. [L298N Dual H Bridge Motor Driver Board ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://tronixlabs.com.au/robotics/motor-controllers/l298n-dual-motor-controller-module-2a-australia/){: new_window}
+1. [Raspberry Pi(2/3) ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.raspberrypi.org/){: new_window} avec Raspbian Jessie (8.x).
+2. [L298N Dual H Bridge Motor Driver Board ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://tronixlabs.com.au/robotics/motor-controllers/l298n-dual-motor-controller-module-2a-australia/){: new_window}
 3. Moteur 9V CC
 4. Pile 9V
 
 ### Configuration logicielle Raspberry Pi
 - Python version 2.7.9 et ultérieure, installée avec Raspbian Jessie (8.x).
-- [Bibliothèque Python Watson IoT ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python){: new_window}
-- Facultatif : Git.
-Si Git n'est pas déjà installé sur votre Raspberry Pi, vous pouvez l'installer en exécutant la commande suivante :
+- [Bibliothèque Python Watson IoT ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-python){: new_window}
+- Facultatif : Git.  
+Si Git n'est pas déjà installé sur votre Raspberry Pi, vous pouvez l'installer en exécutant la commande suivante :  
 ```bash
 $ sudo apt-get install git
 ```
@@ -203,46 +201,46 @@ A partir de l'interpréteur de commande Git, utilisez la commande suivante :
 ```bash
 $ git clone https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi
 ```
-3. Enregistrez le terminal auprès de {{site.data.keyword.iot_short_notm}}.
+3. Enregistrez le terminal auprès de {{site.data.keyword.iot_short_notm}}.  
 Pour en savoir plus sur l'enregistrement de terminaux, voir [Connexion de terminaux](/docs/services/IoT/iotplatform_task.html#iotplatform_subtask1).
-1. Dans la console {{site.data.keyword.Bluemix_notm}}, cliquez sur **Lancer** sur la page des informations détaillées du service {{site.data.keyword.iot_short_notm}}.
-	     La console Web {{site.data.keyword.iot_short_notm}} s'ouvre dans un nouvel onglet de navigateur à l'URL suivante :
+	 1. Dans la console {{site.data.keyword.Bluemix_notm}}, cliquez sur **Lancer** sur la page des informations détaillées du service {{site.data.keyword.iot_short_notm}}.
+	     La console web {{site.data.keyword.iot_short_notm}} s'ouvre dans un nouvel onglet de navigateur à l'URL suivante :
 	     ```
 	     https://ORG_ID.internetofthings.ibmcloud.com/dashboard/#/overview
 	     ```
-	     où ORG_ID désigne l'ID unique à six caractères de [votre organisation {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html#organizations){: new_window}.
-	 2. Dans le tableau de bord Présentation, à partir du panneau de menu, sélectionnez **Terminaux** et cliquez sur **Ajouter un terminal**.
+	     Où ORG_ID est l'ID unique à six caractères de [votre {{site.data.keyword.iot_short_notm}} organisation](/docs/services/IoT/iotplatform_overview.html#organizations){: new_window}.
+	 2. Dans le tableau de bord Présentation, à partir du panneau de menu, sélectionnez **Terminaux**, puis cliquez sur **Ajouter un terminal**.
 	 3. Créez un type de terminal pour le terminal que vous ajoutez.
 	     1. Cliquez sur **Créer un type de terminal**.
-	     2. Entrez le nom du type de terminal `iotp-for-conveyor`, ainsi que sa description.
-	**Astuce :** Vous pouvez entrer n'importe quel nom de terminal, mais les exemples fournis dans les autres guides supposent que vous utilisiez le nom de type de terminal `iotp-for-conveyor`. Si vous choisissez un type de terminal différent, pensez à modifier les paramètres des autres guides en conséquence.
+	     2. Entrez le nom du type de terminal `iotp-for-conveyor` et une description du type de terminal.  
+	**Astuce :** vous pouvez entrer n'importe quel nom de type de terminal, mais les autres guides supposent que vous utilisiez des terminaux de type `iotp-for-conveyor`. Si vous choisissez un type de terminal différent, pensez à modifier les paramètres des autres guides en conséquence.
 	     3. Facultatif : Entrez des métadonnées et des attributs de type de terminal.
 	 4. Cliquez sur **Suivant** pour commencer le processus d'ajout de votre terminal avec le type de terminal sélectionné.
-	 5. Entrez un ID de terminal, par exemple, `conveyor_belt`.
+	 5. Entrez un ID de terminal, par exemple `conveyor_belt`.
 	 5. Cliquez sur **Suivant** pour finaliser le processus.
-	 6. Fournissez un jeton d'authentification ou acceptez celui qui est généré automatiquement.
-	 7. Vérifiez que les informations récapitulatives sont correctes et cliquez sur **Ajouter** pour ajouter la connexion.
-	 8. Dans la page des informations sur le terminal, copiez et sauvegardez les détails ci-dessous :
+	 6. Fournissez un jeton d'authentification ou acceptez un jeton généré automatiquement.
+	 7. Vérifiez que les informations récapitulatives sont correctes puis cliquez sur **Ajouter** pour ajouter la connexion.
+	 8. Sur la page Informations sur le terminal, copiez et sauvegardez les détails suivants :
 	     * ID d'organisation
 	     * Type de terminal
 	     * ID de terminal
 	     * Méthode d'authentification
 	     * Jeton d'authentification
-	     Vous aurez besoin des valeurs ID d'organisation, Type de terminal et Jeton d'authentification pour configurer la connexion de votre terminal à {{site.data.keyword.iot_short_notm}}.
-4. Placez-vous à la racine *guide-conveyor-rasp-pi* du référentiel cloné.
-5. Lancez l'exécutable du script schell à l'aide de la commande `sudo chmod +x setup.sh`
-6. Exécutez le fichier *setup.sh* et entrez les valeurs que vous avez copiées depuis la page des informations sur le terminal.
+	     Vous aurez besoin de l'ID d'organisation, du type de terminal, de l'ID du terminal et du jeton d'authentification pour configurer votre terminal pour qu'il se connecte à {{site.data.keyword.iot_short_notm}}.
+4. Accédez à la racine du référentiel cloné *guide-conveyor-rasp-pi*.
+5. Rendez le script shell exécutable à l'aide de la commande `sudo chmod +x setup.sh`
+6. Exécutez le fichier *setup.sh* et entrez les détails que vous avez copiés de la page d'information sur le terminal à l'invite.
 ```bash  
 ./setup.sh
 ```  
 
-7. Exécutez le programme deviceClient.
+7. Exécutez le programme deviceClient.  
 Lorsque vous exécutez le programme, le Raspberry Pi démarre le moteur et celui-ci fonctionne pendant 2 minutes en fonction de vos paramètres.
 ```bash
 python deviceClient.py -t 2
 ```
 
-Lorsque le moteur tourne, le programme publie les événements de type `sensorData` dotés de la structure de charge suivante :
+Pendant que le moteur s'exécute, le programme publie des événement de type `sensorData` qui ont le modèle de structure de contenu suivant :  
 ```
 {
 "d": {
@@ -255,98 +253,42 @@ Lorsque le moteur tourne, le programme publie les événements de type `sensorDa
 }
 ```
 
-8. Passez à l'[Etape 3 - Visualisation des données brutes dans {{site.data.keyword.iot_short_notm}}](#see_live_data).
+8. Passez à [Etape 3 - Visualisation des données brutes dans {{site.data.keyword.iot_short_notm}}](#see_live_data).
 
 ## Etape 3 - Visualisation des données brutes dans {{site.data.keyword.iot_short_notm}}
 {: #see_live_data}
 1. Vérifiez que le terminal est enregistré auprès de {{site.data.keyword.iot_short_notm}}.
  1. Connectez-vous à votre tableau de bord {{site.data.keyword.Bluemix_notm}} à l'adresse : https://bluemix.net
- 2. Dans [la liste de vos services ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net/dashboard/services){: new_window}, cliquez sur *iotp-for-conveyor* {{site.data.keyword.iot_short_notm}}.
- 3. Cliquez sur *Lancer* pour ouvrir le tableau de bord {{site.data.keyword.iot_short_notm}} dans un nouvel onglet de navigateur.
-Vous pouvez ajouter l'URL à vos signets afin d'y accéder plus facilement à l'avenir.
+ 2. Dans [votre liste de services ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://bluemix.net/dashboard/services){: new_window}, cliquez sur le service *iotp-for-conveyor* de {{site.data.keyword.iot_short_notm}}.
+ 3. Cliquez sur *Lancer* pour ouvrir le tableau de bord {{site.data.keyword.iot_short_notm}} dans un nouvel onglet du navigateur.  
+Vous pouvez ajouter l'URL à vos signets afin d'y accéder plus facilement à l'avenir.   
 Exemple : `https://*iot-org-id*.internetofthings.ibmcloud.com`.
- 4. Dans le menu, sélectionnez **Terminaux** et vérifiez que le nouveau terminal s'affiche.
-2. Affichez les données brutes.
- 1. Dans le menu, sélectionnez **Tableaux**.
- 3. Sélectionnez le tableau **Device Centric Analytics**.
- 4. Recherchez la carte **Terminaux qui m'intéressent** et sélectionnez le terminal de votre choix.
-Le nom de terminal est affiché dans la carte Propriétés de terminal.
-4. Envoyez les données du capteur à la plateforme.
-Le terminal envoie les données à {{site.data.keyword.iot_short_notm}} lorsque les relevés de capteur changent. Vous pouvez simuler cet envoi de données en arrêtant le tapis roulant, en le démarrant ou en changeant sa vitesse.   **Chemin A :** Si vous accédez à l'application depuis un navigateur mobile, essayez de secouer votre smartphone pour déclencher les données d'accéléromètre du tapis roulant.
+ 4. Dans le menu, sélectionnez **Terminaux** et vérifiez que votre nouveau terminal s'affiche.
+2. Envoyez les données du détecteur à la plateforme.   
+Le terminal envoie les données à {{site.data.keyword.iot_short_notm}} lorsque les relevés de capteur changent. Vous pouvez simuler cet envoi de données en arrêtant le tapis roulant, en le démarrant ou en changeant sa vitesse.   
+**Chemin :** si vous accédez à l'application depuis un navigateur mobile, essayez de secouer votre smartphone pour déclencher les données de l'accéléromètre du tapis roulant.
 {: tip}
-3. Vérifiez que les points de données du terminal mis à jour correspondant au message publié sont affichés dans la carte Propriétés de terminal.
-Exemple de message A :
-  ```
-{
-	"d": {
-		"id": "belt1",
-		"ts": 1494341288662,
-		"ay": "0.00",
-		"running": true,
-		"rpm": "0.6"
-	}
-}
-  ```
-Exemple de message B :
-  ```
-{
-	"d": {
-    "elapsed": 1,
-    "running": true,
-    "temperature": 35.00,
-    "ay": "0.00",
-    "rpm": "0.6"
-  }
-}
-  ```
 
-
-## Etape 4 - Visualisation des données en temps réel dans {{site.data.keyword.iot_short_notm}}
-{: #add_card}
-Pour créer une carte de tableau de bord permettant de voir les données du tapis roulant en temps réel :
-1. Sur la même carte Device Centric Analytics, cliquez sur **Ajouter une nouvelle carte**, puis sélectionnez **Graphique à courbes**.
-2. Pour les données source de la carte, cliquez sur **Cartes**.
-La liste des noms de carte s'affiche.
-3. Sélectionnez **Terminaux qui m'intéressent** et cliquez sur **Suivant**.
-4. Cliquez sur **Connecter un nouveau jeu de données** et entrez les valeurs suivantes :
-  - Evénement : sensorData
-  - Propriété : d.rpm
-  - Nom : Belt RPM
-  - Type : Float
-  - Unité: rpm
-5. Cliquez sur **Suivant**.
-6. Dans la page Aperçu de la carte, sélectionnez **L**, puis cliquez sur **Suivant**.
-7. Dans la page Informations sur la carte, changez le nom du titre en `Belt data` et cliquez sur **Soumettre**.
-8. Modifiez la vitesse de votre tapis pour voir les données en temps réel dans la nouvelle carte.
-9. Facultatif : Ajoutez un second jeu de données pour ajouter des données d'accélération pour le tapis.
-Si vous utilisez votre téléphone pour vous connecter au modèle d'application, secouez-le pour envoyer les données d'accélération du tapis.
- 1. Cliquez sur l'icône de menu et choisissez la carte à éditer.
- 2. Pour les données source de la carte, sélectionnez **Cartes**.
- 3. Sélectionnez **Terminaux qui m'intéressent**, puis cliquez sur **Suivant**.
- 4. Cliquez sur **Connecter un nouveau jeu de données** et entrez les valeurs suivantes :
-    - Evénement : sensorData
-    - Propriété : d.ay
-    - Nom : Accel. Y
-    - Type : Float
-    - Unité: gs
- 5. Cliquez sur **Suivant**.
- 6. Chemin A uniquement : Secouez votre téléphone pour voir les données d'accéléromètre en temps réel dans votre nouvelle carte.
-Pour plus d'informations sur la création de tableaux et de cartes, voir [Visualisation des données en temps réel à l'aide de tableaux et de cartes](/docs/services/IoT/data_visualization.html#boards_and_cards).
 ## Etapes suivantes
-{: @whats_next}
+{: @whats_next}  
 Passez au guide suivant ou à une autre rubrique qui vous intéresse :
-- Chemin A : Modification de l'application de surveillance selon vos besoins.
+- Chemin A : Modifiez l'application du tapis roulant conformément à vos besoins.  
 Pour plus de détails techniques, voir :
- - [https://github.com/ibm-watson-iot/guide-conveyor-simulator/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-simulator/blob/master/README.md){: new_window}
- - [Bibliothèques client Node.js ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
-- Chemin B : Modification de la configuration Raspberry Pi selon vos besoins.
+ - [https://github.com/ibm-watson-iot/guide-conveyor-simulator/blob/master/README.md ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/guide-conveyor-simulator/blob/master/README.md){: new_window}
+ - [Bibliothèques Node.js clienmt ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
+ 
+ **Remarque :** Bluemix est maintenant IBM Cloud. Consultez le [IBM Cloud Blog](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") pour plus de détails.
+ 
+- Chemin B : Modification de la configuration Raspberry Pi selon vos besoins.  
 Pour plus de détails techniques, voir :
- - [https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi/blob/master/README.md){: new_window}
-- [Guide 2 : Utilisation des règles et actions de base en temps réel](getting-started-iot-rules.html)
-Maintenant que vous avez correctement configuré votre tapis roulant, que vous l'avez connecté à {{site.data.keyword.iot_short_notm}} et que vous avez envoyé certaines données, il est temps d'exploiter ces données en utilisant des règles et des actions.
-- [Guide 3 : Surveillance des données de votre terminal](getting-started-iot-monitoring.html)
-Maintenant que vous avez connecté un ou plusieurs terminaux et que vous avez commencé à exploiter les données de terminal, il est temps de commencer à surveiller une collection de terminaux.
-- [Guide 4 : Simulation d'un grand nombre de terminaux](getting-started-iot-large-scale-simulation.html)
+ - [https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi/blob/master/README.md ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi/blob/master/README.md){: new_window}
+
+
+**Remarque :** Bluemix est maintenant IBM Cloud. Consultez le [IBM Cloud Blog](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe") pour plus de détails.
+
+- [Guide 2 : Surveillance des données de votre terminal](getting-started-iot-monitoring.html)  
+Maintenant que vous avez connecté un ou plusieurs terminaux et que vous avez commencé à exploiter les données de terminal, vous pouvez commencer à surveiller une collection de terminaux.
+- [Guide 3 : Simulation d'un grand nombre de terminaux](getting-started-iot-large-scale-simulation.html)  
 Le modèle d'application de tapis roulant du chemin A vous permet de simuler manuellement un ou quelques terminaux de tapis roulant. Ce guide vous permet de configurer un environnement simulé qui contient un grand nombre de terminaux.
 - [En savoir plus sur {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html)
 - [En savoir plus sur les API {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/reference/api.html)

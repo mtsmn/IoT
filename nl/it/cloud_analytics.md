@@ -52,7 +52,7 @@ Per ottenere una panoramica delle regole e degli avvisi che sono stati attivati 
 ## Creazione di regole
 {: #rules}
 
-Le regole sono punti di decisione che corrispondono ai dati in tempo reale con valori di soglia predefiniti o altri dati della proprietà per attivare un avviso se viene riscontrata una condizione. In aggiunta all'avviso che viene visualizzato nel dashboard {{site.data.keyword.iot_short}}, puoi aggiungere una o più azioni per eseguire la logica di business quando viene attivata la regola.
+Le regole sono punti di decisione basati sulle condizioni che mettono in corrispondenza i dati in tempo reale con valori di soglia predefiniti o altri dati di proprietà per attivare un avviso se viene soddisfatta una condizione. In aggiunta all'avviso che viene visualizzato nel dashboard {{site.data.keyword.iot_short}}, puoi aggiungere una o più azioni per eseguire la logica di business quando viene attivata la regola.
 
 **Importante:** prima di poter creare le regole per un tipo dispositivo, devi creare uno schema per il tipo dispositivo. Per informazioni, consulta [Crea schemi per il tipo dispositivo](im_schemas.html).
 
@@ -137,7 +137,7 @@ Vengono utilizzati i seguenti parametri per configurare ed inviare un'azione ema
 
 Parametro | Descrizione
 ---|---
-Nome | Il nome dell'azione, utilizzato nel dashboard degli avvisi
+Nome | Il nome dell'azione, utilizzato nel dashboard degli avvisi.
 Descrizione | Una breve descrizione dell'azione.
 Oggetto | La riga dell'oggetto dell'email. La riga dell'oggetto predefinita è "IBM Watson IoT Alert: Mail action".
 A | Seleziona di inviare l'avviso soltanto a te stesso o a un elenco separato da virgole di indirizzi email. Se selezioni di inviare solo a te stesso, l'email viene inviata all'indirizzo email {{site.data.keyword.iot_short}} con cui hai eseguito l'accesso.

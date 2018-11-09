@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-15"---
+  years: 2015, 2018
+lastupdated: "2018-04-26"
+
+---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
@@ -18,7 +20,7 @@ lastupdated: "2017-03-15"---
 ## Jasper
 {: #jasper}
 
-Jasper は SIM デバイスの管理プラットフォームです。Jasper は {{site.data.keyword.iot_short_notm}} ダッシュボードに統合されているため、{{site.data.keyword.iot_short_notm}} 組織のダッシュボードにより Jasper デバイスを管理することが可能です。
+Jasper は SIM デバイスの管理プラットフォームです。 Jasper は {{site.data.keyword.iot_short_notm}} ダッシュボードに統合されているため、{{site.data.keyword.iot_short_notm}} 組織のダッシュボードにより Jasper デバイスを管理することが可能です。
 
 ### Jasper でサポートされる操作
 
@@ -37,14 +39,14 @@ Jasper は SIM デバイスの管理プラットフォームです。Jasper は 
 以下に示す構成手順を実行すると、それ以降、Jasper 接続デバイスのデバイス・ドリルダウンの中で、サポートされている操作にアクセスできるようになります。
 
 ### Jasper 用の REST API
-Jasper 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} の資料にある Jasper 拡張のセクションを参照してください。
+Jasper 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} の資料にある Jasper 拡張のセクションを参照してください。
 
 ### Jasper 用の構成
 
-Jasper サービスを {{site.data.keyword.iot_short_notm}} 組織に接続するには、まず実行する必要がある 2 つの構成ステージがあります。まず、{{site.data.keyword.iot_short_notm}} が Jasper サービスに接続されていなければならず、次に {{site.data.keyword.iot_short_notm}} デバイスが構成されていなければなりません。
+Jasper サービスを {{site.data.keyword.iot_short_notm}} 組織に接続するには、まず実行する必要がある 2 つの構成ステージがあります。 まず、{{site.data.keyword.iot_short_notm}} が Jasper サービスに接続されていなければならず、次に {{site.data.keyword.iot_short_notm}} デバイスが構成されていなければなりません。
 
 
-1. Jasper 拡張を有効にします。Jasper と {{site.data.keyword.iot_short_notm}} 組織の統合を有効にするには、以下の手順を実行します。
+1. Jasper 拡張を有効にします。 Jasper と {{site.data.keyword.iot_short_notm}} 組織の統合を有効にするには、以下の手順を実行します。
   1. {{site.data.keyword.iot_short_notm}} ダッシュボードから、**「拡張」**を選択します。
   2. **「拡張」**ページで、**「拡張の追加 (Add Extension)」**をクリックします。
   3. Jasper の横にある**「追加」**をクリックします。
@@ -52,10 +54,8 @@ Jasper サービスを {{site.data.keyword.iot_short_notm}} 組織に接続す�
   5. **「完了」**をクリックします。
 
 2. デバイスを構成します
-{{site.data.keyword.iot_short_notm}} 組織と Jasper アカウントの両方に接続されているデバイスを構成することにより、Jasper からのデータを {{site.data.keyword.iot_short_notm}} ダッシュボードに表示することができます。
-  
-**重要:** Jasper 構成を「デバイスの追加」プロセスの一部として適用することはできません。Jasper で構成できるのは、それ以前に接続されているデバイスだけです。
-  
+{{site.data.keyword.iot_short_notm}} 組織と Jasper アカウントの両方に接続されているデバイスを構成することにより、Jasper からのデータを {{site.data.keyword.iot_short_notm}} ダッシュボードに表示することができます。  
+**重要:** Jasper 構成を「デバイスの追加」プロセスの一部として適用することはできません。Jasper で構成できるのは、それ以前に接続されているデバイスだけです。  
 Jasper 接続済みデバイスを構成するには、以下の手順を実行します。
  1. {{site.data.keyword.iot_short_notm}} ダッシュボードのデバイス・タブで、構成する Jasper 接続デバイスを見つけます。
  2. デバイスを選択して、*「デバイス・ドリルダウン (Device Drilldown)」*ビューを開きます。
@@ -91,7 +91,7 @@ AT&T 拡張により、以下の AT&T 操作が有効になります。
 - 料金プランの変更
 
 ### AT&T 用の REST API
-AT&T 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} の資料にある AT&T 拡張のセクションを参照してください。
+AT&T 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window} の資料にある AT&T 拡張のセクションを参照してください。
 
 ### AT&T 用の構成
 
@@ -99,21 +99,19 @@ AT&T 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_s
 
 {{site.data.keyword.iot_short_notm}} プラットフォームを構成するには、以下の手順を実行します。
 
-1. AT&T 拡張を有効にします。AT&T と {{site.data.keyword.iot_short_notm}} 組織の統合を有効にするには、以下の手順を実行します。
+1. AT&T 拡張を有効にします。 AT&T と {{site.data.keyword.iot_short_notm}} 組織の統合を有効にするには、以下の手順を実行します。
   1. {{site.data.keyword.iot_short_notm}} ダッシュボードから、**「拡張」**を選択します。
   2. **「拡張」**ページで、**「拡張の追加 (Add Extension)」**をクリックします。
   3. AT&T の横にある**「追加」**をクリックします。
   4. AT&T ユーザー名、パスワード、アクセス・キー、ドメイン ID を入力します。
   5. **「完了」**をクリックします。
 
-{{site.data.keyword.iot_short_notm}} 組織と AT&T アカウントを接続するには、まず実行する必要がある 2 つの構成ステージがあります。組織の構成を実行した後、デバイスの構成を実行します。
+{{site.data.keyword.iot_short_notm}} 組織と AT&T アカウントを接続するには、まず実行する必要がある 2 つの構成ステージがあります。 組織の構成を実行した後、デバイスの構成を実行します。
 
 
 2. デバイスを構成します
-{{site.data.keyword.iot_short_notm}} 組織と AT&T アカウントの両方に接続されているデバイスを構成することにより、AT&T からのデータを {{site.data.keyword.iot_short_notm}} ダッシュボードに表示することができます。
-  
-**重要:** AT&T 構成を「デバイスの追加」プロセスの一部として適用することはできません。AT&T で構成できるのは、それ以前に接続されているデバイスだけです。
-  
+{{site.data.keyword.iot_short_notm}} 組織と AT&T アカウントの両方に接続されているデバイスを構成することにより、AT&T からのデータを {{site.data.keyword.iot_short_notm}} ダッシュボードに表示することができます。  
+**重要:** AT&T 構成を「デバイスの追加」プロセスの一部として適用することはできません。AT&T で構成できるのは、それ以前に接続されているデバイスだけです。  
 AT&T 接続済みデバイスを構成するには、以下の手順を実行します。
  1. {{site.data.keyword.iot_short_notm}} ダッシュボードのデバイス・タブで、構成する AT&T 接続デバイスを見つけます。
  2. デバイスを選択して、*「デバイス・ドリルダウン (Device Drilldown)」*ビューを開きます。
@@ -131,31 +129,31 @@ AT&T 接続済みデバイスを構成するには、以下の手順を実行し
 
 組織が正常に構成されると、*「デバイス・ドリルダウン (Device Drilldown)」*ビューの*「拡張構成」*セクションに*「拡張」*セクションが表示されます。
 
-## ARM mbed コネクター
+## Arm Mbed ブリッジ
 {: #arm}
 
-ARM mbed コネクターを使用して、ARM mbed デバイスを {{site.data.keyword.iot_short_notm}} に接続することができます。ARM mbed 拡張を使用すると、ARM mbed ポータルと {{site.data.keyword.iot_short_notm}} は、ARM mbed ポータルからデータを送受信することができます。
+ブリッジにより、Arm Mbed デバイスは IBM Watson IoT Platform と統合し、メッセージを双方向で交換することができます。この統合を有効にするには、まず Arm Mbed Cloud アカウントに登録してから、Watson IoT 構成に必要な接続情報を提供する必要があります。
 
 ### 構成のセットアップ
 
 
-1. ARM mbed コネクター拡張を有効にします。ARM mbed コネクター拡張を有効にするには、以下のステップを実行します。
-  1. {{site.data.keyword.iot_short_notm}} ダッシュボードから、**「設定」**を選択し、**「拡張」**にナビゲートします。
-  2. **「拡張」**メニューで、**「拡張の追加 (Add Extension)」**をクリックします。
-  3. ARM mbed コネクター拡張の横にある**「追加」**をクリックします。
-  4. ARM mbed アクセス・キーとドメイン ID を入力します。これらは、ARM mbed ポータル (https://connector.mbed.com) を使用して確認できます。
+1. Arm Mbed ブリッジ拡張を有効にします。拡張を有効にするには、以下のステップを実行します。
+  1. {{site.data.keyword.iot_short_notm}} ダッシュボードから、**「拡張」**を選択します。
+  2. **「拡張」**ページで、**「拡張の追加」**をクリックします。
+  3. Arm Mbed ブリッジ拡張の横にある**「追加 (Add)」**をクリックします。
+  4. Arm Mbed アクセス・キーを入力します。これは Arm Mbed ポータル (https://portal.mbedcloud.com) を使用することで作成できます。
   5. **「接続の確認 (Check Connection)」**ボタンをクリックして、資格情報が正しいことを確認します。
   6. **「完了」**をクリックします。
 
 ### ペイロード・フォーマット
 
-ARM mbed プラットフォームでは、通知と非同期応答の 2 種類の着信メッセージがあります。{{site.data.keyword.iot_short_notm}} は、ARM mbed プラットフォームに接続されているデバイスにコマンドを送信することができます。
+Arm Mbed プラットフォームからの着信メッセージには、通知と非同期応答の 2 種類があります。{{site.data.keyword.iot_short_notm}} は、Arm Mbed プラットフォームに接続されているデバイスにコマンドを送信することができます。
 
 #### 通知
 
-通知は、デバイスまたはセンサー・データでの変更によって生成されます。{{site.data.keyword.iot_short_notm}} がメッセージを処理した後、そのメッセージは {{site.data.keyword.iot_short_notm}} に直接接続されているデバイスと同じ方法でデバイス・イベント・トピックに送られます。ARM mbed プラットフォームに接続されているデバイスで発生する通知で使用されるイベント・タイプは、`notify` です。
+通知は、デバイスまたはセンサー・データでの変更によって生成されます。 {{site.data.keyword.iot_short_notm}} がメッセージを処理した後、そのメッセージは {{site.data.keyword.iot_short_notm}} に直接接続されているデバイスと同じ方法でデバイス・イベント・トピックに送信されます。Arm Mbed プラットフォームに接続されているデバイスで発生する通知で使用されるイベント・タイプは、`notify` です。
 
-以下のコード・サンプルは、ARM mbed プラットフォーム API によって送信される通知のペイロード形式を示しています。
+以下のコード・サンプルは、Arm Mbed プラットフォーム API によって送信される通知のペイロード形式を示しています。
 
 ```
 {
@@ -169,9 +167,9 @@ ARM mbed プラットフォームでは、通知と非同期応答の 2 種類�
 
 #### 非同期応答
 
-ARM mbed プラットフォームに接続されているデバイスに {{site.data.keyword.iot_short_notm}} がコマンドを送信すると、デバイスは {{site.data.keyword.iot_short_notm}} に確認メッセージを送り戻します。この確認メッセージは_非同期応答_と呼ばれ、イベント・タイプ `asyncResponse` を使用します。
+Arm Mbed プラットフォームに接続されているデバイスに {{site.data.keyword.iot_short_notm}} がコマンドを送信すると、デバイスは {{site.data.keyword.iot_short_notm}} に確認メッセージを送り戻します。 この確認メッセージは_非同期応答_と呼ばれ、イベント・タイプ `asyncResponse` を使用します。
 
-以下のコード・サンプルは、ARM mbed クラウド・サービスによって送信される非同期応答のペイロード形式を示しています。
+以下のコード・サンプルは、Arm Mbed Cloud サービスによって送信される非同期応答のペイロード形式を示しています。
 
 ```
 {
@@ -185,9 +183,9 @@ ARM mbed プラットフォームに接続されているデバイスに {{site.
 }
 ```
 
-#### ARM mbed プラットフォームへのコマンドの送信
+#### Arm Mbed プラットフォームへのコマンドの送信
 
-{{site.data.keyword.iot_short_notm}} は、ARM mbed プラットフォームに接続されているデバイスにコマンドを送信することができます。ARM mbed プラットフォームに送信されるコマンドは、以下の JSON 形式を使用する必要があります。
+{{site.data.keyword.iot_short_notm}} は、Arm Mbed プラットフォームに接続されているデバイスにコマンドを送信することができます。 Arm Mbed プラットフォームに送信されるコマンドは、以下の JSON 形式を使用する必要があります。
 
 ```
 {
@@ -197,10 +195,10 @@ ARM mbed プラットフォームに接続されているデバイスに {{site.
   "payload": <Base64 encoded payload>
 }
 ```
-選択する方式には大/小文字の区別があります。リソース・パスの最初の '/' はスキップする必要があります。
+選択する方式には大/小文字の区別があります。 リソース・パスの最初の '/' はスキップする必要があります。
 
 
-ペイロードは、以下のトピックにパブリッシュする必要があります。
+ペイロードは、以下のトピックでパブリッシュする必要があります。
 
 ```
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
@@ -225,7 +223,7 @@ Orange SIM カードを持つ、{{site.data.keyword.iot_short_notm}} サービ�
 - ロケーション状況
 
 ### Orange 用の REST API
-Orange 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} の資料にある Orange 拡張のセクションを参照してください。
+Orange 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} の資料にある Orange 拡張のセクションを参照してください。
 
 ### Orange 用の構成
 
@@ -261,7 +259,7 @@ Orange 拡張が有効になった後、Orange SIM カードを持つ各デバ�
 ## カスタム・デバイス管理パッケージ
 {: #device_mgmt}
 
-デバイス管理は {{site.data.keyword.iot_short_notm}} の中核となるフィーチャーですが、追加機能開発のため、拡張することができます。カスタム・デバイス管理パッケージには、有効な JSON が含まれている必要があり、少なくとも 1 つのカスタム・デバイス・アクションが定義されていなければなりません。
+デバイス管理は {{site.data.keyword.iot_short_notm}} の中核となるフィーチャーですが、追加機能開発のため、拡張することができます。 カスタム・デバイス管理パッケージには、有効な JSON が含まれている必要があり、少なくとも 1 つのカスタム・デバイス・アクションが定義されていなければなりません。
 
 カスタム・デバイス管理機能について詳しくは、必要な JSON フォーマットの例を含め、[デバイス管理のカスタム拡張](../../devices/device_mgmt/custom_actions.html){: new_window}を参照してください。
 
@@ -276,29 +274,7 @@ Orange 拡張が有効になった後、Orange SIM カードを持つ各デバ�
 3. **「パッケージの追加」**ボタンをクリックします。
 4. パッケージ・ファイルを選択し、**「開く」**をクリックします。
 
-API を使用してカスタム・デバイス管理パッケージを追加する場合は、[{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} を参照してください。
-
-## ブロック・チェーン
-{: #blockchain}
-
-{{site.data.keyword.iot_short_notm}} でブロック・チェーンを採用すると、IoT デバイスがブロック・チェーンのトランザクションにデータを提供できるようになるので、ブロック・チェーンの変更不能な台帳にデータが格納され、それをスマート・コントラクト・ビジネス・ルールで使用することができます。{{site.data.keyword.iot_short_notm}} は、デバイス・データをブロック・チェーンのスマート・コントラクトで必要なデータ・フォーマットにマップし、それをブロック・チェーン・ファブリックに渡して、ブロック・チェーン台帳に格納されるようにします。
-
-### ブロック・チェーンでサポートされる操作
-- デバイス・イベントによってスマート・コントラクト更新をトリガーする。
-- スマート・コントラクト・ビジネス・ロジックを実行して、デバイス・イベント・データで台帳状態を更新する。
-- モニタリング UI によりブロック・チェーン、トランザクション、台帳状態をモニターする。
-
-### ブロック・チェーン用の構成
-
-{{site.data.keyword.iot_short_notm}} ブロック・チェーン統合は、{{site.data.keyword.iot_short_notm}} でデフォルトではアクティブになっていないサービス・オファリングです。自分の組織でこのフィーチャーをアクティブにするには、以下の手順を実行します。
- 1. {{site.data.keyword.iot_short_notm}} ダッシュボードから、**「拡張」**を選択します。
- 2. **「拡張」**ページで、**「拡張の追加 (Add Extension)」**をクリックします。
- 3. ブロック・チェーン拡張の横にある**「追加」**をクリックします。
- 4. ブロック・チェーン・タイルで、**「セットアップ」**をクリックします。
- 3. **「ブロック・チェーンのアクティブ化 (Activate Blockchain)」**セクションで、**「詳細はこちら」**リンクをクリックして [IoT Blockchain Services Offering のページ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window} に移動します。
- 4. **「Kick-start your blockchain project」**をクリックして*「Explore the potential of IoT and Blockchain」*のフォームに記入します。  
- 5. 要求が承認されると、IBM から、自分の組織のブロック・チェーン統合を有効にするよう、連絡があります。
- 6. 組織の {{site.data.keyword.iot_short_notm}} ダッシュボードに戻り、[{{site.data.keyword.iot_short_notm}} ブロック・チェーン統合](../../bl_blockchain_integration.html)の手順に従ってセットアップを完了します。
+API を使用してカスタム・デバイス管理パッケージを追加する場合は、[{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} を参照してください。
 
 <!-- ## The Weather Company
 {: #weathercompany}
@@ -332,9 +308,9 @@ To view the weather data retrieved for a device location, find the device in the
 ## E メール
 {: #email}
 
-招待メールを使用して、ユーザーを {{site.data.keyword.iot_short_notm}} に追加することができます。詳しくは、[ユーザーのアクセス権限の管理](../../add_users.html)を参照してください。
+招待メールを使用して、ユーザーを {{site.data.keyword.iot_short_notm}} に追加することができます。 詳しくは、[ユーザーのアクセス権限の管理](../../add_users.html)を参照してください。
 
-招待メール機能を使用するには、SendGrid オンライン・サービスまたは Simple Mail Transfer Protocol (SMTP) サービスを使用するように E メール拡張機能を構成する必要があります。この拡張機能では、SendGrid {{site.data.keyword.Bluemix_notm}} アプリケーションを使用することもできます。
+招待メール機能を使用するには、SendGrid オンライン・サービスまたは Simple Mail Transfer Protocol (SMTP) サービスを使用するように E メール拡張機能を構成する必要があります。 この拡張機能では、SendGrid {{site.data.keyword.Bluemix_notm}} アプリケーションを使用することもできます。
 
 ### SendGrid オンライン・サービス
 
@@ -373,7 +349,7 @@ SendGrid {{site.data.keyword.Bluemix_notm}} アプリケーションを使用す
  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードから、{{site.data.keyword.sdk4nodefull}} アプリケーションをクリックします。
  2. ナビゲーション・バーから**「環境変数」**をクリックします。
  3. 表示された JSON を一時テキスト・ファイルにコピーします。  
-JSON は次の形式になるはずです。
+ JSON は次の形式になるはずです。
 ```
 {
   "name": "SendGridServiceName",

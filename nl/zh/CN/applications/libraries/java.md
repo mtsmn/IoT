@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2017-03-14"
 
 构造方法用于构建客户机实例，并接受包含以下定义的 `Properties` 对象：
 
-| 定义|描述
+|定义|描述
 |
 |----------------|----------------|
 |`org` |必需值，必须设置为组织标识。如果使用的是 Quickstart 流，请指定 `quickstart`。|
@@ -47,7 +47,9 @@ lastupdated: "2017-03-14"
 |`MaxInflightMessages`  |设置连接的最大未完成消息数。缺省值为 100。|
 |`Automatic-Reconnect`  |true 或 false 值，要自动将处于断开连接状态的设备重新连接到 {{site.data.keyword.iot_short_notm}} 时是必需的。缺省值为 false。|
 |`Disconnected-Buffer-Size`|客户机处于断开连接状态时可以存储在内存中的最大消息数。缺省值为 5000。|
-|`shared-subscription`|布尔值，如果要构建可扩展应用程序，用于在应用程序的多个实例之间均衡消息负载，必须将此参数设置为 true。有关更多信息，请参阅[可扩展应用程序](../mqtt.html#scalable_apps)。`Properties` 对象创建用于与 {{site.data.keyword.iot_short_notm}} 模块进行交互的定义。如果未指定此对象的属性，或者如果指定了 `quickstart`，那么客户机将作为未注册设备连接到 {{site.data.keyword.iot_short_notm}} Quickstart 服务。
+|`shared-subscription`|布尔值，如果要构建可扩展应用程序，用于在应用程序的多个实例之间均衡消息负载，必须将此参数设置为 true。有关更多信息，请参阅[可扩展应用程序](../mqtt.html#scalable_apps)。
+
+`Properties` 对象创建用于与 {{site.data.keyword.iot_short_notm}} 模块进行交互的定义。如果未指定此对象的属性，或者如果指定了 `quickstart`，那么客户机将作为未注册设备连接到 {{site.data.keyword.iot_short_notm}} Quickstart 服务。
 
 以下代码样本显示了可以如何以 `quickstart` 方式构造应用程序客户机 (`ApplicationClient`) 实例：
 
@@ -84,6 +86,8 @@ lastupdated: "2017-03-14"
     ...
 ```
 指定的应用程序配置文件必须为以下格式：
+
+
 
 ```
     [application]
@@ -299,7 +303,7 @@ lastupdated: "2017-03-14"
 要处理预订接收到的状态更新，需要注册状态事件回调方法。对于 `Connect` 和 `Disconnect` 状态事件，消息将作为 Status 类的实例返回，此类包含以下参数：
 
 
-| 参数|数据类型|
+|参数|数据类型|
 |----------------|----------------|
 |`status.clientAddr` |字符串|
 |`status.protocol`  |字符串|
@@ -312,7 +316,7 @@ lastupdated: "2017-03-14"
 
 仅当状态事件为 ``Disconnect`` 时，才可设置以下属性：
 
-| 属性|数据类型|
+|属性|数据类型|
 |----------------|----------------|
 |`status.writeMsg` |整数|
 |`status.readMsg`  |整数|
@@ -356,12 +360,17 @@ lastupdated: "2017-03-14"
 ```
 应用程序可以预订其他任何应用程序状态，例如应用程序与 {{site.data.keyword.iot_short_notm}} 建立或断开连接。以下代码片段显示了如何预订 {{site.data.keyword.iot_short_notm}} 组织的应用程序状态：
 
+
+
 ```
     myClient.connect()
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
 重载方法可用于控制对特定应用程序的状态预订。每当匹配条件的应用程序与 {{site.data.keyword.iot_short_notm}} 建立或断开连接时，都会调用 ``processApplicationStatus()`` 方法。
+
+
+
 
 
 ## 发布来自设备的事件
@@ -432,7 +441,7 @@ lastupdated: "2017-03-14"
 
 根据属性文件中的设置，`publishEventOverHTTP()` 方法会在 Quickstart 或注册流中发布事件。如果 `quickstart` 在属性文件中指定为组织标识，那么 `publishEventOverHTTP()` 方法会将事件以纯 HTTP 格式发布到 {{site.data.keyword.iot_short_notm}} Quickstart 服务。如果在属性文件中指定的已注册组织有效，那么会始终使用 HTTPS 来发布事件以确保所有通信的安全。
 
-HTTP 协议提供“至多一次”传递，这类似于 MQTT 协议的“至多一次”(QoS 0) 服务质量级别。使用“至多一次”传递来发布事件时，应用程序必须实现出错情况下的重试逻辑。
+HTTP 协议提供“最多一次”传递，这类似于 MQTT 协议的“最多一次”(QoS0) 服务质量级别。使用“最多一次”传递来发布事件时，应用程序必须实现出错情况下的重试逻辑。
 
 
 ## 将命令发布到设备
@@ -476,7 +485,7 @@ HTTP 协议提供“至多一次”传递，这类似于 MQTT 协议的“至多
 
 要查看完整的代码样本，请参阅 [HttpCommandPublish ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java){: new_window} 应用程序示例。
 
-HTTP 协议提供“至多一次”传递，这类似于 MQTT 协议的“至多一次”(QoS 0) 服务质量级别。使用“至多一次”传递来发布命令时，应用程序必须实现出错情况下的重试逻辑。有关更多信息，请参阅[针对应用程序的 HTTP REST API](../api.html)。
+HTTP 协议提供“最多一次”传递，这类似于 MQTT 协议的“最多一次”(QoS0) 服务质量级别。使用“最多一次”传递来发布命令时，应用程序必须实现出错情况下的重试逻辑。有关更多信息，请参阅[针对应用程序的 HTTP REST API](../api.html)。
 
 
 ## 样本

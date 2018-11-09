@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-05"---
+  years: 2015, 2018
+lastupdated: "2018-07-19"
+
+---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
@@ -10,10 +12,10 @@ lastupdated: "2017-04-05"---
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# API を使用したアプリケーション、デバイス、ゲートウェイの接続
+# アプリケーション、デバイス、ゲートウェイの接続
 {: #connect_devices_apps_gw}
 
-アプリケーション、デバイス、ゲートウェイは、MQTT プロトコルを使用して {{site.data.keyword.iot_full}} に接続できます。デバイスは、HTTP REST API を使用して {{site.data.keyword.iot_short_notm}} に接続することもできます。
+アプリケーション、デバイス、ゲートウェイは、MQTT プロトコルを使用して {{site.data.keyword.iot_full}} に接続できます。 デバイスは、HTTP REST API を使用して {{site.data.keyword.iot_short_notm}} に接続することもできます。
 {: shortdesc}
 
 
@@ -39,78 +41,72 @@ lastupdated: "2017-04-05"---
 ## ポート・セキュリティー
 {: #client_port_security}
 
-必須のポートが開いており、通信に使用可能であることを確認してください。ポート 8883 と 443 は、TLS と MQTT プロトコルと HTTP プロトコルを使用したセキュア接続をサポートします。ポート 1883 は、MQTT プロトコルと HTTP プロトコルを使用した非セキュア接続をサポートします。次の表に、接続タイプとそれに関連するポート番号に関する情報の要約を示します。   
+必須のポートが開いており、通信に使用可能であることを確認してください。 ポート 8883 と 443 は、TLS と MQTT プロトコルと HTTP プロトコルを使用したセキュア接続をサポートします。 ポート 1883 は、MQTT プロトコルと HTTP プロトコルを使用した非セキュア接続をサポートします。 HTTP ポート 1883 は、デフォルトでは無効になっています。デフォルト設定の変更について詳しくは、[セキュリティー・ポリシーの構成](set_up_policies.html#set_up_policies.html)を参照してください。
 
-|接続タイプ|ポート番号|
+次の表に、接続タイプとそれに関連するポート番号に関する情報の要約を示します。   
+
+|接続タイプ |ポート番号|
 |:---|:---|
 |非セキュア|1883|
 |セキュア|8883|
 |セキュア|443|
 
-MQTT は、TCP と WebSockets でサポートされています。MQTT クライアントは接続の際に適切な資格情報を使用します (例えば、デバイスの場合はデバイス認証トークン、アプリケーションの場合は API キーとトークンを使用します)。非セキュア・ポート 1883 に MQTT メッセージングを行うとこれらの資格情報が非暗号化テキストで送信されるため、代わりにセキュアな代替ポート 8883 または 443 を必ず使用してください。セキュア・ポートを介して送信される場合、TLS 資格情報は必ず暗号化されます。Python MQTT ライブラリーの tls_set() メソッドを使用して、アプリケーションで忘れずに TLS を有効にしてください。そうしないと、データが保護されずに送信される可能性があります。
+MQTT は、TCP と WebSockets でサポートされています。 MQTT クライアントは接続の際に適切な資格情報を使用します (例えば、デバイスの場合はデバイス認証トークン、アプリケーションの場合は API キーとトークンを使用します)。 非セキュア・ポート 1883 に MQTT メッセージングを行うとこれらの資格情報が非暗号化テキストで送信されるため、代わりにセキュアな代替ポート 8883 または 443 を必ず使用してください。 セキュア・ポートを介して送信される場合、TLS 資格情報は必ず暗号化されます。 Python MQTT ライブラリーの tls_set() メソッドを使用して、アプリケーションで忘れずに TLS を有効にしてください。 そうしないと、データが保護されずに送信される可能性があります。
 
-ポート 8883 または 443 でセキュアな MQTT メッセージングを使用すると、今までより新しいクライアント・ライブラリーは {{site.data.keyword.iot_short_notm}} によって提供される証明書を自動的に信頼します。クライアント環境がこれに該当しない場合、[messaging.pem](https://github.com/ibm-messaging/iot-python/blob/master/src/ibmiotf/messaging.pem) から完全な証明書チェーンをダウンロードして使用することができます。
+ポート 8883 または 443 でセキュアな MQTT メッセージングを使用すると、今までより新しいクライアント・ライブラリーは {{site.data.keyword.iot_short_notm}} によって提供される証明書を自動的に信頼します。 クライアント環境がこれに該当しない場合、[messaging.pem](https://github.com/ibm-messaging/iot-python/blob/master/src/ibmiotf/messaging.pem) から完全な証明書チェーンをダウンロードして使用することができます。
 
 
 ## TLS 要件
 {: #tls_requirements}
 
-一部の Transport Layer Security (TLS) クライアント・ライブラリーは、ワイルドカードを含むドメインをサポートしません。ライブラリーを正常に変更できない場合は、証明書の検査を無効にしてください。
+一部の Transport Layer Security (TLS) クライアント・ライブラリーは、ワイルドカードを含むドメインをサポートしません。 ライブラリーを正常に変更できない場合は、証明書の検査を無効にしてください。
 
-TLS 要件は、MQTT プロトコルと HTTP プロトコルのどちらを使用して {{site.data.keyword.iot_short_notm}} に接続しているかによって異なります。以下のセクションに、デフォルトのサーバー証明書を使用する場合にサポートされる暗号スイートを示します。独自のクライアント証明書を使用する場合、サポートされる暗号スイートは、使用する証明書によって異なります。
+TLS 要件は、MQTT プロトコルと HTTP プロトコルのどちらを使用して {{site.data.keyword.iot_short_notm}} に接続しているかによって異なります。 以下のセクションに、デフォルトのサーバー証明書を使用する場合にサポートされる暗号スイートを示します。 独自のクライアント証明書を使用する場合、サポートされる暗号スイートは、使用する証明書によって異なります。
 
 ### MQTT 接続の TLS 要件
 
-{{site.data.keyword.iot_short_notm}} には、TLS v1.2 と以下の暗号スイートが必要です。
+{{site.data.keyword.iot_short_notm}} には、TLS v1.2 が必要です。以下の暗号スイートの少なくとも 1 つが許可されていることを確認してください。 
 
-
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
-- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
-- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
 - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
 
 ### HTTP 接続の TLS 要件
 
-デフォルトのサーバー証明書を使用している場合、{{site.data.keyword.iot_short_notm}} では、TLS v1.1 または TLS v1.2 と、以下の暗号スイートが必要です。
+デフォルトのサーバー証明書を使用している場合、{{site.data.keyword.iot_short_notm}} では、TLS v1.2 が必要です。 以下の暗号スイートの少なくとも 1 つが許可されていることを確認してください。 
 
 
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
 - TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
+- TLS_RSA_WITH_AES_128_CBC_SHA
 
+暗号化リストの Forward Secrecy 暗号 UNK または DHE を使用することにより、暗号化の強度を向上させます。 
 
 ## MQTT クライアント認証
 {: #mqtt_authentication}
 
-**重要:** MQTT クライアントごとに固有のクライアント ID が必要です。既に接続済みのクライアント ID を使用して組織内のクライアントを接続しようとすると、最初の接続が切断されます。
+**重要:** MQTT クライアントごとに固有のクライアント ID が必要です。 既に接続済みのクライアント ID を使用して組織内のクライアントを接続しようとすると、最初の接続が切断されます。
 
-デバイスとゲートウェイが {{site.data.keyword.iot_short_notm}} に直接接続している場合、それらが接続されていることを示す状況アイコンがダッシュボードに表示されます。デバイスがゲートウェイを介して間接的に接続している場合は、ゲートウェイ経由で接続しているデバイスをダッシュボードが認識しないため、そのデバイスは切断されていると表示されます。
+デバイスとゲートウェイが {{site.data.keyword.iot_short_notm}} に直接接続している場合、それらが接続されていることを示す状況アイコンがダッシュボードに表示されます。 デバイスがゲートウェイを介して間接的に接続している場合は、ゲートウェイ経由で接続しているデバイスをダッシュボードが認識しないため、そのデバイスは切断されていると表示されます。
 
 ### MQTT クライアント ID
 
 デバイス、アプリケーション、ゲートウェイが正常に認証されるようにするため、次のクライアント ID と形式を使用して各 MQTT クライアントを定義します。
 
-|クライアント・タイプ|ID|MQTT ID 形式|
+|クライアント・タイプ |ID|MQTT ID 形式|
 |:---|:---|:---|
 |アプリケーション|a|<pre class="pre">a:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
-|スケーラブルなアプリケーション|A|<pre class="pre">A:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
+|スケーラブルなアプリケーション|ア|<pre class="pre">A:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
 |デバイス|d|<pre class="pre">d:<var class="keyword varname">orgId</var>:<var class="keyword varname">deviceType</var>:<var class="keyword varname">deviceId</var></pre>|
 |ゲートウェイ|g|<pre class="pre">g:<var class="keyword varname">orgId</var>:<var class="keyword varname">typeId</var>:<var class="keyword varname">deviceId</var></pre>|
 
@@ -131,10 +127,12 @@ TLS 要件は、MQTT プロトコルと HTTP プロトコルのどちらを使�
 - Quickstart サービスに接続すると、認証は不要になります。
 - 接続する前にアプリケーションを登録する必要はありません。
 
+共有サブスクリプションの形式について詳しくは、[アプリケーションの MQTT 接続](../../applications/mqtt.html)を参照してください。
+
 
 ### MQTT を使用したアプリケーションの接続
 
-{{site.data.keyword.iot_short_notm}} アプリケーションでは、組織への接続に API キーを必要とします。API キーを登録するとトークンが生成されます。このトークンはこの API キーとともに使用する必要があります。
+{{site.data.keyword.iot_short_notm}} アプリケーションでは、組織への接続に API キーを必要とします。 API キーを登録するとトークンが生成されます。このトークンはこの API キーとともに使用する必要があります。
 
 以下に、API キーのコードの例を示します。
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-21"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -28,8 +28,7 @@ lastupdated: "2017-03-21"
 
 构造方法用于构建客户机实例，并接受包含以下定义的 `Properties` 对象：
 
-|定义|描述
-|
+|定义|描述|
 |:----|:----|
 |`org` |必需值，必须设置为组织标识。如果使用的是 Quickstart 流，请指定 `quickstart`。|
 |`type`  |必需值，用于指定设备的类型。|
@@ -312,7 +311,7 @@ boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, Co
 
 根据属性文件中的设置，``publishEventOverHTTP()`` 方法会以 Quickstart 方式或注册流方式发布事件。当属性文件中的“组织标识”设置为 ``quickstart`` 时，``publishEventOverHTTP()`` 方法会将事件发布到设备示例 Quickstart 服务，并以纯 HTTP 格式发布事件。如果在属性文件中指定了有效的已注册组织，那么会通过 HTTPS 来安全地发布事件。
 
-HTTP 协议提供“至多一次”传递，这类似于 MQTT 协议的“至多一次”(QoS 0) 服务质量级别。使用“至多一次”传递来发布事件时，应用程序必须实现任何出错情况下的重试逻辑。
+HTTP 协议提供“最多一次”传递，这类似于 MQTT 协议的“最多一次”(QoS0) 服务质量级别。使用“最多一次”传递来发布事件时，应用程序必须实现任何出错情况下的重试逻辑。
 
 [HttpDeviceEventPublish]: https://github.com/ibm-messaging/iot-device-samples/blob/master/java/device-samples/src/main/java/com/ibm/iotf/sample/client/device/HttpDeviceEventPublish.java
 
@@ -322,10 +321,10 @@ HTTP 协议提供“至多一次”传递，这类似于 MQTT 协议的“至多
 设备客户机进行连接时，会自动预订此设备的所有命令。要处理特定命令，需要注册命令回调方法。
 消息将作为 `Command` 类的实例返回，此类包含以下属性：
 
-| 属性|数据类型| 描述|
+|属性|数据类型|描述|
 |----------------|----------------|
-|`payload` |java.lang.String| 消息有效内容的数据。|
-|`format`  |java.lang.String| 格式可以为任意字符串，例如 JSON。|
+|`payload` |java.lang.String|消息有效内容的数据。|
+|`format`  |java.lang.String|格式可以为任意字符串，例如 JSON。|
 |`command`   |java.lang.String|标识命令。|
 |`timestamp`   |org.joda.time.DateTime|事件的日期和时间。|
 

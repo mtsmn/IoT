@@ -60,7 +60,7 @@ lastupdated: "2017-10-18"
 
 将 {{site.data.keyword.cloudant_short_notm}} 连接到 {{site.data.keyword.iot_short}} 服务之前，请完成以下任务：
 
-- 使用 {{site.data.keyword.Bluemix_notm}}“目录”，在 {{site.data.keyword.iot_short_notm}} 所在的 {{site.data.keyword.Bluemix_notm}} 空间中设置 {{site.data.keyword.cloudant_short_notm}}。
+- 使用 {{site.data.keyword.Bluemix_notm}}“目录”在 {{site.data.keyword.iot_short_notm}} 所在的 {{site.data.keyword.Bluemix_notm}} 空间中设置 {{site.data.keyword.cloudant_short_notm}}。
 
 确保您在已通过 {{site.data.keyword.Bluemix_notm}} 登录的 {{site.data.keyword.Bluemix_notm}} 组织中具有开发者特权。如果没有通过 {{site.data.keyword.Bluemix_notm}} 登录，或者在此 {{site.data.keyword.Bluemix_notm}} 组织中不具有开发者特权，那么您无法授权绑定 {{site.data.keyword.cloudant_short_notm}} 和 {{site.data.keyword.iot_short_notm}}。
 

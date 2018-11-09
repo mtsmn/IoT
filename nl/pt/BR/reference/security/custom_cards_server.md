@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-11-29"
+  years: 2016, 2018
+lastupdated: "2018-03-11"
 
 ---
 
@@ -14,6 +14,14 @@ lastupdated: "2016-11-29"
 
 # Protegendo seu servidor de cartões customizados
 {: #securing_custom_cards}
+
+** Importante:** estamos ativando um Beta para uma nova maneira de definir regras em seus dados do dispositivo IoT como parte de um programa mais amplo de mudanças para melhorar a maneira como o {{site.data.keyword.iot_full}} entrega regras e ações.
+
+Para descobrir mais, verifique a postagem do blog [Uma abordagem alternativa para definir Regras em dados do IoT![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para iniciar a definição de suas próprias regras, veja a documentação [Criando regras integradas (Beta)](../../information_management/im_rules.html).
+
+## Sobre Servidores de Cartões Customizados
 
 Servidores de cartões customizados são servidores da web padrão que hospedam o código javascript de cartões customizados. Para assegurar a integridade de seu ambiente {{site.data.keyword.iot_short_notm}}, é necessário proteger seu servidor de cartões customizados tomando medidas para proteger a origem do cartão, conforme discutidos neste tópico.
 {:shortdesc}

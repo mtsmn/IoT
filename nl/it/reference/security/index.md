@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016, 2017
-lastupdated: "2017-10-04"
+  years: 2016, 2018
+lastupdated: "2018-02-27"
 
 ---
 
@@ -29,7 +29,7 @@ Il seguente documento delle risposte a domande comuni su come i dati della tua o
 ## {{site.data.keyword.iot_short_notm}} e {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}} viene eseguito nella piattaforma {{site.data.keyword.Bluemix_notm}} e quindi si basa su {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer_full}} per l'accesso e la connettività. La dipendenza da {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer_notm}} rende la sicurezza e l'affidabilità di {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer_notm}} importante per gli utenti di {{site.data.keyword.iot_short_notm}}
+{{site.data.keyword.iot_short_notm}} viene eseguito nella piattaforma {{site.data.keyword.Bluemix_notm}} e quindi si basa su {{site.data.keyword.Bluemix_notm}} e sull'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} per l'accesso e la connettività. La dipendenza da {{site.data.keyword.Bluemix_notm}} e dall'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} rende la sicurezza e l'affidabilità di {{site.data.keyword.Bluemix_notm}} e dell'infrastruttura {{site.data.keyword.BluSoftlayer_notm}} importante per gli utenti di {{site.data.keyword.iot_short_notm}}
 
 Per ulteriori dettagli sulla sicurezza di {{site.data.keyword.Bluemix_notm}}, consulta [{{site.data.keyword.Bluemix_notm}} platform security](index.html#platform-security). 
 
@@ -50,7 +50,7 @@ Per ulteriori dettagli sulla sicurezza di {{site.data.keyword.Bluemix_notm}}, co
 ## Come rendiamo sicura la gestione delle informazioni di IoT nella tua organizzazione?
 {: #secure-org}
 
-Le API REST e la GUI basate sul browser sono antecedute da HTTPS, che è un certificato firmato da DigiCert, in questo modo puoi controllare che ti stai collegando al genuino {{site.data.keyword.iot_short_notm}}. L'accesso della GUI basata sul web viene autenticato dal tuo ID IBM o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. L'utilizzo dell'API REST richiede una chiave API, generata tramite la GUI, puoi utilizzarla per autenticare le chiamate API REST nella tua organizzazione.
+Le API REST e la GUI basate sul browser sono precedute da HTTPS, con un certificato firmato da DigiCert, in questo modo puoi essere sicuro di collegarti all'autentico {{site.data.keyword.iot_short_notm}}. L'accesso alla GUI basata sul web è autenticato dal tuo ID IBM. L'utilizzo dell'API REST richiede una chiave API, generata tramite la GUI, puoi utilizzarla per autenticare le chiamate API REST nella tua organizzazione.
 
 ![immagine](management_platform.svg)
 
@@ -80,7 +80,7 @@ Per ulteriori informazioni sui requisiti della suite chipher e TLS, consulta la 
 
 Puoi utilizzare i certificati e le politiche di sicurezza per migliorare la sicurezza della connessione del dispositivo. Le politiche di sicurezza possono essere impostate per consentire le connessioni non crittografate, per definire solo le connessioni TLS (transport layer security) e per consentire ai dispositivi di autenticarsi con i certificati lato client e nessun token. È possibile utilizzare le blacklist per specificare i dispositivi a cui non è consentito connettersi o le whitelist che possono essere utilizzate per consentire la connessione a dispositivi specifici. Per ulteriori informazioni sulla sicurezza avanzata, vedi [Gestione della sicurezza e del rischio](RM_security.html).
 
-### Disabilitazione e abilitazione dei dispositivi e dei gateway 
+### Disabilitazione e abilitazione dei dispositivi e dei gateway
 {: #disable-devices}
 
 Puoi utilizzare l'API HTTP **Authorization - Device Management** per disabilitare un dispositivo dalla connessione diretta alla piattaforma o da dietro un gateway. Ad esempio, puoi disconnettere in modo forzato il dispositivo di un utente dannoso o un dispositivo che non si sta comportando correttamente e sta causando problemi come l'utilizzo di dati non desiderati a causa di spam. L'API viene utilizzata per disconnettere il dispositivo dalla connessione corrente e per evitare il ricollegamento del dispositivo alla piattaforma.

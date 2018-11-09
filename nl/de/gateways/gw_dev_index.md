@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -19,7 +19,7 @@ Wenn von Ihren Geräten keine direkte Verbindung zum Internet hergestellt werden
 {:shortdesc}
 
 ## Verbindungsprotokolle
-Gateways stellen über das MQTT-Nachrichtenprotokoll eine Verbindung zu {{site.data.keyword.iot_short_notm}} her. Das Verbinden von Gateways mit {{site.data.keyword.iot_short_notm}} mithilfe von HTTP-Messaging wird nicht unterstützt. Diese Art der Verbindung ist nur für Geräte möglich.
+Gateways stellen über das MQTT- oder HTTP-Nachrichtenprotokoll eine Verbindung zu {{site.data.keyword.iot_short_notm}} her. 
 
 ## Clientbibliotheken
 Clientbibliotheken für die Entwicklung von Gateways, die eine Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen können, sind in den folgenden Sprachen verfügbar:
@@ -30,7 +30,7 @@ Clientbibliotheken für die Entwicklung von Gateways, die eine Verbindung zu {{s
 |C#|[https://github.com/ibm-watson-iot/iot-csharp ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-csharp){: new_window}
 |Embedded C| [https://github.com/ibm-watson-iot/iot-embeddedc ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-embeddedc){: new_window}
 |Java™|[https://github.com/ibm-watson-iot/iot-java ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-java){: new_window}
-|mBed C++|[https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/ ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window}
+|Mbed C++|[https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/ ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){: new_window}
 |Node.js|[https://github.com/ibm-watson-iot/iot-nodejs ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 |Node-RED|[https://github.com/ibm-watson-iot/iot-nodered ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-nodered){: new_window}
 |Python|[https://github.com/ibm-watson-iot/iot-python ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-python){: new_window}

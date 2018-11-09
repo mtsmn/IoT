@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-11-09"
+  years: 2016, 2018
+lastupdated: "2018-03-26"
 
 ---
 
@@ -12,31 +12,45 @@ lastupdated: "2017-11-09"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Comprendre le langage d'expression de mappage
+# Connaissance du langage d'expression de mappage
 {: #mapping_expression}
 
-Vous pouvez utiliser le langage d'expression de mappage pour manipuler et combiner des données, et pour formater les résultats des requêtes que vous pouvez exécuter sur les données ayant été traitées. Le langage d'expression de mappage est un sous-ensemble de [JSONata ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://docs.jsonata.org/index.html){:new_window} et peut être utilisé lors de la définition de [mappages](ga_im_definitions.html#definitions_resources). JSONata est un langage de requête et de transformation simple des données JSON.
+Vous pouvez utiliser le langage d'expression de mappage pour manipuler et combiner des données, ainsi que pour formater les résultats des requêtes que vous exécutez sur les données que vous avez traitées. Le langage d'expression de mappage est un sous-ensemble de [JSONata ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.jsonata.org/index.html){:new_window} et peut être utilisé lorsque vous définissez des [mappages](ga_im_definitions.html#resources) ou lorsque vous créez des [règles](../information_management/im_rules.html). 
+
+JSONata est un langage de requête et de transformation simple des données JSON. L'outil [JSONata Exerciser ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://try.jsonata.org/){:new_window} offre également un moyen rapide et pratique d'essayer JSONata.
 
 Les informations ci-dessous présentent les opérateurs et les fonctions clés actuellement pris en charge, ainsi que des exemples de leur utilisation. 
 
-## Opérateur JSONata pris en charge
+## Opérateurs JSONata
 {: #operators}
 
-Les opérateurs JSONata du sous-ensemble suivant sont pris en charge : 
+Tous les [opérateurs JSONata![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.jsonata.org/operators.html){:new_window} sont pris en charge à l'exception des opérateurs suivants :
 
-Type d'opérateur                   | Opérateurs pris en charge     | Notes   
-------------- | ------------- | -------------
-Arithmétique | *+* - / * % | L'opérateur % renvoie le reste.
-Comparaison | < <= > >= != = | L'opérateur d'égalité est = , tout comme dans JSONata.
-Booléen | *in*, *and* | Les constantes booléennes sont *true* ou *false*.
-Conditionnel ternaire | ? | L'opérateur ? évalue une des deux expressions alternatives basées sur le résultat d'une condition de test. L'opérateur prend la forme suivante *expression*  ? *value_if_true* : *value_if_false*
-Chaîne | & | L'opérateur & joint les valeurs de chaîne des opérandes en une seule chaîne résultante.
-Générateur de séquence | .. | Crée un tableau d'entiers croissants, en commençant par le nombre sur le membre de gauche et en finissant par le nombre sur le membre de droite, par exemple, [1..4] -> [1,2,3,4]. Les opérandes doivent avoir pour résultat un entier. Le générateur de séquence peut uniquement être utilisé au sein d'un constructeur de tableau [].
-Autre | . | L'opérateur point est utilisé pour l'accès aux objets avec une clé littérale, par exemple, $event.object.hh. *
-e:* L'expression de la partie gauche est soumise à une propriété spécifique, soit dans l'événement ($event), ou dans l'état ($state) ou dans les métadonnées ($instance).
-**Remarques :** 
+- ~> (chaînage de fonctions)
+- ^(…) (trier par)
+- := (liaison de variables)
+
+**Remarque :** 
 - Utilisez des parenthèses ( ) pour regrouper des expressions et pour modifier la priorité de l'opérateur
-- Utilisez des guillemets simples pour entourer les noms de propriétés qui contiennent des espaces, par exemple $event.object.'a b' 
+- Utilisez les guillemets simples ou doubles pour entourer les chaînes et les noms de propriétés, par exemple $event.object.'ab' 
+- Utilisez les apostrophes obliques pour entourer les noms de propriétés qui contiennent des caractères spéciaux, y compris les espaces, par exemple  
+```
+{"x y":22}.`x y`
+```
+- Utilisez les apostrophes obliques pour entourer les noms de propriétés qui commencent par un chiffre, par exemple
+```
+`7emperature`
+```
+
+## Fonctions JSONata 
+{: #functions}
+Les fonctions JSONata suivantes sont prises en charge : 
+
+ - Toutes les fonctions [de chaînes ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.jsonata.org/string-functions.html){:new_window} 
+ - Toutes les fonctions [numériques ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.jsonata.org/numeric-functions.html){:new_window} 	
+ - Toutes les fonctions [de regroupement numérique ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.jsonata.org/aggregation-functions.html){:new_window} 
+ - Toutes les fonctions [booléennes ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.jsonata.org/boolean-functions.html){:new_window}   
+ - Les fonctions [des tableaux $count et $append![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.jsonata.org/array-functions.html){:new_window} 	
 
 ## Extension du langage d'expression de mappage
 
@@ -46,9 +60,55 @@ Variable                   | Exemple d'entrée JSON     | Exemple d'expression  
 ------------- | ------------- | -------------
 $event | *{"t": 34.5}*  | $event.t | Sélectionner une propriété d'un événement entrant à utiliser dans une expression. 
 $state | *{"temperature": 34.5,"humidity": 78 }*  | $state.temperature | Sélectionner une propriété sur l'état du terminal à utiliser dans une expression.
-$instance | *{"deviceId": "TemperatureSensor1","typeId": "EnvSensor1","metadata": {"temp_adjustment": 50}}*  | $instance.metadata.temp_adjustment | Sélectionner un attribut de terminal ou de type de terminal à utiliser dans une expression. 
+$instance | *{"deviceId": "tSensor","typeId": "humiditySensor","metadata": {"temp_adjustment": 50}}*  | $instance.metadata.temp_adjustment | Sélectionner un attribut de terminal ou de type de terminal à utiliser dans une expression. 
 
-Vous pouvez également définir une expression qui combine l'utilisation de ces variables. Dans l'exemple suivant, une propriété *temp_adjustment* est définie dans les métadonnées du terminal et est utilisée pour calibrer le relevé d'événement. La propriété est définie dans un mappage, mais peut être appliquée à plusieurs terminaux. 
+L'exemple suivant utilise l'objet suivant comme entrée dans un événement :  
+```
+ {
+    "temperature": 35,
+    "humidity": 72,
+    "pressure": 1024
+  }
+
+```
+L'objet est converti en un tableau à l'aide de l'expression suivante :
+
+```
+  [$event.temperature, $event.humidity, $event.pressure]
+```  
+L'expression a pour résultat la génération de la sortie suivante :
+```
+ [
+    35,
+    72,
+    1024
+  ]
+```
+
+Vous pouvez inverser cet exemple et convertir un tableau à partir de l'entrée à un objet. L'exemple suivant utilise le tableau suivant comme entrée dans un événement :
+```
+{
+    "readings": [
+      35,
+      72,
+      1024
+    ]
+  }
+```
+Le tableau est converti en objet à l'aide de l'expression suivante :
+```
+ {"temperature": $event.readings[0], "humidity": $event.readings[1], "pressure": $event.readings[2]}
+```
+L'expression a pour résultat la génération de la sortie suivante :
+```
+  {
+    "temperature": 35,
+    "humidity": 72,
+    "pressure": 1024
+  }
+  
+ ```
+Vous pouvez également définir une expression qui combine l'utilisation de ces variables. Dans l'exemple suivant, une propriété *temp_adjustment* est définie dans les métadonnées du terminal et est utilisée pour calibrer la lecture d'événement. La propriété est définie dans un mappage, mais peut être appliquée à plusieurs terminaux. 
 
 ```
 "propertyMappings" : {
@@ -59,43 +119,30 @@ Vous pouvez également définir une expression qui combine l'utilisation de ces 
      
 ```
 
-## Fonctions JSONata prises en charge
-{: #functions}
-Les fonctions JSONata du sous-ensemble suivant sont prises en charge : 
 
-Type de fonction                   |Fonction                   | Description | Exemple
-------------- | ------------- | ------------- 
-Chaîne | $substring(string, start_index[, length]) | Sous-chaîne de chaîne, par exemple, *$substring("Hello World", 3, 5) => "lo Wo"*. 
-Chaîne | $string(arg) | Transtype l'argument une une valeur de chaîne, par exemple, *$string(2) => "2"*.
-Numérique | $number(arg) | Transtype l'argument en une valeur numérique si possible, par exemple, *$number(2) => 2*.
-Numérique | $sum(array) | Renvoie la somme arithmétique d'un tableau de nombres, par exemple, *([1,2,3]) = 6*.
-Numérique | $average(array) | Renvoie la valeur moyenne d'un tableau de nombre, par exemple, *([1,2,3]) = 2.0*.
-Booléen | $exists(expression) | Renvoie *true* si la propriété existe dans l'expression, sinon *false*.
-Tableau | $count(array) | Renvoie le nombre d'éléments dans le paramètre de tableau, par exemple, *([1,2,3,4]) = 4*. Si le paramètre de tableau n'est pas un tableau, mais plutôt une valeur d'un autre type JSON, alors le paramètre est considéré comme un tableau singleton qui contient cette valeur, et la fonction renvoie *1*.
-Tableau| $append(array1, array2) | Renvoie un tableau qui contient les valeurs de *array1*, suivies par les valeurs de *array2*, par exemple, *([1,2], [3,4]) = [1,2,3,4]*. Si l'un des paramètres n'est pas un tableau, il est considéré comme un tableau singleton contenant cette valeur, par exemple *$append("Hello", "World") => ["Hello", "World"]*.
+L'opérateur point "." est utilisé pour l'accès aux objets avec une clé littérale, par exemple $event.object.hh. L'expression sur le côté gauche est soumise à une propriété spécifique, soit dans l'événement ($event), soit dans l'état ($state), soit dans les métadonnées ($instance). L'expression sur la droite contient les informations auxquels vous souhaitez éventuellement accéder.
 
-## Tableaux
-Utilisez les tableaux JSON pour organiser une collection de valeurs dans un ordre donné. Les tableaux associent chaque valeur du tableau à un index ou à une position. Pour gérer les valeurs individuelles d'un tableau, placez l'index entre crochets après le nom de zone du tableau. Si les crochets contiennent un nombre ou une expression qui a pour résultat un nombre, ce nombre constitue l'index de la valeur à sélectionner. Un tableau de nombres peut également être utilisé comme index, par exemple *["a","b","c"][[1,2]] -> ["b", "c"]*. Le tableau *[1,2]* est utilisé comme un index identifiant les valeurs à sélectionner dans le tableau *["a","b","c"]*. 
+Pour en savoir plus sur l'opérateur point, voir la section [Operateurs ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.jsonata.org/operators.html){:new_window} de la documentation JSONata.
 
-Les index ont un décalage du point zéro, ce qui signifie que la première valeur du tableau *arr* est *arr[0]*, par exemple, *[1,2,3][0] -> 1*. Si le nombre n'est pas un entier, il est arrondi au nombre entier inférieur, par exemple *[1,2,3][0.9] -> [1]*.
 
-Utilisez des index négatifs pour compter à partir de la fin du tableau, par exemple, *[1,2,3][-1] -> 3*. 
+## Guide des langages
 
-Si l'index spécifié dépasse la taille du tableau, aucune valeur n'est sélectionnée.
-
-## Construction de la sortie
-Vous pouvez indiquer la façon dont les données traitées sont affichées dans la sortie en utilisant des constructeurs de tableau ou d'objet.
+- Toutes les [sélections de base ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.jsonata.org/basic.html){:new_window} sont prises en charge.
+- Toutes les [sélections complexes ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.jsonata.org/complex.html){:new_window} sont prises en charge à l'exception des caractères génériques.
+- Les expressions conditionnelles et entre parenthèses sont prises en charge dans le cadre de [constructions de programmation ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.jsonata.org/programming.html){:new_window}. Les variables sont prises en charge à travers l'utilisation des variables $instance, $state et $event dans le cadre du langage de mappage étendu spécifique à la gestion de données de Watson IoT Platform. Les variables "$" et "$$" qui sont utilisées dans JSONata ne sont pas prises en charge actuellement.
+## Sortie de construction
+Vous pouvez spécifier comment les données traitées sont présentées dans la sortie à l'aide de constructeurs de tableau et de constructeurs d'objet.
 
 ### Constructeurs de tableau pris en charge
-Les tableaux peuvent être construits en plaçant entre crochets [] une liste de littéraux ou d'expressions séparés par des virgules. Les virgules sont utilisées pour séparer plusieurs expressions au sein du constructeur de tableau, par exemple, *[1, 3-1] = [1,2]*.
+Pour construire des tableaux, vous pouvez joindre une liste de littéraux ou expressions séparés par des virgules dans une paire de crochets []. Les virgules sont utilisées pour séparer les multiples expressions au sein du constructeur de tableau incluant la génération de séquence, par exemple, *[1, 3-1] = [1,2]*, *[1..3] -> [1,2,3]* et *[1..3, 7..9] -> [1,2,3,7,8,9]*.
 
 ### Constructeurs d'objet pris en charge
 {: #constructors}
-Vous pouvez construire des objets JSON dans la sortie en utilisant des accolades {} qui contiennent les valeurs clés ou des paires séparées par des virgules, chaque clé et valeur étant séparée par un double point, par exemple, *{key1 : value1, key2:value2}* ou *{"hello" : "world"}*. La clé d'objet doit être une chaîne.  
+Vous pouvez construire des objets JSON dans votre sortie en utilisant une paire d'accolades {} contenant des valeurs clé ou des paires séparées par des virgules, avec chaque clé et valeur séparée par deux points, par exemple, *{key1 : value1, key2:value2}* ou *{"hello" : "world"}*. La clé d'objet doit être une chaîne.  
 
 
-## Exemple : Utilisation de tableaux pour traiter et communiquer les données de température
-Les sections ci-dessous reposent sur l'exemple de la section [Initiation à la gestion de données](ga_im_example.html) afin d'illustrer la façon dont vous pouvez utiliser des tableaux pour conserver une fenêtre dynamique des relevés de température et calculer la somme ou la moyenne actuelle du relevé dans cette fenêtre. 
+## Exemple : Utilisation de tableaux pour traiter et générer des rapports sur les données de température
+Les sections suivantes s'appuient sur l'exemple fourni dans [Initiation à la gestion des données via les API REST](ga_im_example.html) pour montrer comment vous pouvez utiliser des tableaux pour maintenir une fenêtre dynamique des relevés de température et calculer la somme ou la moyenne actuelle du relevé contenu dans cette fenêtre.
 
 Une fenêtre dynamique stocke les données dans leur ordre d'arrivée. Au lieu de conserver toutes les données insérées depuis le début, les fenêtres dynamiques peuvent être configurées de manière à supprimer des données de manière incrémentielle. Lorsqu'une fenêtre dynamique est saturée, toutes les prochaines insertions entraînent la suppression des données les plus anciennes de cette fenêtre.
 
@@ -104,9 +151,9 @@ L'exemple ci-dessous illustre une fenêtre dynamique configurée avec une strat�
 () -> (1) -> (2, 1) -> (3, 2, 1) -> (4, 3, 2, 1) -> (5, 4, 3, 2, 1) -> (6, 5, 4, 3, 2) -> (7, 6, 5, 4, 3) -> ...
 ```
 
-L'exemple ci-dessous illustre la façon dont la configuration du fichier schéma de l'interface logique décrite à l'étape 7 du [Guide détaillé](ga_im_index_scenario.html#step4), peut être modifiée en ajoutant un tableau appelé *tempReadings*. Le tableau est utilisé pour conserver dans la fenêtre les 5 valeurs les plus récentes envoyées à partir des terminaux pour les 5 derniers événements. Si aucune valeur n'est stockée dans *tempReadings*, le tableau est défini sur [0] et le prochain relevé reçu est ajouté au tableau qui s'agrandit jusqu'à réception de 5 relevés. Une fois les 5 relevés reçus, tout nouveau relevé entraîne la suppression du relevé le plus ancien de la fenêtre. 
+L'exemple suivant montre comment la configuration du fichier schéma de l'interface logique montré à l'étape 7 du [guide détaillé 1](ga_im_index_scenario.html#step4), peut être modifié en ajoutant un tableau appelé *tempReadings*. Le tableau est utilisé pour conserver dans la fenêtre les 5 valeurs les plus récentes envoyées à partir des terminaux pour les 5 derniers événements. Si aucune valeur n'est stockée dans *tempReadings*, le tableau est défini sur [0] et le prochain relevé reçu est ajouté au tableau qui s'agrandit jusqu'à ce que 5 relevés soient reçus. Une fois les 5 relevés reçus, tout nouveau relevé entraîne la suppression du relevé le plus ancien de la fenêtre. 
 
-**Important :** Vous devez définir *tempReadings* comme étant "obligatoire" et comme tableau par défaut. 
+**Remarques importantes :** vous devez définir *tempReadings* comme étant "obligatoire" et comme tableau par défaut.
 
 ```
 {
@@ -141,6 +188,7 @@ L'exemple ci-dessous illustre la façon dont la configuration du fichier schéma
 ```
 La section ci-dessous illustre un exemple de la façon dont vous pouvez configurer la ressource de mappages pour calculer le relevé de température moyenne et la somme de tous les relevés de température basés sur les relevés contenus dans la fenêtre dynamique en cours :
 
+
 ```
 [
    {
@@ -161,7 +209,8 @@ La section ci-dessous illustre un exemple de la façon dont vous pouvez configur
    }
 ]
 ```
-**Remarque :** Le tableau *$state.tempReadings* est recalculé avant d'être utilisé dans les fonctions $average et $sum. Cette opération est nécessaire pour garantir que le tableau contient les valeurs à jour lorsque l'expression *tempAverage* ou *tempSum* est évaluée, l'ordre des expressions de mappage n'étant pas contrôlé.
+**Remarque :** Le tableau *$state.tempReadings* est recalculé avant d'être utilisé dans les fonctions $average et $sum. Cette opération est nécessaire pour garantir que le tableau contient les valeurs en cours lorsque l'expression *tempAverage* ou *tempSum* est évaluée, car l'ordre des expressions de mappage ne peut pas être contrôlé.
+
 L'exemple suivant illustre la moyenne et la somme des températures d'une fenêtre dynamique qui comporte 5 relevés de température :
 ```
 {
@@ -181,3 +230,33 @@ L'exemple suivant illustre la moyenne et la somme des températures d'une fenêt
 }
 ```
 
+## Gestion des non concordances entre l'expression de mappage et les données d'entrée
+
+Une mise à jour d'état peut échouer lorsque l'une des expressions de mappage contient une référence aux données d'entrée qui n'est pas spécifiée dans l'événement publié.
+
+Par exemple, vous pouvez configurer les expressions suivantes :
+```
+temperature = $event.t 
+humidity = $event.hum
+```
+où *t* est une propriété facultative de l'événement.
+
+Si un événement contenant uniquement des données d'humidité est reçu, par exemple, `{"humidity":22}`, l'évaluation de l'expression `temperature = $event.t` échoue car la propriété facultative *t* n'est pas spécifiée dans l'événement du terminal publié.
+
+La mise à jour de l'état échoue. La propriété de l'état d'humidité n'est pas mise à jour et un message d'erreur est publié dans la rubrique d'erreur MQTT du terminal :
+```
+iot-2/type/${typeId}/id/${deviceId}/err/data
+```
+Pour éviter les erreurs de mise à jour d'état lorsque les données facultatives ne sont pas spécifiées, vous pouvez utiliser la fonction $exists en combinaison avec un conditionnel ternaire pour spécifier une valeur par défaut pour les propriétés facultatives. L'exemple suivant définit une valeur par défaut de *0* pour la propriété *t* :
+
+```
+"tempEvent:
+    {
+      "temperature": "$exists($event.t)?$event.t:0",
+      "humidity": "$event.hum"
+    }
+```
+
+En définissant une valeur par défaut pour la propriété optionnelle de cette façon, l'expression est évaluée correctement, même lorsque la propriété *t* n'est pas spécifiée dans l'événement de terminal publié.
+
+Par conséquent, si l'événement `{"humidity":22}` est reçu, la mise à jour de l'état s'effectue correctement et l'état du terminal est défini sur `{"humidity":22, "temperature":0}`.

@@ -23,7 +23,7 @@ Per ulteriori informazioni, controlla il post del blog [An alternative approach 
 
 Per iniziare a definire le tue regole, consulta la documentazione [Creazione delle regole integrate (Beta)](information_management/im_rules.html).
 
-## Informazioni sull'analisi dei dati IoT in tempo reale 
+## Informazioni sull'analisi dei dati IoT in tempo reale
 
 Utilizza Watson {{site.data.keyword.iot_short_notm}} analytics per ottenere le informazioni analitiche in tempo reale di cui hai bisogno dai dati non elaborati prodotti dai tuoi dispositivi.  
 {: shortdesc}

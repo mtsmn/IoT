@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -88,7 +88,7 @@ lastupdated: "2017-03-14"
 |``provider``|设备管理扩展的提供者字符串，限制为 1024 个字符。|否|
 |``displayName``|``locale`` 的映射：在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 ``String`` 键/值对。必须指定至少一个条目。|是|
 |``描述``|``locale`` 的映射：用于在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 ``String`` 键/值对。如果定义，必须指定至少一个条目。|否|
-|``actions``| ``actionId`` 的映射：``<action>`` 键值对，用于定义设备管理扩展中包含的操作。必须指定至少一个条目。|是|
+|``actions``|``actionId`` 的映射：``<action>`` 键值对，用于定义设备管理扩展中包含的操作。必须指定至少一个条目。|是|
 
 ### 每个操作的属性：
 
@@ -329,6 +329,8 @@ lastupdated: "2017-03-14"
 ```
 在此设备管理扩展包中，定义了以下操作：
 
+
+
 - **installPlugin**
 - **enablePlugin**
 - **disablePlugin**
@@ -356,6 +358,8 @@ lastupdated: "2017-03-14"
 ```
 设备收到来自 {{site.data.keyword.iot_short_notm}} 的以下响应：
 
+
+
 ```
 	来自服务器的入局消息：
 
@@ -367,6 +371,8 @@ lastupdated: "2017-03-14"
 
 ```
 此时，可以启动在 ``exampleIoT-exampleDeviceType-v1`` 扩展中定义的设备操作。
+
+
 
 以下有效内容用于启动 ``installPlugin`` 操作：
 
@@ -397,6 +403,8 @@ lastupdated: "2017-03-14"
 
 ```
 使用以下 REST API 命令发起请求：
+
+
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 

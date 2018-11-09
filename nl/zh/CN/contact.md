@@ -15,7 +15,7 @@ lastupdated: "2018-01-17"
 # 联系 {{site.data.keyword.iot_short_notm}} 支持
 {: #gettinghelp}
 
-使用 {{site.data.keyword.iot_full}}，您有很多选项可联系支持人员，如通过论坛或通过 Slack，或者开具支持凭单，来获取帮助。您可以使用构想门户网站，将自己的增强功能构想提交给 {{site.data.keyword.iot_short_notm}}。
+使用 {{site.data.keyword.iot_full}}，您有很多选项可联系支持人员，如通过论坛或通过 Slack，或者开具支持凭单，来获取帮助。您甚至可以使用构想门户网站来提交自己的有关 {{site.data.keyword.iot_short_notm}} 增强功能的构想。
 
 ## 论坛
 
@@ -33,7 +33,7 @@ lastupdated: "2018-01-17"
 
 ## 支持凭单
 
-* [联系支持 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}
+* [联系支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}
 
 
 ## 构想门户网站

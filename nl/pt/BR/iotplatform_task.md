@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -40,8 +40,9 @@ O registro de um dispositivo envolve classificar o dispositivo como um tipo de d
 
 Para incluir um dispositivo a partir do painel do {{site.data.keyword.iot_short_notm}}:
 
-1. Clique no quadro do serviço {{site.data.keyword.iot_short_notm}} no painel do {{site.data.keyword.Bluemix}}.
-
+1. No console do IBM Cloud, selecione **IoT** no menu e clique no link {{site.data.keyword.iot_short_notm}}.  
+2. Efetue login ou clique em **Inscrever-se para criar**.  
+3. Na página {{site.data.keyword.iot_short_notm}}, escolha uma região, organização e espaço e clique em **Criar**.  
 2. Na página de serviço, clique em **Ativar** para iniciar a administração de sua organização do {{site.data.keyword.iot_short_notm}}.
 
   O console da web do {{site.data.keyword.iot_short_notm}} é aberto em uma nova guia do navegador na URL a seguir:

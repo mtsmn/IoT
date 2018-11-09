@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-11-29"
+  years: 2016, 2018
+lastupdated: "2018-03-11"
 
 ---
 
@@ -14,6 +14,15 @@ lastupdated: "2016-11-29"
 
 # Protezione del tuo server delle schede personalizzate
 {: #securing_custom_cards}
+
+**Importante:** stiamo facendo partire una beta per definire in un nuovo modo le regole nei tuoi dati del dispositivo IoT come parte
+di un programma di modifiche più grande per migliorare il modo in cui {{site.data.keyword.iot_full}} fornisce le regole e le azioni.
+
+Per ulteriori informazioni, controlla il post del blog [An alternative approach to defining Rules on IoT data ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Per iniziare a definire le tue regole, consulta la documentazione [Creazione delle regole integrate (Beta)](../../information_management/im_rules.html).
+
+## Informazioni sui server delle schede personalizzate
 
 I server delle schede personalizzate sono server web standard che ospitano il codice javascript delle schede personalizzate. Per assicurare l'integrità del tuo ambiente {{site.data.keyword.iot_short_notm}} devi proteggere il tuo server delle schede personalizzate per proteggere l'origine della scheda come descritto in questo argomento.
 {:shortdesc}

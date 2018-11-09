@@ -21,7 +21,7 @@ lastupdated: "2017-12-21"
 ## 始めに
 {: #byb}
 
-デバイスを接続してデータを利用する前に、{{site.data.keyword.Bluemix_notm}} アカウントを登録し、{{site.data.keyword.iot_short_notm}} サービスのインスタンスを {{site.data.keyword.Bluemix_notm}} 組織内に作成しておきます。{{site.data.keyword.iot_short_notm}} インスタンスは、[IBM Cloud サービス・カタログの {{site.data.keyword.iot_short_notm}} ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window} から直接作成できます。  
+デバイスを接続してデータを利用する前に、{{site.data.keyword.Bluemix_notm}} アカウントを登録し、{{site.data.keyword.iot_short_notm}} サービスのインスタンスを {{site.data.keyword.Bluemix_notm}} 組織内に作成しておきます。 {{site.data.keyword.iot_short_notm}} インスタンスは、[IBM Cloud サービス・カタログの {{site.data.keyword.iot_short_notm}} ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window} から直接作成できます。  
 
 {{site.data.keyword.Bluemix_notm}} のアカウントを登録し、領域やその他のアカウント管理設定を構成する方法について詳しくは、[IBM Cloud アカウントの管理](https://console.ng.bluemix.net/docs/admin/account.html#signup)を参照してください。
 
@@ -38,7 +38,7 @@ lastupdated: "2017-12-21"
 
 そのサービスを稼働させるために、各自の状況に応じて以下のオプションを調べてください。
 
-   |  サービスがデプロイされている | サービスがデプロイされていない
+   |   サービスがデプロイされている | サービスがデプロイされていない
   ------------- | -------------
   **接続するデバイスがある** | [デバイスを {{site.data.keyword.iot_short_notm}} に接続します](iotplatform_task.html#iotplatform_task)。| [組織のプレイ・デモ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} でデバイスの接続を試すことができます。
   **接続するデバイスがない** | [Node-RED デバイス・シミュレーターを作成して接続します](nodereddevice_sample.html){:new_window}。 | [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html) で作業を開始します。

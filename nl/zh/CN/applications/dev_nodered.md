@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -31,7 +31,7 @@ Watson IoT 节点是一对节点，用于将设备或网关连接到 {{site.data
 
 有关 Watson IoT 节点的更多信息，请参阅以下资源：
 
-- [GitHub 上的 Watson IoT 节点 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-ibm-watson-iot){: new_window}
+- [GitHub 上的 Watson IoT 节点 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/node-red-contrib-ibm-watson-iot){: new_window}
 - [Watson IoT 节点文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://www.npmjs.com/package/node-red-contrib-ibm-watson-iot){: new_window}
 
 
@@ -45,7 +45,7 @@ IBM IoT 应用程序节点是一对节点，用于将应用程序连接到 {{sit
 
 有关 IBM IoT 应用程序节点的更多信息，请参阅以下资源：
 
-- [GitHub 上的 IBM IoT 应用程序节点 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-scx-ibmiotapp){: new_window}
+- [GitHub 上的 IBM IoT 应用程序节点 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/node-red-contrib-scx-ibmiotapp){: new_window}
 - [IBM IoT 应用程序节点文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://flows.nodered.org/node/node-red-contrib-scx-ibmiotapp){: new_window}
 
 

@@ -2,8 +2,8 @@
 
 copyright:
 
-years: 2017
-lastupdated: "2017-07-20"
+years: 2017, 2018
+lastupdated: "2018-03-26"
 
 ---
 
@@ -38,40 +38,35 @@ https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002
 ## HTTP API
 {: #api_http}
 
-API| 用于...
+API|用于...
 ------------- | -------------
-[组织管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | 配置组织（包括创建和删除设备）、检查使用情况、提供状态服务并诊断设备连接问题。
+[组织管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} |配置组织（包括创建和删除设备）、检查使用情况、提供状态服务并诊断设备连接问题。
 
-[安全性 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | 管理用户邀请和认证，以及用户、API 密钥和设备的授权。
+[安全性 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} |管理用户、API 密钥和设备的认证和授权。
+[信息管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |访问设备事件数据，以及获取和更新设备位置并取得该位置的天气信息。
+[数据管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window}   |组织和集成传入和传出 {{site.data.keyword.iot_short_notm}} 的数据。
+[设备管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} |使用设备管理协议与受管设备进行交互。
 
-[信息管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  访问设备事件数据，以及获取和更新设备位置并取得该位置的天气信息。
-[数据管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window}   |   组织和集成传入和传出 {{site.data.keyword.iot_short_notm}} 的数据。
-[设备管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | 使用设备管理协议与受管设备进行交互。
-
-[消息传递 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | 使用 HTTP 发布事件并发送命令。
-[风险管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | 管理“风险管理”策略和报告。
+[消息传递 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   |使用 HTTP 发布事件并发送命令。
+[风险管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   |管理“风险管理”策略和报告。
 
 
 
 ## 扩展 HTTP API
 {: #api_extension}
 
-API| 用于...
+API|用于...
 ------------- | -------------
-[AT&T 扩展 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window} | 管理 AT&T 设备。
+[AT&T 扩展 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window} |管理 AT&T 设备。
 
-[Jasper 扩展 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} | 管理 Jasper 设备。
+[Jasper 扩展 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} |管理 Jasper 设备。
 
-[Orange 扩展 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} | 查看与 {{site.data.keyword.iot_short_notm}} 组织连接且已安装 Orange SIM 卡的设备的 SIM 卡数据。
+[Orange 扩展 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} |查看与 {{site.data.keyword.iot_short_notm}} 组织连接且已安装 Orange SIM 卡的设备的 SIM 卡数据。
 
 
 ## Beta HTTP API
 {: #api_beta}
 
-API| 用于...
+API|用于...
 ------------- | -------------
-[网关安全性 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html){: new_window}   | 检查角色并将角色分配给网关设备。
-
-[设备安全性 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-devices-beta.html){: new_window} | 检查角色并将角色分配给设备。
-
-[访问控制 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window} | 限制用户访问权。
+[复原删除的设备 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html){: new_window}   |如果误删除了设备，可以在 14 天内进行复原。

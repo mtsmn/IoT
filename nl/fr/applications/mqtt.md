@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-10"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -97,10 +97,10 @@ Une application peut s'abonner à des commandes envoyées à un ou plusieurs ter
 -  cmd_id
 -  format_string
 
-## Abonnement aux messages de statut d'un terminal
+## Abonnement aux messages d'état d'un terminal
 {: #subscribe_device_status}
 
-Une application peut s'abonner pour surveiller le statut d'un ou de plusieurs terminaux, par exemple :
+Une application peut s'abonner pour surveiller l'état d'un ou de plusieurs terminaux, par exemple :
 
 -  Subscribe to topic iot-2/type/*device_type*/id/*device_id*/mon
 
@@ -109,10 +109,10 @@ Une application peut s'abonner pour surveiller le statut d'un ou de plusieurs te
 - device_type
 - device_id
 
-## Abonnement aux messages de statut d'une application
+## Abonnement aux messages d'état d'une application
 {: #subscribe_app_status}
 
-Une application peut s'abonner pour surveiller le statut d'un ou de plusieurs applications, par exemple :
+Une application peut s'abonner pour surveiller l'état d'une ou de plusieurs applications, par exemple :
 
 - Subscribe to topic iot-2/app/*appId*/mon
 
@@ -125,7 +125,7 @@ Si vous prévoyez de créer un code d'application à utiliser avec le service Qu
 
 - Publication de commandes
 - Abonnement à des commandes
-- Utilisation du caractère générique MQTT + dans les composants **deviceType** ou **appId**
+- Utilisation du caractère générique MQTT "any" (+) dans les composants **device_id** ou **appId** 
 - Connexion MQTT via le protocole TLS (Transport Layer Security)
 - Applications évolutives
 

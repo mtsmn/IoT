@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-10-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -54,15 +54,18 @@ lastupdated: "2017-10-18"
 }
 
 ```
+{{site.data.keyword.iot_short_notm}}에 메시지를 전송하기 위해 MQTT 디바이스가 사용하는 서비스 품질(QoS)은 메시지가 {{site.data.keyword.iot_short_notm}}에서 {{site.data.keyword.cloudant_short_notm}}로 전송될 때는 적용되지 않습니다. 일반적으로, 메시지는 {{site.data.keyword.cloudant_short_notm}}에 한 번만 전송됩니다. 드물지만, 메시지가 두 번 이상 전송되거나 아예 전송되지 않을 수 있습니다.  
 
 ## 시작하기 전에  
 {: #byb}
 
 {{site.data.keyword.cloudant_short_notm}}를 {{site.data.keyword.iot_short}} 서비스에 연결하기 전에 다음 태스크를 완료하십시오.
 
-- {{site.data.keyword.Bluemix_notm}} 카탈로그를 사용하여 {{site.data.keyword.iot_short_notm}}과 동일한 {{site.data.keyword.Bluemix_notm}} 영역에서 {{site.data.keyword.cloudant_short_notm}}를 설정하십시오. 
+- {{site.data.keyword.Bluemix_notm}} 카탈로그를 사용하여 {{site.data.keyword.iot_short_notm}}과 동일한 {{site.data.keyword.Bluemix_notm}} 영역에서 {{site.data.keyword.cloudant_short_notm}}를 설정하십시오.
 
-{{site.data.keyword.Bluemix_notm}} 조직에서 개발자 권한이 있는지와 {{site.data.keyword.Bluemix_notm}}를 통해 로그인했는지 확인하십시오. {{site.data.keyword.Bluemix_notm}}를 통해 로그인하지 않았거나 이 {{site.data.keyword.Bluemix_notm}} 조직에서 개발자 권한이 없는 경우에는 {{site.data.keyword.cloudant_short_notm}} 및 {{site.data.keyword.iot_short_notm}}의 바인딩에 대해 권한 부여할 수 없습니다. 
+{{site.data.keyword.Bluemix_notm}} 조직에서 개발자 권한이 있는지와 {{site.data.keyword.Bluemix_notm}}를 통해 로그인했는지 확인하십시오. {{site.data.keyword.Bluemix_notm}}를 통해 로그인하지 않았거나 이 {{site.data.keyword.Bluemix_notm}} 조직에서 개발자 권한이 없는 경우에는 {{site.data.keyword.cloudant_short_notm}} 및 {{site.data.keyword.iot_short_notm}}의 바인딩에 대해 권한 부여할 수 없습니다.
+
+## {{site.data.keyword.iot_short_notm}} 대시보드를 사용하여 {{site.data.keyword.cloudant_short_notm}} 서비스를 {{site.data.keyword.iot_short_notm}}에 바인드
 
 다음 단계를 완료하여 {{site.data.keyword.cloudant_short_notm}}에 연결하십시오.
 
@@ -78,12 +81,12 @@ lastupdated: "2017-10-18"
 
   c. 데이터베이스 이름을 판별하는 옵션을 선택하십시오. 데이터베이스 이름은 `iotp_<orgID>_<dbname>_<bucket_name>`입니다. 여기서
 
- +  * `<orgID>`는 조직 ID입니다.
- +  * `<dbname>`은 `데이터베이스 이름` 필드에서 제어되는 데이터베이스 이름의 파트에 대한 선택사항입니다.
- +  * `<bucket_name>`은 `버킷 간격` 필드에 대한 선택사항으로 판별되는 문자열입니다.
- +    * `day` 버킷 간격의 경우, `<bucket_name>`은 `yyyy-mm-dd`입니다.  예를 들어, 2016년 7월 6일의 이벤트의 경우 `2016-07-06`입니다.
- +    * `week` 버킷 간격의 경우, `<bucket_name>`은 `yyyy-'w'ww`이며, 여기서 `'w'ww`는 주 수를 표시합니다.  예를 들어, 2016년 셋째 주의 이벤트의 경우 `2016-w03`입니다.
- +    * `month` 버킷 간격의 경우, `<bucket_name>`은 `yyyy-mm`입니다.  예를 들어, 2016년 7월의 이벤트의 경우 `2016-07`입니다.
+   * `<orgID>`는 조직 ID입니다.
+   * `<dbname>`은 `데이터베이스 이름` 필드에서 제어되는 데이터베이스 이름의 파트에 대한 선택사항입니다.
+   * `<bucket_name>`은 `버킷 간격` 필드에 대한 선택사항으로 판별되는 문자열입니다.
+     * `day` 버킷 간격의 경우 `<bucket_name>`은 `yyyy-mm-dd`입니다. 예를 들어, 2016년 7월 6일의 이벤트의 경우 `2016-07-06`입니다.
+     * `week` 버킷 간격의 경우 `<bucket_name>`은 `yyyy-'w'ww`이며, 여기서 `'w'ww`는 주 수를 표시합니다.  예를 들어, 2016년 셋째 주의 이벤트의 경우 `2016-w03`입니다.
+     * `month` 버킷 간격의 경우 `<bucket_name>`은 `yyyy-mm`입니다.  예를 들어, 2016년 7월의 이벤트의 경우 `2016-07`입니다.
 
 5. **권한 부여**를 클릭하십시오.
 6. 권한 부여 대화 상자에서 **확인**을 클릭하십시오.
@@ -95,9 +98,9 @@ lastupdated: "2017-10-18"
 
 다음 레시피는 {{site.data.keyword.iot_short}}의 히스토리언 스토리지로서 {{site.data.keyword.cloudant_short_notm}}를 사용하는 방법을 설명합니다.
 
-- [{{site.data.keyword.iot_short}}에 대한 히스토리언 데이터 스토리지로 {{site.data.keyword.cloudant_short_notm}} 구성(![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} 레시피는 디바이스 데이터를 {{site.data.keyword.cloudant_short_notm}}에 저장하는 방법을 설명하고 히스토리언 데이터 스토리지로 {{site.data.keyword.cloudant_short_notm}}를 구성하고 여기에 디바이스 데이터를 구성하고 저장하는 방법을 보여줍니다.
+- [{{site.data.keyword.iot_short}}에 대한 히스토리언 데이터 스토리지로 {{site.data.keyword.cloudant_short_notm}} 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} 레시피는 디바이스 데이터를 {{site.data.keyword.cloudant_short_notm}}에 저장하는 방법을 설명하고 히스토리언 데이터 스토리지로 {{site.data.keyword.cloudant_short_notm}}를 구성하고 여기에 디바이스 데이터를 구성하고 저장하는 방법을 보여줍니다.
 
-- [{{site.data.keyword.cloudant_short_notm}}에서 {{site.data.keyword.iot_short}} 디바이스 데이터 조회 및 처리(![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} 레시피는 {{site.data.keyword.cloudant_short_notm}}에 저장되는 디바이스 데이터를 조회하고 이에 대한 데이터 처리 오퍼레이션을 수행하는 방법을 표시합니다.
+- [{{site.data.keyword.cloudant_short_notm}}에서 {{site.data.keyword.iot_short}} 디바이스 데이터 조회 및 처리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} 레시피는 {{site.data.keyword.cloudant_short_notm}}에 저장되는 디바이스 데이터를 조회하고 이에 대한 데이터 처리 오퍼레이션을 수행하는 방법을 표시합니다.
 
 - [Cloudant NoSQL DB에 저장된 Watson IoT 디바이스 데이터 시각화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} 레시피는 Watson IoT Platform 대시보드에 디바이스 데이터를 표시하기 위해 선형 차트 카드와 히스토리언 데이터 스토리지 간의 연결 방법을 보여줍니다.
 

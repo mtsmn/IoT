@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -91,7 +91,7 @@ En la tabla siguiente se describen restricciones de carga útil de mensaje para 
 
 Formato de carga útil  | Directrices para casos de uso específicos
 --------- | ----------  
-JSON | JSON es el formato estándar para {{site.data.keyword.iot_short_notm}}. Si tiene la intención de utilizar los paneles de instrumentos, las placas y las tarjetas y las analíticas incorporadas de {{site.data.keyword.iot_short_notm}}, asegúrese de que el formato de carga útil de mensaje se ajusta al texto JSON bien formado.
+JSON | JSON es el formato estándar para {{site.data.keyword.iot_short_notm}}. Si tiene previsto utilizar los paneles de control integrados de {{site.data.keyword.iot_short_notm}}, asegúrese de que el formato de la carga útil del mensaje se ajusta a un texto JSON bien formato.
 Texto | Utilice la codificación de caracteres de UTF-8 válida.
 Binario | Sin restricciones.
 

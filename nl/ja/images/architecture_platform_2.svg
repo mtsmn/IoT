@@ -1,1488 +1,183 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   viewBox="0 0 674 360"
-   version="1.1"
-   id="svg673"
-   sodipodi:docname="architecture_platform_2.svg"
-   inkscape:version="0.92.1 r15371">
-  <metadata
-     id="metadata679">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs
-     id="defs677" />
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     id="namedview675"
-     showgrid="false"
-     inkscape:zoom="2.2047542"
-     inkscape:cx="326.02047"
-     inkscape:cy="181.99219"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg673" />
-  <title
-     id="title2">Caroline_Mcnamara_architecture.v2</title>
-  <g
-     id="Layer_1"
-     data-name="Layer 1"
-     style="">
-    <path
-       id="path13593"
-       d="M178.62,332.74H159.5v-.07a8.78,8.78,0,1,1,2.74-17.33,9.66,9.66,0,0,1,19.21.42,8.78,8.78,0,0,1-2,16.91v.06h-.8Zm-18.06-1.6h18a7.18,7.18,0,0,0,1.85-14l-.55-.17,0-.57a8.06,8.06,0,0,0-16.11,0l0,1.06-1-.31a7.18,7.18,0,1,0-2.4,14h.22Z"
-       style="fill:#70caee" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 674 360">
+  <title>Caroline_Mcnamara_architecture.v2</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path id="path13593" d="M178.62,332.74H159.5v-.07a8.78,8.78,0,1,1,2.74-17.33,9.66,9.66,0,0,1,19.21.42,8.78,8.78,0,0,1-2,16.91v.06h-.8Zm-18.06-1.6h18a7.18,7.18,0,0,0,1.85-14l-.55-.17,0-.57a8.06,8.06,0,0,0-16.11,0l0,1.06-1-.31a7.18,7.18,0,1,0-2.4,14h.22Z" style="fill: #70caee"/>
   </g>
-  <rect
-     id="rect6"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     transform="rotate(-0.32)"
-     height="59"
-     width="116.82"
-     y="31.498096"
-     x="2.1581063" />
-  <rect
-     id="rect8"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     transform="rotate(-0.32)"
-     height="59"
-     width="117.49"
-     y="105.49581"
-     x="1.4081129" />
-  <rect
-     id="rect10"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.00004995;stroke-miterlimit:10"
-     transform="rotate(-0.5729387)"
-     height="59.002949"
-     width="117.10585"
-     y="179.49734"
-     x="1.196776" />
-  <rect
-     id="rect12"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     transform="rotate(-0.32)"
-     height="59"
-     width="116.82"
-     y="26.528263"
-     x="7.1879382" />
-  <rect
-     id="rect14"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     transform="rotate(-0.32)"
-     height="59"
-     width="117.49"
-     y="100.52598"
-     x="6.4379444" />
-  <rect
-     id="rect16"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.00004995;stroke-miterlimit:10"
-     transform="rotate(-0.5729387)"
-     height="59.002949"
-     width="117.10585"
-     y="174.52739"
-     x="6.2267246" />
-  <rect
-     id="rect18"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     transform="rotate(-0.32)"
-     height="59"
-     width="116.82"
-     y="21.548429"
-     x="12.217826" />
-  <text
-     id="text44"
-     style="font-size:10.31253306px;font-family:'MS UI Gothic';fill:#1d1d1b;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-     x="39.110001"
-     y="69.849998">
-    <tspan
-       id="tspan20"
-       style="letter-spacing:0.01287287em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">アプリケーション</tspan>
-    <tspan
-       id="tspan22"
-       style="letter-spacing:0.00355114em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="69.849998"
-       x="46.59" />
-    <tspan
-       id="tspan24"
-       style="letter-spacing:0.00301847em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="69.849998"
-       x="53.349998" />
-    <tspan
-       id="tspan26"
-       y="69.849998"
-       x="60.099998"
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;" />
-    <tspan
-       id="tspan28"
-       style="letter-spacing:0.00390625em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="69.849998"
-       x="62.75" />
-    <tspan
-       id="tspan30"
-       style="letter-spacing:0.00603693em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="69.849998"
-       x="65.449997" />
-    <tspan
-       id="tspan32"
-       style="letter-spacing:0.0020419em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="69.849998"
-       x="71.629997" />
-    <tspan
-       id="tspan34"
-       style="letter-spacing:0.00310724em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="69.849998"
-       x="77.769997" />
-    <tspan
-       id="tspan36"
-       style="letter-spacing:0.00195313em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="69.849998"
-       x="81.470001" />
-    <tspan
-       id="tspan38"
-       style="letter-spacing:0.00488281em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="69.849998"
-       x="84.139999" />
-    <tspan
-       id="tspan40"
-       style="letter-spacing:0.00337358em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="69.849998"
-       x="90.720001" />
-    <tspan
-       id="tspan42"
-       y="69.849998"
-       x="97.07"
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;" />
-  </text>
-  <g
-     id="g64"
-     style="">
-    <g
-       id="g50"
-       style="">
-      <rect
-         id="rect46"
-         style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-         height="7"
-         width="24"
-         y="28.66"
-         x="58.91" />
-      <circle
-         id="circle48"
-         style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-         r="1.25"
-         cy="32.16"
-         cx="78.160004" />
-    </g>
-    <g
-       id="g56"
-       style="">
-      <rect
-         id="rect52"
-         style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-         height="7"
-         width="24"
-         y="37.66"
-         x="58.91" />
-      <circle
-         id="circle54"
-         style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-         r="1.25"
-         cy="41.16"
-         cx="78.160004" />
-    </g>
-    <g
-       id="g62"
-       style="">
-      <rect
-         id="rect58"
-         style="fill:none;stroke:#ffffff;stroke-width:0.93541437px;stroke-miterlimit:10"
-         height="7"
-         width="24"
-         y="46.66"
-         x="58.91" />
-      <circle
-         id="circle60"
-         style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-         r="1.25"
-         cy="50.16"
-         cx="78.160004" />
-    </g>
-  </g>
-  <rect
-     id="rect66"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     transform="rotate(-0.32)"
-     height="59"
-     width="117.49"
-     y="95.556145"
-     x="11.467776" />
-  <text
-     id="text86"
-     style="font-size:10.31253306px;font-family:'MS UI Gothic';fill:#1d1d1b;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-     x="41.459999"
-     y="143.85001">
-    <tspan
-       id="tspan68"
-       style="letter-spacing:0.00266335em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">IoT デバイス</tspan>
-    <tspan
-       id="tspan70"
-       style="letter-spacing:-0.07927912em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="143.85001"
-       x="44.549999" />
-    <tspan
-       id="tspan72"
-       y="143.85001"
-       x="50.200001"
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;" />
-    <tspan
-       id="tspan74"
-       style="letter-spacing:0.00754616em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="143.85001"
-       x="59.779999" />
-    <tspan
-       id="tspan76"
-       style="letter-spacing:-0.00923295em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="143.85001"
-       x="67.800003" />
-    <tspan
-       id="tspan78"
-       style="letter-spacing:0.00399503em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="143.85001"
-       x="73.82" />
-    <tspan
-       id="tspan80"
-       style="letter-spacing:0.0045277em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="143.85001"
-       x="82.260002" />
-    <tspan
-       id="tspan82"
-       style="letter-spacing:0.0078125em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="143.85001"
-       x="88.43" />
-    <tspan
-       id="tspan84"
-       y="143.85001"
-       x="94.629997"
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;" />
-  </text>
-  <rect
-     id="rect88"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.00004995;stroke-miterlimit:10"
-     transform="rotate(-0.5729387)"
-     height="59.002949"
-     width="117.10585"
-     y="169.55745"
-     x="11.256673" />
-  <text
-     id="text110"
-     style="font-size:10.31253306px;font-family:'MS UI Gothic';fill:#1d1d1b;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-     x="36.689999"
-     y="217.85001">
-    <tspan
-       id="tspan90"
-       style="letter-spacing:0.00266335em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">IoT ゲートウェイ</tspan>
-    <tspan
-       id="tspan92"
-       style="letter-spacing:-0.07927912em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="217.85001"
-       x="39.779999" />
-    <tspan
-       id="tspan94"
-       y="217.85001"
-       x="45.43"
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;" />
-    <tspan
-       id="tspan96"
-       style="letter-spacing:0.01083097em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="217.85001"
-       x="55.009998" />
-    <tspan
-       id="tspan98"
-       style="letter-spacing:0.0020419em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="217.85001"
-       x="63.48" />
-    <tspan
-       id="tspan100"
-       style="letter-spacing:-0.00683594em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="217.85001"
-       x="69.610001" />
-    <tspan
-       id="tspan102"
-       style="letter-spacing:-0.01020952em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="217.85001"
-       x="79.239998" />
-    <tspan
-       id="tspan104"
-       style="letter-spacing:-0.00932173em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="217.85001"
-       x="87.68" />
-    <tspan
-       id="tspan106"
-       style="letter-spacing:0.00062145em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="217.85001"
-       x="93.699997" />
-    <tspan
-       id="tspan108"
-       y="217.85001"
-       x="99.410004"
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;" />
-  </text>
-  <rect
-     id="rect112"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     height="70"
-     width="127.5"
-     y="242.16"
-     x="2.4100001" />
-  <text
-     id="text166"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.04367898em;writing-mode:lr-tb;text-anchor:start;fill:#1d1d1b"
-     x="29.17"
-     y="290.85001">Watson IoT Platform</text>
-  <rect
-     id="rect168"
-     style="fill:#f0f0ef"
-     height="286"
-     width="438"
-     y="26"
-     x="213" />
-  <text
-     id="text190"
-     style="font-weight:normal;font-size:10.31253306px;font-family:'MS UI Gothic';fill:#1d1d1b;-inkscape-font-specification:'MS UI Gothic, Normal';font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-     x="244"
-     y="20.5">
-    <tspan
-       id="tspan170"
-       style="letter-spacing:0.00325521em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none">IBM® Bluemix</tspan>
-    <tspan
-       id="tspan172"
-       style="letter-spacing:0.00130208em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="20.5"
-       x="247.58" />
-    <tspan
-       id="tspan174"
-       style="letter-spacing:0.009847em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="20.5"
-       x="256.04001" />
-    <tspan
-       id="tspan176"
-       y="20.5"
-       x="267.04001"
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
-    <tspan
-       id="tspan178"
-       style="letter-spacing:0.00504557em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="20.5"
-       x="279.98001" />
-    <tspan
-       id="tspan180"
-       style="letter-spacing:0.00838216em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="20.5"
-       x="291.64999" />
-    <tspan
-       id="tspan182"
-       style="letter-spacing:0.00537109em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="20.5"
-       x="298.85999" />
-    <tspan
-       id="tspan184"
-       style="letter-spacing:0.00415039em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="20.5"
-       x="305.82001" />
-    <tspan
-       id="tspan186"
-       style="letter-spacing:0.0090332em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="20.5"
-       x="316.73999" />
-    <tspan
-       id="tspan188"
-       style="letter-spacing:-0.00008138em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="20.5"
-       x="319.94" />
-  </text>
-  <text
-     id="text226"
-     style="font-weight:normal;font-size:10.31253306px;font-family:'MS UI Gothic';fill:#1d1d1b;-inkscape-font-specification:'MS UI Gothic, Normal';font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-     x="244"
-     y="72.5">
-    <tspan
-       id="tspan192"
-       style="letter-spacing:-0.02612305em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none">Watson™ IoT Platform</tspan>
-    <tspan
-       id="tspan194"
-       style="letter-spacing:0.00651042em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="255.00999" />
-    <tspan
-       id="tspan196"
-       style="letter-spacing:0.0139974em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="261.98001" />
-    <tspan
-       id="tspan198"
-       style="letter-spacing:0.00260417em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="266.37" />
-    <tspan
-       id="tspan200"
-       style="letter-spacing:0.00333659em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="272.85001" />
-    <tspan
-       id="tspan202"
-       style="letter-spacing:-0.06022136em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="280.22" />
-    <tspan
-       id="tspan204"
-       y="72.5"
-       x="286.60999"
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
-    <tspan
-       id="tspan206"
-       style="letter-spacing:0.00227865em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="301.95001" />
-    <tspan
-       id="tspan208"
-       style="letter-spacing:-0.08357748em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="305.51999" />
-    <tspan
-       id="tspan210"
-       y="72.5"
-       x="311.84"
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
-    <tspan
-       id="tspan212"
-       style="letter-spacing:-0.00553385em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="322.51001" />
-    <tspan
-       id="tspan214"
-       style="letter-spacing:0.00691732em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="330.45001" />
-    <tspan
-       id="tspan216"
-       style="letter-spacing:0.03157552em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="340.60001" />
-    <tspan
-       id="tspan218"
-       style="letter-spacing:-0.00301107em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="345.20001" />
-    <tspan
-       id="tspan220"
-       style="letter-spacing:0.00333659em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="349.16" />
-    <tspan
-       id="tspan222"
-       style="letter-spacing:0.00854492em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="356.53" />
-    <tspan
-       id="tspan224"
-       style="letter-spacing:-0.00008138em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
-       y="72.5"
-       x="361.29999" />
-  </text>
-  <line
-     id="line228"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     y2="187"
-     x2="81"
-     y1="187"
-     x1="62" />
-  <line
-     id="line230"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     y2="194"
-     x2="81"
-     y1="194"
-     x1="72" />
-  <line
-     id="line232"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     y2="194"
-     x2="72"
-     y1="187.05"
-     x1="67.050003" />
-  <g
-     id="g238"
-     style="">
-    <circle
-       id="circle234"
-       style="fill:#6fc9ee"
-       r="1.5"
-       cy="187"
-       cx="62" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path236"
-       style="fill:#ffffff"
-       d="m 62,186 a 1,1 0 1 1 -1,1 1,1 0 0 1 1,-1 m 0,-1 a 2,2 0 1 0 2,2 2,2 0 0 0 -2,-2 z" />
-  </g>
-  <g
-     id="g244"
-     style="">
-    <circle
-       id="circle240"
-       style="fill:#6fc9ee"
-       r="1.5"
-       cy="187"
-       cx="72" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path242"
-       style="fill:#ffffff"
-       d="m 72,186 a 1,1 0 1 1 -1,1 1,1 0 0 1 1,-1 m 0,-1 a 2,2 0 1 0 2,2 2,2 0 0 0 -2,-2 z" />
-  </g>
-  <g
-     id="g250"
-     style="">
-    <circle
-       id="circle246"
-       style="fill:#6fc9ee"
-       r="1.5"
-       cy="187"
-       cx="81" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path248"
-       style="fill:#ffffff"
-       d="m 81,186 a 1,1 0 1 1 -1,1 1,1 0 0 1 1,-1 m 0,-1 a 2,2 0 1 0 2,2 2,2 0 0 0 -2,-2 z" />
-  </g>
-  <g
-     id="g256"
-     style="">
-    <circle
-       id="circle252"
-       style="fill:#6fc9ee"
-       r="1.5"
-       cy="194"
-       cx="81" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path254"
-       style="fill:#ffffff"
-       d="m 81,193 a 1,1 0 1 1 -1,1 1,1 0 0 1 1,-1 m 0,-1 a 2,2 0 1 0 2,2 2,2 0 0 0 -2,-2 z" />
-  </g>
-  <g
-     id="g262"
-     style="">
-    <circle
-       id="circle258"
-       style="fill:#6fc9ee"
-       r="1.5"
-       cy="194"
-       cx="72" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path260"
-       style="fill:#ffffff"
-       d="m 72,193 a 1,1 0 1 1 -1,1 1,1 0 0 1 1,-1 m 0,-1 a 2,2 0 1 0 2,2 2,2 0 0 0 -2,-2 z" />
-  </g>
-  <rect
-     id="rect264"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     height="24.66"
-     width="24"
-     y="250"
-     x="58.91" />
-  <rect
-     id="rect267"
-     style="fill:#6fc9ee"
-     height="186"
-     width="285"
-     y="78"
-     x="244" />
-  <text
-     id="text289"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1d1d1b"
-     x="459.62939"
-     y="113.2093">
-    <tspan
-       id="tspan269"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01162109em;writing-mode:lr-tb;text-anchor:start">デバイスの</tspan>
-  </text>
-  <text
-     id="text311"
-     style="font-size:10.31253306px;font-family:'MS UI Gothic';fill:#1d1d1b;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-     x="550.89001"
-     y="173.28">
-    <tspan
-       id="tspan291"
-       style="letter-spacing:0.01054688em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">データ・ストア</tspan>
-    <tspan
-       id="tspan293"
-       style="letter-spacing:0.00605469em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="173.28"
-       x="558.21997" />
-    <tspan
-       id="tspan295"
-       style="letter-spacing:0.01523438em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="173.28"
-       x="563.84003" />
-    <tspan
-       id="tspan297"
-       y="173.28"
-       x="567.32001"
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;" />
-    <tspan
-       id="tspan299"
-       style="letter-spacing:0.01386719em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="173.28"
-       x="575.65997" />
-    <tspan
-       id="tspan301"
-       style="letter-spacing:-0.00449219em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="173.28"
-       x="582.28003" />
-    <tspan
-       id="tspan303"
-       style="letter-spacing:0.00888672em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="173.28"
-       x="585.56" />
-    <tspan
-       id="tspan305"
-       style="letter-spacing:0.01474609em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="173.28"
-       x="591.58002" />
-    <tspan
-       id="tspan307"
-       style="letter-spacing:0.01162109em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-       y="173.28"
-       x="595.25" />
-    <tspan
-       id="tspan309"
-       y="173.28"
-       x="600.91998"
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;" />
-  </text>
-  <path
-     inkscape:connector-curvature="0"
-     id="path313"
-     style="fill:#f0f0ef"
-     d="m 513,95 v 43 H 453.5 V 95 H 513 m 1,-1 h -61.5 v 45 H 514 Z" />
-  <path
-     inkscape:connector-curvature="0"
-     id="path315"
-     style="fill:#f0f0ef"
-     d="m 513,205 v 43 H 453.5 V 205 H 513 m 1,-1 h -61.5 v 45 H 514 Z" />
-  <text
-     id="text345"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1d1d1b"
-     x="454.64001"
-     y="221.67999">
-    <tspan
-       id="tspan317"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.02314453em;writing-mode:lr-tb;text-anchor:start">最新イベント・</tspan>
-  </text>
-  <text
-     id="text351"
-     style="font-size:10.31253306px;font-family:'MS UI Gothic';letter-spacing:-0.00423177em;fill:#1d1d1b;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-     x="162.45"
-     y="52">API<tspan
-   id="tspan347"
-   style="letter-spacing:-0.02354601em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-   y="52"
-   x="168.41" />
-<tspan
-   id="tspan349"
-   style="letter-spacing:-0.01996528em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-   y="52"
-   x="174.21001" />
-</text>
-  <text
-     id="text359"
-     style="font-size:10.31253306px;font-family:'MS UI Gothic';letter-spacing:-0.01085069em;fill:#1d1d1b;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-     x="157.97"
-     y="281.89001">HTTP<tspan
-   id="tspan353"
-   style="letter-spacing:0.02105035em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-   y="281.89001"
-   x="164.37" />
-<tspan
-   id="tspan355"
-   style="letter-spacing:-0.01128472em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-   y="281.89001"
-   x="169.89999" />
-<tspan
-   id="tspan357"
-   style="letter-spacing:-0.02007378em;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.31253306px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-   y="281.89001"
-   x="175.13" />
-</text>
-  <text
-     id="text375"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.00954861em;writing-mode:lr-tb;text-anchor:start;fill:#1d1d1b"
-     x="141.81"
-     y="344">インターネット<tspan
-   id="tspan361"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.01019965em;writing-mode:lr-tb;text-anchor:start"
-   y="344"
-   x="144.23" />
-<tspan
-   id="tspan363"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.01822917em;writing-mode:lr-tb;text-anchor:start"
-   y="344"
-   x="149.3" />
-<tspan
-   id="tspan365"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.00368924em;writing-mode:lr-tb;text-anchor:start"
-   y="344"
-   x="152.13" />
-<tspan
-   id="tspan367"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00249566em;writing-mode:lr-tb;text-anchor:start"
-   y="344"
-   x="157.10001" />
-<tspan
-   id="tspan369"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.00835503em;writing-mode:lr-tb;text-anchor:start"
-   y="344"
-   x="160.28999" />
-<tspan
-   id="tspan371"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.01009115em;writing-mode:lr-tb;text-anchor:start"
-   y="344"
-   x="165.39" />
-<tspan
-   id="tspan373"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.01996528em;writing-mode:lr-tb;text-anchor:start"
-   y="344"
-   x="170.3" />
-</text>
-  <g
-     id="g381"
-     style="">
-    <polyline
-       id="polyline377"
-       style="fill:none;stroke:#000000;stroke-miterlimit:10"
-       points="427 174.16 481 174.16 481 147.18" />
-    <polygon
-       id="polygon379"
-       points="476.01,148.63 485.99,148.63 481,140 "
-       style="" />
-  </g>
-  <g
-     id="g387"
-     style="">
-    <line
-       id="line383"
-       style="fill:none;stroke:#000000;stroke-miterlimit:10"
-       y2="198.16"
-       x2="551.82001"
-       y1="198.16"
-       x1="529" />
-    <polygon
-       id="polygon385"
-       points="550.37,193.17 550.37,203.15 559,198.16 "
-       style="" />
-  </g>
-  <g
-     id="g419"
-     style="">
-    <g
-       id="g397"
-       style="">
-      <path
-         inkscape:connector-curvature="0"
-         id="path389"
-         style="fill:#f0f0ef;stroke:#1d1d1b;stroke-miterlimit:10"
-         d="m 565.5,202.5 v 5.5 c 0,1.93 5.82,3.5 13,3.5 7.18,0 13,-1.57 13,-3.5 v -5.5" />
-      <g
-         id="g395"
-         style="">
-        <path
-           inkscape:connector-curvature="0"
-           id="path391"
-           style="fill:#f0f0ef"
-           d="m 578.5,205.62 c -8,0 -13,-1.81 -13,-3.12 0,-1.31 4.94,-3.12 13,-3.12 8.06,0 13,1.81 13,3.12 0,1.31 -4.96,3.12 -13,3.12 z" />
-        <path
-           inkscape:connector-curvature="0"
-           id="path393"
-           style="fill:#1d1d1b"
-           d="m 578.5,199.9 c 8.29,0 12.33,1.88 12.46,2.59 -0.13,0.72 -4.17,2.6 -12.46,2.6 -8.29,0 -12.33,-1.88 -12.46,-2.59 0.13,-0.72 4.17,-2.6 12.46,-2.6 m 0,-1 c -7.46,0 -13.5,1.63 -13.5,3.63 0,2 6,3.63 13.5,3.63 7.5,0 13.5,-1.63 13.5,-3.63 0,-2 -6,-3.63 -13.5,-3.63 z" />
+  <g id="Layer_2" data-name="Layer 2">
+    <rect x="2.5" y="31.16" width="116.82" height="59" transform="translate(-0.34 0.34) rotate(-0.32)" style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"/>
+    <rect x="2.16" y="105.16" width="117.49" height="59" transform="translate(-0.75 0.34) rotate(-0.32)" style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"/>
+    <rect x="2.36" y="179.16" width="117.1" height="59" transform="matrix(1, -0.01, 0.01, 1, -1.16, 0.34)" style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"/>
+    <rect x="7.5" y="26.16" width="116.82" height="59" transform="translate(-0.31 0.37) rotate(-0.32)" style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"/>
+    <rect x="7.16" y="100.16" width="117.49" height="59" transform="translate(-0.72 0.37) rotate(-0.32)" style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"/>
+    <rect x="7.36" y="174.16" width="117.1" height="59" transform="matrix(1, -0.01, 0.01, 1, -1.13, 0.37)" style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"/>
+    <rect x="12.5" y="21.16" width="116.82" height="59" transform="translate(-0.28 0.39) rotate(-0.32)" style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"/>
+    <text transform="translate(39.11 69.85)" style="font-size: 11px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"><tspan style="letter-spacing: 0.012872869318181818em">アプリケーション</tspan><tspan x="7.48" y="0" style="letter-spacing: 0.0035511363636363635em"></tspan><tspan x="14.24" y="0" style="letter-spacing: 0.003018465909090909em"></tspan><tspan x="20.99" y="0"></tspan><tspan x="23.64" y="0" style="letter-spacing: 0.00390625em"></tspan><tspan x="26.34" y="0" style="letter-spacing: 0.006036931818181818em"></tspan><tspan x="32.52" y="0" style="letter-spacing: 0.002041903409090909em"></tspan><tspan x="38.66" y="0" style="letter-spacing: 0.003107244318181818em"></tspan><tspan x="42.36" y="0" style="letter-spacing: 0.001953125em"></tspan><tspan x="45.03" y="0" style="letter-spacing: 0.0048828125em"></tspan><tspan x="51.61" y="0" style="letter-spacing: 0.0033735795454545455em"></tspan><tspan x="57.96" y="0"></tspan></text>
+    <g>
+      <g>
+        <rect x="58.91" y="28.66" width="24" height="7" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+        <circle cx="78.16" cy="32.16" r="1.25" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+      </g>
+      <g>
+        <rect x="58.91" y="37.66" width="24" height="7" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+        <circle cx="78.16" cy="41.16" r="1.25" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+      </g>
+      <g>
+        <rect x="58.91" y="46.66" width="24" height="7" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 0.935414346693485px"/>
+        <circle cx="78.16" cy="50.16" r="1.25" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
       </g>
     </g>
-    <g
-       id="g407"
-       style="">
-      <path
-         inkscape:connector-curvature="0"
-         id="path399"
-         style="fill:#f0f0ef;stroke:#1d1d1b;stroke-miterlimit:10"
-         d="m 565.5,194.5 v 5.5 c 0,1.93 5.82,3.5 13,3.5 7.18,0 13,-1.57 13,-3.5 v -5.5" />
-      <g
-         id="g405"
-         style="">
-        <path
-           inkscape:connector-curvature="0"
-           id="path401"
-           style="fill:#f0f0ef"
-           d="m 578.5,197.62 c -8,0 -13,-1.81 -13,-3.12 0,-1.31 4.94,-3.12 13,-3.12 8.06,0 13,1.81 13,3.12 0,1.31 -4.96,3.12 -13,3.12 z" />
-        <path
-           inkscape:connector-curvature="0"
-           id="path403"
-           style="fill:#1d1d1b"
-           d="m 578.5,191.9 c 8.29,0 12.33,1.88 12.46,2.59 -0.13,0.72 -4.17,2.6 -12.46,2.6 -8.29,0 -12.33,-1.88 -12.46,-2.59 0.13,-0.72 4.17,-2.6 12.46,-2.6 m 0,-1 c -7.46,0 -13.5,1.63 -13.5,3.63 0,2 6,3.63 13.5,3.63 7.5,0 13.5,-1.63 13.5,-3.63 0,-2 -6,-3.63 -13.5,-3.63 z" />
+    <rect x="12.16" y="95.16" width="117.49" height="59" transform="translate(-0.69 0.4) rotate(-0.32)" style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"/>
+    <text transform="translate(41.46 143.85)" style="font-size: 11px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"><tspan style="letter-spacing: 0.0026633522727272725em">IoT デバイス</tspan><tspan x="3.09" y="0" style="letter-spacing: -0.07927911931818182em"></tspan><tspan x="8.74" y="0"></tspan><tspan x="18.32" y="0" style="letter-spacing: 0.007546164772727273em"></tspan><tspan x="26.34" y="0" style="letter-spacing: -0.009232954545454546em"></tspan><tspan x="32.36" y="0" style="letter-spacing: 0.003995028409090909em"></tspan><tspan x="40.8" y="0" style="letter-spacing: 0.004527698863636364em"></tspan><tspan x="46.97" y="0" style="letter-spacing: 0.0078125em"></tspan><tspan x="53.17" y="0"></tspan></text>
+    <rect x="12.36" y="169.16" width="117.1" height="59" transform="matrix(1, -0.01, 0.01, 1, -1.1, 0.4)" style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"/>
+    <text transform="translate(36.69 217.85)" style="font-size: 11px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"><tspan style="letter-spacing: 0.0026633522727272725em">IoT ゲートウェイ</tspan><tspan x="3.09" y="0" style="letter-spacing: -0.07927911931818182em"></tspan><tspan x="8.74" y="0"></tspan><tspan x="18.32" y="0" style="letter-spacing: 0.01083096590909091em"></tspan><tspan x="26.79" y="0" style="letter-spacing: 0.002041903409090909em"></tspan><tspan x="32.92" y="0" style="letter-spacing: -0.0068359375em"></tspan><tspan x="42.55" y="0" style="letter-spacing: -0.010209517045454546em"></tspan><tspan x="50.99" y="0" style="letter-spacing: -0.009321732954545454em"></tspan><tspan x="57.01" y="0" style="letter-spacing: 0.0006214488636363636em"></tspan><tspan x="62.72" y="0"></tspan></text>
+    <rect x="2.41" y="242.16" width="127.5" height="70" style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"/>
+    <text transform="translate(21.17 290.85)" style="font-size: 11px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.04367897727272727em">Watson IoT Platform ダッシュボード<tspan x="9.9" y="0" style="letter-spacing: -0.017933238636363636em"></tspan><tspan x="15.82" y="0" style="letter-spacing: -0.013050426136363636em"></tspan><tspan x="19.34" y="0" style="letter-spacing: -0.014470880681818182em"></tspan><tspan x="24.89" y="0" style="letter-spacing: -0.015092329545454546em"></tspan><tspan x="31.25" y="0" style="letter-spacing: -0.019975142045454544em"></tspan><tspan x="40.18" y="0" style="letter-spacing: -0.01740056818181818em"></tspan><tspan x="43.05" y="0" style="letter-spacing: -0.09925426136363637em"></tspan><tspan x="48.48" y="0" style="letter-spacing: -0.019975142045454544em"></tspan><tspan x="57.62" y="0" style="letter-spacing: -0.027254971590909092em"></tspan><tspan x="64.66" y="0" style="letter-spacing: -0.016157670454545456em"></tspan><tspan x="67.13" y="0" style="letter-spacing: -0.017933238636363636em"></tspan><tspan x="73.05" y="0" style="letter-spacing: 0.004172585227272727em"></tspan><tspan x="76.76" y="0" style="letter-spacing: -0.0244140625em"></tspan><tspan x="79.95" y="0" style="letter-spacing: -0.015003551136363636em"></tspan><tspan x="86.31" y="0" style="letter-spacing: -0.005237926136363636em"></tspan><tspan x="90.13" y="0" style="letter-spacing: -0.020063920454545456em"></tspan><tspan style="letter-spacing: -0.013494318181818182em"><tspan x="22.39" y="13"></tspan><tspan x="30.18" y="13" style="letter-spacing: -0.008078835227272728em"></tspan><tspan x="36.21" y="13" style="letter-spacing: -0.01260653409090909em"></tspan><tspan x="41.78" y="13" style="letter-spacing: -0.018022017045454544em"></tspan><tspan x="47.89" y="13" style="letter-spacing: -0.015980113636363636em"></tspan><tspan x="54.44" y="13" style="letter-spacing: -0.017933238636363636em"></tspan><tspan x="60.76" y="13" style="letter-spacing: -0.00985440340909091em"></tspan><tspan x="66.77" y="13" style="letter-spacing: -0.005237926136363636em"></tspan><tspan x="70.59" y="13" style="letter-spacing: -0.019975142045454544em"></tspan></tspan></text>
+    <rect x="213" y="26" width="438" height="286" style="fill: #f0f0ef"/>
+    <text transform="translate(244 20.5)" style="font-size: 12px;fill: #1d1d1b;font-family: HelveticaNeue-Bold, Helvetica Neue;font-weight: 700"><tspan style="letter-spacing: 0.0032552083333333335em">I</tspan><tspan x="3.58" y="0" style="letter-spacing: 0.0013020833333333333em">B</tspan><tspan x="12.04" y="0" style="letter-spacing: 0.009847005208333334em">M</tspan><tspan x="23.04" y="0">® </tspan><tspan x="35.98" y="0" style="letter-spacing: 0.005045572916666667em">Cl</tspan><tspan x="47.65" y="0" style="letter-spacing: 0.008382161458333334em">o</tspan><tspan x="54.86" y="0" style="letter-spacing: 0.00537109375em">u</tspan><tspan x="61.82" y="0" style="letter-spacing: 0.004150390625em">d</tspan><tspan x="72.74" y="0" style="letter-spacing: 0.009033203125em"></tspan><tspan x="75.94" y="0" style="letter-spacing: -0.00008138020833333333em"></tspan></text>
+    <text transform="translate(244 72.5)" style="font-size: 12px;fill: #1d1d1b;font-family: HelveticaNeue-Bold, Helvetica Neue;font-weight: 700"><tspan style="letter-spacing: -0.026123046875em">Watson™ IoT Platform</tspan><tspan x="11.01" y="0" style="letter-spacing: 0.006510416666666667em"></tspan><tspan x="17.98" y="0" style="letter-spacing: 0.013997395833333334em"></tspan><tspan x="22.37" y="0" style="letter-spacing: 0.0026041666666666665em"></tspan><tspan x="28.85" y="0" style="letter-spacing: 0.0033365885416666665em"></tspan><tspan x="36.22" y="0" style="letter-spacing: -0.060221354166666664em"></tspan><tspan x="42.61" y="0"></tspan><tspan x="57.95" y="0" style="letter-spacing: 0.0022786458333333335em"></tspan><tspan x="61.52" y="0" style="letter-spacing: -0.08357747395833333em"></tspan><tspan x="67.84" y="0"></tspan><tspan x="78.51" y="0" style="letter-spacing: -0.005533854166666667em"></tspan><tspan x="86.45" y="0" style="letter-spacing: 0.006917317708333333em"></tspan><tspan x="96.6" y="0" style="letter-spacing: 0.031575520833333336em"></tspan><tspan x="101.2" y="0" style="letter-spacing: -0.0030110677083333335em"></tspan><tspan x="105.16" y="0" style="letter-spacing: 0.0033365885416666665em"></tspan><tspan x="112.53" y="0" style="letter-spacing: 0.008544921875em"></tspan><tspan x="117.3" y="0" style="letter-spacing: -0.00008138020833333333em"></tspan></text>
+    <line x1="62" y1="187" x2="81" y2="187" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+    <line x1="72" y1="194" x2="81" y2="194" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+    <line x1="67.05" y1="187.05" x2="72" y2="194" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+    <g>
+      <circle cx="62" cy="187" r="1.5" style="fill: #6fc9ee"/>
+      <path d="M62,186a1,1,0,1,1-1,1,1,1,0,0,1,1-1m0-1a2,2,0,1,0,2,2,2,2,0,0,0-2-2Z" style="fill: #fff"/>
+    </g>
+    <g>
+      <circle cx="72" cy="187" r="1.5" style="fill: #6fc9ee"/>
+      <path d="M72,186a1,1,0,1,1-1,1,1,1,0,0,1,1-1m0-1a2,2,0,1,0,2,2,2,2,0,0,0-2-2Z" style="fill: #fff"/>
+    </g>
+    <g>
+      <circle cx="81" cy="187" r="1.5" style="fill: #6fc9ee"/>
+      <path d="M81,186a1,1,0,1,1-1,1,1,1,0,0,1,1-1m0-1a2,2,0,1,0,2,2,2,2,0,0,0-2-2Z" style="fill: #fff"/>
+    </g>
+    <g>
+      <circle cx="81" cy="194" r="1.5" style="fill: #6fc9ee"/>
+      <path d="M81,193a1,1,0,1,1-1,1,1,1,0,0,1,1-1m0-1a2,2,0,1,0,2,2,2,2,0,0,0-2-2Z" style="fill: #fff"/>
+    </g>
+    <g>
+      <circle cx="72" cy="194" r="1.5" style="fill: #6fc9ee"/>
+      <path d="M72,193a1,1,0,1,1-1,1,1,1,0,0,1,1-1m0-1a2,2,0,1,0,2,2,2,2,0,0,0-2-2Z" style="fill: #fff"/>
+    </g>
+    <rect x="58.91" y="250" width="24" height="24.66" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+  </g>
+  <g id="Layer_3" data-name="Layer 3">
+    <rect x="244" y="78" width="285" height="186" style="fill: #6fc9ee"/>
+    <text transform="translate(467.34 114.57)" style="font-size: 10px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"><tspan style="letter-spacing: 0.01162109375em">デバイスの状態</tspan><tspan x="7.34" y="0" style="letter-spacing: -0.005078125em"></tspan><tspan x="12.84" y="0" style="letter-spacing: 0.00791015625em"></tspan><tspan x="20.6" y="0" style="letter-spacing: 0.00849609375em"></tspan><tspan x="26.25" y="0"></tspan><tspan x="3.61" y="12" style="letter-spacing: 0.0138671875em"></tspan><tspan x="10.23" y="12" style="letter-spacing: 0.015234375em"></tspan><tspan x="13.71" y="12" style="letter-spacing: 0.0060546875em"></tspan><tspan x="19.33" y="12" style="letter-spacing: -0.0025390625em"></tspan><tspan x="22.64" y="12"></tspan></text>
+    <text transform="translate(550.89 173.28)" style="font-size: 10px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"><tspan style="letter-spacing: 0.010546875em">データ・ストア</tspan><tspan x="7.33" y="0" style="letter-spacing: 0.0060546875em"></tspan><tspan x="12.95" y="0" style="letter-spacing: 0.015234375em"></tspan><tspan x="16.43" y="0"></tspan><tspan x="24.77" y="0" style="letter-spacing: 0.0138671875em"></tspan><tspan x="31.39" y="0" style="letter-spacing: -0.0044921875em"></tspan><tspan x="34.67" y="0" style="letter-spacing: 0.00888671875em"></tspan><tspan x="40.69" y="0" style="letter-spacing: 0.01474609375em"></tspan><tspan x="44.36" y="0" style="letter-spacing: 0.01162109375em"></tspan><tspan x="50.03" y="0"></tspan></text>
+    <path d="M513,95v43H453.5V95H513m1-1H452.5v45H514V94Z" style="fill: #f0f0ef"/>
+    <path d="M513,205v43H453.5V205H513m1-1H452.5v45H514V204Z" style="fill: #f0f0ef"/>
+    <text transform="translate(458.64 223.68)" style="font-size: 10px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"><tspan style="letter-spacing: 0.02314453125em">最新イベント・キャッシュ</tspan><tspan x="5.97" y="0" style="letter-spacing: 0.01572265625em"></tspan><tspan x="11.69" y="0" style="letter-spacing: 0.0119140625em"></tspan><tspan x="17" y="0"></tspan><tspan x="23.11" y="0" style="letter-spacing: -0.0087890625em"></tspan><tspan x="29.32" y="0" style="letter-spacing: -0.0103515625em"></tspan><tspan x="34.41" y="0" style="letter-spacing: 0.01201171875em"></tspan><tspan x="40.09" y="0" style="letter-spacing: 0.0056640625em"></tspan><tspan x="45.88" y="0"></tspan><tspan x="9.64" y="12" style="letter-spacing: 0.00615234375em"></tspan><tspan x="16.92" y="12" style="letter-spacing: 0.00751953125em"></tspan><tspan x="22.55" y="12" style="letter-spacing: 0.0083984375em"></tspan><tspan x="28.2" y="12" style="letter-spacing: 0.007421875em"></tspan><tspan x="34.01" y="12"></tspan></text>
+    <text transform="translate(162.45 52)" style="font-size: 9px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.004231770833333333em">API<tspan x="5.96" y="0" style="letter-spacing: -0.023546006944444444em"></tspan><tspan x="11.76" y="0" style="letter-spacing: -0.019965277777777776em"></tspan></text>
+    <text transform="translate(157.97 281.89)" style="font-size: 9px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.010850694444444444em">HTTP<tspan x="6.4" y="0" style="letter-spacing: 0.021050347222222224em"></tspan><tspan x="11.93" y="0" style="letter-spacing: -0.011284722222222222em"></tspan><tspan x="17.16" y="0" style="letter-spacing: -0.020073784722222224em"></tspan></text>
+    <text transform="translate(153.81 344)" style="font-size: 9px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.009548611111111112em">インターネット<tspan x="2.42" y="0" style="letter-spacing: -0.010199652777777778em"></tspan><tspan x="7.49" y="0" style="letter-spacing: -0.018229166666666668em"></tspan><tspan x="10.32" y="0" style="letter-spacing: -0.003689236111111111em"></tspan><tspan x="15.29" y="0" style="letter-spacing: 0.002495659722222222em"></tspan><tspan x="18.48" y="0" style="letter-spacing: -0.008355034722222222em"></tspan><tspan x="23.58" y="0" style="letter-spacing: -0.010091145833333334em"></tspan><tspan x="28.49" y="0" style="letter-spacing: -0.019965277777777776em"></tspan></text>
+    <g>
+      <polyline points="427 174.16 481 174.16 481 147.18" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+      <polygon points="485.99 148.63 481 140 476.01 148.63 485.99 148.63"/>
+    </g>
+    <g>
+      <line x1="529" y1="198.16" x2="551.82" y2="198.16" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+      <polygon points="550.37 203.15 559 198.16 550.37 193.17 550.37 203.15"/>
+    </g>
+    <g>
+      <g>
+        <path d="M565.5,202.5V208c0,1.93,5.82,3.5,13,3.5s13-1.57,13-3.5v-5.5" style="fill: #f0f0ef;stroke: #1d1d1b;stroke-miterlimit: 10"/>
+        <g>
+          <path d="M578.5,205.62c-8,0-13-1.81-13-3.12s4.94-3.12,13-3.12,13,1.81,13,3.12S586.54,205.62,578.5,205.62Z" style="fill: #f0f0ef"/>
+          <path d="M578.5,199.9c8.29,0,12.33,1.88,12.46,2.59-.13.72-4.17,2.6-12.46,2.6s-12.33-1.88-12.46-2.59c.13-.72,4.17-2.6,12.46-2.6m0-1c-7.46,0-13.5,1.63-13.5,3.63s6,3.63,13.5,3.63,13.5-1.63,13.5-3.63-6-3.63-13.5-3.63Z" style="fill: #1d1d1b"/>
+        </g>
+      </g>
+      <g>
+        <path d="M565.5,194.5V200c0,1.93,5.82,3.5,13,3.5s13-1.57,13-3.5v-5.5" style="fill: #f0f0ef;stroke: #1d1d1b;stroke-miterlimit: 10"/>
+        <g>
+          <path d="M578.5,197.62c-8,0-13-1.81-13-3.12s4.94-3.12,13-3.12,13,1.81,13,3.12S586.54,197.62,578.5,197.62Z" style="fill: #f0f0ef"/>
+          <path d="M578.5,191.9c8.29,0,12.33,1.88,12.46,2.59-.13.72-4.17,2.6-12.46,2.6s-12.33-1.88-12.46-2.59c.13-.72,4.17-2.6,12.46-2.6m0-1c-7.46,0-13.5,1.63-13.5,3.63s6,3.63,13.5,3.63,13.5-1.63,13.5-3.63-6-3.63-13.5-3.63Z" style="fill: #1d1d1b"/>
+        </g>
+      </g>
+      <g>
+        <path d="M565.5,186.5V192c0,1.93,5.82,3.5,13,3.5s13-1.57,13-3.5v-5.5" style="fill: #f0f0ef;stroke: #1d1d1b;stroke-miterlimit: 10"/>
+        <g>
+          <path d="M578.5,189.62c-8,0-13-1.81-13-3.12s4.94-3.12,13-3.12,13,1.81,13,3.12S586.54,189.62,578.5,189.62Z" style="fill: #f0f0ef"/>
+          <path d="M578.5,183.9c8.29,0,12.33,1.88,12.46,2.59-.13.72-4.17,2.6-12.46,2.6s-12.33-1.88-12.46-2.59c.13-.72,4.17-2.6,12.46-2.6m0-1c-7.46,0-13.5,1.63-13.5,3.63s6,3.63,13.5,3.63,13.5-1.63,13.5-3.63-6-3.63-13.5-3.63Z" style="fill: #1d1d1b"/>
+        </g>
       </g>
     </g>
-    <g
-       id="g417"
-       style="">
-      <path
-         inkscape:connector-curvature="0"
-         id="path409"
-         style="fill:#f0f0ef;stroke:#1d1d1b;stroke-miterlimit:10"
-         d="m 565.5,186.5 v 5.5 c 0,1.93 5.82,3.5 13,3.5 7.18,0 13,-1.57 13,-3.5 v -5.5" />
-      <g
-         id="g415"
-         style="">
-        <path
-           inkscape:connector-curvature="0"
-           id="path411"
-           style="fill:#f0f0ef"
-           d="m 578.5,189.62 c -8,0 -13,-1.81 -13,-3.12 0,-1.31 4.94,-3.12 13,-3.12 8.06,0 13,1.81 13,3.12 0,1.31 -4.96,3.12 -13,3.12 z" />
-        <path
-           inkscape:connector-curvature="0"
-           id="path413"
-           style="fill:#1d1d1b"
-           d="m 578.5,183.9 c 8.29,0 12.33,1.88 12.46,2.59 -0.13,0.72 -4.17,2.6 -12.46,2.6 -8.29,0 -12.33,-1.88 -12.46,-2.59 0.13,-0.72 4.17,-2.6 12.46,-2.6 m 0,-1 c -7.46,0 -13.5,1.63 -13.5,3.63 0,2 6,3.63 13.5,3.63 7.5,0 13.5,-1.63 13.5,-3.63 0,-2 -6,-3.63 -13.5,-3.63 z" />
+    <g>
+      <rect x="112" y="168.5" width="62.39" height="16.5" rx="8.25" ry="8.25" style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.2007279559117px"/>
+      <text transform="translate(120.03 180.31)" style="font-size: 9px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.013780381944444444em">エッジ・ルール<tspan x="5.55" y="0" style="letter-spacing: -0.008355034722222222em"></tspan><tspan x="10.97" y="0" style="letter-spacing: -0.004123263888888889em"></tspan><tspan x="16.27" y="0" style="letter-spacing: -0.019965277777777776em"></tspan><tspan x="23.42" y="0" style="letter-spacing: -0.007161458333333333em"></tspan><tspan x="29.69" y="0" style="letter-spacing: -0.009765625em"></tspan><tspan x="34.77" y="0" style="letter-spacing: -0.007921006944444444em"></tspan><tspan x="36.86" y="0" style="letter-spacing: -0.004014756944444444em"></tspan><tspan x="41.83" y="0" style="letter-spacing: -0.020073784722222224em"></tspan></text>
+    </g>
+    <g>
+      <rect x="112" y="187.5" width="62.39" height="16.5" rx="8.25" ry="8.25" style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.2007279559117px"/>
+      <text transform="translate(124.45 199.31)" style="font-size: 9px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: 0.0022786458333333335em">分析機能<tspan x="6.02" y="0" style="letter-spacing: -0.006944444444444444em"></tspan><tspan x="11.13" y="0" style="letter-spacing: -0.0020616319444444445em"></tspan><tspan x="16.11" y="0" style="letter-spacing: -0.005859375em"></tspan><tspan x="18.23" y="0" style="letter-spacing: 0.020724826388888888em"></tspan><tspan x="23.09" y="0" style="letter-spacing: -0.0087890625em"></tspan><tspan x="26" y="0" style="letter-spacing: -0.0078125em"></tspan><tspan x="28.1" y="0" style="letter-spacing: -0.005967881944444444em"></tspan><tspan x="33.05" y="0" style="letter-spacing: -0.019965277777777776em"></tspan></text>
+    </g>
+    <g>
+      <polygon points="145.87 53.52 139.8 49.2 145.87 44.87 145.87 53.52" style="fill: #999"/>
+      <polygon points="195.25 44.87 201.32 49.2 195.25 53.52 195.25 44.87" style="fill: #999"/>
+    </g>
+    <g>
+      <text transform="translate(156.79 123.63)" style="font-size: 9px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.007052951388888889em">MQTT HTTP<tspan x="7.94" y="0" style="letter-spacing: -0.025607638888888888em"></tspan><tspan x="14.55" y="0" style="letter-spacing: 0.020941840277777776em"></tspan><tspan x="20.07" y="0" style="letter-spacing: -0.019965277777777776em"></tspan><tspan style="letter-spacing: -0.010850694444444444em"><tspan x="1.12" y="9"></tspan><tspan x="7.52" y="9" style="letter-spacing: 0.021050347222222224em"></tspan><tspan x="13.05" y="9" style="letter-spacing: -0.011284722222222222em"></tspan><tspan x="18.29" y="9" style="letter-spacing: -0.020073784722222224em"></tspan></tspan></text>
+      <g>
+        <polygon points="145.87 128.49 139.8 124.17 145.87 119.84 145.87 128.49" style="fill: #999"/>
+        <polygon points="195.25 119.84 201.32 124.17 195.25 128.49 195.25 119.84" style="fill: #999"/>
+      </g>
+    </g>
+    <g>
+      <polygon points="145.86 283.44 139.8 279.09 145.89 274.79 145.86 283.44" style="fill: #999"/>
+      <polygon points="195.27 274.96 201.32 279.31 195.24 283.61 195.27 274.96" style="fill: #999"/>
+    </g>
+    <rect x="274" y="94" width="163" height="45" style="fill: #c4e6f5"/>
+    <rect x="274" y="149" width="163" height="45" style="fill: #c4e6f5"/>
+    <rect x="274" y="204" width="163" height="45" style="fill: #c4e6f5"/>
+    <text transform="translate(327.21 119.35)" style="font-size: 10px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"><tspan style="letter-spacing: 0.00771484375em">クラウド・ルール</tspan><tspan x="7.3" y="0" style="letter-spacing: 0.00595703125em"></tspan><tspan x="15.76" y="0" style="letter-spacing: 0.01025390625em"></tspan><tspan x="21.6" y="0">d </tspan><tspan x="30.49" y="0" style="letter-spacing: 0.00869140625em"></tspan><tspan x="37.62" y="0" style="letter-spacing: 0.00595703125em"></tspan><tspan x="43.42" y="0" style="letter-spacing: 0.00791015625em"></tspan><tspan x="45.91" y="0" style="letter-spacing: 0.01171875em"></tspan><tspan x="51.58" y="0"></tspan></text>
+    <text transform="translate(324.75 174.35)" style="font-size: 10px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"><tspan style="letter-spacing: 0.010546875em">データ管理</tspan><tspan x="7.33" y="0" style="letter-spacing: 0.00615234375em"></tspan><tspan x="12.95" y="0" style="letter-spacing: 0.01513671875em"></tspan><tspan x="16.43" y="0"></tspan><tspan x="24.77" y="0" style="letter-spacing: 0.0111328125em"></tspan><tspan x="33.77" y="0" style="letter-spacing: 0.0140625em"></tspan><tspan x="39.47" y="0" style="letter-spacing: 0.00888671875em"></tspan><tspan x="45.3" y="0" style="letter-spacing: 0.00751953125em"></tspan><tspan x="50.93" y="0" style="letter-spacing: 0.01181640625em"></tspan><tspan x="62.66" y="0" style="letter-spacing: 0.00791015625em"></tspan><tspan x="71.44" y="0" style="letter-spacing: 0.012109375em"></tspan><tspan x="77.12" y="0" style="letter-spacing: 0.00556640625em"></tspan><tspan x="82.91" y="0"></tspan></text>
+    <text transform="translate(324.75 223.35)" style="font-size: 10px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"><tspan style="letter-spacing: 0.01201171875em">ブロック・チェーン統合<tspan x="7.16" y="0" style="letter-spacing: 0.00595703125em"></tspan><tspan x="9.63" y="0" style="letter-spacing: 0.00849609375em"></tspan><tspan x="15.64" y="0" style="letter-spacing: 0.00693359375em"></tspan><tspan x="21.27" y="0" style="letter-spacing: -0.014453125em"></tspan><tspan x="26.5" y="0" style="letter-spacing: 0.0083984375em"></tspan><tspan x="37.97" y="0" style="letter-spacing: 0.01396484375em"></tspan><tspan x="43.67" y="0" style="letter-spacing: 0.00546875em"></tspan><tspan x="46.14" y="0" style="letter-spacing: -0.00009765625em"></tspan></tspan><tspan x="0" y="12" style="letter-spacing: 0.00615234375em"></tspan><tspan x="2.84" y="12" style="letter-spacing: 0.00556640625em"></tspan><tspan x="8.64" y="12" style="letter-spacing: -0.00263671875em"></tspan><tspan x="11.94" y="12" style="letter-spacing: 0.0138671875em"></tspan><tspan x="17.64" y="12" style="letter-spacing: 0.01064453125em"></tspan><tspan x="23.68" y="12" style="letter-spacing: 0.0201171875em"></tspan><tspan x="27.4" y="12" style="letter-spacing: 0.00615234375em"></tspan><tspan x="33.02" y="12" style="letter-spacing: 0.00712890625em"></tspan><tspan x="36.42" y="12" style="letter-spacing: 0.00595703125em"></tspan><tspan x="38.89" y="12" style="letter-spacing: 0.00888671875em"></tspan><tspan x="44.91" y="12"></tspan></text>
+    <polygon points="244 94 229 94 229 249 244 249 259 249 259 94 244 94" style="fill: #fff;stroke: #6fc9ee;stroke-miterlimit: 10;stroke-width: 2px"/>
+    <text transform="translate(240.67 155.22)" style="font-size: 10px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue">API<tspan x="0" y="13"></tspan><tspan x="1.95" y="26"></tspan><tspan x="0.09" y="39"></tspan></text>
+    <g>
+      <text transform="translate(156.79 220.63)" style="font-size: 9px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.007052951388888889em">MQTT HTTP<tspan x="7.94" y="0" style="letter-spacing: -0.025607638888888888em"></tspan><tspan x="14.55" y="0" style="letter-spacing: 0.020941840277777776em"></tspan><tspan x="20.07" y="0" style="letter-spacing: -0.019965277777777776em"></tspan><tspan style="letter-spacing: -0.010850694444444444em"><tspan x="1.12" y="9"></tspan><tspan x="7.52" y="9" style="letter-spacing: 0.021050347222222224em"></tspan><tspan x="13.05" y="9" style="letter-spacing: -0.011284722222222222em"></tspan><tspan x="18.29" y="9" style="letter-spacing: -0.020073784722222224em"></tspan></tspan></text>
+      <g>
+        <polygon points="145.87 225.49 139.8 221.17 145.87 216.84 145.87 225.49" style="fill: #999"/>
+        <polygon points="195.25 216.84 201.32 221.17 195.25 225.49 195.25 216.84" style="fill: #999"/>
+      </g>
+    </g>
+    <g id="g4804">
+      <path id="path4806" d="M299.56,228.21,297.31,226v-1.1h-1.1v-.79h1.1v-2.52h-1.09l-.92-.63h.28v-2.52h-2.68V221h.29l-.91.63h-1.11v2.52h2.52v-2.52h-1l.91-.63h1.22l.92.63h-1v2.52h1.1v.79h-1.1v2.52h1.1v.79h-1.1v2.52h1.1v.79h-1.1v2.68h2.52v-2.68h-1.1v-.79h1.1v-2.52h-1.1v-.79h1.1v-1.07l1.89,1.85h-.79v2.52h2.52v-2.52Zm-6-9.31h1.42v1.58h-1.42Z" style="fill: #fff"/>
+    </g>
+    <rect x="281" y="211" width="31" height="31" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+    <rect x="281.5" y="156" width="31" height="31" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+    <rect x="281.5" y="101.5" width="31" height="31" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+    <g id="g5278">
+      <path id="path5280" d="M84.91,108.26h-28v16.8h28Zm-7.38,6.45h4.26m-4.26,2h4.26m-4.26,2h4.26m-14.86-3.9h4.26m-4.26,2h4.26m-4.26,2h4.26m0,1.2h6.3v-6.3h-6.3Zm-8.78-2a1.6,1.6,0,1,1-1.6,1.6A1.6,1.6,0,0,1,62.39,117.81Zm1.58-2.3h-3.2v-3.2H64Z" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+    </g>
+    <g id="g5278-2" data-name="g5278">
+      <path id="path5280-2" data-name="path5280" d="M88,180H55v21H88Z" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.21376062443881px"/>
+    </g>
+    <g id="g5722">
+      <g id="g5710">
+        <polygon id="polygon5712" points="70.8 260.97 69.87 269.33 71.72 269.33 70.8 260.97" style="fill: #fff"/>
+        <path id="path5714" d="M75,267a6.54,6.54,0,1,0-8.25-.09" style="fill: none;stroke: #fff"/>
+      </g>
+    </g>
+    <g id="g4835">
+      <g id="g4817">
+        <rect id="rect4819" x="291.6" y="124.02" width="10.81" height="1.08" style="fill: #fff"/>
+        <path id="path4821" d="M291.6,108.9v14H302.4v-14Zm9.73,13h-8.64v-9.73h8.64Z" style="fill: #fff"/>
+        <rect id="rect4823" x="293.76" y="116.46" width="6.48" height="0.54" style="fill: #fff"/>
+        <rect id="rect4825" x="293.76" y="114.3" width="6.48" height="0.54" style="fill: #fff"/>
+        <rect id="rect4827" x="293.76" y="118.62" width="6.48" height="0.54" style="fill: #fff"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path d="M301.78,165.1A8,8,0,0,0,289.14,173" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+        <polygon points="286.69 173.19 290.6 176.28 291.33 171.35 286.69 173.19" style="fill: #fff"/>
+      </g>
+      <g>
+        <path d="M292.22,177.9A8,8,0,0,0,304.86,170" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+        <polygon points="307.31 169.81 303.4 166.72 302.67 171.65 307.31 169.81" style="fill: #fff"/>
       </g>
     </g>
   </g>
-  <rect
-     x="112"
-     y="168.5"
-     width="62.389999"
-     height="16.5"
-     rx="8.25"
-     ry="8.25"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.20072794px;stroke-miterlimit:10"
-     id="rect421" />
-  <text
-     style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.01378038em;fill:#1d1d1b"
-     id="text439"
-     x="120.03"
-     y="180.31">
-    <tspan
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
-       id="tspan2023">エッジ・ルール</tspan>
-  </text>
-  <rect
-     x="112"
-     y="187.5"
-     width="62.389999"
-     height="16.5"
-     rx="8.25"
-     ry="8.25"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.20072794px;stroke-miterlimit:10"
-     id="rect443" />
-  <text
-     style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:0.00227865em;fill:#1d1d1b"
-     id="text461"
-     x="124.45"
-     y="199.31">
-    <tspan
-       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
-       id="tspan2025">分析機能</tspan>
-  </text>
-  <g
-     id="g469"
-     style="">
-    <polygon
-       id="polygon465"
-       style="fill:#999999"
-       points="145.87,44.87 145.87,53.52 139.8,49.2 " />
-    <polygon
-       id="polygon467"
-       style="fill:#999999"
-       points="195.25,53.52 195.25,44.87 201.32,49.2 " />
-  </g>
-  <g
-     id="g495"
-     style="">
-    <text
-       id="text487"
-       style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.00705295em;fill:#1d1d1b"
-       transform="translate(156.79,123.63)">MQTT</text>
-    <g
-       id="g493"
-       style="">
-      <polygon
-         id="polygon489"
-         style="fill:#999999"
-         points="145.87,119.84 145.87,128.49 139.8,124.17 " />
-      <polygon
-         id="polygon491"
-         style="fill:#999999"
-         points="195.25,128.49 195.25,119.84 201.32,124.17 " />
-    </g>
-    <text
-       y="134.78654"
-       x="157.81358"
-       id="text487-7"
-       style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.00705295em;fill:#1d1d1b">HTTP</text>
-  </g>
-  <g
-     id="g501"
-     style="">
-    <polygon
-       id="polygon497"
-       style="fill:#999999"
-       points="145.89,274.79 145.86,283.44 139.8,279.09 " />
-    <polygon
-       id="polygon499"
-       style="fill:#999999"
-       points="195.24,283.61 195.27,274.96 201.32,279.31 " />
-  </g>
-  <rect
-     id="rect503"
-     style="fill:#c4e6f5"
-     height="45"
-     width="163"
-     y="94"
-     x="274" />
-  <rect
-     id="rect505"
-     style="fill:#c4e6f5"
-     height="45"
-     width="163"
-     y="149"
-     x="274" />
-  <rect
-     id="rect507"
-     style="fill:#c4e6f5"
-     height="45"
-     width="163"
-     y="204"
-     x="274" />
-  <text
-     id="text527"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1d1d1b"
-     x="324.83057"
-     y="121.16426">
-    <tspan
-       id="tspan509"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00771484em;writing-mode:lr-tb;text-anchor:start">クラウド・ルール</tspan>
-  </text>
-  <text
-     id="text555"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1d1d1b"
-     x="324.66943"
-     y="174.35001">
-    <tspan
-       id="tspan529"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01054688em;writing-mode:lr-tb;text-anchor:start">データ管理</tspan>
-    <tspan
-       id="tspan531"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00615234em;writing-mode:lr-tb;text-anchor:start"
-       y="174.35001"
-       x="331.99942" />
-    <tspan
-       id="tspan533"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01513672em;writing-mode:lr-tb;text-anchor:start"
-       y="174.35001"
-       x="337.61945" />
-    <tspan
-       id="tspan535"
-       y="174.35001"
-       x="341.09943"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" />
-    <tspan
-       id="tspan537"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01113281em;writing-mode:lr-tb;text-anchor:start"
-       y="174.35001"
-       x="349.43942" />
-    <tspan
-       id="tspan539"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.0140625em;writing-mode:lr-tb;text-anchor:start"
-       y="174.35001"
-       x="358.43942" />
-    <tspan
-       id="tspan541"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00888672em;writing-mode:lr-tb;text-anchor:start"
-       y="174.35001"
-       x="364.13943" />
-    <tspan
-       id="tspan543"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00751953em;writing-mode:lr-tb;text-anchor:start"
-       y="174.35001"
-       x="369.96942" />
-    <tspan
-       id="tspan545"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01181641em;writing-mode:lr-tb;text-anchor:start"
-       y="174.35001"
-       x="375.59943" />
-    <tspan
-       id="tspan547"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00791016em;writing-mode:lr-tb;text-anchor:start"
-       y="174.35001"
-       x="387.32944" />
-    <tspan
-       id="tspan549"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01210937em;writing-mode:lr-tb;text-anchor:start"
-       y="174.35001"
-       x="396.10944" />
-    <tspan
-       id="tspan551"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00556641em;writing-mode:lr-tb;text-anchor:start"
-       y="174.35001"
-       x="401.78943" />
-    <tspan
-       id="tspan553"
-       y="174.35001"
-       x="407.57944"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" />
-  </text>
-  <text
-     id="text597"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1d1d1b"
-     x="324.75"
-     y="227.35001">
-    <tspan
-       id="tspan573"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01201172em;writing-mode:lr-tb;text-anchor:start">ブロック・チェーン統合<tspan
-   id="tspan557"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00595703em;writing-mode:lr-tb;text-anchor:start"
-   y="227.35001"
-   x="331.91" />
-<tspan
-   id="tspan559"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00849609em;writing-mode:lr-tb;text-anchor:start"
-   y="227.35001"
-   x="334.38" />
-<tspan
-   id="tspan561"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00693359em;writing-mode:lr-tb;text-anchor:start"
-   y="227.35001"
-   x="340.39001" />
-<tspan
-   id="tspan563"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.01445313em;writing-mode:lr-tb;text-anchor:start"
-   y="227.35001"
-   x="346.01999" />
-<tspan
-   id="tspan565"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00839844em;writing-mode:lr-tb;text-anchor:start"
-   y="227.35001"
-   x="351.25" />
-<tspan
-   id="tspan567"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01396484em;writing-mode:lr-tb;text-anchor:start"
-   y="227.35001"
-   x="362.72" />
-<tspan
-   id="tspan569"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00546875em;writing-mode:lr-tb;text-anchor:start"
-   y="227.35001"
-   x="368.41998" />
-<tspan
-   id="tspan571"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.00009766em;writing-mode:lr-tb;text-anchor:start"
-   y="227.35001"
-   x="370.89001" />
-</tspan>
-    <tspan
-       id="tspan575"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00615234em;writing-mode:lr-tb;text-anchor:start"
-       y="239.35001"
-       x="324.75" />
-    <tspan
-       id="tspan577"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00556641em;writing-mode:lr-tb;text-anchor:start"
-       y="239.35001"
-       x="327.59" />
-    <tspan
-       id="tspan579"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.00263672em;writing-mode:lr-tb;text-anchor:start"
-       y="239.35001"
-       x="333.39001" />
-    <tspan
-       id="tspan581"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01386719em;writing-mode:lr-tb;text-anchor:start"
-       y="239.35001"
-       x="336.69" />
-    <tspan
-       id="tspan583"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01064453em;writing-mode:lr-tb;text-anchor:start"
-       y="239.35001"
-       x="342.39001" />
-    <tspan
-       id="tspan585"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.02011719em;writing-mode:lr-tb;text-anchor:start"
-       y="239.35001"
-       x="348.42999" />
-    <tspan
-       id="tspan587"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00615234em;writing-mode:lr-tb;text-anchor:start"
-       y="239.35001"
-       x="352.14999" />
-    <tspan
-       id="tspan589"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00712891em;writing-mode:lr-tb;text-anchor:start"
-       y="239.35001"
-       x="357.76999" />
-    <tspan
-       id="tspan591"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00595703em;writing-mode:lr-tb;text-anchor:start"
-       y="239.35001"
-       x="361.16998" />
-    <tspan
-       id="tspan593"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00888672em;writing-mode:lr-tb;text-anchor:start"
-       y="239.35001"
-       x="363.64001" />
-    <tspan
-       id="tspan595"
-       y="239.35001"
-       x="369.66"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" />
-  </text>
-  <polygon
-     id="polygon599"
-     style="fill:#ffffff;stroke:#6fc9ee;stroke-width:2px;stroke-miterlimit:10"
-     points="229,249 244,249 259,249 259,94 244,94 229,94 " />
-  <g
-     id="g4804"
-     style="">
-    <path
-       inkscape:connector-curvature="0"
-       style="fill:#ffffff"
-       d="M 299.56,228.21 297.31,226 v -1.1 h -1.1 v -0.79 h 1.1 v -2.52 h -1.09 l -0.92,-0.63 h 0.28 v -2.52 H 292.9 V 221 h 0.29 l -0.91,0.63 h -1.11 v 2.52 h 2.52 v -2.52 h -1 L 293.6,221 h 1.22 l 0.92,0.63 h -1 v 2.52 h 1.1 v 0.79 h -1.1 v 2.52 h 1.1 v 0.79 h -1.1 v 2.52 h 1.1 v 0.79 h -1.1 v 2.68 h 2.52 v -2.68 h -1.1 v -0.79 h 1.1 v -2.52 h -1.1 v -0.79 h 1.1 v -1.07 l 1.89,1.85 h -0.79 v 2.52 h 2.52 v -2.52 z m -6,-9.31 h 1.42 v 1.58 h -1.42 z"
-       id="path4806" />
-  </g>
-  <rect
-     id="rect637"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     height="31"
-     width="31"
-     y="211"
-     x="281" />
-  <rect
-     id="rect639"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     height="31"
-     width="31"
-     y="156"
-     x="281.5" />
-  <rect
-     id="rect641"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     height="31"
-     width="31"
-     y="101.5"
-     x="281.5" />
-  <g
-     id="g5278"
-     style="">
-    <path
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-       d="m 84.91,108.26 h -28 v 16.8 h 28 z m -7.38,6.45 h 4.26 m -4.26,2 h 4.26 m -4.26,2 h 4.26 m -14.86,-3.9 h 4.26 m -4.26,2 h 4.26 m -4.26,2 h 4.26 m 0,1.2 h 6.3 v -6.3 h -6.3 z m -8.78,-2 a 1.6,1.6 0 1 1 -1.6,1.6 1.6,1.6 0 0 1 1.58,-1.8 z m 1.58,-2.3 h -3.2 v -3.2 H 64 Z"
-       id="path5280" />
-  </g>
-  <g
-     data-name="g5278"
-     id="g5278-2"
-     style="">
-    <path
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#ffffff;stroke-width:1.21376061px;stroke-miterlimit:10"
-       d="M 88,180 H 55 v 21 h 33 z"
-       data-name="path5280"
-       id="path5280-2" />
-  </g>
-  <g
-     id="g5722"
-     style="">
-    <g
-       id="g5710"
-       style="">
-      <polygon
-         style="fill:#ffffff"
-         points="71.72,269.33 70.8,260.97 69.87,269.33 "
-         id="polygon5712" />
-      <path
-         inkscape:connector-curvature="0"
-         style="fill:none;stroke:#ffffff"
-         d="m 75,267 a 6.54,6.54 0 1 0 -8.25,-0.09"
-         id="path5714" />
-    </g>
-  </g>
-  <g
-     id="g4835"
-     style="">
-    <g
-       id="g4817"
-       style="">
-      <rect
-         style="fill:#ffffff"
-         height="1.08"
-         width="10.81"
-         y="124.02"
-         x="291.60001"
-         id="rect4819" />
-      <path
-         inkscape:connector-curvature="0"
-         style="fill:#ffffff"
-         d="m 291.6,108.9 v 14 h 10.8 v -14 z m 9.73,13 h -8.64 v -9.73 h 8.64 z"
-         id="path4821" />
-      <rect
-         style="fill:#ffffff"
-         height="0.54000002"
-         width="6.48"
-         y="116.46"
-         x="293.76001"
-         id="rect4823" />
-      <rect
-         style="fill:#ffffff"
-         height="0.54000002"
-         width="6.48"
-         y="114.3"
-         x="293.76001"
-         id="rect4825" />
-      <rect
-         style="fill:#ffffff"
-         height="0.54000002"
-         width="6.48"
-         y="118.62"
-         x="293.76001"
-         id="rect4827" />
-    </g>
-  </g>
-  <g
-     id="g670"
-     style="">
-    <g
-       id="g662"
-       style="">
-      <path
-         inkscape:connector-curvature="0"
-         id="path658"
-         style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-         d="M 301.78,165.1 A 8,8 0 0 0 289.14,173" />
-      <polygon
-         id="polygon660"
-         style="fill:#ffffff"
-         points="291.33,171.35 286.69,173.19 290.6,176.28 " />
-    </g>
-    <g
-       id="g668"
-       style="">
-      <path
-         inkscape:connector-curvature="0"
-         id="path664"
-         style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-         d="M 292.22,177.9 A 8,8 0 0 0 304.86,170" />
-      <polygon
-         id="polygon666"
-         style="fill:#ffffff"
-         points="302.67,171.65 307.31,169.81 303.4,166.72 " />
-    </g>
-  </g>
-  <text
-     id="text289-0"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1d1d1b"
-     x="470.07379"
-     y="125.66486">
-    <tspan
-       id="tspan269-7"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01162109em;writing-mode:lr-tb;text-anchor:start">状態</tspan>
-    <tspan
-       id="tspan271-9"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.00507812em;writing-mode:lr-tb;text-anchor:start"
-       y="125.66486"
-       x="477.41379" />
-    <tspan
-       id="tspan273-7"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00791016em;writing-mode:lr-tb;text-anchor:start"
-       y="125.66486"
-       x="482.91379" />
-    <tspan
-       id="tspan275-6"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00849609em;writing-mode:lr-tb;text-anchor:start"
-       y="125.66486"
-       x="490.6738" />
-    <tspan
-       id="tspan277-1"
-       y="125.66486"
-       x="496.32379"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" />
-    <tspan
-       id="tspan279-4"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01386719em;writing-mode:lr-tb;text-anchor:start"
-       y="137.66486"
-       x="473.68381" />
-    <tspan
-       id="tspan281-5"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01523438em;writing-mode:lr-tb;text-anchor:start"
-       y="137.66486"
-       x="480.3038" />
-    <tspan
-       id="tspan283-6"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00605469em;writing-mode:lr-tb;text-anchor:start"
-       y="137.66486"
-       x="483.78378" />
-    <tspan
-       id="tspan285-0"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.00253906em;writing-mode:lr-tb;text-anchor:start"
-       y="137.66486"
-       x="489.40381" />
-    <tspan
-       id="tspan287-6"
-       y="137.66486"
-       x="492.71381"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" />
-  </text>
-  <text
-     id="text345-5"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1d1d1b"
-     x="463.32809"
-     y="235.80066">
-    <tspan
-       id="tspan317-0"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.02314453em;writing-mode:lr-tb;text-anchor:start">キャッシュ</tspan>
-    <tspan
-       id="tspan319-3"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01572266em;writing-mode:lr-tb;text-anchor:start"
-       y="235.80066"
-       x="469.2981" />
-    <tspan
-       id="tspan321-6"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01191406em;writing-mode:lr-tb;text-anchor:start"
-       y="235.80066"
-       x="475.01807" />
-    <tspan
-       id="tspan323-6"
-       y="235.80066"
-       x="480.32809"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" />
-    <tspan
-       id="tspan325-9"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.00878906em;writing-mode:lr-tb;text-anchor:start"
-       y="235.80066"
-       x="486.43808" />
-    <tspan
-       id="tspan327-7"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.01035156em;writing-mode:lr-tb;text-anchor:start"
-       y="235.80066"
-       x="492.6481" />
-    <tspan
-       id="tspan329-1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.01201172em;writing-mode:lr-tb;text-anchor:start"
-       y="235.80066"
-       x="497.73807" />
-    <tspan
-       id="tspan331-4"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00566406em;writing-mode:lr-tb;text-anchor:start"
-       y="235.80066"
-       x="503.41812" />
-    <tspan
-       id="tspan333-3"
-       y="235.80066"
-       x="509.2081"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" />
-    <tspan
-       id="tspan335-5"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00615234em;writing-mode:lr-tb;text-anchor:start"
-       y="247.80066"
-       x="472.96808" />
-    <tspan
-       id="tspan337-9"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00751953em;writing-mode:lr-tb;text-anchor:start"
-       y="247.80066"
-       x="480.24808" />
-    <tspan
-       id="tspan339-4"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00839844em;writing-mode:lr-tb;text-anchor:start"
-       y="247.80066"
-       x="485.87808" />
-    <tspan
-       id="tspan341-8"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0.00742187em;writing-mode:lr-tb;text-anchor:start"
-       y="247.80066"
-       x="491.52811" />
-    <tspan
-       id="tspan343-3"
-       y="247.80066"
-       x="497.3381"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" />
-  </text>
-  <text
-     id="text607"
-     style="font-size:10px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';fill:#1d1d1b"
-     x="239.23946"
-     y="150.85052">A<tspan
-   id="tspan601"
-   y="163.85052"
-   x="239.23946">P</tspan>
-<tspan
-   id="tspan603"
-   y="176.85052"
-   x="241.18947">I</tspan>
-<tspan
-   id="tspan605"
-   y="189.85052"
-   x="239.32945">S</tspan>
-</text>
-  <g
-     transform="translate(1.3412454,97.154854)"
-     id="g495-1">
-    <text
-       id="text487-5"
-       style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.00705295em;fill:#1d1d1b"
-       transform="translate(156.79,123.63)">MQTT</text>
-    <g
-       id="g493-2">
-      <polygon
-         id="polygon489-4"
-         style="fill:#999999"
-         points="139.8,124.17 145.87,119.84 145.87,128.49 " />
-      <polygon
-         id="polygon491-7"
-         style="fill:#999999"
-         points="201.32,124.17 195.25,128.49 195.25,119.84 " />
-    </g>
-    <text
-       y="134.78654"
-       x="157.81358"
-       id="text487-7-0"
-       style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.00705295em;fill:#1d1d1b">HTTP</text>
-  </g>
-  <text
-     id="text166-9"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31253338px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.04367898em;writing-mode:lr-tb;text-anchor:start;fill:#1d1d1b"
-     x="41.613396"
-     y="301.83099">ダッシュボード</text>
 </svg>

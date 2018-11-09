@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-10"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -21,11 +21,11 @@ Utilisez l'API REST HTTP {{site.data.keyword.iot_full}} pour générer et person
 ## Fonctionnalités
 {: #capabilities}
 
-L'API REST HTTP {{site.data.keyword.iot_short_notm}} prend en charge les fonctionnalités et fonctions suivantes pour les applications :
+L'API REST HTTP de {{site.data.keyword.iot_short_notm}} prend en charge les fonctionnalités et fonctions suivantes pour les applications :
 
 - Extraction des informations d'organisation
 - Opérations globales sur les terminaux (affichage de liste, ajout et retrait)
-- Opérations relatives aux types de terminaux (affichage de liste, création, suppression, affichage des détails et mise à jour)
+- Opérations relatives aux types de terminal (affichage de liste, création, suppression, affichage des détails et mise à jour)
 - Opérations sur les terminaux (affichage de liste, ajout, retrait, affichage des détails, mise à jour, affichage d'emplacement et affichage des informations de gestion)
 - Opérations de diagnostic d'un terminal (effacement de journaux, extraction de journaux, ajout d'informations de journal, suppression de journaux, obtention de journaux spécifiques, effacement de codes d'erreur, obtention de codes d'erreur de terminal et ajout de codes d'erreur)
 - Identification des erreurs de connexion (affichage de la liste des événements du journal des connexions d'un terminal)
@@ -38,9 +38,9 @@ L'API REST HTTP {{site.data.keyword.iot_short_notm}} prend en charge les fonctio
 ## Accès à la documentation de l'API REST HTTP
 {: #api_link}
 
-Pour accéder à la documentation de l'API REST HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur la génération et personnalisation de vos applications, voir [API](../reference/api.html).
+Pour accéder à la documentation de l'API REST HTTP de {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur la génération et personnalisation de vos applications, voir [API](../reference/api.html).
 
-La seule version de l'API REST HTTP {{site.data.keyword.iot_short_notm}} prise en charge est la version 2. Assurez-vous que vos solutions {{site.data.keyword.iot_short_notm}} utilisent bien la version 2.
+La seule version de l'API REST HTTP de {{site.data.keyword.iot_short_notm}} prise en charge est la version 2. Assurez-vous que vos solutions {{site.data.keyword.iot_short_notm}} utilisent bien la version 2.
 
 # API de messagerie HTTP pour les applications
 {: #rest_messaging_api}
@@ -52,19 +52,19 @@ Pour accéder à la documentation de l'API de messagerie HTTP {{site.data.keywor
 
 Outre l'utilisation du protocole de messagerie MQTT, vous pouvez également configurer vos applications pour qu'elles publient des événements et des commandes sur {{site.data.keyword.iot_short_notm}} via HTTP en exécutant l'une des commandes d'API REST HTTP suivantes :
 
-### Demande de publication (POST) d'événement non sécurisée
+### Demande POST d'événement non sécurisée
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-### Demande de publication (POST) d'événement sécurisée
+### Demande POST d'événement sécurisée
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **Remarque :** Le port 443, port SSL par défaut, peut également être spécifié pour les appels API HTTP sécurisés.
 
-### Demande de publication (POST) de commande non sécurisée
+### Demande POST de commande non sécurisée
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></code></pre>
 
 
-### Demande de publication (POST) de commande sécurisée
+### Demande POST de commande sécurisée
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
@@ -76,7 +76,7 @@ Si vous connectez un terminal ou une application au service Quickstart, remplace
 
 ### Authentification
 
-Toutes les demandes doivent inclure un en-tête d'autorisation. L'authentification de base est la seule méthode prise en charge. Les applications sont authentifiées à l'aide de clés d'API. Lorsqu'une application effectue une demande via l'API REST HTTP {{site.data.keyword.iot_short_notm}}, les données d'identification suivantes sont requises :
+Toutes les demandes doivent inclure un en-tête d'autorisation. L'authentification de base est la seule méthode prise en charge. Les applications sont authentifiées à l'aide de clés d'API. Lorsqu'une application effectue une demande via l'API REST HTTP de {{site.data.keyword.iot_short_notm}}, les données d'identification suivantes sont requises :
 
 ```
 username = API key (for example, a/orgId/a84ps90Ajs)

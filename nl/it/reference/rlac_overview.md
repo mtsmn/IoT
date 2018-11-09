@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-13"
+  years: 2017, 2018
+lastupdated: "2018-01-18"
 
 ---
 
@@ -13,12 +13,10 @@ lastupdated: "2017-10-13"
 {:pre: .pre}
 
 
-# Panoramica sul controllo dell'accesso al livello della risorsa (Beta)
+# Panoramica del controllo dell'accesso al livello della risorsa
 {: #RLAC_overview}
 
 Il controllo dell'accesso al livello della risorsa ti permette di controllare l'accesso della chiave API e dell'utente per gestire i dispositivi. Utilizza i gruppi di risorse per specificare i dispositivi in un'organizzazione che ogni utente o chiave API possono gestire. Per informazioni su come configurare il controllo dell'accesso al livello della risorsa, consulta [Configurazione del controllo dell'accesso al livello della risorsa](rlac.html#configure_RLAC).
-
-**Importante:** la funzione di controllo dell'accesso al livello della risorsa {{site.data.keyword.iot_full}} è disponibile solo come parte di un programma beta limitato. Futuri aggiornamenti possono includere modifiche incompatibili con la versione corrente di questa funzione. Provala e [facci sapere cosa ne pensi ![Icona link esterno](../../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Concetti sul controllo dell'accesso al livello della risorsa 
 {: #RLAC_concepts}
@@ -58,7 +56,7 @@ Un soggetto è un'entità autenticata che richiede l'accesso alla piattaforma, c
 ### Risorse
 {: #resources}
 
-Una risorsa è un'entità su cui il soggetto esegue le azioni. Il soggetto richiede l'accesso alla piattaforma autorizzato per la risorsa. I dispositivi sono le sole risorse supportate dalla release beta del controllo dell'accesso al livello della risorsa.
+Una risorsa è un'entità su cui il soggetto esegue le azioni. Il soggetto richiede l'accesso alla piattaforma autorizzato per la risorsa. 
 
 ### Azioni
 {: #actions}
@@ -174,7 +172,7 @@ Viene eliminato solo il sottoinsieme di dispositivi che appartengono al gruppo a
 
     PUT /api/v0002/bulk/devices/update
 
-### API di gestione dispositivo 
+### API di gestione dispositivo
 
 **Avvia richiesta**
 
@@ -277,3 +275,9 @@ Restituisce un errore 404 se il dispositivo non è accessibile al chiamante.
     GET /api/v0002/device/types/${typeId}/devices/${deviceId}/events/${eventId}
 
 Restituisce un errore 404 se il dispositivo non è accessibile al chiamante.
+
+**Richiama l'interfaccia logica per il dispositivo**
+
+    GET /api/v0002/device/types/{typeId}/devices/{deviceId}/state/{logicalInterfaceId}
+
+Restituisce un errore 404 se il dispositivo non si trova nel gruppo del chiamante.

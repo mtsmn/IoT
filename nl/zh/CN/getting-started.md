@@ -24,8 +24,7 @@ lastupdated: "2018-02-22"
 ## 开始之前
 {: #prereqs}
 
-我们将需要一个 [IBM Cloud 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/registration/){: new_window}、{{site.data.keyword.iot_short_notm}}
-服务的实例，以及满足以下需求的设备：
+您将需要 [IBM Cloud 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/registration/){: new_window}、{{site.data.keyword.iot_short_notm}} 服务的实例和满足以下需求的设备：
 
 *	您的设备必须能够使用 HTTP 或 MQTT 协议进行通信。
 
@@ -35,7 +34,7 @@ lastupdated: "2018-02-22"
 
 ## 步骤 1：注册设备
 
-您可以从 [{{site.data.keyword.iot_short_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://internetofthings.ibmcloud.com){: new_window} 一次添加一个设备，也可以使用 [WatsonIoT Platform API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} 添加多个设备。
+可以从 [{{site.data.keyword.iot_short_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://internetofthings.ibmcloud.com){: new_window} 一次添加一个设备，也可使用 [Watson IoT Platform API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} 添加多个设备。
 
 要从 {{site.data.keyword.iot_short_notm}} 仪表板添加设备，请执行以下操作：
 
@@ -44,7 +43,7 @@ lastupdated: "2018-02-22"
     此时，{{site.data.keyword.iot_short_notm}} Web 控制台将在新浏览器选项卡中打开，URL 如下：
 
     ```
-        https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+    https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
     ```
 
     其中，*org_id* 是 [{{site.data.keyword.iot_short_notm}} 组织](iotplatform_overview.html#organizations){: new_window}的标识。
@@ -223,7 +222,7 @@ Rules are condition-based decision points that match real-time device data with 
 
 ## 后续步骤
 
-创建并连接您自己的应用程序以使用实时和历史设备数据。
+创建并连接您自己的应用程序，以使用实时和历史设备数据。
 
   * 检查[客户机库](/docs/services/IoT/iot_platform_client_lib.html)，以获取构建代码的工具，用于集成和连接设备和应用程序。
 

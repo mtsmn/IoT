@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"---
+  years: 2015, 2018
+lastupdated: "2018-05-17"
+
+---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -13,7 +15,7 @@ lastupdated: "2017-03-14"---
 # Node-RED による {{site.data.keyword.iot_short_notm}} の開発
 {: #dev_nodered}
 
-Node-RED は、{{site.data.keyword.iot_full}} のアプリケーション、デバイス、ゲートウェイの開発に使用できるビジュアル・ツールです。Node-RED を使用すると、新しく興味深い方法でハードウェア・デバイス、API、オンライン・サービスを接続できます。Node.js をベースとする Node-RED は、大規模なノード・モジュール・エコシステムを活用して、多様なシステムを統合できるツールを提供します。
+Node-RED は、{{site.data.keyword.iot_full}} のアプリケーション、デバイス、ゲートウェイの開発に使用できるビジュアル・ツールです。 Node-RED を使用すると、新しく興味深い方法でハードウェア・デバイス、API、オンライン・サービスを接続できます。 Node.js をベースとする Node-RED は、大規模なノード・モジュール・エコシステムを活用して、多様なシステムを統合できるツールを提供します。
 {:shortdesc}
 
 IBM は、デバイス、ゲートウェイ、アプリケーションを {{site.data.keyword.iot_short_notm}} に接続したり、IoT ソリューションを素早く作成したりできるように、Node-RED ノードを用意しています。
@@ -25,11 +27,11 @@ IBM は、デバイス、ゲートウェイ、アプリケーションを {{site
 ![Watson IoT Node イメージ](../images/node-red-watson.png "Watson IoT Node イメージ")
 
 
-Watson IoT Node は、デバイスまたはゲートウェイを {{site.data.keyword.iot_short_notm}} に接続するための 1 組のノードです。デバイスまたはゲートウェイはこれらのノードを使用して、イベントを送信したり、アプリケーションからコマンドを受信したりできます。
+Watson IoT Node は、デバイスまたはゲートウェイを {{site.data.keyword.iot_short_notm}} に接続するための 1 組のノードです。 デバイスまたはゲートウェイはこれらのノードを使用して、イベントを送信したり、アプリケーションからコマンドを受信したりできます。
 
 Watson IoT Node について詳しくは、次のリソースを参照してください。
 
-- [GitHub の Watson IoT Node ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-ibm-watson-iot){: new_window}
+- [GitHub の Watson IoT Node ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/node-red-contrib-ibm-watson-iot){: new_window}
 - [Watson IoT Node 資料 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.npmjs.com/package/node-red-contrib-ibm-watson-iot){: new_window}
 
 
@@ -39,11 +41,11 @@ Watson IoT Node について詳しくは、次のリソースを参照してく�
 
 ![IBM IoT App Node イメージ](../images/node-red-ibmiot.png "IBM IoT App Node イメージ")
 
-IBM IoT App Node は、アプリケーションを {{site.data.keyword.iot_short_notm}} に接続するための 1 組のノードです。アプリケーションはこれらのノードを使用して、デバイス・イベントを受信し、対象デバイスにコマンドを戻すことができます。
+IBM IoT App Node は、アプリケーションを {{site.data.keyword.iot_short_notm}} に接続するための 1 組のノードです。 アプリケーションはこれらのノードを使用して、デバイス・イベントを受信し、対象デバイスにコマンドを戻すことができます。
 
 IBM IoT App Node について詳しくは、次のリソースを参照してください。
 
-- [GitHub の IBM IoT App Node ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-scx-ibmiotapp){: new_window}
+- [GitHub の IBM IoT App Node ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/node-red-contrib-scx-ibmiotapp){: new_window}
 - [IBM IoT App Node 資料![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://flows.nodered.org/node/node-red-contrib-scx-ibmiotapp){: new_window}
 
 

@@ -17,7 +17,7 @@ Utilisez Node-RED pour créer un simulateur de terminal et envoyer des données 
 {:shortdesc}
 
 ## Présentation
-Node-RED est un outil qui permet de relier des terminaux matériels, des API et des services en ligne de façon inédite et intéressante. Pour plus d'informations, voir le site Web [Node-RED ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://nodered.org/){: new_window}.  
+Node-RED est un outil qui permet de relier des terminaux matériels, des API et des services en ligne de façon inédite et intéressante. Pour plus d'informations, voir le site Web [Node-RED ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://nodered.org/){: new_window}.  
 
 Vous pouvez exécuter votre instance Node-RED dans votre propre environnement ou l'utiliser en tant qu'application {{site.data.keyword.Bluemix_notm}}. La procédure suivante inclut les instructions relatives à {{site.data.keyword.Bluemix_notm}}.
 
@@ -28,7 +28,7 @@ Créez et connectez le simulateur de terminal Node-RED pour envoyer des messages
 1. Créez le simulateur de terminal Node-RED en procédant comme indiqué ci-après :   
     1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} (https://console.ng.bluemix.net).
     2. Sélectionnez l'onglet **Catalogue**.
-    3. Localisez la section Boilerplates du catalogue de service et cliquez sur **Internet of Things Platform Starter**. **Astuce :** Cliquez [ici ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/catalog/starters/internet-of-things-platform-starter){: new_window} pour accéder directement à la page Internet of Things Platform Starter.
+    3. Localisez la section Boilerplates du catalogue de service et cliquez sur **Internet of Things Platform Starter**. **Astuce :** Cliquez [ici ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/catalog/starters/internet-of-things-platform-starter){: new_window} pour accéder directement à la page Internet of Things Platform Starter.
     4. Sur la page Internet of Things Platform Starter, sélectionnez l'espace où vous souhaitez déployer Node-RED, vérifiez les sélections pour créer une application, puis cliquez sur **Créer** pour ajouter Node-RED à votre organisation Bluemix. Par exemple :
     <ul>
      <li> Espace : dev

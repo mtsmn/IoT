@@ -25,9 +25,9 @@ lastupdated: "2018-03-14"
 
 ルールやアクションなどの {{site.data.keyword.iot_short_notm}} 機能を使用する場合は、デバイス・プロパティーを分かりやすいプロパティー名にマップするためのスキーマを作成し、プロパティーのデータ単位を設定し、スキーマで使用するメッセージ・タイプを指定する必要があります。
 
-ルールやアクションを使用するにはスキーマが必要です。詳しくは、[クラウド分析](cloud_analytics.html#rules)を参照してください。
+ルールやアクションを使用するにはスキーマが必要です。 詳しくは、[クラウド分析](cloud_analytics.html#rules)を参照してください。
 
-分析機能は {{site.data.keyword.iotrtinsights_full}} サービスからマージされます。既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのデータ・ソースとして {{site.data.keyword.iot_short_notm}} 組織を使用する場合は、既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのマイグレーションが完了するまでクラウド分析とエッジ分析が有効になりません。 マイグレーションが完了するまでは、引き続き {{site.data.keyword.iotrtinsights_short}} ダッシュボードを使用して分析要件に対応してください。 詳しくは、IBM developerWorks にある [IBM Watson IoT Platform のブログ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} および既存の {{site.data.keyword.iotrtinsights_short}} インスタンス・ダッシュボードをご覧ください。  
+分析機能は {{site.data.keyword.iotrtinsights_full}} サービスからマージされます。 既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのデータ・ソースとして {{site.data.keyword.iot_short_notm}} 組織を使用する場合は、既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのマイグレーションが完了するまでクラウド分析とエッジ分析が有効になりません。 マイグレーションが完了するまでは、引き続き {{site.data.keyword.iotrtinsights_short}} ダッシュボードを使用して分析要件に対応してください。 詳しくは、IBM developerWorks にある [IBM Watson IoT Platform のブログ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} および既存の {{site.data.keyword.iotrtinsights_short}} インスタンス・ダッシュボードをご覧ください。  
 
 ## デバイス・スキーマの追加
 {: #add_schema}

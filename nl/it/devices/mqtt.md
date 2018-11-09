@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-21"
+  years: 2015, 2018
+lastupdated: "2018-01-22"
 
 ---
 
@@ -94,9 +94,9 @@ Il supporto per la gestione del ciclo di vita del dispositivo è facoltativo. Il
 
 ### Livelli di QOS (quality of service) e sessione di pulizia
 
-I dispositivi gestiti possono pubblicare i messaggi con un livello di QOS (quality of service) di 0 o 1.
+I dispositivi gestiti possono pubblicare i messaggi con un livello di QOS (quality of service) di 0, 1 o 2.
 
-I messaggi con QoS=0 possono essere scartati e non sono conservati dopo il riavvio del server di messaggistica. I messaggi con QoS=1 possono essere accodati e sono conservati dopo il riavvio del server di messaggistica. La durata della sottoscrizione determina se una richiesta viene accodata. Il parametro ``cleansession`` della connessione che effettua la sottoscrizione determina la durata della sottoscrizione.  
+I messaggi con QoS=0 possono essere scartati e non sono conservati dopo il riavvio del server di messaggistica. I messaggi con QoS=1 possono essere accodati e sono conservati dopo il riavvio del server di messaggistica. La durata della sottoscrizione determina se una richiesta viene accodata. Il parametro ``cleansession`` della connessione che effettua la sottoscrizione determina la durata della sottoscrizione. I dispositivi possono pubblicare messaggi nel QoS2, ma il server di gestione dispositivi pubblica e sottoscrive nel QoS1, quindi i messaggi di risposta sono solo QoS1.
 
 {{site.data.keyword.iot_short_notm}} pubblica le richieste che hanno un livello QoS di 1 per supportare l'accodamento dei messaggi. Per accodare i messaggi inviati mentre un dispositivo gestito non è collegato, configura il dispositivo per non utilizzare le sessioni di pulitura impostando il parametro ``cleansession`` su false.
 

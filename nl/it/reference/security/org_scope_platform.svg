@@ -15,7 +15,7 @@
    viewBox="0 0 813.10068 355.35292"
    id="svg5566"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="org_scope_platform.svg">
   <defs
      id="defs5568">
@@ -92,8 +92,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.6357368"
-     inkscape:cx="444.56557"
-     inkscape:cy="172.96587"
+     inkscape:cx="449.71115"
+     inkscape:cy="175.10328"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -136,30 +136,31 @@
          rx="0"
          ry="0" />
       <text
-         sodipodi:linespacing="125%"
          id="text18189-1-5"
          y="476.40338"
          x="-46.40633"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            y="476.40338"
            x="-46.40633"
            id="tspan18191-0-2"
-           sodipodi:role="line" /><tspan
+           sodipodi:role="line"
+           style="font-size:11px;line-height:1.25"> </tspan><tspan
            id="tspan8202-0"
            y="490.15338"
            x="-46.40633"
-           sodipodi:role="line">Dispositivo IoT A</tspan><tspan
-           style="font-size:7.5px;stroke:none"
+           sodipodi:role="line"
+           style="font-size:11px;line-height:1.25">Dispositivo IoT A</tspan><tspan
+           style="font-size:11px;line-height:1.25;stroke:none"
            id="tspan6878-8-8"
            y="503.90338"
            x="-46.40633"
-           sodipodi:role="line" /><tspan
-           style="font-size:7.5px;stroke:none"
+           sodipodi:role="line"> </tspan><tspan
+           style="font-size:11px;line-height:1.25;stroke:none"
            id="tspan18193-4-5"
            y="517.65338"
            x="-46.40633"
-           sodipodi:role="line" /></text>
+           sodipodi:role="line"> </tspan></text>
       <g
          transform="translate(-98.952863,462.64817)"
          id="g5278-3">
@@ -184,30 +185,31 @@
          rx="0"
          ry="0" />
       <text
-         sodipodi:linespacing="125%"
          id="text18189-1-0"
          y="598.30817"
          x="-31.708599"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            y="598.30817"
            x="-31.708599"
            id="tspan18191-0-7"
-           sodipodi:role="line" /><tspan
+           sodipodi:role="line"
+           style="font-size:11px;line-height:1.25"> </tspan><tspan
            id="tspan8202-4"
            y="612.05817"
            x="-31.708599"
-           sodipodi:role="line">Dispositivo IoT C</tspan><tspan
-           style="font-size:7.5px;stroke:none"
+           sodipodi:role="line"
+           style="font-size:11px;line-height:1.25">Dispositivo IoT C</tspan><tspan
+           style="font-size:11px;line-height:1.25;stroke:none"
            id="tspan6878-8-5"
            y="625.80817"
            x="-31.708599"
-           sodipodi:role="line" /><tspan
-           style="font-size:7.5px;stroke:none"
+           sodipodi:role="line"> </tspan><tspan
+           style="font-size:11px;line-height:1.25;stroke:none"
            id="tspan18193-4-3"
            y="639.55817"
            x="-31.708599"
-           sodipodi:role="line" /></text>
+           sodipodi:role="line"> </tspan></text>
       <g
          transform="translate(-84.255133,584.55291)"
          id="g5278-7">
@@ -232,16 +234,16 @@
          rx="0"
          ry="0" />
       <text
-         sodipodi:linespacing="125%"
          id="text18189-5-9-3"
          y="448.98209"
          x="379.96921"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00000012;stroke-miterlimit:4;stroke-dasharray:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00000012;stroke-miterlimit:4;stroke-dasharray:none"
          xml:space="preserve"><tspan
            id="tspan6913-6-9"
            y="448.98209"
            x="379.96921"
-           sodipodi:role="line">Applicazione 1</tspan></text>
+           sodipodi:role="line"
+           style="font-size:11px;line-height:1.25">Applicazione 1</tspan></text>
       <g
          style="stroke-width:10.70751572;stroke-miterlimit:4;stroke-dasharray:none"
          transform="matrix(0.09339234,0,0,0.09339234,326.14531,420.95347)"
@@ -306,16 +308,16 @@
          rx="0"
          ry="0" />
       <text
-         sodipodi:linespacing="125%"
          id="text18189-5-9"
          y="621.03198"
          x="369.59439"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00000012;stroke-miterlimit:4;stroke-dasharray:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00000012;stroke-miterlimit:4;stroke-dasharray:none"
          xml:space="preserve"><tspan
            id="tspan6913-6"
            y="621.03198"
            x="369.59439"
-           sodipodi:role="line">Applicazione 2</tspan></text>
+           sodipodi:role="line"
+           style="font-size:11px;line-height:1.25">Applicazione 2</tspan></text>
       <g
          style="stroke-width:10.70751572;stroke-miterlimit:4;stroke-dasharray:none"
          transform="matrix(0.09339234,0,0,0.09339234,315.77053,593.00349)"
@@ -389,31 +391,32 @@
          rx="0"
          ry="0" />
       <text
-         sodipodi:linespacing="125%"
          id="text266398"
          y="286.15955"
          x="151.48978"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            y="286.15955"
            x="151.48978"
            id="tspan266400"
-           sodipodi:role="line" /><tspan
+           sodipodi:role="line"
+           style="font-size:12px;line-height:1.25"> </tspan><tspan
            id="tspan4887"
            y="301.15955"
            x="151.48978"
-           sodipodi:role="line">Org: q1bc3a</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:12px;line-height:1.25">Org: q1bc3a</tspan><tspan
            id="tspan266402"
            y="316.15955"
            x="151.48978"
-           sodipodi:role="line" /></text>
+           sodipodi:role="line"
+           style="font-size:12px;line-height:1.25"> </tspan></text>
       <text
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
          id="text56812"
          font-size="13"
          x="83.284279"
-         y="225.37737"
-         sodipodi:linespacing="125%">IBM® Bluemix</text>
+         y="225.37737">IBM® Cloud</text>
       <g
          transform="translate(103.88165,267.62872)"
          id="Page-1_1_">
@@ -501,20 +504,21 @@
          rx="0"
          ry="0" />
       <text
-         sodipodi:linespacing="125%"
          id="text266398-8"
          y="464.91064"
          x="154.78223"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            id="tspan4887-4"
            y="464.91064"
            x="154.78223"
-           sodipodi:role="line">Org: f9gh4b</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:12px;line-height:1.25">Org: f9gh4b</tspan><tspan
            id="tspan266402-7"
            y="479.91064"
            x="154.78223"
-           sodipodi:role="line" /></text>
+           sodipodi:role="line"
+           style="font-size:12px;line-height:1.25"> </tspan></text>
       <g
          transform="translate(107.17405,430.37976)"
          id="Page-1_1_-1">
@@ -594,93 +598,98 @@
          ry="0" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.21430206px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         x="155.90417"
-         y="467.13052"
-         id="text44235-7-4"
-         sodipodi:linespacing="125%"
-         transform="scale(0.92857295,1.0769213)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         x="127.89561"
+         y="503.06281"
+         id="text44235-7-4"><tspan
+           id="tspan13797"
+           sodipodi:role="line"
+           x="127.89561"
+           y="503.06281"
+           style="font-size:11px;line-height:1.25">Spazio argomento: f9gh4b</tspan><tspan
+           id="tspan14869"
+           sodipodi:role="line"
+           x="127.89561"
+           y="516.81281"
+           style="font-size:11px;line-height:1.25">Dispositivo C</tspan><tspan
            id="tspan14877"
            sodipodi:role="line"
-           x="155.90417"
-           y="467.13052">Spazio argomento: f9gh4b</tspan><tspan
-           sodipodi:role="line"
-           x="155.90417"
-           y="480.88052"
-           id="tspan3476">Dispositivo C</tspan><tspan
-           sodipodi:role="line"
-           x="155.90417"
-           y="494.63052"
-           id="tspan3478">Applicazione 2</tspan></text>
+           x="127.89561"
+           y="530.56281"
+           style="font-size:11px;line-height:1.25">Applicazione 2</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.11853981px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         x="151.16699"
-         y="312.00452"
-         id="text44235-7-4-7"
-         sodipodi:linespacing="125%"
-         transform="scale(0.91986729,1.0871133)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         x="124.05605"
+         y="339.18427"
+         id="text44235-7-4-7"><tspan
+           id="tspan13797-0"
+           sodipodi:role="line"
+           x="124.05605"
+           y="339.18427"
+           style="font-size:11px;line-height:1.25">Spazio argomento: q1bc3a</tspan><tspan
+           id="tspan14867"
+           sodipodi:role="line"
+           x="124.05605"
+           y="352.93427"
+           style="font-size:11px;line-height:1.25">Dispositivo A</tspan><tspan
            id="tspan14871"
            sodipodi:role="line"
-           x="151.16699"
-           y="312.00452">Spazio argomento: q1bc3a</tspan><tspan
-           sodipodi:role="line"
-           x="151.16699"
-           y="325.75452"
-           id="tspan3467">Dispositivo A</tspan><tspan
-           sodipodi:role="line"
-           x="151.16699"
-           y="339.50452"
-           id="tspan3469">Applicazione 1</tspan></text>
+           x="124.05605"
+           y="366.68427"
+           style="font-size:11px;line-height:1.25">Applicazione 1</tspan></text>
       <text
-         sodipodi:linespacing="125%"
          id="text266398-1"
          y="250.94772"
          x="123.83478"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            y="250.94772"
            x="123.83478"
            id="tspan266400-4"
-           sodipodi:role="line">Watson™ IoT Platform </tspan><tspan
+           sodipodi:role="line"
+           style="font-size:12px;line-height:1.25">Watson™ IoT Platform </tspan><tspan
            id="tspan4887-47"
            y="265.94772"
            x="123.83478"
-           sodipodi:role="line" /><tspan
+           sodipodi:role="line"
+           style="font-size:12px;line-height:1.25"> </tspan><tspan
            id="tspan266402-5"
            y="280.94772"
            x="123.83478"
-           sodipodi:role="line" /></text>
+           sodipodi:role="line"
+           style="font-size:12px;line-height:1.25"> </tspan></text>
       <text
-         sodipodi:linespacing="125%"
          id="text266398-7"
          y="410.35199"
          x="124.00162"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            y="410.35199"
            x="124.00162"
            id="tspan266400-2"
-           sodipodi:role="line">Watson™ IoT Platform </tspan><tspan
+           sodipodi:role="line"
+           style="font-size:12px;line-height:1.25">Watson™ IoT Platform </tspan><tspan
            id="tspan4887-7"
            y="425.35199"
            x="124.00162"
-           sodipodi:role="line" /><tspan
+           sodipodi:role="line"
+           style="font-size:12px;line-height:1.25"> </tspan><tspan
            id="tspan266402-0"
            y="440.35199"
            x="124.00162"
-           sodipodi:role="line" /></text>
+           sodipodi:role="line"
+           style="font-size:12px;line-height:1.25"> </tspan></text>
     </g>
     <g
        id="g6562"
        transform="translate(78.622125,-21.581331)">
       <text
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
          id="text66184"
          font-size="11"
          x="31.010523"
-         y="420.60852"
-         sodipodi:linespacing="125%">Internet</text>
+         y="420.60852">Internet</text>
       <path
          style="fill:#66d1f5;fill-opacity:1"
          d="m 61.592226,405.57766 -23.895,0 0,-0.088 c -5.456,-0.671 -9.60201,-5.278 -9.60201,-10.884 0,-6.049 4.92101,-10.971 10.97101,-10.971 0.693,0 1.38,0.064 2.054,0.192 0.752,-5.997 5.797,-10.53201 11.979,-10.53201 6.361,0 11.518,4.80201 12.033,11.05601 4.252,1.613 7.063,5.65 7.063,10.255 0,5.605 -4.146,10.213 -9.602,10.884 l 0,0.077 -1.001,0.011 z m -22.581,-2 22.544,-0.01 c 4.844,-0.176 8.638,-4.112 8.638,-8.962 0,-3.959 -2.54,-7.404 -6.32,-8.573 l -0.686,-0.212 -0.019,-0.717 c -0.144,-5.5 -4.568,-9.809 -10.071,-9.809 -5.505,0 -9.929,4.311 -10.072,9.813 l -0.034,1.321 -1.262,-0.393 c -0.858,-0.267 -1.754,-0.402 -2.665,-0.402 -4.946,0 -8.97101,4.024 -8.97101,8.971 0,4.85 3.79401,8.786 8.63801,8.962 l 0.28,0.011 z"
@@ -691,12 +700,11 @@
        id="g6562-2"
        transform="translate(438.35601,-18.565671)">
       <text
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
          id="text66184-0"
          font-size="11"
          x="31.010523"
-         y="420.60852"
-         sodipodi:linespacing="125%">Internet</text>
+         y="420.60852">Internet</text>
       <path
          style="fill:#66d1f5;fill-opacity:1"
          d="m 61.592226,405.57766 -23.895,0 0,-0.088 c -5.456,-0.671 -9.60201,-5.278 -9.60201,-10.884 0,-6.049 4.92101,-10.971 10.97101,-10.971 0.693,0 1.38,0.064 2.054,0.192 0.752,-5.997 5.797,-10.53201 11.979,-10.53201 6.361,0 11.518,4.80201 12.033,11.05601 4.252,1.613 7.063,5.65 7.063,10.255 0,5.605 -4.146,10.213 -9.602,10.884 l 0,0.077 -1.001,0.011 z m -22.581,-2 22.544,-0.01 c 4.844,-0.176 8.638,-4.112 8.638,-8.962 0,-3.959 -2.54,-7.404 -6.32,-8.573 l -0.686,-0.212 -0.019,-0.717 c -0.144,-5.5 -4.568,-9.809 -10.071,-9.809 -5.505,0 -9.929,4.311 -10.072,9.813 l -0.034,1.321 -1.262,-0.393 c -0.858,-0.267 -1.754,-0.402 -2.665,-0.402 -4.946,0 -8.97101,4.024 -8.97101,8.971 0,4.85 3.79401,8.786 8.63801,8.962 l 0.28,0.011 z"
@@ -716,12 +724,11 @@
        id="rect56941-0-3-9"
        style="opacity:1;fill:#ffffff" />
     <text
-       sodipodi:linespacing="125%"
        y="438.37378"
-       x="70.233276"
+       x="71.108276"
        font-size="11"
        id="text56834-0-4-8-0-89-9"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Nessun comando per A</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Nessun comando per A</text>
     <rect
        style="opacity:1;fill:#000000;fill-opacity:0;stroke:none;stroke-width:0.90653205;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect6906"
@@ -742,13 +749,11 @@
        id="rect56941-0-3-9-6"
        style="opacity:1;fill:#ffffff" />
     <text
-       sodipodi:linespacing="125%"
-       y="348.52701"
-       x="539.48041"
+       y="424.15576"
+       x="381.30286"
        font-size="11"
        id="text56834-0-4-8-0-89-9-0-1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.76735878px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-       transform="scale(0.7970326,1.2546538)">Nessun messaggio per l'applicazione 1</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Nessun messaggio per applicazione 1</text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4-1"
@@ -762,13 +767,11 @@
        id="rect56941-0-3-9-6-5"
        style="opacity:1;fill:#ffffff" />
     <text
-       sodipodi:linespacing="125%"
-       y="548.44348"
-       x="81.852432"
+       y="603.76819"
+       x="53.40564"
        font-size="11"
        id="text56834-0-4-8-0-89-9-4"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.86944675px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-       transform="scale(0.8972224,1.1145509)">Messaggio per l'applicazione 1</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Messaggio per applicazione 1</text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4-1-7"
@@ -782,11 +785,10 @@
        id="rect56941-0-3-9-6-2"
        style="opacity:1;fill:#ffffff" />
     <text
-       sodipodi:linespacing="125%"
        y="612.35852"
        x="450.69543"
        font-size="11"
        id="text56834-0-4-8-0-89-9-2"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Comando per A</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Comando per A</text>
   </g>
 </svg>

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-06-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -31,8 +31,7 @@ lastupdated: "2017-06-14"
 
 选项字典创建用于与 {{site.data.keyword.iot_short_notm}} 模块进行交互的定义。构造方法用于构建客户机实例，并接受包含以下定义的选项字典：
 
-|定义|描述
-|
+|定义|描述|
 |:---|:---|
 |`orgId`|组织标识。|
 |`type`|设备的类型。设备类型是对执行特定任务的设备的一种分组，例如“weatherballoon”。|

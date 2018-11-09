@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-13"
+  years: 2017, 2018
+lastupdated: "2018-01-18"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-10-13"
 {:pre: .pre}
 
 
-# Visão geral do controle de acesso no nível de recursos (Beta)
+# Visão Geral do Controle de Acesso no Nível do Recurso
 {: #RLAC_overview}
 
 O controle de acesso de nível de recursos permite controlar o acesso do usuário e da chave API para gerenciar dispositivos. Use
@@ -21,8 +21,6 @@ grupos de recursos para especificar os dispositivos em uma organização que cad
 chave API pode gerenciar. Para obter informações sobre como configurar o controle de
 acesso no nível de recursos, consulte [Configurando
 o controle de acesso no nível recursos](rlac.html#configure_RLAC).
-
-**Importante:** o recurso de controle de acesso de nível de recursos de {{site.data.keyword.iot_full}} está disponível somente como parte de um programa beta limitado. Atualizações futuras podem incluir mudanças incompatíveis com a versão atual desse recurso. Experimente e [nos forneça sua opinião ![External link icon](../../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Conceitos do controle de acesso no nível de recursos 
 {: #RLAC_concepts}
@@ -86,9 +84,7 @@ ser autorizado. Os seguintes tipos de sujeitos são válidos:
 {: #resources}
 
 Um recurso é uma entidade sobre a qual o sujeito executa a ação. O sujeito
-solicita acesso autorizado à plataforma para o recurso. Os dispositivos são os
-únicos recursos que são suportados na liberação Beta do controle de acesso no nível de
-recursos.
+solicita acesso autorizado à plataforma para o recurso. 
 
 ### Ações
 {: #actions}
@@ -337,3 +333,9 @@ Retorna um erro 404 se o dispositivo não é acessível pelo responsável pela c
     GET /api/v0002/device/types/${typeId}/devices/${deviceId}/events/${eventId}
 
 Retorna um erro 404 se o dispositivo não é acessível pelo responsável pela chamada.
+
+** Obter interface lógica para o dispositivo **
+
+    GET /api/v0002/device/device/types/ { /devices/ { /state/ {
+
+Retornará um erro 404 se o dispositivo não estiver no grupo do responsável pela chamada.

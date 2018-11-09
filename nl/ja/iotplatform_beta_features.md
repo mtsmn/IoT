@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-05-31"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -24,7 +24,6 @@ lastupdated: "2018-05-31"
 ------------- | -------------
 ドリルダウン・レポート | [ドリルダウン・レポート (ベータ)](reference/security/RM_security.html#drill_down)
 IoT ゲートウェイ・パッケージ | [IoT ゲートウェイ・パッケージ (ベータ)](gateways/iotgw.html#gw_package)
-デバイス・データのシミュレート | [デバイス・データのシミュレート (ベータ)](devices/device_sim.html)
 削除されたデバイスの復元 | [削除されたデバイスの復元 (ベータ)](iotplatform_task.html#restore_device)
 組み込みルール | [組み込みルールの作成 (ベータ)](information_management/im_rules.html)
 モノ | [データ管理の概要](GA_information_management/ga_im_device_twin.html#device_twins)
@@ -32,3 +31,4 @@ IoT ゲートウェイ・パッケージ | [IoT ゲートウェイ・パッケ�
 Cloud IAM の認証と許可 | [{{site.data.keyword.iot_short_notm}} の Cloud IAM の認証と許可 (ベータ)](reference/security/cloud_iam.html)
 アプリ ID の認証と許可 | [{{site.data.keyword.iot_short_notm}} のアプリ ID の認証と許可 (ベータ)](reference/security/app_id.html)
 グループ・ユーザー・インターフェース | [グループの管理 (ベータ)](manage_groups.html#groups_overview)
+クライアント接続のモニター | [クライアント接続のモニター (ベータ)](reference/security/client_connect.html)

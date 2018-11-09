@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-10-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -54,6 +54,7 @@ Si los datos de dispositivo no son JSON válidos o si el formato no se establece
 }
 
 ```
+La calidad de servicio (QoS) que utiliza un dispositivo MQTT para enviar mensajes a {{site.data.keyword.iot_short_notm}} no se aplica cuando los mensajes se envían de {{site.data.keyword.iot_short_notm}} a {{site.data.keyword.cloudant_short_notm}}. Normalmente, se envía un mensaje a {{site.data.keyword.cloudant_short_notm}} una vez. Rara vez, podría ser posible que un mensaje se enviara más de una vez o ninguna. 
 
 ## Antes de empezar  
 {: #byb}
@@ -63,6 +64,8 @@ Antes de conectar un {{site.data.keyword.cloudant_short_notm}} al servicio de {{
 - Configure {{site.data.keyword.cloudant_short_notm}} en el espacio de {{site.data.keyword.Bluemix_notm}} que su {{site.data.keyword.iot_short_notm}} mediante el catálogo de {{site.data.keyword.Bluemix_notm}}.
 
 Asegúrese de que tenga privilegios de desarrollador en la organización de {{site.data.keyword.Bluemix_notm}} y de que haya iniciado sesión mediante {{site.data.keyword.Bluemix_notm}}. Si no ha iniciado sesión a través de {{site.data.keyword.Bluemix_notm}}, o no tiene privilegios de desarrollador en esta organización de {{site.data.keyword.Bluemix_notm}}, no podrá autorizar el enlace de {{site.data.keyword.cloudant_short_notm}} y {{site.data.keyword.iot_short_notm}}.
+
+## Utilización del panel de control de {{site.data.keyword.iot_short_notm}} para enlazar un servicio de {{site.data.keyword.cloudant_short_notm}} a {{site.data.keyword.iot_short_notm}}
 
 Siga estos pasos para conectar un {{site.data.keyword.cloudant_short_notm}}:
 
@@ -78,12 +81,12 @@ Siga estos pasos para conectar un {{site.data.keyword.cloudant_short_notm}}:
 
   c. Elija opciones que determinen el nombre de base de datos. El nombre de la base de datos será `iotp_<orgID>_<dbname>_<bucket_name>` donde:
 
- +  * `<orgID>` es su identificador de organización.
- +  * `<dbname>` es su opción para esta parte de nombre de base de datos controlados por el campo `Nombre de base de datos`.
- +  * `<bucket_name>` es una serie determinada por la selección para el campo `Intervalo de receptáculo`:
- +    * Para intervalos de receptáculo de `día`, el `<bucket_name>` será `yyyy-mm-dd`.  Por ejemplo, `2016-07-06` para sucesos el 6 de julio de 2016.
- +    * Para intervalos de receptáculo de `semana`, `<bucket_name>` será `yyyy-'w'ww` donde `'w'ww` indica un número de semana.  Por ejemplo, `2016-w03` para sucesos en la tercera semana de 2016.
- +    * Para intervalos de receptáculo de `mes`, `<bucket_name>` será `yyyy-mm`.  Por ejemplo, `2016-07` para sucesos en julio de 2016.
+   * `<orgID>` es su identificador de organización.
+   * `<dbname>` es su opción para esta parte de nombre de base de datos controlados por el campo `Nombre de base de datos`.
+   * `<bucket_name>` es una serie determinada por la selección para el campo `Intervalo de receptáculo`:
+     * Para intervalos de receptáculo de `día`, `<bucket_name>` será `yyyy-mm-dd`.  Por ejemplo, `2016-07-06` para sucesos el 6 de julio de 2016.
+     * Para intervalos de receptáculo de `semana` `<bucket_name>` será `yyyy-'w'ww` donde `'w'ww` indica un número de semana.  Por ejemplo, `2016-w03` para sucesos en la tercera semana de 2016.
+     * Para intervalos de receptáculo de `mes` `<bucket_name>` será `yyyy-mm`.  Por ejemplo, `2016-07` para sucesos en julio de 2016.
 
 5. Pulse en **Autorizar**.
 6. Pulse **Confirmar** en el recuadro de diálogo de la autorización.

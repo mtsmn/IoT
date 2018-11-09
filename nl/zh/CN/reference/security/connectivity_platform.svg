@@ -1097,7 +1097,7 @@
          sodipodi:role="line"
          x="136.77055"
          y="512.95654"
-         id="tspan8202">IoT 设备</tspan><tspan
+         id="tspan8202">IoT Devices</tspan><tspan
          sodipodi:role="line"
          x="136.77055"
          y="526.70654"
@@ -1127,11 +1127,11 @@
          id="tspan44239-7"
          y="529.77588"
          x="383.15887"
-         sodipodi:role="line">REST 和 </tspan><tspan
+         sodipodi:role="line">Rest &amp; </tspan><tspan
          y="543.52588"
          x="383.15887"
          sodipodi:role="line"
-         id="tspan7973">实时 API</tspan><tspan
+         id="tspan7973">Real-time APIs</tspan><tspan
          y="557.27588"
          x="383.15887"
          sodipodi:role="line"
@@ -1159,7 +1159,7 @@
          sodipodi:role="line"
          x="134.90659"
          y="440.80542"
-         id="tspan8202-7">IoT 网关</tspan><tspan
+         id="tspan8202-7">IoT Gateways</tspan><tspan
          sodipodi:role="line"
          x="134.90659"
          y="454.55542"
@@ -1185,7 +1185,7 @@
          sodipodi:role="line"
          x="369.39407"
          y="484.14883"
-         id="tspan4887">组织：q1bc3a</tspan><tspan
+         id="tspan4887">Org: q1bc3a</tspan><tspan
          sodipodi:role="line"
          x="369.39407"
          y="498.21133"
@@ -1196,7 +1196,7 @@
        x="301.18857"
        font-size="13"
        id="text56812"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Bluemix</text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Cloud</text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4"
@@ -1219,7 +1219,7 @@
        x="246.61366"
        font-size="11"
        id="text66184"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">因特网</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Internet</text>
     <path
        inkscape:connector-curvature="0"
        id="path13593"
@@ -1456,28 +1456,33 @@
          x="72.772636"
          y="566.47717"
          style="font-size:12.50000191px"
-         id="tspan5832">完全支持通过</tspan><tspan
+         id="tspan5832">Full support for </tspan><tspan
          sodipodi:role="line"
          x="72.772636"
-         y="580.72717"
+         y="582.10217"
          style="font-size:12.50000191px"
-         id="tspan5522"><tspan
+         id="tspan5510">connectivity </tspan><tspan
+         sodipodi:role="line"
+         x="72.772636"
+         y="597.72717"
+         style="font-size:12.50000191px"
+         id="tspan5522">over <tspan
    style="font-weight:bold"
-   id="tspan5514">TLS</tspan> (V1.2) 连接。</tspan><tspan
+   id="tspan5514">TLS</tspan> (v1.2). </tspan><tspan
          sodipodi:role="line"
          x="72.772636"
-         y="603.35217"
+         y="613.35217"
          style="font-size:12.50000191px"
-         id="tspan5512">支持开放式标准 <tspan
+         id="tspan5512">Open standards <tspan
    style="font-weight:bold"
    id="tspan5516" /></tspan><tspan
          sodipodi:role="line"
          x="72.772636"
-         y="618.97717"
+         y="628.97717"
          style="font-size:12.50000191px"
          id="tspan5525"><tspan
    style="font-weight:bold"
-   id="tspan5527">MQTT</tspan> (V3.1.1)。</tspan></text>
+   id="tspan5527">MQTT</tspan> (v3.1.1) supported.  </tspan></text>
     <g
        id="g11065"
        transform="translate(292.82563,483.0889)">
@@ -1620,7 +1625,7 @@
          sodipodi:role="line"
          x="333.3031"
          y="425.96832"
-         id="tspan4887-5">Watson™ IoT Platform </tspan><tspan
+         id="tspan4887-5">Watson™ IoT Platform</tspan><tspan
          sodipodi:role="line"
          x="333.3031"
          y="440.96832"
