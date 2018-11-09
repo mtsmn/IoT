@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-27"
+  years: 2015, 2018
+lastupdated: "2018-03-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}  
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
@@ -27,17 +27,41 @@ Les demandes peuvent être lancées via le tableau de bord en utilisant l'onglet
 ## Lancement de demandes de gestion des terminaux à l'aide de l'API REST
 {: #initiating-dm-api}
 
-Les demandes peuvent être lancées à l'aide de l'exemple d'API REST suivant :  
+Les demandes peuvent être initiées à l'aide de l'API REST suivante :
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Pour plus d'informations sur le corps d'une demande de gestion des terminaux, voir la [documentation de l'API ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
+Pour plus d'informations sur le corps d'une demande de gestion des terminaux, voir la [documentation de l'API ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
+
+## Configuration de l'expiration des demandes de gestion des terminaux
+{: #timeout-requests}
+
+Vous pouvez configurer les demandes de gestion des terminaux pour qu'elles expirent si elles sont toujours en cours au bout d'un intervalle de temps défini. Lorsque vous initiez une demande de gestion de terminal, vous pouvez spécifier un délai en secondes. Une fois que le nombre de secondes spécifié est atteint, le serveur de gestion des terminaux annule la demande automatiquement.
+
+Pour en savoir plus sur le paramètre du délai d'attente dans l'API de demande d'initiation, voir la [documentation d'API![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}.
+
+## Annulation des demandes de gestion des terminaux
+{: #cancel-requests}
+
+Vous pouvez annuler les demandes de gestion des terminaux en cours à l'aide de la demande d'API suivante :
+
+`POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests/{requestId}/cancel`
+
+Cette demande efface les opérations en cours de tous les terminaux en cours et marque les demandes comme terminées.
+
+Pour en savoir plus sur l'API d'annulation des demandes de gestion de terminaux, voir la [documentation d'API![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests_requestId_cancel){: new_window}.
+
+## Dépassement des demandes en cours qui bloquent une nouvelle demande
+{: #force-override}
+
+Par défaut, si un terminal a une demande de téléchargement ou de mise à jour de microprogramme en attente, une nouvelle demande ne peut pas être lancée pour ce terminal. Lorsque vous initiez une demande de gestion de terminal, vous pouvez définir le paramètre de requête `override=true` pour spécifier que les demandes en cours sont annulées pour que les nouvelles demandes puissent être initiées. Lorsque vous utilisez ce paramètre de requête, toutes les demandes en cours sont annulées. Pour sélectionner des demandes spécifiques à annuler, utilisez l'[API d'annulation des demandes de gestion de terminaux](#cancel-requests).
+
+Pour en savoir plus sur le paramètre d'annulation dans l'API de demande de lancement, consultez la [documentation d'API ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}.
 
 ## Actions sur les terminaux
 {: #device-actions}
 
-Un terminal peut spécifier qu'il prend en charge des actions sur les terminaux lorsqu'il publie une demande de gestion. Une demande d'action sur les terminaux indique à {{site.data.keyword.iot_short_notm}} que le terminal peut répondre à des actions de réamorçage et de réinitialisation de terminal.
-
+Un terminal peut spécifier qu'il prend en charge des actions sur les terminaux lorsqu'il publie une demande de gestion. Le terminal effectue ceci en définissant l'indicateur deviceActions dans la demande de gestion de terminal sur true pour indiquer que le terminal peut répondre à des actions de réamorçage de terminal et de redéfinition de terminal.
 
 ## Actions sur les terminaux - réamorçage
 {: #device-actions-reboot}
@@ -48,7 +72,7 @@ Pour lancer une opération de réamorçage de terminaux à l'aide de l'API REST,
 
 `https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Fournissez les informations suivantes :
+Fournissez les informations suivantes dans la demande :
 
 - L'action ``device/reboot``
 - Une liste de terminaux à réamorcer (5 000 terminaux au maximum)
@@ -67,9 +91,7 @@ Exemple de demande de réamorçage de terminaux :
 }
 ```
 
-Une fois qu'une demande est lancée, un message MQTT est publié sur tous les terminaux spécifiés dans le corps de la demande de réamorçage. Pour chaque terminal, une réponse doit être renvoyée afin d'indiquer si l'action de réamorçage peut être lancée. Si cette opération peut être lancée immédiatement, affectez au paramètre `rc` la valeur `202`. Si la tentative de réamorçage échoue, affectez au paramètre `rc` la valeur `500` et définissez le paramètre `message` en conséquence. Si le réamorçage n'est pas pris en charge, affectez au paramètre `rc` la valeur `501` et, le cas échéant, définissez le paramètre `message` en conséquence.
-
-L'action de réamorçage est terminée lorsque le terminal envoie une demande Gérer le terminal après avoir été réamorcé.
+Une fois qu'une demande est lancée, un message MQTT est publié sur tous les terminaux spécifiés dans le corps de la demande de réamorçage. Pour chaque terminal, une réponse doit être renvoyée afin d'indiquer si l'action de réamorçage peut être lancée. Si cette opération peut être lancée immédiatement, affectez au paramètre `rc` la valeur `202`. Si la tentative de réamorçage échoue, définissez le paramètre `rc` sur `500` et définissez l'erreur appropriée dans le paramètre `message`. Si le réamorçage n'est pas pris en charge, affectez au paramètre `rc` la valeur `501` et, le cas échéant, définissez le paramètre `message` en conséquence.
 
 ### Sujet pour une demande de réamorçage de terminaux
 
@@ -100,11 +122,13 @@ Message sortant depuis le terminal :
 
 Topic: iotdevice-1/response
 {
-    "rc": "response_code",
+    "rc": response_code,
     "message": "string",
     "reqId": "string"
 }
 ```
+L'action de réamorçage est terminée lorsque le terminal envoie une demande Gérer le terminal après avoir été réamorcé.
+
 
 ## Actions sur les terminaux - réinitialisation avec les paramètres d'usine
 {: #device-actions-factory-reset}
@@ -168,12 +192,11 @@ La rubrique suivante présente un message sortant à partir du terminal :
 
 Topic: iotdevice-1/response
 {
-    "rc": "response_code",
+    "rc": response_code,
     "message": "string",
     "reqId": "string"
 }
 ```
-
 
 ## Actions sur le microprogramme
 {: #firmware-actions}
@@ -182,22 +205,24 @@ Le niveau de microprogramme identifié sur un terminal est stocké dans l'attrib
 
 **Important :** Le terminal géré doit prendre en charge l'observation de l'attribut ``mgmt.firmware`` afin de prendre en charge les actions sur le microprogramme.
 
-Le processus de mise à jour du microprogramme est scindé en deux actions distinctes :
+Le processus de mise à jour du microprogramme peut être scindé en deux actions distinctes :
 - Téléchargement du microprogramme
 - Mise à jour du microprogramme
 
-Le statut de chacune des actions sur le microprogramme est stocké dans un attribut distinct sur le terminal. L'attribut ``mgmt.firmware.state`` décrit le statut du téléchargement de microprogramme. Le tableau suivant décrit les valeurs possibles que vous pouvez définir pour l'attribut ``mgmt.firmware.state`` :
+L'état des actions du microprogramme est stocké dans les attributs ``mgmt.firmware.state`` et ``mgmt.firmware.updateStatus``.
+
+Le tableau suivant décrit les valeurs possibles que vous pouvez définir pour l'attribut ``mgmt.firmware.state`` :
 
  |Valeur |Etat  | Signification |
  |:---|:---|:---|
- |0  | Inactif        | Le terminal n'est pas en train de télécharger un microprogramme. |  
+ |0  | Inactif        | Le terminal n'est pas en train de télécharger un microprogramme. |
  |1  | Téléchargement en cours | Le terminal est en train de télécharger un microprogramme. |
  |2  | Téléchargé  | Le terminal a téléchargé une mise à jour de microprogramme et est prêt à l'installer. |
 
 
-L'attribut ``mgmt.firmware.updateStatus`` décrit le statut de la mise à jour de microprogramme. Les valeurs possibles pour l'attribut ``mgmt.firmware.updateStatus`` sont les suivantes :
+Les valeurs possibles pour l'attribut ``mgmt.firmware.updateStatus`` sont les suivantes :
 
-|Valeur |Etat | Signification |  
+|Valeur |Etat | Signification |
 |:---|:---|:---|
 |0 | Réussite | Le microprogramme a été mis à jour. |
 |1 | En cours | La mise à jour du microprogramme a été lancée mais n'est pas encore terminée.|
@@ -257,7 +282,7 @@ Si aucun des paramètres facultatifs n'est défini, la première étape du proce
 Le serveur de gestion des terminaux dans {{site.data.keyword.iot_short_notm}} utilise le protocole de gestion des terminaux pour envoyer une demande aux terminaux, ce qui lance le téléchargement de microprogramme. Le processus de téléchargement se décompose comme suit :
 
 1. Une demande de mise à jour des détails de microprogramme est envoyée au sujet ``iotdm-1/device/update``.
-La demande de mise à jour permet au terminal de vérifier si le microprogramme demandé est différent de celui actuellement installé. En cas de différence, affectez au paramètre ``rc`` la valeur ``204``, ce qui permet le passage au statut ``Modifié``.  
+La demande de mise à jour permet au terminal de vérifier si le microprogramme demandé est différent de celui actuellement installé. En cas de différence, le terminal envoie une réponse contenant le rc ``204``, ce qui permet le passage au statut ``Modifié``.
 L'exemple suivant illustre le message qui doit s'afficher pour l'exemple de demande de téléchargement de microprogramme envoyée précédente, ainsi que la réponse envoyée lorsqu'une différence est détectée :
 ```
    Demande entrante depuis {{site.data.keyword.iot_short_notm}} :
@@ -269,7 +294,7 @@ L'exemple suivant illustre le message qui doit s'afficher pour l'exemple de dema
       "d" : {
          "fields" : [{
                "field" : "mgmt.firmware",
-               "value" : {
+            "value" : {
                   "version" : "some firmware version",
                   "name" : "some firmware name",
                   "uri" : "some uri for firmware location",
@@ -286,8 +311,8 @@ L'exemple suivant illustre le message qui doit s'afficher pour l'exemple de dema
    Réponse sortante depuis le terminal :
 
    Topic: iotdevice-1/response
-   Message:
-   {
+Message:
+{
       "rc" : 204,
       "reqId" : "f38faafc-53de-47a8-a940-e697552c3194"
    }
@@ -299,27 +324,28 @@ Elle vérifie que le terminal est prêt à lancer le téléchargement de micropr
    Demande entrante depuis {{site.data.keyword.iot_short_notm}} :
 
    Topic: iotdm-1/observe
-   Message:
-   {
+Message:
+{
       "reqId" : "909b477c-cd37-4bee-83fa-1d568664fbe8",
       "d" : {
-         "fields" : [ {
+         "fields" : [
+         {
             "field" : "mgmt.firmware"
             }
          ]
       }
    }
 
-   Réponse sortante depuis le terminal :
+Réponse sortante depuis le terminal :
 
    Topic: iotdevice-1/response
-   Message:
-   {
+Message:
+{
       "rc" : 200,
       "reqId" : "909b477c-cd37-4bee-83fa-1d568664fbe8"
    }
    ```
-Cet échange déclenche la dernière étape.  
+Cet échange déclenche la dernière étape.
 
 3. La demande de téléchargement est envoyée au sujet ``iotdm-1/mgmt/initiate/firmware/download`` :
 
@@ -337,8 +363,8 @@ Cet échange déclenche la dernière étape.
    Réponse sortante depuis le terminal :
 
    Topic: iotdevice-1/response
-   Message:
-   {
+Message:
+{
       "rc" : 202,
       "reqId" : "7b244053-c08e-4d89-9ed6-6eb2618a8734"
    }
@@ -355,9 +381,10 @@ Message:
 {
    "reqId" : "123456789",
    "d" : {
-      "fields" : [ {
+      "fields" : [
+         {
          "field" : "mgmt.firmware",
-         "value" : {
+            "value" : {
                  "state" : 1
              }
       } ]
@@ -375,9 +402,10 @@ Message:
 {
    "reqId" : "1234567890",
    "d" : {
-      "fields" : [ {
+      "fields" : [
+         {
          "field" : "mgmt.firmware",
-         "value" : {
+            "value" : {
                  "state" : 2
              }
       } ]
@@ -603,12 +631,12 @@ La liste suivante fournit des informations utiles pour le traitement du processu
 
 Les recettes suivantes décrivent le flux complet requis pour effectuer des actions sur les terminaux et sur un microprogramme.
 
-- [Device Management in WIoT Platform – Roll Back & Factory Reset ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
+- [Device Management in WIoT Platform – Roll Back & Factory Reset ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
 
-- [Device Initiated Firmware Update ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/){: new_window}
+- [Device Initiated Firmware Update ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/){: new_window}
 
-- [Platform Initiated Firmware Update ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
+- [Platform Initiated Firmware Update ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
 
-- [Platform Initiated Firmware Update with Background Execution ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
+- [Platform Initiated Firmware Update with Background Execution ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
 
-- [Firmware Roll Back & Factory Reset ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
+- [Firmware Roll Back & Factory Reset ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}

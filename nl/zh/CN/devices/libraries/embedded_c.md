@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-13"
+  years: 2015, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -31,6 +31,7 @@ lastupdated: "2017-03-13"
 |依赖关系|描述|
 |:---|:---|
 |[Eclipse Paho Embedded C 库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window}|提供 MQTT C 客户机库。有关更多信息，请参阅 [MQTT Client Package -  C for embedded devices ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}。|
+|[Mbed TLS 2.4.1 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.4.1.tar.gz){: new_window} |提供 SSL 库以启用基于 TLS 支持和基于客户端证书的认证。有关更多信息，请查看 [Mbed TLS 中的 SSL 库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://tls.mbed.org/ssl-library){: new_window}。|
 
 
 ## 安装
@@ -53,6 +54,8 @@ lastupdated: "2017-03-13"
 ```
 下载的客户机具有以下文件结构：
 
+
+
 ```
  |-lib - 包含所有从属文件
  |-samples - 包含 helloWorld 和 sampleDevice 样本
@@ -74,8 +77,7 @@ lastupdated: "2017-03-13"
 
 `initialize` 函数使用以下参数来连接到 {{site.data.keyword.iot_short_notm}} 服务：
 
-|定义|描述
-|
+|定义|描述|
 |:---|:---|
 |`客户机 (client)`|*iotfclient* 的指针。|
 |`org`|组织标识。|
@@ -182,6 +184,8 @@ lastupdated: "2017-03-13"
 
 ```
 **注：**通过 ``yield()`` 函数，设备能接收来自 Watson IoT Platform 的命令，并使连接保持活动。如果未在 keepAlive 时间间隔指定的时间范围内调用 ``yield()`` 函数，那么设备不会接收到从该平台发出的任何命令。分配给 ``yield()`` 函数的值指定在将控制返回给应用程序之前，可以从套接字读取数据的时间长度（以毫秒为单位）。
+
+
 
 ## 发布事件
 {: #publishing_events}

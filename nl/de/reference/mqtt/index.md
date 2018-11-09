@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -91,7 +91,7 @@ In der folgenden Tabellen werden die Einschränkungen für Nachrichtennutzdaten 
 
 Nutzdatenformat  | Richtlinien für bestimmte Anwendungsfälle
 --------- | ----------  
-JSON | JSON ist das Standardformat für {{site.data.keyword.iot_short_notm}}. Wenn Sie planen, die integrierten Dashboards, Boards, Karten und die Analyse von {{site.data.keyword.iot_short_notm}} zu verwenden, müssen Sie sicherstellen, dass das Format der Nachrichtennutzdaten einem korrekt formatierten JSON-Text entspricht.
+JSON | JSON ist das Standardformat für {{site.data.keyword.iot_short_notm}}. Wenn Sie planen, die integrierten {{site.data.keyword.iot_short_notm}}-Dashboards zu verwenden, stellen Sie sicher, dass das Format der Nachrichtennutzdaten einem korrekt formatieren JSON-Text entspricht.
 Text | Verwenden Sie die gültige UTF-8-Zeichencodierung.
 Binary | Keine Einschränkungen.
 

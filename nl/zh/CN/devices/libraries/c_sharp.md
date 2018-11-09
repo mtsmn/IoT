@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -99,6 +99,8 @@ deviceClient.connect();
 deviceClient.commandCallback += processCommand;
 ```
 下表描述了 commandCallback 方法的参数：
+
+
 
 |参数|数据类型|描述|
 |:---|:---|

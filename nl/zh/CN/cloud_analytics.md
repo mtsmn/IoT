@@ -15,11 +15,11 @@ lastupdated: "2018-03-13"
 # 云分析
 {: #cloud_analytics}
 
-**重要信息：**为了改善 {{site.data.keyword.iot_full}} 提供规则和操作的方式，我们计划了很多改进，其中包括开发一个测试版来探索定义 IoT 设备数据规则的新方法。
+**重要信息：**作为更广泛的更改计划的一部分，我们将推出 Beta，以一种全新的方式对 IoT 设备数据定义规则，以改进 {{site.data.keyword.iot_full}} 交付规则和操作的方式。
 
-要获取更多信息，请参阅博客帖子 [An alternative approach to defining Rules on IoT data ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}。
+要了解更多信息，请查看博客帖子 [An alternative approach to defining Rules on IoT data ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}。
 
-要开始定义您自己的规则，请参阅[创建嵌入式规则 (Beta)](information_management/im_rules.html) 文档。
+要开始定义自己的规则，请参阅[创建嵌入式规则 (Beta)](information_management/im_rules.html) 文档。
 
 
 ## 开始之前
@@ -40,7 +40,7 @@ lastupdated: "2018-03-13"
 
 要获取有关已对设备触发的规则和警报的概述，请使用以下板：
 
- |板名称|描述 |  
+ |板名称|描述|  
  |:---|:---|  
   |以规则为中心的分析|显示组织的规则。其他卡会列出已触发的警报、关联的设备、设备属性和警报信息。|  
  |以设备为中心的分析|显示连接到组织的设备。其他卡会显示所选设备的警报、所选设备的信息、设备属性和警报信息。|
@@ -62,8 +62,10 @@ lastupdated: "2018-03-13"
 可以通过并列行的方式添加条件以将其应用为 OR 条件，也可以通过顺序列的方式添加条件以将其应用为 AND 条件。  
 **重要信息：**要触发用于比较两个属性的条件，或者触发使用 AND 以顺序方式组合的两个或更多属性条件，触发数据点必须包含在同一设备消息中。如果数据是在多个消息中收到的，那么不会触发该条件或这些顺序条件。  
 **示例：**   
-如果参数值大于指定的值，可能触发简单的规则：条件 = `temp_cpu>80`  
-当满足阈值组合时，可能触发更复杂的规则：条件 = `temp_cpu>60 AND cpu_load>90`   
+如果参数值大于指定的值，可能触发简单的规则：
+条件 = `temp_cpu>80`  
+当满足阈值组合时，可能触发更复杂的规则：
+条件 = `temp_cpu>60 AND cpu_load>90`   
 
 4. 为规则配置有条件触发需求。  
 要控制一段时间内为某个规则触发的警报数，可以为该规则配置有条件触发需求。  
@@ -286,7 +288,7 @@ URL|目标 Node-RED HTTP 输入节点的 URL。
 URL|支持 Webhook 的目标服务器的 URL。**提示：**您可以使用[变量替换](#variable_substitution)在 URL 中动态包含更多数据。
 方法|要运行的 Webhook 调用的类型。选择以下某种类型：GET、HEAD、OPTIONS、PATCH、PUT、POST 或 DELETE。
 用户名|Web Service 需要时包含。
-密码| Web Service 需要时包含。**重要信息：**密码是以明文形式发送的。
+密码|Web Service 需要时包含。**重要信息：**密码是以明文形式发送的。
 头|头由键值对构成。**提示：**您可以使用[变量替换](#variable_substitution)在头中动态包含更多数据。
 内容类型|主体内容的类型：JSON、XML、WWW 表单 URL 编码的内容或纯文本。适用于 OPTIONS、PATCH、PUT、POST 和 DELETE 方法。
 主体|Webhook 调用的主体。适用于 OPTIONS、PATCH、PUT、POST 和 DELETE 方法。缺省情况下，“主体”字段预填充了[变量替换](#variable_substitution)中列出的所有变量。**重要信息：**Webhook 服务器可能要求主体中包含某些特定字段。例如，Slack Webhook 必须包含“text”字段。

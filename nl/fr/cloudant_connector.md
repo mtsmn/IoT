@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-10-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -54,6 +54,7 @@ Si les données de terminal ne sont pas dans un format JSON valide et si le form
 }
 
 ```
+La qualité de service (QoS) utilisée par un terminal MQTT pour envoyer des messages à {{site.data.keyword.iot_short_notm}} n'est pas applicable lorsque des messages sont envoyés de {{site.data.keyword.iot_short_notm}} à {{site.data.keyword.cloudant_short_notm}}. Généralement, un message est envoyé à {{site.data.keyword.cloudant_short_notm}} une seule fois. Rarement, il est possible qu'un message soit envoyé plus d'une fois ou pas du tout. 
 
 ## Avant de commencer  
 {: #byb}
@@ -63,6 +64,8 @@ Avant de connecter un service {{site.data.keyword.cloudant_short_notm}} à votre
 - Configurez un service {{site.data.keyword.cloudant_short_notm}} dans le même espace {{site.data.keyword.Bluemix_notm}} que votre instance {{site.data.keyword.iot_short_notm}} à l'aide du catalogue {{site.data.keyword.Bluemix_notm}}.
 
 Vérifiez que vous disposez des privilèges de développeur dans l'organisation {{site.data.keyword.Bluemix_notm}} et que vous êtes connecté via {{site.data.keyword.Bluemix_notm}}. Si vous n'êtes pas connecté via {{site.data.keyword.Bluemix_notm}} ou si vous ne disposez pas de privilèges de développeur dans cette organisation {{site.data.keyword.Bluemix_notm}}, vous ne pourrez pas autoriser la liaison entre {{site.data.keyword.cloudant_short_notm}} et {{site.data.keyword.iot_short_notm}}.
+
+## Utilisation du tableau de bord {{site.data.keyword.iot_short_notm}} pour lier un service {{site.data.keyword.cloudant_short_notm}} à {{site.data.keyword.iot_short_notm}}
 
 Procédez comme suit pour connecter un service {{site.data.keyword.cloudant_short_notm}} :
 
@@ -78,12 +81,12 @@ Procédez comme suit pour connecter un service {{site.data.keyword.cloudant_shor
 
   c. Choisissez les options qui déterminent le nom de base de données. Le nom de base de données sera `iotp_<orgID>_<dbname>_<bucket_name>` où :
 
- +  * `<orgID>` est l'ID de votre organisation.
- +  * `<dbname>` est ce que vous avez choisi pour cette partie du nom de base de données contrôlé par la zone `Nom de la base de données`.
- +  * `<bucket_name>` est une chaîne déterminée par ce que vous avez choisi pour la zone `Intervalle` :
- +    * Pour les intervalles `quotidiens`, `<bucket_name>` est `aaaa-mm-jj`.  Par exemple, `2016-07-06` pour les événements qui se sont produits le 6 juillet 2016.
- +    * Pour les intervalles `hebdomadaires`, `<bucket_name>` est `aaaa-'w'ww` où `'w'ww` indique un numéro de semaine.  Par exemple, `2016-w03` pour les événements qui se sont produits au cours de la troisième semaine de 2016.
- +    * Pour les intervalles `mensuels`, `<bucket_name>` est `aaaa-mm`.  Par exemple, `2016-07` pour les événements qui se sont produits en juillet 2016.
+   * `<orgID>` est l'ID de votre organisation.
+   * `<dbname>` est ce que vous avez choisi pour cette partie du nom de base de données contrôlé par la zone `Nom de la base de données`.
+   * `<bucket_name>` est une chaîne déterminée par ce que vous avez choisi pour la zone `Intervalle` :
+     * Pour les intervalles d'allotement `day`, `<bucket_name>` est `aaaa-mm-jj`.  Par exemple, `2016-07-06` pour les événements qui se sont produits le 6 juillet 2016.
+     * Pour les intervalles d'allotement `week`, `<bucket_name>` est `aaaa-'w'ww` où `'w'ww` indique un numéro de semaine.  Par exemple, `2016-w03` pour les événements qui se sont produits au cours de la troisième semaine de 2016.
+     * Pour les intervalles d'allotement `month`, `<bucket_name>` est `aaaa-mm`.  Par exemple, `2016-07` pour les événements qui se sont produits en juillet 2016.
 
 5. Cliquez sur **Autoriser**.
 6. Cliquez sur **Confirmer** dans la boîte de dialogue d'autorisation.
@@ -95,11 +98,11 @@ Vos données de terminal seront désormais stockées dans votre service {{site.d
 
 Les recettes suivantes expliquent comment utiliser {{site.data.keyword.cloudant_short_notm}} en tant que stockage d'historique pour {{site.data.keyword.iot_short}} :
 
-- La recette [Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} explique de quelle façon les données de terminal sont stockées sur {{site.data.keyword.cloudant_short_notm}} montre comment configurer et stocker des données de terminal sur {{site.data.keyword.cloudant_short_notm}} en tant que stockage des données d'historique.
+- La recette [Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} explique de quelle façon les données de terminal sont stockées sur {{site.data.keyword.cloudant_short_notm}} montre comment configurer et stocker des données de terminal sur {{site.data.keyword.cloudant_short_notm}} en tant que stockage des données d'historique.
 
-- La recette [Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} montre comment analyser et effectuer des opérations de traitement de données sur les données de terminal stockées dans {{site.data.keyword.cloudant_short_notm}}.
+- La recette [Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} montre comment analyser et effectuer des opérations de traitement de données sur les données de terminal stockées dans {{site.data.keyword.cloudant_short_notm}}.
 
-- La recette [Visualize Watson IoT Device Data stored in Cloudant NoSQL DB ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} montre comment établir un lien entre des cartes Graphique à courbes et un stockage de données d'historique pour afficher des données de terminal sur le tableau de bord Watson IoT Platform.
+- La recette [Visualize Watson IoT Device Data stored in Cloudant NoSQL DB ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} montre comment établir un lien entre des cartes Graphique à courbes et un stockage de données d'historique pour afficher des données de terminal sur le tableau de bord Watson IoT Platform.
 
 
 ## Création de nouveaux documents de conception  
@@ -110,7 +113,7 @@ De nouveaux documents de conception sont contenus dans la base de données de co
 
 Les documents de conception par défaut contenus dans {{site.data.keyword.iot_short_notm}} implémentent les requêtes disponibles dans l'historique en cours, en plus de la fonction summarize.
 
-D'autres documents de conception peuvent être ajoutés à la base de données de configuration et seront copiés dans les nouvelles bases de données d'intervalle à mesure qu'elles seront créées. Pour ajouter des documents de conception à la base de données de configuration, voir la [documentation de l'API Cloudant ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://docs.cloudant.com/document.html){: new_window}.
+D'autres documents de conception peuvent être ajoutés à la base de données de configuration et seront copiés dans les nouvelles bases de données d'intervalle à mesure qu'elles seront créées. Pour ajouter des documents de conception à la base de données de configuration, voir la [documentation de l'API Cloudant ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudant.com/document.html){: new_window}.
 
 <!--  # Related links
 {: #rellinks}

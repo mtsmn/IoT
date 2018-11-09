@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-06-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-06-14"
 # デバイス開発者用の Python
 {: #python}
 
-Python を使用して、{{site.data.keyword.iot_full}} で組織と対話するデバイス・コードをビルド/開発することができます。{{site.data.keyword.iot_short_notm}} 用の Python クライアントは、MQTT や HTTP などの基礎的なプロトコルを抽象化することで、{{site.data.keyword.iot_short_notm}} 機能とのシンプルな対話を促進する API を備えています。
+Python を使用して、{{site.data.keyword.iot_full}} で組織と対話するデバイス・コードをビルド/開発することができます。 {{site.data.keyword.iot_short_notm}} 用の Python クライアントは、MQTT や HTTP などの基礎的なプロトコルを抽象化することで、{{site.data.keyword.iot_short_notm}} 機能とのシンプルな対話を促進する API を備えています。
 {:shortdesc}
 
 提供されている情報と例を使用し、Python を使用したデバイスの開発を開始します。
@@ -29,17 +29,16 @@ Python を使用して、{{site.data.keyword.iot_full}} で組織と対話する
 ## コンストラクター
 {: #constructor}
 
-options 辞書は、{{site.data.keyword.iot_short_notm}} モジュールと対話するために使用する定義を作成します。コンストラクターはクライアント・インスタンスを作成し、以下の定義を格納する options 辞書を受け入れます。
+options 辞書は、{{site.data.keyword.iot_short_notm}} モジュールと対話するために使用する定義を作成します。 コンストラクターはクライアント・インスタンスを作成し、以下の定義を格納する options 辞書を受け入れます。
 
-|定義|説明
-|
+|定義|説明 |
 |:---|:---|
 |`orgId`|組織 ID。|
-|`type`|デバイスのタイプ。デバイスのタイプとは、特定のタスクを実行するデバイスのグループです (「weatherballoon」など)。|
-|`id`|デバイスを特定するための固有の ID。通常、特定のデバイス・タイプにおいて、デバイス ID はそのデバイスの固有の ID です (シリアル番号や MAC アドレスなど)。|
-|`auth-method`|認証の方式。サポートされている唯一の方式は `token` です。|
+|`type`|デバイスのタイプ。 デバイスのタイプとは、特定のタスクを実行するデバイスのグループです (「weatherballoon」など)。|
+|`id`|デバイスを特定するための固有の ID。 通常、特定のデバイス・タイプにおいて、デバイス ID はそのデバイスの固有の ID です (シリアル番号や MAC アドレスなど)。|
+|`auth-method`|認証の方式。 サポートされている唯一の方式は `token` です。|
 |`auth-token`|デバイスを {{site.data.keyword.iot_short_notm}} に安全に接続するための認証トークン。|
-|`clean-session`|true または false の値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は true に設定されます。|
+|`clean-session`|true または false の値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。 デフォルトでは、`clean-session` は true に設定されます。|
 
 options 辞書が提供されない場合、クライアントは未登録デバイスとして {{site.data.keyword.iot_short_notm}} Quickstart サービスに接続されます。
 
@@ -90,11 +89,11 @@ clean-session=true/false
 ## イベントのパブリッシュ
 {: #publishing_events}
 
-イベントとは、デバイスが {{site.data.keyword.iot_short_notm}} にデータをパブリッシュするためのメカニズムのことです。デバイスはイベントの内容を制御し、送信するイベントごとに名前を割り当てます。
+イベントとは、デバイスが {{site.data.keyword.iot_short_notm}} にデータをパブリッシュするためのメカニズムのことです。 デバイスはイベントの内容を制御し、送信するイベントごとに名前を割り当てます。
 
 {{site.data.keyword.iot_short_notm}} インスタンスがイベントを受信すると、その受信イベントの資格情報によって、送信元デバイスが識別されます。そのためデバイスが、別のデバイスになりすますことはできません。
 
-イベントは、MQTT プロトコルによって定義された 3 つのサービス品質 (QoS) レベルのいずれでもパブリッシュできます。デフォルトでは、イベントは QoS レベル `0` でパブリッシュされます。
+イベントは、MQTT プロトコルによって定義された 3 つのサービス品質 (QoS) レベルのいずれでもパブリッシュできます。  デフォルトでは、イベントは QoS レベル `0` でパブリッシュされます。
 
 ### デフォルトのサービス品質を使用したイベントのパブリッシュ
 
@@ -106,7 +105,7 @@ client.publishEvent("status", "json", myData)
 
 ### イベントの QoS レベルの引き上げ
 
-パブリッシュされるイベントの[サービス品質 (QoS) レベル](../../reference/mqtt/index.html#qos-levels)を引き上げることができます。QoS レベルが `0` より高いイベントは、追加の確認受信情報が含まれているため、パブリッシュにかかる時間が延びる可能性があります。
+パブリッシュされるイベントの[サービス品質 (QoS) レベル](../../reference/mqtt/index.html#qos-levels)を引き上げることができます。 QoS レベルが `0` より高いイベントは、追加の確認受信情報が含まれているため、パブリッシュにかかる時間が延びる可能性があります。
 
 **注:** Quickstart フロー・モードは、QoS レベル `0` のみをサポートしています。
 
@@ -119,13 +118,13 @@ client.publishEvent("status", "json", myData, myQosLevel)
 ## コマンドの処理
 {: #handling_commands}
 
-デバイス・クライアントは、接続時に、このデバイスに対して指定されたコマンドに自動的にサブスクライブします。特定のコマンドを処理するには、コマンド・コールバック・メソッドを登録する必要があります。メッセージは、以下のプロパティーがある Command クラスのインスタンスとして返されます。
+デバイス・クライアントは、接続時に、このデバイスに対して指定されたコマンドに自動的にサブスクライブします。 特定のコマンドを処理するには、コマンド・コールバック・メソッドを登録する必要があります。 メッセージは、以下のプロパティーがある Command クラスのインスタンスとして返されます。
 
 |プロパティー|データ・タイプ|説明|
 |:---|:---|
 |`command`|ストリング|コマンドを識別します。|
 |`format`|ストリング|形式は任意のストリング (JSON など) となります。|
-|`data`|辞書|ペイロードのデータ。最大長は 131072 バイトです。|
+|`data`|辞書|ペイロードのデータ。 最大長は 131072 バイトです。|
 |`timestamp`|日時|イベントの日時。|
 
 
@@ -152,7 +151,7 @@ client.commandCallback = myCommandCallback
 ## カスタム・メッセージ形式のサポート
 {: #custom_message_format}
 
-デフォルトでは、メッセージ形式は ``json`` に設定されます。つまり、ライブラリーが JSON 形式の Python 辞書オブジェクトのエンコードとデコードをサポートします。メッセージの形式が ``json-iotf`` に設定されると、メッセージは {{site.data.keyword.iot_short_notm}} JSON ペイロードの仕様に応じてエンコードされます。独自のカスタム・メッセージ形式のサポートを追加する場合は、GitHub の[カスタム・メッセージ形式のサンプル ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} を参照してください。
+デフォルトでは、メッセージ形式は ``json`` に設定されます。つまり、ライブラリーが JSON 形式の Python 辞書オブジェクトのエンコードとデコードをサポートします。 メッセージの形式が ``json-iotf`` に設定されると、メッセージは {{site.data.keyword.iot_short_notm}} JSON ペイロードの仕様に応じてエンコードされます。 独自のカスタム・メッセージ形式のサポートを追加する場合は、GitHub の[カスタム・メッセージ形式のサンプル ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} を参照してください。
 
 カスタム・エンコーダー・モジュールを作成するときは、以下の例に示されているように、デバイス・クライアントに登録する必要があります。
 

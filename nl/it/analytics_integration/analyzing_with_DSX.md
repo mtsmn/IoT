@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-09-18"
+  years: 2017, 2018
+lastupdated: "2018-05-01"
 ---
 
 ---
@@ -42,7 +42,7 @@ Come parte di questa guida imparerai:
 ## Prerequisiti
 
 Per completare questa procedura devi disporre dell'accesso a [{{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window} con [Cloudant NoSQL DB ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/catalog/services/cloudant-nosql-db
-){: new_window} e l'accesso a [DSX Account ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://datascience.ibm.com/docs/content/getting-started/get-started.html){: new_window}.
+){: new_window}, l'accesso al servizio [Apache Spark ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/catalog/services/apache-spark){:new_window} e l'accesso a un [account DSX ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://datascience.ibm.com/docs/content/getting-started/get-started-wdp.html){: new_window}.
 
 
 ## Passo 1. Configura il simulatore
@@ -73,22 +73,22 @@ Per simulare i dati del sensore reali nelle tue organizzazioni utilizzando il si
 1. [Distribuisci l'applicazione web del simulatore Weather Sensors con un'istanza di {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window} e segui le istruzioni dettagliate.
 
    Per ulteriori informazioni su Weather Sensors, consulta [the Weather Sensors simulator guide ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
-2. Attendi che la distribuzione venga completata e passa al dashboard Bluemix.
+2. Attendi il completamento della distribuzione e quindi accedi al dashboard di IBM Cloud.
 3. Avvia il servizio {{site.data.keyword.iot_short_notm}} "wiotp-for-weather-sensors-simulator" che è stato creato dal processo di distribuzione.
 4. Procedi al [Passo 2. Configura il connettore al database](#DSX_config_db).
 
 
-## Passo 2. Configura il connettore al database 
+## Passo 2. Configura il connettore al database
 {: #DSX_config_db}
 
 I dati del dispositivo possono essere archiviati nei database Cloudant giornalmente, settimanalmente o mensilmente, a seconda dell'opzione di intervallo di bucket selezionata. I dati raccolti da tutti i dispositivi nello stesso intervallo di bucket (giorno, settimana o mese) vengono archiviati nello stesso database.
 
-Indipendentemente dalla configurazione dell'intervallo di bucket, vengono automaticamente creati tre database dal connettore. Un database viene creato per l'intervallo bucket corrente, uno per l'intervallo in entrata e un database per la configurazione. Quando viene raggiunto il termine di un intervallo, i dati del dispositivo vengono archiviati nel database bucket per il nuovo intervallo e viene creato un nuovo database per il bucekt successivo. 
+Indipendentemente dalla configurazione dell'intervallo di bucket, vengono automaticamente creati tre database dal connettore. Un database viene creato per l'intervallo bucket corrente, uno per l'intervallo in entrata e un database per la configurazione. Quando viene raggiunto il termine di un intervallo, i dati del dispositivo vengono archiviati nel database bucket per il nuovo intervallo e viene creato un nuovo database per il bucket successivo.
 
 Per utilizzare {{site.data.keyword.cloudant_short_notm}} con DSX, devi configurare l'archivio dei dati della piattaforma in modo che venga utilizzato Cloudant NoSQL DB come servizio storico.
 
 1. Nel dashboard {{site.data.keyword.cloudant_short_notm}}, fai clic su **Extensions** nella barra di navigazione.
-2. In **Historical Data Storage**, fai clic su **Setup**. La sezione **Configure Historical Data Storage** elenca tutti i servizi Cloudant NoSQL DB disponibili nello stesso spazio Bluemix come {{site.data.keyword.cloudant_short_notm}}.
+2. In **Historical Data Storage**, fai clic su **Setup**. La sezione **Configure Historical Data Storage** elenca tutti i servizi Cloudant NoSQL DB disponibili nello stesso spazio IBM Cloud di {{site.data.keyword.cloudant_short_notm}}.
 3. Seleziona il servizio Cloudant NoSQL DB che desideri collegare.
 4. Specifica le seguenti opzioni di configurazione Cloudant NoSQL DB:
   - Intervallo bucket = Day
@@ -98,7 +98,7 @@ Per utilizzare {{site.data.keyword.cloudant_short_notm}} con DSX, devi configura
 6. Procedi al [Passo 3. Esegui il simulatore](#run_simulator).
 
 
-## Passo 3. Esegui il simulatore 
+## Passo 3. Esegui il simulatore
 {: #run_simulator}
 
 Il simulatore pubblica i dati dei sensori meteo reali, da 17 stazioni meteo ubicate nell'area Haifa, nella tua organizzazione {{site.data.keyword.iot_short_notm}}.
@@ -114,14 +114,14 @@ Il simulatore pubblica i dati dei sensori meteo reali, da 17 stazioni meteo ubic
 5. Procedi al [Passo 4. Configura DSX e visualizza i dati](#DSX_visualize_data).
 
 
-## Passo 4. Configura DSX e visualizza i dati 
+## Passo 4. Configura DSX e visualizza i dati
 {: #DSX_visualize_data}
 
 Per configurare DSX e avviare la visualizzazione dei dati:
 
 1. [Configura un notebook Jupyter pre-configurato](#setup_jupyter_notebook) per ottenere le informazioni approfondite sui tuoi dati e per individuare le anomalie.
 2. [Esegui l'analisi.](#run_analysis)
-3. [Configura gli avvisi per le anomalie nel sensore](#config_alerts).
+<!--3. [Configure alerts on sensor anomalies](#config_alerts).-->
 
 
 ### 1. Configura un notebook Jupyter pre-configurato
@@ -130,35 +130,30 @@ Per configurare DSX e avviare la visualizzazione dei dati:
 Il notebook Jupyter è un'applicazione web che consente di creare e condividere i documenti che contengono il codice eseguibile, le formule matematiche, i grafici/visualizzazione (matplotlib) e il testo esplicativo.
 
 Per configurare un notebook Jupyter pre-configurato per ottenere le informazioni approfondite e per individuare le anomalie:
-1. Utilizza un browser supportato per accedere a [DSX ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://datascience.ibm.com/){: new_window} con il tuo ID Bluemix.
-2. Fai clic su "+" e seleziona **Create project** per creare un nuovo progetto. I progetti creano spazi per raccogliere e condividere i notebook, il collegamento alle origini dati, creare pipeline e aggiungere dataset.
-3. Specifica il nome del progetto e fai clic su **Create**. Durante la configurazione dell'account DSX, il servizio Spark e l'istanza Object Storage vengono creati automaticamente. In alternativa, puoi crearli utilizzando l'interfaccia Bluemix e quindi associarli al tuo progetto DSX in una fase successiva.
-4. Importa le tue credenziali Cloudant selezionando il tuo progetto nel menu **DSX** e facendo clic su ![icona Trova e aggiungi dati](images/find_add_data_icon.png).
-5. Fai clic sulla scheda **Connections**.
-6. Fai clic su **Create Connection** per importare le tue credenziali Cloudant e renderle disponibili in qualsiasi notebook del tuo progetto.
-7. Completa la schermata **New Connections** immettendo le seguenti informazioni:
-   - Nome connessione
-   - Imposta **Service Category** su `Data Service`.
-   - Seleziona il tuo servizio Cloudant dal menu a discesa **Target service instance**.
-   - Seleziona il database Cloudant corrispondete alla data corrente.
-8. Fai clic su **Crea**.
-9. Fai clic su **add notebooks** per creare un nuovo notebook Jupyter.
-10. Seleziona **From URL** per caricare un notebook esistente, quindi specifica un nome descrittivo per il notebook e immetti il seguente URL per aprire il notebook di esempio:
+1. Utilizza un browser supportato per accedere a [DSX ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://datascience.ibm.com/){: new_window} con il tuo ID IBM Cloud.
+2. Fai clic su **+ New project** per creare un nuovo progetto e seleziona il tile **Jupyter Notebooks**. I progetti creano spazi per raccogliere e condividere i notebook, il collegamento alle origini dati, creare pipeline e aggiungere dataset.
+3. Fai clic sull'elenco a discesa **+ Add to project** e seleziona **Connection**. Dall'elenco dei servizi, seleziona **Cloudant** e quindi immetti l'URL, il nome utente e la password Cloudant trovati nella scheda Service credentials della pagina del servizio {{site.data.keyword.cloudant_short_notm}} e inseriscili nei campi mostrati. Specifica un nome per la connessione e fai clic su **Create**.
+4. Verifica che la connessione sia disponibile nella sezione Data assets del dashboard.
+5. Fai clic su **+ New notebook** per creare un nuovo notebook Jupyter.
+6. Dall'elenco a discesa Select runtime, sotto Services, seleziona **spark-iw**. Se questo non è presente, significa che il provisioning del servizio Apache Spark non è stato eseguito correttamente. Verifica che sia presente sul dashboard IBM Cloud e, in caso contrario, visita la pagina del servizio per eseguirne il provisioning.
+7. Imposta Language su **Python 2** e la versione Spark su **2.1**.
+8. Seleziona **From URL** per caricare un notebook esistente, quindi specifica un nome descrittivo per il notebook e immetti il seguente URL per aprire il notebook di esempio:
 ```
 https://github.com/ibm-watson-iot/analytics-integration-samples/blob/master/dsx/notebooks/witop_dsx_weather_sensors_sim_notebook.ipynb
 ```
-11. Fai clic su **Create Notebook**. Controlla che il notebook sia stato creato con metadati e codice.
-12. Seleziona la cella che inizia con '!pip install --upgrade pixiedust, ,' e fai quindi clic su **Play** per eseguire il codice.
-13. Quando l'installazione è stata completata, riavvia il kernel Spark facendo clic sull'icona **Restart Kernel**.
-14. Attendi circa 10 secondi per il riavvio del kernel e fai clic sulla cella con il commento per selezionarla.
-15. Importa le tue credenziali Cloudant in tale cella completando la seguente procedura:
 
-    1. Fai clic su ![icona Trova e aggiungi i dati](images/find_add_data_icon.png).
+9. Fai clic su **Create Notebook**. Controlla che il notebook sia stato creato con metadati e codice.
+10. Seleziona la cella che inizia con '!pip install --upgrade pixiedust, ,' e fai quindi clic su **Run** per eseguire il codice.
+11. Al termine dell'installazione, riavvia il kernel Spark facendo clic sull'icona **Restart Kernel** o selezionando **Restart** dal menu Kernel.
+12. Attendi circa 10 secondi per il riavvio del kernel e fai clic sulla cella del codice vuoto con il commento per selezionarlo.
+13. Importa le tue credenziali Cloudant in tale cella completando la seguente procedura:
+
+    1. Fai clic su ![Find and add data](images/find_add_data_icon.png).
     2. Seleziona la scheda **Connections**.
     3. Fai clic su **Insert to code**.
 Viene creato un dizionario denominato credentials_1" con le tue credenziali Cloudant. Se il nome non viene specificato come "credentials_1", ridenomina la directory in "credentials_1" perché questo è il nome necessario all'esecuzione del codice del notebook.
-16. Nella cella con il nome del database (dbname) immetti il nome del database Cloudant che è l'origine dati, ad esempio, `iotp_yourWIoTPorgId_default_Year-month-day`.
-17. Salva il notebook. Il notebook è pronto per essere eseguito.
+14. Nella cella con il nome del database (dbname) immetti il nome del database Cloudant che è l'origine dati, ad esempio, `iotp_yourWIoTPorgId_default_Year-month-day`.
+15. Salva il notebook. Il notebook è pronto per essere eseguito.
 
 
 ### 2. Esegui le analisi
@@ -172,56 +167,56 @@ Viene creato un dizionario denominato credentials_1" con le tue credenziali Clou
 **Nota:** alcune cella eseguono in background lavori Spark e potrebbero impiegare più tempo per l'esecuzione. Quando l'esecuzione del codice all'interno di una cella viene completata, l'asterisco `*` diventa un numero, ad esempio, In `[*]` diventa In `[1]`. Dopo il completamento di questi passi, puoi creare regole cloud in {{site.data.keyword.iot_short_notm}} per generare automaticamente gli avvisi quando vengono individuate le anomalie.
 
 
-### 3. Configura gli avvisi per le anomalie nel sensore 
+<!-- ### 3. Configure alerts on sensor anomalies
 {: #config_alerts}
 
 
-Puoi creare regole cloud in {{site.data.keyword.iot_short_notm}}. Queste regole possono generare avvisi se vengono individuate anomalie durante la pubblicazione degli eventi che superano i valori di soglia che hai rilevato nel notebook.
+You can create cloud rules in the {{site.data.keyword.iot_short_notm}}. These rules can generate alerts if anomalies are detected when published events cross the threshold values that you derived in the notebook.
 
-In questo esempio, utilizziamo Nitrogen Dioxide (NO2) e le soglie superiore/inferiore per un dispositivo specifico. Stiamo creando un'azione email, in modo che venga inviata un'email a un indirizzo email specificato se il valore supera i valori di soglia che abbiamo impostato.
+In this example, we use Nitrogen Dioxide (NO2) and the upper/lower thresholds for one specific device. We are creating an email action, so that an email is sent to a specified email address whenever the NO2 value crosses the threshold values that we set.
 
-Per creare le regole cloud:
+To create cloud rules:
 
-1. Crea uno schema:
-    1. Nella scheda **Devices** del tuo dashboard {{site.data.keyword.iot_short_notm}}, seleziona la scheda **Manage Schemas**.
-    2. Fai clic su **Add Schema**.
-    3. Seleziona il DeviceType WS per il quale viene creato lo schema e fai clic su **Next**.
-    4. Fa clic su **Add a property** per aggiungere il punto dati dai dispositivi collegati.
-    5. Dalla scheda **Manual**, imposta il campo del tipo di dati su `Float` e il campo della proprietà su `NO2`.
-    6. Fai clic su **OK**.
-    7. Fai clic su **Finish**.
+1. Create a schema:
+    1. In the **Devices** tab of your {{site.data.keyword.iot_short_notm}} dashboard, select the **Manage Schemas** tab.
+    2. Click **Add Schema**.
+    3. Select the DeviceType WS for which the schema is created and click **Next**.
+    4. Click **Add a property** to add the data point from the connected devices.
+    5. From the **Manual** tab, set the data type field to `Float` and the property field to `NO2`.
+    6. Click **OK**.
+    7. Click **Finish**.
 
-2. Crea un'azione:
-    1. Seleziona la scheda **Rules** nel dashboard {{site.data.keyword.iot_short_notm}}.
-    2. Seleziona la scheda **Actions**.
-    3. Fai clic su **+Create an Action**.
-    4. Nella schermata **Create New Action**, immetti un nome e seleziona "Send email" come tipo di azione.
-    5. Fai clic su **Next**.
-    6. Nella schermata **Edit Action**, attiva **Include Data**.
-    7. Fai clic su **Finish**.
-    8. Dalla scheda **Rules**, seleziona la scheda **Browse**.
-    9. Fai clic su **+Create Cloud Rule**.
-    10. Nella schermata **Add New Cloud Rule**, immetti un nome per la tua regola e seleziona il tuo nome dello schema nel campo **Applies to**. In questo esempio, il nome dello schema è "WS".
-    11. Fai clic su **Next**.
+2. Create an action:
+    1. Select the **Rules** tab in the {{site.data.keyword.iot_short_notm}} dashboard.
+    2. Select the **Actions** tab.
+    3. Click **+Create an Action**.
+    4. In the **Create New Action** screen, enter a name and select "Send email" as the action type.
+    5. Click **Next**.
+    6. In the **Edit Action** screen, turn on the **Include Data** toggle.
+    7. Click **Finish**.
+    8. From the **Rules** tab, select the **Browse** tab.
+    9. Click **+Create Cloud Rule**.
+    10. In the **Add New Cloud Rule** screen, enter a name for your rule and select your schema name in the **Applies to** field. In this example, the schema name is "WS".
+    11. Click **Next**.
 
-3. Configura la condizione - I valori di soglia che utilizzi in questi passi si trovano nell'ultima parte di codice eseguito nel notebook, accanto al grafico NO2:
-    1. Fai clic su New Condition e imposta la prima condizione:
-    - Nel campo **Property** immetti `Nitrogen Dioxide`.
-    - Nel campo **Operator** seleziona l'icona maggiore di `>`.
-    - Nel campo **Value** immetti il valore di soglia maggiore.
-    - Fai clic su **OK**.
-    2. Seleziona OR e aggiungi la seconda condizione:
-    - Nel campo **Property** immetti `Nitrogen Dioxide`.
-    - Nel campo **Operator** seleziona l'icona minore di `<`.
-    - Nel campo **Value** immetti il valore di soglia inferiore.
-    - Fai clic su **OK**. Le condizioni per attivare la regola sono ora configurate.
-4. Imposta l'azione su "Send email" e fai clic su **OK** per attivare la regola. Viene generato un avviso email se il valore della lettura Nitrogen Dioxide pubblicato da un dispositivo supera uno dei valori di soglia. Puoi eseguire il simulatore per visualizzare le email di avviso.
+3. Set the condition - The threshold values that you use in these steps are found in the last code chunk that is executed in the notebook, next to the NO2 chart:
+    1. Click New Condition and set the first condition:
+    - In the **Property** field enter `Nitrogen Dioxide`.
+    - In the **Operator** field select greater than icon `>`.
+    - In the **Value** field enter the upper threshold value.
+    - Click **OK**.
+    2. Select OR and then add the second condition:
+    - In the **Property** field enter `Nitrogen Dioxide`.
+    - In the **Operator** field select less than icon `<`.
+    - In the **Value** field enter the lower threshold value.
+    - Click **OK**. The conditions to trigger the rule are now set.
+4. Set the action to "Send email" and click **OK** to activate the rule. An email alert is generated whenever the value of the Nitrogen Dioxide reading that is published by a device crosses either of the threshold values. You can run the simulator to see the alert emails. -->
 
 
 ## Operazioni successive
 
-Per ulteriori informazioni su DSX, consulta le seguenti risorse: 
+Per ulteriori informazioni su DSX, consulta le seguenti risorse:
 
- - [Regole cloud WIoTP ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/IoT/cloud_analytics.html#cloud_analytics){: new_window}
+<!-- - [WIoTP Cloud Rules ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/IoT/cloud_analytics.html#cloud_analytics){: new_window} -->
  - [DSX Community Notebooks and Tutorials ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://idaas.iam.ibm.com/idaas/mtfim/sps/authsvc?PolicyId=urn:ibm:security:authentication:asf:basicldapuser){: new_window} seguendo i link per ulteriori informazioni sui notebook Jupyter.
  - [Analytics recipes in the Watson IoT Platform cookbook ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/resources/watson-iot-analytics-cookbook/)

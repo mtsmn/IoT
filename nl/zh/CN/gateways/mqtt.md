@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-19"
+  years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -82,8 +82,8 @@ MQTT `+` 通配符可用于 `typeId`、`deviceId`、`commandId` 和 `formatStrin
 
 |设备|`typeId`|`deviceId`|
 |:---|:---|
-|网关 1| mygateway| gateway1|
-|设备 1| mydevice| device1|
+|网关 1|mygateway|gateway1|
+|设备 1|mydevice|device1|
 
 
 -   网关 1 可以预订针对该网关的命令：  
@@ -109,11 +109,8 @@ MQTT `+` 通配符可用于 `typeId`、`deviceId`、`commandId` 和 `formatStrin
 ## 网关通知
 {: #notification}
 
-验证发布或预订主题期间或者自动注册期间发生错误时，将向网关设备发送通知。网关可以通过预订以下主题并替换 `typeId` 和 `deviceId` 值来接收这些通知：
+验证发布或预订主题期间或者自动注册期间发生错误时，将向网关设备发送通知。网关可以通过预订以下主题并替换网关的 `typeId` 和 `deviceId` 值来接收这些通知：
 
-```
-iot-2/type/**typeId**/id/**deviceId**/notify
-```
 <pre class="pre">iot-2/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/notify</pre>
 {: codeblock}
 
@@ -149,6 +146,8 @@ iot-2/type/**typeId**/id/**deviceId**/notify
 -   已达到每个网关的最大设备数。
 -   已达到每个组织的最大设备数。
 -   由于内部错误而未能创建设备。
+
+如果设备在无效的主题字符串上发布，那么 *Device_Type* 和 *Device_Id* 值未知，并且在通知主题上收到的消息中不会返回这些参数。
 
 ## 受管网关
 {: #managed_gateways}
@@ -193,7 +192,7 @@ QoS 为 0 的消息可以废弃，并且在消息传递服务器重新启动后�
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
 {: codeblock}
 
-有关受管网关可以发布到哪些其他主题，请参阅[设备管理协议](device_mgmt/index.html)和[设备管理请求](../devices/device_mgmt/requests.html)。 
+有关受管网关可以发布到哪些其他主题，请参阅[设备管理协议](../devices/device_mgmt/index.html)和[设备管理请求](../devices/device_mgmt/requests.html)。 
 - 对于网关而言，协议保持不变，但以 **iotdevice-1/** 开头的任何主题都将改为以下列内容开头：
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}

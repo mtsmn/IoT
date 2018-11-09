@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -14,17 +14,24 @@ lastupdated: "2017-06-16"
 {:tip: .tip}
 
 # Guide 2 : Utilisation des règles et actions de base en temps réel
-Utilisez les instructions de ce guide pour configurer un ensemble de règles et d'actions de base pour certaines analyses en temps réel des données IoT de votre tapis roulant.
-{:shortdesc}
+
+**Important :** Nous lançons un nouveau programme bêta proposant une nouvelle façon de définir des règles pour vos données de terminal IoT dans le cadre d'un programme plus vaste de modifications visant à améliorer la manière dont {{site.data.keyword.iot_full}} distribue des règles et des actions.
+
+Pour en savoir plus, consultez l'article de blogue [Une approche alternative pour définir des règles sur les données IoT ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Pour commencer à définir vos propres règles, voir la documentation [Création de règles imbriquées (bêta)](../information_management/im_rules.html).
 
 ## Présentation et objectif
 {: #overview}  
-Maintenant que vous avez correctement configuré votre tapis roulant, que vous l'avez connecté à {{site.data.keyword.iot_short_notm}} et que vous avez envoyé certaines données , il est temps d'exploiter ces données en utilisant des règles et des actions.
+
+Utilisez les instructions de ce guide pour configurer un ensemble de règles et d'actions de base pour certaines analyses en temps réel des données IoT de votre tapis roulant.
+
+Maintenant que vous avez correctement configuré votre tapis roulant, que vous l'avez connecté à {{site.data.keyword.iot_full}} et que vous avez envoyé certaines données , il est temps d'exploiter ces données en utilisant des règles et des actions.
 
 ![Exemple de règle](images/slow_rule.svg "Exemple de règle")
 
 Dans le cadre de ce guide, vous allez apprendre à :
-- Créer un schéma de message pour les données d'événement de terminal votre tapis roulant.
+- Créer un schéma de message pour les données d'événement de terminal de votre tapis roulant.
 - Créer et déclencher une règle.
 - Créer une action de messagerie.
 
@@ -49,7 +56,7 @@ Si vous avez terminé l'étape [Guide 1 : Initiation à {{site.data.keyword.iot_
 ## Etape 1 - Création d'un schéma de message pour le modèle d'application
 {: #create_schema}
 
-Pour utiliser les propriétés qui sont envoyées par votre terminal en tant que déclencheurs de vos règles, vous devez d'abord mapper ces propriétés à un schéma de messagerie dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Création de schémas de type de terminal](/docs/services/IoT/im_schemas.html#iotrtinsights_task).
+Pour utiliser les propriétés qui sont envoyées par votre terminal en tant que déclencheurs de règles, vous devez d'abord mapper ces propriétés à un schéma de messagerie dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Création de schémas de type de terminal](/docs/services/IoT/im_schemas.html#iotrtinsights_task).
 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, accédez à **Terminaux** et sélectionnez **Gérer les schémas**.
 2. Cliquez sur **Ajouter un schéma**.
 3. Sélectionnez le type de terminal **iot-conveyor-belt** et cliquez sur **Suivant**.
@@ -84,7 +91,7 @@ Lorsque nous créons une règle, nous voulons comparer la valeur rpm numérique 
  4. Définissez la règle à appliquer au schéma **iot-conveyor-belt**.
  5. Cliquez sur **Suivant**.
  6. Ajoutez une condition de règle.
-    6. Cliquez sur la vignette **Nouvelle condition** pour ajouter une condition à la règle. 
+    6. Cliquez sur la vignette **Nouvelle condition** pour ajouter une condition à la règle.
     7. Sélectionnez la propriété **rpm**.
     8. Sélectionnez l'opérateur Inférieur à (`<`).
     9. Entrez la valeur `0.5` et cliquez sur **OK**.
@@ -127,7 +134,7 @@ Remplacez l'adresse e-mail par la vôtre.
 5. Sélectionnez l'action dans la liste et cliquez sur **OK** pour la définir.
 6. Cliquez sur **Sauvegarder** pour activer l'action avec la règle.
 7. Testez la nouvelle action.
- 4. Dans l'application Web du tapis roulant, diminuez la valeur rpm en dessous de la valeur 0.5. 
+ 4. Dans l'application Web du tapis roulant, diminuez la valeur rpm en dessous de la valeur 0.5.
  5. Vérifiez que vous avez reçu un e-mail d'alerte.  
 Le corps du message peut ressembler à ce qui suit :
 > **Règle :** Règle RPM  

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2016-08-31"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -15,10 +15,10 @@ lastupdated: "2016-08-31"
 # Anwendungen entwickeln
 {: #app_dev_index}
 
-Es werden Clientbibliotheken, Beispiele und Informationen bereitgestellt, die Sie bei der Erstellung von Anwendungen für Ihre {{site.data.keyword.iot_full}}-Organisation unterstützen.
+Es werden Clientbibliotheken, Beispiele und Informationen bereitgestellt, die Sie beim Erstellen von Anwendungen für Ihre {{site.data.keyword.iot_full}}-Organisation unterstützen.
 {:shortdesc}
 
-Sie können Code schreiben, um Anwendungen zu erstellen und zu verwalten, die mithilfe der folgenden unterstützten Protokolle und Standards mit Informationen von verbundenen Geräten in {{site.data.keyword.iot_short_notm}} interagieren und diese Informationen verwenden:
+Sie können Code zum Erstellen und Verwalten von Anwendungen schreiben, die in {{site.data.keyword.iot_short_notm}} mit verbundenen Geräten interagieren und entsprechende Informationen verwenden, indem Sie die folgenden unterstützten Protokolle und Standards verwenden:
 
 - C#
 - Java

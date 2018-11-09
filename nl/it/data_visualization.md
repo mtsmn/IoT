@@ -24,7 +24,7 @@ Per ulteriori informazioni, controlla il post del blog [An alternative approach 
 
 Per iniziare a definire le tue regole, consulta la documentazione [Creazione delle regole integrate (Beta)](information_management/im_rules.html).
 
-## Informazioni sulle tabelle e sulle schede 
+## Informazioni sulle tabelle e sulle schede
 
 Crea le tabelle e le schede per creare e condividere i tuoi propri dashboard che visualizzano i tuoi dati del dispositivo in tempo reale.
 

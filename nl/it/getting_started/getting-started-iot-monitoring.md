@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -13,14 +13,14 @@ lastupdated: "2017-06-16"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guida 3: Monitoraggio dei tuoi dati del dispositivo
+# Guida 2: Monitoraggio dei dati del tuo dispositivo 
 Ora che disponi di uno o più dispositivi collegati, è ora di iniziare a monitorare i dati del dispositivo in tempo reale.
 {:shortdesc}
 
 ## Panoramica e obiettivi
 {: #overview}  
 
-In questa guida, distribuirai un'applicazione di monitoraggio in {{site.data.keyword.Bluemix_notm}} per visualizzare i dati dai tuoi dispositivi.
+In questa guida, distribuirai un'applicazione di monitoraggio in {{site.data.keyword.Bluemix}} per visualizzare i dati dai tuoi dispositivi.
 
 Come nella guida 1, puoi seguire uno o entrambi i seguenti percorsi:
 - Percorso A: [Passo 1A - Distribuisci e collega l'applicazione web di monitoraggio](#deploy_app)  
@@ -60,7 +60,7 @@ Se hai completato [Guida 1: Introduzione a {{site.data.keyword.iot_short_notm}} 
 ## Passo 1A - Distribuisci e collega l'applicazione web di monitoraggio
 {: #deploy_app}
 
-L'applicazione di esempio Plant Floor Monitoring elenca tutti i dispositivi del tipo iot-conveyor-belt collegati alla tua organizzazione {{site.data.keyword.iot_short_notm}} insieme a un sottoinsieme di dati evento come RPM, ultimo aggiornamento e ID dispositivo.
+L'applicazione di esempio Plant Floor Monitoring elenca tutti i dispositivi del tipo iot-conveyor-belt collegati alla tua organizzazione {{site.data.keyword.iot_full}} insieme a un sottoinsieme di dati evento come RPM, ultimo aggiornamento e ID dispositivo.
 
 L'applicazione di esempio è stata creata utilizzando le librerie client Node.js all'indirizzo: [https://github.com/ibm-watson-iot/iot-nodejs ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 
@@ -71,7 +71,7 @@ Come parte di questo passo eseguirai queste azioni:
 - Configurare l'applicazione di esempio per collegarsi a {{site.data.keyword.iot_short_notm}} utilizzando la chiave API e il token di autenticazione.
 - Utilizzare l'applicazione web per monitorare i tuoi dispositivi nastro trasportatore collegati.  
 
-### Passi dettagliati
+### Procedura dettagliata per la distribuzione e la connessione dell'applicazione web di monitoraggio
 La seguente procedura ti guiderà attraverso la creazione e la distribuzione dell'applicazione in {{site.data.keyword.Bluemix_notm}}. Per informazioni sull'esecuzione della applicazione localmente, vedere il file README in GitHub.
 1. Clona il repository GitHub dell'applicazione di esempio *Plant Floor Monitoring*Node.js.  
 Utilizza il tuo strumento git preferito per clonare il seguente repository:  
@@ -179,7 +179,7 @@ Come parte di questo passo eseguirai queste azioni:
 - Configurare tre widget dell'interfaccia utente per visualizzare i dati del dispositivo come misuratori o grafici.
 - Utilizzare l'applicazione web per monitorare il tuo dispositivo nastro trasportatore collegato.  
 
-### Passi dettagliati
+### Procedura dettagliata per la creazione di un'interfaccia utente di monitoraggio utilizzando la libreria widget
 La seguente procedura ti guiderà attraverso la creazione e la distribuzione dell'applicazione in {{site.data.keyword.Bluemix_notm}}. Per informazioni sull'esecuzione della applicazione localmente, vedere il file README in GitHub.
 1. Clona il repository GitHub dell'applicazione di esempio *Widget Library Monitoring*.  
 Utilizza il tuo strumento git preferito per clonare il seguente repository:  
@@ -193,7 +193,7 @@ Passa alla root del repository *guide-conveyor-ui-html* ed immetti il seguente c
 ```
 npm install
 ```
-3. Crea l'interfaccia utente.   
+3. Crea l'interfaccia utente.  
 Per creare l'interfaccia utente dell'applicazione, devi aggiungere i widget come codice JavaScript nel file index.html dell'applicazione per ogni componente dell'interfaccia utente.  
 Ogni widget utilizza i seguenti parametri JavaScript:  
 `WIoTPWidget.CreateWIDGET_TYPE("ELEMENT_ID","EVENT_NAME", "DEVICE_TYPE", "DEVICE_ID", "PROPERTY" , {WIDGET_DEFAULT_OVERRIDE}, [WIDGET_SPECIFIC_SETTINGS])`
@@ -239,7 +239,7 @@ Esempio:
  2. Aggiungi un misuratore dell'accelerometro.  
 Questo misuratore visualizza la lettura dell'accelerometro come un misuratore con letture comprese tra -1 e 1.
     1. Individua il segnaposto del misuratore dell'accelerometro: `<!--- place holder for accelerometer gauge  -->`
-    2. Aggiungi il seguente elemento div con un ID univoco come mostrato: 
+    2. Aggiungi il seguente elemento div con un ID univoco come mostrato:
  ```html
  <div id="aygauge" ></div>
  ```  
@@ -262,7 +262,7 @@ Esempio:
  3. Aggiungi un grafico di velocità del motore.  
 Questo grafico visualizza la velocità del motore come un diagramma a linee.
     1. Individua il segnaposto del misuratore della velocità del motore: `<!--- place holder for motor speed gauge  -->`
-    2. Aggiungi il seguente elemento div con un ID univoco come mostrato: 
+    2. Aggiungi il seguente elemento div con un ID univoco come mostrato:
  ```html
  <div id="speedchart" ></div>
  ```  
@@ -350,11 +350,11 @@ Continua con la prossima guida o passa a un altro argomento di tuo interesse:
 - Percorso A: Modifica l'applicazione di monitoraggio per soddisfare i tuoi bisogni.  
 Per dettagli tecnici, consulta:
  - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
- - [Node.js client libraries ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
+ - [Librerie client Node.js ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - Percorso B: Modifica l'applicazione della libreria widget per soddisfare i tuoi bisogni.  
 Per dettagli tecnici, consulta:
  - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
-- [Guida 4: Simulazione di un grande numero di dispositivi](getting-started-iot-large-scale-simulation.html)  
-Espandi la simulazione di base aggiungendo un grande numero di simulatori in esecuzione automatica al tuo ambiente. Questa espansione ti permetterà di verificare il monitoraggio e le analisi di base dalle guide precedenti in un ambiente a più dispositivi e più realistico.
+- [Guida 3: Simulazione di un grande numero di dispositivi](getting-started-iot-large-scale-simulation.html)  
+Espandi la simulazione di base aggiungendo un grande numero di simulatori in esecuzione automatica al tuo ambiente.
 - [Ulteriori informazioni su {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [Ulteriori informazioni sulle API {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/reference/api.html){:new_window}

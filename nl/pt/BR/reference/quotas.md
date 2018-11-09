@@ -2,8 +2,8 @@
 
 copyright:
 
-years: 2017
-lastupdated: "2017-11-01"
+years: 2017, 2018
+lastupdated: "2018-02-22"
 
 ---
 
@@ -48,21 +48,21 @@ de Métrica        | Plano Lite      | Planos de segurança padrão e avançado 
 Número máximo de tipos de dispositivo |50 |1000 |1000
 Número máximo de dispositivos conectados simultaneamente | 500| 500K. Se você desejar
 conectar mais de 50.000 dispositivos, entre em contato para discutir seus planos. | 500 K
-Número máximo de dispositivos registrados |500 | 1 milhão| 100K por incremento
+Número máximo de dispositivos registrados |500 | 1 milhão | 100K por incremento
 Máximo ['A' Aplicativos - compartilhados](../applications/mqtt.html#scalable_apps) |1 | 10 assinaturas compartilhadas, cada uma com 50 instâncias|10 assinaturas compartilhadas, cada uma com 50 instâncias
 Máximo ['a' aplicativos - não compartilhados](../applications/mqtt.html#client_connections) |500 chaves API | 2.000 chaves API | 2.000 chaves API
 Máximo de dados por mês | 200 MB | ilimitada |ilimitada
 Conexões de dispositivo|10/s | 300/s |300/s
 Envios de dispositivo para nuvem (MQTT) - Dispositivo | 5 msg/s ou 20 KB/s | 10 msg/s ou 40 KB/s |10 msg/s ou 40 KB/s
-Envios de dispositivo para nuvem (MQTT) - Gateway | 50 msg/s ou 200 KB/s | 100 msg/s ou 400 KB/s| 100 msg/s ou 400 KB/s
+Envios de dispositivo para nuvem (MQTT) - Gateway  | 50 msg/s ou 200 KB/s | 100 msg/s ou 400 KB/s| 100 msg/s ou 400 KB/s
 Envios de dispositivo para nuvem (MQTT) - Aplicativo | 10 msg/s ou 40 KB/s | 20 msg/s ou 80 KB/s| 20 msg/s ou 80 KB/s
 Envios de dispositivo para nuvem (MQTT) - por Organização | 5000 msg/s | 6.000 msg/s | 6.000 msg/s
 Envios de dispositivo para nuvem (HTTP) - Dispositivo | 30 msg/min ou 2 KB/s | 1 msg/s ou 4 KB/s | 1 msg/s ou 4 KB/s
 Envios de dispositivo para nuvem (HTTP) - Gateway | 5 msg/s ou 20 KB/s | 10 msg/s ou 40 KB/s | 10 msg/s ou 40 KB/s
 Envios de dispositivo para nuvem (HTTP) - Aplicativo | 1 msg/s ou 4 KB/s| 2 msg/s ou 8 KB/s | 2 msg/s ou 8 KB/s
 Envios de dispositivo para nuvem (HTTP) - por Organização | 500 msg/s | 600 msg/s | 600 msg/s
-Envios de nuvem para dispositivo (MQTT) - Dispositivo |1 msg/s |2 msg/s ou 8 KB/s |2 msg/s ou 8 KB/s
-Envios de nuvem para dispositivo (MQTT) - Gateway | 10 msg/s |20 msg/s ou 80 KB/s  |20 msg/s ou 80KB/s  
+Envios de nuvem para dispositivo (MQTT) - Dispositivo  |1 msg/s |2 msg/s ou 8 KB/s |2 msg/s ou 8 KB/s
+Envios de nuvem para dispositivo (MQTT) - Gateway| 10 msg/s |20 msg/s ou 80 KB/s  |20 msg/s ou 80KB/s  
 Envios de nuvem para dispositivo (MQTT) - Aplicativo | 10 msg/s |20 msg/s ou 80 KB/s |20 msg/s ou 80 KB/s  
 Envios de nuvem para dispositivo (MQTT) - por Organização |1000 msg/s | 12 K msg/s|12 K msg/s
 Envios de nuvem para dispositivo (HTTP) - taxa de distribuição por Dispositivo | 30 msg/min| 30 msg/min  | 30 msg/min
@@ -116,7 +116,7 @@ de Métrica        | Plano Lite      | Planos de segurança padrão e avançado 
 ------------- | -------------|------------- |
 Número máximo de IDs de evento por dispositivo |5|5|5
 Número máximo de formatos |2|3|3
-Expiração do último cache de eventos |12 meses |12 meses | 12 meses
+Expiração do último cache de eventos |7 dias |45 dias | 45 dias
 
 ## Extensões
 {: #extensions_metrics}
@@ -144,10 +144,8 @@ Número máximo de dispositivos em um grupo de recursos |300|300|300
 Número máximo de grupos de recursos designados a um gateway |10|10|10
 Número máximo de grupos de recursos aos quais um dispositivo pode pertencer |10|10|10
 
-## Interface com o usuário
+<!--## User Interface
 {: #UI_metrics}
-
-de Métrica        | Plano Lite      | Planos de segurança padrão e avançado       | Dedicado
-------------- | -------------|------------- |
-Número máximo de painéis |50|50|50
-Número máximo de cartões na placa |30|30|30
+Metric        | Lite plan      | Standard & Advanced Security plans       | Dedicated
+Maximum number of dashboards |50|50|50
+Maximum number of cards on board |30|30|30 -->

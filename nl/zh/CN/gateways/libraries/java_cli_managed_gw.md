@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-20"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -102,7 +102,7 @@ DeviceMetadata metadata = new DeviceMetadata(data);
 
 构造方法一用于通过接受包含以下所有属性的 `DeviceData` 类来构造 `ManagedGateway` 实例：
 
-| 属性|描述
+|属性|描述
 |
 |----------------|----------------|
 |`Organization-ID` |组织标识。|
@@ -169,9 +169,11 @@ managedGateway.sendGatewayManageRequest(0, true, true);
 ```
 如果设备尚未连接到 {{site.data.keyword.iot_short}}，那么管理请求会在内部发起连接请求。
 
+
+
 `sendGatewayManageRequest()` 方法接受以下参数：
 
-| 参数|描述
+|参数|描述
 |
 |----------------|----------------|
 |`lifetime`|时间长度（以秒为单位），设备必须在此期间发送另一个管理设备类型请求，才能避免被分类为休眠而变成非受管设备。如果省略 `lifetime` 字段或将其设置为 0，那么受管设备不会变为休眠。`lifetime` 字段支持的最小值设置为 3600 秒（1 小时）。|
@@ -239,6 +241,8 @@ System.err.println("Failed to update the location!");
 int rc = managedGateway.updateDeviceLocation(typeId, deviceId, 30.28565, -97.73921, 10);
 ```
 有关位置更新的更多信息，请参阅[设备管理请求](../../devices/device_mgmt/index.html#/update-location#update-location)。
+
+
 
 ## 错误代码处理
 {: #errors}
@@ -690,10 +694,9 @@ mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds)
 
 在网关或已连接到 {{site.data.keyword.iot_short}} 的设备上启动定制操作时，将向该网关发布一条 MQTT 消息。该消息中包含被指定为请求一部分的参数。网关必须添加 CustomActionHandler 才能接收和处理该消息。该消息将作为 `CustomAction` 类的实例返回，并包含下列属性：
 
-| 属性| 数据类型| 描述
-|
+|属性|数据类型|描述|
 |----------------|----------------|----------------|
-|`bundleId` |字符串| DME 的唯一标识。|
+|`bundleId` |字符串|DME 的唯一标识。|
 |`actionId` |字符串|被启动的定制操作。|
 |`typeId` |字符串|在其上启动定制操作的设备类型。|
 |`deviceId` |字符串|在其上启动定制操作的设备。|

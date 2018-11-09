@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -20,8 +20,8 @@ MQTT est le principal protocole utilisé par les terminaux et les applications p
 
 MQTT s'exécute sur TCP/IP, et bien qu'il soit possible d'effectuer directement un codage pour TCP/IP, vous pouvez également choisir d'utiliser une bibliothèque qui traite pour vous les détails du protocole MQTT. Une vaste gamme de bibliothèques client MQTT est disponible. IBM contribue au développement et au support de plusieurs bibliothèques client, y compris celles qui ne sont pas disponibles au niveau des sites suivants :
 
-- [Wiki de communauté MQTT ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
-- [Projet Eclipse Paho ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://eclipse.org/paho/){: new_window}
+- [Wiki de communauté MQTT ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
+- [Projet Eclipse Paho ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](http://eclipse.org/paho/){: new_window}
 
 ## Support de version
 {: #version-support}
@@ -32,7 +32,7 @@ Pour plus d'informations sur les versions de MQTT prises en charge par {{site.da
 
 Dans {{site.data.keyword.iot_short_notm}}, les principales classes d'objet sont des terminaux et des applications. Une passerelle est une sous-classe de terminal.
 
-Votre client MQTT s'identifie auprès du service {{site.data.keyword.iot_short_notm}} en tant que classe de chose. La classe de chose détermine les fonctionnalités du client quand il est connecté. La classe d'objets détermine également le mécanisme d'authentification de client.
+Votre client MQTT s'identifie auprès du service {{site.data.keyword.iot_short_notm}} en tant que classe d'objet. La classe d'objet détermine les fonctionnalités du client quand il est connecté. La classe d'objet détermine également le mécanisme d'authentification de client.
 
 Les applications et les terminaux fonctionnent avec des espaces de sujet MQTT différents.  Les terminaux fonctionnent dans un espace de sujet délimité pour les terminaux alors que les applications disposent d'un accès complet à l'espace de sujet de l'ensemble de l'organisation. Pour plus d'informations, voir les rubriques suivantes :
 
@@ -91,7 +91,7 @@ Le tableau suivant présente les restrictions relatives au contenu des messages 
 
 Format de contenu  | Instructions pour des cas d'utilisation spécifiques
 --------- | ----------  
-JSON | JSON est le format standard pour {{site.data.keyword.iot_short_notm}}. Si vous prévoyez d'utiliser les tableaux de bord, les tableaux et les cartes et les fonctions d'analyse {{site.data.keyword.iot_short_notm}} intégrés, assurez-vous que le format de contenu de message est conforme au texte JSON correctement mis en forme.
+JSON | JSON est le format standard pour {{site.data.keyword.iot_short_notm}}. Si vous prévoyez d'utiliser les tableaux de bord {{site.data.keyword.iot_short_notm}} intégrés, assurez-vous que le format de contenu de message est conforme au texte JSON correctement mis en forme.
 Texte | Utilisez un codage de caractères UTF-8 valide.
 Binaire | Aucune restriction.
 

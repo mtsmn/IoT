@@ -2,8 +2,8 @@
 
 copyright:
 
-years: 2017
-lastupdated: "2017-07-20"
+years: 2017, 2018
+lastupdated: "2018-03-26"
 
 ---
 
@@ -41,7 +41,7 @@ https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002
 API                     | Verwendungszweck       
 ------------- | -------------
 [Organisationsadministration ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | Konfigurieren einer Organisation (einschließlich Erstellen und Löschen von Geräten), Prüfen der Verwendung und des Servicestatus und Diagnostizieren von Geräteverbindungsproblemen.
-[Sicherheit ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Verwalten von Benutzereinladungen, der Authentifizierung und Berechtigung von Benutzern sowie von API-Schlüsseln und Geräten.
+[Sicherheit ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Verwalten der Authentifizierung und Autorisierung von Benutzern, API-Schlüsseln und Geräten.
 [Information Management ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Zugriff auf Geräteereignisdaten, Abrufen und Aktualisieren der Geräteposition sowie Abrufen von Wetterdaten für diese Position. 
 [Datenmanagement  ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window}   |   Organisieren und Integrieren von ein- und ausgehenden Daten für {{site.data.keyword.iot_short_notm}}.
 [Gerätemanagement ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | Interagieren mit verwalteten Geräten mithilfe des Gerätemanagementprotokolls.
@@ -62,6 +62,4 @@ API                     | Verwendungszweck
 
 API                     | Verwendungszweck       
 ------------- | -------------
-[Gatewaysicherheit ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html){: new_window}   | Prüfen und Zuweisen von Rollen für Gateway-Geräte.
-[Gerätesicherheit ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-devices-beta.html){: new_window} | Prüfen und Zuweisen von Rollen für Geräte.
-[Zugriffssteuerung ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window} | Eingrenzen des Benutzerzugriffs.
+[Gelöschte Geräte wiederherstellen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html){: new_window}   | Wenn ein Gerät versehentlich gelöscht wird, kann es innerhalb von 14 Tagen wiederhergestellt werden.

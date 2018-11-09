@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-05"
+  years: 2015, 2018
+lastupdated: "2018-07-19"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-04-05"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# 使用 API 连接应用程序、设备和网关
+# 连接应用程序、设备和网关
 {: #connect_devices_apps_gw}
 
 您可以将应用程序、设备和网关通过 MQTT 协议连接到 {{site.data.keyword.iot_full}}。还可以使用 HTTP REST API 将设备连接到 {{site.data.keyword.iot_short_notm}}。
@@ -41,7 +41,9 @@ lastupdated: "2017-04-05"
 ## 端口安全性
 {: #client_port_security}
 
-确保所需端口已打开并启用以进行通信。端口 8883 和 443 支持将 TLS 与 MQTT 和 HTTP 协议配合使用的安全连接。端口 1883 支持使用 MQTT 和 HTTP 协议的非安全连接。下表中总结了有关连接类型和关联端口号的信息：   
+确保所需端口已打开并启用以进行通信。端口 8883 和 443 支持将 TLS 与 MQTT 和 HTTP 协议配合使用的安全连接。端口 1883 支持使用 MQTT 和 HTTP 协议的非安全连接。缺省情况下，HTTP 端口 1883 已禁用。有关更改缺省设置的信息，请参阅[配置安全策略](set_up_policies.html#set_up_policies.html)。
+
+下表中总结了有关连接类型和关联端口号的信息：   
 
 |连接类型|端口号|
 |:---|:---|
@@ -63,40 +65,32 @@ TLS 需求取决于是要通过 MQTT 还是通过 HTTP 协议连接到 {{site.da
 
 ### 针对 MQTT 连接的 TLS 需求
 
-{{site.data.keyword.iot_short_notm}} 需要 TLS V1.2 和以下密码套件：
+{{site.data.keyword.iot_short_notm}} 需要 TLS V1.2。请确保至少允许下列其中一个密码套件： 
 
-
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
-- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
-- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
 - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
 
 ### 针对 HTTP 连接的 TLS 需求
 
-如果要使用缺省服务器证书，那么 {{site.data.keyword.iot_short_notm}} 需要 TLS V1.1 或 TLS V1.2 以及以下密码套件：
+如果要使用缺省服务器证书，那么 {{site.data.keyword.iot_short_notm}} 需要 TLS V1.2。请确保至少允许下列其中一个密码套件： 
 
 
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
 - TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
+- TLS_RSA_WITH_AES_128_CBC_SHA
 
+使用密码列表中的转发保密密码 ECDHE 或 DHE 来增加加密强度。 
 
 ## MQTT 客户机认证
 {: #mqtt_authentication}
@@ -132,6 +126,8 @@ TLS 需求取决于是要通过 MQTT 还是通过 HTTP 协议连接到 {{site.da
 **注：**
 - 连接到 Quickstart 服务时，不需要进行认证。
 - 连接之前，不需要注册应用程序。
+
+有关共享预订格式的信息，请参阅[应用程序的 MQTT 连接](../../applications/mqtt.html)。
 
 
 ### 使用 MQTT 连接应用程序

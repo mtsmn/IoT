@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-08"
+  years: 2017, 2018
+lastupdated: "2018-08-18"
 
 ---
 
@@ -13,11 +13,13 @@ lastupdated: "2017-11-08"
 {:screen: .screen}
 {:tip: .tip}
 
-# 指南 4：模拟大量设备
+# 指南 3：模拟大量设备
 在第一个指南中，您设置一个基本设备模拟器，用于手动模拟一个或多个传送带。在本指南中，我们通过将大量自运行模拟器添加到环境中，以在更现实的多设备环境中测试分析和监视，从而扩展此模拟。
 {:shortdesc}
 
-**重要信息：**该应用程序需要 512 MB 内存，缺省情况下会超过分配的内存量，并且还会超过可用于免费试用帐户的数量，包括 Bluemix 试用帐户和标准帐户。“预订”和“现买现付”帐户持有者可以将分配的内存量增加到 512 MB。免费试用帐户持有者需要升级到“预订”或“现买现付”帐户。有关 {{site.data.keyword.Bluemix_notm}} 帐户类型的更多信息，请参阅[帐户类型](/docs/pricing/index.html#pricing)。
+**重要信息：**该应用程序需要 512 MB 内存，这超过了缺省情况下分配的内存量，并且还超过了可供免费试用帐户（包括 {{site.data.keyword.Bluemix}} 试用帐户和标准帐户）使用的内存量。“预订”和“现买现付”帐户持有者可以将分配的内存量增加到 512 MB。免费试用帐户持有者需要升级到“预订”或“现买现付”帐户。有关 {{site.data.keyword.Bluemix_notm}} 帐户类型的更多信息，请参阅[帐户类型](/docs/pricing/index.html#pricing)。
+
+**注：**Bluemix 现在为 IBM Cloud。有关更多详细信息，请参阅 [IBM Cloud 博客](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")。
 
 ## 概述和目标
 {: #overview}
@@ -37,7 +39,7 @@ lastupdated: "2017-11-08"
 - 使用 Cloud Foundry 来部署基于 Node-RED 和已启用 Webhook 的设备模拟器应用程序。
 - 使用 API 调用来创建和注册设备、发布设备事件和删除设备。
 
-**重要信息：**模拟将设备数据并行发送到 {{site.data.keyword.iot_short_notm}} 的大量设备可能会用尽大量数据。您可以使用 {{site.data.keyword.iot_short_notm}} *使用情况*仪表板来监视设备和应用程序正在使用的数据量。每隔两小时刷新一次度量值。
+**重要信息：**模拟将设备数据并行发送到 {{site.data.keyword.iot_full}} 的大量设备可能会用尽大量数据。 
 
 ## 先决条件
 {: #prereqs}  
@@ -62,10 +64,10 @@ lastupdated: "2017-11-08"
 
 1. 克隆 *Lesson4* 样本应用程序 GitHub 存储库。  
 使用您最喜欢的工具来克隆以下存储库：  
-https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 在 Git Shell 中，使用以下命令：
 ```bash
-$ git clone https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+$ git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 ```
 3. 通过编辑 manifest.yml 文件来配置环境的应用程序。  
 要编辑的内容：
@@ -123,7 +125,7 @@ cf login
   ```
 如果出现提示，请选择要在其中部署 {{site.data.keyword.iot_short_notm}} 和样本应用程序的组织和空间。
 6. 在 {{site.data.keyword.Bluemix_notm}} 中创建所需的服务。   
- 1. 使用以下命令来创建 cloudantNoSQLDB Lite 服务：
+ 1. 使用以下命令来创建 cloudantNoSQLDB 轻量服务：
 <pre><code>$ cf create-service cloudantNoSQLDB Lite lesson4-simulate-cloudantNoSQLDB</code></pre>    
  2. 使用以下命令来创建 {{site.data.keyword.iot_short_notm}} 服务。
 <pre><code>$ cf create-service iotf-service iotf-service-free lesson4-simulate-iotf-service </code></pre>   
@@ -131,8 +133,7 @@ cf login
 7. 运行 `cf push` 命令以构建项目并推送到您的组织。  
 已在 {{site.data.keyword.Bluemix_notm}} 上部署样本应用程序。  
 部署完成后，将显示一条消息以指示应用程序正在运行。   
-示例：
-    
+示例：  
   ```
 requested state: started
 instances: 1/1
@@ -178,7 +179,7 @@ details
 
 您可以使用 Node-RED 流程接口或应用程序 REST API 来完成以下任务。
 
-### Node-RED  
+### 使用 Node-RED 创建和连接设备  
 要注册多个设备：  
 1. 登录到 {{site.data.keyword.Bluemix_notm}}，网址为：  
 [https://bluemix.net ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://bluemix.net){: new_window}。
@@ -191,13 +192,8 @@ ROUTE_URL 是从您在 manifest.yml 文件中使用的 `host` 条目构建的：
 5. 单击**转至 Node-RED 流程编辑器**。
 6. 在流编辑器中，选择**设备类型和实例**选项卡。
 7. 要注册 5 个设备，请单击标签为**注册 5 个 motorController 设备**的注入节点。
-8. 验证设备是否已注册。
- 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板中，从菜单中选择**板**。
- 3. 选择**设备中心分析**板。
- 4. 找到**我关心的设备**卡。  
-此时会显示设备名。
 
-### REST API  
+### 使用 REST API 创建和连接设备  
 要注册多个设备：  
 
 1. 对以下 URL 发出 HTTP POST 请求：`ROUTE_URL/rest/devices`  
@@ -218,29 +214,20 @@ ROUTE_URL 是从您在 manifest.yml 文件中使用的 `host` 条目构建的：
     - 可选：authToken 是设备将向其注册的授权令牌。
     - 可选：如果未提供区块大小，那么缺省情况下会将其设置为 500。“chunksize”必须小于和等于 numberDevices 的因子。
     - deviceName 是所创建设备的 deviceID 的模式。
-2. 验证设备是否已注册。
- 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板中，从菜单中选择**板**。
- 3. 选择**设备中心分析**板。
- 4. 找到**我关心的设备**卡。  
-此时会显示设备名。
 
 ## 步骤 4 - 模拟设备模式
 {: #step4}
 
 由于模拟设备已向 {{site.data.keyword.iot_short_notm}} 注册，因此您现在可以运行模拟器以开始发送设备事件。
 
-### Node-RED  
+### 使用 Node-RED 模拟设备事件  
 要发送设备事件：  
 1. 在 Node-RED 流程编辑器中，选择**模拟多个设备**选项卡。
 7. 要模拟 5 个设备，请单击标签为**模拟 5 个设备**的注入节点。
-8. 验证设备是否正在发送数据。
- 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板中，从菜单中选择**板**。
- 3. 选择**设备中心分析**板。
- 4. 找到**我关心的设备**卡。  
- 5. 选择其中一个设备，并验证与已发布消息对应的已更新设备数据点是否显示在**设备属性**卡中。  
+ 
 
 
-### Rest API  
+### 使用 REST API 模拟设备事件  
 要发送设备事件：
 
 1. 对以下 URL 发出 HTTP POST 请求：`ROUTE_URL/rest/runtest`  
@@ -260,11 +247,7 @@ ROUTE_URL 是从您在 manifest.yml 文件中使用的 `host` 条目构建的：
     - timeInterval 是事件的间隔（毫秒）。
     - deviceType 是为其创建模拟设备的设备类型。
     - deviceName 是所创建设备的 deviceID 的模式。
-8. 验证设备是否正在发送数据。
- 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板中，从菜单中选择**板**。
- 3. 选择**设备中心分析**板。
- 4. 找到**我关心的设备**卡。  
- 5. 选择其中一个设备，并验证与已发布消息对应的已更新设备数据点是否显示在**设备属性**卡中。   
+ 
 
 ## 步骤 5 - 删除设备
 {: #deleting}
@@ -273,11 +256,7 @@ ROUTE_URL 是从您在 manifest.yml 文件中使用的 `host` 条目构建的：
 要删除设备：  
 1. 在 Node-RED 流程编辑器中，选择**设备类型和实例**选项卡。
 2. 要删除五个设备，请单击标注为**删除 5 个设备**的注入节点。
-3. 验证设备是否已删除。
- 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板中，从菜单中选择**板**。
- 3. 选择**设备中心分析**板。
- 4. 找到**我关心的设备**卡。  
- 5. 验证设备是否已未列出。  
+
 
 
 ### Rest API  
@@ -291,19 +270,13 @@ ROUTE_URL 是从您在 manifest.yml 文件中使用的 `host` 条目构建的：
 "deviceType":"iot-conveyor-belt",  
 "deviceName": "belt"  
 }</code></pre>
-2. 验证设备是否已删除。
- 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板中，从菜单中选择**板**。
- 3. 选择**设备中心分析**板。
- 4. 找到**我关心的设备**卡。  
- 5. 验证设备是否已未列出。  
+  
 
 
 ## 后续步骤
 {: @whats_next}  
 跳至您感兴趣的其他主题：
-- [指南 2：使用基本实时规则和操作](getting-started-iot-rules.html)  
-既然您已成功设置传送带，将其连接到 {{site.data.keyword.iot_short_notm}} 并发送一些数据，那么是时候通过使用规则和操作来使数据运作。
-- [指南 3：监视设备数据](getting-started-iot-monitoring.html)  
+- [指南 2：监视设备数据](getting-started-iot-monitoring.html)  
 现在，您已连接一个或多个设备并开始充分利用设备数据，现在是时候开始监视设备集合了。
 - [了解有关 {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window} 的更多信息
 - [了解有关 {{site.data.keyword.iot_short_notm}} API](/docs/services/IoT/reference/api.html){:new_window} 的更多信息

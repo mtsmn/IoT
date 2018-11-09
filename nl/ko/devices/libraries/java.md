@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-21"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -21,7 +21,7 @@ Java™를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작
 ## Java 클라이언트 및 리소스 다운로드
 {: #java_client_download}
 
-{{site.data.keyword.iot_short_notm}}에 대한 Java 클라이언트 라이브러리 및 샘플에 액세스하려면, GitHub의 [iot-java ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-java){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오. 
+{{site.data.keyword.iot_short_notm}}에 대한 Java 클라이언트 라이브러리 및 샘플에 액세스하려면, GitHub의 [iot-java ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-java){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오.
 
 ## 생성자
 {: #constructor}
@@ -30,7 +30,7 @@ Java™를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작
 
 |정의 |설명 |
 |:----|:----|
-|`org` |조직 ID로 설정해야 하는 필수 값입니다. Quickstart 플로우를 사용 중인 경우 `quickstart`를 지정하십시오. |
+|`org` |조직 ID로 설정해야 하는 필수 값입니다. Quickstart 플로우를 사용 중인 경우 `quickstart`를 지정하십시오.|
 |`type`  |디바이스의 유형을 지정하는 필수 값입니다.|
 |`id`  |디바이스의 고유 ID를 지정하는 필수 값입니다.|
 |`auth-method`  |사용할 인증 메소드입니다. 지원되는 유일한 메소드는 `token`입니다.|
@@ -44,7 +44,7 @@ Java™를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작
 
 **참고:** 지속적 구독 모드에서 디바이스를 연결하려면 `clean-session`을 `false`로 설정하십시오. 정리 세션에 대한 자세한 정보는 [MQTT 문서](../../reference/mqtt/index.html#subscription-buffers-and-clean-session)의 '구독 버퍼 및 정리 세션' 섹션을 참조하십시오.
 
-`Properties` 오브젝트는 {{site.data.keyword.iot_short_notm}} 모듈과 상호작용하는 데 사용되는 정의를 작성합니다. 
+`Properties` 오브젝트는 {{site.data.keyword.iot_short_notm}} 모듈과 상호작용하는 데 사용되는 정의를 작성합니다.
 
 다음 코드 샘플은 디바이스가 Quickstart 모드에서 이벤트를 공개하는 방법을 표시합니다.
 
@@ -222,11 +222,11 @@ myClient.connect(10);
 ## 이벤트 공개
 {: #publishing_events}
 
-이벤트는 디바이스가 {{site.data.keyword.iot_short_notm}}에 데이터를 공개하는 데 사용하는 메커니즘입니다. 디바이스에서 이벤트의 컨텐츠를 제어하고 전송하는 각 이벤트의 이름을 지정합니다. 
+이벤트는 디바이스가 {{site.data.keyword.iot_short_notm}}에 데이터를 공개하는 데 사용하는 메커니즘입니다. 디바이스에서 이벤트의 컨텐츠를 제어하고 전송하는 각 이벤트의 이름을 지정합니다.
 
-{{site.data.keyword.iot_short_notm}} 인스턴스에서 이벤트를 수신할 때 수신된 이벤트의 신임 정보는 전송 중인 디바이스를 식별하며, 이는 디바이스가 다른 디바이스로 위장할 수 없음을 의미합니다. 
+{{site.data.keyword.iot_short_notm}} 인스턴스에서 이벤트를 수신할 때 수신된 이벤트의 인증 정보는 전송 중인 디바이스를 식별하며, 이는 디바이스가 다른 디바이스로 위장할 수 없음을 의미합니다.
 
-이벤트는 MQTT 프로토콜을 통해 정의한 세 개의 [서비스 품질(QoS) 레벨](../../reference/mqtt/index.html#qos-levels)에서 공개할 수 있습니다. 기본적으로 이벤트는 QoS=0에서 공개됩니다.
+이벤트는 MQTT 프로토콜을 통해 정의한 세 개의 [서비스 품질(QoS) 레벨](../../reference/mqtt/index.html#qos-levels)에서 공개할 수 있습니다.  기본적으로 이벤트는 QoS=0에서 공개됩니다.
 
 ### 기본 QoS 레벨에서 이벤트 공개
 
@@ -307,7 +307,7 @@ event.addProperty("mem",  70);
 boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-전체 코드를 보려면, [HttpDeviceEventPublish ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")] 디바이스 예를 참조하십시오. {: new_window}
+전체 코드를 보려면, [HttpDeviceEventPublish ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")] 디바이스 예를 참조하십시오.{: new_window}
 
 특성 파일의 설정을 기반으로 ``publishEventOverHTTP()`` 메소드가 Quickstart 모드 또는 등록된 플로우 모드로 이벤트를 공개합니다. 특성 파일의 조직 ID를 ``quickstart``로 설정한 경우 ``publishEventOverHTTP()`` 메소드는 이벤트를 디바이스 예제 Quickstart 서비스에 이벤트를 공개하고 일반 HTTP 형식의 이벤트를 공개합니다. 올바른 등록 조직이 특성 파일에 지정된 경우, 이벤트는 HTTPS를 통해 안전하게 공개됩니다.
 
@@ -321,10 +321,10 @@ HTTP 프로토콜은 '최대 한 번' 전달을 제공하며, 이는 MQTT 프로
 디바이스 클라이언트가 연결되면 이 디바이스에 대한 명령을 자동으로 구독합니다. 특정 명령을 처리하려면 명령 콜백 메소드를 등록해야 합니다.
 메시지는 `Command` 클래스의 인스턴스로 리턴되며, 다음과 같은 특성이 있습니다.
 
-| 특성     |데이터 유형     | 설명|
+|특성     |데이터 유형     |설명|
 |----------------|----------------|
-|`payload` |java.lang.String| 메시지 페이로드의 데이터입니다.|
-|`format`  |java.lang.String| 형식은 임의의 문자열일 수 있습니다(예: JSON). |
+|`payload` |java.lang.String|메시지 페이로드의 데이터입니다.|
+|`format`  |java.lang.String|형식은 임의의 문자열일 수 있습니다(예: JSON).|
 |`command`   |java.lang.String|명령을 식별합니다.|
 |`timestamp`   |org.joda.time.DateTime|이벤트의 날짜 및 시간입니다.|
 
@@ -406,4 +406,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## 샘플
 {: #samples}
 
-{{site.data.keyword.iot_short_notm}} Java 클라이언트 라이브러리를 사용하여 개발되는 디바이스 및 디바이스 관리 샘플 목록에 대해서는 [iot-device-samples GitHub repository ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}를 참조하십시오. 
+{{site.data.keyword.iot_short_notm}} Java 클라이언트 라이브러리를 사용하여 개발되는 디바이스 및 디바이스 관리 샘플 목록에 대해서는 [iot-device-samples GitHub repository ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}를 참조하십시오.

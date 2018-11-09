@@ -35,8 +35,8 @@ API 키는 {{site.data.keyword.iot_short_notm}} 조직에 애플리케이션을 
 
 ## IBM Cloud 바인딩 연결
 {: #bluemix-binding}
-{{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.iot_short_notm}} 조직에 애플리케이션을 바인드할 수 있습니다. 애플리케이션을 바인딩하면 동일한 영역 또는 조직에 있는 서비스 인스턴스와만 통신할 수 있습니다. 애플리케이션이 VCAP_SERVICES 환경 변수의 서비스 인스턴스와 통신하는 데 필요한 모든 데이터를 찾을 수 있습니다. 애플리케이션이 여러 서비스에 바인드된 경우 VCAP_SERVICES 변수에는 각 서비스 인스턴스의 연결 정보가 포함됩니다.  
+{{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.iot_short_notm}} 조직에 애플리케이션을 바인드할 수 있습니다. 애플리케이션을 바인딩하면 동일한 영역 또는 조직에 있는 서비스 인스턴스와만 통신할 수 있습니다. VCAP_SERVICES 환경 변수의 서비스 인스턴스와 통신하기 위한 애플리케이션의 모든 필수 데이터를 찾을 수 있습니다.애플리케이션이 여러 서비스에 바인드된 경우 VCAP_SERVICES 변수에는 각 서비스 인스턴스의 연결 정보가 포함됩니다.  
 
-그러나 외부 앱과 동일한 방식으로 외부 영역 또는 조직에 있는 서비스 인스턴스를 사용할 수 있습니다. 바인딩을 작성하는 대신 신임 정보를 사용하여 앱 인스턴스를 직접 구성하십시오. 자세한 정보는 {{site.data.keyword.Bluemix_notm}} 문서에서 [새 서비스 인스턴스 요청](https://console.{DomainName}/docs/manageapps/reqnsi.html#req_instance)을 참조하십시오.
+그러나 외부 앱과 동일한 방식으로 외부 영역 또는 조직에 있는 서비스 인스턴스를 사용할 수 있습니다. 바인딩을 작성하는 대신 인증 정보를 사용하여 앱 인스턴스를 직접 구성하십시오. 자세한 정보는 {{site.data.keyword.Bluemix_notm}} 문서에서 [새 서비스 인스턴스 요청](https://console.{DomainName}/docs/manageapps/reqnsi.html#req_instance)을 참조하십시오.
 
 조직과 연관된 {{site.data.keyword.Bluemix_notm}} 서비스 인스턴스에 바인드되는 {{site.data.keyword.Bluemix_notm}} 애플리케이션에 대한 세부사항을 보려면 **앱 > IBM Cloud 앱**으로 이동하십시오.  

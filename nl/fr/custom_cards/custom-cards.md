@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-13"
+  years: 2016, 2018
+lastupdated: "2018-03-11"
 
 ---
 
@@ -15,11 +15,17 @@ lastupdated: "2016-10-13"
 # Cartes personnalisées
 {: #custom_cards}
 
-Utilisez des cartes personnalisées pour visualiser vos données Internet of Things d'une manière améliorée par rapport aux cartes génériques fournies avec {{site.data.keyword.iot_full}}.
-{:shortdesc}
+**Important :** Nous lançons un nouveau programme bêta proposant une nouvelle façon de définir des règles pour vos données de terminal IoT dans le cadre d'un programme plus vaste de modifications visant à améliorer la manière dont {{site.data.keyword.iot_full}} distribue des règles et des actions.
+
+Pour en savoir plus, consultez l'article de blogue [Une approche alternative pour définir des règles sur les données IoT ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Pour commencer à définir vos propres règles, voir la documentation [Création de règles imbriquées (bêta)](../information_management/im_rules.html).
+
 
 ## Architecture
 {: #architecture}  
+
+Utilisez des cartes personnalisées pour visualiser vos données Internet of Things d'une manière améliorée par rapport aux cartes génériques fournies avec {{site.data.keyword.iot_short_notm}}.
 
 Les cartes personnalisées sont développées par vous et déployées à l'aide de votre propre référentiel de serveur HTTP de cartes personnalisées.  Ce serveur est accessible au moyen du navigateur d'un utilisateur qui affiche et traite les tableaux de bord {{site.data.keyword.iot_short_notm}}. {{site.data.keyword.iot_short_notm}} gère la connexion du navigateur via l'extension Cartes personnalisées, mais ne se connecte pas lui-même au serveur de cartes personnalisées.
 

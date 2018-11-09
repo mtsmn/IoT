@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-15"
+  years: 2015, 2018
+lastupdated: "2018-04-26"
 
 ---
 
@@ -39,7 +39,7 @@ L'intégration Jasper fournie par notre plateforme assure la prise en charge des
 Les opérations prises en charge sont accessibles dans le menu d'exploration d'un terminal connecté via Jasper, après l'exécution des étapes de configuration ci-dessous.
 
 ### API REST pour Jasper
-Pour accéder à l'API REST pour Jasper, voir la section Jasper Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
+Pour accéder à l'API REST pour Jasper, voir la section Jasper Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window}.
 
 ### Configuration pour Jasper
 
@@ -91,7 +91,7 @@ L'extension AT&T permet d'effectuer les opérations AT&T suivantes
 - Modification du plan tarifaire
 
 ### API REST pour AT&T
-Pour accéder à l'API REST pour AT&T, voir la section AT&T Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
+Pour accéder à l'API REST pour AT&T, voir la section AT&T Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window}.
 
 ### Configuration pour AT&T
 
@@ -129,31 +129,31 @@ Pour configurer vos terminaux connectés via AT&T, procédez comme suit :
 
 Une fois l'organisation correctement configurée, la section *Extensions* s'affiche sous la section *Configuration des extensions* dans la vue *Exploration du terminal*.
 
-## ARM mbed Connector
+## Pont Arm Mbed
 {: #arm}
 
-ARM mbed Connector vous permet de connecter votre terminal ARM mbed à votre {{site.data.keyword.iot_short_notm}}. L'extension ARM mbed permet au portail ARM mbed et à {{site.data.keyword.iot_short_notm}} d'envoyer et de recevoir des données depuis le portail ARM mbed.
+Le pont permet aux terminaux Arm Mbed de s'intégrer à IBM Watson IoT Platform et d'échanger des messages de façon bidirectionnelle. Pour permettre cette intégration, vous devez d'abord vous inscrire pour obtenir un compte Arm Mbed Cloud puis fournir les informations de connexion demandées pour votre configuration Watson IoT.
 
 ### Configuration de l'installation
 
 
-1. Activez l'extension ARM mbed Connector. Pour ce faire, procédez comme suit :
-  1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Paramètres** et accédez à **Extensions**.
-  2. Dans le menu **Extensions**, cliquez sur **Ajouter une extension**.
-  3. Cliquez sur **Ajouter** en regard de l'extension ARM mbed Connector.
-  4. Entrez votre clé d'accès et ID de domaine ARM mbed. Ces informations se trouvent sur le portail ARM mbed (https://connector.mbed.com).
+1. Activez l'extension de pont Arm Mbed. Pour activer l'extension, procédez comme suit :
+  1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions**.
+  2. Sur la page **Extensions**, cliquez sur **+Ajouter une extension**.
+  3. Cliquez sur **Ajouter** en regard de l'extension de pont Arm Mbed.
+  4. Saisissez votre clé d'accès Arm Mbed. Vous pouvez créer cette clé sur le portail Arm Mbed à l'adresse https://portal.mbedcloud.com.
   5. Vérifiez que les données d'identification sont correctes en cliquant sur le bouton **Vérifier la connexion**.
   6. Cliquez sur **Terminé**.
 
 ### Format de contenu
 
-Il existe deux types de messages entrants à partir de la plateforme ARM mbed, des notifications et des réponses asynchrones. {{site.data.keyword.iot_short_notm}} peut envoyer des commandes à des terminaux qui sont connectés à la plateforme ARM mbed.
+Il existe deux types de messages entrants depuis la plateforme Arm Mbed : les notifications et les réponses asynchrones. {{site.data.keyword.iot_short_notm}} peut envoyer des commandes aux terminaux qui sont connectés à la plateforme Arm Mbed.
 
 #### Notifications
 
-Des notifications sont générées par les modifications apportées aux données de terminal ou de capteur. Après le traitement du message par{{site.data.keyword.iot_short_notm}}, le message est envoyé à la rubrique d'événement de terminal comme le ferait un terminal connecté directement à {{site.data.keyword.iot_short_notm}}. Le type d'événement utilisé pour les notifications émises par les terminaux connectés à la plateforme ARM mbed est `notify`.
+Des notifications sont générées par les modifications apportées aux données de terminal ou de capteur. Après le traitement du message par {{site.data.keyword.iot_short_notm}}, le message est envoyé au sujet d'événement du terminal, comme le ferait un terminal directement connecté à {{site.data.keyword.iot_short_notm}}. Le type d'événement utilisé pour les notifications émises par les terminaux connectés à la plateforme Arm Mbed est `notify`.
 
-L'exemple de code suivant illustre le format de contenu d'une notification envoyée par l'API de plateforme ARM mbed :
+L'exemple de code suivant illustre le format de contenu d'une notification envoyée par l'API de la plateforme Arm Mbed :
 
 ```
 {
@@ -167,9 +167,9 @@ L'exemple de code suivant illustre le format de contenu d'une notification envoy
 
 #### Réponses asynchrones
 
-Lorsque {{site.data.keyword.iot_short_notm}} envoie une commande à un terminal connecté à la plateforme ARM mbed, le terminal renvoie un message de confirmation à {{site.data.keyword.iot_short_notm}}. Ce message de confirmation est appelé _réponse asynchrone_ et utilise le type d'événement `asyncResponse`.
+Lorsque {{site.data.keyword.iot_short_notm}} envoie une commande à un terminal connecté à la plateforme Arm Mbed, le terminal renvoie un message de configuration à {{site.data.keyword.iot_short_notm}}. Ce message de confirmation est appelé _réponse asynchrone_ et utilise le type d'événement `asyncResponse`.
 
-L'exemple de code suivant illustre le format de contenu d'une réponse asynchrone envoyée par le service cloud ARM mbed :
+L'exemple de code suivant illustre le format de contenu d'une réponse asynchrone envoyée par le service cloud Arm Mbed :
 
 ```
 {
@@ -183,9 +183,9 @@ L'exemple de code suivant illustre le format de contenu d'une réponse asynchron
 }
 ```
 
-#### Envoi de commandes à la plateforme ARM mbed
+#### Envoi de commandes à la plateforme Arm Mbed
 
-{{site.data.keyword.iot_short_notm}} peut envoyer des commandes à des terminaux connectés à la plateforme ARM mbed. Les commandes envoyées à la plateforme ARM mbed doivent utiliser le format JSON suivant :
+{{site.data.keyword.iot_short_notm}} peut envoyer des commandes aux terminaux qui sont connectés à la plateforme Arm Mbed. Les commandes envoyées à la plateforme Arm Mbed doivent utiliser le format JSON suivant :
 
 ```
 {
@@ -198,7 +198,7 @@ L'exemple de code suivant illustre le format de contenu d'une réponse asynchron
 La méthode choisie est sensible à la casse. Le début '/' du chemin d'accès à la ressource doit être ignorée.
 
 
-Le contenu doit être publié dans la rubrique suivante :
+Le contenu doit être publié sur le sujet suivant :
 
 ```
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
@@ -223,7 +223,7 @@ Si vous disposez d'un terminal connecté à votre service {{site.data.keyword.io
 - Statut d'emplacement
 
 ### API REST pour Orange
-Pour accéder à l'API REST pour Orange, voir la section Orange Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
+Pour accéder à l'API REST pour Orange, voir la section Orange Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window}.
 
 ### Configuration pour Orange
 
@@ -259,7 +259,7 @@ L'extension de stockage de données historiques vous permet de localiser et conf
 ## Packages de gestion des terminaux personnalisés
 {: #device_mgmt}
 
-La gestion des terminaux est une fonction principale du service {{site.data.keyword.iot_short_notm}} ; elle peut toutefois être étendue pour développer des fonctions supplémentaires. Les packages de gestion des terminaux personnalisés doivent être composés d'un document JSON valide et définir au moins une action de gestion des terminaux personnalisée.
+La gestion des terminaux est une fonction principale de {{site.data.keyword.iot_short_notm}} mais elle peut être étendue pour développer des fonctions supplémentaires. Les packages de gestion des terminaux personnalisés doivent être composés d'un document JSON valide et définir au moins une action de gestion des terminaux personnalisée.
 
 Pour plus d'informations sur les fonctions de gestion des terminaux personnalisées, y compris un exemple du format JSON requis, voir [Extensions personnalisées de gestion des terminaux](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
@@ -274,29 +274,7 @@ Pour ajouter un package de gestion des terminaux personnalisé à l'aide du tabl
 3. Cliquez sur le bouton **Ajouter un package**.
 4. Sélectionnez votre fichier de package et cliquez sur **Ouvrir**.
 
-Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la documentation de l'API [{{site.data.keyword.iot_short_notm}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
-
-## Chaîne de blocs
-{: #blockchain}
-
-{{site.data.keyword.iot_short_notm}} avec chaîne de blocs permet aux terminaux IoT de fournir des données aux transactions de chaîne de blocs, ainsi, les données sont stockées dans le grand livre non modifiable de chaîne de blocs et sont utilisées dans des règles métier de contrat intelligent. {{site.data.keyword.iot_short_notm}} mappe les données de terminal au format de données qui est requis par le contrat intelligent de la chaîne de blocs et les transmet à une matrice de chaîne de blocs pour stockage dans le grand livre de chaîne de blocs.
-
-### Opérations prises en charge pour la chaîne de blocs
-- Déclenchement des mises à jour de contrat intelligent avec des événements de terminal.
-- Exécution d'une logique métier de contrat intelligent pour mettre à jour un état de grand livre avec des données d'événement de terminal.
-- Surveillance de l'état de chaîne de blocs, de transactions et de grand livre à l'aide de l'interface utilisateur de surveillance.
-
-### Configuration pour la chaîne de blocs
-
-L'intégration de chaîne de blocs à {{site.data.keyword.iot_short_notm}} est une offre de services qui n'est pas activée par défaut dans {{site.data.keyword.iot_short_notm}}. Pour activer la fonction dans votre organisation, procédez comme suit :
- 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions**.
- 2. Sur la page **Extensions**, cliquez sur **Ajouter une extension**.
- 3. Cliquez sur **Ajouter** en regard de l'extension Blockchain.
- 4. Dans le titre Blockchain, cliquez sur **Configuration**.
- 3. Dans la section **Activer Blockchain**, cliquez sur le lien **En savoir plus** pour accéder à la page [IoT Blockchain Services Offering ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}.
- 4. Cliquez sur **Démarrez votre projet de chaîne de blocs** pour renseigner et soumettre le formulaire *Explorez le potentiel d'IoT et de Blockchain*.  
- 5. Lorsque votre demande est approuvée, IBM vous contacte pour activer l'intégration de chaîne de blocs à votre organisation.
- 6. Revenez au tableau de bord {{site.data.keyword.iot_short_notm}} pour que votre organisation puisse terminer la configuration en suivant les étapes décrites dans [Intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}}](../../bl_blockchain_integration.html).
+Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la [{{site.data.keyword.iot_short_notm}}documentation de l'API ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 <!-- ## The Weather Company
 {: #weathercompany}
@@ -330,7 +308,7 @@ To view the weather data retrieved for a device location, find the device in the
 ## Courrier électronique
 {: #email}
 
-Des utilisateurs peuvent être ajoutés à {{site.data.keyword.iot_short_notm}} via des invitations par courrier électronique. Pour plus d'informations, voir  [Gestion des accès utilisateur](../../add_users.html).
+Les utilisateurs peuvent être ajoutés à {{site.data.keyword.iot_short_notm}} via des invitations par courrier électronique. Pour plus d'informations, voir  [Gestion des accès utilisateur](../../add_users.html).
 
 L'utilisation de la fonction d'invitation par courrier électronique nécessite de configurer une extension de messagerie pour utiliser le service en ligne SendGrid ou un service SMTP (Simple Mail Transfer Protocol). L'extension peut également utiliser l'application {{site.data.keyword.Bluemix_notm}} SendGrid.
 
@@ -367,7 +345,7 @@ Pour récupérer les informations d'identification de configuration credentials,
  5. Sélectionnez le service SendGrid, puis cliquez sur **Ajouter**.
  6. L'application {{site.data.keyword.sdk4nodefull}} doit à présent être reconstituée.
 2. Préparez-vous à configurer le service {{site.data.keyword.iot_short_notm}}.  
-{{site.data.keyword.iot_short_notm}} peut être configuré à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} ou en utilisant l'API {{site.data.keyword.iot_short_notm}}.  
+{{site.data.keyword.iot_short_notm}} peut petre configuré à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} ou en utilisant l'API {{site.data.keyword.iot_short_notm}}.  
  1. Cliquez sur l'application {{site.data.keyword.sdk4nodefull}} dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
  2. Cliquez sur **Variables d'environnement** dans la barre de navigation.
  3. Copiez les données JSON affichées dans un fichier texte temporaire.  

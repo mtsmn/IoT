@@ -19,7 +19,7 @@ Node-RED を使用して、デバイス・シミュレーターを作成し、�
 ## 概説
 Node-RED は、ハードウェア・デバイス、API、オンライン・サービスを斬新な方法で接続するためのツールです。 詳しくは、[Node-RED ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://nodered.org/){: new_window} Web サイトを参照してください。  
 
-Node-RED インスタンスは、独自の環境で実行することも、{{site.data.keyword.Bluemix_notm}} アプリケーションとして使用することもできます。以下の手順に、{{site.data.keyword.Bluemix_notm}} に関する説明も含まれています。
+Node-RED インスタンスは、独自の環境で実行することも、{{site.data.keyword.Bluemix_notm}} アプリケーションとして使用することもできます。 以下の手順に、{{site.data.keyword.Bluemix_notm}} に関する説明も含まれています。
 
 Node-RED デバイス・シミュレーターを作成して接続し、MQTT デバイス・メッセージを {{site.data.keyword.iot_short_notm}} に送信します。 以下の例で使用するデバイス・シミュレーターでは、貨物輸送コンテナーのデータを {{site.data.keyword.iot_short_notm}} などの MQTT ブローカーに送信する処理をシミュレートします。
 

@@ -49,7 +49,7 @@ Ruolo Applicazione | Descrizione
 Standard | Il ruolo applicazione predefinito. Concede l'accesso alla maggior parte delle operazioni dell'applicazione ma non alle operazioni ruolo o utente.   
 Operazioni | Concede l'accesso ad un'ampia gamma di operazioni, ma nega l'accesso alle operazioni di sottoscrizione o di pubblicazione.
 Backend attendibile | Pensato per le applicazioni che non richiedono interazione con l'operatore dei sistemi. Nega l'accesso alle operazioni di gestione, organizzazione, ruolo o di estensione.
-Processore dati | Pensato per le applicazioni che eseguono elaborazione dati e analisi. Le applicazioni del processore dati hanno accesso limitato alle operazioni di organizzazione e utente. 
+Processore dati | Pensato per le applicazioni che eseguono elaborazione dati e analisi. Le applicazioni del processore dati hanno accesso limitato alle operazioni di organizzazione e utente.
 Visualizzazione | Pensato per le applicazioni che sono responsabili della generazione delle visualizzazioni dei dati. Le applicazioni di visualizzazione hanno accesso alle operazioni dai dati archiviati o live e alle operazioni dashboard.
 Dispositivo | Pensate per le applicazioni che hanno il ruolo di dispositivi; cioè, forniscono un'origine dei dati che viene inviata a {{site.data.keyword.iot_short_notm}} come se fosse un dispositivo. Le applicazioni dispositivo hanno soltanto un accesso limitato alle operazioni.
 

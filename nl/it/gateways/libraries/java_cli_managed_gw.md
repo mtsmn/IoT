@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-20"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -555,7 +555,7 @@ Per ulteriori informazioni sulle azioni firmware, consulta [Richieste di gestion
 {{site.data.keyword.iot_short}} supporta le seguenti azioni del dispositivo:
 
 - Riavvio
-- Reimpostazione fabric
+- Ripristino delle impostazioni di fabbrica
 
 Il gateway deve eseguire le seguenti azioni per supportare le azioni del dispositivo per se stesso e anche per i suoi dispositivi.
 

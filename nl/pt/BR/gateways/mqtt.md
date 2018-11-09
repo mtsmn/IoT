@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-19"
+  years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -108,11 +108,8 @@ Se o gateway falhar ao registrar um dispositivo automaticamente, ele não tentar
 ## Notificações do gateway
 {: #notification}
 
-Quando ocorrem erros durante a validação do tópico de publicação ou assinatura ou durante o registro automático, uma notificação é enviada ao dispositivo de gateway. Um gateway pode receber essas notificações assinando o tópico a seguir, substituindo os valores de `typeId` e `deviceId`:
+Quando ocorrem erros durante a validação do tópico de publicação ou assinatura ou durante o registro automático, uma notificação é enviada ao dispositivo de gateway. Um gateway pode receber essas notificações, assinando o tópico a seguir, substituindo os valores `typeId` e `deviceId` do gateway:
 
-```
-iot-2/type/**typeId**/id/**deviceId**/notify
-```
 <pre class="pre">iot-2/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/notify</pre>
 {: codeblock}
 
@@ -149,6 +146,8 @@ Um gateway pode receber as notificações a seguir:
 -   O número máximo de dispositivos por organização foi atingido.
 -   Falha ao criar o dispositivo devido a erros internos.
 
+Se um dispositivo publicar em uma sequência de tópicos inválida, os valores *Device_Type* e *Device_Id* não serão conhecidos e esses parâmetros não serão retornados na mensagem que é recebida no tópico de notificação.
+
 ## Gateways gerenciados
 {: #managed_gateways}
 
@@ -167,8 +166,7 @@ O {{site.data.keyword.iot_short_notm}} publica solicitações que têm um nível
 
 Quando um gateway gerenciado usa uma assinatura durável, comandos de gerenciamento de dispositivo que são enviados ao gateway enquanto ele está off-line são relatados como operações com falha se o gateway não se reconectar ao serviço antes que a solicitação atinja o tempo limite. Quando o gateway se reconectar, essas solicitações serão processadas pelo gateway. Assinaturas duráveis são especificadas pelo parâmetro ``cleansession=false``.
 
-O gateway é proprietário da sessão MQTT, independentemente dos dispositivos que estão por trás dela. 
-Quando um dispositivo envia uma solicitação de assinatura por meio de um gateway, a
+O gateway é proprietário da sessão MQTT, independentemente dos dispositivos que estão por trás dela. Quando um dispositivo envia uma solicitação de assinatura por meio de um gateway, a
 solicitação não se move para outros gateways, independentemente de se a opção
 ``cleansession=false`` está configurada.
 
@@ -192,8 +190,7 @@ dispositivo para seus dispositivos conectados em:
 <pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/#</pre>
 {: codeblock}
 
-O gateway pode processar mensagens do Protocolo de gerenciamento de dispositivo para ele mesmo e em nome de outros dispositivos conectados usando **typeId** e **deviceId** relevantes. 
-O curinga **+** do MQTT também pode ser usado no lugar de **typeId** e **deviceId**.
+O gateway pode processar mensagens do Protocolo de gerenciamento de dispositivo para ele mesmo e em nome de outros dispositivos conectados usando **typeId** e **deviceId** relevantes. O curinga **+** do MQTT também pode ser usado no lugar de **typeId** e **deviceId**.
 
 Um gateway gerenciado publica em tópicos que são específicos do tipo de solicitação de gerenciamento que está sendo executada:
 
@@ -201,10 +198,7 @@ Um gateway gerenciado publica em tópicos que são específicos do tipo de solic
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
 {: codeblock}
 
-Para outros tópicos nos quais um gateway gerenciado pode publicar, consulte
-[Protocolo de gerenciamento de dispositivo](device_mgmt/index.html) e
-[Solicitações de gerenciamento de
-dispositivo](../devices/device_mgmt/requests.html). 
+Para outros tópicos nos quais um gateway gerenciado pode publicar, veja [Protocolo de gerenciamento de dispositivo](../devices/device_mgmt/index.html) e [Solicitações de gerenciamento de dispositivo](../devices/device_mgmt/requests.html). 
 - O protocolo permanece o mesmo para gateways, exceto que qualquer tópico que
 começa com **iotdevice-1 /** em vez disso começará com:
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>

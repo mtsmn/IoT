@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-04-03"
+lastupdated: "2018-04-19"
 
 ---
 
@@ -18,21 +18,22 @@ lastupdated: "2017-04-03"
 
 Um dispositivo é qualquer coisa que tenha uma conexão com a Internet e tenha dados para enviar ou receber da nuvem. É possível usar dispositivos para enviar informações de eventos como leituras do sensor para a nuvem e para aceitar comandos de aplicativos na nuvem.
 
-Os dispositivos publicam dados no {{site.data.keyword.iot_short_notm}} usando eventos. O dispositivo controla o conteúdo do evento e designa um nome para cada evento enviado. Quando um evento é recebido pelo {{site.data.keyword.iot_short_notm}} de um dispositivo, as credenciais da conexão na qual o evento foi recebido são usadas para determinar de qual dispositivo o evento foi enviado. Essa arquitetura evita que um dispositivo personifique outro dispositivo.
+Os dispositivos publicam dados no {{site.data.keyword.iot_full}} usando eventos. O dispositivo controla o conteúdo do evento e designa um nome para cada evento enviado. Quando um evento é recebido pelo {{site.data.keyword.iot_short_notm}} de um dispositivo, as credenciais da conexão na qual o evento foi recebido são usadas para determinar de qual dispositivo o evento foi enviado. Essa arquitetura evita que um dispositivo personifique outro dispositivo.
 
 Para obter mais informações sobre conceitos-chave, incluindo dispositivos, veja [Sobre o Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/iotplatform_overview.html#watsoniotplatform_importantconcepts).
 
 
 ## Conectando seu dispositivo ao {{site.data.keyword.iot_short_notm}}
 {: #device_connect}
-É possível conectar seu dispositivo ao {{site.data.keyword.iot_short_notm}} usando os protocolos HTTP ou MQTT. Use HTTP se desejar um cenário de configuração de solicitação-resposta, como quando alguém faz uma compra e recebe uma confirmação. Use MQTT se desejar configurar um cenário de evento, como quando alguém toca uma campainha e faz com que um alerta seja acionado em um dispositivo móvel.
+É possível conectar seu dispositivo ao {{site.data.keyword.iot_short_notm}} usando os protocolos MQTT ou HTTP. Use MQTT se desejar configurar um cenário de evento, como quando alguém toca uma campainha e faz com que um alerta seja acionado em um dispositivo móvel, ou se desejar enviar um grande número de eventos. Use HTTP se desejar configurar o cenário de solicitação-resposta, como quando alguém faz uma compra e recebe uma confirmação.
 
-Um dispositivo deve ser registrado com uma organização antes que possa se conectar ao {{site.data.keyword.iot_full}}. Para se conectar com segurança ao {{site.data.keyword.iot_short_notm}}, deve-se registrar para uma conta do Bluemix e criar sua própria organização do {{site.data.keyword.iot_short_notm}}. Será possível então registrar seu dispositivo usando o ID dessa organização. Os dispositivos registrados identificam-se para o {{site.data.keyword.iot_short_notm}} com um identificador de dispositivo exclusivo, por exemplo, o endereço de Controle de Acesso à Mídia e um token de autenticação que é aceito somente para esse dispositivo. Depois de ter se conectado com segurança, use o Bluemix para construir seus próprios aplicativos. Tente usar o Node-RED para conectar seus aplicativos juntos.
+Um dispositivo deve ser registrado com uma organização antes que possa se conectar ao {{site.data.keyword.iot_short_notm}}. Para conectar-se com segurança ao {{site.data.keyword.iot_short_notm}}, deve-se registrar-se em uma conta do IBM Cloud e criar sua própria organização do {{site.data.keyword.iot_short_notm}}. Em seguida, é possível registrar seu dispositivo usando o ID dessa organização. Os dispositivos registrados identificam-se para o {{site.data.keyword.iot_short_notm}} com um identificador de dispositivo exclusivo, por exemplo, o endereço de Controle de Acesso à Mídia e um token de autenticação que é aceito somente para esse dispositivo. Depois de ter se conectado de forma segura, use o IBM Cloud para construir seus próprios aplicativos. Tente usar [Node-RED ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://nodered.org){: new_window} para conectar seus aplicativos juntos.
 
 Se desejar conectar seu dispositivo sem registrá-lo, por exemplo, para executar uma prova de conceito, isso poderá ser feito usando o ID de organização especial `QuickStart`. `QuickStart` é uma instância pública de ambiente de simulação do {{site.data.keyword.iot_short_notm}} que é executada na nuvem. Se não for necessário se conectar com segurança, será possível usar `QuickStart` para testar a conectividade de seu dispositivo e experimentar com o {{site.data.keyword.iot_short_notm}}. Quando você tiver concluído o experimento, reconecte o dispositivo com segurança à sua própria instância de ID de organização específica usando TLS e o token de autenticação.
 
-Para obter mais informações sobre como conectar seu dispositivo ao {{site.data.keyword.iot_short_notm}} usando o protocolo HTTP, veja [API de REST HTTP para dispositivos](https://console.ng.bluemix.net/docs/services/IoT/devices/api.html).
 Para obter mais informações sobre como conectar seu dispositivo ao {{site.data.keyword.iot_short_notm}} usando o protocolo MQTT, veja [Conectividade MQTT para dispositivos](https://console.ng.bluemix.net/docs/services/IoT/devices/mqtt.html).
+
+Para obter mais informações sobre como conectar seu dispositivo ao {{site.data.keyword.iot_short_notm}} usando o protocolo HTTP, veja [ APIs HTTP para dispositivos](https://console.ng.bluemix.net/docs/services/IoT/devices/api.html).
 
 ## Introdução ao desenvolvimento de dispositivos
 {: #get_started}
@@ -45,7 +46,7 @@ Se não for possível localizar uma orientação para seu dispositivo específic
 - Java
 - Node.js
 - C Incorporado
-- ARM mBed C++
+- C++ Arm Mbed
 - Python
 - C#
 - Node-RED

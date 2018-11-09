@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-15"
+  years: 2015, 2018
+lastupdated: "2018-04-26"
 
 ---
 
@@ -39,7 +39,7 @@ Die von Ihrer Plattform bereitgestellte Integration von Jasper bietet Unterstüt
 Sie können auf diese Operationen im Geräte-Drilldown eines verbundenen Jasper-Geräts zugreifen, nachdem die nachfolgend beschriebenen Konfigurationsschritte abgeschlossen sind.
 
 ### REST-APIs für Jasper
-Informationen für den Zugriff auf die REST-API für Jasper finden Sie im Abschnitt 'Jasper-Erweiterung' in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
+Informationen für den Zugriff auf die REST-API für Jasper finden Sie im Abschnitt 'Jasper-Erweiterung' in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window}.
 
 ### Konfiguration für Jasper
 
@@ -91,7 +91,7 @@ Die AT&T-Erweiterung ermöglicht folgende AT&T-Operationen:
 - Tarifplan ändern
 
 ### REST-APIs für AT&T
-Informationen für den Zugriff auf die REST-API für AT&T finden Sie im Abschnitt 'AT&T-Erweiterung' in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
+Informationen für den Zugriff auf die REST-API für AT&T finden Sie im Abschnitt 'AT&T-Erweiterung' in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window}.
 
 ### Konfiguration für AT&T
 
@@ -129,31 +129,31 @@ Führen Sie folgende Schritte aus, um Ihre mit AT&T verbundenen Geräte zu konfi
 
 Wenn die Organisation erfolgreich konfiguriert wurde, wird der Abschnitt *Erweiterungen* unterhalb des Abschnitts zur *Erweiterungskonfiguration* in der Ansicht *Drilldown für Geräte* angezeigt.
 
-## ARM mbed-Connector
+## Arm Mbed-Bridge
 {: #arm}
 
-Der ARM mbed-Konnektor ermöglicht Ihnen, für Ihr ARM mbed-Gerät eine Verbindung zu {{site.data.keyword.iot_short_notm}} herzustellen. Die ARM mbed-Erweiterung ermöglicht dem ARM mbed-Portal und {{site.data.keyword.iot_short_notm}}, Daten vom ARM mbed-Portal zu empfangen und an dieses zu senden.
+Mit der Bridge können Arm Mbed-Geräte in IBM Watson IoT Platform integriert und bidirektional Nachrichten ausgetauscht werden. Um diese Integration zu aktivieren, müssen Sie sich zunächst für ein Arm Mbed-Cloud-Konto anmelden und dann die angeforderten Verbindungsinformationen für Ihre Watson IoT-Konfiguration bereitstellen.
 
 ### Konfiguration für die Einrichtung
 
 
-1. Aktivieren Sie die Erweiterung für den ARM mbed-Konnektor. Zum Aktivieren der Erweiterung für den ARM mbed-Konnektor führen Sie folgende Schritte aus:
-  1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Einstellungen** aus und navigieren Sie zu **Erweiterungen**.
-  2. Klicken Sie im Menü **Erweiterungen** auf **Erweiterung hinzufügen**.
-  3. Klicken Sie neben der Erweiterung für den ARM bed-Konnektor auf **Hinzufügen**.
-  4. Geben Sie Ihren Zugriffsschlüssel und Ihre Domänen-ID für ARM mbed ein. Sie finden diese Angaben mithilfe des ARM bed-Portals unter https://connector.mbed.com.
+1. Aktivieren Sie die Erweiterung für die Arm Mbed-Bridge. Führen Sie dazu die folgenden Schritte aus:
+  1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen** aus.
+  2. Klicken Sie auf der Seite **Erweiterungen** auf **+Erweiterung hinzufügen**.
+  3. Klicken Sie neben der Erweiterung für die Arm Mbed-Bridge auf **Hinzufügen**.
+  4. Geben Sie den Zugriffsschlüssel für Arm Mbed ein. Sie können diesen Schlüssel über das Arm Mbed-Portal unter 'https://portal.mbedcloud.com' erstellen.
   5. Prüfen Sie, ob die Berechtigungsnachweise richtig sind, indem Sie auf die Schaltfläche **Verbindung überprüfen** klicken.
   6. Klicken Sie auf **Fertig**.
 
 ### Nutzdatenformat
 
-Die von der ARM mbed-Plattform eingehenden Nachrichten haben den Typ 'Benachrichtigung' oder 'asynchrone Antwort'. {{site.data.keyword.iot_short_notm}} kann Befehle an Geräte senden, die mit der ARM mbed-Plattform verbunden sind.
+Die von der ARM Mbed-Plattform eingehenden Nachrichten haben den Typ 'Benachrichtigung' oder 'asynchrone Antwort'. {{site.data.keyword.iot_short_notm}} kann Befehle an Geräte senden, die mit der Arm Mbed-Plattform verbunden sind.
 
 #### Benachrichtigungen
 
-Benachrichtigungen werden durch Änderungen in den Geräte- oder Sensordaten generiert. Nachdem {{site.data.keyword.iot_short_notm}} die Nachricht verarbeitet hat, wird sie auf dieselbe Weise in das Ereignistopic des Geräts geschrieben wie bei einem Gerät, das direkt mit {{site.data.keyword.iot_short_notm}} verbunden ist. Der Ereignistyp für Benachrichtigungen, die von Geräten stammen, die mit der ARM mbed-Plattform verbunden sind, lautet `notify`.
+Benachrichtigungen werden durch Änderungen in den Geräte- oder Sensordaten generiert. Nachdem {{site.data.keyword.iot_short_notm}} die Nachricht verarbeitet hat, wird sie auf dieselbe Weise an das Ereignistopic des Geräts gesendet wie bei einem Gerät, das direkt mit {{site.data.keyword.iot_short_notm}} verbunden ist. Der Ereignistyp, der für Benachrichtigungen verwendet wird, die von Geräten stammen, die mit der Arm Mbed-Plattform verbunden sind, lautet `notify`.
 
-Das folgende Codebeispiel zeigt das Nutzdatenformat für eine Benachrichtigung, die von der API der ARM mbed-Plattform gesendet wurde:
+Das folgende Codebeispiel zeigt das Nutzdatenformat für eine Benachrichtigung, die von der API der Arm Mbed-Plattform gesendet wurde:
 
 ```
 {
@@ -167,9 +167,9 @@ Das folgende Codebeispiel zeigt das Nutzdatenformat für eine Benachrichtigung, 
 
 #### Asynchrone Antworten
 
-Wenn {{site.data.keyword.iot_short_notm}} einen Befehle an ein mit der ARM mbed-Plattform verbundenes Gerät sendet, sendet das Gerät eine Bestätigungsnachricht zurück an {{site.data.keyword.iot_short_notm}}. Diese Bestätigungsnachricht wird als _asynchrone Antwort_ bezeichnet und verwendet den Ereignistyp `asyncResponse`.
+Wenn {{site.data.keyword.iot_short_notm}} einen Befehl an ein Gerät sendet, das mit der Arm Mbed-Plattform verbunden ist, sendet das Gerät eine Bestätigungsnachricht zurück an {{site.data.keyword.iot_short_notm}}. Diese Bestätigungsnachricht wird als _asynchrone Antwort_ bezeichnet und verwendet den Ereignistyp `asyncResponse`.
 
-Das folgende Codebeispiel zeigt das Nutzdatenformat für eine asynchrone Antwort, die vom ARM mbed-Cloud-Service gesendet wurde:
+Das folgende Codebeispiel zeigt das Nutzdatenformat für eine asynchrone Antwort, die vom Arm Mbed-Cloud-Service gesendet wird:
 
 ```
 {
@@ -183,9 +183,9 @@ Das folgende Codebeispiel zeigt das Nutzdatenformat für eine asynchrone Antwort
 }
 ```
 
-#### Befehle an die ARM mbed-Plattform senden
+#### Befehle an die Arm Mbed-Plattform senden
 
-{{site.data.keyword.iot_short_notm}} kann Befehle an Geräte senden, die mit der ARM mbed-Plattform verbunden sind. An die ARM mbed-Plattform gesendete Befehle müssen das folgende JSON-Format aufweisen.
+{{site.data.keyword.iot_short_notm}} kann Befehle an Geräte senden, die mit der Arm Mbed-Plattform verbunden sind. An die Arm Mbed-Plattform gesendete Befehle müssen das folgende JSON-Format aufweisen.
 
 ```
 {
@@ -198,7 +198,7 @@ Das folgende Codebeispiel zeigt das Nutzdatenformat für eine asynchrone Antwort
 Bei der gewählten Methode muss die Groß-/Kleinschreibung beachtet werden. Die Angabe '/' vor dem Ressourcenpfad muss übersprungen werden.
 
 
-Die Nutzdaten müssen an das folgende Topic publiziert werden:
+Die Nutzdaten müssen im folgenden Topic publiziert werden:
 
 ```
 iot-2/type/<Gerätetyp>/id/<Geräte-ID>/cmd/<Befehlstyp>/fmt/<Befehlsformat>
@@ -223,7 +223,7 @@ Wenn Sie ein Gerät haben, das mit Ihrem {{site.data.keyword.iot_short_notm}}-Se
 - Standortstatus
 
 ### REST-APIs für Orange
-Informationen für den Zugriff auf die REST-API für Orange finden Sie im Abschnitt 'Orange-Erweiterung' in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
+Informationen für den Zugriff auf die REST-API für Orange finden Sie im Abschnitt 'Orange-Erweiterung' in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window}.
 
 ### Konfiguration für Orange
 
@@ -249,7 +249,7 @@ Nach dem Aktivieren der Orange-Erweiterung muss jedes Gerät mit einer Orange-SI
     }
 
 ```
-Wenn die Organisation erfolgreich konfiguriert ist, wird der Abschnitt *Erweiterungen* unterhalb des Abschnitts zur Erweiterungskonfiguration in der Drilldown-Ansicht für Geräte angezeigt.
+Wenn die Organisation erfolgreich konfiguriert wurde, wird der Abschnitt *Erweiterungen* unterhalb des Abschnitts zur *Erweiterungskonfiguration* in der Ansicht *Drilldown für Geräte* angezeigt.
 
 ## Speicherung archivierter Daten
 {: #historical_data}
@@ -259,7 +259,7 @@ Die Erweiterung für die Speicherung archivierter Daten ermöglicht Ihnen, kompa
 ## Angepasste Pakete für das Gerätemanagement
 {: #device_mgmt}
 
-Gerätemanagement ist eine zentrale Funktion von {{site.data.keyword.iot_short_notm}}; es kann jedoch erweitert werden, um zusätzliche Funktionen zu entwickeln. Angepasste Pakete für das Gerätemanagement müssen gültiges JSON-Format enthalten und mindestens eine angepasste Gerätemanagementaktion definieren.
+Das Gerätemanagement ist eine zentrale Funktion von {{site.data.keyword.iot_short_notm}}, die jedoch erweitert werden kann, um zusätzliche Funktionen zu entwickeln. Angepasste Pakete für das Gerätemanagement müssen gültiges JSON-Format enthalten und mindestens eine angepasste Gerätemanagementaktion definieren.
 
 Weitere Informationen zu angepassten Gerätemanagementfunktionen sowie ein Beispiel für das erforderliche JSON-Format finden Sie in [Angepasste Erweiterungen für das Gerätemanagement](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
@@ -274,29 +274,7 @@ Gehen Sie wie folgt vor, um ein angepasstes Paket für das Gerätemanagement mit
 3. Klicken Sie auf die Schaltfläche **Paket hinzufügen**.
 4. Wählen Sie Ihre Paketdatei aus und klicken Sie auf **Öffnen**.
 
-Informationen zum Hinzufügen eines angepassten Gerätemanagementpakets mithilfe der API finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
-
-## Blockchain
-{: #blockchain}
-
-{{site.data.keyword.iot_short_notm}} mit Blockchain ermöglicht es IoT-Geräten, Daten für Blockchain-Transaktionen zur Verfügung zu stellen, wodurch die Daten im nicht veränderbaren Blockchain-Konto gespeichert und in Geschäftsregeln für intelligente Verträge verwendet werden. {{site.data.keyword.iot_short_notm}} ordnet Gerätedaten dem Datenformat zu, das für intelligente Blockchain-Verträge erforderlich ist, und übergibt sie zur Speichern im Blockchain-Konto an ein Blockchain-Fabric.
-
-### Unterstützte Operationen für Blockchain
-- Auslösen von Aktualisierungen für intelligente Verträge durch Geräteereignisse.
-- Ausführen von Geschäftslogik für intelligente Verträge, um den Kontostatus durch Ereignisdaten von Geräten zu aktualisieren.
-- Überwachen von Blockchain, von Transaktionen und des Kontostatus mit der Benutzerschnittstelle für die Überwachung.
-
-### Konfiguration für Blockchain
-
-{{site.data.keyword.iot_short_notm}}-Blockchain-Integration ist ein Serviceangebot, das in {{site.data.keyword.iot_short_notm}} nicht standardmäßig aktiviert ist. Führen Sie die folgenden Schritte aus, um die Funktion in Ihrer Organisation zu aktivieren:
- 1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen** aus.
- 2. Klicken Sie auf der Seite **Erweiterungen** auf **Erweiterung hinzufügen**.
- 3. Klicken Sie neben der Blockchain-Erweiterung auf **Hinzufügen**.
- 4. Klicken Sie auf der Kachel 'Blockchain' auf **Einrichten**.
- 3. Klicken Sie im Abschnitt **Blockchain aktivieren** auf den Link **Weitere Informationen**, um die Seite [IoT Blockchain Services Offering ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window} aufzurufen.
- 4. Klicken Sie auf die Option zum Anstoßen des Blockchain-Projekts****, um das Formular zum Untersuchen des Potenzials von IoT und Blockchain** auszufüllen und abzuschicken.  
- 5. Sobald Ihre Anforderung genehmigt ist, nimmt IBM Kontakt zu Ihnen auf, um die Blockchain-Integration für Ihre Organisation zu aktivieren.
- 6. Kehren Sie zum {{site.data.keyword.iot_short_notm}}-Dashboard für Ihre Organisation zurück, um das Setup mithilfe der in [{{site.data.keyword.iot_short_notm}}-Blockchain-Integration](../../bl_blockchain_integration.html) beschriebenen Schritte zu beenden.
+Informationen zum Hinzufügen eines angepassten Gerätemanagementpakets mithilfe der API finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 <!-- ## The Weather Company
 {: #weathercompany}
@@ -330,7 +308,7 @@ To view the weather data retrieved for a device location, find the device in the
 ## E-Mail
 {: #email}
 
-Benutzer können mithilfe von E-Mail-Einladungen zu {{site.data.keyword.iot_short_notm}} hinzugefügt werden. Informationen finden Sie in  [Benutzerzugriff verwalten](../../add_users.html).
+Benutzer können mithilfe von E-Mail-Einladungen zu {{site.data.keyword.iot_short_notm}} hinzugefügt werden. Informationen finden Sie in [Benutzerzugriff verwalten](../../add_users.html).
 
 Damit die Funktion für E-Mail-Einladungen verwendet werden kann, muss eine E-Mail-Erweiterung für die Verwendung des SendGrid-Onlineservice oder eines SMTP-Service (Simple Mail Transfer Protocol) konfiguriert sein. Die Erweiterung kann auch die {{site.data.keyword.Bluemix_notm}}-Anwendung SendGrid verwenden.
 

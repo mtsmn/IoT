@@ -214,15 +214,15 @@
        sodipodi:role="line"
        x="55.809902"
        y="74.806244"
-       id="tspan5620">Sensor de </tspan><tspan
+       id="tspan5620">tSensor</tspan><tspan
        sodipodi:role="line"
        x="55.809902"
        y="88.556244"
-       id="tspan4321">temperatura 1 </tspan><tspan
+       id="tspan4321"></tspan><tspan
        sodipodi:role="line"
        x="55.809902"
        y="102.30624"
-       id="tspan5230">ID: D1 </tspan><tspan
+       id="tspan5230">ID: tSensor</tspan><tspan
        sodipodi:role="line"
        x="55.809902"
        y="116.05624"
@@ -330,7 +330,7 @@
        sodipodi:role="line"
        id="tspan266400-5"
        x="250.80249"
-       y="8.625">Tipo de dispositivo: EnvSensor1</tspan><tspan
+       y="8.625">Tipo de dispositivo: TSensor</tspan><tspan
        sodipodi:role="line"
        x="250.80249"
        y="23.625"
@@ -376,7 +376,7 @@
        y="480.92456"
        x="-222.7049"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4-7">Interface de aplicativo</tspan></text>
+       id="tspan6445-3-0-1-4-7">Interface Lógica</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -395,7 +395,7 @@
        y="62.173744"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan6445-3-0-7">Validação e </tspan><tspan
+       id="tspan6445-3-0-7">Validação e</tspan><tspan
        y="75.923744"
        x="294.48419"
        sodipodi:role="line"
@@ -403,11 +403,11 @@
        y="89.673744"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan5252">interface de </tspan><tspan
+       id="tspan5252">interface </tspan><tspan
        y="103.42374"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan4710">aplicativo: </tspan><tspan
+       id="tspan4710">lógica: </tspan><tspan
        y="117.17374"
        x="294.48419"
        sodipodi:role="line"
@@ -425,7 +425,7 @@
        y="77.468231"
        x="175.00923"
        id="tspan3435"
-       sodipodi:role="line">{ &quot;temp&quot;}</tspan></text>
+       sodipodi:role="line">{ &quot;t&quot;}</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -462,15 +462,15 @@
        sodipodi:role="line"
        x="55.520477"
        y="238.36305"
-       id="tspan8202-7">Sensor de </tspan><tspan
+       id="tspan8202-7">tempSensor </tspan><tspan
        sodipodi:role="line"
        x="55.520477"
        y="252.11305"
-       id="tspan5620-8">temperatura 2 </tspan><tspan
+       id="tspan5620-8"></tspan><tspan
        sodipodi:role="line"
        x="55.520477"
        y="265.86304"
-       id="tspan5232">ID: D2 </tspan><tspan
+       id="tspan5232">ID: tempSensor</tspan><tspan
        sodipodi:role="line"
        x="55.520477"
        y="279.61304"
@@ -497,7 +497,7 @@
        y="241.02504"
        x="186.71982"
        id="tspan3435-8"
-       sodipodi:role="line">{ &quot;t&quot;}</tspan></text>
+       sodipodi:role="line">{ &quot;temp&quot;}</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -507,11 +507,11 @@
        y="136.5788"
        x="512.54572"
        id="tspan3435-3-9"
-       sodipodi:role="line">Solicitação de solicitação </tspan><tspan
+       sodipodi:role="line">Solicitação de estado: </tspan><tspan
        y="150.3288"
        x="512.54572"
        sodipodi:role="line"
-       id="tspan5272">ID D1 ou D2</tspan></text>
+       id="tspan5272">ID t ou temp</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -541,7 +541,7 @@
        sodipodi:role="line"
        id="tspan266400-5-7"
        x="250.55789"
-       y="174.34784">Tipo de dispositivo: EnvSensor2</tspan><tspan
+       y="174.34784">Tipo de dispositivo: TempSensor</tspan><tspan
        sodipodi:role="line"
        x="250.55789"
        y="189.34784"
@@ -585,7 +585,7 @@
        sodipodi:role="line"
        id="tspan266400-5-5"
        x="462.18744"
-       y="82.340347">Interface de aplicativo: </tspan><tspan
+       y="82.340347">Interface lógica: </tspan><tspan
        sodipodi:role="line"
        x="462.18744"
        y="97.340347"
@@ -612,7 +612,7 @@
        y="227.16879"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan6445-3-0-7-2">Validação e </tspan><tspan
+       id="tspan6445-3-0-7-2">Validação e</tspan><tspan
        y="240.91879"
        x="294.48419"
        sodipodi:role="line"
@@ -620,11 +620,11 @@
        y="254.66879"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan5252-2">interface de </tspan><tspan
+       id="tspan5252-2">interface </tspan><tspan
        y="268.41879"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan4710-0">aplicativo: </tspan><tspan
+       id="tspan4710-0">lógica: </tspan><tspan
        y="282.16879"
        x="294.48419"
        sodipodi:role="line"

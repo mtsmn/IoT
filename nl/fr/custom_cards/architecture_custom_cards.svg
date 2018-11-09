@@ -1078,17 +1078,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.0744773"
-     inkscape:cx="303.61632"
-     inkscape:cy="160.52235"
+     inkscape:zoom="2.06"
+     inkscape:cx="278.54219"
+     inkscape:cy="162.34668"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1440"
-     inkscape:window-height="848"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1019"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -1123,7 +1123,7 @@
     <rect
        ry="0"
        rx="0"
-       y="542.07971"
+       y="536.07971"
        x="440.72098"
        height="50.575722"
        width="141.13666"
@@ -1132,7 +1132,7 @@
     <rect
        ry="0"
        rx="0"
-       y="537.42688"
+       y="531.42688"
        x="446.00595"
        height="50.575722"
        width="141.13664"
@@ -1241,7 +1241,7 @@
          id="flowPara6808" /></flowRoot>    <rect
        ry="0"
        rx="0"
-       y="531.7807"
+       y="525.7807"
        x="451.54846"
        height="50.575722"
        width="141.13663"
@@ -1284,7 +1284,7 @@
        x="195.33096"
        font-size="13"
        id="text56812"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Bluemix</text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Cloud</text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot7059"
@@ -1300,20 +1300,16 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="436.27771"
-       y="512.68762"
+       y="518.68762"
        id="text266398-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan266400-6"
          x="436.27771"
-         y="512.68762">Serveurs de cartes</tspan><tspan
+         y="518.68762">Serveurs de cartes personnalisées</tspan><tspan
          sodipodi:role="line"
          x="436.27771"
-         y="527.68762"
-         id="tspan3697">personnalisées</tspan><tspan
-         sodipodi:role="line"
-         x="436.27771"
-         y="542.68762"
+         y="533.68762"
          id="tspan266402-0" /></text>
     <g
        id="Page-1_1_"
@@ -1387,20 +1383,20 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="502.53854"
-       y="552.58887"
+       y="546.58887"
        id="text18189-5-9-1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="502.53854"
-         y="552.58887"
+         y="546.58887"
          id="tspan6913-6-2">Serveur </tspan><tspan
          sodipodi:role="line"
          x="502.53854"
-         y="566.33887"
+         y="560.33887"
          id="tspan9436">HTTPS</tspan></text>
     <g
        id="g5240-2"
-       transform="matrix(0.09339235,0,0,0.09339235,454.24548,533.87224)"
+       transform="matrix(0.09339235,0,0,0.09339235,454.24548,527.87224)"
        style="stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none">
       <rect
          id="rect5222-4"
@@ -1465,7 +1461,7 @@
        y="590.23999"
        x="226.04178"
        height="50.000019"
-       width="140.52762"
+       width="137.15327"
        id="rect79371-1-6-6-9-8-7-3-5-2-2-36"
        style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
@@ -1697,25 +1693,21 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="495.55319"
-       y="450.78415"
+       y="456.78415"
        id="text18189-5-9-1-8"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="495.55319"
-         y="450.78415"
+         y="456.78415"
          id="tspan6913-6-2-8">Serveur </tspan><tspan
          sodipodi:role="line"
          x="495.55319"
-         y="464.53415"
+         y="470.53415"
          id="tspan9434">HTTPS</tspan><tspan
          sodipodi:role="line"
          x="495.55319"
-         y="478.28415"
-         id="tspan9432">(système </tspan><tspan
-         sodipodi:role="line"
-         x="495.55319"
-         y="492.03415"
-         id="tspan3695">hôte local)</tspan></text>
+         y="484.28415"
+         id="tspan9432">(système hôte local)</tspan></text>
     <g
        id="g5240-2-6"
        transform="matrix(0.09339235,0,0,0.09339235,447.26007,444.06741)"
@@ -1798,7 +1790,7 @@
          style="fill:#66d1f5;fill-opacity:1" />
     </g>
     <g
-       transform="matrix(0.68983305,0,0,0.63094863,259.29633,330.06938)"
+       transform="matrix(0.68983305,0,0,0.63094863,259.29633,326.06938)"
        id="g13549-1"
        style="fill:#66d1f5;fill-opacity:1">
       <path
@@ -1955,9 +1947,9 @@
     <rect
        ry="0"
        rx="0"
-       y="362.4519"
+       y="365.82626"
        x="-9.5156498"
-       height="56.748707"
+       height="50.000019"
        width="149.25006"
        id="rect79371-1-6-6-9-8-7-3-5-2-9-1"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
@@ -1965,44 +1957,35 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="39.885139"
-       y="359.31418"
+       y="367.31418"
        id="text18189-1-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan18191-0-2"
          x="39.885139"
-         y="359.31418" /><tspan
+         y="367.31418" /><tspan
          sodipodi:role="line"
          x="39.885139"
-         y="373.06418"
-         id="tspan8202-5">Cartes </tspan><tspan
+         y="381.06418"
+         id="tspan8202-5">Cartes personnalisées</tspan><tspan
          sodipodi:role="line"
          x="39.885139"
-         y="386.81418"
-         id="tspan3699">personnalisées</tspan><tspan
-         sodipodi:role="line"
-         x="39.885139"
-         y="397.1199"
+         y="391.3699"
          id="tspan6878-8-6"
-         style="font-size:7.5px">Exemple de </tspan><tspan
+         style="font-size:7.5px">Exemple de référentiel</tspan><tspan
          sodipodi:role="line"
          x="39.885139"
-         y="406.4949"
+         y="400.7449"
          style="font-size:7.5px"
-         id="tspan11208">référentiel de cartes </tspan><tspan
+         id="tspan11208">de cartes personnalisées IBM</tspan><tspan
          sodipodi:role="line"
          x="39.885139"
-         y="415.8699"
-         style="font-size:7.5px"
-         id="tspan3705">personnalisées IBM</tspan><tspan
-         sodipodi:role="line"
-         x="39.885139"
-         y="425.2449"
+         y="410.1199"
          id="tspan18193-4-2"
          style="font-size:7.5px" /></text>
     <g
        id="g60812-9-6"
-       transform="translate(110.78745,372.35397)"
+       transform="translate(104.78745,372.35397)"
        style="fill:#ffffff;fill-opacity:1">
       <path
          id="path60814-8"
@@ -2172,7 +2155,7 @@
     </text>
     <text
        sodipodi:linespacing="125%"
-       y="604.00604"
+       y="597.7323"
        x="535.72784"
        font-size="11"
        id="text59612-2-5"
@@ -2197,7 +2180,7 @@
     <text
        sodipodi:linespacing="125%"
        y="430.43253"
-       x="114.92429"
+       x="109.18609"
        font-size="11"
        id="text59612-2-2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-13"
+  years: 2015, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -22,27 +22,28 @@ Embedded C를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호
 ## Embedded C 클라이언트 및 리소스 다운로드
 {: #embeddedc_client_download}
 
-{{site.data.keyword.iot_short_notm}}에 대한 임베디드 C  클라이언트 라이브러리 및 샘플에 액세스하려면, GitHub의 [iotf-embeddedc ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오. 
+{{site.data.keyword.iot_short_notm}}에 대한 임베디드 C 클라이언트 라이브러리 및 샘플에 액세스하려면, GitHub의 [iotf-embeddedc ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오.
 
 
 ## 종속 항목
 {: #dependencies}
 
-|종속 항목|설명 |
+|종속 항목 |설명|
 |:---|:---|
-|[Eclipse Paho 임베디드 C 라이브러리 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |MQTT C 클라이언트 라이브러리를 제공합니다. 자세한 정보는 [MQTT 클라이언트 패키지 -  임베디드 디바이스용 C ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}을 참조하십시오. |
+|[Eclipse Paho 임베디드 C 라이브러리 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |MQTT C 클라이언트 라이브러리를 제공합니다. 자세한 정보는 [MQTT 클라이언트 패키지 -  임베디드 디바이스용 C ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}를 참조하십시오.|
+|[Mbed TLS 2.4.1 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.4.1.tar.gz){: new_window} |TLS 지원 및 클라이언트 측 인증서 기반 인증을 사용할 수 있도록 SSL 라이브러리를 제공합니다. 자세한 정보는 [Mbed TLS의 SSL 라이브러리 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://tls.mbed.org/ssl-library){: new_window}를 참조하십시오. |
 
 
 ## 설치
 {: #installation}
 
-Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러리를 설치하려면 다음 지시사항을 완료하십시오. 
+Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러리를 설치하려면 다음 지시사항을 완료하십시오.
 
-1. 라이브러리의 최신 버전을 설치하려면 명령행에서 다음 코드를 입력하십시오. 
+1. 라이브러리의 최신 버전을 설치하려면 명령행에서 다음 코드를 입력하십시오.
 ```
   [root@localhost ~]# git clone https://github.com/ibm-messaging/iotf-embeddedc.git
 ```
-2. Paho 라이브러리 .tar 파일을 *lib* 디렉토리에 복사하십시오. 
+2. Paho 라이브러리 .tar 파일을 *lib* 디렉토리에 복사하십시오.
 ```
     cd iotf-embeddedc
     cp ~/org.eclipse.paho.mqtt.embedded-c-1.0.0.tar.gz lib/
@@ -68,18 +69,18 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 ## 클라이언트 라이브러리 초기화
 {: #initialize_client_library}
 
-클라이언트 라이브러리가 다운로드된 후에는 이를 초기화하고 {{site.data.keyword.iot_short_notm}}에 연결해야 합니다. 매개변수를 전달하거나 구성 파일을 사용하여 Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러리를 초기화할 수 있습니다. 
+클라이언트 라이브러리가 다운로드된 후에는 이를 초기화하고 {{site.data.keyword.iot_short_notm}}에 연결해야 합니다. 매개변수를 전달하거나 구성 파일을 사용하여 Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러리를 초기화할 수 있습니다.
 
 ### 매개변수 전달
 
-`initialize` 함수는 다음 매개변수를 사용하여 {{site.data.keyword.iot_short_notm}} 서비스에 연결합니다. 
+`initialize` 함수는 다음 매개변수를 사용하여 {{site.data.keyword.iot_short_notm}} 서비스에 연결합니다.
 
 |정의 |설명 |
 |:---|:---|
-|`client`|*iotfclient*에 대한 포인터입니다. |
-|`org`|조직 ID입니다. |
-|`type` |디바이스 유형입니다. |
-|`id` |디바이스 ID입니다. |
+|`client`|*iotfclient*에 대한 포인터입니다.|
+|`org`|조직 ID입니다.|
+|`type` |디바이스 유형입니다.|
+|`id` |디바이스 ID입니다.|
 |`auth-method` |사용할 인증 메소드입니다. 현재 지원되는 값은 `token`입니다.|
 |`auth-token`|디바이스를 Watson IoT Platform에 안전하게 연결하기 위한 인증 토큰입니다.|
 
@@ -98,7 +99,7 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 
 ### 구성 파일 사용
 
-구성 파일을 사용하여 Embedded C 클라이언트 라이브러리를 초기화할 수도 있습니다. `initialize_configfile` 함수는 구성 파일 경로를 매개변수로서 취합니다. 
+구성 파일을 사용하여 Embedded C 클라이언트 라이브러리를 초기화할 수도 있습니다. `initialize_configfile` 함수는 구성 파일 경로를 매개변수로서 취합니다.
 
 ```
 	#include "iotfclient.h"
@@ -110,7 +111,7 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 	....
 ```
 
-구성 파일은 다음 형식을 사용해야 합니다. 
+구성 파일은 다음 형식을 사용해야 합니다.
 
 ```
 	org=$orgId
@@ -123,7 +124,7 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 ## 서비스에 연결
 {: #connecting_service}
 
-{{site.data.keyword.iot_short_notm}} Embedded C 클라이언트 라이브러리가 초기화되면 `connectiotf` 함수를 호출하여 {{site.data.keyword.iot_short_notm}}에 연결할 수 있습니다. 
+{{site.data.keyword.iot_short_notm}} Embedded C 클라이언트 라이브러리가 초기화되면 `connectiotf` 함수를 호출하여 {{site.data.keyword.iot_short_notm}}에 연결할 수 있습니다.
 
 ```
 	#include "iotfclient.h"
@@ -151,12 +152,12 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 ## 명령 처리
 {: #handling_commands}
 
-디바이스 클라이언트가 연결되면 이 디바이스에 대한 명령을 자동으로 구독합니다. 특정 명령을 처리하려면 `setCommandHandler` 함수를 호출하여 명령 콜백 함수를 등록해야 합니다. 콜백 함수의 특성은 다음과 같습니다. 
+디바이스 클라이언트가 연결되면 이 디바이스에 대한 명령을 자동으로 구독합니다. 특정 명령을 처리하려면 `setCommandHandler` 함수를 호출하여 명령 콜백 함수를 등록해야 합니다. 콜백 함수의 특성은 다음과 같습니다.
 
 |특성 |설명|
 |:---|:---|
-|`commandName`  |호출된 명령의 이름입니다.|  
-|`format`  |이벤트의 형식입니다. 형식은 임의의 문자열일 수 있습니다(예: JSON). |
+|`commandName`  |호출된 명령의 이름입니다. |  
+|`format`  |이벤트의 형식입니다. 형식은 임의의 문자열일 수 있습니다(예: JSON).|
 |`payload`  |명령 페이로드의 데이터입니다. 최대 길이는 131072바이트입니다. |
 
 
@@ -188,10 +189,10 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 
 |특성 |설명|
 |:---|:---|
-|eventType|공개되는 이벤트의 유형입니다(예: 상태 또는 gps).|  
-|eventFormat|형식은 임의의 문자열일 수 있습니다(예: `json`). |
-|data|페이로드의 데이터입니다. 최대 길이는 131072바이트입니다. |
-|QoS|공개 이벤트의 서비스 품질(QoS) 레벨입니다. 지원되는 값은 `0`, `1`, `2`입니다. |
+|eventType  |공개되는 이벤트의 유형입니다(예: 상태 또는 gps). |  
+|eventFormat  |형식은 임의의 문자열일 수 있습니다(예: `json`). |
+|data  |페이로드의 데이터입니다. 최대 길이는 131072바이트입니다. |
+|QoS  |공개 이벤트의 서비스 품질(QoS) 레벨입니다. 지원되는 값은 `0`, `1`, `2`입니다.|
 
 
 ```
@@ -224,4 +225,4 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 ## 샘플
 {: #samples}
 
-샘플 디바이스 및 애플리케이션 코드는 [GitHub ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples){: new_window}에 제공됩니다. 
+샘플 디바이스 및 애플리케이션 코드는 [GitHub ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples){: new_window}에 제공됩니다.

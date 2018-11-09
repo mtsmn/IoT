@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-07-19"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -12,12 +12,10 @@ lastupdated: "2017-07-19"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Zugriffssteuerung auf Ressourcenebene konfigurieren (Beta)
+# Zugriffssteuerung auf Ressourcenebene konfigurieren
 {: #configure_RLAC}
 
-**Wichtig:** Die {{site.data.keyword.iot_full}}-Funktion für die Zugriffssteuerung auf Ressourcenebene steht nur als Bestandteil eines eingeschränkten Betaprogramms zur Verfügung. Zukünftige Aktualisierungen enthalten möglicherweise Änderungen, die mit der aktuellen Version dieser Funktion nicht kompatibel sind. Starten Sie einen Versuch und [senden Sie uns Ihren Erfahrungsbericht ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
-
-Die Zugriffssteuerung auf Ressourcenebene ermöglicht Ihnen die Steuerung des Zugriffs von Benutzern und API-Schlüsseln zur Verwaltung von Geräten. Sie können Ressourcengruppen verwenden, um die Geräte in einer Organisation zu definieren, die von den einzelnen Benutzern oder API-Schlüsseln verwaltet werden können. Benutzern und API-Schlüsseln kann ein Rolle-zu-Gruppe-Paar zugewiesen werden, in dem definiert ist, dass nur Operationen ausgeführt werden können, die von der angegebenen Rolle auf Geräten abgedeckt sind, die in den entsprechenden Gruppen enthalten sind. Weitere Informationen zur Zugriffssteuerung auf Ressourcenebene erhalten Sie in [Übersicht zur Zugriffssteuerung auf Ressourcenebene](rlac_overview.md) und in der [{{site.data.keyword.iot_short_notm}}-Dokumentation zur Zugriffssteuerungs-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}.
+Die Zugriffssteuerung auf Ressourcenebene ermöglicht Ihnen die Steuerung des Zugriffs von Benutzern und API-Schlüsseln zur Verwaltung von Geräten. Sie können Ressourcengruppen verwenden, um die Geräte in einer Organisation zu definieren, die von den einzelnen Benutzern oder API-Schlüsseln verwaltet werden können. Benutzern und API-Schlüsseln kann ein Rolle-zu-Gruppe-Paar zugewiesen werden, in dem definiert ist, dass nur Operationen ausgeführt werden können, die von der angegebenen Rolle auf Geräten abgedeckt sind, die in den entsprechenden Gruppen enthalten sind. Weitere Informationen zur Zugriffssteuerung auf Ressourcenebene erhalten Sie in [Übersicht zur Zugriffssteuerung auf Ressourcenebene](rlac_overview.html) und in der [{{site.data.keyword.iot_short_notm}}-Dokumentation zur Zugriffssteuerungs-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}.
 
 ## Zugriffssteuerung auf Ressourcenebene konfigurieren - Prozessablauf
 {: #RLAC_process}
@@ -26,7 +24,7 @@ Der folgende Prozessablauf wird normalerweise verwendet, um die Zugriffssteuerun
 1. [Erstellen Sie eine Organisation](../iotplatform_overview.html#organizations).
 2. [Erstellen Sie Benutzer](../add_users.html#adding-new-users) und [API-Schlüssel](../platform_authorization.html#api-key).
 3. [Erstellen Sie Ressourcengruppen](rlac.html#create_delete_group).
-4. [Weisen Sie den Benutzern und API-Schlüsseln Rolle-zu-Gruppen-Zuordnungen zu](rlac.html#assign_roletoegroup).
+4. [Weisen Sie den Benutzern und API-Schlüsseln Rolle-zu-Gruppen-Zuordnungen zu](rlac.html#assign_roletogroup).
 5. [Fügen Sie Geräte zu den Ressourcengruppen hinzu](rlac.html#add_device).
 6. [Aktivieren Sie die Zugriffssteuerung auf Ressourcenebene](rlac.html#RLAC_enable).
 

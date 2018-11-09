@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -185,7 +185,7 @@ Quando il client del dispositivo si connette, effettua automaticamente la sottos
 |`commandName`  | Una stringa, che specifica il nome del comando che è stato richiamato. |  
 |`format`  | Una stringa, che specifica il formato dell'evento, ad esempio, JSON. |
 |`payload`  | Una stringa, che specifica i dati per il payload del comando.  |
-|`topic`  | Quando pubblicato come un dispositivo, la stringa topic non include il tipo o l'ID del dispositivo; vengono presi dall'ID del client.  Ad esempio, `iot-2/evt/event_id/fmt/format_string`.  Quando pubblicato come un'applicazione o un gateway invece di come un dispositivo, la stringa topic deve includere l'ID e il tipo del dispositivo.  Ad esempio `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
+|`topic`  | Quando pubblicato come un dispositivo, la stringa di argomento non include il tipo o l'ID del dispositivo; vengono presi dall'ID del client.  Ad esempio, `iot-2/evt/event_id/fmt/format_string`.  Quando pubblicato come applicazione o gateway per conto di un dispositivo, l'argomento deve includere il tipo e l'ID del dispositivo.  Ad esempio `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
 
 
 ```

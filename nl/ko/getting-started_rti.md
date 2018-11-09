@@ -24,7 +24,7 @@ lastupdated: "2018-01-17"
 ## 시작하기 전에
 {: #prereqs}
 
-[IBM Cloud 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/registration/){: new_window}, {{site.data.keyword.iot_short_notm}} 서비스의 인스턴스 및 다음 요구사항을 충족하는 디바이스가 필요합니다. 
+[IBM Cloud 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/registration/){: new_window}, {{site.data.keyword.iot_short_notm}} 서비스의 인스턴스 및 다음 요구사항을 충족하는 디바이스가 필요합니다.
 
 *	디바이스가 HTTP 또는 MQTT 프로토콜을 사용하여 통신할 수 있어야 합니다.
 
@@ -34,7 +34,7 @@ lastupdated: "2018-01-17"
 
 ## 1단계: 디바이스 등록
 
-[{{site.data.keyword.iot_short_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://internetofthings.ibmcloud.com){: new_window}에서 한 번에 하나씩 디바이스를 추가하거나 [Watson IoT Platform API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window}를 사용하여 여러 디바이스를 추가할 수 있습니다. 
+[{{site.data.keyword.iot_short_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://internetofthings.ibmcloud.com){: new_window}에서 한 번에 하나씩 디바이스를 추가하거나 [Watson IoT Platform API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window}를 사용하여 여러 디바이스를 추가할 수 있습니다.
 
 {{site.data.keyword.iot_short_notm}} 대시보드에서 디바이스를 추가하려면 다음을 수행하십시오.
 
@@ -43,14 +43,14 @@ lastupdated: "2018-01-17"
     {{site.data.keyword.iot_short_notm}} 웹 콘솔은 새 브라우저 탭에서 다음 URL을 엽니다.
 
     ```
-     https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+ https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
     ```
 
     여기서 *org_id*는 [{{site.data.keyword.iot_short_notm}} 조직](iotplatform_overview.html#organizations){: new_window}의 ID입니다.
 
-2. 개요 대시보드의 메뉴 분할창에서 **디바이스**를 선택한 다음 **디바이스 추가**를 클릭합니다.
+2. 개요 대시보드의 메뉴 분할창에서 **디바이스**를 선택한 다음 **디바이스 추가**를 클릭하십시오.
 
-3. 추가하는 디바이스의 디바이스 유형을 작성합니다.
+3. 추가하는 디바이스의 디바이스 유형을 작성하십시오.
 
     {{site.data.keyword.iot_short_notm}}에 연결된 각 디바이스는 디바이스 유형과 연관되어야 합니다. 디바이스 유형은 공통 특성을 공유하는 디바이스 그룹입니다.
 
@@ -64,9 +64,9 @@ lastupdated: "2018-01-17"
         속성과 메타데이터는 나중에 추가하고 편집할 수 있습니다.
         {: tip}
 
-4. **다음**을 클릭하여 선택한 디바이스 유형의 디바이스를 추가하는 프로세스를 시작합니다.
+4. **다음**을 클릭하여 선택한 디바이스 유형의 디바이스를 추가하는 프로세스를 시작하십시오.
 
-5. 디바이스 ID(예: `my_first_device`)를 입력합니다.
+5. 디바이스 ID(예: `my_first_device`)를 입력하십시오.
 
     디바이스 ID는 {{site.data.keyword.iot_short_notm}} 대시보드에서 디바이스를 식별하는 데 사용하고 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하는 데도 필요한 매개변수입니다.
 
@@ -74,15 +74,15 @@ lastupdated: "2018-01-17"
 
     네트워크 연결 디바이스의 경우, 구분하는 콜론이 없는 디바이스 MAC 주소가 디바이스 ID가 될 수 있습니다.
 
-5. **다음**을 클릭하여 프로세스를 완료합니다.
+5. **다음**을 클릭하여 프로세스를 완료하십시오.
 
 6. 인증 토큰을 제공하거나 자동으로 생성된 토큰을 허용하십시오. 고유 토큰을 작성하도록 선택하는 경우, 길이는 8 - 36자이고 영숫자 문자와 특수 문자(`_`, `.`, `!`, `&`, `@`, `?`, `\*`, `+`, `(`, `)` 및 `-`)로만 구성되어야 합니다.
 
     토큰에는 반복된 문자 시퀀스, 사전 단어, 사용자 이름 또는 기타 사전 정의된 시퀀스가 포함되지 않아야 합니다.
 
-7. 요약 정보가 올바른지 확인한 다음 **추가**를 클릭하여 연결을 추가합니다.
+7. 요약 정보가 올바른지 확인한 다음 **추가**를 클릭하여 연결을 추가하십시오.
 
-8. 디바이스 정보 페이지에서 다음 세부사항을 복사하고 저장합니다.
+8. 디바이스 정보 페이지에서 다음 세부사항을 복사하고 저장하십시오.
 
     * 조직 ID
     * 디바이스 유형

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-03-14"
 
 [Quickstart ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://quickstart.internetofthings.ibmcloud.com/#/){: new_window}는 디바이스를 {{site.data.keyword.iot_full}}에 빠르게 연결하는 데 사용할 수 있는 개방형 샌드박스입니다. 디바이스에서 MQTT 메시징 프로토콜을 지원하는 경우 Quickstart에 쉽게 연결할 수 있습니다.
 
-예를 들어, 다양한 디바이스를 Quickstart 서비스에 연결할 수 있는 방법을 설명하는 튜토리얼 및 레시피는 [DeveloperWorks 레시피 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/){: new_window}로 이동하십시오. 
+예를 들어, 다양한 디바이스를 Quickstart 서비스에 연결할 수 있는 방법을 설명하는 튜토리얼 및 레시피는 [DeveloperWorks 레시피 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/){: new_window}로 이동하십시오.
 
 - [OpenBlocks IoT BX1G ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
 - [Reactive Blocks ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
@@ -68,7 +68,7 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 
 ```
 
-이전 프로세스를 실행하는 중에 디바이스를 작성할 수 있습니다. 이 예에서는 다음 코드에 간략하게 설명된 대로, 유형이 `mosquitto`인 디바이스를 연결한 다음 `mosquitto_pub`를 사용하여 서비스에 두 이벤트를 보냅니다. 
+이전 프로세스를 실행하는 중에 디바이스를 작성할 수 있습니다. 이 예에서는 다음 코드에 간략하게 설명된 대로, 유형이 `mosquitto`인 디바이스를 연결한 다음 `mosquitto_pub`를 사용하여 서비스에 두 이벤트를 보냅니다.
 
 ```
     [user@host ~]$ mosquitto_pub -h quickstart.messaging.internetofthings.ibmcloud.com -p 1883 -i "d:quickstart:mosquitto:myDeviceId" -t iot-2/evt/helloworld/fmt/json -m "{\"helloworld\": 1}"

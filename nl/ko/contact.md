@@ -15,7 +15,7 @@ lastupdated: "2018-01-17"
 # {{site.data.keyword.iot_short_notm}} 지원에 문의
 {: #gettinghelp}
 
-{{site.data.keyword.iot_full}} 사용 지원을 위해 연락을 취하는 옵션에는 여러 가지가 있습니다(예: 포럼을 통해, Slack을 통해 또는 지원 티켓을 열어 도움 받기). 아이디어 포털을 사용하여 {{site.data.keyword.iot_short_notm}}의 개선사항에 대한 아이디어를 제출할 수도 있습니다. 
+{{site.data.keyword.iot_full}} 사용 지원을 위해 연락을 취하는 옵션에는 여러 가지가 있습니다(예: 포럼을 통해, Slack을 통해 또는 지원 티켓을 열어 도움 받기). 아이디어 포털을 사용하여 {{site.data.keyword.iot_short_notm}}의 개선사항에 대한 아이디어를 제출할 수도 있습니다.
 
 ## 포럼
 

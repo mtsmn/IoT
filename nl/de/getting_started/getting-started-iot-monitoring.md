@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -13,14 +13,14 @@ lastupdated: "2017-06-16"
 {:screen: .screen}
 {:tip: .tip}
 
-# Anleitung 3: Gerätedaten überwachen
+# Anleitung 2: Gerätedaten überwachen
 Nachdem Sie nun eine Verbindung für mindestens ein Gerät hergestellt haben, sollten Sie nun mit der Überwachung der Gerätedaten in Echtzeit beginnen.
 {:shortdesc}
 
 ## Übersicht und Ziel
 {: #overview}  
 
-In der vorliegenden Anleitung werden Sie eine Überwachungsanwendung unter {{site.data.keyword.Bluemix_notm}} bereitstellen, um Daten Ihrer Geräte anzuzeigen.
+In der vorliegenden Anleitung werden Sie eine Überwachungsanwendung unter {{site.data.keyword.Bluemix}} bereitstellen, um Daten Ihrer Geräte anzuzeigen.
 
 Wie bereits in Anleitung 1 können Sie einen oder beide der folgenden Lösungswege (Pfade) befolgen:
 - Pfad A: [Schritt 1A - Webanwendung für Überwachung bereitstellen und verbinden.](#deploy_app)  
@@ -60,7 +60,7 @@ Wenn Sie [Anleitung 1: Einführung zu {{site.data.keyword.iot_short_notm}} und z
 ## Schritt 1A - Webanwendung für Überwachung bereitstellen und verbinden
 {: #deploy_app}
 
-Die Beispielapp für die Anlagenüberwachung listet alle Geräte vom Typ 'iot-conveyor-belt' auf, die mit Ihrer {{site.data.keyword.iot_short_notm}}-Organisation verbunden sind. Außerdem wird eine Teilmenge der Ereignisdaten wie z. B. Angaben zu RPM, zur letzten Aktualisierung und zur Geräte-ID aufgelistet.
+Die Beispielapp für die Anlagenüberwachung listet alle Geräte vom Typ 'iot-conveyor-belt' auf, die mit Ihrer {{site.data.keyword.iot_full}}-Organisation verbunden sind. Außerdem wird eine Teilmenge der Ereignisdaten wie z. B. Angaben zu RPM, zur letzten Aktualisierung und zur Geräte-ID aufgelistet.
 
 Die Beispielapp wird mithilfe der Node.js-Clientbibliotheken unter [https://github.com/ibm-watson-iot/iot-nodejs ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window} erstellt.
 
@@ -71,7 +71,7 @@ Im Rahmen dieser Anleitung werden Sie die folgenden Arbeitsschritte ausführen:
 - Konfigurieren einer Beispielapp zur Herstellung einer Verbindung zu {{site.data.keyword.iot_short_notm}} mithilfe eines API-Schlüssels und eines Authentifizierungstokens.
 - Verwenden der Webanwendung zur Überwachung Ihrer verbundenen Laufbandgeräte.  
 
-### Detaillierte Schritte
+### Detaillierte Schritte zum Bereitstellen und Verbinden der Webanwendung für die Überwachung
 Die folgenden Schritte führen Sie durch die Erstellung und Bereitstellung der App unter {{site.data.keyword.Bluemix_notm}}. Informationen zur lokalen Ausführung der App finden Sie in der Readme-Datei von GitHub.
 1. Klonen Sie das GitHub-Repository der Node.js-Beispielapp für die *Anlagenüberwachung*.  
 Verwenden Sie das bevorzugte Git-Tool, um das folgende Repository zu klonen:  
@@ -179,7 +179,7 @@ Im Rahmen dieser Anleitung werden Sie die folgenden Arbeitsschritte ausführen:
 - Konfigurieren von drei Benutzerschnittstellenwidgets zur Anzeige von Gerätedaten wie Messanzeigen und Diagrammen.
 - Verwenden der Webanwendung zur Überwachung Ihres verbundenen Laufbandgeräts.  
 
-### Detaillierte Schritte
+### Detaillierte Schritte zum Erstellen einer Überwachungsbenutzerschnittstelle mithilfe der Widgetbibliothek
 Die folgenden Schritte führen Sie durch die Erstellung und Bereitstellung der App unter {{site.data.keyword.Bluemix_notm}}. Informationen zur lokalen Ausführung der App finden Sie in der Readme-Datei von GitHub.
 1. Klonen Sie das GitHub-Repository der Beispielapp für die *Widgetbibliotheksüberwachung*.  
 Verwenden Sie das bevorzugte Git-Tool, um das folgende Repository zu klonen:  
@@ -291,17 +291,17 @@ Anwendungen:  </br>
   \- YOUR_IOT_PLATFORM_NAME  </br>
 </pre></code>
  2. Melden Sie sich bei Ihrem {{site.data.keyword.Bluemix_notm}}-Konto über die Cloud Foundry-CLI an.  
-Weitere Informationen finden Sie in der [Dokumentation zur Cloud Foundry-CLI![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/cf-cli/){: new_window}.  
-Geben Sie den folgenden Befehl an der Befehlszeile ein:  
+ Weitere Informationen finden Sie in der [Dokumentation zur Cloud Foundry-CLI![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/cf-cli/){: new_window}.  
+ Geben Sie den folgenden Befehl an der Befehlszeile ein:  
    ```
  cf login
    ```
-Wenn Sie vom System dazu aufgefordert werden, dann wählen Sie die Organisation und den Bereich aus, in denen Sie die Überwachungsapp bereitstellen wollen.
+ Wenn Sie vom System dazu aufgefordert werden, dann wählen Sie die Organisation und den Bereich aus, in denen Sie die Überwachungsapp bereitstellen wollen.
  5. Legen Sie bei Bedarf den API-Endpunkt fest, indem Sie den Befehl 'cf api' ausführen.   
-Ersetzen Sie dabei den Wert für `API-ENDPOINT` durch den API-Endpunkt Ihrer Region.
+ Ersetzen Sie dabei den Wert für `API-ENDPOINT` durch den API-Endpunkt Ihrer Region.
    ```
-cf api API-ENDPOINT
-  ```
+ cf api API-ENDPOINT
+   ```
  Beispiel: `cf api https://api.ng.bluemix.net`
  <table>
  <tr>
@@ -354,7 +354,7 @@ Technische Details finden Sie unter:
 - Pfad B: Widgetbibliotheksapp Ihren Anforderungen anpassen.  
 Technische Details finden Sie unter:
  - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
-- [Anleitung 4: Große Anzahl von Geräten simulieren](getting-started-iot-large-scale-simulation.html)  
-Erweitern Sie die Basissimulation, indem Sie eine große Anzahl selbstausführender Simulatoren zu Ihrer Umgebung hinzufügen. Diese Erweiterung ermöglicht Ihnen die Ausführung der grundlegenden Analyse- und Überwachungsfunktionen aus den vorherigen Anleitungen in einer realistischeren Umgebung mit mehreren Geräten.
+- [Anleitung 3: Große Anzahl von Geräten simulieren](getting-started-iot-large-scale-simulation.html)  
+Erweitern Sie die Basissimulation, indem Sie eine große Anzahl selbstausführender Simulatoren zu Ihrer Umgebung hinzufügen.
 - [Weitere Informationen zu {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [Weitere Informationen zu {{site.data.keyword.iot_short_notm}}-APIs](/docs/services/IoT/reference/api.html){:new_window}

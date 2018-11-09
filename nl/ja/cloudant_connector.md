@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-10-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -54,6 +54,7 @@ lastupdated: "2017-10-18"
 }
 
 ```
+MQTT デバイスがメッセージを {{site.data.keyword.iot_short_notm}} に送信する際に使用するサービスの品質 (QoS) は、メッセージが {{site.data.keyword.iot_short_notm}} から {{site.data.keyword.cloudant_short_notm}} に送信される場合には適用されません。一般に、メッセージは一度 {{site.data.keyword.cloudant_short_notm}} に送信されます。まれに、メッセージが複数回送信されるか、1 回も送信されないことがあります。 
 
 ## 始めに  
 {: #byb}
@@ -63,6 +64,8 @@ lastupdated: "2017-10-18"
 - {{site.data.keyword.Bluemix_notm}} カタログを使用して、{{site.data.keyword.iot_short_notm}} と同じ {{site.data.keyword.Bluemix_notm}} スペースに {{site.data.keyword.cloudant_short_notm}} をセットアップします。
 
 {{site.data.keyword.Bluemix_notm}} 組織で開発者特権を持っていることと、{{site.data.keyword.Bluemix_notm}} を介してサインインしていることを確認してください。 {{site.data.keyword.Bluemix_notm}} からサインインしていない場合、または、この {{site.data.keyword.Bluemix_notm}} 組織の開発者特権を持っていない場合、{{site.data.keyword.cloudant_short_notm}} と {{site.data.keyword.iot_short_notm}} のバインディングを許可することはできません。
+
+## {{site.data.keyword.iot_short_notm}} ダッシュボードを使用した {{site.data.keyword.cloudant_short_notm}} サービスの {{site.data.keyword.iot_short_notm}} へのバインド
 
 {{site.data.keyword.cloudant_short_notm}} を接続するには、以下の手順を実行します。
 
@@ -78,12 +81,12 @@ lastupdated: "2017-10-18"
 
   c. データベース名を設定するためのオプションを選択します。 データベース名は、`iotp_<orgID>_<dbname>_<bucket_name>` という形式で、それぞれの意味は次のとおりです。
 
- +  * `<orgID>` は組織 ID です。
- +  * `<dbname>` は、`「データベース名」`フィールドで制御するデータベース名のこの部分の選択項目です。
- +  * `<bucket_name>` は、`「バケット間隔」`フィールドの選択項目によって決まるストリングです。
- +    * バケット間隔が`「日」`の場合、`<bucket_name>` は `yyyy-mm-dd` になります。  例えば、2016 年 7 月 6 日のイベントであれば `2016-07-06` です。
- +    * バケット間隔が`「週」`の場合、`<bucket_name>` は `yyyy-'w'ww` になります (`'w'ww` は週の番号)。  例えば、2016 年の第 3 週のイベントであれば `2016-w03` です。
- +    * バケット間隔が`「月」`の場合、`<bucket_name>` は `yyyy-mm` になります。  例えば、2016 年 7 月のイベントであれば `2016-07` です。
+   * `<orgID>` は組織 ID です。
+   * `<dbname>` は、`「データベース名」`フィールドで制御するデータベース名のこの部分の選択項目です。
+   * `<bucket_name>` は、`「バケット間隔」`フィールドの選択項目によって決まるストリングです。
+     * バケット間隔が`「日」`の場合、`<bucket_name>` は `yyyy-mm-dd` になります。  例えば、2016 年 7 月 6 日のイベントであれば `2016-07-06` です。
+     * バケット間隔が`「週」`の場合、`<bucket_name>` は `yyyy-'w'ww` になります (`'w'ww` は週の番号)。  例えば、2016 年の第 3 週のイベントであれば `2016-w03` です。
+     * バケット間隔が`「月」`の場合、`<bucket_name>` は `yyyy-mm` になります。  例えば、2016 年 7 月のイベントであれば `2016-07` です。
 
 5. **「Authorize」**をクリックします。
 6. 許可ダイアログ・ボックスの**「Confirm」**をクリックします。

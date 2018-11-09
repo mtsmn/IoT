@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-08-25"
+  years: 2016, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -12,20 +12,28 @@ lastupdated: "2017-08-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Controllo dell'accesso al gateway (Beta)
+# Controllo dell'accesso al gateway
 {: #gateway-access-control}
 
-I dispositivi gateway sono una classe specializzata di dispositivi che possono agire per conto di altri dispositivi. I gruppi di risorse gateway definiscono in una organizzazione quali gateway possono interagire al posto di quali dispositivi. Ai gateway può essere assegnato il ruolo *Gateway standard*. I gateway standard possono soltanto pubblicare o sottoscrivere i messaggi al posto dei dispositivi nel loro gruppo di risorse.
+I dispositivi gateway sono una classe specializzata di dispositivi che possono agire per conto di altri dispositivi. I gruppi di risorse gateway definiscono in una organizzazione quali gateway possono interagire al posto di quali dispositivi. I ruoli gateway determinano la capacità del gateway di registrare i dispositivi in Watson IoT Platform.
 {: #shortdesc}
 
-**Importante:** la funzione Controllo dell'accesso al gateway di {{site.data.keyword.iot_full}} è disponibile solo come parte di un programma beta limitato. Futuri aggiornamenti possono includere modifiche incompatibili con la versione corrente di questa funzione. Provala e [facci sapere cosa ne pensi ![Icona link esterno](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+Utilizzi i gruppi di risorse per consentire ai gateway di agire per conto di un sottoinsieme dei dispositivi di un'organizzazione. I gateway possono solo pubblicare o sottoscrivere messaggi per se stessi e per conto di dispositivi che si trovano nel loro gruppo di risorse. 
 
-Per informazioni sulla pubblicazione degli eventi dai dispositivi gateway utilizzando le API, consulta [API di messaggistica HTTP per i dispositivi gateway](../gateways/gw_intro_api.html).
+Quando viene creato un nuovo gateway, viene creato anche un gruppo di risorse predefinito che viene assegnato al gateway. Il gruppo di risorse predefinito non può essere rimosso dal gateway. I gateway esistenti senza gruppi di risorse possono continuare ad agire per conto di tutti i dispositivi dell'organizzazione.
+
+Per informazioni sulla pubblicazione di eventi dai dispositivi gateway tramite API, consulta [API HTTP per i dispositivi gateway](gw_api.html).
 
 ## Assegnazione di un ruolo a un gateway
 {: #gw_roles}
 
-L'assegnazione di un ruolo a un gateway è obbligatoria per permettere al gateway di avere di un gruppo di risorse. I gateway senza un gruppo di risorse possono agire al posto di tutti i dispositivi nell'organizzazione. L'assegnazione automatica del ruolo *Gateway standard* crea un nuovo gruppo di risorse per il gateway. Quando un gateway viene assegnato a un gruppo di risorse, può agire solo al posto dei dispositivi in tale gruppo di risorse e per se stesso, anche se il suo ruolo viene modificato. 
+Per assegnare un gateway a un gruppo di risorse, devi prima assegnare il gateway a un ruolo. Ai gateway appena creati viene assegnato il ruolo *Privileged Gateway* per impostazione predefinita e vengono assegnati a un gruppo di risorse predefinito. I gateway con il ruolo privilegiato possono registrare automaticamente i dispositivi, che vengono aggiunti al gruppo di risorse predefinito.
+
+I gateway con il ruolo *Standard Gateway* non possono registrare automaticamente i dispositivi. 
+
+Una volta assegnato a un gateway un gruppo di risorse, il gateway può agire solo per conto dei dispositivi di quel gruppo di risorse e di se stesso, anche se il suo ruolo viene modificato.
+
+Per ulteriori informazioni sui ruoli del gateway, consulta [Ruoli gateway](../roles_index.html#gateway_roles).
 
 Per assegnare un ruolo a un gateway, utilizza la seguente API dove *${clientID}* è il ClientID codificato URL nel formato *d:${orgId}:${typeId}:${deviceId}* per i dispositivi o *g:${orgId}:${typeId}:${deviceId}* per i gateway:
 

@@ -15,7 +15,7 @@ lastupdated: "2018-01-17"
 # {{site.data.keyword.iot_short_notm}} サポートへのお問い合わせ
 {: #gettinghelp}
 
-{{site.data.keyword.iot_full}} の使用方法についてサポートに連絡する方法は複数あります。例えば、フォーラムや Slack を使用したり、サポート・チケットを開いたりすることができます。アイデア・ポータルを使用して、{{site.data.keyword.iot_short_notm}} の機能向上についてのアイデアを投稿することもできます。
+{{site.data.keyword.iot_full}} の使用方法についてサポートに連絡する方法は複数あります。例えば、フォーラムや Slack を使用したり、サポート・チケットを開いたりすることができます。 アイデア・ポータルを使用して、{{site.data.keyword.iot_short_notm}} の機能向上についてのアイデアを投稿することもできます。
 
 ## フォーラム
 

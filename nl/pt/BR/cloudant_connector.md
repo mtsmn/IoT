@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-10-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -54,6 +54,7 @@ Se os dados do dispositivo não for um JSON válido ou se o formato não estiver
 }
 
 ```
+A qualidade de serviço (QoS) que é usada por um dispositivo MQTT para enviar mensagens para o {{site.data.keyword.iot_short_notm}} não se aplica quando as mensagens são enviadas do {{site.data.keyword.iot_short_notm}} para o {{site.data.keyword.cloudant_short_notm}}. Geralmente, uma mensagem é enviada para o {{site.data.keyword.cloudant_short_notm}} uma vez. Raramente, pode ser possível que uma mensagem seja enviada mais de uma vez ou nem seja enviada. 
 
 ## Antes de iniciar  
 {: #byb}
@@ -63,6 +64,8 @@ Antes de conectar um {{site.data.keyword.cloudant_short_notm}} a seu serviço do
 - Configure um {{site.data.keyword.cloudant_short_notm}} no mesmo espaço do {{site.data.keyword.Bluemix_notm}} que seu {{site.data.keyword.iot_short_notm}} usando o Catálogo do {{site.data.keyword.Bluemix_notm}}.
 
 Assegure-se de ter privilégios de desenvolvedor na organização do {{site.data.keyword.Bluemix_notm}} e de estar conectado por meio do {{site.data.keyword.Bluemix_notm}}. Se você não estiver conectado por meio do {{site.data.keyword.Bluemix_notm}} ou não tiver privilégios de desenvolvedor nessa organização do {{site.data.keyword.Bluemix_notm}}, não será possível autorizar a ligação do {{site.data.keyword.cloudant_short_notm}} e do {{site.data.keyword.iot_short_notm}}.
+
+## Usando o painel do {{site.data.keyword.iot_short_notm}} para ligar um serviço {{site.data.keyword.cloudant_short_notm}} ao {{site.data.keyword.iot_short_notm}}
 
 Conclua as etapas a seguir para conectar um {{site.data.keyword.cloudant_short_notm}}:
 
@@ -79,12 +82,12 @@ listados na seção Configurar armazenamento de dados históricos.
 
   c. Escolha opções que determinam o nome do banco de dados. O nome do banco de dados será `iotp_<orgID>_<dbname>_<bucket_name>` em que:
 
- +  * `<orgID>` é o ID da organização.
- +  * `<dbname>` é sua opção para essa parte do nome do banco de dados controlado pelo campo `Nome do banco de dados`.
- +  * `<bucket_name>` é uma sequência determinada pela sua opção para o campo `Intervalo de depósito`:
- +    * Para intervalos de depósito em `dia`, `<bucket_name>` será `yyyy-mm-dd`.  Por exemplo, `2016-07-06` para eventos em 6 de julho de 2016.
- +    * Para intervalos de depósito em `semana`,  `<bucket_name>` será `yyyy-'w'ww` em que `'w'ww` indica um número de semana.  Por exemplo, `2016-w03` para eventos na terceira semana de 2016.
- +    * Para intervalos de depósito em `mês` `<bucket_name>` será `yyyy-mm`.  Por exemplo, `2016-07` para eventos em julho de 2016.
+   * `<orgID>` é o ID da organização.
+   * `<dbname>` é sua opção para essa parte do nome do banco de dados controlado pelo campo `Nome do banco de dados`.
+   * `<bucket_name>` é uma sequência determinada pela sua opção para o campo `Intervalo de depósito`:
+     * Para intervalos do depósito  ` day ` ,  `<bucket_name>` será `yyyy-mm-dd`.  Por exemplo, `2016-07-06` para eventos em 6 de julho de 2016.
+     * Para intervalos do depósito  ` week `   `<bucket_name>` será `yyyy-'w'ww` em que `'w'ww` indica um número de semana.  Por exemplo, `2016-w03` para eventos na terceira semana de 2016.
+     * Para intervalos do depósito  ` mês `   `<bucket_name>` será `yyyy-mm`.  Por exemplo, `2016-07` para eventos em julho de 2016.
 
 5. Clique em **Autorizar**.
 6. Clique em **Confirmar** na caixa de diálogo de autorização.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-16"
+  years: 2016, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -23,7 +23,7 @@ Die Tabellen zeigen Zugriffsebenen für:
 <!-- [Historian Operations](#app-historian) -->
 - [Organisationsoperationen](#app-org-ops)
 - [Zugriffssteuerungsoperationen](#app-access-ops)
-- [Analyseoperationen](#app-analytics-ops)
+<!-- - [Analytics Operations](#app-analytics-ops) -->
 - [Operationen von Drittanbietern](#app-third-party)  
 <!-- - [Risk Management Operations](#app-risk-mgt) -->
 
@@ -103,18 +103,16 @@ Rollen anzeigen|X|X|-|-|-|-
 Angepasste Rollen erstellen, aktualisieren, löschen|-|X|-|-|-|-
 Operationen anzeigen*|X|X|-|-|-|-
 
-### Analyseoperationen {: #app-analytics-ops}
-
-Analyseoperationen ||| Anwendungsrollen||||
-:--------: | -------------|-------------|---------------|-----|---
-           | **Standardanwendung** | **Operationsanwendung** | **Vertrauenswürdige Back-End-Anwendung** | **Datenprozessoranwendung** | **Visualisierungsanwendung** | **Geräteanwendung**
-Analyseregeln anzeigen|X|X|-|X|X|-
-Analyseregeln verwalten|X|X|-|X|-|-
-Analyseaktionen anzeigen|X|X|-|X|X|-
-Analyseaktionen verwalten|X|X|-|X|X|-
-Analysealerts anzeigen|X|X|-|X|X|X
-Nachrichtenschemas der Analyse anzeigen|X|X|-|X|X|-
-Nachrichtenschemas der Analyse verwalten|X|X|-|X|-|-
+<!-- ### Analytics Operations {: #app-analytics-ops}
+Analytics Operations ||| Application Roles||||
+           | **Standard Application** | **Operations Application** | **Backend Trusted Application** | **Data Processor Application** | **Visualization Application** | **Device Application**
+View analytics rules|X|X|-|X|X|-
+Manage analytics rules|X|X|-|X|-|-
+View analytics actions|X|X|-|X|X|-
+Manage analytics actions|X|X|-|X|X|-
+View analytics alerts|X|X|-|X|X|X
+View analytics message schemas|X|X|-|X|X|-
+Manage analytics message schemas|X|X|-|X|-|- -->
 
 ### Serviceoperationen von Drittanbietern {: #app-third-party}
 

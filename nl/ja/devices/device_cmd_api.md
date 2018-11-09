@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2015, 2017
-lastupdated: "2017-10-04"
+ years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -28,17 +28,18 @@ lastupdated: "2017-10-04"
 
 クライアント・セキュリティーの詳細と、クライアントを {{site.data.keyword.iot_short_notm}} のデバイスに接続する方法については、[{{site.data.keyword.iot_short_notm}} へのアプリケーション、デバイス、ゲートウェイの接続](../reference/security/connect_devices_apps_gw.html)を参照してください。
 
-## イベントのパブリッシュ
+## イベントのパブリッシュ 
 {: #event_publication}
 
 MQTT メッセージング・プロトコルの使用に加えて、HTTP REST API コマンドを使用して、HTTP を介してイベントを {{site.data.keyword.iot_short_notm}} にパブリッシュするようにデバイスを構成することもできます。
 
 {{site.data.keyword.iot_short_notm}} に接続されているデバイスから ``POST`` 要求を送信するには、以下のいずれかの URL を使用します。
 
-### 非セキュアな POST 要求
+### イベントをパブリッシュするための非セキュアな POST 要求
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-### セキュアな POST 要求
+### イベントをパブリッシュするためのセキュアな POST 要求
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
@@ -46,7 +47,7 @@ MQTT メッセージング・プロトコルの使用に加えて、HTTP REST AP
 
 ### 認証
 
-すべての要求には許可ヘッダーを組み込む必要があります。基本認証が、唯一サポートされる方法です。デバイスが {{site.data.keyword.iot_short_notm}} HTTP REST API を使用して HTTP 要求を行う場合、以下の資格情報が必要です。
+すべての要求には許可ヘッダーを組み込む必要があります。 基本認証が、唯一サポートされる方法です。 デバイスが {{site.data.keyword.iot_short_notm}} HTTP REST API を使用して HTTP 要求を行う場合、以下の資格情報が必要です。
 
 |資格情報|必要な入力|
 |:---|:---|
@@ -56,26 +57,28 @@ MQTT メッセージング・プロトコルの使用に加えて、HTTP REST AP
 
 ### Content-Type 要求ヘッダー
 
-コンテンツが JSON でない場合、`Content-Type` 要求ヘッダーを要求に含める必要があります。以下の表に、サポート対象タイプがどのように {{site.data.keyword.iot_short_notm}} 内部フォーマットにマップされるかを示します。
+コンテンツが JSON でない場合、`Content-Type` 要求ヘッダーを要求に含める必要があります。 以下の表に、サポート対象タイプがどのように {{site.data.keyword.iot_short_notm}} 内部フォーマットにマップされるかを示します。
 
-|Content-Type ヘッダー|{{site.data.keyword.iot_short_notm}} での形式 |
+|Content-Type ヘッダー|{{site.data.keyword.iot_short_notm}} での形式|
 |:---|:---|
 |text/plain|"text"
 |application/json| "json"
-|application/xml| "xml"
+|application/xml | "xml"
 |application/octet-stream|"bin"
+
 
 ## コマンドの受信
 {: #receive_commands}
 
-MQTT メッセージング・プロトコルの使用に加えて、HTTP Messaging API コマンドを使用することで、HTTP を介してコマンドを {{site.data.keyword.iot_short_notm}} から受信するようにデバイスを構成することもできます。デバイスはそれ自体に対するコマンドを受信することができます。
+MQTT メッセージング・プロトコルの使用に加えて、HTTP Messaging API コマンドを使用することで、HTTP を介してコマンドを {{site.data.keyword.iot_short_notm}} から受信するようにデバイスを構成することもできます。 デバイスはそれ自体に対するコマンドを受信することができます。
 
 {{site.data.keyword.iot_short_notm}} に接続されているデバイスから ``POST`` 要求を送信するには、以下のいずれかの URL を使用します。
 
-### 非セキュアな POST 要求
+### コマンドを受信するための非セキュアな POST 要求
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
-### セキュアな POST 要求
+### コマンドを受信するためのセキュアな POST 要求
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
@@ -86,9 +89,9 @@ MQTT メッセージング・プロトコルの使用に加えて、HTTP Messagi
 
 
 **重要事項:**
-- *waitTimeSecs* の値は、0 から 3600 までの範囲の整数にする必要があります。デフォルト値は 0 です。
-- すべてのコマンドを受信するには、{command} コンポーネントで、「あらゆる」を意味するワイルドカード文字 (+) を使用します。このワイルドカード文字を使用すると、コマンド識別子が応答ヘッダー・フィールド *X-commandId* に含められます。
-- HTTP 応答の状況コードが 200 である場合は、コマンド・データが応答の body に含まれています。応答ヘッダー・フィールド *Content-Type* を確認すると、コンテンツ・タイプが見つかります。
+- *waitTimeSecs* の値は、0 から 3600 までの範囲の整数にする必要があります。 デフォルト値は 0 です。
+- すべてのコマンドを受信するには、{command} コンポーネントで、「あらゆる」を意味するワイルドカード文字 (+) を使用します。 このワイルドカード文字を使用すると、コマンド識別子が応答ヘッダー・フィールド *X-commandId* に含められます。
+- HTTP 応答の状況コードが 200 である場合は、コマンド・データが応答の body に含まれています。 応答ヘッダー・フィールド *Content-Type* を確認すると、コンテンツ・タイプが見つかります。
 - HTTP 応答の状況コードが 204 である場合、コマンド・データはありません。
 
 

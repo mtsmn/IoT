@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2016-10-16"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -110,7 +110,7 @@ Diagnoseprotokollinformationen werden als eine Reihe von Einträgen gespeichert.
 Attribut            | Typ       | Beschreibung                                                 | API | DMA
 ------------- | ------------- | ------------- | ------------- | -------------
  diag.errorCodes[]    | Array aus </br> ganzen Zahlen  | Array aus Fehlercodes                                        |  A  |  A  
- diag.log[]           | Array           | Array aus Diagnosedaten                                    |  A  |  A  
+ diag.log[]           | Array      | Array aus Diagnosedaten                                    |  A  |  A  
  diag.log[].message   | Zeichenfolge     | Diagnosenachricht                                          |  -   |    -
  diag.log[].timestamp | Zeichenfolge     | ISO8601 date-time: Datum und Zeit des Protokolleintrags               |  -   |    -
  diag.log[].logData   | Zeichenfolge     | byte: Diagnosedaten, base-64-codiert                      |  -   |    -

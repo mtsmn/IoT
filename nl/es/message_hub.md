@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,6 +18,8 @@ lastupdated: "2018-05-22"
 La conexión de {{site.data.keyword.messagehub_full}} a {{site.data.keyword.iot_full}} proporciona un bus de mensajes escalable de alto rendimiento para el almacenamiento de datos históricos. {{site.data.keyword.messagehub}} se crea en Apache Kafka, que es un sistema de mensajería de alto rendimiento de código abierto que proporciona una plataforma de baja latencia para manejar canales de información de datos en tiempo real.
 
 MessageHub reenvía los sucesos de las particiones mediante una clave de partición. La clave se forma concatenando el ID de organización de {{site.data.keyword.iot_short}} de 6 caracteres con el tipo de dispositivo y el ID de dispositivo. Los campos de carga útil, incluida la indicación de fecha y hora y el ID de suceso, no se utilizan para formar la clave de partición. Esta configuración garantiza que todos los sucesos procedentes de un determinado dispositivo se envían a la misma partición, de modo que los sucesos se procesan en el orden en el que se envían. 
+
+La calidad de servicio (QoS) que utiliza un dispositivo MQTT para enviar mensajes a {{site.data.keyword.iot_short_notm}} no se aplica cuando los mensajes se envían de {{site.data.keyword.iot_short_notm}} a {{site.data.keyword.messagehub}}. Normalmente, se envía un mensaje a {{site.data.keyword.messagehub}} una vez. Rara vez, podría ser posible que un mensaje se enviara más de una vez o ninguna.
 
 ## Antes de empezar  
 {: #byb}

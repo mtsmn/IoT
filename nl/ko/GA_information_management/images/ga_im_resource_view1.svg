@@ -14,9 +14,9 @@
    viewBox="0 0 631.95304 312.33241"
    id="svg5645"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="ga_im_resource_view1.svg"
-   inkscape:export-filename="T:\PUB\ABD142\ART\WORK\ship8\ga_information_management\images\ga_im_resource_view1.png"
+   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -775,15 +775,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.3624213"
-     inkscape:cx="321.56069"
-     inkscape:cy="165.45453"
+     inkscape:zoom="2.3758788"
+     inkscape:cx="369.18543"
+     inkscape:cy="154.23831"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
      inkscape:window-width="1920"
-     inkscape:window-height="1015"
+     inkscape:window-height="1012"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -945,12 +945,16 @@
        id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial"
        id="text44191"
        font-size="11"
-       x="255.65263"
+       x="247.65263"
        y="378.29739"
-       sodipodi:linespacing="125%">DeviceType</text>
+       sodipodi:linespacing="125%">
+      <tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+         id="tspan3180">디바이스 유형</tspan>
+    </text>
     <rect
        ry="0"
        rx="0"
@@ -962,29 +966,30 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000155px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
-       x="437.80649"
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="441.80649"
        y="579.53241"
        id="text18189-1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan18191-0"
-         x="437.80649"
+         x="441.80649"
          y="579.53241" /><tspan
          sodipodi:role="line"
-         x="437.80649"
-         y="593.28241"
-         id="tspan8202">논리 인터페이스 스키마</tspan><tspan
+         x="441.80649"
+         y="594.36273"
+         id="tspan8202"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim">논리 인터페이스 스키마</tspan><tspan
          sodipodi:role="line"
-         x="437.80649"
-         y="607.03241"
+         x="441.80649"
+         y="608.11273"
          id="tspan6878-8"
-         style="font-size:11.00000155px;stroke:none;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /><tspan
+         style="font-size:7.5px;stroke:none" /><tspan
          sodipodi:role="line"
-         x="437.80649"
-         y="620.78241"
+         x="441.80649"
+         y="621.86273"
          id="tspan18193-4"
-         style="font-size:11.00000155px;stroke:none;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></text>
+         style="font-size:7.5px;stroke:none" /></text>
     <rect
        ry="0"
        rx="0"
@@ -996,34 +1001,35 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000155px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
-       x="55.705894"
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="57.705894"
        y="532.74188"
        id="text18189-1-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan18191-0-3"
-         x="55.705894"
+         x="57.705894"
          y="532.74188" /><tspan
          sodipodi:role="line"
-         x="55.705894"
-         y="546.49188"
-         id="tspan8202-7">이벤트 유형</tspan><tspan
+         x="57.705894"
+         y="547.5722"
+         id="tspan8202-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim">이벤트 유형</tspan><tspan
          sodipodi:role="line"
-         x="55.705894"
-         y="560.24188"
+         x="57.705894"
+         y="561.3222"
          id="tspan6808-9"
-         style="font-size:11.00000155px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /><tspan
+         style="font-size:7.5px" /><tspan
          sodipodi:role="line"
-         x="55.705894"
-         y="573.99188"
+         x="57.705894"
+         y="575.0722"
          id="tspan6878-8-3"
-         style="font-size:11.00000155px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /><tspan
+         style="font-size:7.5px" /><tspan
          sodipodi:role="line"
-         x="55.705894"
-         y="587.74188"
+         x="57.705894"
+         y="588.8222"
          id="tspan18193-4-9"
-         style="font-size:11.00000155px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></text>
+         style="font-size:7.5px" /></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot7059"
@@ -1046,7 +1052,7 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000155px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="52.838612"
        y="614.92358"
        id="text44241"
@@ -1054,7 +1060,8 @@
          sodipodi:role="line"
          x="52.838612"
          y="614.92358"
-         id="tspan5792">이벤트 스키마</tspan><tspan
+         id="tspan5792"
+         style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">이벤트 스키마</tspan><tspan
          sodipodi:role="line"
          x="52.838612"
          y="628.67358"
@@ -1088,7 +1095,7 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000155px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="456.29712"
        y="491.6745"
        id="text18189-5-9"
@@ -1096,7 +1103,8 @@
          sodipodi:role="line"
          x="456.29712"
          y="491.6745"
-         id="tspan6913-6">논리 인터페이스</tspan></text>
+         id="tspan6913-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim">논리 인터페이스</tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -1121,20 +1129,21 @@
        sodipodi:linespacing="125%"
        id="text44235-7-0"
        y="403.36993"
-       x="270.94272"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000155px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
+       x="272.94272"
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        xml:space="preserve"><tspan
          y="403.36993"
-         x="270.94272"
+         x="272.94272"
          sodipodi:role="line"
-         id="tspan7973-8">맵핑</tspan><tspan
+         id="tspan7973-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim">맵핑</tspan><tspan
          y="417.11993"
-         x="270.94272"
+         x="272.94272"
          sodipodi:role="line"
          id="tspan6445-3-0" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000155px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="46.498795"
        y="466.55789"
        id="text18189-1-0-3"
@@ -1145,61 +1154,62 @@
          y="466.55789" /><tspan
          sodipodi:role="line"
          x="46.498795"
-         y="480.452"
-         id="tspan8202-7-7">실제 인터페이스</tspan><tspan
+         y="481.38824"
+         id="tspan8202-7-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim">실제 인터페이스</tspan><tspan
          sodipodi:role="line"
          x="46.498795"
-         y="494.59317"
+         y="495.13824"
          id="tspan6808-9-9"
-         style="font-size:11.00000155px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /><tspan
+         style="font-size:7.5px" /><tspan
          sodipodi:role="line"
          x="46.498795"
-         y="508.73438"
+         y="508.88824"
          id="tspan6878-8-3-8"
-         style="font-size:11.00000155px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /><tspan
+         style="font-size:7.5px" /><tspan
          sodipodi:role="line"
          x="46.498795"
-         y="522.87555"
+         y="522.63824"
          id="tspan18193-4-9-4"
-         style="font-size:11.00000155px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></text>
+         style="font-size:7.5px" /></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.33961332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:1.33961332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 86.951048,399.07649 115.746822,0"
        id="path5842"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.36886787px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:1.36886787px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 363.14156,400.8622 120.85741,0"
        id="path5842-9"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.01560473px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:1.01560473px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 86.566297,398.19652 0.420454,53.45517"
        id="path5634"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.91474843px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:0.91474843px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 483.85436,400.71145 1.76034,63.1567"
        id="path5638"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 86.145174,499.6333 0.4209,20.20305"
        id="path5649"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 88.249664,568.2395 0,18.51946"
        id="path5655"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.97954136px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:0.97954136px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 488.5215,526.57197 1.26489,38.29909"
        id="path5657"
        inkscape:connector-type="polyline"

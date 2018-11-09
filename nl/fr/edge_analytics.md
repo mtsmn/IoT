@@ -37,12 +37,12 @@ Le présent diagramme illustre l'architecture générale d'un environnement {{si
 
 Avant de commencer à créer des règles et des actions Edge :
 - Assurez-vous que votre passerelle est connectée à {{site.data.keyword.iot_short}} et que les données de terminal sont transmises. Pour plus d'informations, voir [Connexion de passerelles](gateways/dashboard.html).
-- Installez l'agent Edge Analytics Agent (EAA) sur votre passerelle. Pour plus d'informations, voir [Installation de l'agent Edge Analytics Agent](gateways/dashboard.html#edge). </br> **Astuce : ** Les passerelles sur lesquelles l'agent EAA est activé fournissent des données de diagnostic EAA sous la forme de messages de terminal passerelle. Pour plus d'informations, voir [Mesures de diagnostic Edge Analytics Agent](#eaa_metrics).
+- Installez l'agent Edge Analytics Agent (EAA) sur votre passerelle. Pour plus d'informations, voir [Installation de l'agent Edge Analytics Agent](gateways/dashboard.html#edge). </br> **Astuce : ** Les passerelles sur lesquelles l'agent EAA est activé fournissent des données de diagnostic EAA sous la forme de messages de terminal de passerelle. Pour plus d'informations, voir [Mesures de diagnostic Edge Analytics Agent](#eaa_metrics).
 - Assurez-vous que les propriétés de terminal que vous souhaitez utiliser comme conditions dans vos règles sont mappées à des schémas. Pour plus d'informations, voir [Connexion de terminaux](iotplatform_task.html) et [Création de schémas](im_schemas.html).
 - Recettes Edge Analytics  
 Dans votre portail de recettes, deux recettes décrivent les étapes requises pour exécuter IBM Edge Analytics. Les recettes expliquent comment installer et configurer IBM Edge Analytics Agent sur un terminal qui se trouve au-dessus d'Apache Edgent pour exécuter des analyses proches d'une source de données IoT.
- - La première recette de cette série est [Getting Started with Edge Analytics in IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window}. Elle explique comment configurer Cisco DSA Platform sur un système d'ordinateur portable et un terminal Raspberry Pi 3, installer et configurer IBM Edge Analytics Agent pour la connexion à {{site.data.keyword.iot_short}}, installer System DS Link et le configurer pour la connexion à la passerelle Edge sur {{site.data.keyword.iot_short}} en tant que terminal connecté et définir et activer la règle Edge sur la passerelle Edge, ainsi que la gestion des règles Edge à partir de {{site.data.keyword.iot_short}}.
- - Pour illustrer une utilisation avancée de Edge Analytics, la recette [Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} vous montre comment créer votre propre lien DS pour transférer des données entre un terminal Arduino Uno connecté et un terminal Raspberry Pi 3. La recette présente également les actions de filtrage de données et de traitement de terminaux locaux dans le cadre de l'alerte de règle Edge.
+ - La première recette de cette série est [Getting Started with Edge Analytics in IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window}. Elle explique comment configurer Cisco DSA Platform sur un système d'ordinateur portable et un terminal Raspberry Pi 3, installer et configurer IBM Edge Analytics Agent pour la connexion à {{site.data.keyword.iot_short}}, installer System DS Link et le configurer pour la connexion à la passerelle Edge sur {{site.data.keyword.iot_short}} en tant que terminal connecté et définir et activer la règle Edge sur la passerelle Edge, ainsi que la gestion des règles Edge à partir de {{site.data.keyword.iot_short}}.
+ - Pour illustrer une utilisation avancée de Edge Analytics, la recette [Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} vous montre comment créer votre propre lien DS pour transférer des données entre un terminal Arduino Uno connecté et un terminal Raspberry Pi 3. La recette présente également les actions de filtrage de données et de traitement de terminaux locaux dans le cadre de l'alerte de règle Edge.
 
 ## Gestion des règles et des actions Edge  
 {: #managing_rules}
@@ -118,9 +118,9 @@ Edge Analytics prend en charge deux types d'action :
 <dl>
 <dt>Réacheminement des événements vers le cloud</dt>  
 <dd>L'événement de terminal est envoyé à {{site.data.keyword.iot_short}} où il peut être utilisé dans des tableaux et dans des cartes et avec des règles Cloud Analytics. Pour plus d'informations, voir [Intégration à Cloud Analytics](#integrate_with_cloud_analytics).    
-**Astuce :** Utilisez l'action Réacheminement des événements vers le cloud pour réduire la quantité de données de terminal envoyées vers le cloud en excluant les données moins importantes directement au niveau du terminal passerelle. </dd>
+**Astuce :** Utilisez l'action Réacheminement des événements vers le cloud pour réduire la quantité de données de terminal envoyées vers le cloud en excluant les données moins importantes directement au niveau du terminal de passerelle. </dd>
 <dt>Alerte</dt>  
-<dd>Une alerte est créée sur le terminal passerelle.</dd>
+<dd>Une alerte est créée sur le terminal de passerelle.</dd>
 </dl>
 3. Définissez les paramètres obligatoires pour le type d'action que vous avez sélectionné.  
 <dl>
@@ -191,11 +191,11 @@ Une passerelle connectée sur laquelle EAA est activé envoie des informations d
 
 Pour consulter des informations sur l'état de la passerelle :
 1. Dans le tableau de bord {{site.data.keyword.iot_short}}, sélectionnez **Terminaux** dans la barre latérale de menus.
-2. Cliquez sur le terminal passerelle pour ouvrir la page contenant les détails de terminal.
+2. Cliquez sur le terminal de passerelle pour ouvrir la page contenant les détails de terminal.
 3. Accédez aux informations de diagnostic de la passerelle :  
  - Consultez la section **Evénements récents** pour obtenir la liste des derniers messages envoyés par la passerelle.
  - Consultez la section **Journaux de diagnostic** pour afficher les avertissements liés à la passerelle et d'autres messages de diagnostic.
- - Consultez la section **Sensor information** pour afficher les informations de diagnostic détaillées provenant de la passerelle. Le tableau suivant décrit les différentes propriétés qui peuvent être incluses dans les messages de terminal passerelle.
+ - Consultez la section **Sensor information** pour afficher les informations de diagnostic détaillées provenant de la passerelle. Le tableau suivant décrit les différentes propriétés qui peuvent être incluses dans les messages de terminal de passerelle.
 
 
  Propriété | Description

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-09-18"
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2017-09-18"
 
 本指南逐步指导您完成通过将 Watson Analytics (WA) 用作分析工具来可视化 {{site.data.keyword.iot_short_notm}} 设备事件数据的过程。
 
-可以使用 {{site.data.keyword.cloudantfull}} NoSQL DB 服务来收集发送到 {{site.data.keyword.iot_short_notm}} 的设备数据并将其存储在 {{site.data.keyword.Bluemix}} 中。要收集数据，必须首先将 {{site.data.keyword.iot_short_notm}} 连接到 {{site.data.keyword.cloudant_short_notm}} 服务。收集数据后，将数据导出到 CSV 文件。您可以将此文件上传到 WA，您可以在其中对设备数据进行可视化和分析。根据配置的存储区时间间隔，设备数据存储在 {{site.data.keyword.cloudant_short_notm}} 每日、每周或每月数据库中。
+可以使用 {{site.data.keyword.cloudantfull}} NoSQL DB 服务来收集发送到 {{site.data.keyword.iot_short_notm}} 的设备数据并将其存储在 {{site.data.keyword.Bluemix}} 中。要收集数据，必须首先将 {{site.data.keyword.iot_short_notm}} 连接到 {{site.data.keyword.cloudant_short_notm}} 服务。收集数据后，将数据导出到 CSV 文件。您可以将此文件上传到 WA，可在其中对设备数据进行可视化表示和分析。根据配置的存储区时间间隔，设备数据存储在 {{site.data.keyword.cloudant_short_notm}} 每日、每周或每月数据库中。
 
 ![使用 WA 分析数据的概述](images/WA_overview.png)
 
@@ -37,8 +37,8 @@ lastupdated: "2017-09-18"
 
 ## 先决条件
 
-要完成这些步骤，您必须具有使用 [Cloudant NoSQL DB ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/cloudant-nosql-db
-) 对 [{{site.data.keyword.iot_short_notm}}![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window}的访问权{: new_window}，以及对 [Watson Analytics ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/watson-analytics){: new_window} 的访问权。
+要完成这些步骤，您必须具有对安装了 [Cloudant NoSQL DB ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/cloudant-nosql-db
+) 的 [{{site.data.keyword.iot_short_notm}}![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window} 的访问权{: new_window}，以及对 [Watson Analytics ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/watson-analytics){: new_window} 的访问权。
 
 
 ## 步骤 1. 设置模拟器
@@ -71,7 +71,7 @@ lastupdated: "2017-09-18"
 1. [使用 {{site.data.keyword.iot_short_notm}} 的实例部署天气传感器模拟器 Web 应用程序 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window}，并执行详细步骤。
 
    有关天气传感器的更多信息，请参阅[天气传感器模拟器指南 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}。
-2. 等待部署完成，然后浏览到 Bluemix 仪表板。
+2. 等待部署完成，然后浏览到 IBM Cloud“仪表板”。
 3. 启动由部署过程创建的 {{site.data.keyword.iot_short_notm}} 服务“wiotp-for-weather-sensors-simulator”。
 4. 继续执行[步骤 2. 配置数据库连接器](#WA_config_db)。
 
@@ -91,7 +91,7 @@ lastupdated: "2017-09-18"
 要将 {{site.data.keyword.cloudant_short_notm}} 与 Watson Analytics 一起使用，必须配置平台数据存储，以便将 Cloudant NoSQL DB 用作历史服务。
 
 1. 在 {{site.data.keyword.cloudant_short_notm}} 仪表板上，单击导航栏中的**扩展**。
-2. 在**历史数据存储**下，单击**设置**。**配置历史数据存储**部分列出了与 {{site.data.keyword.cloudant_short_notm}} 相同的 Bluemix 空间中可用的所有 Cloudant NoSQL DB 服务。
+2. 在**历史数据存储**下，单击**设置**。**配置历史数据存储**部分列出了 {{site.data.keyword.cloudant_short_notm}} 所在的 IBM Cloud 空间中可用的所有 Cloudant NoSQL DB 服务。
 3. 选择要连接的 Cloudant NoSQL DB 服务。
 4. 指定以下 Cloudant NoSQL 数据库配置选项：
   - 存储区时间间隔 = 天
@@ -166,6 +166,8 @@ csv 列表功能将原始时间戳记分成两个新的单独的“时间”和�
    ```
 
 在此示例中，数据将按时间戳记排序，因为“截止日期”视图用于调用列表功能。您还可以通过更改 URL 中使用的视图并应用 startkey 和 endkey 属性，使用 Cloudant 视图本机过滤器功能来过滤数据。
+
+
    **示例：
 **
    ```

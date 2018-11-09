@@ -13,7 +13,7 @@ lastupdated: "2018-02-22"
 {:pre: .pre}
 {:tip: .tip}
 
-# Tutoriel Initiation
+# Tutoriel d'initiation
 {: #getting-started-with-iotp}
 
 Dans ce tutoriel d'initiation à {{site.data.keyword.iot_full}}, nous connectons un terminal IoT à {{site.data.keyword.iot_short_notm}}.
@@ -54,7 +54,7 @@ de détails du service {{site.data.keyword.iot_short_notm}}.
 
 3. Créez un type de terminal pour le terminal que vous ajoutez.
 
-    Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être associé à un type de terminal. Les types de terminaux sont des groupes de terminaux ayant des caractéristiques communes.
+    Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être associé à un type de terminal. Les types de terminal sont des groupes de terminaux ayant des caractéristiques communes.
 
     1. Cliquez sur **Créer un type de terminal**.
     2. Entrez un nom de type de terminal, par exemple, `my_device_type`, et une description pour

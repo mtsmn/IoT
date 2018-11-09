@@ -15,7 +15,7 @@ lastupdated: "2017-11-21"
 # 关于 {{site.data.keyword.iot_short_notm}}
 {: #about_iotplatform}
 
-{{site.data.keyword.iot_full}} 提供对 IoT 设备和数据的强大应用程序访问功能，可帮助您快速编写分析应用程序、可视化仪表板和移动 IoT 应用程序。
+{{site.data.keyword.iot_full}} 提供对 IoT 设备和数据的强大应用程序访问，可帮助您快速编写分析应用程序、可视化仪表板和移动 IoT 应用程序。
 {:shortdesc}
 
 通过 {{site.data.keyword.iot_short_notm}}，您可以执行强大的设备管理操作，并存储和访问设备数据，连接各种设备和网关设备。{{site.data.keyword.iot_short_notm}} 通过使用 MQTT 和 TLS，提供与设备之间的安全通信。
@@ -35,7 +35,7 @@ lastupdated: "2017-11-21"
 
 向 {{site.data.keyword.iot_short_notm}} 注册时，会为您提供组织标识。您的组织标识是您帐户的 6 字符唯一标识。组织确保您的数据仅可由您的设备和应用程序访问。注册后，设备和 API 密钥会绑定到单个组织。应用程序通过使用 API 密钥连接到服务时，会向与所使用的 API 密钥关联的组织注册。
 
-出于安全考虑，不同组织之间无法直接进行通信。在两个组织之间传输数据的唯一方式是在每个组织中创建一个应用程序，用于与其他组织中的应用程序通信。
+为了保障您的安全，不同组织之间无法进行通信。在两个组织之间传输数据的唯一方式是在每个组织中创建一个应用程序，用于与其他组织中的应用程序通信。
 
 **注：**{{site.data.keyword.iot_short_notm}} 组织标识不同于 [IBM Cloud 组织](../../docs/admin/orgs_spaces.html#orginfo)的标识。
 

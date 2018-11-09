@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-07-19"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -12,12 +12,10 @@ lastupdated: "2017-07-19"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Configuration du contrôle d'accès au niveau de la ressource (bêta)
+# Configuration du contrôle d'accès au niveau de la ressource
 {: #configure_RLAC}
 
-**Important :** La fonction de contrôle d'accès au niveau de la ressource {{site.data.keyword.iot_full}} est disponible uniquement dans le cadre d'un programme bêta limité. Il est possible que des mises à jour ultérieures incluent des modifications incompatibles avec la version en cours de cette fonction. Essayez-la et [dites-nous ce que vous en pensez ![External link icon](../../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
-
-Le contrôle d'accès au niveau de la ressource vous permet de contrôler l'accès des utilisateurs et des clés d'API afin de gérer les terminaux. Vous utilisez les groupes de ressources pour définir les terminaux d'une organisation que chaque utilisateur ou clé d'API peut gérer. Les utilisateurs et les clés d'API peuvent être associés à une paire "rôle-groupes", qui indique qu'ils peuvent uniquement effectuer des opérations couvertes par le rôle spécifié sur les terminaux qui se trouvent dans les groupes spécifiés. Pour plus d'informations sur le contrôle d'accès au niveau de la ressource, voir[Présentation du contrôle d'accès au niveau de la ressource](rlac_overview.md) et la documentation de l'[API de contrôle d'accès {{site.data.keyword.iot_short_notm}} ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}.
+Le contrôle d'accès au niveau de la ressource vous permet de contrôler l'accès des utilisateurs et des clés d'API afin de gérer les terminaux. Vous utilisez les groupes de ressources pour définir les terminaux d'une organisation que chaque utilisateur ou clé d'API peut gérer. Les utilisateurs et les clés d'API peuvent être associés à une paire "rôle-groupes", qui indique qu'ils peuvent uniquement effectuer des opérations couvertes par le rôle spécifié sur les terminaux qui se trouvent dans les groupes spécifiés. Pour en savoir plus sur le contrôle d'accès au niveau de la ressource, voir [Aperçu du contrôle d'accès au niveau de la ressource](rlac_overview.html) et la documentation sur les [API de contrôle d'accès de {{site.data.keyword.iot_short_notm}}![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}.
 
 ## Configuration du contrôle d'accès au niveau de la ressource - flux de processus
 {: #RLAC_process}
@@ -26,7 +24,7 @@ Le flux de processus ci-dessous est généralement utilisé pour activer et util
 1. [Créer une organisation](../iotplatform_overview.html#organizations).
 2. [Créer des utilisateurs](../add_users.html#adding-new-users) et des [clés d'API](../platform_authorization.html#api-key).
 3. [Créer des groupes de ressources](rlac.html#create_delete_group).
-4. [Affecter des mappages "rôle-groupes" pour les utilisateurs et les clés d'API](rlac.html#assign_roletoegroup).
+4. [Affecter des mappages "rôle-groupes" pour les utilisateurs et les clés d'API](rlac.html#assign_roletogroup).
 5. [Ajouter des terminaux aux groupes de ressources](rlac.html#add_device).
 6. [Activer le contrôle d'accès au niveau de la ressource](rlac.html#RLAC_enable).
 
@@ -106,7 +104,7 @@ Lorsque vous supprimez des terminaux d'un groupe de ressources, les terminaux sp
         }
     ]
 
-Pour plus d'informations sur le schéma de demande et la réponse, consultez la documentation de l'[API de contrôle d'accès {{site.data.keyword.iot_short_notm}}![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}.
+Pour plus d'informations sur le schéma de demande et la réponse, consultez la documentation de l'[API de contrôle d'accès {{site.data.keyword.iot_short_notm}}![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}.
 
 ## Activation du contrôle d'accès au niveau de la ressource
 {: #RLAC_enable}
@@ -140,7 +138,7 @@ Pour recherche l'ID unique des groupes de ressources associés à une clé d'API
 ## Analyse des groupes de ressources
 {: #query_group}
 
-Les groupes de ressources peuvent être analysés avec divers paramètres afin de renvoyer les propriétés complètes de tous les terminaux du groupe, les identificateurs uniques de tous les terminaux du groupe ou les propriétés du groupe de ressources. 
+Les groupes de ressources peuvent être analysés avec divers paramètres afin de renvoyer les propriétés complètes de tous les terminaux du groupe, les identificateurs uniques de tous les terminaux du groupe ou les propriétés du groupe de ressources.
 
 Pour renvoyer les propriétés complètes de tous les terminaux du groupe de ressources spécifié, utilisez l'API suivante :
 

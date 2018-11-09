@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -31,8 +31,7 @@ lastupdated: "2017-03-14"
 
 构造方法用于构建客户机实例，并接受包含以下定义的自变量：
 
-|定义|描述
-|
+|定义|描述|
 |:---|:---|
 |`orgId`   |组织标识。|
 |`appId`   |组织中应用程序的唯一标识。|
@@ -107,11 +106,13 @@ applicationClient.subscribeToDeviceEvents();
 ```
 下表描述了事件回调方法的参数：
 
+
+
 |参数|数据类型|描述|
 |:---|:---|
 |`eventName`|字符串|标识事件。|
-|`eventFormat`|字符串| 格式可以为任意字符串，例如 JSON。|
-|`eventData`|字典| 消息有效内容的数据。最大长度为 131072 字节。|
+|`eventFormat`|字符串|格式可以为任意字符串，例如 JSON。|
+|`eventData`|字典|消息有效内容的数据。最大长度为 131072 字节。|
 
 
 ## 预订设备状态
@@ -166,12 +167,12 @@ applicationClient.publishEvent(deviceType, deviceId, evt, data, 0);
 
 |参数|数据类型|描述|
 |:---|:---|
-|`deviceType`|字符串| 设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
-|`deviceId`|字符串| 设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
-|`evt`|字符串| 事件的名称。|
-|`format`|字符串| 格式可以为任意字符串，例如 JSON。|
-|`data`|字典| 消息有效内容的数据。最大长度为 131072 字节。|
-|`QoS`|整数| 服务质量。有效值为 `0`、`1` 和 `2`。|
+|`deviceType`|字符串|设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
+|`deviceId`|字符串|设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
+|`evt`|字符串|事件的名称。|
+|`format`|字符串|格式可以为任意字符串，例如 JSON。|
+|`data`|字典|消息有效内容的数据。最大长度为 131072 字节。|
+|`QoS`|整数|服务质量。有效值为 `0`、`1` 和 `2`。|
 
 
 ## 将命令发布到设备
@@ -185,11 +186,13 @@ applicationClient.publishCommand(deviceType, deviceId, "testcmd", "json", data, 
 ```
 下表描述了 `publishCommand()` 方法中指定的参数：
 
+
+
 |参数|数据类型|描述|
 |:---|:---|
-|`deviceType`|字符串| 设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
-|`deviceId`|字符串| 设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
-|`command`|字符串| 命令的名称。|
-|`format`|字符串| 格式可以为任意字符串，例如 JSON。|
-|`data`|字典| 消息有效内容的数据。最大长度为 131072 字节。|
-|`QoS`|整数| 服务质量。有效值为 `0`、`1` 和 `2`。|
+|`deviceType`|字符串|设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
+|`deviceId`|字符串|设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
+|`command`|字符串|命令的名称。|
+|`format`|字符串|格式可以为任意字符串，例如 JSON。|
+|`data`|字典|消息有效内容的数据。最大长度为 131072 字节。|
+|`QoS`|整数|服务质量。有效值为 `0`、`1` 和 `2`。|

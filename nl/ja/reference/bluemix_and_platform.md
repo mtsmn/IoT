@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-08"---
+  years: 2016, 2018
+lastupdated: "2018-05-17"
+
+---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
@@ -13,22 +15,22 @@ lastupdated: "2017-05-08"---
 # {{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
 
-{{site.data.keyword.iot_full}} は、{{site.data.keyword.Bluemix}} で利用可能なサービスです。{{site.data.keyword.iot_short_notm}} 組織のダッシュボードには、{{site.data.keyword.Bluemix_notm}} ダッシュボードを使用してアクセスできます。{{site.data.keyword.Bluemix_notm}} サービスとして、{{site.data.keyword.iot_short_notm}} は、{{site.data.keyword.Bluemix_notm}} 上でホストされる他のサービスと統合することができます。特定のサード・パーティー・サービス統合の詳細については、[外部サービスの統合](extensions/index.html)トピックを参照してください。
+{{site.data.keyword.iot_full}} は、{{site.data.keyword.Bluemix_notm}} で利用可能なサービスです。 {{site.data.keyword.iot_short_notm}} 組織のダッシュボードには、{{site.data.keyword.Bluemix_notm}} ダッシュボードを使用してアクセスできます。 {{site.data.keyword.Bluemix_notm}} サービスとして、{{site.data.keyword.iot_short_notm}} は、{{site.data.keyword.Bluemix_notm}} 上でホストされる他のサービスと統合することができます。 特定のサード・パーティー・サービス統合の詳細については、[外部サービスの統合](extensions/index.html)トピックを参照してください。
 {:shortdesc}
 
 ## {{site.data.keyword.iot_short_notm}} と {{site.data.keyword.Bluemix_notm}} の連携方法
 {: #iot-bluemix-work}
 
-{{site.data.keyword.iot_short_notm}} のインスタンスは、{{site.data.keyword.Bluemix_notm}} ダッシュボードで作成できます。{{site.data.keyword.iot_short_notm}} は、他のさまざまな {{site.data.keyword.Bluemix_notm}} サービスと統合し、{{site.data.keyword.Bluemix_notm}} ダッシュボードを使用してアクセスすることができますが、{{site.data.keyword.iot_short_notm}} は、{{site.data.keyword.Bluemix_notm}} ハードウェア上では実行されません。そのため、{{site.data.keyword.iot_short_notm}} サービスによる継続的なデータ収集が可能になります。
+{{site.data.keyword.iot_short_notm}} のインスタンスは、{{site.data.keyword.Bluemix_notm}} ダッシュボードで作成できます。 {{site.data.keyword.iot_short_notm}} は、他のさまざまな {{site.data.keyword.Bluemix_notm}} サービスと統合し、{{site.data.keyword.Bluemix_notm}} ダッシュボードを使用してアクセスすることができますが、{{site.data.keyword.iot_short_notm}} は、{{site.data.keyword.Bluemix_notm}} ハードウェア上では実行されません。そのため、{{site.data.keyword.iot_short_notm}} サービスによる継続的なデータ収集が可能になります。
 
 ## {{site.data.keyword.iot_short_notm}} のサービス・レベル・アグリーメント
 {: #iot-sla}
 
-{{site.data.keyword.iot_short_notm}} には、指定されたサービス・レベルに対応する機能があります。サービス・レベル・アグリーメントについて詳しくは、[{{site.data.keyword.iot_short_notm}} のサービス・レベル・アグリーメント ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf){: new_window} を参照してください。
+{{site.data.keyword.iot_short_notm}} には、指定されたサービス・レベルに対応する機能があります。 サービス・レベル・アグリーメントについて詳しくは、[{{site.data.keyword.iot_short_notm}} のサービス・レベル・アグリーメント ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf){: new_window} を参照してください。
 
 ## {{site.data.keyword.Bluemix_notm}} のサービス・レベル・アグリーメント
 
-{{site.data.keyword.Bluemix_notm}} で発行されているご利用条件は、[IBM クラウド・サービス契約書 ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} と [IBM パスポート・アドバンテージのご契約条件 ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} のどちらがユーザーに適用されるかに応じて異なります。{{site.data.keyword.Bluemix_notm}} のサービス・レベル・アグリーメントについて詳しくは、[{{site.data.keyword.Bluemix_notm}} のご利用条件 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/docs/navigation/notices.html#terms){:new_window} を参照してください。
+{{site.data.keyword.Bluemix_notm}} で発行されているご利用条件は、[IBM クラウド・サービス契約書 ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} と [IBM パスポート・アドバンテージのご契約条件 ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} のどちらがユーザーに適用されるかに応じて異なります。 
 
 ## {{site.data.keyword.iot_short_notm}} の価格設定
 {: #iot-pricing}

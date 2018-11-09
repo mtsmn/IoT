@@ -23,7 +23,7 @@ Per ulteriori informazioni, controlla il post del blog [An alternative approach 
 
 Per iniziare a definire le tue regole, consulta la documentazione [Creazione delle regole integrate (Beta)](information_management/im_rules.html).
 
-## Informazioni sulle analisi edge 
+## Informazioni sulle analisi edge
 
 Con le analisi edge, puoi spostare il processo di attivazione della regola di analisi dal cloud al gateway abilitato per l'analisi edge che riduce drasticamente la quantità di traffico dati del dispositivo nel cloud eseguendo l'elaborazione delle analisi vicino al dispositivo.
 {:shortdesc}
@@ -65,7 +65,7 @@ Per ulteriori informazioni sulle tabelle di analisi predefinite, consulta [Visua
 ## Creazione delle regole edge
 {: #rules}
 
-Le regole edge sono punti di decisione che corrispondono ai dati in tempo reale con valori di soglia predefiniti o altri dati della proprietà per attivare un'azione edge se viene riscontrata una condizione.
+sono punti di decisione basati sulle condizioni che mettono in corrispondenza i dati in tempo reale con valori di soglia predefiniti o altri dati di proprietà per attivare un'azione edge se viene soddisfatta una condizione.
 
 **Importante:** prima di poter creare le regole per un tipo dispositivo, devi creare uno schema per il tipo dispositivo. Per informazioni, consulta [Crea schemi per il tipo dispositivo](im_schemas.html).
 
@@ -164,7 +164,7 @@ La regola edge viene caricata nel gateway. Quando il caricamento viene completat
 
 La regola è ora attiva nel gateway e le azioni configurate si attiveranno quando vengono riscontrate le condizioni della regola.
 
-**Suggerimento:** per gestire le regole in più gateway puoi selezionare la casella seleziona tutto vicino all'intestazione della colonna del gateway. Annulla la spunta di tutti i gateway che non desideri includere e seleziona quindi un'operazione dal menu **Select operation** all'inizio della colonna con lo stesso nome.
+**Suggerimento:** per gestire le regole in più gateway puoi selezionare la casella seleziona tutto accanto all'intestazione della colonna del gateway. Annulla la spunta di tutti i gateway che non desideri includere e seleziona quindi un'operazione dal menu **Select operation** all'inizio della colonna con lo stesso nome.
 
 In aggiunta all'attivazione di una regola puoi eseguire le seguenti operazioni di gestione della regola nei tuoi gateway:
 

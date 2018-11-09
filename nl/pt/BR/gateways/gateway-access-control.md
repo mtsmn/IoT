@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-08-25"
+  years: 2016, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -12,24 +12,30 @@ lastupdated: "2017-08-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Controle de acesso ao gateway (beta)
+# Controle de acesso do gateway
 {: #gateway-access-control}
 
 Os dispositivos de gateway são uma classe especializada de dispositivo e podem agir
 em nome de outros dispositivos. Os grupos de recursos de gateway definem em nome de
-quais dispositivos dentro de uma organização cada gateway pode agir. Os gateways podem ser designados à função *Gateway padrão*. Os gateways padrão só podem publicar ou assinar mensagens em nome de dispositivos em seu grupo de recursos.
+quais dispositivos dentro de uma organização cada gateway pode agir. As funções de gateway determinam a capacidade do gateway para registrar dispositivos para o Watson IoT Platform.
 {: #shortdesc}
 
-**Importante:** o recurso Controle de acesso ao gateway do {{site.data.keyword.iot_full}} está disponível somente como parte de um programa beta limitado. Atualizações futuras podem incluir mudanças incompatíveis com a versão atual desse recurso. Experimente e [informe-nos o que acha ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+Você usa grupos de recursos para ativar os gateways para agir em nome de um subconjunto de dispositivos de uma organização. Os gateways podem publicar ou assinar mensagens somente para eles mesmos e em nome de dispositivos que estão em seu grupo de recursos. 
 
-Para obter informações sobre como publicar eventos de dispositivos de gateway usando APIs, veja [APIs do sistema de mensagens HTTP para dispositivos de gateway](../gateways/gw_intro_api.html).
+Quando um novo gateway é criado, um grupo de recursos padrão também é criado e designado ao gateway. O grupo de recursos padrão não pode ser removido do gateway. Os gateways existentes sem quaisquer grupos de recursos podem continuar a agir em nome de todos os dispositivos na organização.
+
+Para obter informações sobre como publicar eventos de dispositivos de gateway usando APIs, veja [APIs HTTP para dispositivos de gateway](gw_api.html).
 
 ## Designando uma função a um gateway
 {: #gw_roles}
 
-A designação de uma função a um gateway é obrigatória para que o gateway tenha um grupo de recursos. Os gateways sem um grupo de recursos podem agir em nome de todos os dispositivos na organização. A designação da função *Gateway padrão* cria automaticamente um novo grupo de recursos para o gateway. Uma
-vez designado a um grupo de recursos, um gateway só pode agir em nome dos dispositivos
-desse grupo de recursos e em nome de si mesmo, ainda que sua função mude.
+Para designar um gateway a um grupo de recursos, deve-se primeiro designar o gateway a uma função. Os gateways recém-criados são designados à função *Gateway privilegiado* por padrão e são designados a um grupo de recursos padrão. Os gateways com a função privilegiada podem registrar automaticamente os dispositivos, que são incluídos no grupo de recursos padrão.
+
+Gateways com a função *Gateway padrão* não podem registrar automaticamente dispositivos. 
+
+Quando um gateway é designado a um grupo de recursos, o gateway pode agir somente em nome dos dispositivos nesse grupo de recursos e por si mesmo, mesmo se sua função for mudada.
+
+Para obter mais informações sobre funções de gateway, veja [Funções de gateway](../roles_index.html#gateway_roles).
 
 Para designar uma função a um gateway, use a API a seguir, em que
 *${clientID}* é o identificador de cliente codificado pela URL no formato
@@ -158,8 +164,7 @@ Essa API exclui o grupo de recursos especificado. Dispositivos que eram membros 
 ## Recuperando e atualizando propriedades do dispositivo.
 {: #fdevice_group_props}
 
-Há várias maneiras de recuperar propriedades do dispositivo usando a API; cada API retorna informações diferentes. 
-Para recuperar as propriedades de dispositivo de todos os dispositivos existentes em sua
+Há várias maneiras de recuperar propriedades do dispositivo usando a API; cada API retorna informações diferentes. Para recuperar as propriedades de dispositivo de todos os dispositivos existentes em sua
 organização do {{site.data.keyword.iot_short_notm}}, use a API a seguir:
 
 ```

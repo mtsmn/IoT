@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-13"
+  years: 2017, 2018
+lastupdated: "2018-01-18"
 
 ---
 
@@ -13,12 +13,10 @@ lastupdated: "2017-10-13"
 {:pre: .pre}
 
 
-# Visión general del control de acceso a nivel de recurso (Beta)
+# Visión general del control de acceso a nivel de recurso
 {: #RLAC_overview}
 
 El control de acceso a nivel de recurso le permite controlar el acceso de usuario y de clave de API para gestionar dispositivos. Puede utilizar grupos de recursos para especificar los dispositivos en una organización que puede gestionar cada usuario o clave de API. Para obtener información acerca de cómo configurar el control de acceso a nivel de recurso, consulte [Configuración del control de acceso a nivel de recurso](rlac.html#configure_RLAC).
-
-**Importante:** La característica de control de acceso a nivel de recurso de {{site.data.keyword.iot_full}} solo está disponible como parte de un programa beta limitado. Las actualizaciones futuras pueden incluir cambios que no son compatibles con la versión actual de esta característica. Pruébela y [denos su opinión ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Conceptos del control de acceso a nivel de recurso 
 {: #RLAC_concepts}
@@ -58,7 +56,7 @@ Un sujeto es una entidad autenticada que solicita acceso a la plataforma, que de
 ### Recursos
 {: #resources}
 
-Un recurso es una entidad donde el sujeto realiza la acción. El sujeto solicita acceso a la plataforma autorizado para el recurso. Los dispositivos son el único recurso soportado en el release beta del control de acceso a nivel de recurso.
+Un recurso es una entidad donde el sujeto realiza la acción. El sujeto solicita acceso a la plataforma autorizado para el recurso. 
 
 ### Acciones
 {: #actions}
@@ -277,3 +275,9 @@ Devuelve un error 404 si el dispositivo no está accesible para el interlocutor.
     GET /api/v0002/device/types/${typeId}/devices/${deviceId}/events/${eventId}
 
 Devuelve un error 404 si el dispositivo no está accesible para el interlocutor.
+
+**Obtener interfaz lógica para el dispositivo**
+
+    GET /api/v0002/device/types/{typeId}/devices/{deviceId}/state/{logicalInterfaceId}
+
+Devuelve un error 404 si el dispositivo no está en el grupo del interlocutor.

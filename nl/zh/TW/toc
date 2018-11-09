@@ -1,0 +1,193 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="iot-platform" audience="service" arm="328" href="/docs/services/IoT/index.html"}
+Internet of Things Platform
+
+    {: .navgroup id="learn"}
+    getting-started.md
+
+    {: .topicgroup}
+    關於
+        iotplatform_overview.md
+        feature_overview.md
+        reference/standards_and_requirements.md
+        reference/bluemix_and_platform.md
+        reference/back_up.md
+        reference/billing.md
+        [IoT 定價計算機](https://console.bluemix.net/pricing/configure/service/iotf-service-id)
+        reference/quotas.md
+
+    iotplatform_beta_features.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    reference/api.md
+
+    {: .topicgroup}
+    範例應用程式
+        [OpenFridge](https://github.com/IBM/openfridge)
+        [模擬輸送帶](https://github.com/ibm-watson-iot/iot-guide-conveyor-simulator)
+        [Raspberry PI 型輸送帶](https://github.com/ibm-watson-iot/iot-guide-conveyor-rasp-pi)
+        [Node.js 型裝置監視](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-angular)
+        [小組件程式庫型裝置監視](https://github.com/ibm-watson-iot/iot-guide-conveyor-ui-html)
+        [多裝置模擬器](https://github.com/ibm-watson-iot/iot-guide-conveyor-multi-simulator)
+
+    {: .topicgroup}
+    Watson IoT Platform 安全
+        reference/security/index.md
+        reference/security/RM_security.md
+        reference/security/set_up_certificates.md
+        reference/security/set_up_policies.md
+
+    [IBM Cloud 安全](https://console.ng.bluemix.net/docs/security/index.html#security)
+
+    reference/mqtt/index.md
+    reference/device_model.md
+
+    {: .topicgroup}
+    用戶端程式庫
+        [C++](https://github.com/ibm-watson-iot/iot-cpp)
+        [C#](https://github.com/ibm-watson-iot/iot-csharp)
+        [Embedded C](https://github.com/ibm-watson-iot/iot-embeddedc)
+        [Java](https://github.com/ibm-watson-iot/iot-java)
+        [mBed C++](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)
+        [Node.js](https://github.com/ibm-watson-iot/iot-nodejs)
+        [Python](https://github.com/ibm-watson-iot/iot-python)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    index.md
+    
+    {: .topicgroup}
+    開始使用手冊
+        getting_started/getting-started-iot-overview.md
+        getting_started/getting-started-iot-conveyor.md
+        getting_started/getting-started-iot-monitoring.md
+        getting_started/getting-started-iot-large-scale-simulation.md
+
+    {: .topicgroup}
+    連接至 Watson IoT Platform
+        iotplatform_task.md
+        gateways/dashboard.md
+        platform_authorization.md
+        reference/security/connect_devices_apps_gw.md
+        reference/security/client_connect.md
+        reference/security/cloud_iam.md
+        reference/security/app_id.md
+
+    {: .topicgroup}
+    devices/device_sim.md
+
+    {: .topicgroup}
+    管理 Watson IoT Platform 中的資料
+        GA_information_management/ga_im_device_twin.md
+        GA_information_management/ga_im_definitions.md
+        GA_information_management/im_ui_flow.md
+        GA_information_management/ga_im_example.md
+        GA_information_management/mapping_expression_language.md
+        GA_information_management/ga_im_index_scenario.md
+        information_management/im_index_scenario_thing.md
+        information_management/im_hygrometer.md
+        information_management/im_id_reference.md
+        information_management/im_rules.md
+        information_management/im_reference.md 
+        
+    {: .topicgroup}
+    管理 Watson IoT Platform
+        reference/extensions/index.md
+        cloudant_connector.md
+        message_hub.md
+        information_management/twc_integration.md
+
+    {: .topicgroup}
+    存取 Watson IoT Platform
+        add_users.md
+        roles_index.md
+        managing_user_roles.md
+        custom_role.md
+        reference/roles_access.md
+        reference/app_roles_access.md
+        reference/gateway_roles_access.md
+        manage_groups.md
+        gateways/gateway-access-control.md
+        reference/rlac_overview.md
+        reference/rlac.md     
+
+    {: .topicgroup}
+    分析歷程 IoT 資料
+        analytics_integration/historical_data_overview.md
+        analytics_integration/analyzing_with_WA.md
+        analytics_integration/analyzing_with_DSX.md
+
+    {: .topicgroup}
+    使用 IoT 範例
+        nodereddevice_sample.md
+        visualizingdata_sample.md
+        getting_started/quickstart/index.md
+
+    {: .topicgroup}
+    針對 Watson IoT Platform 開發
+        developer_doc_overview.md
+        iot_platform_client_lib.md
+        applications/dev_nodered.md
+
+    {: .topicgroup}
+    開發應用程式
+        applications/app_dev_index.md
+        applications/api.md
+        reference/mqtt/index.md
+        applications/mqtt.md
+        applications/libraries/python.md
+        applications/libraries/nodejs.md
+        applications/libraries/java.md
+        applications/libraries/c_sharp.md
+
+    {: .topicgroup}
+    開發裝置
+        devices/device_dev_index.md
+        reference/mqtt/index.md
+        devices/mqtt.md
+        devices/api.md
+        devices/device_mgmt/index.md
+        devices/device_mgmt/requests.md
+        devices/device_mgmt/custom_actions.md
+        devices/libraries/python.md
+        devices/libraries/nodejs.md
+        devices/libraries/java.md
+        devices/libraries/c_sharp.md
+        devices/libraries/embedded_c.md
+        devices/libraries/mbedcpp.md
+
+    {: .topicgroup}
+    開發閘道
+        gateways/gw_dev_index.md
+        reference/mqtt/index.md
+        gateways/mqtt.md
+        gateways/gw_api.md
+        gateways/libraries/java_cli_gw.md
+        gateways/libraries/java_cli_managed_gw.md
+        edge_analytics.md
+
+    {: .topicgroup}
+    Watson IoT Platform Edge
+        edge/WIoTP_edge.md
+        edge/WIoTP_edge_config.md
+        edge/WIoTP_edge_rules.md
+        edge/WIoTP_edge_install.md
+        edge/WIoTP_edge_dev.md
+
+    {: .topicgroup}
+    秘訣
+        [Recipes for connecting your devices](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)
+        [Watson IoT Platform Play organization](https://play.internetofthings.ibmcloud.com/)
+        [Connecting an Intel Galileo to the Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/)
+        [Connecting a Raspberry Pi to Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    ts_index.md
+    service_status.md
+    contact.md
+    glossary.md
+    {: .navgroup-end}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-08-29"
 
 ---
 
@@ -23,7 +23,8 @@ lastupdated: "2018-05-08"
 
 连接设备并利用数据之前，请注册 {{site.data.keyword.Bluemix_notm}} 帐户，并在您的 {{site.data.keyword.Bluemix_notm}} 组织中创建 {{site.data.keyword.iot_short_notm}} 服务的实例。可以直接从 [IBM Cloud 服务目录中的 {{site.data.keyword.iot_short_notm}} 页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}，创建 {{site.data.keyword.iot_short_notm}} 实例。  
 
-有关如何在 {{site.data.keyword.Bluemix_notm}} 上注册帐户并配置区域以及有关其他帐户管理设置的详细信息，请参阅[管理 IBM Cloud 帐户](https://console.ng.bluemix.net/docs/admin/account.html#signup)。
+有关如何在 {{site.data.keyword.Bluemix_notm}} 上注册帐户、配置区域以及有关其他帐户管理设置的详细信息，请参阅[注册 IBM Cloud](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud)。
+
 
 可以在仪表板中设置并配置 {{site.data.keyword.iot_short_notm}} 实例。要打开仪表板，请转至 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.iot_short_notm}} 服务实例，然后单击**启动**。
 
@@ -40,8 +41,8 @@ lastupdated: "2018-05-08"
 
 |  |已部署此服务|未部署此服务
  | -------------| ------------- | -------------
-  |**我有要连接的设备**|[将设备连接到 {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task)。|在[使用 {{site.data.keyword.iot_short_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} 中了解设备连接。
-  |**我没有要连接的设备** | [创建和连接 Node-RED 设备模拟器](nodereddevice_sample.html){:new_window}。或者[连接智能手机 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}。|[Watson IoT Platform 入门模板](https://console.bluemix.net/docs/starters/IoT-starter/iot500.html) 入门。
+  |**我有要连接的设备**|[将设备连接到 {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task)。|了解[使用 {{site.data.keyword.iot_short_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} 中的设备连接。
+  |**我没有要连接的设备** | [创建和连接 Node-RED 设备模拟器](nodereddevice_sample.html){:new_window}。或者，[连接智能手机 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}。|[Watson IoT Platform 入门模板](https://console.bluemix.net/docs/starters/IoT-starter/iot500.html) 入门。
 
   
 有关如何将特定设备类型连接到 {{site.data.keyword.iot_short_notm}} 的更多信息，请参阅 [developerWorks 诀窍 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}。  
@@ -63,7 +64,7 @@ For a quick getting started example, see the [Using Rules and Actions with IBM W
 ## 步骤 2：创建应用程序以使用设备数据
 {: #develop_applications}
 
-创建并连接自己的应用程序以使用设备数据。
+创建并连接您自己的应用程序，以使用设备数据。
 
 有关更多信息，请参阅以下主题：   
 - 浏览[应用程序开发者文档](applications/api.html)和 [{{site.data.keyword.iot_short_notm}} API 文档](reference/api.html)。

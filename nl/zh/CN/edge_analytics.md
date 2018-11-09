@@ -16,13 +16,13 @@ lastupdated: "2018-03-13"
 # 边缘分析
 {: #edge_analytics}
 
-**重要信息：**为了改善 {{site.data.keyword.iot_full}} 提供规则和操作的方式，我们计划了很多改进，其中包括开发一个测试版来探索定义 IoT 设备数据规则的新方法。
+**重要信息：**作为更广泛的更改计划的一部分，我们将推出 Beta，以一种全新的方式对 IoT 设备数据定义规则，以改进 {{site.data.keyword.iot_full}} 交付规则和操作的方式。
 
-要获取更多信息，请参阅博客帖子 [An alternative approach to defining Rules on IoT data ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}。
+要了解更多信息，请查看博客帖子 [An alternative approach to defining Rules on IoT data ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}。
 
-要开始定义您自己的规则，请参阅[创建嵌入式规则 (Beta)](information_management/im_rules.html) 文档。
+要开始定义自己的规则，请参阅[创建嵌入式规则 (Beta)](information_management/im_rules.html) 文档。
 
-## 关于边缘分析
+## 关于 Edge Analytics
 
 通过边缘分析，可将分析规则触发过程从云移至支持边缘分析的网关，通过执行靠近设备的分析处理，可显著降低上传到云的设备数据流量。
 {:shortdesc}
@@ -76,7 +76,7 @@ lastupdated: "2018-03-13"
 可以通过并列行的方式添加条件以将其应用为 OR 条件，也可以通过顺序列的方式添加条件以将其应用为 AND 条件。  
 **注：**为了能够选择设备属性作为规则的输入，必须将该属性映射到模式。请参阅[创建模式](im_schemas.html)以获取更多信息。  
 
-**重要信息：**要触发用于比较两个属性的条件，或者触发使用 AND 以顺序方式组合的两个或更多属性条件，触发数据点必须包含在同一设备消息中。如果数据是在多个消息中收到的，就不会触发该条件或这些顺序条件。  
+**重要信息：**要触发用于比较两个属性的条件，或者触发使用 AND 以顺序方式组合的两个或更多属性条件，触发数据点必须包含在同一设备消息中。如果数据是在多个消息中收到的，那么不会触发该条件或这些顺序条件。  
 
 **示例：**   
 如果参数值大于指定的值，可能触发简单的规则：  
@@ -87,8 +87,7 @@ lastupdated: "2018-03-13"
 4. 为规则配置有条件触发需求。  
 要控制一段时间内为某个规则触发的警报数和操作数，可以为该规则配置有条件触发需求。
   
-**重要信息：**有条件触发将作用于该规则中的任何条件。例如，如果某个规则使用 OR 设置了 5 个不同的并行条件，那么每个为 true 的条件都会计入有条件触发器计数。
-要为规则设置有条件触发，请执行以下操作：
+**重要信息：**有条件触发将作用于该规则中的任何条件。例如，如果某个规则使用 OR 设置了 5 个不同的并行条件，那么每个为 true 的条件都会计入有条件触发器计数。要为规则设置有条件触发，请执行以下操作：
  1. 在规则编辑器中，单击缺省的**每次满足条件时触发**链接，以打开“设置频率需求”对话框。
  2. 选择并配置要在规则中使用的有条件触发器。
  <ul>

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-13"
+  years: 2016, 2018
+lastupdated: "2018-03-11"
 
 ---
 
@@ -15,11 +15,17 @@ lastupdated: "2016-10-13"
 # Tarjetas personalizadas
 {: #custom_cards}
 
-Utilice tarjetas personalizadas para visualizar sus datos de Internet of Things más allá de las tarjetas genéricas que se proporcionan con {{site.data.keyword.iot_full}}.
-{:shortdesc}
+**Importante:** estamos lanzando una versión Beta con una nueva forma de definir reglas en los datos del dispositivo IoT como parte de un programa más ambicioso de cambios para mejorar la forma en que {{site.data.keyword.iot_full}} distribuye reglas y acciones.
+
+Para ver más información, consulte la publicación del blog sobre [Un enfoque alternativo a la definición de reglas en datos de IoT ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para empezar a definir sus propias reglas, consulte la documentación sobre [Creación de reglas incorporadas (Beta)](../information_management/im_rules.html).
+
 
 ## Arquitectura
 {: #architecture}  
+
+Utilice tarjetas personalizadas para visualizar sus datos de Internet of Things más allá de las tarjetas genéricas que se proporcionan con {{site.data.keyword.iot_short_notm}}.
 
 Las tarjetas personalizadas las ha desarrollado usted y se han desplegado utilizando su propio repositorio de servidor HTTP de tarjetas personalizadas.  Se puede acceder a este servidor mediante el navegador de un usuario como se muestra y procesa paneles de control de {{site.data.keyword.iot_short_notm}}. {{site.data.keyword.iot_short_notm}} gestiona la conexión del navegador mediante la ampliación de las tarjetas personalizadas pero no se conecta él mismo al servidor de tarjetas personalizado.
 

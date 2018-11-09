@@ -2,9 +2,9 @@
 
 copyright:
 
-years: 2015, 2017
+years: 2015, 2018
 
-lastupdated: "2017-03-16"
+lastupdated: "2018-01-11"
 
 
 ---
@@ -68,7 +68,7 @@ El ID de dispositivo se utiliza para identificar el dispositivo de pasarela en e
 **Importante:** el ID de dispositivo no debe tener más de 36 caracteres y sólo puede contener:
  <ul>
  <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
- <li>Guiones (-).</li>
+ <li>Guiones (-)</li>
  <li>Signos de subrayado (&lowbar;)</li>
  <li>Puntos (.)</li>  
  </ul>

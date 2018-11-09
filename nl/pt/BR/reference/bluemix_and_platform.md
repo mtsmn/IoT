@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-08"
+  years: 2016, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-05-08"
 # {{site.data.keyword.Bluemix_notm}} e o {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
 
-O {{site.data.keyword.iot_full}} é um serviço que está disponível no {{site.data.keyword.Bluemix}}. É possível acessar o painel de sua organização do {{site.data.keyword.iot_short_notm}} painel usando o painel do {{site.data.keyword.Bluemix_notm}}. Como um serviço do {{site.data.keyword.Bluemix_notm}}, o {{site.data.keyword.iot_short_notm}} pode ser integrado a outros serviços que estão hospedados no {{site.data.keyword.Bluemix_notm}}. Os detalhes de integrações de serviços de terceiros específicos podem ser localizados no tópico [Integrações de serviços externos](extensions/index.html).
+O {{site.data.keyword.iot_full}} é um serviço que está disponível no {{site.data.keyword.Bluemix_notm}}. É possível acessar o painel de sua organização do {{site.data.keyword.iot_short_notm}} painel usando o painel do {{site.data.keyword.Bluemix_notm}}. Como um serviço {{site.data.keyword.Bluemix_notm}}, o {{site.data.keyword.iot_short_notm}} pode ser integrado a outros serviços que são hospedados no {{site.data.keyword.Bluemix_notm}}. Os detalhes de integrações de serviços de terceiros específicos podem ser localizados no tópico [Integrações de serviços externos](extensions/index.html).
 {:shortdesc}
 
 ## Como o {{site.data.keyword.iot_short_notm}} funciona com o {{site.data.keyword.Bluemix_notm}}.
@@ -31,7 +31,6 @@ O {{site.data.keyword.iot_short_notm}} tem provisões para um nível especificad
 ## Acordo de Nível de Serviço do {{site.data.keyword.Bluemix_notm}}
 
 O {{site.data.keyword.Bluemix_notm}} publica termos de uso diferentes dependendo de se o [Contrato de Prestação de Serviços do IBM Cloud ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} ou o [Contrato Internacional do IBM Passport Advantage ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} se aplica ao usuário. 
-Para obter mais informações sobre o Acordo de Nível de Serviço do {{site.data.keyword.Bluemix_notm}}, consulte [Termos do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://console.{DomainName}/docs/navigation/notices.html#terms){:new_window}.
 
 ## Precificação do {{site.data.keyword.iot_short_notm}}
 {: #iot-pricing}

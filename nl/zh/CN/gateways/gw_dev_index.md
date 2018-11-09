@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-03-14"
 {:shortdesc}
 
 ## 连接协议
-网关通过 MQTT 消息传递协议连接到 {{site.data.keyword.iot_short_notm}}。不支持使用 HTTP 消息传递将网关连接至 {{site.data.keyword.iot_short_notm}}。使用 HTTP 消息传递仅可以连接设备。
+网关通过 MQTT 或 HTTP 消息传递协议连接到 {{site.data.keyword.iot_short_notm}}。 
 
 ## 客户机库
 用于开发可连接到 {{site.data.keyword.iot_short_notm}} 的网关的客户机库现提供以下语言版本：
@@ -29,9 +29,9 @@ lastupdated: "2017-03-14"
 |:---|:---
 |C++|[https://github.com/ibm-watson-iot/iot-cpp ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-cpp){: new_window}
 |C#|[https://github.com/ibm-watson-iot/iot-csharp ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-csharp){: new_window}
-|Embedded C| [https://github.com/ibm-watson-iot/iot-embeddedc ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-embeddedc){: new_window}
+|Embedded C|[https://github.com/ibm-watson-iot/iot-embeddedc ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-embeddedc){: new_window}
 |Java™|[https://github.com/ibm-watson-iot/iot-java ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-java){: new_window}
-|mBed C++|[https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/ ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window}
+|Mbed C++|[https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/ ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){: new_window}
 |Node.js|[https://github.com/ibm-watson-iot/iot-nodejs ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 |Node-RED|[https://github.com/ibm-watson-iot/iot-nodered ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-nodered){: new_window}
 |Python|[https://github.com/ibm-watson-iot/iot-python ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-python){: new_window}

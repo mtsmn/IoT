@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -19,7 +19,7 @@ Puoi estendere le funzionalità di gestione del dispositivo in {{site.data.keywo
 
 Per impostazione predefinita, le seguenti azioni di gestione del dispositivo vengono supportate da {{site.data.keyword.iot_short_notm}}:
 - Riavvio dispositivo
-- Reimpostazione fabric
+- Ripristino delle impostazioni di fabbrica
 - Scaricamento firmware
 - Aggiornamento firmware
 

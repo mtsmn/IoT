@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-13"
+  years: 2016, 2018
+lastupdated: "2018-03-11"
 
 ---
 
@@ -15,11 +15,18 @@ lastupdated: "2016-10-13"
 # 定制卡
 {: #custom_cards}
 
-除了 {{site.data.keyword.iot_full}} 随附的通用卡外，还可使用定制卡来对物联网数据进行可视化。
-{:shortdesc}
+**重要信息：**作为更广泛的更改计划的一部分，我们将推出 Beta，以一种全新的方式对 IoT 设备数据定义规则，以改进 {{site.data.keyword.iot_full}} 交付规则和操作的方式。
+
+要了解更多信息，请查看博客帖子 [An alternative approach to defining Rules on IoT data ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}。
+
+要开始定义自己的规则，请参阅[创建嵌入式规则 (Beta)](../information_management/im_rules.html) 文档。
+
 
 ## 体系结构
 {: #architecture}  
+
+除了 {{site.data.keyword.iot_short_notm}} 随附的通用卡外，还可使用定制卡来对物联网数据进行可视化表示。
+
 
 定制卡由您进行开发，并使用您自己的定制卡 HTTP 服务器存储库进行部署。用户的浏览器在显示和处理 {{site.data.keyword.iot_short_notm}} 仪表板时会访问此服务器。{{site.data.keyword.iot_short_notm}} 通过定制卡扩展来管理浏览器连接，但本身并不会连接到定制卡服务器。
 

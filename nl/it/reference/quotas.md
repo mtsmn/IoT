@@ -2,8 +2,8 @@
 
 copyright:
 
-years: 2017
-lastupdated: "2017-11-01"
+years: 2017, 2018
+lastupdated: "2018-02-22"
 
 ---
 
@@ -92,14 +92,14 @@ Tempo massimo di sospensione dei log diagnostica|7 giorni| 7 giorni|7 giorni
 Numero massimo di azioni avviate per messaggio in elaborazione |200 |200 |200
 Numero massimo di dispositivi per azione |5000 |5000 | 5000
 
-## Ultimo evento cache
+## Ultima cache evento
 {: #last_event_metrics}
 
 Metrica        | Piano lite      | Piani sicurezza avanzata e standard       | Dedicato
 ------------- | -------------|------------- |
 Numero massimo di ID evento per dispositivo |5|5|5
 Numero massimo di formati |2|3|3
-Scadenza da ultimo evento cache |12 mesi |12 mesi | 12 mesi
+Scadenza da ultima cache evento |7 giorni |45 giorni | 45 giorni
 
 ## Estensioni
 {: #extensions_metrics}
@@ -127,10 +127,8 @@ Numero massimo di dispositivi in un gruppo di risorse |300|300|300
 Numero massimo di gruppi di risorse assegnati a un gateway |10|10|10
 Numero massimo di gruppi di risorse a cui un dispositivo può appartenere |10|10|10
 
-## Interfaccia utente
+<!--## User Interface
 {: #UI_metrics}
-
-Metrica        | Piano lite      | Piani sicurezza avanzata e standard       | Dedicato
-------------- | -------------|------------- |
-Numero massimo di dashboard |50|50|50
-Numero massimo di schede nella tabella  |30|30|30
+Metric        | Lite plan      | Standard & Advanced Security plans       | Dedicated
+Maximum number of dashboards |50|50|50
+Maximum number of cards on board |30|30|30 -->

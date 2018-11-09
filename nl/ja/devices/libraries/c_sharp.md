@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"---
+  years: 2015, 2018
+lastupdated: "2018-01-11"
+
+---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -14,7 +16,7 @@ lastupdated: "2017-03-14"---
 # デバイス開発者のための C#
 {: #c_sharp}
 
-C# を使用して、{{site.data.keyword.iot_full}} 上で組織と対話するデバイスを構築してカスタマイズできます。C# を使用してデバイスの開発を始める場合は、提供されている情報と例を活用してください。
+C# を使用して、{{site.data.keyword.iot_full}} 上で組織と対話するデバイスを構築してカスタマイズできます。 C# を使用してデバイスの開発を始める場合は、提供されている情報と例を活用してください。
 {:shortdesc}
 
 ## C# クライアントとリソースのダウンロード
@@ -28,17 +30,16 @@ C# を使用して、{{site.data.keyword.iot_full}} 上で組織と対話する�
 
 コンストラクターはクライアント・インスタンスを作成し、以下の定義を格納する引数を受け入れます。
 
-|定義|説明
-|
+|定義 |説明 |
 |:---|:---|
 |`orgId`|組織 ID。|
 |`deviceType`|デバイスのタイプ。|
 |`deviceId` |デバイスの ID。|
-|`auth-method` |使用する認証の方式。現在サポートされている値は、`token` のみです。|
+|`auth-method`   |使用する認証の方式。 現在サポートされている値は、`token` のみです。|
 |`auth-token`   |デバイスを Watson IoT Platform に安全に接続するための認証トークン。|
 
 
-指定した引数が `deviceId` と `deviceType` だけである場合、クライアントは未登録デバイスとして {{site.data.keyword.iot_short_notm}} Quickstart サービスに接続されます。クライアントがどのように {{site.data.keyword.iot_short_notm}} モジュールに接続されるかは、引数リストで定義されます。
+指定した引数が `deviceId` と `deviceType` だけである場合、クライアントは未登録デバイスとして {{site.data.keyword.iot_short_notm}} Quickstart サービスに接続されます。 クライアントがどのように {{site.data.keyword.iot_short_notm}} モジュールに接続されるかは、引数リストで定義されます。
 
 
 ```
@@ -54,11 +55,11 @@ public DeviceClient(string orgId, string deviceType, string deviceID, string aut
 ## イベントのパブリッシュ
 {: #publishing-events}
 
-デバイスは、イベントを使用して {{site.data.keyword.iot_short_notm}} インスタンスにデータをパブリッシュします。デバイスはイベントの内容を制御し、送信する各イベントに名前を割り当てます。
+デバイスは、イベントを使用して {{site.data.keyword.iot_short_notm}} インスタンスにデータをパブリッシュします。 デバイスはイベントの内容を制御し、送信する各イベントに名前を割り当てます。
 
 {{site.data.keyword.iot_short_notm}} インスタンスがイベントを受信すると、その着信イベントの資格情報によって、送信元デバイスが識別されます。そのためデバイスが、別のデバイスになりすますことはできません。
 
-イベントは、MQTT プロトコルによって定義された 3 つの[サービス品質 (QoS) レベル](../mqtt.html#managed-devices)のいずれでもパブリッシュできます。デフォルトでは、イベントは QoS 0 でパブリッシュされます。
+イベントは、MQTT プロトコルによって定義された 3 つの[サービス品質 (QoS) レベル](../mqtt.html#managed-devices)のいずれでもパブリッシュできます。 デフォルトでは、イベントは QoS 0 でパブリッシュされます。
 
 
 ## デフォルトのサービス品質レベルを使用したイベントのパブリッシュ
@@ -84,7 +85,7 @@ deviceClient.publishEvent("event", "json", "{temp:23}", 2);
 ## コマンドの処理
 {: #handling_commands}
 
-デバイス・クライアントは、接続時に、このデバイスに対するコマンドに自動的にサブスクライブします。特定のコマンドを処理するには、次の例に示すように、コマンド・コールバック・メソッドを登録する必要があります。
+デバイス・クライアントは、接続時に、このデバイスに対するコマンドに自動的にサブスクライブします。 特定のコマンドを処理するには、次の例に示すように、コマンド・コールバック・メソッドを登録する必要があります。
 
 ```
 public static void processCommand(string cmdName, string cmdFormat, string cmdData) {
@@ -100,6 +101,6 @@ deviceClient.commandCallback += processCommand;
 
 |パラメーター|データ・タイプ|説明|
 |:---|:---|
-|`cmdName`|ストリング|コマンドを識別します。|
+|`cmdName`|ストリング|コマンドを識別します。 |
 |`cmdFormat`|ストリング|形式は任意のストリング (JSON など) となります。|
-|`cmdData`|辞書|ペイロードのデータ。最大長は 131072 バイトです。|
+|`cmdData`|辞書|ペイロードのデータ。 最大長は 131072 バイトです。|

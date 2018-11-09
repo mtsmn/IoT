@@ -12,14 +12,11 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg5443"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.48.4 r9939"
    width="1066.7018"
    height="442.19183"
    viewBox="0 0 1066.7018 442.19182"
-   sodipodi:docname="ga_im_resources_overview.svg"
-   inkscape:export-filename="T:\PUB\ABD142\ART\WORK\ship8\ga_information_management\images\ga_im_resources_overview.png"
-   inkscape:export-xdpi="299.98099"
-   inkscape:export-ydpi="299.98099">
+   sodipodi:docname="ga_im_resources_overview.svg">
   <metadata
      id="metadata5449">
     <rdf:RDF>
@@ -356,12 +353,12 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1015"
+     inkscape:window-height="1012"
      id="namedview5445"
      showgrid="false"
-     inkscape:zoom="1.8825005"
-     inkscape:cx="426.04514"
-     inkscape:cy="264.97419"
+     inkscape:zoom="2.5027195"
+     inkscape:cx="426.98996"
+     inkscape:cy="264.41022"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -543,7 +540,7 @@
          style="stroke:#000000;stroke-opacity:0.97329378;" /></flowRegion><flowPara
        id="flowPara5946" /></flowRoot>  <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     style="font-size:15px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
      x="91.995491"
      y="78.576004"
      id="text5543-4-8-2"
@@ -551,7 +548,8 @@
        sodipodi:role="line"
        id="tspan6834"
        x="91.995491"
-       y="78.576004">온도 센서</tspan></text>
+       y="78.576004"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim">온도 센서</tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot6836"
@@ -624,22 +622,22 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-     x="278.86115"
+     x="270.86115"
      y="63.406487"
      id="text5543-4-8-2-6"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan6834-2"
-       x="278.86115"
+       x="270.86115"
        y="63.406487">Waston IoT Platform </tspan><tspan
        sodipodi:role="line"
-       x="278.86115"
-       y="81.410011"
+       x="270.86115"
+       y="82.156487"
        id="tspan6913"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">디바이스 실제 인터페이스</tspan></text>
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">디바이스 실제 인터페이스</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      x="493.61746"
      y="76.135429"
      id="text5543-4-8-2-66"
@@ -647,22 +645,25 @@
        sodipodi:role="line"
        id="tspan6834-0"
        x="493.61746"
-       y="76.135429">논리 인터페이스</tspan></text>
+       y="76.135429"
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">논리 인터페이스</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
-     x="648.58795"
+     style="font-size:15px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
+     x="632.58795"
      y="63.41016"
      id="text5543-4-8-2-66-3"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan6834-0-8"
-       x="648.58795"
-       y="63.41016">규칙, 애플리케이션 </tspan><tspan
+       x="632.58795"
+       y="63.41016"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim">규칙, 애플리케이션 </tspan><tspan
        sodipodi:role="line"
-       x="648.58795"
+       x="632.58795"
        y="82.160156"
-       id="tspan6951">및 대시보드</tspan></text>
+       id="tspan6951"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim">및 대시보드</tspan></text>
   <image
      y="105.95089"
      x="386.12595"
@@ -792,12 +793,17 @@
        sodipodi:role="line"
        id="tspan6834-4"
        x="537.87878"
-       y="119.91148"
-       style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.47900008px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">온도: 숫자</tspan><tspan
+       y="119.91148"><tspan
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan3133">온도</tspan>: <tspan
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan3135">숫자</tspan></tspan><tspan
        sodipodi:role="line"
        x="537.87878"
        y="138.66148"
-       id="tspan7352">= 34.5도</tspan></text>
+       id="tspan7352">= 34.5<tspan
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan3137">도</tspan></tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot7354"

@@ -1,14 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-27"
+  years: 2015, 2018
+lastupdated: "2018-03-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}  
+{:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
@@ -27,17 +27,41 @@ Le richiesta possono essere avviate tramite il dashboard utilizzando la scheda *
 ## Avviare le richieste di gestione del dispositivo utilizzando l'API REST
 {: #initiating-dm-api}
 
-Le richieste possono essere avviate utilizzando il seguente esempio API REST:  
+Le richieste possono essere avviate utilizzando la seguente API REST:
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
 Per ulteriori informazioni sul corpo di una richiesta di gestione del dispositivo, consulta [API documentation ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html#!/Device_Management_Requests){: new_window}.
 
+## Configurazione della scadenza per le richieste di gestione del dispositivo
+{: #timeout-requests}
+
+Puoi configurare le richieste di gestione del dispositivo in modo che scadano mediante timeout se sono ancora in corso dopo un determinato periodo di tempo. Quando avvii una richiesta di gestione del dispositivo, puoi specificare un valore di timeout in secondi. Una volta raggiunto il numero di secondi specificato, il server di gestione del dispositivo annulla automaticamente la richiesta.
+
+Per ulteriori informazioni sul parametro di timeout nell'API di richiesta di avvio, consulta la [documentazione API ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}.
+
+## Annullamento delle richieste di gestione del dispositivo
+{: #cancel-requests}
+
+Puoi annullare le richieste di gestione del dispositivo in corso utilizzando la seguente richiesta API:
+
+`POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests/{requestId}/cancel`
+
+Questa richiesta cancella le operazioni correnti per tutti i dispositivi in corso e contrassegna le richieste come completate.
+
+Per ulteriori informazioni sull'API di annullamento delle richieste di gestione del dispositivo, consulta la [documentazione API ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests_requestId_cancel){: new_window}.
+
+## Sovrascrittura delle richieste in corso che bloccano una nuova richiesta
+{: #force-override}
+
+Per impostazione predefinita, se un dispositivo ha una richiesta di download o di aggiornamento del firmware in sospeso, non è possibile avviare una nuova richiesta per tale dispositivo. Quando avvii una richiesta di gestione del dispositivo, puoi impostare il parametro di query `override=true` per specificare che le richieste in corso siano annullate in modo che la nuova richiesta possa essere avviata. Quando utilizzi questo parametro di query, tutte le richieste in corso vengono annullate. Per selezionare richieste specifiche da annullare, utilizza l'[API di annullamento delle richieste di gestione del dispositivo](#cancel-requests).
+
+Per ulteriori informazioni sul parametro di sovrascrittura nell'API di richiesta di avvio, consulta la [documentazione API ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/device-mgmt.html#!/Device_Management_Requests/post_mgmt_requests){: new_window}.
+
 ## Azioni dispositivo
 {: #device-actions}
 
-Un dispositivo può specificare di supportare le azioni del dispositivo quando pubblica una richiesta di gestione. Un'azione del dispositivo indica a {{site.data.keyword.iot_short_notm}} che il dispositivo è in grado di rispondere alle azioni di riavvio e di reimpostazione del dispositivo.
-
+Un dispositivo può specificare di supportare le azioni del dispositivo quando pubblica una richiesta di gestione. Il dispositivo esegue questa operazione impostando l'indicatore deviceActions nella richiesta di gestione del dispositivo su true per indicare che il dispositivo può rispondere alle azioni di riavvio e reimpostazione del dispositivo.
 
 ## Azioni dispositivo - riavvio
 {: #device-actions-reboot}
@@ -48,7 +72,7 @@ Per avviare un riavvio del dispositivo utilizzando l'API REST, immetti una richi
 
 `https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Fornisci le seguenti informazioni:
+Fornisci le seguenti informazioni nella richiesta:
 
 - L'azione ``device/reboot``
 - Un elenco di dispositivi da riavviare, con un massimo di 5000 dispositivi
@@ -67,9 +91,7 @@ Esempio di richiesta di riavvio del dispositivo:
 }
 ```
 
-Dopo aver avviato la richiesta, viene pubblicato un messaggio MQTT in tutti i dispositivi specificati nel corpo della richiesta di riavvio. Per ogni dispositivo, deve essere restituita una risposta che indica se l'azione di riavvio è stata avviata. Se questa operazione può essere avviata immediatamente, imposta il parametro `rc` su `202`. Se il tentativo di riavvio fallisce, imposta il parametro `rc` su `500` e di conseguenza il parametro `message`. Se il riavvio non è supportato, imposta il parametro `rc` su `501` e di conseguenza il parametro `message`.
-
-L'azione di riavvio termina quando il dispositivo invia una richiesta di gestione del dispositivo dopo il proprio riavvio.
+Dopo aver avviato la richiesta, viene pubblicato un messaggio MQTT in tutti i dispositivi specificati nel corpo della richiesta di riavvio. Per ogni dispositivo, deve essere restituita una risposta che indica se l'azione di riavvio è stata avviata. Se questa operazione può essere avviata immediatamente, imposta il parametro `rc` su `202`. Se il tentativo di riavvio non riesce, imposta il parametro `rc` su `500` e imposta l'errore appropriato nel parametro `message`. Se il riavvio non è supportato, imposta il parametro `rc` su `501` e di conseguenza il parametro `message`.
 
 ### Argomento per la richiesta di riavvio del dispositivo
 
@@ -100,11 +122,13 @@ Outgoing message from the device:
 
 Topic: iotdevice-1/response
 	{
-    "rc": "response_code",
+    "rc": response_code,
     "message": "string",
     "reqId": "string"
 }
 ```
+L'azione di riavvio termina quando il dispositivo invia una richiesta di gestione del dispositivo dopo il proprio riavvio.
+
 
 ## Azioni dispositivo - ripristino impostazioni predefinite
 {: #device-actions-factory-reset}
@@ -168,12 +192,11 @@ Il seguente argomento mostra il messaggio in uscita dal dispositivo:
 
 Topic: iotdevice-1/response
 	{
-    "rc": "response_code",
+    "rc": response_code,
     "message": "string",
     "reqId": "string"
 }
 ```
-
 
 ## Azioni firmware
 {: #firmware-actions}
@@ -182,22 +205,24 @@ Il livello di firmware noto di un dispositivo viene archiviato nell'attributo ``
 
 **Importante:** il dispositivo gestito deve supportare l'osservazione dell'attributo ``mgmt.firmware`` per supportare le azioni firmware.
 
-Il processo di aggiornamento firmware è diviso in azioni distinte:
+Il processo di aggiornamento del firmware può essere separato in azioni distinte:
 - Scaricamento del firmware
 - Aggiornamento del firmware
 
-Lo stato di ogni azione firmware viene archiviato in un attributo diverso del dispositivo. L'attributo ``mgmt.firmware.state`` descrive lo stato dello scaricamento del firmware. La seguente tabella illustra i valori possibili che possono essere configurati per l'attributo ``mgmt.firmware.state``:
+Lo stato delle azioni del firmware è memorizzato negli attributi ``mgmt.firmware.state`` e ``mgmt.firmware.updateStatus``.
+
+La seguente tabella illustra i valori possibili che possono essere configurati per l'attributo ``mgmt.firmware.state``:
 
  |Valore |Stato  | Spiegazione |
  |:---|:---|:---|
- |0  | In sospeso        | Il dispositivo non sta scaricando il firmware. |  
+ |0  | In sospeso        | Il dispositivo non sta scaricando il firmware. |
  |1  | Scaricamento in corso | Il dispositivo sta scaricando il firmware. |
  |2  | Scaricamento completato  | Il dispositivo ha scaricato correttamente un aggiornamento firmware ed è pronto per installarlo. |
 
 
-L'attributo ``mgmt.firmware.updateStatus`` descrive lo stato dell'aggiornamento del firmware. I possibili valori per l'attributo ``mgmt.firmware.updateStatus`` sono:
+I possibili valori per l'attributo ``mgmt.firmware.updateStatus`` sono:
 
-|Valore |Stato | Spiegazione |  
+|Valore |Stato | Spiegazione |
 |:---|:---|:---|
 |0 | Riuscito | Il firmware è stato aggiornato correttamente. |
 |1 | In corso | L'aggiornamento del firmware è stato avviato ma non ancora completato.|
@@ -257,7 +282,7 @@ Se nessuno dei parametri facoltativi viene specificato, il primo passo nel segue
 Il server di gestione del dispositivo in {{site.data.keyword.iot_short_notm}} utilizza il protocollo di gestione del dispositivo per inviare una richiesta ai dispositivi, che avvia lo scaricamento del firmware. Il processo di download è costituito dai seguenti passi:
 
 1. Una richiesta di aggiornamento dei dettagli del firmware viene inviata nell'argomento ``iotdm-1/device/update``.
-La richiesta di aggiornamento consente la convalida del dispositivo se il firmware richiesto è diverso dal firmware correntemente installato. Se esiste una differenza, imposta il parametro ``rc`` su ``204``, che viene convertito nello stato ``Changed``.  
+La richiesta di aggiornamento consente la convalida del dispositivo se il firmware richiesto è diverso dal firmware correntemente installato. Se ci sono differenze, il dispositivo invia una risposta contenente il codice di ritorno ``204``, che si traduce nello stato ``Changed``.
 Il seguente esempio mostra quale messaggio attendere dal precedente invio della richiesta di scaricamento del firmware di esempio e quale risposta viene inviata quando viene individuata una differenza:
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -322,7 +347,7 @@ La richiesta di osservazione verifica se il dispositivo è pronto ad avviare lo 
       "reqId" : "909b477c-cd37-4bee-83fa-1d568664fbe8"
    }
    ```
-Questo scambio attiva l'ultimo passo.  
+Questo scambio attiva l'ultimo passo.
 
 3. La richiesta di scaricamento viene inviata all'argomento ``iotdm-1/mgmt/initiate/firmware/download``:
 

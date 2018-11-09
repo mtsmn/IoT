@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-04-03"
+lastupdated: "2018-04-19"
 
 ---
 
@@ -18,21 +18,22 @@ lastupdated: "2017-04-03"
 
 Ein Gerät ist alles, was eine Verbindung zum Internet hat und Daten in die Cloud sendet oder aus der Cloud empfängt. Sie können Geräte verwenden, um Ereignisinformationen wie Sensormesswerte in die Cloud zu senden und Befehle von Anwendungen in der Cloud entgegenzunehmen.
 
-Geräte publizieren Daten mithilfe von Ereignissen an {{site.data.keyword.iot_short_notm}}. Dabei steuert das Gerät den Inhalt des Ereignisses und ordnet jedem gesendeten Ereignis einen Namen zu. Wenn {{site.data.keyword.iot_short_notm}} ein Ereignis von einem Gerät empfängt, wird anhand der Berechtigungsnachweise für die Verbindung, über die das Ereignis empfangen wurde, ermittelt, von welchem Gerät das Ereignis gesendet wurde. Durch diese Architektur wird verhindert, dass ein Gerät die Identität eines anderen Geräts annimmt.
+Geräte publizieren Daten mithilfe von Ereignissen an {{site.data.keyword.iot_full}}. Dabei steuert das Gerät den Inhalt des Ereignisses und ordnet jedem gesendeten Ereignis einen Namen zu. Wenn {{site.data.keyword.iot_short_notm}} ein Ereignis von einem Gerät empfängt, wird anhand der Berechtigungsnachweise für die Verbindung, über die das Ereignis empfangen wurde, ermittelt, von welchem Gerät das Ereignis gesendet wurde. Durch diese Architektur wird verhindert, dass ein Gerät die Identität eines anderen Geräts annimmt.
 
 Weitere Informationen zu wichtigen Konzepten, einschließlich Geräten, finden Sie in [Informationen zu Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/iotplatform_overview.html#watsoniotplatform_importantconcepts).
 
 
 ## Gerät mit {{site.data.keyword.iot_short_notm}} verbinden
 {: #device_connect}
-Sie können Ihr Gerät unter Verwendung von HTTP- oder MQTT-Protokollen mit {{site.data.keyword.iot_short_notm}} verbinden. Verwenden Sie das HTTP-Protokoll, wenn Sie ein Anforderung/Antwort-Szenario konfigurieren möchten (z. B. wenn ein Kunde einen Kauf tätigt und eine Bestätigung erhält). Verwenden Sie das MQTT-Protokoll, wenn Sie ein Ereignisszenario konfigurieren möchten (z. B. wenn jemand an einer Tür klingelt und damit einen Alert auf einem mobilen Gerät auslöst).
+Sie können Ihr Gerät mit {{site.data.keyword.iot_short_notm}} mithilfe von MQTT- oder HTTP-Protokollen verbinden. Verwenden Sie das MQTT-Protokoll, wenn Sie ein Ereignisszenario konfigurieren möchten (z. B. wenn jemand an einer Tür klingelt und damit einen Alert auf einem mobilen Gerät auslöst) oder wenn Sie eine große Anzahl von Ereignissen senden möchten. Verwenden Sie das HTTP-Protokoll, wenn Sie ein Anforderung/Antwort-Szenario konfigurieren möchten (z. B. wenn ein Kunde einen Kauf tätigt und eine Bestätigung erhält).
 
-Das betreffende Gerät muss bei einer Organisation registriert sein, damit es eine Verbindung zu {{site.data.keyword.iot_full}} herstellen kann. Zum Herstellen eine sicheren Verbindung zu {{site.data.keyword.iot_short_notm}} müssen Sie sich für ein Bluemix-Konto registrieren und eine eigene {{site.data.keyword.iot_short_notm}}-Organisation erstellen. Anschließend können Sie Ihr Gerät unter dieser Organisations-ID registrieren. Registrierte Geräte identifizieren sich selbst mit einer eindeutigen Geräte-ID (z. B. mit der MAC-Adresse) und mit einem Authentifizierungstoken, das ausschließlich für dieses Geräte akzeptiert wird, bei {{site.data.keyword.iot_short_notm}}. Nachdem Sie eine sichere Verbindung hergestellt haben, können Sie mit Bluemix eigene Anwendungen erstellen. Bei Bedarf können Sie Node-RED verwenden, um Ihre Anwendungen miteinander zu verbinden.
+Das betreffende Gerät muss bei einer Organisation registriert sein, damit es eine Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen kann. Um eine sichere Verbindung zu {{site.data.keyword.iot_short_notm}} herzustellen, müssen Sie sich für ein IBM Cloud-Konto registrieren und eine eigene {{site.data.keyword.iot_short_notm}}-Organisation erstellen. Anschließend können Sie Ihr Gerät unter dieser Organisations-ID registrieren. Registrierte Geräte identifizieren sich selbst mit einer eindeutigen Geräte-ID (z. B. mit der MAC-Adresse) und mit einem Authentifizierungstoken, das ausschließlich für dieses Geräte akzeptiert wird, bei {{site.data.keyword.iot_short_notm}}. Nachdem Sie eine sichere Verbindung hergestellt haben, können Sie mit IBM Cloud eigene Anwendungen erstellen. Versuchen Sie mit [Node-RED ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://nodered.org){: new_window} Ihre Anwendungen zu verbinden.
 
 Wenn Sie Ihr Gerät verbinden möchten, ohne es zu registrieren (z. B. um einen Machbarkeitsnachweis zu erstellen), können Sie die spezielle Organisations-ID `QuickStart` verwenden. `QuickStart` ist eine allgemein zugängliche Sandbox-Instanz von {{site.data.keyword.iot_short_notm}}, die in der Cloud ausgeführt wird. Wenn keine sicher Verbindung erforderlich ist, können Sie mit `QuickStart` die Konnektivität Ihres Geräts testen und mit {{site.data.keyword.iot_short_notm}} experimentieren. Verbinden Sie nach dem Experimentieren Ihr Gerät erneut mit TLS und mit Ihrem Authentifizierungstoken über eine sicher Verbindung mit Ihrer eigenen Organisations-ID-Instanz.
 
-Weitere Informationen zum Verbinden Ihres Geräts mit {{site.data.keyword.iot_short_notm}} unter Verwendung des HTTP-Protokolls finden Sie in [HTTP-REST-API für Geräte](https://console.ng.bluemix.net/docs/services/IoT/devices/api.html).
 Weitere Informationen zum Verbinden Ihres Geräts mit {{site.data.keyword.iot_short_notm}} unter Verwendung des MQTT-Protokolls finden Sie in [MQTT-Konnektivität für Geräte](https://console.ng.bluemix.net/docs/services/IoT/devices/mqtt.html).
+
+Weitere Informationen zum Verbinden Ihres Geräts mit {{site.data.keyword.iot_short_notm}} unter Verwendung des HTTP-Protokolls finden Sie in [HTTP-APIs für Geräte](https://console.ng.bluemix.net/docs/services/IoT/devices/api.html).
 
 ## Einführung in die Entwicklung von Geräten
 {: #get_started}
@@ -45,7 +46,7 @@ Falls keine Anleitung für Ihr spezielles Gerät vorhanden ist, stellt IBM versc
 - Java
 - Node.js
 - Embedded C
-- ARM mBed C++
+- Arm Mbed C++
 - Python
 - C#
 - Node-RED

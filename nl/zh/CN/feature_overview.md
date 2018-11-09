@@ -19,7 +19,7 @@ lastupdated: "2018-05-08"
 
   1. Connect - 连接设备并开发应用程序。
   2. 信息管理 - 存储、规范化、转换和复查设备数据，并将 {{site.data.keyword.iot_short_notm}} 与其他服务集成。
-  3. 分析 - 指定基于实时设备数据来触发警报和操作的规则条件。
+  3. 分析 - 指定基于实时设备数据的规则条件，以触发警报和操作。
   4. 风险管理 - 通过对用户和应用程序的访问控制来配置安全的连接和体系结构。
 
 ## Connect
@@ -37,7 +37,7 @@ lastupdated: "2018-05-08"
 
 ### 扩展和服务集成
 
-扩展和服务集成支持将外部服务和核心服务的用户定义扩展添加到 {{site.data.keyword.iot_short_notm}} 实例。可以与 {{site.data.keyword.iot_short_notm}} 集成的外部服务包括 The Weather Company 天气位置服务（可用于查找设备所在位置的当前天气）和 Jasper SIM 数据。有关第三方服务集成和扩展的更多信息，请参阅[集成外部服务](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)。
+扩展和服务集成支持将外部服务和核心服务的用户定义扩展添加到 {{site.data.keyword.iot_short_notm}} 实例。可以与 {{site.data.keyword.iot_short_notm}} 集成的外部服务包括 The Weather Company 天气位置服务，可用于查找设备所在位置的当前天气和 Jasper SIM 数据。有关第三方服务集成和扩展的更多信息，请参阅[集成外部服务](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)。
 
 ---
 
@@ -48,7 +48,7 @@ lastupdated: "2018-05-08"
 
 ### 设备上次事件高速缓存
 
-通过使用 {{site.data.keyword.iot_short_notm}} 上次事件高速缓存 API，可检索设备上次所发送的事件。这在设备联机或脱机的情况下都适用，这样不管设备的物理位置或使用状态如何，您都可检索设备状态。对于最多 45 天前发生的任何特定事件，可检索设备的上次事件数据。
+通过使用 {{site.data.keyword.iot_short_notm}} 上次事件高速缓存 API，可检索设备上次所发送的事件。这在设备联机或脱机的情况下都适用，这样不管设备的物理位置或使用状态如何，您都可检索设备状态。对于过去最多 45 天内发生的任何特定事件，可检索设备的最后一个事件数据。
 
 ### 设备事件数据存储
 

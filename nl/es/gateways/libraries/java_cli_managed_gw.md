@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-20"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -220,7 +220,7 @@ managedGateway.sendDeviceUnmanageRequet();
 Las pasarelas que pueden determinar su ubicación pueden optar por notificar a {{site.data.keyword.iot_short}} sobre los cambios de ubicación. La pasarela puede invocar uno de los métodos `updateLocation()` sobrecargados para actualizar la ubicación del dispositivo.
 
 ```java
-// actualizar la ubicación con latitud, longitud y elevación.
+    // actualizar la ubicación con latitud, longitud y elevación.
 int rc = managedGateway.updateGatewayLocation(30.28565, -97.73921, 10);
 if(rc == 200) {
     System.out.println("Location updated successfully!");
@@ -444,8 +444,8 @@ public void downloadFirmware(DeviceFirmware deviceFirmware) {
 		}
 	} catch(MalformedURLException me) {
 		// URL no válido, por lo que establezca el estado para reflejar el mismo,
-        deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.INVALID_URI);
-    } catch (IOException e) {
+		deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.INVALID_URI);
+	} catch (IOException e) {
 		deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.CONNECTION_LOST);
 	} catch (OutOfMemoryError oom) {
 		deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.OUT_OF_MEMORY);

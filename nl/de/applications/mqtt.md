@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-10"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -125,7 +125,7 @@ Wenn Sie planen, Anwendungscode zur Verwendung mit dem Quickstart-Service zu ers
 
 - Befehle publizieren
 - Befehle subskribieren
-- Verwendung des MQTT-Platzhalterzeichens für 'beliebig' (+) in den Komponenten **Gerätetyp** oder **Anwendungs-ID**
+- Verwendung des MQTT-Platzhalterzeichens für 'beliebig' (+) in den Komponenten **Geräte-ID** oder **Anwendungs-ID**
 - MQTT-Verbindung über Transport Layer Security (TLS)
 - Skalierbare Anwendungen
 

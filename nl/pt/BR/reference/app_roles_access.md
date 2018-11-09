@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-16"
+  years: 2016, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -23,7 +23,7 @@ As tabelas mostram níveis de acesso para:
 <!-- [Historian Operations](#app-historian) -->
 - [Operações de organização](#app-org-ops)
 - [Operações de controle de acesso](#app-access-ops)
-- [Operações de análise de dados](#app-analytics-ops)
+<!-- - [Analytics Operations](#app-analytics-ops) -->
 - [Operações de terceiros](#app-third-party)  
 <!-- - [Risk Management Operations](#app-risk-mgt) -->
 
@@ -103,18 +103,16 @@ Visualizar Funções|P|P|-|-|-|-
 Criar, atualizar, excluir funções customizadas|-|P|-|-|-|-
 Visualizar operações*|P|P|-|-|-|-
 
-### Operações de análise de dados {: #app-analytics-ops}
-
-Operações de análise de dados ||| Application Roles||||
-:--------: | -------------|-------------|---------------|-----|---
-           | **Aplicativo padrão** | **Aplicativo de operações** | **Aplicativo confiável de backend** | **Aplicativo de processador de dados** | **Aplicativo de visualização** | **Aplicativo de dispositivo**
-Visualizar regras de análise de dados|P|P|-|P|P|-
-Gerenciar regras de analítica|P|P|-|P|-|-
-Visualizar ações de analítica|P|P|-|P|P|-
-Gerenciar ações de analítica|P|P|-|P|P|-
-Visualizar alertas de analítica|P|P|-|P|P|P
-Visualizar esquemas de mensagens de analítica|P|P|-|P|P|-
-Gerenciar esquemas de mensagens de analítica|P|P|-|P|-|-
+<!-- ### Analytics Operations {: #app-analytics-ops}
+Analytics Operations ||| Application Roles||||
+           | **Standard Application** | **Operations Application** | **Backend Trusted Application** | **Data Processor Application** | **Visualization Application** | **Device Application**
+View analytics rules|X|X|-|X|X|-
+Manage analytics rules|X|X|-|X|-|-
+View analytics actions|X|X|-|X|X|-
+Manage analytics actions|X|X|-|X|X|-
+View analytics alerts|X|X|-|X|X|X
+View analytics message schemas|X|X|-|X|X|-
+Manage analytics message schemas|X|X|-|X|-|- -->
 
 ### Operações de serviço de terceiro {: #app-third-party}
 

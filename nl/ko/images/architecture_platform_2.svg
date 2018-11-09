@@ -12,11 +12,10 @@
    viewBox="0 0 674 360"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="architecture_platform_2.svg"
-   inkscape:export-filename="T:\PUB\ABD142\ART\WORK\ship8\images\architecture_platform_2.png"
-   inkscape:export-xdpi="299.98099"
-   inkscape:export-ydpi="299.98099">
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="architecture_platform_2.svg">
   <metadata
      id="metadata679">
     <rdf:RDF>
@@ -40,12 +39,12 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1015"
+     inkscape:window-height="1012"
      id="namedview675"
      showgrid="false"
-     inkscape:zoom="2.033855"
-     inkscape:cx="330.07673"
-     inkscape:cy="181.78402"
+     inkscape:zoom="2.4796299"
+     inkscape:cx="335.62654"
+     inkscape:cy="181.88086"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -60,1135 +59,1391 @@
        d="M178.62,332.74H159.5v-.07a8.78,8.78,0,1,1,2.74-17.33,9.66,9.66,0,0,1,19.21.42,8.78,8.78,0,0,1-2,16.91v.06h-.8Zm-18.06-1.6h18a7.18,7.18,0,0,0,1.85-14l-.55-.17,0-.57a8.06,8.06,0,0,0-16.11,0l0,1.06-1-.31a7.18,7.18,0,1,0-2.4,14h.22Z"
        style="fill: #70caee" />
   </g>
-  <rect
-     id="rect9"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     transform="matrix(0.9999844,-0.00558502,0.00558502,0.9999844,0,0)"
-     height="59"
-     width="116.82"
-     y="31.498096"
-     x="2.1581063" />
-  <rect
-     id="rect11"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     transform="matrix(0.9999844,-0.00558502,0.00558502,0.9999844,0,0)"
-     height="59"
-     width="117.49"
-     y="105.49581"
-     x="1.4081129" />
-  <rect
-     id="rect13"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.00004995;stroke-miterlimit:10"
-     transform="matrix(0.99995,-0.0099995,0.0099995,0.99995,0,0)"
-     height="59.002949"
-     width="117.10585"
-     y="179.49734"
-     x="1.196776" />
-  <rect
-     id="rect15"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     transform="matrix(0.9999844,-0.00558502,0.00558502,0.9999844,0,0)"
-     height="59"
-     width="116.82"
-     y="26.528263"
-     x="7.1879382" />
-  <rect
-     id="rect17"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     transform="matrix(0.9999844,-0.00558502,0.00558502,0.9999844,0,0)"
-     height="59"
-     width="117.49"
-     y="100.52598"
-     x="6.4379444" />
-  <rect
-     id="rect19"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.00004995;stroke-miterlimit:10"
-     transform="matrix(0.99995,-0.0099995,0.0099995,0.99995,0,0)"
-     height="59.002949"
-     width="117.10585"
-     y="174.52739"
-     x="6.2267246" />
-  <rect
-     id="rect21"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     transform="matrix(0.9999844,-0.00558502,0.00558502,0.9999844,0,0)"
-     height="59"
-     width="116.82"
-     y="21.548429"
-     x="12.217826" />
-  <rect
-     id="rect53"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     height="7"
-     width="24"
-     y="28.66"
-     x="58.91" />
-  <circle
-     id="circle55"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     r="1.25"
-     cy="32.16"
-     cx="78.160004" />
-  <rect
-     id="rect59"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     height="7"
-     width="24"
-     y="37.66"
-     x="58.91" />
-  <circle
-     id="circle61"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     r="1.25"
-     cy="41.16"
-     cx="78.160004" />
-  <rect
-     id="rect65"
-     style="fill:none;stroke:#ffffff;stroke-width:0.93541437px;stroke-miterlimit:10"
-     height="7"
-     width="24"
-     y="46.66"
-     x="58.91" />
-  <circle
-     id="circle67"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     r="1.25"
-     cy="50.16"
-     cx="78.160004" />
-  <rect
-     id="rect69"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     transform="matrix(0.9999844,-0.00558502,0.00558502,0.9999844,0,0)"
-     height="59"
-     width="117.49"
-     y="95.556145"
-     x="11.467776" />
-  <text
-     id="text71"
-     style="font-size:11px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';fill:#1d1d1b"
-     x="41.459999"
-     y="143.85001">
-    <tspan
-       id="tspan73"
-       style="letter-spacing:0.00266335em">I</tspan>
-    <tspan
-       id="tspan75"
-       style="letter-spacing:-0.07927912em"
-       y="143.85001"
-       x="44.549999">o</tspan>
-    <tspan
-       id="tspan77"
-       y="143.85001"
-       x="50.200001">T</tspan>
-    <tspan
-       id="tspan79"
-       style="letter-spacing:0.00754616em"
-       y="143.85001"
-       x="59.779999">D</tspan>
-    <tspan
-       id="tspan81"
-       style="letter-spacing:-0.00923295em"
-       y="143.85001"
-       x="67.800003">e</tspan>
-    <tspan
-       id="tspan83"
-       style="letter-spacing:0.00399503em"
-       y="143.85001"
-       x="73.82">vi</tspan>
-    <tspan
-       id="tspan85"
-       style="letter-spacing:0.0045277em"
-       y="143.85001"
-       x="82.260002">c</tspan>
-    <tspan
-       id="tspan87"
-       style="letter-spacing:0.0078125em"
-       y="143.85001"
-       x="88.43">e</tspan>
-    <tspan
-       id="tspan89"
-       y="143.85001"
-       x="94.629997">s</tspan>
-  </text>
-  <rect
-     id="rect91"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.00004995;stroke-miterlimit:10"
-     transform="matrix(0.99995,-0.0099995,0.0099995,0.99995,0,0)"
-     height="59.002949"
-     width="117.10585"
-     y="169.55745"
-     x="11.256673" />
-  <text
-     id="text93"
-     style="font-size:11px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';fill:#1d1d1b"
-     x="36.689999"
-     y="217.85001">
-    <tspan
-       id="tspan95"
-       style="letter-spacing:0.00266335em">I</tspan>
-    <tspan
-       id="tspan97"
-       style="letter-spacing:-0.07927912em"
-       y="217.85001"
-       x="39.779999">o</tspan>
-    <tspan
-       id="tspan99"
-       y="217.85001"
-       x="45.43">T</tspan>
-    <tspan
-       id="tspan101"
-       style="letter-spacing:0.01083097em"
-       y="217.85001"
-       x="55.009998">G</tspan>
-    <tspan
-       id="tspan103"
-       style="letter-spacing:0.0020419em"
-       y="217.85001"
-       x="63.48">a</tspan>
-    <tspan
-       id="tspan105"
-       style="letter-spacing:-0.00683594em"
-       y="217.85001"
-       x="69.610001">te</tspan>
-    <tspan
-       id="tspan107"
-       style="letter-spacing:-0.01020952em"
-       y="217.85001"
-       x="79.239998">w</tspan>
-    <tspan
-       id="tspan109"
-       style="letter-spacing:-0.00932173em"
-       y="217.85001"
-       x="87.68">a</tspan>
-    <tspan
-       id="tspan111"
-       style="letter-spacing:0.00062145em"
-       y="217.85001"
-       x="93.699997">y</tspan>
-    <tspan
-       id="tspan113"
-       y="217.85001"
-       x="99.410004">s</tspan>
-  </text>
-  <rect
-     id="rect115"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-miterlimit:10"
-     height="70"
-     width="127.5"
-     y="242.16"
-     x="2.4100001" />
-  <text
-     id="text117"
-     style="font-size:11px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.04367898em;fill:#1d1d1b"
-     x="21.17"
-     y="290.85001">W<tspan
-   id="tspan119"
-   style="letter-spacing:-0.01793324em"
-   y="290.85001"
-   x="31.07">a</tspan>
+  <g
+     id="Layer_2"
+     data-name="Layer 2">
+    <rect
+       x="2.5"
+       y="31.16"
+       width="116.82"
+       height="59"
+       transform="translate(-0.34 0.34) rotate(-0.32)"
+       style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"
+       id="rect9" />
+    <rect
+       x="2.16"
+       y="105.16"
+       width="117.49"
+       height="59"
+       transform="translate(-0.75 0.34) rotate(-0.32)"
+       style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"
+       id="rect11" />
+    <rect
+       x="2.36"
+       y="179.16"
+       width="117.1"
+       height="59"
+       transform="matrix(1, -0.01, 0.01, 1, -1.16, 0.34)"
+       style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"
+       id="rect13" />
+    <rect
+       x="7.5"
+       y="26.16"
+       width="116.82"
+       height="59"
+       transform="translate(-0.31 0.37) rotate(-0.32)"
+       style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"
+       id="rect15" />
+    <rect
+       x="7.16"
+       y="100.16"
+       width="117.49"
+       height="59"
+       transform="translate(-0.72 0.37) rotate(-0.32)"
+       style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"
+       id="rect17" />
+    <rect
+       x="7.36"
+       y="174.16"
+       width="117.1"
+       height="59"
+       transform="matrix(1, -0.01, 0.01, 1, -1.13, 0.37)"
+       style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"
+       id="rect19" />
+    <rect
+       x="12.5"
+       y="21.16"
+       width="116.82"
+       height="59"
+       transform="translate(-0.28 0.39) rotate(-0.32)"
+       style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"
+       id="rect21" />
+    <text
+       transform="translate(39.11 69.85)"
+       style="font-size: 11px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"
+       id="text23">
+      <tspan
+         style="letter-spacing: 0.012872869318181818em"
+         id="tspan25">애플리케이션</tspan>
+      <tspan
+         x="7.48"
+         y="0"
+         style="letter-spacing: 0.0035511363636363635em"
+         id="tspan27" />
+      <tspan
+         x="14.24"
+         y="0"
+         style="letter-spacing: 0.003018465909090909em"
+         id="tspan29" />
+      <tspan
+         x="20.99"
+         y="0"
+         id="tspan31" />
+      <tspan
+         x="23.64"
+         y="0"
+         style="letter-spacing: 0.00390625em"
+         id="tspan33" />
+      <tspan
+         x="26.34"
+         y="0"
+         style="letter-spacing: 0.006036931818181818em"
+         id="tspan35" />
+      <tspan
+         x="32.52"
+         y="0"
+         style="letter-spacing: 0.002041903409090909em"
+         id="tspan37" />
+      <tspan
+         x="38.66"
+         y="0"
+         style="letter-spacing: 0.003107244318181818em"
+         id="tspan39" />
+      <tspan
+         x="42.36"
+         y="0"
+         style="letter-spacing: 0.001953125em"
+         id="tspan41" />
+      <tspan
+         x="45.03"
+         y="0"
+         style="letter-spacing: 0.0048828125em"
+         id="tspan43" />
+      <tspan
+         x="51.61"
+         y="0"
+         style="letter-spacing: 0.0033735795454545455em"
+         id="tspan45" />
+      <tspan
+         x="57.96"
+         y="0"
+         id="tspan47" />
+    </text>
+    <g
+       id="g49">
+      <g
+         id="g51">
+        <rect
+           x="58.91"
+           y="28.66"
+           width="24"
+           height="7"
+           style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+           id="rect53" />
+        <circle
+           cx="78.16"
+           cy="32.16"
+           r="1.25"
+           style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+           id="circle55" />
+      </g>
+      <g
+         id="g57">
+        <rect
+           x="58.91"
+           y="37.66"
+           width="24"
+           height="7"
+           style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+           id="rect59" />
+        <circle
+           cx="78.16"
+           cy="41.16"
+           r="1.25"
+           style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+           id="circle61" />
+      </g>
+      <g
+         id="g63">
+        <rect
+           x="58.91"
+           y="46.66"
+           width="24"
+           height="7"
+           style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 0.935414346693485px"
+           id="rect65" />
+        <circle
+           cx="78.16"
+           cy="50.16"
+           r="1.25"
+           style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+           id="circle67" />
+      </g>
+    </g>
+    <rect
+       x="12.16"
+       y="95.16"
+       width="117.49"
+       height="59"
+       transform="translate(-0.69 0.4) rotate(-0.32)"
+       style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"
+       id="rect69" />
+    <text
+       transform="translate(41.46 143.85)"
+       style="font-size: 11px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"
+       id="text71">
+      <tspan
+         style="letter-spacing: 0.0026633522727272725em"
+         id="tspan73">I</tspan>
+      <tspan
+         x="3.09"
+         y="0"
+         style="letter-spacing: -0.07927911931818182em"
+         id="tspan75">o</tspan>
+      <tspan
+         x="8.74"
+         y="0"
+         id="tspan77">T </tspan>
+      <tspan
+         x="18.32"
+         y="0"
+         style="letter-spacing: 0.007546164772727273em"
+         id="tspan79">디바이스</tspan>
+      <tspan
+         x="26.34"
+         y="0"
+         style="letter-spacing: -0.009232954545454546em"
+         id="tspan81" />
+      <tspan
+         x="32.36"
+         y="0"
+         style="letter-spacing: 0.003995028409090909em"
+         id="tspan83" />
+      <tspan
+         x="40.8"
+         y="0"
+         style="letter-spacing: 0.004527698863636364em"
+         id="tspan85" />
+      <tspan
+         x="46.97"
+         y="0"
+         style="letter-spacing: 0.0078125em"
+         id="tspan87" />
+      <tspan
+         x="53.17"
+         y="0"
+         id="tspan89" />
+    </text>
+    <rect
+       x="12.36"
+       y="169.16"
+       width="117.1"
+       height="59"
+       transform="matrix(1, -0.01, 0.01, 1, -1.1, 0.4)"
+       style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"
+       id="rect91" />
+    <text
+       transform="translate(36.69 217.85)"
+       style="font-size: 11px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"
+       id="text93">
+      <tspan
+         style="letter-spacing: 0.0026633522727272725em"
+         id="tspan95">I</tspan>
+      <tspan
+         x="3.09"
+         y="0"
+         style="letter-spacing: -0.07927911931818182em"
+         id="tspan97">o</tspan>
+      <tspan
+         x="8.74"
+         y="0"
+         id="tspan99">T </tspan>
+      <tspan
+         x="18.32"
+         y="0"
+         style="letter-spacing: 0.01083096590909091em"
+         id="tspan101">게이트웨이</tspan>
+      <tspan
+         x="26.79"
+         y="0"
+         style="letter-spacing: 0.002041903409090909em"
+         id="tspan103" />
+      <tspan
+         x="32.92"
+         y="0"
+         style="letter-spacing: -0.0068359375em"
+         id="tspan105" />
+      <tspan
+         x="42.55"
+         y="0"
+         style="letter-spacing: -0.010209517045454546em"
+         id="tspan107" />
+      <tspan
+         x="50.99"
+         y="0"
+         style="letter-spacing: -0.009321732954545454em"
+         id="tspan109" />
+      <tspan
+         x="57.01"
+         y="0"
+         style="letter-spacing: 0.0006214488636363636em"
+         id="tspan111" />
+      <tspan
+         x="62.72"
+         y="0"
+         id="tspan113" />
+    </text>
+    <rect
+       x="2.41"
+       y="242.16"
+       width="127.5"
+       height="70"
+       style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10"
+       id="rect115" />
+    <text
+       transform="translate(21.17 290.85)"
+       style="font-size: 11px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.04367897727272727em"
+       id="text117">W<tspan
+   x="9.9"
+   y="0"
+   style="letter-spacing: -0.017933238636363636em"
+   id="tspan119">a</tspan>
 <tspan
-   id="tspan121"
-   style="letter-spacing:-0.01305043em"
-   y="290.85001"
-   x="36.989998">t</tspan>
+   x="15.82"
+   y="0"
+   style="letter-spacing: -0.013050426136363636em"
+   id="tspan121">t</tspan>
 <tspan
-   id="tspan123"
-   style="letter-spacing:-0.01447088em"
-   y="290.85001"
-   x="40.509998">s</tspan>
+   x="19.34"
+   y="0"
+   style="letter-spacing: -0.014470880681818182em"
+   id="tspan123">s</tspan>
 <tspan
-   id="tspan125"
-   style="letter-spacing:-0.01509233em"
-   y="290.85001"
-   x="46.059998">o</tspan>
+   x="24.89"
+   y="0"
+   style="letter-spacing: -0.015092329545454546em"
+   id="tspan125">o</tspan>
 <tspan
-   id="tspan127"
-   style="letter-spacing:-0.01997514em"
-   y="290.85001"
-   x="52.419998">n</tspan>
+   x="31.25"
+   y="0"
+   style="letter-spacing: -0.019975142045454544em"
+   id="tspan127">n </tspan>
 <tspan
-   id="tspan129"
-   style="letter-spacing:-0.01740057em"
-   y="290.85001"
-   x="61.349998">I</tspan>
+   x="40.18"
+   y="0"
+   style="letter-spacing: -0.01740056818181818em"
+   id="tspan129">I</tspan>
 <tspan
-   id="tspan131"
-   style="letter-spacing:-0.09925426em"
-   y="290.85001"
-   x="64.220001">o</tspan>
+   x="43.05"
+   y="0"
+   style="letter-spacing: -0.09925426136363637em"
+   id="tspan131">o</tspan>
 <tspan
-   id="tspan133"
-   style="letter-spacing:-0.01997514em"
-   y="290.85001"
-   x="69.650002">T</tspan>
+   x="48.48"
+   y="0"
+   style="letter-spacing: -0.019975142045454544em"
+   id="tspan133">T </tspan>
 <tspan
-   id="tspan135"
-   style="letter-spacing:-0.02725497em"
-   y="290.85001"
-   x="78.790001">P</tspan>
+   x="57.62"
+   y="0"
+   style="letter-spacing: -0.027254971590909092em"
+   id="tspan135">P</tspan>
 <tspan
-   id="tspan137"
-   style="letter-spacing:-0.01615767em"
-   y="290.85001"
-   x="85.830002">l</tspan>
+   x="64.66"
+   y="0"
+   style="letter-spacing: -0.016157670454545456em"
+   id="tspan137">l</tspan>
 <tspan
-   id="tspan139"
-   style="letter-spacing:-0.01793324em"
-   y="290.85001"
-   x="88.299995">a</tspan>
+   x="67.13"
+   y="0"
+   style="letter-spacing: -0.017933238636363636em"
+   id="tspan139">a</tspan>
 <tspan
-   id="tspan141"
-   style="letter-spacing:0.00417259em"
-   y="290.85001"
-   x="94.220001">t</tspan>
+   x="73.05"
+   y="0"
+   style="letter-spacing: 0.004172585227272727em"
+   id="tspan141">t</tspan>
 <tspan
-   id="tspan143"
-   style="letter-spacing:-0.02441406em"
-   y="290.85001"
-   x="97.93">f</tspan>
+   x="76.76"
+   y="0"
+   style="letter-spacing: -0.0244140625em"
+   id="tspan143">f</tspan>
 <tspan
-   id="tspan145"
-   style="letter-spacing:-0.01500355em"
-   y="290.85001"
-   x="101.12">o</tspan>
+   x="79.95"
+   y="0"
+   style="letter-spacing: -0.015003551136363636em"
+   id="tspan145">o</tspan>
 <tspan
-   id="tspan147"
-   style="letter-spacing:-0.00523793em"
-   y="290.85001"
-   x="107.48">r</tspan>
+   x="86.31"
+   y="0"
+   style="letter-spacing: -0.005237926136363636em"
+   id="tspan147">r</tspan>
 <tspan
-   id="tspan149"
-   style="letter-spacing:-0.02006392em"
-   y="290.85001"
-   x="111.3">m</tspan>
+   x="90.13"
+   y="0"
+   style="letter-spacing: -0.020063920454545456em"
+   id="tspan149">m</tspan>
 <tspan
-   id="tspan151"
-   style="letter-spacing:-0.01349432em">
+   style="letter-spacing: -0.013494318181818182em"
+   id="tspan151">
   <tspan
-     id="tspan153"
-     y="303.85001"
-     x="43.559998">D</tspan>
+     x="22.39"
+     y="13"
+     id="tspan153">대시보드</tspan>
   <tspan
-     id="tspan155"
-     style="letter-spacing:-0.00807883em"
-     y="303.85001"
-     x="51.349998">a</tspan>
+     x="30.18"
+     y="13"
+     style="letter-spacing: -0.008078835227272728em"
+     id="tspan155" />
   <tspan
-     id="tspan157"
-     style="letter-spacing:-0.01260653em"
-     y="303.85001"
-     x="57.379997">s</tspan>
+     x="36.21"
+     y="13"
+     style="letter-spacing: -0.01260653409090909em"
+     id="tspan157" />
   <tspan
-     id="tspan159"
-     style="letter-spacing:-0.01802202em"
-     y="303.85001"
-     x="62.949997">h</tspan>
+     x="41.78"
+     y="13"
+     style="letter-spacing: -0.018022017045454544em"
+     id="tspan159" />
   <tspan
-     id="tspan161"
-     style="letter-spacing:-0.01598011em"
-     y="303.85001"
-     x="69.059998">b</tspan>
+     x="47.89"
+     y="13"
+     style="letter-spacing: -0.015980113636363636em"
+     id="tspan161" />
   <tspan
-     id="tspan163"
-     style="letter-spacing:-0.01793324em"
-     y="303.85001"
-     x="75.610001">o</tspan>
+     x="54.44"
+     y="13"
+     style="letter-spacing: -0.017933238636363636em"
+     id="tspan163" />
   <tspan
-     id="tspan165"
-     style="letter-spacing:-0.0098544em"
-     y="303.85001"
-     x="81.93">a</tspan>
+     x="60.76"
+     y="13"
+     style="letter-spacing: -0.00985440340909091em"
+     id="tspan165" />
   <tspan
-     id="tspan167"
-     style="letter-spacing:-0.00523793em"
-     y="303.85001"
-     x="87.939995">r</tspan>
+     x="66.77"
+     y="13"
+     style="letter-spacing: -0.005237926136363636em"
+     id="tspan167" />
   <tspan
-     id="tspan169"
-     style="letter-spacing:-0.01997514em"
-     y="303.85001"
-     x="91.759995">d</tspan>
+     x="70.59"
+     y="13"
+     style="letter-spacing: -0.019975142045454544em"
+     id="tspan169" />
 </tspan>
 </text>
-  <rect
-     id="rect171"
-     style="fill:#f0f0ef"
-     height="286"
-     width="438"
-     y="26"
-     x="213" />
-  <text
-     id="text173"
-     style="font-weight:700;font-size:12px;font-family:HelveticaNeue-Bold, 'Helvetica Neue';fill:#1d1d1b"
-     x="244"
-     y="20.5">
-    <tspan
-       id="tspan175"
-       style="letter-spacing:0.00325521em">I</tspan>
-    <tspan
-       id="tspan177"
-       style="letter-spacing:0.00130208em"
-       y="20.5"
-       x="247.58">B</tspan>
-    <tspan
-       id="tspan179"
-       style="letter-spacing:0.009847em"
-       y="20.5"
-       x="256.04001">M</tspan>
-    <tspan
-       id="tspan181"
-       y="20.5"
-       x="267.04001">®</tspan>
-    <tspan
-       id="tspan183"
-       style="letter-spacing:0.00504557em"
-       y="20.5"
-       x="279.98001">Bl</tspan>
-    <tspan
-       id="tspan185"
-       style="letter-spacing:0.00838216em"
-       y="20.5"
-       x="291.64999">u</tspan>
-    <tspan
-       id="tspan187"
-       style="letter-spacing:0.00537109em"
-       y="20.5"
-       x="298.85999">e</tspan>
-    <tspan
-       id="tspan189"
-       style="letter-spacing:0.00415039em"
-       y="20.5"
-       x="305.82001">m</tspan>
-    <tspan
-       id="tspan191"
-       style="letter-spacing:0.0090332em"
-       y="20.5"
-       x="316.73999">i</tspan>
-    <tspan
-       id="tspan193"
-       style="letter-spacing:-0.00008138em"
-       y="20.5"
-       x="319.94">x</tspan>
-  </text>
-  <text
-     id="text195"
-     style="font-weight:700;font-size:12px;font-family:HelveticaNeue-Bold, 'Helvetica Neue';fill:#1d1d1b"
-     x="244"
-     y="72.5">
-    <tspan
-       id="tspan197"
-       style="letter-spacing:-0.02612305em">W</tspan>
-    <tspan
-       id="tspan199"
-       style="letter-spacing:0.00651042em"
-       y="72.5"
-       x="255.00999">a</tspan>
-    <tspan
-       id="tspan201"
-       style="letter-spacing:0.0139974em"
-       y="72.5"
-       x="261.98001">t</tspan>
-    <tspan
-       id="tspan203"
-       style="letter-spacing:0.00260417em"
-       y="72.5"
-       x="266.37">s</tspan>
-    <tspan
-       id="tspan205"
-       style="letter-spacing:0.00333659em"
-       y="72.5"
-       x="272.85001">o</tspan>
-    <tspan
-       id="tspan207"
-       style="letter-spacing:-0.06022136em"
-       y="72.5"
-       x="280.22">n</tspan>
-    <tspan
-       id="tspan209"
-       y="72.5"
-       x="286.60999">™</tspan>
-    <tspan
-       id="tspan211"
-       style="letter-spacing:0.00227865em"
-       y="72.5"
-       x="301.95001">I</tspan>
-    <tspan
-       id="tspan213"
-       style="letter-spacing:-0.08357748em"
-       y="72.5"
-       x="305.51999">o</tspan>
-    <tspan
-       id="tspan215"
-       y="72.5"
-       x="311.84">T</tspan>
-    <tspan
-       id="tspan217"
-       style="letter-spacing:-0.00553385em"
-       y="72.5"
-       x="322.51001">P</tspan>
-    <tspan
-       id="tspan219"
-       style="letter-spacing:0.00691732em"
-       y="72.5"
-       x="330.45001">la</tspan>
-    <tspan
-       id="tspan221"
-       style="letter-spacing:0.03157552em"
-       y="72.5"
-       x="340.60001">t</tspan>
-    <tspan
-       id="tspan223"
-       style="letter-spacing:-0.00301107em"
-       y="72.5"
-       x="345.20001">f</tspan>
-    <tspan
-       id="tspan225"
-       style="letter-spacing:0.00333659em"
-       y="72.5"
-       x="349.16">o</tspan>
-    <tspan
-       id="tspan227"
-       style="letter-spacing:0.00854492em"
-       y="72.5"
-       x="356.53">r</tspan>
-    <tspan
-       id="tspan229"
-       style="letter-spacing:-0.00008138em"
-       y="72.5"
-       x="361.29999">m</tspan>
-  </text>
-  <line
-     id="line231"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     y2="187"
-     x2="81"
-     y1="187"
-     x1="62" />
-  <line
-     id="line233"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     y2="194"
-     x2="81"
-     y1="194"
-     x1="72" />
-  <line
-     id="line235"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     y2="194"
-     x2="72"
-     y1="187.05"
-     x1="67.050003" />
-  <circle
-     cx="62"
-     cy="187"
-     r="1.5"
-     style="fill:#6fc9ee"
-     id="circle239" />
-  <path
-     d="M 62,186"
-     style="fill:#ffffff"
-     id="path241"
-     inkscape:connector-curvature="0" />
-  <circle
-     cx="72"
-     cy="187"
-     r="1.5"
-     style="fill:#6fc9ee"
-     id="circle245" />
-  <path
-     d="M 72,186"
-     style="fill:#ffffff"
-     id="path247"
-     inkscape:connector-curvature="0" />
-  <circle
-     cx="81"
-     cy="187"
-     r="1.5"
-     style="fill:#6fc9ee"
-     id="circle251" />
-  <path
-     d="M 81,186"
-     style="fill:#ffffff"
-     id="path253"
-     inkscape:connector-curvature="0" />
-  <circle
-     cx="81"
-     cy="194"
-     r="1.5"
-     style="fill:#6fc9ee"
-     id="circle257" />
-  <path
-     d="M 81,193"
-     style="fill:#ffffff"
-     id="path259"
-     inkscape:connector-curvature="0" />
-  <circle
-     cx="72"
-     cy="194"
-     r="1.5"
-     style="fill:#6fc9ee"
-     id="circle263" />
-  <path
-     d="M 72,193"
-     style="fill:#ffffff"
-     id="path265"
-     inkscape:connector-curvature="0" />
-  <rect
-     id="rect267"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     height="24.66"
-     width="24"
-     y="250"
-     x="58.91" />
-  <rect
-     id="rect270"
-     style="fill:#6fc9ee"
-     height="186"
-     width="285"
-     y="78"
-     x="244" />
-  <path
-     inkscape:connector-curvature="0"
-     id="path316"
-     style="fill:#f0f0ef"
-     d="m 513,95 0,43 -59.5,0 0,-43 59.5,0 m 1,-1 -61.5,0 0,45 61.5,0 0,-45 z" />
-  <path
-     inkscape:connector-curvature="0"
-     id="path318"
-     style="fill:#f0f0ef"
-     d="m 513,205 0,43 -59.5,0 0,-43 59.5,0 m 1,-1 -61.5,0 0,45 61.5,0 0,-45 z" />
-  <text
-     id="text350"
-     style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.00423177em;fill:#1d1d1b"
-     x="162.45"
-     y="52">A<tspan
-   id="tspan352"
-   style="letter-spacing:-0.02354601em"
-   y="52"
-   x="168.41">P</tspan>
+    <rect
+       x="213"
+       y="26"
+       width="438"
+       height="286"
+       style="fill: #f0f0ef"
+       id="rect171" />
+    <text
+       transform="translate(244 20.5)"
+       style="font-size: 12px;fill: #1d1d1b;font-family: HelveticaNeue-Bold, Helvetica Neue;font-weight: 700"
+       id="text173">
+      <tspan
+         style="letter-spacing: 0.0032552083333333335em"
+         id="tspan175">I</tspan>
+      <tspan
+         x="3.58"
+         y="0"
+         style="letter-spacing: 0.0013020833333333333em"
+         id="tspan177">B</tspan>
+      <tspan
+         x="12.04"
+         y="0"
+         style="letter-spacing: 0.009847005208333334em"
+         id="tspan179">M</tspan>
+      <tspan
+         x="23.04"
+         y="0"
+         id="tspan181">® </tspan>
+      <tspan
+         x="35.98"
+         y="0"
+         style="letter-spacing: 0.005045572916666667em"
+         id="tspan183">Cl</tspan>
+      <tspan
+         x="47.65"
+         y="0"
+         style="letter-spacing: 0.008382161458333334em"
+         id="tspan185">o</tspan>
+      <tspan
+         x="54.86"
+         y="0"
+         style="letter-spacing: 0.00537109375em"
+         id="tspan187">u</tspan>
+      <tspan
+         x="61.82"
+         y="0"
+         style="letter-spacing: 0.004150390625em"
+         id="tspan189">d</tspan>
+      <tspan
+         x="72.74"
+         y="0"
+         style="letter-spacing: 0.009033203125em"
+         id="tspan191" />
+      <tspan
+         x="75.94"
+         y="0"
+         style="letter-spacing: -0.00008138020833333333em"
+         id="tspan193" />
+    </text>
+    <text
+       transform="translate(244 72.5)"
+       style="font-size: 12px;fill: #1d1d1b;font-family: HelveticaNeue-Bold, Helvetica Neue;font-weight: 700"
+       id="text195">
+      <tspan
+         style="letter-spacing: -0.026123046875em"
+         id="tspan197">W</tspan>
+      <tspan
+         x="11.01"
+         y="0"
+         style="letter-spacing: 0.006510416666666667em"
+         id="tspan199">a</tspan>
+      <tspan
+         x="17.98"
+         y="0"
+         style="letter-spacing: 0.013997395833333334em"
+         id="tspan201">t</tspan>
+      <tspan
+         x="22.37"
+         y="0"
+         style="letter-spacing: 0.0026041666666666665em"
+         id="tspan203">s</tspan>
+      <tspan
+         x="28.85"
+         y="0"
+         style="letter-spacing: 0.0033365885416666665em"
+         id="tspan205">o</tspan>
+      <tspan
+         x="36.22"
+         y="0"
+         style="letter-spacing: -0.060221354166666664em"
+         id="tspan207">n</tspan>
+      <tspan
+         x="42.61"
+         y="0"
+         id="tspan209">™ </tspan>
+      <tspan
+         x="57.95"
+         y="0"
+         style="letter-spacing: 0.0022786458333333335em"
+         id="tspan211">I</tspan>
+      <tspan
+         x="61.52"
+         y="0"
+         style="letter-spacing: -0.08357747395833333em"
+         id="tspan213">o</tspan>
+      <tspan
+         x="67.84"
+         y="0"
+         id="tspan215">T </tspan>
+      <tspan
+         x="78.51"
+         y="0"
+         style="letter-spacing: -0.005533854166666667em"
+         id="tspan217">P</tspan>
+      <tspan
+         x="86.45"
+         y="0"
+         style="letter-spacing: 0.006917317708333333em"
+         id="tspan219">la</tspan>
+      <tspan
+         x="96.6"
+         y="0"
+         style="letter-spacing: 0.031575520833333336em"
+         id="tspan221">t</tspan>
+      <tspan
+         x="101.2"
+         y="0"
+         style="letter-spacing: -0.0030110677083333335em"
+         id="tspan223">f</tspan>
+      <tspan
+         x="105.16"
+         y="0"
+         style="letter-spacing: 0.0033365885416666665em"
+         id="tspan225">o</tspan>
+      <tspan
+         x="112.53"
+         y="0"
+         style="letter-spacing: 0.008544921875em"
+         id="tspan227">r</tspan>
+      <tspan
+         x="117.3"
+         y="0"
+         style="letter-spacing: -0.00008138020833333333em"
+         id="tspan229">m</tspan>
+    </text>
+    <line
+       x1="62"
+       y1="187"
+       x2="81"
+       y2="187"
+       style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+       id="line231" />
+    <line
+       x1="72"
+       y1="194"
+       x2="81"
+       y2="194"
+       style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+       id="line233" />
+    <line
+       x1="67.05"
+       y1="187.05"
+       x2="72"
+       y2="194"
+       style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+       id="line235" />
+    <g
+       id="g237">
+      <circle
+         cx="62"
+         cy="187"
+         r="1.5"
+         style="fill: #6fc9ee"
+         id="circle239" />
+      <path
+         d="M62,186a1,1,0,1,1-1,1,1,1,0,0,1,1-1m0-1a2,2,0,1,0,2,2,2,2,0,0,0-2-2Z"
+         style="fill: #fff"
+         id="path241" />
+    </g>
+    <g
+       id="g243">
+      <circle
+         cx="72"
+         cy="187"
+         r="1.5"
+         style="fill: #6fc9ee"
+         id="circle245" />
+      <path
+         d="M72,186a1,1,0,1,1-1,1,1,1,0,0,1,1-1m0-1a2,2,0,1,0,2,2,2,2,0,0,0-2-2Z"
+         style="fill: #fff"
+         id="path247" />
+    </g>
+    <g
+       id="g249">
+      <circle
+         cx="81"
+         cy="187"
+         r="1.5"
+         style="fill: #6fc9ee"
+         id="circle251" />
+      <path
+         d="M81,186a1,1,0,1,1-1,1,1,1,0,0,1,1-1m0-1a2,2,0,1,0,2,2,2,2,0,0,0-2-2Z"
+         style="fill: #fff"
+         id="path253" />
+    </g>
+    <g
+       id="g255">
+      <circle
+         cx="81"
+         cy="194"
+         r="1.5"
+         style="fill: #6fc9ee"
+         id="circle257" />
+      <path
+         d="M81,193a1,1,0,1,1-1,1,1,1,0,0,1,1-1m0-1a2,2,0,1,0,2,2,2,2,0,0,0-2-2Z"
+         style="fill: #fff"
+         id="path259" />
+    </g>
+    <g
+       id="g261">
+      <circle
+         cx="72"
+         cy="194"
+         r="1.5"
+         style="fill: #6fc9ee"
+         id="circle263" />
+      <path
+         d="M72,193a1,1,0,1,1-1,1,1,1,0,0,1,1-1m0-1a2,2,0,1,0,2,2,2,2,0,0,0-2-2Z"
+         style="fill: #fff"
+         id="path265" />
+    </g>
+    <rect
+       x="58.91"
+       y="250"
+       width="24"
+       height="24.66"
+       style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+       id="rect267" />
+  </g>
+  <g
+     id="Layer_3"
+     data-name="Layer 3">
+    <rect
+       x="244"
+       y="78"
+       width="285"
+       height="186"
+       style="fill: #6fc9ee"
+       id="rect270" />
+    <text
+       transform="translate(467.34 114.57)"
+       style="font-size: 10px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"
+       id="text272">
+      <tspan
+         style="letter-spacing: 0.01162109375em"
+         id="tspan274">디바이스</tspan>
+      <tspan
+         x="7.34"
+         y="0"
+         style="letter-spacing: -0.005078125em"
+         id="tspan276" />
+      <tspan
+         x="12.84"
+         y="0"
+         style="letter-spacing: 0.00791015625em"
+         id="tspan278" />
+      <tspan
+         x="20.6"
+         y="0"
+         style="letter-spacing: 0.00849609375em"
+         id="tspan280" />
+      <tspan
+         x="26.25"
+         y="0"
+         id="tspan282" />
+      <tspan
+         x="3.61"
+         y="12"
+         style="letter-spacing: 0.0138671875em"
+         id="tspan284">상태</tspan>
+      <tspan
+         x="10.23"
+         y="12"
+         style="letter-spacing: 0.015234375em"
+         id="tspan286" />
+      <tspan
+         x="13.71"
+         y="12"
+         style="letter-spacing: 0.0060546875em"
+         id="tspan288" />
+      <tspan
+         x="19.33"
+         y="12"
+         style="letter-spacing: -0.0025390625em"
+         id="tspan290" />
+      <tspan
+         x="22.64"
+         y="12"
+         id="tspan292" />
+    </text>
+    <path
+       d="M513,95v43H453.5V95H513m1-1H452.5v45H514V94Z"
+       style="fill: #f0f0ef"
+       id="path316" />
+    <path
+       d="M513,205v43H453.5V205H513m1-1H452.5v45H514V204Z"
+       style="fill: #f0f0ef"
+       id="path318" />
+    <text
+       transform="translate(162.45 52)"
+       style="font-size: 9px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.004231770833333333em"
+       id="text350">A<tspan
+   x="5.96"
+   y="0"
+   style="letter-spacing: -0.023546006944444444em"
+   id="tspan352">P</tspan>
 <tspan
-   id="tspan354"
-   style="letter-spacing:-0.01996528em"
-   y="52"
-   x="174.21001">I</tspan>
+   x="11.76"
+   y="0"
+   style="letter-spacing: -0.019965277777777776em"
+   id="tspan354">I</tspan>
 </text>
-  <text
-     id="text356"
-     style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.01085069em;fill:#1d1d1b"
-     x="157.97"
-     y="281.89001">H<tspan
-   id="tspan358"
-   style="letter-spacing:0.02105035em"
-   y="281.89001"
-   x="164.37">T</tspan>
+    <text
+       transform="translate(157.97 281.89)"
+       style="font-size: 9px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.010850694444444444em"
+       id="text356">H<tspan
+   x="6.4"
+   y="0"
+   style="letter-spacing: 0.021050347222222224em"
+   id="tspan358">T</tspan>
 <tspan
-   id="tspan360"
-   style="letter-spacing:-0.01128472em"
-   y="281.89001"
-   x="169.89999">T</tspan>
+   x="11.93"
+   y="0"
+   style="letter-spacing: -0.011284722222222222em"
+   id="tspan360">T</tspan>
 <tspan
-   id="tspan362"
-   style="letter-spacing:-0.02007378em"
-   y="281.89001"
-   x="175.13">P</tspan>
+   x="17.16"
+   y="0"
+   style="letter-spacing: -0.020073784722222224em"
+   id="tspan362">P</tspan>
 </text>
-  <polyline
-     points="427 174.16 481 174.16 481 147.18"
-     style="fill:none;stroke:#000000;stroke-miterlimit:10"
-     id="polyline382" />
-  <polygon
-     points="485.99,148.63 481,140 476.01,148.63 485.99,148.63 "
-     id="polygon384" />
-  <line
-     x1="529"
-     y1="198.16"
-     x2="551.82001"
-     y2="198.16"
-     style="fill:none;stroke:#000000;stroke-miterlimit:10"
-     id="line388" />
-  <polygon
-     points="550.37,203.15 559,198.16 550.37,193.17 550.37,203.15 "
-     id="polygon390" />
-  <g
-     id="g394">
-    <path
-       d="m 565.5,202.5 0,5.5 c 0,1.93 5.82,3.5 13,3.5 7.18,0 13,-1.57 13,-3.5 l 0,-5.5"
-       style="fill:#f0f0ef;stroke:#1d1d1b;stroke-miterlimit:10"
-       id="path396"
-       inkscape:connector-curvature="0" />
+    <text
+       transform="translate(153.81 344)"
+       style="font-size: 9px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.009548611111111112em"
+       id="text364">인터넷<tspan
+   x="2.42"
+   y="0"
+   style="letter-spacing: -0.010199652777777778em"
+   id="tspan366" />
+<tspan
+   x="7.49"
+   y="0"
+   style="letter-spacing: -0.018229166666666668em"
+   id="tspan368" />
+<tspan
+   x="10.32"
+   y="0"
+   style="letter-spacing: -0.003689236111111111em"
+   id="tspan370" />
+<tspan
+   x="15.29"
+   y="0"
+   style="letter-spacing: 0.002495659722222222em"
+   id="tspan372" />
+<tspan
+   x="18.48"
+   y="0"
+   style="letter-spacing: -0.008355034722222222em"
+   id="tspan374" />
+<tspan
+   x="23.58"
+   y="0"
+   style="letter-spacing: -0.010091145833333334em"
+   id="tspan376" />
+<tspan
+   x="28.49"
+   y="0"
+   style="letter-spacing: -0.019965277777777776em"
+   id="tspan378" />
+</text>
     <g
-       id="g398">
-      <path
-         d="m 578.5,205.62 c -8,0 -13,-1.81 -13,-3.12 0,-1.31 4.94,-3.12 13,-3.12 8.06,0 13,1.81 13,3.12 0,1.31 -4.96,3.12 -13,3.12 z"
-         style="fill:#f0f0ef"
-         id="path400"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 578.5,199.9 c 8.29,0 12.33,1.88 12.46,2.59 -0.13,0.72 -4.17,2.6 -12.46,2.6 -8.29,0 -12.33,-1.88 -12.46,-2.59 0.13,-0.72 4.17,-2.6 12.46,-2.6 m 0,-1 c -7.46,0 -13.5,1.63 -13.5,3.63 0,2 6,3.63 13.5,3.63 7.5,0 13.5,-1.63 13.5,-3.63 0,-2 -6,-3.63 -13.5,-3.63 z"
-         style="fill:#1d1d1b"
-         id="path402"
-         inkscape:connector-curvature="0" />
+       id="g380">
+      <polyline
+         points="427 174.16 481 174.16 481 147.18"
+         style="fill: none;stroke: #000;stroke-miterlimit: 10"
+         id="polyline382" />
+      <polygon
+         points="485.99 148.63 481 140 476.01 148.63 485.99 148.63"
+         id="polygon384" />
     </g>
-  </g>
-  <g
-     id="g404">
-    <path
-       d="m 565.5,194.5 0,5.5 c 0,1.93 5.82,3.5 13,3.5 7.18,0 13,-1.57 13,-3.5 l 0,-5.5"
-       style="fill:#f0f0ef;stroke:#1d1d1b;stroke-miterlimit:10"
-       id="path406"
-       inkscape:connector-curvature="0" />
     <g
-       id="g408">
-      <path
-         d="m 578.5,197.62 c -8,0 -13,-1.81 -13,-3.12 0,-1.31 4.94,-3.12 13,-3.12 8.06,0 13,1.81 13,3.12 0,1.31 -4.96,3.12 -13,3.12 z"
-         style="fill:#f0f0ef"
-         id="path410"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 578.5,191.9 c 8.29,0 12.33,1.88 12.46,2.59 -0.13,0.72 -4.17,2.6 -12.46,2.6 -8.29,0 -12.33,-1.88 -12.46,-2.59 0.13,-0.72 4.17,-2.6 12.46,-2.6 m 0,-1 c -7.46,0 -13.5,1.63 -13.5,3.63 0,2 6,3.63 13.5,3.63 7.5,0 13.5,-1.63 13.5,-3.63 0,-2 -6,-3.63 -13.5,-3.63 z"
-         style="fill:#1d1d1b"
-         id="path412"
-         inkscape:connector-curvature="0" />
+       id="g386">
+      <line
+         x1="529"
+         y1="198.16"
+         x2="551.82"
+         y2="198.16"
+         style="fill: none;stroke: #000;stroke-miterlimit: 10"
+         id="line388" />
+      <polygon
+         points="550.37 203.15 559 198.16 550.37 193.17 550.37 203.15"
+         id="polygon390" />
     </g>
-  </g>
-  <g
-     id="g414">
-    <path
-       d="m 565.5,186.5 0,5.5 c 0,1.93 5.82,3.5 13,3.5 7.18,0 13,-1.57 13,-3.5 l 0,-5.5"
-       style="fill:#f0f0ef;stroke:#1d1d1b;stroke-miterlimit:10"
-       id="path416"
-       inkscape:connector-curvature="0" />
     <g
-       id="g418">
-      <path
-         d="m 578.5,189.62 c -8,0 -13,-1.81 -13,-3.12 0,-1.31 4.94,-3.12 13,-3.12 8.06,0 13,1.81 13,3.12 0,1.31 -4.96,3.12 -13,3.12 z"
-         style="fill:#f0f0ef"
-         id="path420"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 578.5,183.9 c 8.29,0 12.33,1.88 12.46,2.59 -0.13,0.72 -4.17,2.6 -12.46,2.6 -8.29,0 -12.33,-1.88 -12.46,-2.59 0.13,-0.72 4.17,-2.6 12.46,-2.6 m 0,-1 c -7.46,0 -13.5,1.63 -13.5,3.63 0,2 6,3.63 13.5,3.63 7.5,0 13.5,-1.63 13.5,-3.63 0,-2 -6,-3.63 -13.5,-3.63 z"
-         style="fill:#1d1d1b"
-         id="path422"
-         inkscape:connector-curvature="0" />
+       id="g392">
+      <g
+         id="g394">
+        <path
+           d="M565.5,202.5V208c0,1.93,5.82,3.5,13,3.5s13-1.57,13-3.5v-5.5"
+           style="fill: #f0f0ef;stroke: #1d1d1b;stroke-miterlimit: 10"
+           id="path396" />
+        <g
+           id="g398">
+          <path
+             d="M578.5,205.62c-8,0-13-1.81-13-3.12s4.94-3.12,13-3.12,13,1.81,13,3.12S586.54,205.62,578.5,205.62Z"
+             style="fill: #f0f0ef"
+             id="path400" />
+          <path
+             d="M578.5,199.9c8.29,0,12.33,1.88,12.46,2.59-.13.72-4.17,2.6-12.46,2.6s-12.33-1.88-12.46-2.59c.13-.72,4.17-2.6,12.46-2.6m0-1c-7.46,0-13.5,1.63-13.5,3.63s6,3.63,13.5,3.63,13.5-1.63,13.5-3.63-6-3.63-13.5-3.63Z"
+             style="fill: #1d1d1b"
+             id="path402" />
+        </g>
+      </g>
+      <g
+         id="g404">
+        <path
+           d="M565.5,194.5V200c0,1.93,5.82,3.5,13,3.5s13-1.57,13-3.5v-5.5"
+           style="fill: #f0f0ef;stroke: #1d1d1b;stroke-miterlimit: 10"
+           id="path406" />
+        <g
+           id="g408">
+          <path
+             d="M578.5,197.62c-8,0-13-1.81-13-3.12s4.94-3.12,13-3.12,13,1.81,13,3.12S586.54,197.62,578.5,197.62Z"
+             style="fill: #f0f0ef"
+             id="path410" />
+          <path
+             d="M578.5,191.9c8.29,0,12.33,1.88,12.46,2.59-.13.72-4.17,2.6-12.46,2.6s-12.33-1.88-12.46-2.59c.13-.72,4.17-2.6,12.46-2.6m0-1c-7.46,0-13.5,1.63-13.5,3.63s6,3.63,13.5,3.63,13.5-1.63,13.5-3.63-6-3.63-13.5-3.63Z"
+             style="fill: #1d1d1b"
+             id="path412" />
+        </g>
+      </g>
+      <g
+         id="g414">
+        <path
+           d="M565.5,186.5V192c0,1.93,5.82,3.5,13,3.5s13-1.57,13-3.5v-5.5"
+           style="fill: #f0f0ef;stroke: #1d1d1b;stroke-miterlimit: 10"
+           id="path416" />
+        <g
+           id="g418">
+          <path
+             d="M578.5,189.62c-8,0-13-1.81-13-3.12s4.94-3.12,13-3.12,13,1.81,13,3.12S586.54,189.62,578.5,189.62Z"
+             style="fill: #f0f0ef"
+             id="path420" />
+          <path
+             d="M578.5,183.9c8.29,0,12.33,1.88,12.46,2.59-.13.72-4.17,2.6-12.46,2.6s-12.33-1.88-12.46-2.59c.13-.72,4.17-2.6,12.46-2.6m0-1c-7.46,0-13.5,1.63-13.5,3.63s6,3.63,13.5,3.63,13.5-1.63,13.5-3.63-6-3.63-13.5-3.63Z"
+             style="fill: #1d1d1b"
+             id="path422" />
+        </g>
+      </g>
     </g>
-  </g>
-  <rect
-     x="112"
-     y="168.5"
-     width="62.389999"
-     height="16.5"
-     rx="8.25"
-     ry="8.25"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.20072794px;stroke-miterlimit:10"
-     id="rect426" />
-  <rect
-     x="112"
-     y="187.5"
-     width="62.389999"
-     height="16.5"
-     rx="8.25"
-     ry="8.25"
-     style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.20072794px;stroke-miterlimit:10"
-     id="rect448" />
-  <polygon
-     points="145.87,53.52 139.8,49.2 145.87,44.87 145.87,53.52 "
-     style="fill:#999999"
-     id="polygon470" />
-  <polygon
-     points="195.25,44.87 201.32,49.2 195.25,53.52 195.25,44.87 "
-     style="fill:#999999"
-     id="polygon472" />
-  <text
-     style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.00705295em;fill:#1d1d1b"
-     id="text476"
-     x="156.78999"
-     y="123.63">M<tspan
-   x="164.73"
-   y="123.63"
-   style="letter-spacing:-0.02560764em"
+    <g
+       id="g424">
+      <rect
+         x="112"
+         y="168.5"
+         width="62.39"
+         height="16.5"
+         rx="8.25"
+         ry="8.25"
+         style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.2007279559117px"
+         id="rect426" />
+    </g>
+    <g
+       id="g446">
+      <rect
+         x="112"
+         y="187.5"
+         width="62.39"
+         height="16.5"
+         rx="8.25"
+         ry="8.25"
+         style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.2007279559117px"
+         id="rect448" />
+      <text
+         transform="translate(124.45,199.31)"
+         style="font-size:9px;letter-spacing:0.00227865em;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
+         id="text450" />
+    </g>
+    <g
+       id="g468">
+      <polygon
+         points="145.87 53.52 139.8 49.2 145.87 44.87 145.87 53.52"
+         style="fill: #999"
+         id="polygon470" />
+      <polygon
+         points="195.25 44.87 201.32 49.2 195.25 53.52 195.25 44.87"
+         style="fill: #999"
+         id="polygon472" />
+    </g>
+    <g
+       id="g474">
+      <text
+         transform="translate(156.79 123.63)"
+         style="font-size: 9px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.007052951388888889em"
+         id="text476">M<tspan
+   x="7.94"
+   y="0"
+   style="letter-spacing: -0.025607638888888888em"
    id="tspan478">Q</tspan>
 <tspan
-   x="171.34"
-   y="123.63"
-   style="letter-spacing:0.02094184em"
+   x="14.55"
+   y="0"
+   style="letter-spacing: 0.020941840277777776em"
    id="tspan480">T</tspan>
 <tspan
-   x="176.86"
-   y="123.63"
-   style="letter-spacing:-0.01996528em"
+   x="20.07"
+   y="0"
+   style="letter-spacing: -0.019965277777777776em"
    id="tspan482">T</tspan>
 <tspan
-   style="letter-spacing:-0.01085069em"
+   style="letter-spacing: -0.010850694444444444em"
    id="tspan484">
   <tspan
-     x="157.91"
-     y="132.63"
+     x="1.12"
+     y="9"
      id="tspan486">H</tspan>
   <tspan
-     x="164.31"
-     y="132.63"
-     style="letter-spacing:0.02105035em"
+     x="7.52"
+     y="9"
+     style="letter-spacing: 0.021050347222222224em"
      id="tspan488">T</tspan>
   <tspan
-     x="169.84"
-     y="132.63"
-     style="letter-spacing:-0.01128472em"
+     x="13.05"
+     y="9"
+     style="letter-spacing: -0.011284722222222222em"
      id="tspan490">T</tspan>
   <tspan
-     x="175.08"
-     y="132.63"
-     style="letter-spacing:-0.02007378em"
+     x="18.29"
+     y="9"
+     style="letter-spacing: -0.020073784722222224em"
      id="tspan492">P</tspan>
 </tspan>
 </text>
-  <g
-     id="g494">
-    <polygon
-       points="145.87,128.49 139.8,124.17 145.87,119.84 145.87,128.49 "
-       style="fill:#999999"
-       id="polygon496" />
-    <polygon
-       points="195.25,119.84 201.32,124.17 195.25,128.49 195.25,119.84 "
-       style="fill:#999999"
-       id="polygon498" />
-  </g>
-  <polygon
-     points="145.86,283.44 139.8,279.09 145.89,274.79 145.86,283.44 "
-     style="fill:#999999"
-     id="polygon502" />
-  <polygon
-     points="195.27,274.96 201.32,279.31 195.24,283.61 195.27,274.96 "
-     style="fill:#999999"
-     id="polygon504" />
-  <rect
-     id="rect506"
-     style="fill:#c4e6f5"
-     height="45"
-     width="163"
-     y="94"
-     x="274" />
-  <rect
-     id="rect508"
-     style="fill:#c4e6f5"
-     height="45"
-     width="163"
-     y="149"
-     x="274" />
-  <rect
-     id="rect510"
-     style="fill:#c4e6f5"
-     height="45"
-     width="163"
-     y="204"
-     x="274" />
-  <polygon
-     id="polygon602"
-     style="fill:#ffffff;stroke:#6fc9ee;stroke-width:2px;stroke-miterlimit:10"
-     points="229,249 244,249 259,249 259,94 244,94 244,94 229,94 " />
-  <text
-     id="text604"
-     style="font-size:10px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';fill:#1d1d1b"
-     x="240.67"
-     y="155.22">A<tspan
-   id="tspan606"
-   y="168.22"
-   x="240.67">P</tspan>
+      <g
+         id="g494">
+        <polygon
+           points="145.87 128.49 139.8 124.17 145.87 119.84 145.87 128.49"
+           style="fill: #999"
+           id="polygon496" />
+        <polygon
+           points="195.25 119.84 201.32 124.17 195.25 128.49 195.25 119.84"
+           style="fill: #999"
+           id="polygon498" />
+      </g>
+    </g>
+    <g
+       id="g500">
+      <polygon
+         points="145.86 283.44 139.8 279.09 145.89 274.79 145.86 283.44"
+         style="fill: #999"
+         id="polygon502" />
+      <polygon
+         points="195.27 274.96 201.32 279.31 195.24 283.61 195.27 274.96"
+         style="fill: #999"
+         id="polygon504" />
+    </g>
+    <rect
+       x="274"
+       y="94"
+       width="163"
+       height="45"
+       style="fill: #c4e6f5"
+       id="rect506" />
+    <rect
+       x="274"
+       y="149"
+       width="163"
+       height="45"
+       style="fill: #c4e6f5"
+       id="rect508" />
+    <rect
+       x="274"
+       y="204"
+       width="163"
+       height="45"
+       style="fill: #c4e6f5"
+       id="rect510" />
+    <text
+       transform="translate(324.75 223.35)"
+       style="font-size: 10px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"
+       id="text560">
+      <tspan
+         style="letter-spacing: 0.01201171875em"
+         id="tspan562">블록체인<tspan
+   x="7.16"
+   y="0"
+   style="letter-spacing: 0.00595703125em"
+   id="tspan564" />
 <tspan
-   id="tspan608"
-   y="181.22"
-   x="242.62">I</tspan>
+   x="9.63"
+   y="0"
+   style="letter-spacing: 0.00849609375em"
+   id="tspan566" />
 <tspan
-   id="tspan610"
-   y="194.22"
-   x="240.75999">S</tspan>
+   x="15.64"
+   y="0"
+   style="letter-spacing: 0.00693359375em"
+   id="tspan568" />
+<tspan
+   x="21.27"
+   y="0"
+   style="letter-spacing: -0.014453125em"
+   id="tspan570" />
+<tspan
+   x="26.5"
+   y="0"
+   style="letter-spacing: 0.0083984375em"
+   id="tspan572" />
+<tspan
+   x="37.97"
+   y="0"
+   style="letter-spacing: 0.01396484375em"
+   id="tspan574" />
+<tspan
+   x="43.67"
+   y="0"
+   style="letter-spacing: 0.00546875em"
+   id="tspan576" />
+<tspan
+   x="46.14"
+   y="0"
+   style="letter-spacing: -0.00009765625em"
+   id="tspan578" />
+</tspan>
+      <tspan
+         x="0"
+         y="12"
+         style="letter-spacing: 0.00615234375em"
+         id="tspan580">통합</tspan>
+      <tspan
+         x="2.84"
+         y="12"
+         style="letter-spacing: 0.00556640625em"
+         id="tspan582" />
+      <tspan
+         x="8.64"
+         y="12"
+         style="letter-spacing: -0.00263671875em"
+         id="tspan584" />
+      <tspan
+         x="11.94"
+         y="12"
+         style="letter-spacing: 0.0138671875em"
+         id="tspan586" />
+      <tspan
+         x="17.64"
+         y="12"
+         style="letter-spacing: 0.01064453125em"
+         id="tspan588" />
+      <tspan
+         x="23.68"
+         y="12"
+         style="letter-spacing: 0.0201171875em"
+         id="tspan590" />
+      <tspan
+         x="27.4"
+         y="12"
+         style="letter-spacing: 0.00615234375em"
+         id="tspan592" />
+      <tspan
+         x="33.02"
+         y="12"
+         style="letter-spacing: 0.00712890625em"
+         id="tspan594" />
+      <tspan
+         x="36.42"
+         y="12"
+         style="letter-spacing: 0.00595703125em"
+         id="tspan596" />
+      <tspan
+         x="38.89"
+         y="12"
+         style="letter-spacing: 0.00888671875em"
+         id="tspan598" />
+      <tspan
+         x="44.91"
+         y="12"
+         id="tspan600" />
+    </text>
+    <polygon
+       points="244 94 229 94 229 249 244 249 259 249 259 94 244 94"
+       style="fill: #fff;stroke: #6fc9ee;stroke-miterlimit: 10;stroke-width: 2px"
+       id="polygon602" />
+    <text
+       transform="translate(240.67 155.22)"
+       style="font-size: 10px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue"
+       id="text604">A<tspan
+   x="0"
+   y="13"
+   id="tspan606">P</tspan>
+<tspan
+   x="1.95"
+   y="26"
+   id="tspan608">I</tspan>
+<tspan
+   x="0.09"
+   y="39"
+   id="tspan610">S</tspan>
 </text>
-  <text
-     style="font-size:9px;font-family:HelveticaNeue-Medium, 'Helvetica Neue';letter-spacing:-0.00705295em;fill:#1d1d1b"
-     id="text614"
-     x="156.78999"
-     y="220.63">M<tspan
-   x="164.73"
-   y="220.63"
-   style="letter-spacing:-0.02560764em"
+    <g
+       id="g612">
+      <text
+         transform="translate(156.79 220.63)"
+         style="font-size: 9px;fill: #1d1d1b;font-family: HelveticaNeue-Medium, Helvetica Neue;letter-spacing: -0.007052951388888889em"
+         id="text614">M<tspan
+   x="7.94"
+   y="0"
+   style="letter-spacing: -0.025607638888888888em"
    id="tspan616">Q</tspan>
 <tspan
-   x="171.34"
-   y="220.63"
-   style="letter-spacing:0.02094184em"
+   x="14.55"
+   y="0"
+   style="letter-spacing: 0.020941840277777776em"
    id="tspan618">T</tspan>
 <tspan
-   x="176.86"
-   y="220.63"
-   style="letter-spacing:-0.01996528em"
+   x="20.07"
+   y="0"
+   style="letter-spacing: -0.019965277777777776em"
    id="tspan620">T</tspan>
 <tspan
-   style="letter-spacing:-0.01085069em"
+   style="letter-spacing: -0.010850694444444444em"
    id="tspan622">
   <tspan
-     x="157.91"
-     y="229.63"
+     x="1.12"
+     y="9"
      id="tspan624">H</tspan>
   <tspan
-     x="164.31"
-     y="229.63"
-     style="letter-spacing:0.02105035em"
+     x="7.52"
+     y="9"
+     style="letter-spacing: 0.021050347222222224em"
      id="tspan626">T</tspan>
   <tspan
-     x="169.84"
-     y="229.63"
-     style="letter-spacing:-0.01128472em"
+     x="13.05"
+     y="9"
+     style="letter-spacing: -0.011284722222222222em"
      id="tspan628">T</tspan>
   <tspan
-     x="175.08"
-     y="229.63"
-     style="letter-spacing:-0.02007378em"
+     x="18.29"
+     y="9"
+     style="letter-spacing: -0.020073784722222224em"
      id="tspan630">P</tspan>
 </tspan>
 </text>
-  <g
-     id="g632">
-    <polygon
-       points="145.87,225.49 139.8,221.17 145.87,216.84 145.87,225.49 "
-       style="fill:#999999"
-       id="polygon634" />
-    <polygon
-       points="195.25,216.84 201.32,221.17 195.25,225.49 195.25,216.84 "
-       style="fill:#999999"
-       id="polygon636" />
-  </g>
-  <path
-     id="path4806"
-     d="m 299.56,228.21 -2.25,-2.21 0,-1.1 -1.1,0 0,-0.79 1.1,0 0,-2.52 -1.09,0 -0.92,-0.63 0.28,0 0,-2.52 -2.68,0 0,2.56 0.29,0 -0.91,0.63 -1.11,0 0,2.52 2.52,0 0,-2.52 -1,0 0.91,-0.63 1.22,0 0.92,0.63 -1,0 0,2.52 1.1,0 0,0.79 -1.1,0 0,2.52 1.1,0 0,0.79 -1.1,0 0,2.52 1.1,0 0,0.79 -1.1,0 0,2.68 2.52,0 0,-2.68 -1.1,0 0,-0.79 1.1,0 0,-2.52 -1.1,0 0,-0.79 1.1,0 0,-1.07 1.89,1.85 -0.79,0 0,2.52 2.52,0 0,-2.52 z m -6,-9.31 1.42,0 0,1.58 -1.42,0 z"
-     style="fill:#ffffff"
-     inkscape:connector-curvature="0" />
-  <rect
-     id="rect640"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     height="31"
-     width="31"
-     y="211"
-     x="281" />
-  <rect
-     id="rect642"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     height="31"
-     width="31"
-     y="156"
-     x="281.5" />
-  <rect
-     id="rect644"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     height="31"
-     width="31"
-     y="101.5"
-     x="281.5" />
-  <path
-     id="path5280"
-     d="m 84.91,108.26 -28,0 0,16.8 28,0 z m -7.38,6.45 4.26,0 m -4.26,2 4.26,0 m -4.26,2 4.26,0 m -14.86,-3.9 4.26,0 m -4.26,2 4.26,0 m -4.26,2 4.26,0 m 0,1.2 6.3,0 0,-6.3 -6.3,0 z m -8.78,-2"
-     style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-     inkscape:connector-curvature="0" />
-  <path
-     id="path5280-2"
-     data-name="path5280"
-     d="m 88,180 -33,0 0,21 33,0 z"
-     style="fill:none;stroke:#ffffff;stroke-width:1.21376061px;stroke-miterlimit:10"
-     inkscape:connector-curvature="0" />
-  <g
-     id="g5710">
-    <polygon
-       id="polygon5712"
-       points="70.8,260.97 69.87,269.33 71.72,269.33 70.8,260.97 "
-       style="fill:#ffffff" />
-    <path
-       id="path5714"
-       d="M 75,267"
-       style="fill:none;stroke:#ffffff"
-       inkscape:connector-curvature="0" />
-  </g>
-  <g
-     id="g4817">
+      <g
+         id="g632">
+        <polygon
+           points="145.87 225.49 139.8 221.17 145.87 216.84 145.87 225.49"
+           style="fill: #999"
+           id="polygon634" />
+        <polygon
+           points="195.25 216.84 201.32 221.17 195.25 225.49 195.25 216.84"
+           style="fill: #999"
+           id="polygon636" />
+      </g>
+    </g>
+    <g
+       id="g4804">
+      <path
+         id="path4806"
+         d="M299.56,228.21,297.31,226v-1.1h-1.1v-.79h1.1v-2.52h-1.09l-.92-.63h.28v-2.52h-2.68V221h.29l-.91.63h-1.11v2.52h2.52v-2.52h-1l.91-.63h1.22l.92.63h-1v2.52h1.1v.79h-1.1v2.52h1.1v.79h-1.1v2.52h1.1v.79h-1.1v2.68h2.52v-2.68h-1.1v-.79h1.1v-2.52h-1.1v-.79h1.1v-1.07l1.89,1.85h-.79v2.52h2.52v-2.52Zm-6-9.31h1.42v1.58h-1.42Z"
+         style="fill: #fff" />
+    </g>
     <rect
-       id="rect4819"
-       x="291.60001"
-       y="124.02"
-       width="10.81"
-       height="1.08"
-       style="fill:#ffffff" />
-    <path
-       id="path4821"
-       d="m 291.6,108.9 0,14 10.8,0 0,-14 z m 9.73,13 -8.64,0 0,-9.73 8.64,0 z"
-       style="fill:#ffffff"
-       inkscape:connector-curvature="0" />
+       x="281"
+       y="211"
+       width="31"
+       height="31"
+       style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+       id="rect640" />
     <rect
-       id="rect4823"
-       x="293.76001"
-       y="116.46"
-       width="6.48"
-       height="0.54000002"
-       style="fill:#ffffff" />
+       x="281.5"
+       y="156"
+       width="31"
+       height="31"
+       style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+       id="rect642" />
     <rect
-       id="rect4825"
-       x="293.76001"
-       y="114.3"
-       width="6.48"
-       height="0.54000002"
-       style="fill:#ffffff" />
-    <rect
-       id="rect4827"
-       x="293.76001"
-       y="118.62"
-       width="6.48"
-       height="0.54000002"
-       style="fill:#ffffff" />
+       x="281.5"
+       y="101.5"
+       width="31"
+       height="31"
+       style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+       id="rect644" />
+    <g
+       id="g5278">
+      <path
+         id="path5280"
+         d="M84.91,108.26h-28v16.8h28Zm-7.38,6.45h4.26m-4.26,2h4.26m-4.26,2h4.26m-14.86-3.9h4.26m-4.26,2h4.26m-4.26,2h4.26m0,1.2h6.3v-6.3h-6.3Zm-8.78-2a1.6,1.6,0,1,1-1.6,1.6A1.6,1.6,0,0,1,62.39,117.81Zm1.58-2.3h-3.2v-3.2H64Z"
+         style="fill: none;stroke: #fff;stroke-miterlimit: 10" />
+    </g>
+    <g
+       id="g5278-2"
+       data-name="g5278">
+      <path
+         id="path5280-2"
+         data-name="path5280"
+         d="M88,180H55v21H88Z"
+         style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.21376062443881px" />
+    </g>
+    <g
+       id="g5722">
+      <g
+         id="g5710">
+        <polygon
+           id="polygon5712"
+           points="70.8 260.97 69.87 269.33 71.72 269.33 70.8 260.97"
+           style="fill: #fff" />
+        <path
+           id="path5714"
+           d="M75,267a6.54,6.54,0,1,0-8.25-.09"
+           style="fill: none;stroke: #fff" />
+      </g>
+    </g>
+    <g
+       id="g4835">
+      <g
+         id="g4817">
+        <rect
+           id="rect4819"
+           x="291.6"
+           y="124.02"
+           width="10.81"
+           height="1.08"
+           style="fill: #fff" />
+        <path
+           id="path4821"
+           d="M291.6,108.9v14H302.4v-14Zm9.73,13h-8.64v-9.73h8.64Z"
+           style="fill: #fff" />
+        <rect
+           id="rect4823"
+           x="293.76"
+           y="116.46"
+           width="6.48"
+           height="0.54"
+           style="fill: #fff" />
+        <rect
+           id="rect4825"
+           x="293.76"
+           y="114.3"
+           width="6.48"
+           height="0.54"
+           style="fill: #fff" />
+        <rect
+           id="rect4827"
+           x="293.76"
+           y="118.62"
+           width="6.48"
+           height="0.54"
+           style="fill: #fff" />
+      </g>
+    </g>
+    <g
+       id="g661">
+      <g
+         id="g663">
+        <path
+           d="M301.78,165.1A8,8,0,0,0,289.14,173"
+           style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+           id="path665" />
+        <polygon
+           points="286.69 173.19 290.6 176.28 291.33 171.35 286.69 173.19"
+           style="fill: #fff"
+           id="polygon667" />
+      </g>
+      <g
+         id="g669">
+        <path
+           d="M292.22,177.9A8,8,0,0,0,304.86,170"
+           style="fill: none;stroke: #fff;stroke-miterlimit: 10"
+           id="path671" />
+        <polygon
+           points="307.31 169.81 303.4 166.72 302.67 171.65 307.31 169.81"
+           style="fill: #fff"
+           id="polygon673" />
+      </g>
+    </g>
   </g>
-  <g
-     id="g663">
-    <path
-       d="M 301.78,165.1 A 8,8 0 0 0 289.14,173"
-       style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-       id="path665"
-       inkscape:connector-curvature="0" />
-    <polygon
-       points="286.69,173.19 290.6,176.28 291.33,171.35 286.69,173.19 "
-       style="fill:#ffffff"
-       id="polygon667" />
-  </g>
-  <g
-     id="g669">
-    <path
-       d="M 292.22,177.9 A 8,8 0 0 0 304.86,170"
-       style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
-       id="path671"
-       inkscape:connector-curvature="0" />
-    <polygon
-       points="307.31,169.81 303.4,166.72 302.67,171.65 307.31,169.81 "
-       style="fill:#ffffff"
-       id="polygon673" />
-  </g>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="38.350815"
-     y="71.385521"
-     id="text4807"
+     style="font-size:17px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gulim;-inkscape-font-specification:Gulim"
+     x="123.40551"
+     y="180.53773"
+     id="text3656"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       id="tspan4809"
-       x="38.350815"
-       y="71.385521">애플리케이션</tspan></text>
+       id="tspan3658"
+       x="123.40551"
+       y="180.53773"
+       style="font-size:9px">에지 규칙</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="120.95258"
-     y="181.02953"
-     id="text4966"
+     style="font-size:17px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gulim;-inkscape-font-specification:Gulim"
+     x="133.08438"
+     y="197.87903"
+     id="text3660"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       id="tspan4968"
-       x="120.95258"
-       y="181.02953">에지규칙</tspan></text>
+       id="tspan3662"
+       x="133.08438"
+       y="197.87903"
+       style="font-size:9px">분석</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="134.22786"
-     y="198.7299"
-     id="text5266"
+     style="font-size:17px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gulim;-inkscape-font-specification:Gulim"
+     x="324.6452"
+     y="119.64156"
+     id="text3664"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       id="tspan5268"
-       x="134.22786"
-       y="198.7299">분석</tspan></text>
+       id="tspan3666"
+       x="324.6452"
+       y="119.64156"
+       style="font-size:10px">클라우드 규칙</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="325.04977"
-     y="121.56988"
-     id="text5270"
+     style="font-size:17px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gulim;-inkscape-font-specification:Gulim"
+     x="325.06494"
+     y="174.08516"
+     id="text3668"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       id="tspan5272"
-       x="325.04977"
-       y="121.56988">클라우드규칙</tspan></text>
+       id="tspan3670"
+       x="325.06494"
+       y="174.08516"
+       style="font-size:10px">데이터 관리</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="326.06644"
-     y="174.21263"
-     id="text5274"
+     style="font-size:17px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gulim;-inkscape-font-specification:Gulim"
+     x="482.60104"
+     y="224.09262"
+     id="text3672"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       id="tspan5276"
-       x="326.06644"
-       y="174.21263">데이터관리</tspan></text>
+       id="tspan3674"
+       x="482.60104"
+       y="224.09262"
+       style="font-size:9px;text-align:center;text-anchor:middle">마지막 이벤트</tspan><tspan
+       sodipodi:role="line"
+       x="482.60104"
+       y="235.34262"
+       id="tspan3676"
+       style="font-size:9px;text-align:center;text-anchor:middle">캐시</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="327.18295"
-     y="224.85538"
-     id="text5278"
+     style="font-size:17px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gulim;-inkscape-font-specification:Gulim"
+     x="543.69525"
+     y="174.48845"
+     id="text3678"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       id="tspan5280"
-       x="327.18295"
-       y="224.85538">블록체인</tspan><tspan
-       sodipodi:role="line"
-       x="327.18295"
-       y="237.35538"
-       id="tspan5300">체인통합</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="481.93576"
-     y="111.24466"
-     id="text5282"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan5284"
-       x="481.93576"
-       y="111.24466">디바이스</tspan><tspan
-       sodipodi:role="line"
-       x="481.93576"
-       y="123.74466"
-       id="tspan5294">상태</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="483.31091"
-     y="217.83871"
-     id="text5286"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan5288"
-       x="483.31091"
-       y="217.83871">마지막</tspan><tspan
-       sodipodi:role="line"
-       x="483.31091"
-       y="230.33871"
-       id="tspan5296">이벤트</tspan><tspan
-       sodipodi:role="line"
-       x="483.31091"
-       y="242.83871"
-       id="tspan5298">캐시</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="550.66302"
-     y="172.17934"
-     id="text5290"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan5292"
-       x="550.66302"
-       y="172.17934">데이터저장소</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="152.54538"
-     y="346.758"
-     id="text5302"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan5304"
-       x="152.54538"
-       y="346.758">인터넷</tspan></text>
+       id="tspan3680"
+       x="543.69525"
+       y="174.48845"
+       style="font-size:10px">데이터 저장소</tspan></text>
 </svg>

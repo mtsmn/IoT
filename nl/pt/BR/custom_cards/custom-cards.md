@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-13"
+  years: 2016, 2018
+lastupdated: "2018-03-11"
 
 ---
 
@@ -15,11 +15,17 @@ lastupdated: "2016-10-13"
 # Cartões customizados
 {: #custom_cards}
 
-Use os cartões customizados para visualizar os dados de Internet das Coisas além dos cartões genéricos que são fornecidos com o {{site.data.keyword.iot_full}}.
-{:shortdesc}
+** Importante:** estamos ativando um Beta para uma nova maneira de definir regras em seus dados do dispositivo IoT como parte de um programa mais amplo de mudanças para melhorar a maneira como o {{site.data.keyword.iot_full}} entrega regras e ações.
+
+Para descobrir mais, verifique a postagem do blog [Uma abordagem alternativa para definir Regras em dados do IoT![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para iniciar a definição de suas próprias regras, veja a documentação [Criando regras integradas (Beta)](../information_management/im_rules.html).
+
 
 ## Arquitetura
 {: #architecture}  
+
+Use os cartões customizados para visualizar os dados de Internet das Coisas além dos cartões genéricos que são fornecidos com o {{site.data.keyword.iot_short_notm}}.
 
 Os cartões customizados são desenvolvidos por você e implementados usando seu próprio repositório do servidor HTTP de cartões customizados.  Esse servidor é acessado pelo navegador de um usuário enquanto exibe e processa painéis do {{site.data.keyword.iot_short_notm}}. O {{site.data.keyword.iot_short_notm}} gerencia a conexão do navegador através da extensão de cartões customizados, mas não se conecta ao servidor de cartões customizados.
 

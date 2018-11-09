@@ -2,9 +2,9 @@
 
 copyright:
 
-years: 2015, 2017
+years: 2015, 2018
 
-lastupdated: "2017-03-16"
+lastupdated: "2018-01-11"
 
 
 ---
@@ -43,7 +43,7 @@ lastupdated: "2017-03-16"
 게이트웨이를 등록하려면 게이트웨이 유형으로 디바이스를 분류하고 게이트웨이에 이름을 제공하며 게이트웨이 정보를 제공해야 합니다. 그런 다음 연결 토큰을 제공하거나 {{site.data.keyword.iot_short_notm}}에서 생성된 토큰을 승인합니다.
 
 
-**팁:** {{site.data.keyword.iot_short_notm}} 대시보드에서 한 번에 하나씩 게이트웨이를 추가하거나 [조직 관리 API(![외부 링크 아이콘](../../../icons/launch-glyph.svg))](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window}를 사용하여 한 번에 하나 이상의 게이트웨이를 추가할 수 있습니다.
+**팁:** {{site.data.keyword.iot_short_notm}} 대시보드에서 한 번에 하나씩 게이트웨이를 추가하거나 [조직 관리 API ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window}를 사용하여 한 번에 하나 이상의 게이트웨이를 추가할 수 있습니다.
 
 {{site.data.keyword.iot_short_notm}} 대시보드에서 게이트웨이를 추가하려면 다음을 수행하십시오.
 
@@ -52,14 +52,14 @@ lastupdated: "2017-03-16"
 3. 추가할 디바이스의 디바이스 유형을 선택하거나 작성합니다.  
 {{site.data.keyword.iot_short_notm}}에 연결된 각 디바이스는 디바이스 유형과 연관되어야 합니다. 디바이스 유형은 공통 특성을 공유하는 디바이스 그룹입니다.  
  1. **디바이스 유형 작성**을 클릭한 다음 **게이트웨이 유형 작성**을 클릭합니다.
- 2. 디바이스 유형 이름(예: `my_gateway_type`)과 게이트웨이 유형에 대한 설명을 입력합니다.    
+ 2. 디바이스 유형 이름(예: `my_gateway_type`)과 게이트웨이 유형에 대한 설명을 입력합니다.   
  **중요:** 디바이스 유형 이름은 36자 이하여야 하며 다음 문자만 포함할 수 있습니다.
  <ul>
   <li>영숫자 문자(a-z, A-Z, 0-9)</li>
   <li>하이픈(-)</li>
   <li>밑줄(&lowbar;)</li>
   <li>마침표(.)</li>
-  </ul>3. 선택사항: 게이트웨이 유형 속성 및 메타데이터를 입력합니다.     
+  </ul>3. 선택사항: 게이트웨이 유형 속성 및 메타데이터를 입력합니다.    
  **팁:** 속성과 메타데이터는 나중에 추가하고 편집할 수 있습니다.
  4. **작성**을 클릭하여 새 게이트웨이 유형을 추가합니다.
 10. **다음**을 클릭하여 선택한 게이트웨이 유형의 게이트웨이 디바이스를 추가하는 프로세스를 시작합니다.
@@ -86,11 +86,11 @@ lastupdated: "2017-03-16"
  - 디바이스 ID **팁:** 네트워크 연결 디바이스의 경우 디바이스 ID는 예를 들어, 구분하는 콜론이 없는 디바이스 MAC 주소일 수 있습니다.
  - 인증 메소드(예: `token`)
  - 인증 토큰(예: `PtBVriRqIg4uh)_-Kl`)  
-  **팁:** {{site.data.keyword.iot_short_notm}}에 연결하도록 디바이스를 구성하려면 조직 ID, 인증 토큰, 디바이스 유형 및 디바이스 ID가 필요합니다.   
+  **팁:** {{site.data.keyword.iot_short_notm}}에 연결하도록 디바이스를 구성하려면 조직 ID, 인증 토큰, 디바이스 유형 및 디바이스 ID가 필요합니다.  
 
 축하합니다. 게이트웨이 디바이스가 등록되었습니다. 이제 {{site.data.keyword.iot_short_notm}}에 연결하도록 게이트웨이 디바이스를 구성할 수 있습니다.
 
-게이트웨이를 등록하는 데 필요한 플로우를 보여주는 단계별 지시사항은 [IBM Watson IoT Platform에 게이트웨이 등록 방법 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/){:new_window} 레시피를 참조하십시오. 
+게이트웨이를 등록하는 데 필요한 플로우를 보여주는 단계별 지시사항은 [IBM Watson IoT Platform에 게이트웨이 등록 방법 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/){:new_window} 레시피를 참조하십시오.
 
 ## 2단계: {{site.data.keyword.iot_short_notm}}에 게이트웨이 연결
 {: #connect_gateway}
@@ -99,8 +99,8 @@ lastupdated: "2017-03-16"
 
 {{site.data.keyword.iot_short_notm}}에 게이트웨이를 연결하는 데 관한 정보는 [게이트웨이용 MQTT 연결](mqtt.html)을 참조하십시오.
 
-**팁:** {{site.data.keyword.iot_short_notm}}에 디바이스를 연결하는 데 사용할 수 있는 지침서는 다양합니다. 레시피의 목록은 IBM.com에서 사용 가능한
-[디바이스 연결 레시피 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}를 참조하십시오. 
+**팁:** {{site.data.keyword.iot_short_notm}}에 디바이스를 연결하는 데 사용할 수 있는 레시피는 다양합니다. 레시피의 목록은 IBM.com에서 사용 가능한
+[디바이스 연결 레시피 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}를 참조하십시오.
 
 
 ## 3단계: 게이트웨이를 통해 디바이스 연결
@@ -113,7 +113,7 @@ lastupdated: "2017-03-16"
 
 디바이스가 게이트웨이에 연결되면 {{site.data.keyword.iot_short_notm}} 조직의 대시보드에 표시됩니다.
 
-세부 플로우 및 관련 설명은 [게이트웨이로서 Watson IoT에 Raspberry Pi 연결 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/){:new_window} 레시피를 참조하십시오. 
+세부 플로우 및 관련 설명은 [게이트웨이로서 Watson IoT에 Raspberry Pi 연결 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/){:new_window} 레시피를 참조하십시오.
 
 **참고:** {{site.data.keyword.iot_short_notm}} 대시보드에서 {{site.data.keyword.iot_short_notm}}에 직접 연결된 디바이스와 게이트웨이는 현재 연결되었음을 표시하는 상태 아이콘을 표시합니다. 대시보드에는 게이트웨이에 연결된 디바이스에 대한 정보가 없으므로 게이트웨이를 통해 간접적으로 연결된 디바이스는 연결이 끊김으로 표시됩니다.
 
@@ -128,15 +128,15 @@ EAA(Edge Analytics Agent)는 스트리밍 엔진 위에서 구축된 소프트�
 
 게이트웨이에 EAA를 설치하려면 다음을 수행하십시오.
 1. {{site.data.keyword.iot_short}} 대시보드에서 **규칙**으로 이동하십시오.
-2. **Edge Agent 다운로드**를 클릭하여 [IBM Edge Analytics 커뮤니티 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}로 이동하십시오. 
-3. **파일** 섹션으로 이동하여 게이트웨이 유형에 적합한 압축 디렉토리를 다운로드하십시오.   
-Edge Analytics 솔루션은 Java를 지원하는 디바이스에 대한 SDK로 또는 Cisco 게이트웨이 디바이스에 대한 DSLink로 사용 가능합니다. 
-4. 게이트웨이에서 EAA 소프트웨어 컴포넌트를 설치하고 구성하는 방법에 대한 정보는 다음 정보를 참조하십시오. 
+2. **Edge Agent 다운로드**를 클릭하여 [IBM Edge Analytics 커뮤니티 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}로 이동하십시오.
+3. **파일** 섹션으로 이동하여 게이트웨이 유형에 적합한 압축 디렉토리를 다운로드하십시오.  
+Edge Analytics 솔루션은 Java를 지원하는 디바이스에 대한 SDK로 또는 Cisco 게이트웨이 디바이스에 대한 DSLink로 사용 가능합니다.
+4. 게이트웨이에서 EAA 소프트웨어 컴포넌트를 설치하고 구성하는 방법에 대한 정보는 다음 정보를 참조하십시오.
  - SDK  
- 커뮤니티에서 사용 가능한 PDF, Readme 파일 및 비디오 링크를 참조하십시오.   
- [SDK용 Edge Recipe - 시작하기(SDK) ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window} 레시피. 
+ 커뮤니티에서 사용 가능한 PDF, Readme 파일 및 동영상 링크를 참조하십시오.  
+ [Edge Recipe for SDK - Getting Started (SDK) ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window} 레시피.
  - DSLink  
- [Watson IoT Platform에서 Edge Analytics 시작하기 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472){:new_window} 레시피. 
+ [Getting started with Edge Analytics in Watson IoT Platform ![외부 링크 아이콘](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472){:new_window} 레시피.
 
 ### EAA 구성 설정
 {: #eaa_configuration}
@@ -154,7 +154,7 @@ EAA 구성을 업데이트합니다.
  <dt>DataDirectSendEnable</dt>
  <dd>BOOLEAN (true|false)</br>
  TRUE(기본값) - {{site.data.keyword.iot_short_notm}}에 모든 데이터를 보냅니다.</br>
- FALSE - 엔진에 규칙이 설정된 경우 데이터만 {{site.data.keyword.iot_short_notm}}에 보냅니다.</dd>
+ FALSE - 엔진에 규칙이 설정된 경우 데이터만 {{site.data.keyword.iot_short_notm}}에 보냅니다. </dd>
  <dt>MonitorInterval</dt>
  <dd>INTEGER (milliseconds)</br>
  새 모니터링 메시지를 {{site.data.keyword.iot_short_notm}}에 보내기 전의 시간(밀리초)입니다. </br>
@@ -168,7 +168,7 @@ EAA 구성을 업데이트합니다.
  권장 범위: [1, 100]</dd>
  <dt>MemoryAlertThreshold</dt>
  <dd>INTEGER (Megabytes)</br>
- {{site.data.keyword.iot_short_notm}} 진단 로그에 메모리 경고 로그 메시지를 보내는 사용 가능한 JVM 힙 메모리 임계값입니다. 경보는 모니터링을 통해 구동됩니다. </br>값이 작으면 {{site.data.keyword.iot_short_notm}}에 전송되는 경보 메시지 수가 줄어듭니다. 수가 크면 EAA 서버에서 메모리 문제가 발생하는 경우 조기에 경고를 표시합니다. </br>**팁:** [클라우드 분석](../cloud_analytics.html) 규칙을 사용하여 메모리 문제를 경보할 이메일 알림 등의 경보 조치를 구성할 수 있습니다. 규칙을 빌드하는 데 사용할 수 있는 특성에 대한 정보는 [Edge Analytics Agent 진단 메트릭](../edge_analytics.html#eaa_metrics)을 참조하십시오.</br>
+ {{site.data.keyword.iot_short_notm}} 진단 로그에 메모리 경고 로그 메시지를 보내는 사용 가능한 JVM 힙 메모리 임계값입니다. 경보는 모니터링을 통해 구동됩니다. </br>값이 작으면 {{site.data.keyword.iot_short_notm}}에 전송되는 경보 메시지 수가 줄어듭니다. 수가 크면 EAA 서버에서 메모리 문제가 발생하는 경우 조기에 경고를 표시합니다.</br>**팁:** [클라우드 분석](../cloud_analytics.html) 규칙을 사용하여 메모리 문제를 경보할 이메일 알림 등의 경보 조치를 구성할 수 있습니다. 규칙을 빌드하는 데 사용할 수 있는 특성에 대한 정보는 [Edge Analytics Agent 진단 메트릭](../edge_analytics.html#eaa_metrics)을 참조하십시오.</br>
  기본값: 10</br>
  권장 범위: [10 또는 총 메모리, 200의 5% ]</dd>
  </dl>

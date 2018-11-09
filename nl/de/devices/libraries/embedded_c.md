@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-13"
+  years: 2015, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -31,6 +31,7 @@ Wechseln Sie für den Zugriff auf die Embedded C-Clientbibliotheken und Beispiel
 |Abhängigkeit |Beschreibung|
 |:---|:---|
 |[Bibliothek für Eclipse Paho Embedded C ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Stellt eine MQTT-C-Clientbibliothek bereit. Weitere Informationen finden Sie in [MQTT Client Package -  C for embedded devices ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
+|[Mbed TLS 2.4.1 ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.4.1.tar.gz){: new_window} | Stellt SSL-Bibliotheken bereit, um die TLS-Unterstützung und die clientseitige Authentifizierung zu aktivieren. Weitere Informationen finden Sie in [SSL Library from Mbed TLS ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://tls.mbed.org/ssl-library){: new_window}.|
 
 
 ## Installation
@@ -153,7 +154,7 @@ Nach dem Initialisieren der Embedded C-Clientbibliothekt von {{site.data.keyword
 
 Wenn der Geräteclient eine Verbindung herstellt, subskribiert er automatisch alle für dieses Gerät geltenden Befehle. Zum Verarbeiten bestimmter Befehle müssen Sie eine Callback-Funktion für Befehle registrieren, indem Sie die Funktion `setCommandHandler` aufrufen. Die Callback-Funktion weist folgende Eigenschaften auf:
 
-|Eigenschaft|Beschreibung|
+|Eigenschaft |Beschreibung|
 |:---|:---|
 |`commandName`  |Der Name des aufgerufenen Befehls. |  
 |`format`  |Das Format des Ereignisses. Das Format kann eine beliebige Zeichenfolge sein, zum Beispiel 'JSON'.|
@@ -186,7 +187,7 @@ Wenn der Geräteclient eine Verbindung herstellt, subskribiert er automatisch al
 
 Ereignisse können mit folgenden Eigenschaften publiziert werden:
 
-|Eigenschaft|Beschreibung|
+|Eigenschaft |Beschreibung|
 |:---|:---|
 |eventType  |Der Typ des zu publizierenden Ereignisses, beispielsweise 'status' oder 'gps'. |  
 |eventFormat  |Das Format kann eine beliebige Zeichenfolge sein, zum Beispiel `json`. |

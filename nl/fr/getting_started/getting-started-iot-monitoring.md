@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -13,14 +13,14 @@ lastupdated: "2017-06-16"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guide 3 : Surveillance des données de votre terminal
+# Guide 2 : Surveillance des données de votre terminal
 Maintenant que vous avez un ou plusieurs terminaux connectés, il est temps de commencer à surveiller les données de terminal en temps réel.
 {:shortdesc}
 
 ## Présentation et objectif
 {: #overview}  
 
-Dans ce guide, vous allez déployer une application de surveillance sur {{site.data.keyword.Bluemix_notm}} pour afficher des données à partir de vos terminaux.
+Dans ce guide, vous allez déployer une application de surveillance sur {{site.data.keyword.Bluemix}} pour afficher des données à partir de vos terminaux.
 
 A l'instar du guide 1, vous pouvez suivre l'un et/ou l'autre des chemins ci-dessous :
 - Chemin A : [Etape 1A - Déploiement et connexion de l'application Web de surveillance](#deploy_app)  
@@ -33,12 +33,12 @@ Le chemin B, un peu plus complexe, vous présente la bibliothèque de widgets et
 Avant de commencer, assurez-vous de remplir les conditions ci-dessous.
 
 ### Environnement local
-- [Node.js ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://nodejs.org){: new_window} 6.x ou version supérieure.
-- Chemin A: [Interface CLI Angular ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/angular/angular-cli){: new_window} 1.x ou version supérieure.  
-- [Cloud Foundry CLI (client de ligne de commande pour Cloud Foundry) ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
-Utilisez l'interface CLI CF pour déployer des applications et des services sur {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir la documentation [Cloud Foundry CLI![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/){: new_window}  
-- Facultatif : [Git ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}  
-Si vous choisissez d''utiliser Git pour télécharger les exemples de code, vous devez disposer d'un [compte GitHub.com ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com){: new_window}. Vous pouvez aussi télécharger le code sous forme de fichier compressé si vous n'avez pas de compte GitHub.com.
+- [Node.js ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://nodejs.org){: new_window} 6.x ou version supérieure.
+- Chemin A: [Interface CLI Angular ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/angular/angular-cli){: new_window} 1.x ou version supérieure.  
+- [Cloud Foundry CLI (client de ligne de commande pour Cloud Foundry) ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
+Utilisez l'interface CLI CF pour déployer des applications et des services sur {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir la documentation [Cloud Foundry CLI![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudfoundry.org/cf-cli/){: new_window}  
+- Facultatif : [Git ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads){: new_window}  
+Si vous choisissez d''utiliser Git pour télécharger les exemples de code, vous devez disposer d'un [compte GitHub.com ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com){: new_window}. Vous pouvez aussi télécharger le code sous forme de fichier compressé si vous n'avez pas de compte GitHub.com.
 
 ### Autres exigences
 Vous devez posséder un terminal connecté de type `iot-conveyor-belt` qui envoie des événements avec le nom d'événement `sensorData` et avec une charge de message qui contient les propriétés suivantes :
@@ -60,9 +60,9 @@ Si vous avez terminé l'étape [Guide 1 : Initiation à {{site.data.keyword.iot_
 ## Etape 1A - Déploiement et connexion de l'application Web de surveillance
 {: #deploy_app}
 
-Le modèle d'application Plant Floor Monitoring répertorie tous les terminaux de type iot-conveyor-belt qui sont connectés à votre organisation {{site.data.keyword.iot_short_notm}} avec un sous-ensemble de données d'événement, notamment la valeur RPM, la date de dernière mise à jour et l'ID de terminal.
+Le modèle d'application Plant Floor Monitoring répertorie tous les terminaux de type iot-conveyor-belt qui sont connectés à votre organisation {{site.data.keyword.iot_full}} avec un sous-ensemble de données d'événement, notamment la valeur RPM, la date de dernière mise à jour et l'ID de terminal.
 
-Le modèle d'application repose sur des bibliothèques client Node.js accessibles depuis : [https://github.com/ibm-watson-iot/iot-nodejs ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
+Le modèle d'application repose sur des bibliothèques client Node.js accessibles depuis : [https://github.com/ibm-watson-iot/iot-nodejs ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 
 ![Application de surveillance basée sur Node.js](images/app_monitor.png "Application de surveillance basée sur Node.js")
 
@@ -71,7 +71,7 @@ Dans le cadre de cette étape, vous allez :
 - Configurer le modèle d'application pour vous connecter à {{site.data.keyword.iot_short_notm}} à l'aide d'une clé d'API et d'un jeton d'authentification.
 - Utiliser l'application Web pour surveiller vos terminaux de tapis roulant connectés.  
 
-### Etapes détaillées
+### Etapes détaillées de déploiement et de connexion de l'application de surveillance
 Les étapes ci-dessous vont vous guider tout au long de la procédure de création et de déploiement de l'application sur {{site.data.keyword.Bluemix_notm}}. Pour en savoir plus sur l'exécution de l'application en local, consultez le fichier README de GitHub.
 1. Clonez le référentiel GitHub du modèle d'application *Plant Floor Monitoring* Node.js.  
 Servez-vous de votre outil Git favori pour cloner le référentiel ci-dessous :  
@@ -109,8 +109,8 @@ Exemple :
 }
 ```
 4. Connectez-vous à votre compte {{site.data.keyword.Bluemix_notm}} à l'aide de l'interface de ligne de commande Cloud Foundry.  
-Pour plus d'informations, voir la documentation [Cloud Foundry CLI![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/){: new_window}  
-A partir de la ligne de commande, entre la commande suivante :  
+Pour plus d'informations, voir la documentation [Cloud Foundry CLI![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudfoundry.org/cf-cli/){: new_window}  
+A partir de la ligne de commande, entrez la commande suivante :  
   ```
 cf login
   ```
@@ -147,7 +147,7 @@ cd guide-conveyor-ui-angular
 8. Exécutez `npm install`.
 9. Exécutez `npm run push` pour générer le projet et l'envoyer à votre organisation.  
 Votre modèle d'application Web est déployé sur {{site.data.keyword.Bluemix_notm}}.  
-Une fois le déploiement terminé, un message s'affiche pour indiquer que votre application est en cours d'exécution.    
+Une fois le déploiement terminé, un message s'affiche pour indiquer que votre application est en cours d'exécution.   
 Exemple :  
   ```
 requested state: started
@@ -179,7 +179,7 @@ Dans le cadre de cette étape, vous allez :
 - Configurer trois widgets d'interface utilisateur pour afficher les données de terminaux sous forme de jauges et de graphiques.
 - Utiliser l'application Web pour surveiller le terminal de tapis roulant connecté.  
 
-### Etapes détaillées
+### Etapes détaillées de création d'une interface utilisateur de surveillance à l'aide de la bibliothèque de widgets
 Les étapes ci-dessous vont vous guider tout au long de la procédure de création et de déploiement de l'application sur {{site.data.keyword.Bluemix_notm}}. Pour en savoir plus sur l'exécution de l'application en local, consultez le fichier README de GitHub.
 1. Clonez le référentiel GitHub du modèle d'application *Widget Library Monitoring*.  
 Servez-vous de votre outil Git favori pour cloner le référentiel ci-dessous :  
@@ -211,7 +211,7 @@ Le tableau ci-dessous propose une description des paramètres :
 | WIDGET_DEFAULT_OVERRIDE | Paramètres de configuration du widget devant remplacer les paramètres par défaut.|
 | WIDGET_SPECIFIC_SETTINGS | Un ou plusieurs paramètres de widget supplémentaires (voir les exemples). |
 
-Pour plus de détails sur chaque type de widget, consultez les exemples ci-après, ainsi que la documentation du [référentiel IoT Widgets GitHub ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-widgets){: new_page}.
+Pour plus de détails sur chaque type de widget, consultez les exemples ci-après, ainsi que la documentation du [référentiel IoT Widgets GitHub ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-widgets){: new_page}.
  1. Ajoutez une jauge RPM.  
 Cette jauge affiche les tours par minute (RPM) du tapis roulant avec une valeur minimale de 0 et une valeur maximale de 5 tours par minute (RPM).
     1. Ouvrez le modèle suivant pour l'éditer : `public/index.html`  
@@ -291,19 +291,19 @@ applications:  </br>
   \- YOUR_IOT_PLATFORM_NAME  </br>
 </pre></code>
  2. Connectez-vous à votre compte {{site.data.keyword.Bluemix_notm}} à l'aide de l'interface de ligne de commande Cloud Foundry.  
-Pour plus d'informations, voir la documentation [Cloud Foundry CLI![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/){: new_window}  
-A partir de la ligne de commande, entre la commande suivante :  
+ Pour plus d'informations, voir la documentation [Cloud Foundry CLI![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudfoundry.org/cf-cli/){: new_window}  
+ A partir de la ligne de commande, entre la commande suivante :  
    ```
  cf login
    ```
-Si le système vous y invite, sélectionnez l'organisation et l'espace où vous souhaitez déployer le modèle d'application de surveillance.
+ Si le système vous y invite, sélectionnez l'organisation et l'espace où vous souhaitez déployer le modèle d'application de surveillance.
  5. Si nécessaire, définissez le noeud final de votre API en exécutant la commande d'API CF.   
-Remplacez la valeur `API-ENDPOINT` par le noeud final d'API de votre région.
+ Remplacez la valeur `API-ENDPOINT` par le noeud final d'API de votre région.
    ```
  cf api API-ENDPOINT
    ```
-Exemple : `cf api https://api.ng.bluemix.net`
-<table>
+ Exemple : `cf api https://api.ng.bluemix.net`
+ <table>
  <tr>
  <th>Région</th>
  <th>Noeud final d'API</th>
@@ -349,12 +349,12 @@ Maintenant que la console Web est en cours d'exécution, vous pouvez voir vos te
 Passez au guide suivant ou à une autre rubrique qui vous intéresse :
 - Chemin A : Modification de l'application de surveillance selon vos besoins.  
 Pour plus de détails techniques, voir :
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
- - [Bibliothèques client Node.js ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
-- Chemin B : Modification de l'application bibliothèque de widgets selon vos besoins.   
+ - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
+ - [Bibliothèques client Node.js ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
+- Chemin B : Modification de l'application bibliothèque de widgets selon vos besoins.  
 Pour plus de détails techniques, voir :
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
-- [Guide 4 : Simulation d'un grand nombre de terminaux](getting-started-iot-large-scale-simulation.html)  
-Etendez la simulation de base en ajoutant à votre environnement un très grand nombre de simulateurs à exécution automatique. Cette extension vous permettra de tester les analyses et la surveillance de base des guides précédents dans un environnement multiterminal plus réaliste.
+ - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
+- [Guide 3 : Simulation d'un grand nombre de terminaux](getting-started-iot-large-scale-simulation.html)  
+Etendez la simulation de base en ajoutant à votre environnement un très grand nombre de simulateurs à exécution automatique.
 - [En savoir plus sur {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [En savoir plus sur les {{site.data.keyword.iot_short_notm}} API](/docs/services/IoT/reference/api.html){:new_window}

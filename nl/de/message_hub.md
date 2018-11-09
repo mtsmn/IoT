@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,6 +18,8 @@ lastupdated: "2018-05-22"
 Durch eine Verbindung zwischen {{site.data.keyword.messagehub_full}} und {{site.data.keyword.iot_full}} wird ein skalierbarer Nachrichtenbus mit hohem Durchsatz für die Speicherung archivierter Daten bereitgestellt. {{site.data.keyword.messagehub}} basiert auf Apache Kafka, das ein Open-Source-Nachrichtenübertragungssystem mit hohem Durchsatz ist, das eine Plattform mit kurzer Latenzzeit zum Handhaben von Feeds mit Echtzeitdaten bietet.
 
 Die MessageHub-Weiterleitungsfunktion partitioniert Ereignisse mithilfe eines Partitionsschlüssels. Der Schlüssel wird gebildet, indem die sechsstellige {{site.data.keyword.iot_short}}-Organisations-ID mit dem Gerätetyp und der Geräte-ID verknüpft wird. Nutzdatenfelder, wie z. B. Zeitmarke und Ereignis-ID, werden nicht dazu verwendet, den Partitionsschlüssel zu bilden. Durch diese Konfiguration wird sichergestellt, dass alle Ereignisse eines bestimmten Geräts an dieselbe Partition gesendet werden, sodass die Ereignisse in der Reihenfolge verarbeitet werden, in der sie gesendet werden. 
+
+Die Servicequalität (QoS), die von einem MQTT-Gerät verwendet wird, um Nachrichten an {{site.data.keyword.iot_short_notm}} zu senden, gilt nicht, wenn Nachrichten von {{site.data.keyword.iot_short_notm}} an {{site.data.keyword.messagehub}} gesendet werden. In der Regel wird eine Nachricht ein Mal an {{site.data.keyword.messagehub}} gesendet. In Ausnahmefällen kann es sein, dass eine Nachricht mehr als ein Mal oder gar nicht gesendet wird.
 
 ## Vorbereitende Schritte  
 {: #byb}

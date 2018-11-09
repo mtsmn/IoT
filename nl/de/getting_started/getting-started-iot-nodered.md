@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-04-24"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
+
 ---
 
 {:new_window: target="\_blank"}
@@ -15,7 +16,7 @@ lastupdated: "2017-04-24"
 {: #gettingstartedtemplate}
 <!-- Provide an appropriate ID above -->
 
-Beginnen Sie Ihre Arbeit mit {{site.data.keyword.iot_full}} unter Verwendung des {{site.data.keyword.iot_short_notm}} Starter-GitHub-Projekts. Unter Verwendung der Starter-Anwendung können Sie in kürzester Zeit ein Gerät simulieren, Karten erstellen, Daten generieren und damit beginnen, Daten zu analysieren und im {{site.data.keyword.iot_short_notm}}-Dashboard anzuzeigen.  
+Beginnen Sie Ihre Arbeit mit {{site.data.keyword.iot_full}} unter Verwendung des {{site.data.keyword.iot_short_notm}} Starter-GitHub-Projekts.
 {:shortdesc}
 
 ## Übersicht
@@ -24,10 +25,10 @@ Beginnen Sie Ihre Arbeit mit {{site.data.keyword.iot_full}} unter Verwendung des
 Die Starter-Anwendung stellt die folgenden Services automatisch bereit und verbindet sie:
 <dl>
 <dt>**{{site.data.keyword.iot_short_notm}}**</dt>
-<dd>Ein IoT-Web-Service, der Gateway-Management, Gerätemanagement und Anwendungszugriff beinhaltet. Unter Verwendung von {{site.data.keyword.iot_short_notm}} können Sie Daten von verbundenen Geräten erfassen und Echtzeitdaten aus Ihrer Organisation analysieren.</dd>
+<dd>Ein IoT-Web-Service, der Gateway-Management, Gerätemanagement und Anwendungszugriff beinhaltet. Durch die Verwendung von {{site.data.keyword.iot_short_notm}} können Sie Daten zu verbundenen Geräten und Echtzeitdaten aus Ihrer Organisation erfassen.</dd>
 <dt>**{{site.data.keyword.sdk4nodefull}}**</dt>
 <dd>Die Laufzeitumgebung, in der Node-RED ausgeführt wird. </br>Weitere Informationen finden Sie in der Dokumentation zu [{{site.data.keyword.sdk4nodefull}} Starter](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html).</dd>
-<dd>Node-RED ist ein Tool, mit dem Hardware-Geräte, APIs und Online-Services auf eine neue und interessante Weise miteinander verbunden werden können.  Sie können Node-RED verwenden, um einen simulierten Thermostat zu erstellen, der simulierte Daten an Ihren {{site.data.keyword.iot_short_notm}}-Service sendet. Sie haben die Möglichkeit, Karten zu erstellen, um Echtzeitdaten im {{site.data.keyword.iot_short_notm}}-Dashboard anzuzeigen. </br>Weitere Informationen finden Sie in der [Node-RED-Dokumentation](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).</dd>
+<dd>Node-RED ist ein Tool, mit dem Hardware-Geräte, APIs und Online-Services auf eine neue und interessante Weise miteinander verbunden werden können.  Sie können Node-RED verwenden, um einen simulierten Thermostat zu erstellen, der simulierte Daten an Ihren {{site.data.keyword.iot_short_notm}}-Service sendet. </br>Weitere Informationen finden Sie in der [Node-RED-Dokumentation](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).</dd>
 <dt>**{{site.data.keyword.cloudantfull}}**</dt><dd>Die Datenbank, in der Node-RED Metadaten speichert.</dd>
 </dl>
 
@@ -43,8 +44,7 @@ Um das Wechseln zwischen den verschiedenen Aufgaben im folgenden Prozess zu vere
 <dt>*{{site.data.keyword.Bluemix_notm}}-Dashboard*</dt>
 <dd>Hier können Sie den Status Ihrer Bereitstellung ermitteln, die Dokumentation lesen und Dashboards starten.</dd>
 <dt>*{{site.data.keyword.iot_short_notm}}-Dashboard*</dt>
-<dd>Hier haben Sie die Möglichkeit, Gerätetypen zu definieren, Geräte zu registrieren, eingehende Sensordaten zu überwachen, Datenvisualisierungskarten zu erstellen
-und Livedatenvisualisierungen anzuzeigen.</dd>
+<dd>Definieren Sie Gerätetypen und registrieren Sie Geräte.</dd>
 <dt>*Node-RED*</dt>
 <dd>Hier können Sie den Ablauf des Gerätesimulators konfigurieren und ausführen und Sie können mit anderen Abläufen arbeiten, um Daten von {{site.data.keyword.iot_short_notm}} zu verarbeiten.</dd>
 </dl>
@@ -55,7 +55,7 @@ und Livedatenvisualisierungen anzuzeigen.</dd>
 Führen Sie die folgenden Schritte aus, um die Starter-Beispielanwendung bereitzustellen:
 
 1. Starter-Anwendung bereitstellen.
- 1. Klicken Sie auf <a href="https://bluemix.net/devops/setup/deploy?repository=https://github.com/ibm-watson-iot/iot-platform-bluemix-starter"><img src="https://bluemix.net/devops/graphics/create_toolchain_button.png" height=25></a>, um eine neue Continuous Delivery Toolchain in Bluemix zu erstellen: (über Continuous Delivery)  
+ 1. Klicken Sie auf **Toolchain erstellen**, um eine neue Toolchain für Continuous Delivery in Bluemix zu erstellen: (über Continuous Delivery)  
  **Tipp:** Wenn Sie die Bereitstellung lieber von der Befehlszeile durchführen wollen, [finden Sie {{site.data.keyword.iot_short_notm}} Starter](https://github.com/ibm-watson-iot/iot-platform-bluemix-starter) in der IBM Watson IoT-Organisation in GitHub.
  2. Melden Sie sich bei IBM Bluemix an, wenn Sie dazu aufgefordert werden.
  3. Wählen Sie bei Bedarf die Bluemix-Organisation aus, in der Sie die Starter-Anwendung bereitstellen wollen.
@@ -142,52 +142,6 @@ Die Nutzdaten beinhalten Datenpunkte (z. B. diejenigen im folgenden Beispiel):
     3. Klicken Sie auf die Registerkarte "Debug", um Nachrichten anzuzeigen.
   8. Prüfen Sie auf der Seite "{{site.data.keyword.iot_short_notm}}-Geräteinformationen", dass Datenpunkte von dem Gerät im Abschnitt "Sensorinformationen" angezeigt werden.
 
-
-## Schritt 4: Karten in {{site.data.keyword.iot_short_notm}} erstellen, um Livedaten anzuzeigen.  
-{: #createcards}  
-Sie können ein Board sowie Karten erstellen, um Gerätedaten im {{site.data.keyword.iot_short_notm}}-Dashboard anzuzeigen. Weitere Informationen zu Boards und Karten finden Sie in [Echtzeitdaten mithilfe von Boards und Karten visualisieren](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
-
-1. Board erstellen.
-  1. Öffnen Sie das {{site.data.keyword.iot_short_notm}}-Dashboard.  
-  **Tipp:** Wenn das {{site.data.keyword.iot_short_notm}}-Dashboard nicht bereits in einer anderen Registerkarte geöffnet ist, kehren Sie zu Ihrem {{site.data.keyword.Bluemix_notm}}-Dashboard zurück, klicken Sie auf den Namen Ihrer {{site.data.keyword.iot_short_notm}}-Instanz und klicken Sie anschließend auf **Dashboard starten**.  
-  2. Erstellen Sie ein Board, das die Karten für Ihre simulierten Geräte enthalten soll.
-    1. Wenn die Seite "Alle Boards" noch nicht angezeigt wird, wählen Sie **Boards** im Hauptmenü des {{site.data.keyword.iot_short_notm}}-Dashboards aus und klicken Sie anschließend auf **Neues Board erstellen**.
-    2. Geben Sie einen Namen für das Board ein (z. B. `Heimarbeitsplatz`) und klicken Sie auf **Weiter**.
-    3. Klicken Sie auf der nächsten Seite auf **Übergeben**.  
-  3. Klicken Sie auf das gerade erstellte Board, um es zu öffnen.
-2. Karte erstellen, um die Temperatur anzuzeigen.
-  1. Klicken Sie auf **Neue Karte hinzufügen** und wählen Sie anschließend den Kartentyp **Kurvendiagramm** im Abschnitt "Geräte" aus.
-  2. Wählen Sie Ihr Gerät aus der Geräteliste aus und klicken Sie anschließend auf **Weiter**.
-  3. Klicken Sie auf **Neues Dataset verbinden**.
-  4. Wählen Sie auf der Seite "Wertkarte erstellen" die folgenden Werte aus oder geben Sie sie ein und klicken Sie auf **Weiter**.
-    - Ereignis: update
-    - Eigenschaft: temp
-    - Name: Temperature
-    - Typ: Float
-    - Einheit: °C
-    - Genauigkeit: 2
-    - Min.: 0
-    - Max.: 50
-  5. Wählen Sie auf der Seite "Kartenvorschau" den Wert **L** für die Kurvendiagrammgröße aus und klicken Sie auf **Weiter**.
-  6. Ändern Sie den Namen der Karte auf der Seite "Karteninformationen" in **Temperature** (Temperatur) und klicken Sie auf **Übergeben**.   
-Die Karte für die Temperatur wird auf dem Dashboard angezeigt. Sie enthält ein Kurvendiagramm mit Livedaten zur Temperatur.
-3. Karte erstellen, um die Feuchtigkeit anzuzeigen.
-  1. Klicken Sie auf **Neue Karte hinzufügen** und wählen Sie anschließend den Kartentyp **Messanzeige** im Abschnitt "Geräte" aus.
-  2. Wählen Sie Ihr Gerät aus der Liste aus und klicken Sie anschließend auf **Weiter**.
-  3. Klicken Sie auf **Neues Dataset verbinden**.
-  4. Wählen Sie auf der Seite "Wertkarte erstellen" die folgenden Werte aus oder geben Sie sie ein und klicken Sie auf **Weiter**.
-  Ereignis: update
-     - Eigenschaft: humidity
-     - Name: Humidity
-     - Typ: Float
-     - Einheit: %
-     - Genauigkeit: 1
-     - Min.: 10
-     - Max.: 95
-  5. Wählen Sie auf der Seite "Kartenvorschau" den Wert **M** für die Messanzeigengröße aus und klicken Sie auf **Weiter**.
-  6. Ändern Sie den Namen der Karte auf der Seite "Karteninformationen" in **Humidity** (Feuchtigkeit) und klicken Sie auf **Übergeben**.   
-Die Karte für die Feuchtigkeit wird auf dem Dashboard angezeigt und sie enthält eine Messanzeige, die die Live-Feuchtigkeitsdaten zeigt.  
-
 <!-- 4. Create a card to display location
   1. Click **Add New Card**, and then select the **Value** card type, which is located in the Devices section.
   2. Select your device from the list, then click **Next**.
@@ -218,7 +172,6 @@ The location card appears on the dashboard and shows the live latitude and longi
 ## Weitere Schritte  
 {: #whats-next}  
 Da Ihr simuliertes Gerät jetzt Daten an {{site.data.keyword.iot_short_notm}} sendet, können Sie Ihr IoT-Projekt weiter iterieren.
- - Ihre Karten zeigen die Daten, die von Ihrem Node-RED-Ablauf generiert werden.  
 Node-Red sendet so lange Daten, bis Sie den Prozess stoppen. Um die simulierten Daten zu stoppen, führen Sie die folgenden Schritte aus:
     1.	Klicken Sie in Ihrem Node-RED-Ablaufeditor doppelt auf den grauen Knoten **Daten senden**, wählen Sie für den Wert "repeat" die Einstellung **interval** und legen Sie eine Frequenz von **3** Sekunden fest.
     2. Klicken Sie auf **Fertig**.
@@ -227,8 +180,6 @@ Node-Red sendet so lange Daten, bis Sie den Prozess stoppen. Um die simulierten 
  - Schließen Sie ein physisches Gerät an.  
 [Durchsuchen Sie die 'IoT Recipes'](https://developer.ibm.com/recipes/?post_type=tutorials&s=watson+iot), um eine Verbindung zu einem physischen Gerät (wie z. B. Raspberry Pi) herzustellen und Daten an {{site.data.keyword.iot_short_notm}} zu senden.
 
- - Durchsuchen Sie die Visualisierungsoptionen.  
-[Stellen Sie eine node.js-Beispielanwendung bereit, um Gerätedaten zu visualisieren](https://www.bluemix.net/docs/services/IoT/visualizingdata_sample.html).
 
  -	Schützen Sie den Node-RED-Ablaufeditor mit einem Kennwort.   
 Standardmäßig können alle Benutzer auf den Editor zugreifen und Abläufe ändern. Gehen Sie wie folgt vor, um den Editor durch ein Kennwort zu schützen:

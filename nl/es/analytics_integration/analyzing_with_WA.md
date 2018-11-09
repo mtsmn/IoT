@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-09-18"
 ---
 
@@ -24,7 +24,7 @@ Puede utilizar {{site.data.keyword.iot_full}} con Watson Analytics (WA) para vis
 
 Esta guía le muestra, paso a paso, el proceso de visualización de datos de suceso de dispositivo {{site.data.keyword.iot_short_notm}} utilizando Watson Analytics (WA) como herramienta de analíticas.
 
-Los datos de dispositivo enviados a {{site.data.keyword.iot_short_notm}} se pueden recopilar y almacenar en {{site.data.keyword.Bluemix}} utilizando el servicio de {{site.data.keyword.cloudantfull}} NoSQL DB. Para recopilar los datos, primero debe conectar {{site.data.keyword.iot_short_notm}} con el servicio {{site.data.keyword.cloudant_short_notm}}. Después de recopilar los datos, exporte los datos a un archivo CSV. Puede subir este archivo a WA, donde puede visualizar y analizar los datos de dispositivo. Los datos de dispositivo se almacenan en bases de datos diarias, semanales o mensuales de {{site.data.keyword.cloudant_short_notm}} en función del intervalo de receptáculo configurado. 
+Los datos de dispositivo enviados a {{site.data.keyword.iot_short_notm}} se pueden recopilar y almacenar en {{site.data.keyword.Bluemix}} utilizando el servicio de {{site.data.keyword.cloudantfull}} NoSQL DB. Para recopilar los datos, primero debe conectar {{site.data.keyword.iot_short_notm}} con el servicio {{site.data.keyword.cloudant_short_notm}}. Después de recopilar los datos, exporte los datos a un archivo CSV. Puede subir este archivo a WA, donde puede visualizar y analizar los datos de dispositivo. Los datos de dispositivo se almacenan en bases de datos diarias, semanales o mensuales de {{site.data.keyword.cloudant_short_notm}} en función del intervalo de receptáculo configurado.
 
 ![Visión general del uso de WA para analizar datos](images/WA_overview.png)
 
@@ -38,7 +38,7 @@ Como parte de esta guía aprenderá:
 ## Requisitos previos
 
 Para completar estos pasos debe tener acceso a [{{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window} con [Cloudant NoSQL DB ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/services/cloudant-nosql-db
-){: new_window} y acceso a [Watson Analytics ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/watson-analytics){: new_window}.
+){: new_window}y acceso a [Watson Analytics ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/watson-analytics){: new_window}.
 
 
 ## Paso 1. Configurar el simulador
@@ -71,7 +71,7 @@ Para simular sucesos de datos de sensor reales en sus organizaciones utilizando 
 1. [Despliegue la app web del simulador Weather Sensors con una instancia de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window} y siga los pasos detallados.
 
    Para obtener más información acerca de Weather Sensors, consulte la [guía del simulador Weather Sensors ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
-2. Espere a que se complete el despliegue y luego navegue al panel de control de Bluemix.
+2. Espere a que se complete el despliegue y luego navegue al panel de control de IBM Cloud.
 3. Inicie el servicio {{site.data.keyword.iot_short_notm}} "wiotp-for-weather-sensors-simulator" creado por el proceso de despliegue.
 4. Continúe con el [Paso 2. Configurar el conector de base de datos](#WA_config_db).
 
@@ -91,7 +91,7 @@ Para simular sucesos de datos de sensor reales en sus organizaciones utilizando 
 Para utilizar {{site.data.keyword.cloudant_short_notm}} con Watson Analytics, debe configurar el almacenamiento de datos de plataforma para que se utilice Cloudant NoSQL DB como servicio histórico.
 
 1. En el panel de control de {{site.data.keyword.cloudant_short_notm}}, pulse **Extensiones** en la barra de navegación.
-2. En **Almacenamiento de datos históricos**, pulse **Configuración**. La sección **Configurar el almacenamiento de datos históricos** lista todos los servicios de Cloudant NoSQL DB disponibles en el mismo espacio Bluemix que {{site.data.keyword.cloudant_short_notm}}.
+2. En **Almacenamiento de datos históricos**, pulse **Configuración**. La sección **Configurar Almacenamiento de datos históricos** lista todos los servicios de base de datos NoSQL de Cloudant disponibles en el mismo espacio de IBM Cloud que {{site.data.keyword.cloudant_short_notm}}.
 3. Seleccione el servicio Cloudant NoSQL DB al que se desea conectar.
 4. Especifique las siguientes opciones de configuración de Cloudant NoSQL DB:
   - Intervalo de receptáculo = Día
@@ -160,18 +160,18 @@ Para exportar la base de datos de Cloudant a formato CSV:
 ```
    El identificador de servicio y el nombre de base de datos de Cloudant deben cambiarse de acuerdo con su identificador de servicio de Cloudant y el nombre de la base de datos seleccionada. El identificador del servicio de Cloudant se puede copiar del URL del panel de control de gestión de Cloudant.
 
-**Ejemplo:**
+   **Ejemplo:**
    ```
    https://ccf73725-b617-4f3e-8a7e-f5fb09569af4-bluemix.cloudant.com/iotp_115ccv_default_2017-08-23/_design/iotp/_list/csv/by-date?include_docs=true
    ```
 
-En este ejemplo, los datos se ordenarán por fecha y hora puesto que se utiliza la vista por fecha para invocar la función de lista. También puede filtrar los datos utilizando la característica de filtrado nativa de las vistas de Cloudant cambiando la vista utilizada en el URL y aplicando los atributos startkey y endkey.
+   En este ejemplo, los datos se ordenarán por fecha y hora puesto que se utiliza la vista por fecha para invocar la función de lista. También puede filtrar los datos utilizando la característica de filtrado nativa de las vistas de Cloudant cambiando la vista utilizada en el URL y aplicando los atributos startkey y endkey.
 
    **Ejemplo:**
    ```
    https://{cloudant service id}-bluemix.cloudant.com/{dbName}/_design/iotp/_list/csv/by-deviceType?include_docs=true&startkey='WS'&endkey='WS'
    ```
-En este ejemplo, la vista de tipo de dispositivo (deviceType) se utiliza para generar el archivo CSV y solo se incluyen documentos con deviceType=WS en el archivo descargado. Para seleccionar documentos dentro de un marco de tiempo específico, utilice la vista por fecha y utilice el siguiente URL de consulta (sustituyendo las indicaciones de fecha y hora por el marco deseado):
+   En este ejemplo, la vista de tipo de dispositivo (deviceType) se utiliza para generar el archivo CSV y solo se incluyen documentos con deviceType=WS en el archivo descargado. Para seleccionar documentos dentro de un marco de tiempo específico, utilice la vista por fecha y utilice el siguiente URL de consulta (sustituyendo las indicaciones de fecha y hora por el marco deseado):
    ```
    https://{cloudant service id}-bluemix.cloudant.com/{dbName}/_design/iotp/_list/csv/by-date?statkey="2017-08-29T12:25:50.995Z"&endkey="2017-08-29T12:25:51.514Z"
    ```
@@ -330,7 +330,7 @@ En esta sección, estudiamos los parámetros específicos que informa un disposi
 
 **¿Cuál es el valor promedio/mínimo/máximo informado?**
 
-En este ejemplo, resumimos los parámetros numéricos informados por un dispositivo específico en una tabla, para aprender, por ejemplo, acerca del intervalo de valores observados en el entorno o acerca del funcionamiento incorrecto del sensor. 
+En este ejemplo, resumimos los parámetros numéricos informados por un dispositivo específico en una tabla, para aprender, por ejemplo, acerca del intervalo de valores observados en el entorno o acerca del funcionamiento incorrecto del sensor.
 
 Esta visualización debe compilarse manualmente utilizando los siguientes pasos:
 
@@ -376,7 +376,7 @@ Este es el resultado que muestra la tendencia de los datos del sensor a lo largo
 
 En este ejemplo, comparamos las tendencias de las lecturas de sensor de diferentes dispositivos, identificando relaciones entre los dispositivos para detectar anomalías, funcionamiento incorrecto, etc. Para completar este análisis, copie y pegue o escriba una de las siguientes preguntas en WA:
 
-*"¿Cuál es la tendencia de TEMP a lo largo del tiempo por deviceId?"* o *"¿Cuál es la tendencia de TEMP a lo largo del tiempo por deviceId? Filtrado por deviceId: Ahuza, Igud"*
+*"¿Cuál es la tendencia de TEMP a lo largo del tiempo por deviceId?"* o *"¿Cuál es la tendencia de TEMP a lo largo del tiempo por deviceId?  Filtrado por deviceId: Ahuza, Igud"*
 
 Este es el resultado que muestra la comparación de los valores del sensor a lo largo del tiempo:
 
@@ -395,7 +395,7 @@ Puede utilizar el recuadro **Multiplicador** bajo el gráfico y elegir deviceId 
 
 En este ejemplo, visualizamos mutuamente la tendencia de dos sensores de dispositivo para obtener más conocimiento sobre los cambios en el entorno a lo largo del tiempo. Para completar este análisis, copie y pegue o escriba la siguiente pregunta en WA:
 
-*"¿Cuál es la tendencia de NO2 y NOX a lo largo del tiempo por deviceId? Filtrado por deviceId: Ahuza"*
+*"¿Cuál es la tendencia de NO2 y NOX a lo largo del tiempo por deviceId?  Filtrado por deviceId: Ahuza"*
 
 Este es el resultado que muestra la tendencia de los sensores de dispositivo a lo largo del tiempo:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -14,12 +14,20 @@ lastupdated: "2017-06-16"
 {:tip: .tip}
 
 # 指南 2：使用基本实时规则和操作
-使用本指南中的指示信息来配置一组基本规则和操作，用于对传送带 IoT 数据进行一些实时分析。
-{:shortdesc}
+
+**重要信息：**作为更广泛的更改计划的一部分，我们将推出 Beta，以一种全新的方式对 IoT 设备数据定义规则，以改进 {{site.data.keyword.iot_full}} 交付规则和操作的方式。
+
+要了解更多信息，请查看博客帖子 [An alternative approach to defining Rules on IoT data ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}。
+
+要开始定义自己的规则，请参阅[创建嵌入式规则 (Beta)](../information_management/im_rules.html) 文档。
 
 ## 概述和目标
 {: #overview}  
-既然您已成功设置传送带，将其连接到 {{site.data.keyword.iot_short_notm}} 并发送一些数据，那么是时候通过使用规则和操作来使数据运作。
+
+使用本指南中的指示信息来配置一组基本规则和操作，用于对传送带 IoT 数据进行一些实时分析。
+
+
+既然您已成功设置传送带，将其连接到 {{site.data.keyword.iot_full}} 并发送一些数据，那么是时候通过使用规则和操作来使数据运作。
 
 ![示例规则](images/slow_rule.svg "示例规则")
 

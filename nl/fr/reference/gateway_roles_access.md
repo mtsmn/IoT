@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-16"
+  years: 2016, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -23,7 +23,7 @@ Les tableaux répertorient les niveaux d'accès pour :
 <!-- [Historian Operations](#gateway-historian) -->
 - Les [opérations d'organisation](#gateway-org-ops)
 - Les [opérations de contrôle d'accès](#gateway-access-ops)
-- Les [opérations d'analyse](#gateway-analytics-ops)
+<!-- - [Analytics Operations](#gateway-analytics-ops) -->
 - Les [opérations de service de tiers](#gateway-third-party)  
 <!-- - [Risk Management Operations](#gateway-risk-mgt) -->
 
@@ -46,8 +46,8 @@ Lancer une action de gestion des terminaux|X|X
 Afficher des actions de gestion des terminaux|X|X
 Effacer des actions de gestion des terminaux|-|-
 Gérer les regroupements d'actions de gestion des terminaux|-|X
-Créer, mettre à jour ou supprimer des types de terminaux|-|-
-Afficher des types de terminaux|X|X
+Créer, mettre à jour ou supprimer des types de terminal|-|-
+Afficher des types de terminal|X|X
 Gérer des journaux de diagnostic|-|-
 Afficher des journaux de diagnostic|-|-
 
@@ -56,7 +56,7 @@ Afficher des journaux de diagnostic|-|-
 Opérations de journal || Rôles de passerelle|
 :--------: | ---------------------|------------------------
            | **Passerelle standard** | **Passerelle privilégiée**
-Afficher les journaux serveur|-|-
+Afficher des journaux serveur|-|-
 
 ### Opérations de cache {: #gateway-cache-ops}
 
@@ -104,18 +104,16 @@ Afficher les rôles|-|-
 Créer, mettre à jour, supprimer des rôles personnalisés|-|-
 Afficher les opérations|-|-
 
-### Opérations d'analyse {: #gateway-analytics-ops}
-
-Opérations d'analyse || Rôles de passerelle|
-:--------: | ---------------------|------------------------|
-           | **Passerelle standard** | **Passerelle privilégiée** |
-Afficher les règles d'analyse|-|-
-Gérer les règles d'analyse|-|-
-Afficher les actions d'analyse|-|-
-Gérer les actions d'analyse|-|-
-Afficher les alertes d'analyse|-|-
-Afficher les schémas de message d'analyse|-|-
-Gérer les schémas de message d'analyse|-|-
+<!-- ### Analytics Operations {: #gateway-analytics-ops}
+Analytics Operations || Gateway Roles|
+           | **Standard Gateway** | **Privileged Gateway** |
+View analytics rules|-|-
+Manage analytics rules|-|-
+View analytics actions|-|-
+Manage analytics actions|-|-
+View analytics alerts|-|-
+View analytics message schemas|-|-
+Manage analytics message schemas|-|- -->
 
 ### Opérations de service de tiers {: #gateway-third-party}
 

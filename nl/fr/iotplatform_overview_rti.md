@@ -18,13 +18,13 @@ lastupdated: "2017-11-21"
 {{site.data.keyword.iot_full}} fournit aux applications un accès puissant aux terminaux et aux données IoT afin de vous aider à composer rapidement des applications d'analyse, des tableaux de bord de visualisation et des applications IoT mobiles.
 {:shortdesc}
 
-{{site.data.keyword.iot_short_notm}} vous permet d'effectuer des opérations de gestion de terminaux puissantes, de stocker des données de terminal et d'y accéder, et de connecter une grande diversité de terminaux et de terminaux passerelle. {{site.data.keyword.iot_short_notm}} fournit une communication sécurisée vers et depuis vos terminaux à l'aide de MQTT et de TLS.
+{{site.data.keyword.iot_short_notm}} vous permet d'effectuer des opérations de gestion de terminaux puissantes, de stocker des données de terminal et d'y accéder, et de connecter une grande diversité de terminaux et de terminaux de passerelle. {{site.data.keyword.iot_short_notm}} fournit une communication sécurisée vers et depuis vos terminaux à l'aide de MQTT et de TLS.
 
 ## Architecture de {{site.data.keyword.iot_short_notm}}
 {: #watsoniotplatform_architecture}
 ![Architecture d'IBM Watson IoT Platform](images/architecture_platform_2.svg "Architecture d'IBM Watson IoT Platform")
 
-**Important :** Les fonctions d'analyse sont fusionnées à partir du service {{site.data.keyword.iotrtinsights_full}}. Si votre organisation {{site.data.keyword.iot_short_notm}} est utilisée comme source de données pour une instance {{site.data.keyword.iotrtinsights_short}} existante, Analytics n'est pas activé tant que les instances {{site.data.keyword.iotrtinsights_short}} existantes n'ont pas été migrées. Continuez d'utiliser le tableau de bord {{site.data.keyword.iotrtinsights_short}} pour vos besoins en analyse tant que la migration n'est pas terminée. Pour plus d'informations, voir le [blogue IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} sur IBM developerWorks et vos tableaux de bord de l'instance {{site.data.keyword.iotrtinsights_short}} existante.  
+**Important :** Les fonctions d'analyse sont fusionnées à partir du service {{site.data.keyword.iotrtinsights_full}}. Si votre organisation {{site.data.keyword.iot_short_notm}} est utilisée comme source de données pour une instance {{site.data.keyword.iotrtinsights_short}} existante, Analytics n'est pas activé tant que les instances {{site.data.keyword.iotrtinsights_short}} existantes n'ont pas été migrées. Continuez d'utiliser le tableau de bord {{site.data.keyword.iotrtinsights_short}} pour vos besoins en analyse tant que la migration n'est pas terminée. Pour plus d'informations, voir le [blogue IBM Watson IoT Platform ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} sur IBM developerWorks et vos tableaux de bord de l'instance {{site.data.keyword.iotrtinsights_short}} existante.  
 
 {{site.data.keyword.iot_short_notm}} communique avec vos applications et vos terminaux à l'aide de l'API {{site.data.keyword.iot_short_notm}} et du protocole de messagerie {{site.data.keyword.iot_short_notm}}. Le tableau de bord {{site.data.keyword.iot_short_notm}} se connecte en tant qu'interface utilisateur initiale pour simplifier les opérations au sein de la plateforme. Les données de terminal peuvent être stockées ou utilisées à l'aide de solutions d'analyse.
 
@@ -51,7 +51,7 @@ Les **terminaux non gérés** représentent tous les terminaux sans un agent de 
 
 ### Passerelles
 
-Les passerelles sont des terminaux spécialisés qui possèdent les fonctions combinées d'une application et d'un terminal, ce qui leur permet de servir de points d'accès pour d'autres terminaux. Les terminaux qui ne peuvent pas se connecter directement à Internet peuvent accéder au service {{site.data.keyword.iot_short_notm}} en se connectant d'abord au terminal passerelle.
+Les passerelles sont des terminaux spécialisés qui possèdent les fonctions combinées d'une application et d'un terminal, ce qui leur permet de servir de points d'accès pour d'autres terminaux. Les terminaux qui ne peuvent pas se connecter directement à Internet peuvent accéder au service {{site.data.keyword.iot_short_notm}} en se connectant d'abord au terminal de passerelle.
 
 Les passerelles doivent être enregistrées avant de pouvoir se connecter au service.
 

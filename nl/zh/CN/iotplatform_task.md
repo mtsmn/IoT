@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -39,8 +39,9 @@ lastupdated: "2018-03-15"
 
 要从 {{site.data.keyword.iot_short_notm}} 仪表板添加设备，请执行以下操作：
 
-1. 单击 {{site.data.keyword.Bluemix}} 仪表板中的 {{site.data.keyword.iot_short_notm}} 服务磁贴。
-
+1. 在 IBM Cloud 控制台上，从菜单中选择 **IoT**，然后单击 {{site.data.keyword.iot_short_notm}} 链接。  
+2. 登录或单击**注册以创建**。  
+3. 在 {{site.data.keyword.iot_short_notm}} 页面上，选择区域、组织和空间，然后单击**创建**。  
 2. 在服务页面上，单击**启动**以开始管理 {{site.data.keyword.iot_short_notm}} 组织。
 
   此时，{{site.data.keyword.iot_short_notm}} Web 控制台将在新浏览器选项卡中打开，URL 如下：
@@ -58,7 +59,7 @@ lastupdated: "2018-03-15"
 向 {{site.data.keyword.iot_short_notm}} 组织添加第一个设备时，**设备类型**菜单中没有任何设备类型。必须先创建一种设备类型：
  1. 单击**创建设备类型**。
  2. 输入设备类型名称（如 `my_device_type`）以及设备类型描述。   
- **重要信息：**设备类型名称不得超过 36 个字符，仅可包含以下字符：
+ **重要信息**：设备类型名称不得超过 36 个字符，仅可包含以下字符：
  <ul>
   <li>字母数字字符（a-z、A-Z 和 0-9）</li>
   <li>连字符（-）</li>
@@ -72,7 +73,7 @@ lastupdated: "2018-03-15"
 11. 输入设备标识（如 `my_first_device`）。
   
 设备标识用于在 {{site.data.keyword.iot_short_notm}} 仪表板中标识设备，还是用于将设备连接到 {{site.data.keyword.iot_short_notm}} 的必需参数。  
-**重要信息：**设备标识不得超过 36 个字符，仅可包含以下字符：
+**重要信息**：设备标识不得超过 36 个字符，仅可包含以下字符：
  <ul>
  <li>字母数字字符（a-z、A-Z 和 0-9）</li>
  <li>连字符 (-)</li>
@@ -144,16 +145,16 @@ lastupdated: "2018-03-15"
 
 [组织管理 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} API 文档还包含所需信息。
 
-## 复原已删除的设备 (Beta)
+## 复原删除的设备 (Beta)
 {: #restore_device}
 
 **重要信息：**{{site.data.keyword.iot_short_notm}} 复原设备功能只作为受限 Beta 程序的一部分提供。未来更新可能会包含与此功能当前版本不兼容的更改。请尝试此功能，[让我们了解您的想法 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
 
-如果错误地删除了设备，您可以在 14 天内复原该设备。 
+如果误删除了设备，可以在 14 天内进行复原。 
 
-删除设备时，将创建设备“备忘录”。备忘录是该设备文档的副本，在 14 天内可用，14 天后将被删除。
+删除设备后，将创建设备“备忘录”。备忘录是设备文档的副本，在 14 天内可用，之后会将其删除。
 
-通过以下“复原设备 API”，可以使用备忘录来复原设备的先前版本：
+通过以下复原设备 API，您可以使用备忘录来复原设备的先前版本：
 
     POST /archive/device/types/{typeId}/devices/{deviceId}/restore
 
@@ -162,11 +163,11 @@ lastupdated: "2018-03-15"
 
     GET /archive/device/types/{typeId}/devices/{deviceId}
 
-有关“复原设备 API”的更多信息，请参阅[复原设备 API Beta ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html)。
+有关复原设备 API 的更多信息，请参阅[复原设备 API Beta ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html)。
 
 ## 重新连接设备
 
-由于网络问题，或者服务或基础架构的日常维护，可能会导致设备与 {{site.data.keyword.iot_short_notm}} 断开连接。重新连接设备时，您可能需要考虑最大程度降低重新连接期间生成的网络流量，或者引入时间延迟以减少同时建立重新连接的数量。 
+由于网络问题或由于对服务或基础架构的日常维护，设备可能会与 {{site.data.keyword.iot_short_notm}} 断开连接。设备重新连接时，您可能需要考虑尽可能降低重新连接期间生成的网络流量，或者引入时间延迟以减少同时重新连接的数量。 
 
 
 ## 关于连接设备的诀窍

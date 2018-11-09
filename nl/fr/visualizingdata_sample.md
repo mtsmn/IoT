@@ -106,4 +106,4 @@ Le fichier qui fait référence à la bibliothèque MQTT Paho pour l'abonnement 
 
 Les événements de terminal sont transmis au fichier `realtimeGraph.js` pour tracer le graphique.
 
-Un guide de développement plus détaillé est disponible dans le [wiki Github ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window}.
+Un guide de développement plus détaillé est disponible dans le [wiki Github ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window}.

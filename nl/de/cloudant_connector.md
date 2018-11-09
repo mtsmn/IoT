@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-10-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -54,6 +54,7 @@ Wenn die Gerätedaten kein gültiges JSON-Format aufweisen oder als Format nicht
 }
 
 ```
+Die Servicequalität (QoS), die von einem MQTT-Gerät verwendet wird, um Nachrichten an {{site.data.keyword.iot_short_notm}} zu senden, gilt nicht, wenn Nachrichten von {{site.data.keyword.iot_short_notm}} an {{site.data.keyword.cloudant_short_notm}} gesendet werden. In der Regel wird eine Nachricht ein Mal an {{site.data.keyword.cloudant_short_notm}} gesendet. In Ausnahmefällen kann es sein, dass eine Nachricht mehr als ein Mal oder gar nicht gesendet wird. 
 
 ## Vorbereitende Schritte  
 {: #byb}
@@ -63,6 +64,8 @@ Führen Sie vor dem Herstellen einer Verbindung von {{site.data.keyword.cloudant
 - Richten Sie eine {{site.data.keyword.cloudant_short_notm}}-Instanz im selben {{site.data.keyword.Bluemix_notm}}-Bereich ein, in dem sich auch {{site.data.keyword.iot_short_notm}} befindet, indem Sie den {{site.data.keyword.Bluemix_notm}}-Katalog verwenden.
 
 Stellen Sie sicher, dass Sie innerhalb der {{site.data.keyword.Bluemix_notm}}-Organisation über Entwicklerberechtigungen verfügen und dass Sie über {{site.data.keyword.Bluemix_notm}} angemeldet sind. Wenn Sie nicht über {{site.data.keyword.Bluemix_notm}} angemeldet sind oder innerhalb dieser {{site.data.keyword.Bluemix_notm}}-Organisation nicht über Entwicklerberechtigungen verfügen, können Sie die Bindung zwischen der {{site.data.keyword.cloudant_short_notm}}-Datenbank und der {{site.data.keyword.iot_short_notm}}-Instanz nicht berechtigen.
+
+## Mit dem {{site.data.keyword.iot_short_notm}}-Dashboard einen {{site.data.keyword.cloudant_short_notm}}-Service an {{site.data.keyword.iot_short_notm}} binden
 
 Führen Sie folgende Schritte aus, um für eine {{site.data.keyword.cloudant_short_notm}}-Datenbank eine Verbindung herzustellen:
 
@@ -78,12 +81,12 @@ Führen Sie folgende Schritte aus, um für eine {{site.data.keyword.cloudant_sho
 
   c. Wählen Sie Optionen aus, mit denen der Datenbankname festgelegt wird. Der Datenbankname lautet `iotp_<orgID>_<dbname>_<bucket_name>`, wobei Folgendes gilt:
 
- +  * `<orgID>` ist die ID Ihrer Organisation.
- +  * `<dbname>` ist Ihre Auswahl für diesen Teil des Datenbanknamens, der durch das Feld für den Datenbanknamen (`Database Name`) gesteuert wird.
- +  * `<bucket_name>` ist eine Zeichenfolge, die durch Ihre Auswahl für das Feld für das Bucketintervall (`Bucket Interval`) festgelegt ist:
- +    * Für ein tägliches Bucketintervall (`day`) nimmt `<bucket_name>` den Wert `jjjj-mm-tt` an.  Beispielsweise `2016-07-06` für Ereignisse am 6. Juli 2016.
- +    * Für ein wöchentliches Bucketintervall (`week`) nimmt `<bucket_name>` den Wert `jjjj-'w'ww` an, wobei `'w'ww` die Nummer einer Woche angibt.  Beispielsweise `2016-w03` für Ereignisse in der dritten Kalenderwoche in 2016.
- +    * Für ein monatliches Bucketintervall (`month`) nimmt `<bucket_name>` den Wert `jjjj-mm` an.  Beispielsweise `2016-07` für Ereignisse im Juli 2016.
+   * `<orgID>` ist die ID Ihrer Organisation.
+   * `<dbname>` ist Ihre Auswahl für diesen Teil des Datenbanknamens, der durch das Feld für den Datenbanknamen (`Database Name`) gesteuert wird.
+   * `<bucket_name>` ist eine Zeichenfolge, die durch Ihre Auswahl für das Feld für das Bucketintervall (`Bucket Interval`) festgelegt ist:
+     * Für ein tägliches Bucketintervall (`day`) nimmt `<bucket_name>` den Wert `jjjj-mm-tt` an. Beispielsweise `2016-07-06` für Ereignisse am 6. Juli 2016.
+     * Für ein wöchentliches Bucketintervall (`week`) nimmt `<bucket_name>` den Wert `jjjj'-w'ww` an, wobei `'w'ww` die Nummer einer Woche angibt. Beispielsweise `2016-w03` für Ereignisse in der dritten Kalenderwoche in 2016.
+     * Für ein monatliches Bucketintervall (`month`) nimmt `<bucket_name>` den Wert `jjjj-mm` an. Beispielsweise `2016-07` für Ereignisse im Juli 2016.
 
 5. Klicken Sie auf **Berechtigen**.
 6. Klicken Sie im Dialogfeld 'Berechtigung' auf **Bestätigen**.

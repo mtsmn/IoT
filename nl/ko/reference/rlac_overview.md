@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-13"
+  years: 2017, 2018
+lastupdated: "2018-01-18"
 
 ---
 
@@ -13,12 +13,10 @@ lastupdated: "2017-10-13"
 {:pre: .pre}
 
 
-# 리소스 레벨 액세스 제어 개요(베타)
+# 리소스 레벨 액세스 제어 개요
 {: #RLAC_overview}
 
 리소스 레벨 액세스 제어를 통해 디바이스 관리를 위한 사용자 및 API 키 액세스를 제어할 수 있습니다. 리소스 그룹을 사용하여 각 사용자 또는 API 키가 관리할 수 있는 조직의 디바이스를 지정할 수 있습니다. 리소스 레벨 액세스 제어 구성 방법에 대한 정보는 [리소스 레벨 액세스 제어 구성](rlac.html#configure_RLAC)을 참조하십시오.
-
-**중요:** {{site.data.keyword.iot_full}} 리소스 레벨 액세스 제어 기능은 제한된 베타 프로그램의 일부로서만 사용 가능합니다. 향후 업데이트에는 이 기능의 현재 버전과 호환 가능한 변경사항이 포함될 수 있습니다. 시도해 보고 [의견을 보내주십시오. ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}
 
 ## 리소스 레벨 액세스 제어 개념 
 {: #RLAC_concepts}
@@ -29,7 +27,7 @@ IoT 솔루션의 일부로 디바이스 그룹을 구현하여 사용자 또는 
 
 예를 들어, 많은 현장 엔지니어 및 운영 요원을 고용하는 회사가 영국 전체에서 IoT 솔루션을 구현하려고 할 수 있습니다. 회사는 69개 도시 각각에 대한 하나의 디바이스 그룹, 지리적 지역 각각에 대한 9개의 디바이스 그룹 및 영국 전체에 대한 하나의 디바이스 그룹을 구성합니다. 디바이스는 이러한 그룹에 할당되며, 그룹은 15명의 현장 엔지니어 및 운영 요원에게 지정되고 이 중 일부는 둘 이상의 그룹에 대한 액세스 권한을 갖습니다. 하나 또는 두 디바이스를 담당하는 사용자는 {{site.data.keyword.iot_short_notm}}의 외부에 있지만 전체 IoT 솔루션을 보완하는 모바일 애플리케이션 및 엔터프라이즈 아키텍처를 계속 사용할 수 있습니다.
 
-[Internet of Things 영역의 질문(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://developer.ibm.com/answers/smartspace/internet-of-things/){: new_window}에서 디바이스 그룹에 대해 질문할 수 있습니다.
+[Internet of Things 영역의 질문 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/answers/smartspace/internet-of-things/){: new_window}에서 디바이스 그룹에 대해 질문할 수 있습니다.
 
 ## 액세스 제어에 대한 리소스 그룹 한계
 
@@ -58,7 +56,7 @@ IoT 솔루션의 일부로 디바이스 그룹을 구현하여 사용자 또는 
 ### 리소스
 {: #resources}
 
-리소스는 주체가 조치를 수행하는 엔티티입니다. 주체는 리소스에 대한 권한 부여된 플랫폼 액세스를 요청합니다. 디바이스는 리소스 레벨 액세스 제어 베타 릴리스에서 지원되는 유일한 리소스입니다.
+리소스는 주체가 조치를 수행하는 엔티티입니다. 주체는 리소스에 대한 권한 부여된 플랫폼 액세스를 요청합니다. 
 
 ### 조치
 {: #actions}
@@ -277,3 +275,9 @@ API 키는 {{site.data.keyword.iot_short_notm}} 플랫폼 HTTP API를 호출하�
     GET /api/v0002/device/types/${typeId}/devices/${deviceId}/events/${eventId}
 
 호출자가 디바이스에 액세스할 수 없는 경우 404 오류를 리턴합니다.
+
+**디바이스에 대한 논리 인터페이스 가져오기**
+
+    GET /api/v0002/device/types/{typeId}/devices/{deviceId}/state/{logicalInterfaceId}
+
+디바이스가 호출자의 그룹에 없으면 404 오류를 리턴합니다. 

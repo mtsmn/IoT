@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -39,8 +39,9 @@ Puede añadir dispositivos de uno en uno desde el panel de instrumentos de {{sit
 
 Para añadir un dispositivo desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}}:
 
-1. Pulse sobre el mosaico del servicio de {{site.data.keyword.iot_short_notm}} en el panel de instrumentos de {{site.data.keyword.Bluemix}}.
-
+1. En la consola de IBM Cloud, seleccione **IoT** en el menú y pulse el enlace {{site.data.keyword.iot_short_notm}}.  
+2. Inicie sesión o pulse **Regístrese para crear**.  
+3. En la página {{site.data.keyword.iot_short_notm}}, elija una región, una organización y un espacio y pulse **Crear**.  
 2. En la página de servicio, pulse **Iniciar** para iniciar la administración de la organización de {{site.data.keyword.iot_short_notm}}.
 
   Se abre la consola web de {{site.data.keyword.iot_short_notm}} en un nuevo separador del navegador con el siguiente URL:
@@ -144,7 +145,7 @@ La documentación de la API [Administración de la organización ![Icono de enla
 ## Restauración de dispositivos suprimidos (Beta)
 {: #restore_device}
 
-**Importante:** la característica de restauración de dispositivos de {{site.data.keyword.iot_short_notm}} solo está disponible como parte de un programa beta limitado. Las actualizaciones futuras pueden incluir cambios que no son compatibles con la versión actual de esta característica. Pruébelo y [háganos llegar su opinión ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+**Importante:** la característica de restauración de dispositivos de {{site.data.keyword.iot_short_notm}} solo está disponible como parte de un programa beta limitado. Las actualizaciones futuras pueden incluir cambios que no son compatibles con la versión actual de esta característica. Pruébela y [denos su opinión ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 Si se suprime un dispositivo por equivocación, puede restaurarlo dentro de un plazo de 14 días. 
 

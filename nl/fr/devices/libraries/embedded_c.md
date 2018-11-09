@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-13"
+  years: 2015, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -22,7 +22,7 @@ Vous pouvez utiliser Embedded C pour générer et personnaliser des terminaux qu
 ## Téléchargement du client et des ressources Embedded C
 {: #embeddedc_client_download}
 
-Pour accéder aux bibliothèques et exemples client Embedded C pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iotf-embeddedc ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} dans GitHub et exécutez les instructions d'installation.
+Pour accéder aux bibliothèques et exemples client Embedded C pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iotf-embeddedc ![*Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} dans GitHub et exécutez les instructions d'installation.
 
 
 ## Dépendances
@@ -30,7 +30,8 @@ Pour accéder aux bibliothèques et exemples client Embedded C pour {{site.data.
 
 |Dépendance |Description|
 |:---|:---|
-|[Bibliothèque Eclipse Paho Embedded C ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Fournit une bibliothèque client MQTT C. Pour plus d'informations, voir [MQTT Client Package -  C for embedded devices ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
+|[Bibliothèque Eclipse Paho Embedded C ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Fournit une bibliothèque client MQTT C. Pour plus d'informations, voir [MQTT Client Package -  C for embedded devices ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
+|[Mbed TLS 2.4.1 ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.4.1.tar.gz){: new_window} | Fournit une bibliothèque SSL pour activer l'authentification basée sur les certificats côté client et le support TLS. Pour plus d'informations, consultez [SSL Library de Mbed TLS ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://tls.mbed.org/ssl-library){: new_window}.|
 
 
 ## Installation
@@ -224,4 +225,4 @@ Pour déconnecter le client et libérer les connexions, exécutez le fragment de
 ## Exemples
 {: #samples}
 
-Un exemple de terminal et le code d'application sont fournis dans [GitHub ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples){: new_window}.
+Un exemple de terminal et le code d'application sont fournis dans [GitHub ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples){: new_window}.

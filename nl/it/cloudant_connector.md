@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-10-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -54,6 +54,7 @@ Se i dati del dispositivo non sono JSON validi o se il formato non è impostato 
 }
 
 ```
+La qualità del servizio (QoS) utilizzata da un dispositivo MQTT per inviare messaggi a {{site.data.keyword.iot_short_notm}} non viene applicata quando i messaggi vengono inviati da {{site.data.keyword.iot_short_notm}} a {{site.data.keyword.cloudant_short_notm}}. In genere, un messaggio viene inviato a {{site.data.keyword.cloudant_short_notm}} una sola volta. Raramente, è possibile che un messaggio venga inviato più di una volta o che non venga inviato affatto. 
 
 ## Prima di cominciare  
 {: #byb}
@@ -63,6 +64,8 @@ Prima di collegare un {{site.data.keyword.cloudant_short_notm}} al tuo servizio 
 - Configura {{site.data.keyword.cloudant_short_notm}} nello stesso spazio {{site.data.keyword.Bluemix_notm}} del tuo {{site.data.keyword.iot_short_notm}} utilizzando il catalogo {{site.data.keyword.Bluemix_notm}}.
 
 Assicurati di disporre dei privilegi da sviluppatore nell'organizzazione {{site.data.keyword.Bluemix_notm}} e di essere registrato tramite {{site.data.keyword.Bluemix_notm}}. Se non sei registrato con {{site.data.keyword.Bluemix_notm}} o non disponi dei privilegi da sviluppatore in questa organizzazione {{site.data.keyword.Bluemix_notm}}, non sarai in grado di autorizzare il bind di {{site.data.keyword.cloudant_short_notm}} e di {{site.data.keyword.iot_short_notm}}.
+
+## Utilizzo del dashboard {{site.data.keyword.iot_short_notm}} per eseguire il bind di un servizio {{site.data.keyword.cloudant_short_notm}} a {{site.data.keyword.iot_short_notm}}
 
 Completa la seguente procedura per collegarti a {{site.data.keyword.cloudant_short_notm}}:
 
@@ -78,12 +81,12 @@ Completa la seguente procedura per collegarti a {{site.data.keyword.cloudant_sho
 
   c. Scegli le opzioni che determinano il nome del database. Il nome del database sarà `iotp_<orgID>_<dbname>_<bucket_name>` dove:
 
- +  * `<orgID>` è il tuo ID dell'organizzazione.
- +  * `<dbname>` è la tua scelta per questa parte di nome del database controllata dal campo `Database Name`.
- +  * `<bucket_name>` è una stringa determinata dalla tua scelta per il campo `Bucket Interval`:
- +    * Per gli intervalli di bucket `day`, `<bucket_name>` sarà `yyyy-mm-dd`.  Ad esempio, `2016-07-06` per gli eventi del 6 luglio 2016.
- +    * Per gli intervalli di bucket `week`  `<bucket_name>` sarà `yyyy-'w'ww` dove `'w'ww` indica un numero della settimana.  Ad esempio, `2016-w03` per gli eventi nella terza settimana del 2016.
- +    * Per gli intervalli di bucket `month`  `<bucket_name>` sarà `yyyy-mm`.  Ad esempio, `2016-07` per gli eventi di luglio 2016.
+   * `<orgID>` è il tuo ID dell'organizzazione.
+   * `<dbname>` è la tua scelta per questa parte di nome del database controllata dal campo `Database Name`.
+   * `<bucket_name>` è una stringa determinata dalla tua scelta per il campo `Bucket Interval`:
+     * Per gli intervalli di bucket `day`, `<bucket_name>` sarà `yyyy-mm-dd`.  Ad esempio, `2016-07-06` per gli eventi del 6 luglio 2016.
+     * Per gli intervalli di bucket `week`,  `<bucket_name>` sarà `yyyy-'w'ww` dove `'w'ww` indica un numero della settimana.  Ad esempio, `2016-w03` per gli eventi nella terza settimana del 2016.
+     * Per gli intervalli di bucket `month`, `<bucket_name>` sarà `yyyy-mm`.  Ad esempio, `2016-07` per gli eventi di luglio 2016.
 
 5. Fai clic su **Authorize**.
 6. Fai clic su **Confirm** nella casella di dialogo dell'autorizzazione.

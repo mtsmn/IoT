@@ -705,17 +705,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.12591"
-     inkscape:cx="313.27761"
-     inkscape:cy="149.6761"
+     inkscape:zoom="2.73"
+     inkscape:cx="346.64913"
+     inkscape:cy="203.01142"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1440"
-     inkscape:window-height="848"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1019"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -1006,7 +1006,7 @@
          id="tspan3619" />
       <tspan
          sodipodi:role="line"
-         id="tspan3621">IBM® Bluemix</tspan>
+         id="tspan3621">IBM® Cloud</tspan>
     </text>
     <path
        inkscape:connector-curvature="0"
@@ -1415,16 +1415,16 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="235.75475"
-       y="636.19281"
+       y="638.19281"
        id="text4681"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="235.75475"
-         y="636.19281"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000191px;font-family:Arial;-inkscape-font-specification:Arial"
+         y="638.19281"
+         style="font-size:12.50000191px"
          id="tspan4687">Authentication via <tspan
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
-   id="tspan3602">IBMid</tspan>.</tspan></text>
+   style="font-weight:bold"
+   id="tspan5809">IBMid</tspan>.</tspan></text>
     <rect
        x="152.64145"
        y="527.10138"
@@ -1525,24 +1525,24 @@
          sodipodi:role="line"
          x="-27.655277"
          y="591.38055"
-         style="font-size:12.50000149px;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+         style="font-size:12.50000191px"
          id="tspan4687-8">Utilisation de <tspan
-   style="-inkscape-font-specification:'Arial Bold';font-family:Arial;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal"
-   id="tspan3604">clés d'API</tspan></tspan><tspan
+   style="font-weight:bold"
+   id="tspan5838"> clés d'API</tspan></tspan><tspan
          sodipodi:role="line"
          x="-27.655277"
          y="607.00555"
-         style="font-size:12.50000149px;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+         style="font-size:12.50000191px"
          id="tspan5834">pour passer des appels REST </tspan><tspan
          sodipodi:role="line"
          x="-27.655277"
          y="622.63055"
-         style="font-size:12.50000149px;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+         style="font-size:12.50000191px"
          id="tspan11042">authentifiés</tspan><tspan
          sodipodi:role="line"
          x="-27.655277"
          y="638.25555"
-         style="font-size:12.50000149px;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+         style="font-size:12.50000191px"
          id="tspan5836" /><tspan
          sodipodi:role="line"
          x="-27.655277"

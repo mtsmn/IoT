@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-10"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -125,7 +125,7 @@ Se stai pianificando di creare un codice dell'applicazione da utilizzare con il 
 
 - Pubblicazione dei comandi
 - Sottoscrizione ai comandi
-- Utilizzo del carattere jolly "qualsiasi" MQTT (+) nei componenti **deviceType** o **appId**
+- Utilizzo del carattere jolly "any" MQTT (+) nei componenti **device_id** o **appId**
 - La connessione MQTT tramite TLS (Transport Layer Security)
 - Applicazioni scalabili
 
@@ -147,7 +147,7 @@ Per abilitare il bilanciamento del carico, verifica che la sottoscrizione dell'a
 {: codeblock}
 
 Dove:
--  Il carattere **A** indica che il client è un applicazione scalabile.
+-  Il carattere **A** indica che il client è un'applicazione scalabile.
 -  *orgId* è l'ID dell'organizzazione a sei caratteri univoco generato quando hai registrato il servizio.
 -  *appId* è un identificativo stringa univoco definito dall'utente per il client. La stringa può contenere solo caratteri alfanumerici (a-z, A-Z, 0-9) e i caratteri speciali trattino (-), carattere di sottolineatura (_), e punto (.).
 

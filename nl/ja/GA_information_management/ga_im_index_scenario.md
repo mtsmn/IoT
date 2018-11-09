@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016, 2017
-lastupdated: "2017-09-01"
+  years: 2016, 2018
+lastupdated: "2018-03-22"
 
 ---
 
@@ -13,38 +13,48 @@ lastupdated: "2017-09-01"
 {:pre: .pre}
 
 
-# ステップバイステップ・ガイド: 共通インターフェースによってデバイスを処理する方法を詳細に示す例
+# ステップバイステップ・ガイド 1: 共通インターフェースによってデバイスを処理する方法を詳細に示す例
 {: #scenario}
 
-以下の情報に基づいてシナリオを作成します。そのシナリオでは、2 つの温度センサーが {{site.data.keyword.iot_full}} にイベントをパブリッシュします。1 つは温度を摂氏で測定するセンサーです。もう 1 つは温度を華氏で測定するセンサーです。それぞれの読み取り値を 1 つの摂氏の読み取り値に対応付けます。それぞれのデバイスから新しい読み取り値がパブリッシュされると、デバイス状態に関連するプロパティーの値が変更されます。{: shortdesc}
+以下の情報に基づいてシナリオを作成します。そのシナリオでは、2 つの温度デバイスが {{site.data.keyword.iot_full}} にイベントをパブリッシュします。 1 つは温度を摂氏で測定するデバイスです。 もう 1 つは温度を華氏で測定するデバイスです。 それぞれの読み取り値を 1 つの摂氏の読み取り値に対応付けます。 それぞれのデバイスから新しい読み取り値がパブリッシュされると、デバイス状態に関連するプロパティーの値が変更されます。
+{: shortdesc}
+
+## 始めに
+
+リソースを作成すると、その[リソース](ga_im_definitions.html#definitions_resources)はドラフト・バージョンとして作成されます。 ドラフト・バージョンは、API を使用して照会、更新、削除を直接実行できる、リソースの作業用コピーです。 REST API を使用するときに、接頭部 **draft/** を使用してドラフト状態のリソースを識別します。 
+
+ドラフト・バージョンおよびアクティブ・バージョンのリソースについて詳しくは、[データ管理の解説](ga_im_definitions.html)を参照してください。
 
 ## 前提条件
 
-{{site.data.keyword.iot_short_notm}} 組織インスタンスとその組織の API キーまたはトークンが必要です。
+{{site.data.keyword.iot_short_notm}} [組織インスタンス](../iotplatform_overview.html#organizations)およびその組織で要求を認証するための API キーと認証トークンが必要です。 
+
+API キーの生成について詳しくは、[API](../reference/api.html) の資料を参照してください。API トークンの生成について詳しくは、[概説のチュートリアル](../getting-started.html)の資料を参照してください。
+
 
 ## このタスクについて
 
-このシナリオでは、2 つのデバイスを構成します。
+このシナリオでは、2 つのデバイスが作成されます。
 
-1 つは *TemperatureSensor1* というデバイスです。このデバイスは、摂氏で測定した温度イベントをパブリッシュします。温度イベントのパブリッシュ先は `iot-2/evt/tevt/fmt/json` というトピックであり、ペイロードは以下のようになります。
+1 つは *tSensor* というデバイスです。 このデバイスは、摂氏で測定した温度イベントをパブリッシュします。 温度イベントのパブリッシュ先は `iot-2/evt/tevt/fmt/json` というトピックであり、ペイロードは以下のようになります。
 ```
 {
   "t" : 34.5
 }
 ```
 
-**注:** イベント ID は *tevt* です。この ID は、このタイプの温度イベントを物理インターフェースに追加する時と、このタイプのインバウンド・イベントに関連するプロパティーを論理インターフェースのプロパティーに対応付けるマッピングを定義する時に必要になります。このシナリオでは、論理インターフェースで **temperature** というプロパティーを定義します。
+**注:** イベント ID は *tevt* です。 この ID は、このタイプの温度イベントを物理インターフェースに追加する時と、このタイプのインバウンド・イベントに関連するプロパティーを論理インターフェースのプロパティーに対応付けるマッピングを定義する時に必要になります。 このシナリオでは、論理インターフェースで **temperature** というプロパティーを定義します。
 
-もう 1 つは *TemperatureSensor2* というデバイスです。このデバイスは、華氏で測定した温度イベントをパブリッシュします。温度イベントのパブリッシュ先は `iot-2/evt/tempevt/fmt/json` というトピックであり、ペイロードは以下のようになります。
+もう 1 つは *tempSensor* というデバイスです。 このデバイスは、華氏で測定した温度イベントをパブリッシュします。 温度イベントのパブリッシュ先は `iot-2/evt/tempevt/fmt/json` というトピックであり、ペイロードは以下のようになります。
 ```
 {
   "temp" : 72.55
 }
 ```
 
-**注:** イベント ID は *tempevt* です。この ID は、このタイプの温度イベントを物理インターフェースに追加する時と、このタイプのインバウンド・イベントに関連するプロパティーを論理インターフェースのプロパティーに対応付けるマッピングを定義する時に必要になります。このシナリオでは、論理インターフェースで **temperature** というプロパティーを定義します。
+**注:** イベント ID は *tempevt* です。 この ID は、このタイプの温度イベントを物理インターフェースに追加する時と、このタイプのインバウンド・イベントに関連するプロパティーを論理インターフェースのプロパティーに対応付けるマッピングを定義する時に必要になります。 このシナリオでは、論理インターフェースで **temperature** というプロパティーを定義します。
 
-論理インターフェースも構成されます。この論理インターフェースでは、このタイプのデバイスの状態を以下の構造で記述します。
+論理インターフェースも構成されます。 この論理インターフェースでは、このタイプのデバイスの状態を以下の構造で記述します。
 ```
 {
   "temperature" : <current temperature value in Celsius>
@@ -52,33 +62,89 @@ lastupdated: "2017-09-01"
 ```
 この場合は、**temperature** に関連する値を処理するアプリケーションを構成します。**t** に関連する値を処理したり、**temp** に関連する値を摂氏に変換してから処理したりするアプリケーションを構成するわけではありません。
 
-![{{site.data.keyword.iot_short_notm}} における温度センサー・デバイスとアプリケーションの間のマッピング。](images/Information)  
+![{{site.data.keyword.iot_short_notm}} における温度センサー・デバイスとアプリケーションの間のマッピング。](../information_management/images/Information)  
 
 以下のサンプル･シナリオを使用して独自のインターフェース環境をセットアップします。
+
+**重要事項:** curl 応答で生成される ID はその他のタスクの完了に必要であるため、この ID を保存しておく必要があります。
+このガイドで使用されるリソース・プロパティー名、値、および ID をリストする表については、[ステップバイステップ・ガイド 1 および 2 の追加情報 - リソースの名前と ID](../information_management/im_id_reference.html) で説明しています。
 
 ## 必要に応じて、デバイス・タイプとデバイスを追加します。
 {: #step14}
 
-このシナリオでは、2 つのデバイス・タイプと 2 つのデバイス・インスタンスを想定します。デバイス・インスタンス *TemperatureSensor1* は、デバイス・タイプ *EnvSensor1* に関連付けます。デバイス・インスタンス *TemperatureSensor2* は、デバイス・タイプ *EnvSensor2* に関連付けます。
+このシナリオでは、2 つのデバイス・タイプと 2 つのデバイス・インスタンスを想定します。 デバイス・インスタンス *tSensor* は、デバイス・タイプ *TSensor* に関連付けます。 デバイス・インスタンス *tempSensor* は、デバイス・タイプ *TempSensor* に関連付けます。 
 
-REST API を使用してデバイス・タイプを追加する方法については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html) の資料を参照してください。
+[{{site.data.keyword.iot_short_notm}} ダッシュボード ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://internetofthings.ibmcloud.com){: new_window} を使用して、または REST API を使用して、デバイス・タイプおよびデバイスを作成できます。{{site.data.keyword.iot_short_notm}} ダッシュボードを使用してデバイス・タイプおよびデバイスを追加する方法について詳しくは、[Web インターフェースを使用したデータ管理の概説](im_ui_flow.html)の資料を参照してください。
 
-## 手順 1: ドラフト・イベント・スキーマ・ファイルを作成する
+REST API を使用して、*TSensor* というデバイス・タイプを作成する例を以下に示します。
+
+```
+curl --request POST \
+    --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types \
+    --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
+    --header 'content-type: application/json' \
+    --data '{"id" : "TSensor", "description" : "The Celsius sensor device type", "metadata": {"tempThresholdMax": 44,
+    "tempThresholdMin": 10}}' \
+ ```
+ 
+ REST API を使用して、*TempSensor* というデバイス・タイプを作成する例を以下に示します。
+
+```
+curl --request POST \
+    --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types \
+    --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
+    --header 'content-type: application/json' \
+    --data '{"id" : "TempSensor", "description" : "The Fahrenheit sensor device type"}' \
+ ```
+
+**注:** デバイス・タイプおよびデバイスの作成時にメタデータを追加できます。このシナリオでは、デバイス・タイプ *TSensor* に以下のメタデータを追加します。
+```
+{
+    "tempThresholdMax": 44,
+    "tempThresholdMin": 10 
+}
+```
+このメタデータは、{{site.data.keyword.iot_short_notm}} が、デバイス状態の *temperature* プロパティーが摂氏 44 度を超える原因となる温度イベントを *tSensor* デバイスから受信するとトリガーされる[ルール](../information_management/im_rules.html)を作成する場合に使用されます。 
+
+
+次に、デバイス・タイプに関連付けられているデバイス・インスタンスを登録する必要があります。以下の例は、REST API を使用して、デバイス・タイプ *TSensor* に関連付けられている *tSensor* と呼ばれるデバイス・インスタンスを登録する方法を示しています。
+```
+    curl --request POST \
+        --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/TSensor/devices \
+        --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
+        --header 'content-type: application/json' \
+        --data '{"deviceId": "tSensor", "authToken": "password"}' \
+```
+
+以下の例は、REST API を使用して、デバイス・タイプ *TempSensor* に関連付けられている *tempSensor* と呼ばれるデバイス・インスタンスを登録する方法を示しています。
+```
+    curl --request POST \
+        --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/TempSensor/devices \
+        --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
+        --header 'content-type: application/json' \
+        --data '{"deviceId": "tempSensor", "authToken": "password"}' \
+```
+
+REST API を使用してデバイス・タイプおよびデバイスを追加する方法について詳しくは、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html){: new_window} の資料を参照してください。
+
+**注:** デバイスが Watson IoT Platform HTTP REST API を介して HTTP 要求を行う場合、ユーザー名とパスワードが必要です。パスワードは、デバイス登録時に自動生成された、または手動で指定した認証トークンの値です。MQTT クライアントを使用している場合は、デバイスの認証トークンをメモしておく必要があります。このトークンは、トピック・ストリングをサブスクライブすることによってデバイスまたはモノの状態を取得する際に必要になります。
+
+## 手順 1: イベント・スキーマ・ファイルを作成する
 {: #step1}
 
-このシナリオでは、2 つのドラフト・イベント・スキーマ・ファイルを作成して、それぞれのインバウンド温度イベントの構造を定義します。
+このシナリオでは、2 つのイベント・スキーマ・ファイルを作成して、それぞれのインバウンド温度イベントの構造を定義します。
 
-*tEventSchema.json* というドラフト・スキーマ・ファイルを作成する例を以下に示します。このファイルでは、温度を摂氏で測定する温度センサーから送られてくるインバウンド・イベントの構造を定義します。
+*tEventSchema.json* というスキーマ・ファイルを作成する例を以下に示します。 このファイルでは、温度を摂氏で測定する温度デバイスから送られてくるインバウンド・イベントの構造を定義します。
 
 ```
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type" : "object",
-  "title" : "EnvSensor1 tEvent Schema",
+  "title" : "tEventSchema",
   "description" : "defines the structure of a temperature event in degrees Celsius",
   "properties" : {
     "t" : {
-          "description" : "temperature in degrees Celsius",
+      "description" : "temperature in degrees Celsius",
       "type" : "number",
       "minimum" : -273.15,
       "default" : 0.0
@@ -87,17 +153,17 @@ REST API を使用してデバイス・タイプを追加する方法につい�
       "required" : ["t"]
     }
   ```
-**ヒント:** 1 つまたは複数のプロパティーを必須に指定するには、"required" パラメーターを使用します。{{site.data.keyword.iot_short_notm}} によってデバイス状態をデバイス・データで更新するには、デバイス・メッセージに必須プロパティーが含まれていなければなりません。必須プロパティーが含まれていないメッセージは、処理されません。   
+**ヒント:** 1 つまたは複数のプロパティーを必須に指定するには、**required** パラメーターを使用します。 {{site.data.keyword.iot_short_notm}} によってデバイス状態をデバイス・データで更新するには、デバイス・メッセージに必須プロパティーが含まれていなければなりません。 必須プロパティーが含まれていないメッセージは、処理されません。   
 
 イベント・タイプのイベント・スキーマ・リソースを作成する時には、*tEventSchema* というスキーマ・ファイル名を使用します。
 
-*tempEventSchema.json* というドラフト・スキーマ・ファイルを作成する例を以下に示します。このファイルでは、温度を華氏で測定する温度センサーから送られてくるインバウンド・イベントの構造を定義します。
+*tempEventSchema.json* というスキーマ・ファイルを作成する例を以下に示します。 このファイルでは、温度を華氏で測定する温度デバイスから送られてくるインバウンド・イベントの構造を定義します。
 
 ```
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type" : "object",
-  "title" : "EnvSensor2 tempEvent Schema",
+  "title" : "tempEventSchema",
   "description" : "defines the structure of a temperature event in degrees Fahrenheit",
   "properties" : {
     "temp" : {
@@ -112,7 +178,7 @@ REST API を使用してデバイス・タイプを追加する方法につい�
   ```
 イベント・タイプのイベント・スキーマ・リソースを作成する時には、*tempEventSchema* というスキーマ・ファイル名を使用します。   
 
-## 手順 2: 特定のイベント・タイプのドラフト・イベント・スキーマ・リソースを作成する
+## 手順 2: イベント・タイプのイベント・スキーマ・リソースを作成する
 {: #step2}
 
 イベント・スキーマ・リソースを作成するには、以下の API を使用します。
@@ -121,17 +187,10 @@ REST API を使用してデバイス・タイプを追加する方法につい�
 POST /draft/schemas
 ```
 
-次のパラメーターが必要です。  
+スキーマ定義ファイルは、マルチパート POST (multipart/form-data) 内で Watson IoT Platform に渡されます。POST の本体には、少なくとも 2 つのパーツが含まれている必要があります。
 
-パラメーター|	説明
-
-------	|	-----  
-name
-|	作成するイベント・スキーマの名前を入力します。
-schemaFile
-|	ローカルのイベント・スキーマ JSON ファイルへのパス。
-
-
+- 1 つは、パーツの本体としてのファイルの実際の内容を含む **schemaFile** という名前のパーツ。
+- もう 1 つは、パーツの本体にあるスキーマ・リソースの名前を定義するストリングを含む **name** という名前のパーツ。
 
 詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Schemas) の資料を参照してください。
 
@@ -145,6 +204,9 @@ curl --request POST \
   --form name=tEventSchema \
   --form 'schemaFile=@"/Users/ANOther/Documents/IoT/DeviceState/deviceStateDemo/setup/schemas/tEventSchema.json"'
 ```
+
+**ヒント:** サンプル許可値 `MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=` は、
+`{API Key}:{authorization token}` という情報で構成されており、Base64 でエンコードされます。
 
 この POST メソッドに対する応答の例を以下に示します。
 
@@ -199,26 +261,17 @@ curl --request POST \
 ```
 イベント・タイプにイベント・スキーマを追加する時には、この POST メソッドへの応答で返されたスキーマ ID *5846cee36522050001db0e0e* が必要になります。
 
-## 手順 3: イベント・スキーマを参照するドラフト・イベント・タイプを作成する
+## 手順 3: イベント・スキーマを参照するイベント・タイプを作成する
 {: #step3}
 
 各イベント・タイプでは、イベント・スキーマ・リソースの作成時に使用した POST メソッドへの応答で返されたスキーマ ID を使用して、該当するイベント・スキーマを参照します。
 
-ドラフト・イベント・タイプを作成するには、以下の API を使用します。
+イベント・タイプを作成するには、以下の API を使用します。
 
 ```
 POST /draft/event/types
 ```
-
-次のパラメーターが必要です。  
-
-パラメーター|	説明
-------	|	-----
-name
-|	作成するイベント・タイプの名前を入力します。
-
-schemaId
-|	イベント・スキーマ・リソース用に作成した ID。
+ドラフト・イベント・タイプは、インバウンド MQTT イベントの構造を定義するスキーマ定義を参照する必要があります。
 
 
 詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Event_Types) の資料を参照してください。
@@ -234,7 +287,7 @@ curl --request POST \
   --data '{"name" : "tEvent", "schemaId" : "5846cd7c6522050001db0e0d"}'
 ```
 
-イベント・タイプにイベント・スキーマを追加する時には、このスキーマ ID *5846cd7c6522050001db0e0d* を使用します。この ID は、イベント・スキーマ・リソース *tEventSchema.json* の作成時に使用した POST メソッドへの応答で返された ID です。
+イベント・タイプにイベント・スキーマを追加する時には、このスキーマ ID *5846cd7c6522050001db0e0d* を使用します。 この ID は、イベント・スキーマ・リソース *tEventSchema.json* の作成時に使用した POST メソッドへの応答で返された ID です。
 
 この POST メソッドに対する応答の例を以下に示します。
 
@@ -265,7 +318,9 @@ curl --request POST \
   --header 'content-type: application/json' \
   --data '{"name" : "tempEvent", "schemaId" : "5846cee36522050001db0e0e"}'
 ```
-イベント・タイプにイベント・スキーマを追加する時には、このスキーマ ID *5846cee36522050001db0e0e* を使用します。この ID は、イベント・スキーマ・リソース *tempEventSchema.json* の作成時に使用した POST メソッドへの応答で返された ID です。この POST メソッドに対する応答の例を以下に示します。
+イベント・タイプにイベント・スキーマを追加する時には、このスキーマ ID *5846cee36522050001db0e0e* を使用します。 この ID は、イベント・スキーマ・リソース *tempEventSchema.json* の作成時に使用した POST メソッドへの応答で返された ID です。
+
+この POST メソッドに対する応答の例を以下に示します。
 
 ```
 {
@@ -283,25 +338,15 @@ curl --request POST \
 }
 ```
 物理インターフェースにイベント・タイプを追加する時には、この POST メソッドへの応答で返されたイベント・タイプ ID *5846d2846522050001db0e10* を使用します。
-## 手順 4: ドラフト物理インターフェースを作成する
+
+## 手順 4: 物理インターフェースを作成する
 {: #step7}
 
-ドラフト物理インターフェースを作成するには、以下の API を使用します。
+物理インターフェースを作成するには、以下の API を使用します。
 
 ```
 POST /draft/physicalinterfaces
 ```
-
-次のパラメーターが必要です。  
-
-パラメーター|	説明
-------	|	-----
-name
-|	作成する物理インターフェースの名前を入力します。
-
-
-
-
 
 詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Physical_Interfaces) の資料を参照してください。
 
@@ -313,8 +358,8 @@ cURL を使用して最初の物理インターフェースを作成する例を
 curl --request POST \
   --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/physicalinterfaces \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json’ \
-  --data '{"name" : "Env sensor physical interface 1"}'
+  --header 'content-type: application/json' \
+  --data '{"name" : "TSensor Physical Interface"}'
 ```
 
 この POST メソッドに対する応答の例を以下に示します。
@@ -326,7 +371,7 @@ curl --request POST \
     "events" : "/api/v0002/draft/physicalinterfaces/5847d1df6522050001db0e1a/events"
   },
   "id" : "5847d1df6522050001db0e1a",
-  "name" : "Env sensor physical interface 1",
+  "name" : "TSensor Physical Interface",
   "version" : "draft",
   "created" : "2016-12-07T09:09:51Z",
   "updated" : "2016-12-07T09:09:51Z",
@@ -343,7 +388,7 @@ curl --request POST \
   --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/physicalinterfaces \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: application/json' \
-  --data '{"name" : "Env sensor physical interface 2"}'
+  --data '{"name" : "TempSensor Physical Interface"}'
 ```
 
 この POST メソッドに対する応答の例を以下に示します。
@@ -355,7 +400,7 @@ curl --request POST \
     "events" : "/api/v0002/draft/physicalinterfaces/5847d1df6522050001db0e1b/events"
   },
   "id" : "5847d1df6522050001db0e1b",
-  "name" : "Env sensor physical interface 2",
+  "name" : "TempSensor Physical Interface",
   "version" : "draft",
   "created" : "2016-12-07T09:19:51Z",
   "updated" : "2016-12-07T09:19:51Z",
@@ -365,7 +410,7 @@ curl --request POST \
 
 華氏で測定する温度イベントを物理インターフェースに追加する時に呼び出す POST メソッドの URL では、この応答で返された物理インターフェース ID *5847d1df6522050001db0e1b* を使用します。   
 
-## 手順 5: ドラフト物理インターフェースにイベント・タイプを追加する
+## 手順 5: 物理インターフェースにイベント・タイプを追加する
 {: #step8}
 
 物理インターフェースにイベント・タイプを追加するには、以下の API を使用します。
@@ -373,15 +418,6 @@ curl --request POST \
 ```
 POST /draft/physicalinterfaces/{physicalInterfaceId}/events
 ```
-
-次のパラメーターが必要です。  
-
-パラメーター|	説明
-------	|	-----
-eventId	|	デバイスのイベント・ペイロードのイベント名を入力します。
-
-eventTypeId	|	イベント・タイプ用に作成した ID。
-
 
 詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Physical_Interfaces) の資料を参照してください。
 
@@ -428,10 +464,10 @@ curl --request POST \
 }
 ```
 
-## 手順 6: ドラフト物理インターフェースを接続するためにドラフト・デバイス・タイプを更新する
+## 手順 6: 物理インターフェースを接続するためにデバイス・タイプを更新する
 {: #step9}
 
-ドラフト・デバイス・タイプを更新するには、以下の API を使用します。
+デバイス・タイプを更新するには、以下の API を使用します。
 
 ```
 POST /draft/device/types/{typeId}/physicalinterface
@@ -442,40 +478,14 @@ POST /draft/device/types/{typeId}/physicalinterface
 
 詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Device_Types) の資料を参照してください。
 
-このシナリオでは、デバイス・タイプ *EnvSensor1* を更新して物理インターフェース *5847d1df6522050001db0e1a* に接続し、デバイス・タイプ *EnvSensor2* を更新して物理インターフェース *5847d1df6522050001db0e1b* に接続します。
+このシナリオでは、デバイス・タイプ *TSensor* を更新して物理インターフェース *5847d1df6522050001db0e1b* に接続し、デバイス・タイプ *TempSensor* を更新して物理インターフェース *5847d1df6522050001db0e1a* に接続します。
 
-cURL を使用してデバイス・タイプ *EnvSensor1* を更新する例を以下に示します。
 
-```
-curl --request POST \
---url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor1/physicalinterface \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{"id" : "5847d1df6522050001db0e1a"}'
-```
-
-この POST メソッドに対する応答の例を以下に示します。
-```
-{
-  "updatedBy" : "a-8x7nmj-9iqt56kfil",
-  "refs" : {
-    "events" : "/api/v0002/draft/physicalinterfaces/5847d1df6522050001db0e1a/events"
-  },
-  "id" : "5847d1df6522050001db0e1a",
-  "name" : "Env sensor physical interface 1",
-  "version" : "draft",
-  "created" : "2016-12-07T09:09:51Z",
-  "updated" : "2016-12-07T09:09:51Z",
-  "createdBy" : "a-8x7nmj-9iqt56kfil"
-}
-```
-物理インターフェースと論理インターフェースを追加する時に、デバイス ID *EnvSensor1* が必要になります。
-
-cURL を使用してデバイス・タイプ *EnvSensor2* を更新する例を以下に示します。
+cURL を使用してデバイス・タイプ *TSensor* を更新する例を以下に示します。
 
 ```
 curl --request POST \
---url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor2/physicalinterface \
+--url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/TSensor/physicalinterface \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: application/json' \
   --data '{"id" : "5847d1df6522050001db0e1b"}'
@@ -490,31 +500,57 @@ curl --request POST \
     "events" : "/api/v0002/draft/physicalinterfaces/5847d1df6522050001db0e1b/events"
   },
   "id" : "5847d1df6522050001db0e1b",
-  "name" : "Env sensor physical interface 2",
+  "name" : "TSensor Physical Interface",
   "version" : "draft",
   "created" : "2016-12-07T09:19:51Z",
   "updated" : "2016-12-07T09:19:51Z",
   "createdBy" : "a-8x7nmj-9iqt56kfil"
 }
 ```
-物理インターフェースと論理インターフェースを追加する時に、デバイス ID *EnvSensor2* が必要になります。
+物理インターフェースと論理インターフェースを追加する時に、デバイス ID *TSensor* が必要になります。
+
+cURL を使用してデバイス・タイプ *TempSensor* を更新する例を以下に示します。
+
+```
+curl --request POST \
+--url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/TempSensor/physicalinterface \
+  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
+  --header 'content-type: application/json' \
+  --data '{"id" : "5847d1df6522050001db0e1a"}'
+```
+
+この POST メソッドに対する応答の例を以下に示します。
+```
+{
+  "updatedBy" : "a-8x7nmj-9iqt56kfil",
+  "refs" : {
+    "events" : "/api/v0002/draft/physicalinterfaces/5847d1df6522050001db0e1a/events"
+  },
+  "id" : "5847d1df6522050001db0e1a",
+  "name" : "TempSensor Physical Interface",
+  "version" : "draft",
+  "created" : "2016-12-07T09:09:51Z",
+  "updated" : "2016-12-07T09:09:51Z",
+  "createdBy" : "a-8x7nmj-9iqt56kfil"
+}
+```
+物理インターフェースと論理インターフェースを追加する時に、デバイス ID *TempSensor* が必要になります。
 
 
-
-## 手順 7: ドラフト論理インターフェース・スキーマ・ファイルを作成する
+## 手順 7: 論理インターフェース・スキーマ・ファイルを作成する
 {: #step4}
 
-*envSensor.json* というドラフト論理インターフェース・スキーマ・ファイルを作成する例を以下に示します。
+*thermometer.json* という論理インターフェース・スキーマ・ファイルを作成する例を以下に示します。
 
 ```
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
     "type" : "object",
-    "title" : "Environment Sensor Schema",
-    "description" : "Schema to represent a canonical environment sensor device",
+    "title" : "thermometerSchema",
+    "description" : "Schema that defines the canonical interface for a thermometer",
     "properties" : {
         "temperature" : {
-           "description" : "temperature in degrees Celsius",
+            "description" : "temperature in degrees Celsius",
             "type" : "number",
             "minimum" : -273.15,
             "default" : 0.0
@@ -524,24 +560,14 @@ curl --request POST \
 }
 ```
 
-## 手順 8: ドラフト論理インターフェース・スキーマ・リソースを作成する
+## 手順 8: 論理インターフェース・スキーマ・リソースを作成する
 {: #step5}
 
-ドラフト論理インターフェース・スキーマ・リソースを作成するには、以下の API を使用します。
+論理インターフェース・スキーマ・リソースを作成するには、以下の API を使用します。
 
 ```
 POST /draft/schemas
 ```
-
-次のパラメーターが必要です。  
-
-パラメーター|	説明
-------	|	-----
-name
-|	作成する論理インターフェース・スキーマの名前を指定します。
-schemaFile
-|	ローカルの論理インターフェース・スキーマ JSON ファイルへのパス。
-
 
 詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Schemas) の資料を参照してください。
 
@@ -552,8 +578,8 @@ curl --request POST \
   --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/schemas \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: multipart/form-data' \
-  --form name=temperatureEventSchema \
-  --form 'schemaFile=@"/Users/ANOther/Documents/IoT/DeviceState/deviceStateDemo/setup/schemas/envSensor.json"'
+  --form name=thermometerSchema \
+  --form 'schemaFile=@"/Users/ANOther/Documents/IoT/DeviceState/deviceStateDemo/setup/schemas/thermometer.json"'
 ```
 
 この POST メソッドに対する応答の例を以下に示します。
@@ -561,13 +587,13 @@ curl --request POST \
 ```
 {
   "created" : "2016-12-06T16:51:14Z",
-  "name" : "temperatureEventSchema",
+  "name" : "thermometerSchema",
   "createdBy" : "a-8x7nmj-9iqt56kfil",
   "updated" : "2016-12-06T16:51:14Z",
   "updatedBy" : "a-8x7nmj-9iqt56kfil",
   "schemaType" : "json-schema",
   "contentType" : "application/octet-stream",
-  "schemaFileName" : "envSensor.json",
+  "schemaFileName" : "thermometer.json",
   "version" : "draft",
   "refs" : {
     "content" : "/api/v0002/draft/schemas/5846ec826522050001db0e11/content"
@@ -577,24 +603,18 @@ curl --request POST \
 ```
 論理インターフェースに論理インターフェース・スキーマを追加する際には、POST メソッドへの応答で返されたスキーマ ID *5846ec826522050001db0e11* を使用します。
 
-## 手順 9: ドラフト論理インターフェース・スキーマを参照するドラフト論理インターフェースを作成する
+## 手順 9: 論理インターフェース・スキーマを参照する論理インターフェースを作成する
 {: #step6}
 
-ドラフト論理インターフェースを作成するには、以下の API を使用します。
+論理インターフェースを作成するには、以下の API を使用します。
 
 ```
 POST /draft/logicalinterfaces
 ```
 
-次のパラメーターが必要です。  
+オプションで、論理インターフェースに対して意味のある別名を指定することができます。別名は、自動生成される論理インターフェース ID を使用する代わりに、デバイスの状態を取得するために使用する API 呼び出しやトピック・ストリング・サブスクリプション内で参照できます。
 
-パラメーター|	説明
-------	|	-----
-name
-|	作成する論理インターフェースの名前を指定します。
-schemaId
-|	論理インターフェース・スキーマ・リソース用に作成した ID。
-
+**注:** 別名は、1 から 36 文字までの長さでなければならず、英数字、ハイフン、ピリオド、下線を含めることができます。別名を 24 文字の 16 進ストリングにすることはできません。 
 
 詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Logical_Interfaces) の資料を参照してください。
 
@@ -607,7 +627,7 @@ curl --request POST \
   --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/logicalinterfaces \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: application/json' \
-  --data '{"name" : "environment sensor interface", "schemaId" : "5846ec826522050001db0e11"}'
+  --data '{"name" : "Thermometer Interface", "alias" : "IThermometer", "schemaId" : "5846ec826522050001db0e11"}'
 ```
 
 この POST メソッドに対する応答の例を以下に示します。
@@ -623,16 +643,17 @@ curl --request POST \
   "updatedBy" : "a-8x7nmj-9iqt56kfil",
   "id" : "5846ed076522050001db0e12",
   "updated" : "2016-12-06T16:53:27Z",
-  "name" : "environment sensor interface",
+  "name" : "Thermometer Interface",
+  "alias" : "IThermometer",
   "version" : "draft"
 }
 ```
-このシナリオでは、デバイス・タイプに論理インターフェースを追加する際に、POST メソッドへの応答で返された論理インターフェース ID *5846ed076522050001db0e12* を使用します。インバウンド・デバイス・イベントを論理インターフェースで定義するプロパティーに対応付ける時にも、この ID を使用します。
+このシナリオでは、デバイス・タイプに論理インターフェースを追加する際に、POST メソッドへの応答で返された論理インターフェース ID *5846ed076522050001db0e12* を使用します。 インバウンド・デバイス・イベントを論理インターフェースで定義するプロパティーに対応付ける時にも、この ID を使用します。 論理インターフェース別名 *IThermometer* を使用して、HTTP REST API を使用するかトピック・ストリングをサブスクライブすることによって、[デバイスの状態を取得](##step13)できます。
 
-## 手順 10: デバイス・タイプにドラフト論理インターフェースを追加する
+## 手順 10: デバイス・タイプに論理インターフェースを追加する
 {: #step10}
 
-デバイス・タイプにドラフト論理インターフェースを追加するには、以下の API を使用します。
+デバイス・タイプに論理インターフェースを追加するには、以下の API を使用します。
 
 ```
 POST /draft/device/types/{typeId}/logicalinterfaces
@@ -641,13 +662,13 @@ POST /draft/device/types/{typeId}/logicalinterfaces
 ここで、*typeId* はデバイス・タイプの名前です。 
 
 詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Device_Types) の資料を参照してください。  
-**注:** このシナリオでは、同じ論理インターフェース *5846ed076522050001db0e12* を *EnvSensor1* および *EnvSensor2* に関連付けます。
+**注:** このシナリオでは、同じ論理インターフェース *5846ed076522050001db0e12* を *TSensor* および *TempSensor* に関連付けます。
 
-cURL を使用して、論理インターフェース・スキーマ ID *5846ec826522050001db0e11* を参照する論理インターフェース *5846ed076522050001db0e12* をデバイス・タイプ *EnvSensor1* に追加する例を以下に示します。
+cURL を使用して、論理スキーマ ID *5846ec826522050001db0e11* に関連する論理インターフェース *5846ed076522050001db0e12* をデバイス・タイプ *TSensor* に追加する例を以下に示します。
 
 ```
 curl --request POST \
---url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor1/logicalinterfaces \
+--url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/TSensor/logicalinterfaces \
 --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
 --header 'content-type: application/json' \
 --data '{"id": "5846ed076522050001db0e12"}'
@@ -663,7 +684,7 @@ curl --request POST \
   "updated" : "2016-12-06T16:53:27Z",
   "updatedBy" : "a-8x7nmj-9iqt56kfil",
   "createdBy" : "a-8x7nmj-9iqt56kfil",
-  "name" : "environment sensor interface",
+  "name" : "Thermometer Interface",
   "version" : "draft",
   "created" : "2016-12-06T16:53:27Z",
   "id" : "5846ed076522050001db0e12",
@@ -671,11 +692,11 @@ curl --request POST \
 }
 ```
 
-cURL を使用して、論理スキーマ ID *5846ec826522050001db0e11* に関連する論理インターフェース *5846ed076522050001db0e12* をデバイス・タイプ *EnvSensor2* に追加する例を以下に示します。
+cURL を使用して、論理インターフェース・スキーマ ID *5846ec826522050001db0e11* を参照する論理インターフェース *5846ed076522050001db0e12* をデバイス・タイプ *TempSensor* に追加する例を以下に示します。
 
 ```
 curl --request POST \
---url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor2/logicalinterfaces \
+--url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/TempSensor/logicalinterfaces \
 --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
 --header 'content-type: application/json' \
 --data '{"id": "5846ed076522050001db0e12"}'
@@ -691,7 +712,7 @@ curl --request POST \
   "updated" : "2016-12-06T16:53:27Z",
   "updatedBy" : "a-8x7nmj-9iqt56kfil",
   "createdBy" : "a-8x7nmj-9iqt56kfil",
-  "name" : "environment sensor interface",
+  "name" : "Thermometer Interface",
   "version" : "draft",
   "created" : "2016-12-06T16:53:27Z",
   "id" : "5846ed076522050001db0e12",
@@ -701,17 +722,17 @@ curl --request POST \
 
 ## 手順 11: インバウンド・イベントのプロパティーを論理インターフェースのプロパティーにマップするためのマッピングを定義する
 {: #step11}  
-**重要:** MQTT クライアント・アプリケーションを使用しており、デバイス状態の更新に関する通知を受信するためにサブスクライブする場合は、マッピングを定義するときに通知設定を構成する必要があります。この方法で通知方式を構成すると、選択された方法で状態変更通知を受信するように各デバイス・タイプが構成されて、複数のデバイス・タイプ間で論理インターフェースを再使用することができます。指定されたトピック・ストリングを MQTT クライアントがサブスクライブするかどうかにかかわりなく、通知方式を定義できます。  
+**重要:** MQTT クライアント・アプリケーションを使用しており、デバイス状態の更新に関する通知を受信するためにサブスクライブする場合は、マッピングを定義するときに通知設定を構成する必要があります。 この方法で通知方式を構成すると、選択された方法で状態変更通知を受信するように各デバイス・タイプが構成されて、複数のデバイス・タイプ間で論理インターフェースを再使用することができます。 指定されたトピック・ストリングを MQTT クライアントがサブスクライブするかどうかにかかわりなく、通知方式を定義できます。  
   
 以下の通知設定を構成できます。  
 
-パラメーター|	説明
+パラメーター	|	説明
 ------	|	-----
 never	|	通知は送信されません。この設定がデフォルトです
 on-every-event	|	デバイス状態が変更されたかどうかにかかわらず、イベントごとに通知が送信されます
-on-state-change	|	イベントの結果としてデバイス状態が変更された場合にのみ、通知が送信されます
+on-state-change	|	イベントの結果としてデバイス状態が変更された場合にのみ、通知が送信されます  
 
-**注:** 通知設定 *never* を選択した場合、アプリケーションはデバイス状態の変更に関する通知をいっさい受信しません。そのため、必要に応じて通知方式 *on-every-event* または *on-state-change* を選択できます。  
+**注:** 通知設定 *never* を選択した場合、アプリケーションはデバイス状態の変更に関する通知をいっさい受信しません。 そのため、必要に応じて通知方式 *on-every-event* または *on-state-change* を選択できます。  
 
 イベントをマップするには、以下の API を使用します。
 
@@ -719,32 +740,23 @@ on-state-change	|	イベントの結果としてデバイス状態が変更さ�
 POST /draft/device/types/{typeId}/mappings
 ```
 
-次のパラメーターが必要です。  
-
-パラメーター|	説明
-------	|	-----
-logicalInterfaceId	|	論理インターフェース用に作成した ID。
-propertyMappings
-|	論理インターフェースに定義されたプロパティーとデバイス・イベント・ペイロードのプロパティーをマップする、有効な JSON 構造。
-オプションで *notificationStrategy* パラメーターを設定できます。  
-
 詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Device_Types) の資料を参照してください。
 
-このシナリオでは、デバイス・タイプ *EnvSensor1* のマッピングを定義して、インバウンド・イベント *tevt* のプロパティー **t** を論理インターフェースのプロパティー **temperature** に対応付けます。また、デバイス・タイプ *EnvSensor2* のマッピングを定義して、インバウンド・イベント *tempevt* のプロパティー **temp** を論理インターフェースのプロパティー **temperature** に対応付けます。通知設定は「on-state-change」に設定されます。 
+このシナリオでは、デバイス・タイプ *TSensor* のマッピングを定義して、インバウンド・イベント *tevt* のプロパティー **t** を論理インターフェースのプロパティー **temperature** に対応付けます。 また、デバイス・タイプ *TempSensor* のマッピングを定義して、インバウンド・イベント *tempevt* のプロパティー **temp** を論理インターフェースのプロパティー **temperature** に対応付けます。  通知設定は「on-state-change」に設定されます。 
 
-cURL を使用してデバイス・タイプ *EnvSensor1* にマッピングを追加する例を以下に示します。
+cURL を使用してデバイス・タイプ *TSensor* にマッピングを追加する例を以下に示します。
 
 ```
 curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor1/mappings \
+  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/TSensor/mappings \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: application/json' \
   --data '{"logicalInterfaceId" : "5846ed076522050001db0e12","notificationStrategy": "on-state-change","propertyMappings" : {              "tevt" : {"temperature" : "$event.t"}}}'
 ```
 
-**重要:** 構造化された [JSON ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")](http://json-schema.org/){:new_window} イベント・ペイロードを使用する場合は、$event.*property* 項目をプロパティーの JSON 構造と正確に一致させてください。例えば、ペイロードが `{"d":{"t":<temp>}}` の場合は、`$event.d.t` を使用します
+**重要:** 構造化された [JSON ![外部リンクのアイコン](../../../icons/launch-glyph.svg "外部リンクのアイコン")](http://json-schema.org/){:new_window} イベント・ペイロードを使用する場合は、$event.*property* 項目をプロパティーの JSON 構造と正確に一致させてください。 例えば、ペイロードが `{"d":{"t":<temp>}}` の場合は、`$event.d.t` を使用します
 
-論理インターフェースの作成時に使用した POST メソッドへの応答で返された論理インターフェース ID *5846ed076522050001db0e12* と、デバイス・タイプ *EnvSensor1* を指定します。
+論理インターフェースの作成時に使用した POST メソッドへの応答で返された論理インターフェース ID *5846ed076522050001db0e12* と、デバイス・タイプ *TSensor* を指定します。
 
 この POST メソッドに対する応答の例を以下に示します。
 
@@ -753,7 +765,7 @@ curl --request POST \
   "logicalInterfaceId": "5846ed076522050001db0e12",
   "propertyMappings": {
     "tevt" : {
-               "temperature" : "$event.t"
+      "temperature" : "$event.t"
     }
   },
   "notificationStrategy": "on-state-change",
@@ -764,17 +776,17 @@ curl --request POST \
   "updatedBy": "a-8x7nmj-9iqt56kfil"
 }
 ```
-cURL を使用してデバイス・タイプ *EnvSensor2* にマッピングを追加する例を以下に示します。
+cURL を使用してデバイス・タイプ *TempSensor* にマッピングを追加する例を以下に示します。
 
 ```
 curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor2/mappings \
+  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/TempSensor/mappings \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: application/json' \
   --data '{"logicalInterfaceId" : "5846ed076522050001db0e12","notificationStrategy": "on-state-change","propertyMappings" : {              "tempevt" : {"temperature" : "($event.temp - 32) / 1.8"}}}'
 ```
 
-論理インターフェースの作成時に使用した POST メソッドへの応答で返された論理インターフェース ID *5846ed076522050001db0e12* と、デバイス・タイプ *EnvSensor2* を指定します。
+論理インターフェースの作成時に使用した POST メソッドへの応答で返された論理インターフェース ID *5846ed076522050001db0e12* と、デバイス・タイプ *TempSensor* を指定します。
 変換を適用して、華氏の測定値を摂氏の測定値に変更します。
 
 
@@ -784,10 +796,10 @@ curl --request POST \
 {
   "logicalInterfaceId": "5846ed076522050001db0e12",
   "propertyMappings": {
-    "tempevt" : {
+     "tempevt" : {
       "temperature" : "($event.temp - 32) / 1.8"
             }
-          },
+  },
   "notificationStrategy": "on-state-change",
   "version": "draft",
   "created": "2017-06-16T15:41:49Z",
@@ -800,9 +812,9 @@ curl --request POST \
 ## 手順 12: 構成を検証してアクティブ化する
 {: #step15}
 
-各ドラフト・デバイス・タイプのデバイス状態の更新に関連した構成を検証してアクティブ化します。この構成には、ドラフト・スキーマ、イベント・タイプ、物理インターフェース、論理インターフェース、マッピングが含まれています。
+各デバイス・タイプのデバイス状態の更新に関連した構成を検証してアクティブ化します。 この構成には、スキーマ、イベント・タイプ、物理インターフェース、論理インターフェース、マッピングが含まれています。
 
-ドラフト・デバイス・タイプ構成を検証してアクティブ化するには、以下の API を使用します。
+デバイス・タイプ構成を検証してアクティブ化するには、以下の API を使用します。
 
 ```
 PATCH /draft/device/types/{typeId}
@@ -812,13 +824,37 @@ PATCH /draft/device/types/{typeId}
 
 詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Device_Types) の資料を参照してください。
 
-このシナリオでは、2 つのドラフト・デバイス・タイプの構成を検証してアクティブ化する必要があります。
+このシナリオでは、2 つのデバイス・タイプの構成を検証してアクティブ化する必要があります。
 
-cURL を使用して、ドラフト・デバイス・タイプ *EnvSensor1* の構成を検証してアクティブ化する例を以下に示します。
+cURL を使用して、デバイス・タイプ *TSensor* の構成を検証してアクティブ化する例を以下に示します。
 
 ```
 curl --request PATCH \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor1 \
+  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/TSensor \
+  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
+  --header 'content-type: application/json' \
+  --data '{
+            "operation" : "activate-configuration"
+          }'
+```
+この PATCH メソッドに対する応答の例を以下に示します。
+
+```
+{
+ "message": "CUDRS0520I: State update configuration for device type 'TSensor' has been successfully submitted for activation",
+  "details": {
+    "id": "CUDRS0520I",
+    "properties": ["TSensor"]
+  },
+"failures": []
+}
+```
+
+cURL を使用して、デバイス・タイプ *TempSensor* の構成を検証してアクティブ化する例を以下に示します。
+
+```
+curl --request PATCH \
+  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/TempSensor \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: application/json' \
   --data '{
@@ -830,31 +866,10 @@ curl --request PATCH \
 
 ```
 {
- "message": "CUDRS0520I: State update configuration for device type 'EnvSensor1' has been successfully submitted for activation",
+ "message": "CUDRS0520I: State update configuration for device type 'TempSensor' has been successfully submitted for activation",
   "details": {
     "id": "CUDRS0520I",
-    "properties": ["EnvSensor1"]
-  },
-"failures": []
-}
-```
-cURL を使用して、ドラフト・デバイス・タイプ *EnvSensor2* の構成を検証してアクティブ化する例を以下に示します。
-
-```
-curl --request PATCH \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/draft/device/types/EnvSensor2 \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{
-            "operation" : "activate-configuration"
-          }'
-```
-この PATCH メソッドに対する応答の例を以下に示します。```
-{
- "message": "CUDRS0520I: State update configuration for device type 'EnvSensor2' has been successfully submitted for activation",
-  "details": {
-    "id": "CUDRS0520I",
-    "properties": ["EnvSensor2"]
+    "properties": ["TempSensor"]
   },
 "failures": []
 }
@@ -863,13 +878,13 @@ curl --request PATCH \
 ## 手順 13: インバウンド・デバイス・イベントをパブリッシュする
 {: #step12}
 
-以下のサンプル・ペイロードを使用して、*TemperatureSensor1* の温度イベントをトピック `iot-2/evt/tevt/fmt/json` にパブリッシュします。
+以下のサンプル・ペイロードを使用して、*tSensor* の温度イベントをトピック `iot-2/evt/tevt/fmt/json` にパブリッシュします。
 ```
 {
   "t" : 34.5
 }
 ```
-以下のサンプル・ペイロードを使用して、*TemperatureSensor2* の温度イベントをトピック `iot-2/evt/tempevt/fmt/json` にパブリッシュします。
+以下のサンプル・ペイロードを使用して、*tempSensor* の温度イベントをトピック `iot-2/evt/tempevt/fmt/json` にパブリッシュします。
 ```
 {
   "temp" : 72.55
@@ -882,7 +897,7 @@ curl --request PATCH \
 ## 手順 14: デバイスの状態を取得する
 {: #step13}
 
-HTTP REST API を使用するか、またはトピックをサブスクライブすることで、デバイスの状態を取得できます。
+HTTP REST API を使用するか、またはトピック・ストリングをサブスクライブすることで、デバイスの状態を取得できます。 論理インターフェースを作成するときに別名を指定した場合、*logicalInterfaceId* パラメーターの代わりにこの別名を使用して、デバイスの状態を取得できます。 
 
 - MQTT クライアント・アプリケーションを使用している場合、以下のトピック・ストリングをサブスクライブできます。  
 ```  
@@ -896,41 +911,23 @@ GET /device/types/{typeId}/devices/{deviceId}/state/{logicalInterfaceId}
 
 次のパラメーターが必要です。  
 
-パラメーター|	説明
+パラメーター	|	説明
 ------	|	-----
-typeId
-|	デバイス・タイプ ID。
+typeId	|	デバイス・タイプ ID。
 deviceId	|	デバイス ID。
-logicalInterfaceId	|	論理インターフェース用に作成した ID。
+logicalInterfaceId または別名|	論理インターフェース用に作成された ID またはユーザー指定の別名。
+
 
 詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html#!/Device_Types) の資料を参照してください。
 
-cURL を使用して *TemperatureSensor1* の現在の状態を取得する例を以下に示します。その際に、作成した論理インターフェースの ID を参照します。
+cURL を使用して *tSensor* の現在の状態を取得する例を以下に示します。その際に、作成した論理インターフェースの ID を参照します。
 ```
 curl --request GET \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor1/devices/TemperatureSensor1/state/5846ed076522050001db0e12 \
+  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/tSensor/devices/tSensor/state/5846ed076522050001db0e12 \
   --header 'authorization: Basic TGS04NXg5dHotKNBzbGZ5eWdiaToxX543S0lKOmE3Tk5Mc0xMu6n='
 ```
 
-この GET メソッドでは、論理インターフェース ID *5846ed076522050001db0e12* を使用しています。この ID は、論理インターフェースの作成時に使用した POST メソッドへの応答で返された ID です。
-この GET メソッドに対する応答の例を以下に示します。
-```
-{
-  "timestamp": "2017-07-03T12:15:50Z",
-  "updated": "2017-07-03T12:15:50Z",
-  "state": {
-    "temperature":34.5
-}
-}
-```
-cURL を使用して *TemperatureSensor2* の現在の状態を取得する例を以下に示します。その際に、作成した論理インターフェースの ID を参照します。
-```
-curl --request GET \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor2/devices/TemperatureSensor2/state/5846ed076522050001db0e12 \
-  --header 'authorization: Basic TGS04NXg5dHotKNBzbGZ5eWdiaToxX543S0lKOmE3Tk5Mc0xMu6n='
-```
-
-この GET メソッドでは、論理インターフェース ID *5846ed076522050001db0e12* を使用しています。この ID は、論理インターフェースの作成時に使用した POST メソッドへの応答で返された ID です。
+この GET メソッドでは、論理インターフェース ID *5846ed076522050001db0e12* を使用しています。 この ID は、論理インターフェースの作成時に使用した POST メソッドへの応答で返された ID です。
 この GET メソッドに対する応答の例を以下に示します。
 ```
 {
@@ -938,11 +935,36 @@ curl --request GET \
   "updated": "2017-07-03T12:15:50Z",
   "state": {
     "temperature":22.5
-}
+  }
 }
 ```
+
+以下の例は、cURL を使用して *tempSensor* の現在の状態を取得する方法を示しています。その際に、作成した論理インターフェースの別名を参照します。
+```
+curl --request GET \
+  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/TempSensor/devices/tempSensor/state/IThermometer \
+  --header 'authorization: Basic TGS04NXg5dHotKNBzbGZ5eWdiaToxX543S0lKOmE3Tk5Mc0xMu6n='
+```
+
+この GET メソッドでは、論理インターフェース別名 *IThermometer* を使用しています。この ID は、論理インターフェースの作成時に使用した POST メソッドへの応答で返された ID です。
+この GET メソッドに対する応答の例を以下に示します。
+```
+{
+  "timestamp": "2017-07-03T12:15:50Z",
+  "updated": "2017-07-03T12:15:50Z",
+  "state": {
+    "temperature":34.5
+  }
+}
+```
+
 返された読み取り値は、華氏ではなく摂氏の温度です。
 
 アプリケーションでは、この正規化データを処理できます。構成で温度のそれぞれの単位を取得したり変換したりする必要はありません。
 
+## 次の手順
+
+このシナリオに基づいて、モノ・タイプとモノ・インスタンスを構成して、データ管理のアセット・ツイン機能を使用することが必要な場合があります。モノの構成について詳しくは、[ステップバイステップ・ガイド 2: 共通インターフェースによってモノを処理する方法を詳細に示す例 (ベータ)](../information_management/im_index_scenario_thing.html) を参照してください。
+
+{{site.data.keyword.iot_short_notm}} が受信するイベントが原因でデバイスまたはモノの状態が変更される場合にアクションをトリガーするために使用できるルールを作成することもできます。ルールの作成について詳しくは、[組み込みルールの作成 (ベータ)](../information_management/im_rules.html) を参照してください。
 

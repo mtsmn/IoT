@@ -2,8 +2,8 @@
 
 copyright:
 
-years: 2017
-lastupdated: "2017-08-07"
+years: 2017, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -30,14 +30,16 @@ lastupdated: "2017-08-07"
 - 设备管理请求的所有记录，包括任何初始请求的历史记录，例如请求的当前状态
 - 定制设备管理请求束的定义
 
+**注：**在服务取消供应后，组织的所有数据将保留 14 天。请在 14 天内联系支持人员以复原组织。
+
 ## 不备份什么类型的数据？
 
 {{site.data.keyword.iot_short_notm}} 中不备份以下类型的数据：
 
 - 设备事件
 - 瞬态消息传递状态，例如，进行中的数据
-- 分析规则和警报配置
 - 作为设备管理请求一部分发送和接收的 MQTT 消息
+<!-- - Analytics rules and alert configuration -->
 
 ## 数据备份的频率及其存储位置？
 
@@ -47,11 +49,11 @@ lastupdated: "2017-08-07"
 
 以下异地位置目前用于数据备份：
 
- 位置| 备份位置
+ 位置|备份位置
 ------------- | -------------
-Bluemix 美国南部（达拉斯）| 华盛顿
-Bluemix 英国（伦敦）| 法兰克福
-Bluemix 德国（法兰克福）| 伦敦
-Bluemix Dedicated | 订购 {{site.data.keyword.iot_short_notm}} Dedicated 时按客户要求
+IBM Cloud 美国南部（达拉斯）|华盛顿
+IBM Cloud 英国（伦敦）|法兰克福
+IBM Cloud 德国（法兰克福）|伦敦
+IBM Cloud Dedicated|订购 {{site.data.keyword.iot_short_notm}} Dedicated 时按客户要求
 
 **注：**将来的位置可能会更改以反映数据隐私法，例如，英国退欧对欧盟数据主权规则的潜在影响。

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-08"
+  years: 2016, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-05-08"
 # {{site.data.keyword.Bluemix_notm}} und {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
 
-{{site.data.keyword.iot_full}} ist ein Service, der in {{site.data.keyword.Bluemix}} zur Verfügung steht. Sie können mithilfe Ihres {{site.data.keyword.Bluemix_notm}}-Dashboards auf das Dashboard Ihrer {{site.data.keyword.iot_short_notm}}-Organisation zugreifen. {{site.data.keyword.iot_short_notm}} kann als {{site.data.keyword.Bluemix_notm}}-Service mit anderen Services integriert werden, die von {{site.data.keyword.Bluemix_notm}} gehostet werden. Details bestimmter Integrationen von Services von Drittanbietern finden Sie in [Externe Services integrieren](extensions/index.html).
+{{site.data.keyword.iot_full}} ist ein Service, der in {{site.data.keyword.Bluemix_notm}} zur Verfügung steht. Sie können mithilfe Ihres {{site.data.keyword.Bluemix_notm}}-Dashboards auf das Dashboard Ihrer {{site.data.keyword.iot_short_notm}}-Organisation zugreifen. {{site.data.keyword.iot_short_notm}} kann als {{site.data.keyword.Bluemix_notm}}-Service mit anderen Services integriert werden, die von {{site.data.keyword.Bluemix_notm}} gehostet werden. Details bestimmter Integrationen von Services von Drittanbietern finden Sie in [Externe Services integrieren](extensions/index.html).
 {:shortdesc}
 
 ## Gemeinsames Funktionieren von {{site.data.keyword.iot_short_notm}} und {{site.data.keyword.Bluemix_notm}}
@@ -30,7 +30,7 @@ Instanzen von {{site.data.keyword.iot_short_notm}} können im {{site.data.keywor
 
 ## {{site.data.keyword.Bluemix_notm}} - Service-Level-Agreement
 
-{{site.data.keyword.Bluemix_notm}} publiziert Nutzungsbedingungen, die sich danach unterscheiden, ob [IBM Cloud Services Agreement ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} oder [IBM International Passport Advantage Agreement ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} auf den Benutzer angewendet wird. Weitere Informationen zum {{site.data.keyword.Bluemix_notm}}-Service-Level-Agreement finden Sie in den [{{site.data.keyword.Bluemix_notm}}-Bedingungen ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.{DomainName}/docs/navigation/notices.html#terms){:new_window}.
+{{site.data.keyword.Bluemix_notm}} publiziert Nutzungsbedingungen, die sich danach unterscheiden, ob [IBM Cloud Services Agreement ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} oder [IBM International Passport Advantage Agreement ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} auf den Benutzer angewendet wird. 
 
 ## {{site.data.keyword.iot_short_notm}} - Preisstruktur
 {: #iot-pricing}

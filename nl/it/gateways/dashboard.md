@@ -2,9 +2,9 @@
 
 copyright:
 
-years: 2015, 2017
+years: 2015, 2018
 
-lastupdated: "2017-03-16"
+lastupdated: "2018-01-11"
 
 
 ---
@@ -97,7 +97,7 @@ Fai riferimento alla ricetta [How to Register Gateways in IBM Watson IoT Platfor
 
 Dopo aver registrato il gateway con {{site.data.keyword.iot_short_notm}} utilizza le informazioni registrate per collegare il gateway a {{site.data.keyword.iot_short_notm}} e inizia a ricevere i dati dai dispositivi collegati al gateway.
 
-Per informazioni sulla connessione de tuo gateway a  {{site.data.keyword.iot_short_notm}}, consulta [Connettività MQTT per i gateway](mqtt.html).
+Per informazioni sulla connessione de tuo gateway a {{site.data.keyword.iot_short_notm}}, consulta [Connettività MQTT per i gateway](mqtt.html).
 
 **Suggerimento:** esiste una serie di ricette disponibili per il collegamento dei dispositivi a {{site.data.keyword.iot_short_notm}}. Per un elenco delle ricette, consulta le
 [Device connection recipes ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window} disponibili in IBM.com.

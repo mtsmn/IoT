@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -14,11 +14,19 @@ lastupdated: "2017-06-16"
 {:tip: .tip}
 
 # Guía 2: Utilización de reglas y acciones básicas en tiempo real
-Utilice las instrucciones de esta guía para configurar un conjunto de reglas básicas y acciones para algunas analíticas en tiempo real de los datos de IoT de su cinta transportadora.{:shortdesc}
+
+**Importante:** estamos lanzando una versión Beta con una nueva forma de definir reglas en los datos del dispositivo IoT como parte de un programa más ambicioso de cambios para mejorar la forma en que {{site.data.keyword.iot_full}} distribuye reglas y acciones.
+
+Para ver más información, consulte la publicación del blog sobre [Un enfoque alternativo a la definición de reglas en datos de IoT ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para empezar a definir sus propias reglas, consulte la documentación sobre [Creación de reglas incorporadas (Beta)](../information_management/im_rules.html).
 
 ## Visión general y objetivo
 {: #overview}  
-Ahora que ha configurado correctamente su cinta transportadora, la ha conectado con {{site.data.keyword.iot_short_notm}} y ha enviado algunos datos, es hora de hacer que esos datos trabajen para usted utilizando reglas y acciones.
+
+Utilice las instrucciones de esta guía para configurar un conjunto de reglas básicas y acciones para algunas analíticas en tiempo real de los datos de IoT de su cinta transportadora.
+
+Ahora que ha configurado correctamente su cinta transportadora, la ha conectado con {{site.data.keyword.iot_full}} y ha enviado algunos datos, es hora de hacer que esos datos trabajen para usted utilizando reglas y acciones.
 
 ![Regla de ejemplo](images/slow_rule.svg "Regla de ejemplo")
 
@@ -45,7 +53,7 @@ Para obtener más información acerca de los sucesos de dispositivo y el formato
 Si ha completado la [Guía 1: Iniciación a {{site.data.keyword.iot_short_notm}} y una cinta transportadora simulada](getting-started-iot-conveyor.html), está listo.  
 {: tip}
 
-## Paso 1: Crear un esquema de mensaje para la aplicación de muestra
+## Paso 1: Crear un esquema de mensaje para la app de muestra
 {: #create_schema}
 
 Para utilizar las propiedades que envía su dispositivo como desencadenante de sus reglas, primero debe asignar estas propiedades a un esquema de mensaje en {{site.data.keyword.Bluemix_notm}}. Para obtener información, consulte [Crear esquemas de tipo de dispositivo](/docs/services/IoT/im_schemas.html#iotrtinsights_task).
@@ -107,7 +115,8 @@ Para ver más información sobre la alerta, consulte los detalles de dispositivo
 
 ## Paso 4: Crear una acción a llevar a cabo cuando se desencadena la regla de RPM
 {: #create_action}
-Además de visualizar una alerta en el panel de control de {{site.data.keyword.iot_short_notm}}, puede crear acciones a llevar a cabo cuando se desencadene una regla, por ejemplo, enviar un correo electrónico al operador para que mire si las rpm de la cinta transportadora son muy bajas. Para obtener más información, consulte [Cloud Analytics](/docs/services/IoT/cloud_analytics.html#shared). Para crear una acción de correo electrónico:
+Además de visualizar una alerta en el panel de control de {{site.data.keyword.iot_short_notm}}, puede crear acciones a llevar a cabo cuando se desencadene una regla, por ejemplo, enviar un correo electrónico al operador para que mire si las rpm de la cinta transportadora son muy bajas. Para obtener más información, consulte [Cloud Analytics](/docs/services/IoT/cloud_analytics.html#shared).
+Para crear una acción de correo electrónico:
 1. En el panel de control de {{site.data.keyword.iot_short}}, vaya a **Reglas**.
 2. Pulse **RPM rule**.
 3. Pulse el mosaico **Nueva acción**.

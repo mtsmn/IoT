@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-20"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -29,7 +29,7 @@ Une passerelle gérée exécute un agent de gestion des terminaux, lequel s'exé
 
 ### Agent de gestion des terminaux
 
-Les terminaux qui se connectent à {{site.data.keyword.iot_short}} indirectement via une passerelle peuvent utiliser différents protocoles de connexion, s'ils sont pris en charge par le terminal passerelle.
+Les terminaux qui se connectent à {{site.data.keyword.iot_short}} indirectement via une passerelle peuvent utiliser différents protocoles de connexion, s'ils sont pris en charge par le terminal de passerelle.
 
 L'instance `ManagedGateway` est un agent de gestion des terminaux qui fournit une liste de méthodes permettant d'effectuer une ou plusieurs actions de gestion des terminaux, telles que la participation à l'activité de gestion des terminaux et la mise à jour de codes d'erreur, de journaux, d'emplacement et de microprogramme ou de terminal.
 
@@ -106,8 +106,8 @@ Le constructeur 1 construit une instance `ManagedGateway` en acceptant une class
 | Propriété     |Description     |
 |----------------|----------------|
 |`Organization-ID` |ID de votre organisation.|
-|`Gateway-Type` |Type de votre terminal passerelle.|
-|`Gateway-ID` |ID du terminal passerelle.|
+|`Gateway-Type` |Type de votre terminal de passerelle.|
+|`Gateway-ID` |ID du terminal de passerelle.|
 |`Authentication-Method`|Méthode d'authentification. La seule méthode prise en charge est "token".|
 |`Authentication-Token`|Jeton de clé d'API.|
 |`auth-key`   |Clé d'API facultative qui est requise lorsque vous affectez la valeur `apikey` au paramètre auth-method.|
@@ -387,7 +387,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 **Remarque** : Un seul gestionnaire peut être ajouté à la bibliothèque, à la fois pour la passerelle et pour les terminaux connectés vers lesquels les demandes de mise à jour ou de téléchargement de microprogramme sont redirigées. L'implémentation doit créer une unité d'exécution ou un pool d'unités d'exécution pour gérer plusieurs demandes de microprogramme à la fois.
 
-Un exemple d'implémentation d'un gestionnaire de pool d'unités d'exécution figure dans le [référentiel GitHub d'exemples de passerelle ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
+Un exemple d'implémentation d'un gestionnaire de pool d'unités d'exécution figure dans le [référentiel GitHub d'exemples de passerelle ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ### Exemple d'implémentation de `downloadFirmware`
 
@@ -401,7 +401,7 @@ Si une erreur se produit lors du téléchargement d'un microprogramme, l'état p
 
 Un exemple d'implémentation de téléchargement de microprogramme est illustré dans l'exemple de code suivant :
 
-**Important :** L'exemple de code fourni n'inclut pas la section de pool d'unités d'exécution. Pour obtenir l'implémentation complète du gestionnaire de microprogramme, voir l'exemple disponible dans le [référentiel GitHub d'exemples de passerelle Java IBM ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
+**Important :** L'exemple de code fourni n'inclut pas la section de pool d'unités d'exécution. Pour obtenir l'implémentation complète du gestionnaire de microprogramme, voir l'exemple disponible dans le [référentiel GitHub d'exemples de passerelle Java IBM ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
@@ -536,7 +536,7 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-La totalité du code est illustrée dans l'exemple `GatewayFirmwareHandlerSample` qui figure dans le [référentiel GitHub d'exemples de passerelle ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
+La totalité du code est illustrée dans l'exemple `GatewayFirmwareHandlerSample` qui figure dans le [référentiel GitHub d'exemples de passerelle ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ### Etape 4 : Ajouter le gestionnaire à `ManagedGateway`
 
@@ -547,7 +547,7 @@ GatewayFirmwareHandlerSample fwHandler = new GatewayFirmwareHandlerSample();
 mgdGateway.addFirmwareHandler(fwHandler);
 ```
 
-Pour plus d'informations sur les actions sur le microprogramme, voir [Demandes de gestion des terminaux ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions){: new_window}.
+Pour plus d'informations sur les actions sur le microprogramme, voir [Demandes de gestion des terminaux ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions){: new_window}.
 
 ## Actions sur les terminaux
 {: #dev_actions}
@@ -592,7 +592,7 @@ public abstract void handleReboot(DeviceAction action);
 public abstract void handleFactoryReset(DeviceAction action);
 ```
 
-**Remarque** : Un seul gestionnaire peut être ajouté à la bibliothèque, à la fois pour la passerelle et pour les terminaux connectés vers lesquels les demandes d'action sur les terminaux sont redirigées. L'implémentation doit créer une unité d'exécution ou un pool d'unités d'exécution pour gérer plusieurs demandes d'action sur les terminaux à la fois. Un exemple d'implémentation de gestionnaire qui utilise un pool d'unités d'exécution est illustré dans le [référentiel GitHub iot-gateway-samples ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window}.
+**Remarque** : Un seul gestionnaire peut être ajouté à la bibliothèque, à la fois pour la passerelle et pour les terminaux connectés vers lesquels les demandes d'action sur les terminaux sont redirigées. L'implémentation doit créer une unité d'exécution ou un pool d'unités d'exécution pour gérer plusieurs demandes d'action sur les terminaux à la fois. Un exemple d'implémentation de gestionnaire qui utilise un pool d'unités d'exécution est illustré dans le [référentiel GitHub iot-gateway-samples ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window}.
 
 ### Exemple d'implémentation de `handleReboot`
 
@@ -619,7 +619,7 @@ public void handleReboot(DeviceAction action) {
 }
 ```
 
-La totalité de l'exemple d'implémentation de gestionnaire qui utilise un pool d'unités d'exécution est illustrée dans le [référentiel GitHub iot-gateway-samples ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window}.
+La totalité de l'exemple d'implémentation de gestionnaire qui utilise un pool d'unités d'exécution est illustrée dans le [référentiel GitHub iot-gateway-samples ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window}.
 
 
 ### Exemple d'implémentation de `handleFactoryReset`
@@ -648,7 +648,7 @@ GatewayActionHandlerSample actionHandler = new GatewayActionHandlerSample();
 mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
-Pour plus d'informations sur les actions sur les terminaux, voir [Demande de gestion des terminaux ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}.
+Pour plus d'informations sur les actions sur les terminaux, voir [Demande de gestion des terminaux ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}.
 
 ## Packages d'extension de gestion des terminaux
 {: #dme}
@@ -841,16 +841,16 @@ public void propertyChange(PropertyChangeEvent evt) {
 }
 ```
 
-Pour plus d'informations sur la mise à jour des attributs de terminal, voir [Demande de gestion des terminaux ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes){: new_window}.
+Pour plus d'informations sur la mise à jour des attributs de terminal, voir [Demande de gestion des terminaux ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes){: new_window}.
 
 ## Exemples
 {: #samples}
 
-Plusieurs exemples sont disponibles pour vous aider à connecter des passerelles et les terminaux situés derrière les passerelles à votre instance de {{site.data.keyword.iot_short_notm}}. Les exemples utilisent la bibliothèque client Java {{site.data.keyword.iot_short_notm}} et figurent dans le [référentiel GitHub d'exemples de passerelle ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window}.
+Plusieurs exemples sont disponibles pour vous aider à connecter des passerelles et les terminaux situés derrière les passerelles à votre instance de {{site.data.keyword.iot_short_notm}}. Les exemples utilisent la bibliothèque client Java {{site.data.keyword.iot_short_notm}} et figurent dans le [référentiel GitHub d'exemples de passerelle ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window}.
 
 ## Recettes
 {: #recipes}
 
-Pour obtenir une recette expliquant comment connecter un terminal Raspberry Pi en tant que passerelle gérée à {{site.data.keyword.iot_short_notm}} et comment gérer les terminaux connectés, voir [Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}.
+Pour obtenir une recette expliquant comment connecter un terminal Raspberry Pi en tant que passerelle gérée à {{site.data.keyword.iot_short_notm}} et comment gérer les terminaux connectés, voir [Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}.
 
 Cette recette explique comment utiliser le protocole de gestion des terminaux de {{site.data.keyword.iot_short_notm}} pour gérer un terminal Arduino Uno à partir d'un terminal Raspberry Pi qui agit en tant que passerelle et comment effectuer des opérations de gestion des terminaux, telles que le réamorçage du terminal ou l'ajout d'un programme d'esquisse.

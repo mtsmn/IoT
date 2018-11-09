@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-13"
+  years: 2017, 2018
+lastupdated: "2018-01-18"
 
 ---
 
@@ -13,23 +13,21 @@ lastupdated: "2017-10-13"
 {:pre: .pre}
 
 
-# Présentation du contrôle d'accès au niveau de la ressource (bêta)
+# Aperçu du contrôle d'accès au niveau de la ressource
 {: #RLAC_overview}
 
 Le contrôle d'accès au niveau de la ressource vous permet de contrôler l'accès des utilisateurs et des clés d'API afin de gérer les terminaux. Vous pouvez utiliser des groupes de ressources pour définir les terminaux d'une organisation que chaque utilisateur ou clé d'API peut gérer. Pour plus d'informations sur la façon de configurer le contrôle d'accès au niveau de la ressource, voir [Configuration du contrôle d'accès au niveau de la ressource](rlac.html#configure_RLAC).
 
-**Important :** La fonction de contrôle d'accès au niveau de la ressource {{site.data.keyword.iot_full}} est disponible uniquement dans le cadre d'un programme bêta limité. Il est possible que des mises à jour ultérieures incluent des modifications incompatibles avec la version en cours de cette fonction. Essayez-la et [dites-nous ce que vous en pensez ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
-
 ## Notions relatives au contrôle d'accès au niveau de la ressource 
 {: #RLAC_concepts}
 
-Les groupes de terminaux font partie des contrôles d'accès au niveau de la ressource pour {{site.data.keyword.iot_short_notm}}. Vous pouvez la fonctionnalité des groupes de terminaux pour gérer le nombre de terminaux accessibles par le personnel en fonction des rôles de chacun. Avant d'implémenter des groupes de terminaux, déterminez le sens et la portée des groupes de terminaux afin d'améliorer l'efficacité de votre solution. 
+Les groupes de terminaux font partie des contrôles d'accès au niveau de la ressource pour {{site.data.keyword.iot_short_notm}}. Vous pouvez utiliser la fonctionnalité des groupes de terminaux pour gérer le nombre de terminaux accessibles par le personnel en fonction des rôles de chacun. Avant d'implémenter des groupes de terminaux, déterminez le sens et la portée des groupes de terminaux afin d'améliorer l'efficacité de votre solution. 
 
 Vous pouvez implémenter des groupes de terminaux dans le cadre de votre solution IoT pour permettre à un utilisateur ou une application d'accéder à un sous-ensemble de terminaux et non à la totalité des terminaux qui sont associés à une organisation. Pour améliorer l'efficacité des groupes de terminaux, utilisez-les lorsqu'une personne doit avoir accès à de nombreux terminaux.
 
 Prenons l'exemple d'une société qui emploie beaucoup de techniciens de maintenance et de personnel d'opérations et qui souhaite implémenter une solution IoT au Royaume-Uni. La société configure un groupe de terminaux pour chacune des 69 villes, 9 groupes de terminaux pour chacune des régions géographiques et un groupe de terminaux pour l'ensemble du Royaume-Uni. Les terminaux sont affectés à ces groupes et les groupes sont affectés à 15 techniciens de maintenance et personnel d'opérations, dont certains possèdent un droit d'accès sur plusieurs groupes. Les utilisateurs responsables d'un ou deux terminaux peuvent continuer à utiliser les applications mobiles et les architectures de l'entreprise qui sont externes à {{site.data.keyword.iot_short_notm}} et viennent en complément de la solution IoT globale.
 
-Vous pouvez poser vos questions sur les groupes de terminaux dans l'espace [Questions in Internet of Things ![External link icon](../../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smartspace/internet-of-things/){: new_window}.
+Vous pouvez poser vos questions sur les groupes de terminaux dans l'espace [Questions in Internet of Things ![Icône de lien externe](../../../icons/launch-glyph.svg "Externl link icon")](https://developer.ibm.com/answers/smartspace/internet-of-things/){: new_window}.
 
 ## Limites du groupe de ressources quant au contrôle d'accès
 
@@ -38,7 +36,7 @@ Des limites de groupe de ressources sont appliquées pour garantir le bon foncti
 Les limites appliquées sont les suivantes :
 
  - 10 groupes de ressources maximum peuvent être affectés à une clé d'API, un utilisateur ou une passerelle.
- - Un groupe de ressources peut 300 ressources maximum.
+ - Un groupe de ressources peut posséder 300 ressources maximum.
  - Une ressource peut appartenir à 10 groupes maximum.
 
 ## Terminologie liée au contrôle d'accès au niveau de la ressource
@@ -58,7 +56,7 @@ Un objet est une entité authentifiée qui demande l'accès à la plateforme, qu
 ### Ressources
 {: #resources}
 
-Une ressource est une entité sur laquelle le sujet effectue une action. Le sujet demande l'accès à la plateforme autorisée pour la ressource. Les terminaux représentent les seules ressources prises en charge dans la version bêta du contrôle d'accès au niveau de la ressource.
+Une ressource est une entité sur laquelle le sujet effectue une action. Le sujet demande l'accès à la plateforme autorisée pour la ressource. 
 
 ### Actions
 {: #actions}
@@ -124,7 +122,7 @@ Lorsque le contrôle au niveau de la ressource est activé, les API liées aux t
 
     GET /api/v0002/device/types/${typeId}
 
-Seul le sous-ensemble de terminaux appartenant aux groupes appropriés est renvoyé. 
+Seul le sous-ensemble de terminaux appartenant aux groupes appropriés est renvoyé.
 
 **Obtenir un terminal**
 
@@ -162,7 +160,7 @@ Renvoie une erreur 404 si le terminal n'est pas accessible par l'appelant.
 
     GET /api/v0002/bulk/devices
 
-Seul le sous-ensemble de terminaux appartenant aux groupes appropriés est renvoyé. 
+Seul le sous-ensemble de terminaux appartenant aux groupes appropriés est renvoyé.
 
 **Supprimer des terminaux**
 
@@ -277,3 +275,9 @@ Renvoie une erreur 404 si le terminal n'est pas accessible par l'appelant.
     GET /api/v0002/device/types/${typeId}/devices/${deviceId}/events/${eventId}
 
 Renvoie une erreur 404 si le terminal n'est pas accessible par l'appelant.
+
+**Obtenir l'interface logique du terminal**
+
+    GET /api/v0002/device/types/{typeId}/devices/{deviceId}/state/{logicalInterfaceId}
+
+Renvoie une erreur 404 si le terminal ne se trouve pas dans le groupe de l'appelant.

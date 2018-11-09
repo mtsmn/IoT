@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -174,7 +174,7 @@ Verwenden Sie zum Initiieren von angepassten Gerätemanagementaktionen den folge
 
 Beim Initiieren einer Anforderung müssen Sie folgende Informationen angeben:
 
-- Die Aktion ``<bundleId>/<actionId>``.
+- Die Aktion ``<bundleId>/<actionId>.``
 - Eine Liste der Geräte, auf denen die Aktion initiiert werden soll, maximal 5000 Geräte.
 - Eine Liste der Parameter, die in der angepassten Aktionsdefinition definiert sind.
 

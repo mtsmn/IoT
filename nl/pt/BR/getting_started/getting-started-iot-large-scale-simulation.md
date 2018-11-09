@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-08"
+  years: 2017, 2018
+lastupdated: "2018-08-18"
 
 ---
 
@@ -13,16 +13,18 @@ lastupdated: "2017-11-08"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guia 4: Simulando um grande número de dispositivos
+# Guia 3: simulando um grande número de dispositivos
 No primeiro guia, você configurou um simulador de dispositivo básico para simular manualmente uma ou mais esteiras transportadoras. Neste guia, expandimos essa simulação, incluindo grandes números de simuladores de auto-execução em seu ambiente para testar a análise e o monitoramento em um ambiente mais realista, com vários dispositivos.
 {:shortdesc}
 
-**Importante:** o aplicativo requer 512 MB de memória, que é mais do que é alocada por padrão e que também excede a quantia disponível para contas de avaliação grátis, incluindo a Conta padrão e a Conta para teste do Bluemix. Os titulares das contas de assinatura e pagamento conforme o uso podem aumentar a memória alocada para 512 MB. Os titulares das contas de avaliação grátis precisam fazer upgrade para uma conta de Assinatura ou Pagamento conforme o uso. Para obter mais informações sobre os tipos de contas do {{site.data.keyword.Bluemix_notm}}, consulte [Tipos de contas](/docs/pricing/index.html#pricing).
+**Importante:** o aplicativo requer 512 MB de memória, que é mais do que o alocado por padrão e que também excede a quantia disponível para contas de avaliação grátis, incluindo a Conta para teste e a Conta padrão do {{site.data.keyword.Bluemix}}. Os titulares das contas de assinatura e pagamento conforme o uso podem aumentar a memória alocada para 512 MB. Os titulares das contas de avaliação grátis precisam fazer upgrade para uma conta de Assinatura ou Pagamento conforme o uso. Para obter mais informações sobre os tipos de contas do {{site.data.keyword.Bluemix_notm}}, consulte [Tipos de contas](/docs/pricing/index.html#pricing).
+
+** Nota: **  O Bluemix é agora IBM Cloud. Veja o [IBM Cloud Blog](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo") para obter mais detalhes.
 
 ## Visão geral e objetivo
 {: #overview}
 
-Neste guia, você configurará um aplicativo {{site.data.keyword.Bluemix_notm}} para simular vários dispositivos de esteira transportadora usando [Node-RED ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://nodered.org){: new_window} "backend".
+Neste guia, você configurará um aplicativo {{site.data.keyword.Bluemix_notm}} para simular vários dispositivos de esteira transportadora usando um "backend" do [Node-RED ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://nodered.org){: new_window}.
 
 O aplicativo contém três fluxos que:   
 1. Criam diversos dispositivos.   
@@ -37,7 +39,7 @@ Ao concluir as instruções que estão neste guia, você:
 - Usará o Cloud Foundry para implementar um aplicativo simulador de dispositivo baseado em Node-RED e ativado por webhook.
 - Usará chamadas API para criar e registrar dispositivos, publicar eventos de dispositivo e excluir dispositivos.
 
-**Importante:** a simulação de grandes números de dispositivos que simultaneamente enviam dados do dispositivo para o {{site.data.keyword.iot_short_notm}} poderá usar uma grande quantidade de dados. É possível usar o painel do {{site.data.keyword.iot_short_notm}} *Uso* para monitorar quantos dados seus dispositivos e aplicativos estão utilizando. As métricas são atualizadas em um intervalo de duas horas.
+**Importante:** a simulação de grandes números de dispositivos que simultaneamente enviam dados do dispositivo para o {{site.data.keyword.iot_full}} poderá usar uma grande quantidade de dados. 
 
 ## Pré-requisito
 {: #prereqs}  
@@ -47,7 +49,7 @@ Você precisará das contas e ferramentas a seguir:
  - Mais de 512 MB de RAM   
  - Mais de 1 GB de cota do disco  
  - Dois serviços disponíveis
-* [Interface da linha de comandos do Cloud Foundry (cf CLI) ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
+* [Cloud Foundry Command Line Interface (cf CLI) ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}  
 Use a CLI do cf para implementar e gerenciar seus aplicativos {{site.data.keyword.Bluemix_notm}}.
 * Opcional: [Git ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}  
 Se você escolhe usar o Git para fazer download das amostras de código, deve-se ter também uma [conta GitHub.com ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com){: new_window}. Também é possível fazer download do código como um arquivo compactado sem uma conta GitHub.com.
@@ -63,10 +65,10 @@ Siga as etapas abaixo para criar e implementar seu aplicativo manualmente.
 
 1. Clone o repositório GitHub do aplicativo de amostra *Lesson4*.  
 Use sua ferramenta git favorita para clonar o repositório a seguir:  
-https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/device-simulator
 Em Shell do Git, use o comando a seguir:
 ```bash
-$ git clone https://github.com/ibm-watson-iot/guide-conveyor-multi-simulator
+Clone de $git https://github.com/ibm-Watson-iot/guide-transporyor/tree/master/device-simulator
 ```
 3. Configure o aplicativo para seu ambiente editando o arquivo manifest.yml.  
 O que editar:
@@ -194,7 +196,7 @@ nome do usuário e senha do Node-RED durante a autenticação básica.
 
 É possível usar a interface de fluxo do Node-RED ou a API de REST do aplicativo para concluir as tarefas a seguir.
 
-### Node-RED  
+### Criando e conectando dispositivos usando o Node-RED  
 Para registrar múltiplos dispositivos:  
 1. Efetue login no {{site.data.keyword.Bluemix_notm}} em:  
 [https://bluemix.net ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net){: new_window}.
@@ -208,13 +210,8 @@ A interface Node-RED é aberta.
 5. Clique em **Acessar o editor de fluxos do Node-RED**.
 6. No editor de fluxo, selecione a guia **Tipo de dispositivo e instância**.
 7. Para registrar cinco dispositivos, clique no nó de injeção rotulado **Registrar 5 dispositivos motorController**.
-8. Verifique se os dispositivos estão registrados.
- 1. Em seu painel {{site.data.keyword.iot_short_notm}}, selecione **Placas** no menu.
- 3. Selecione a placa **Análise centrada no dispositivo**.
- 4. Localize o cartão **Dispositivos que eu cuido**.  
-Os nomes de dispositivos são exibidos.
 
-### API do REST  
+### Criando e conectando dispositivos usando a API de REST  
 Para registrar múltiplos dispositivos:  
 
 1. Faça uma solicitação HTTP POST para a URL a seguir: `ROUTE_URL/rest/devices`  
@@ -240,11 +237,6 @@ configurações nos guias.
     - Opcional: authToken é o token de autorização com o qual os dispositivos serão registrados.
     - Opcional: se chunkSize não for fornecido, será configurado como 500 por padrão. O 'chunksize' deve ser menor que e um fator de numberDevices.
     - deviceName é o padrão para o deviceID para os dispositivos criados.
-2. Verifique se os dispositivos estão registrados.
- 1. Em seu painel {{site.data.keyword.iot_short_notm}}, selecione **Placas** no menu.
- 3. Selecione a placa **Análise centrada no dispositivo**.
- 4. Localize o cartão **Dispositivos que eu cuido**.  
-Os nomes de dispositivos são exibidos.
 
 ## Etapa 4 - Simular eventos de dispositivo
 {: #step4}
@@ -253,19 +245,15 @@ Como os dispositivos simulados são registrados no
 {{site.data.keyword.iot_short_notm}}, agora é possível executar o simulador para
 começar a enviar eventos de dispositivo.
 
-### Node-RED  
+### Simulando eventos de dispositivo usando Node-RED  
 Para enviar eventos de dispositivo:  
 1. No editor de fluxo do Node-RED, selecione a guia **Simular vários dispositivos**.
 7. Para simular cinco dispositivos, clique no nó de injeção que está rotulado como
 **Simular 5 dispositivos**.
-8. Verifique se os dispositivos estão enviando dados.
- 1. Em seu painel {{site.data.keyword.iot_short_notm}}, selecione **Placas** no menu.
- 3. Selecione a placa **Análise centrada no dispositivo**.
- 4. Localize o cartão **Dispositivos que eu cuido**.  
- 5. Selecione um dos dispositivos e verifique se os pontos de dados do dispositivo atualizados que correspondem à mensagem publicada são exibidos no cartão **Propriedades do dispositivo**.  
+ 
 
 
-### API Rest  
+### Simulando eventos de dispositivo usando a API de REST  
 Para enviar eventos de dispositivo:
 
 1. Faça uma solicitação HTTP POST para a URL a seguir: `ROUTE_URL/rest/runtest`  
@@ -285,11 +273,7 @@ Em que:
     - timeInterval é o espaçamento dos eventos em milissegundos.
     - deviceType é o tipo de dispositivo para o qual você criou dispositivos simulados.
     - deviceName é o padrão para o deviceID para os dispositivos criados.
-8. Verifique se os dispositivos estão enviando dados.
- 1. Em seu painel {{site.data.keyword.iot_short_notm}}, selecione **Placas** no menu.
- 3. Selecione a placa **Análise centrada no dispositivo**.
- 4. Localize o cartão **Dispositivos que eu cuido**.  
- 5. Selecione um dos dispositivos e verifique se os pontos de dados do dispositivo atualizados que correspondem à mensagem publicada são exibidos no cartão **Propriedades do dispositivo**.   
+ 
 
 ## Etapa 5 - Excluindo dispositivos
 {: #deleting}
@@ -298,11 +282,7 @@ Em que:
 Para excluir dispositivos:  
 1. No editor de fluxo do Node-RED, selecione a guia **Tipo de dispositivo e instância**.
 2. Para excluir cinco dispositivos, clique no nó de injeção que está rotulado como **Excluir 5 dispositivos**.
-3. Verifique se os dispositivos estão excluídos.
- 1. Em seu painel {{site.data.keyword.iot_short_notm}}, selecione **Placas** no menu.
- 3. Selecione a placa **Análise centrada no dispositivo**.
- 4. Localize o cartão **Dispositivos que eu cuido**.  
- 5. Verifique se os dispositivos não estão mais listados.  
+
 
 
 ### API Rest  
@@ -316,19 +296,13 @@ Exemplo: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevice
 "deviceType":"iot-conveyor-belt",  
 "deviceName":"belt"  
 }</code></pre>
-2. Verifique se os dispositivos estão excluídos.
- 1. Em seu painel {{site.data.keyword.iot_short_notm}}, selecione **Placas** no menu.
- 3. Selecione a placa **Análise centrada no dispositivo**.
- 4. Localize o cartão **Dispositivos que eu cuido**.  
- 5. Verifique se os dispositivos não estão mais listados.  
+  
 
 
 ## O que Vem a Seguir?
 {: @whats_next}  
 Vá para outro tópico do seu interesse:
-- [Guia 2: Usando regras e ações básicas em tempo real](getting-started-iot-rules.html)  
-Agora que você configurou com êxito sua esteira transportadora, a conectou com {{site.data.keyword.iot_short_notm}} e enviou alguns dados, é hora de fazer esses dados trabalharem por você usando regras e ações.
-- [Guia 3: monitorando seus dados do dispositivo](getting-started-iot-monitoring.html)  
+- [ Guia 2: Monitorando os dados do dispositivo ](getting-started-iot-monitoring.html)  
 Agora que você conectou um ou mais dispositivos e começou a fazer bom uso dos dados do dispositivo, é hora de começar a monitorar uma coleção de dispositivos.
 - [Saiba mais sobre a {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [Saiba mais sobre APIs de {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/reference/api.html){:new_window}

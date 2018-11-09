@@ -15,7 +15,7 @@ lastupdated: "2017-12-21"
 # Initiation à {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
 
-{{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} fournit un kit d'outils polyvalent comportant des terminaux passerelle, la gestion des terminaux et un accès puissant aux applications. {{site.data.keyword.iot_short_notm}} vous permet de collecter des données relatives à des terminaux connectés et d'effectuer des analyses sur des données temps réel à partir de votre organisation.
+{{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} fournit un kit d'outils polyvalent comportant des terminaux de passerelle, la gestion des terminaux et un accès puissant aux applications. {{site.data.keyword.iot_short_notm}} vous permet de collecter des données relatives à des terminaux connectés et d'effectuer des analyses sur des données temps réel à partir de votre organisation.
 {:shortdesc}
 
 ## Avant de commencer
@@ -40,9 +40,9 @@ Pour être rapidement opérationnel avec le service, examinez les options suivan
 
    |   Le service est déployé | Le service n'est pas déployé
   ------------- | -------------
-  **J'ai un terminal à connecter** | [Connectez votre terminal à {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Regardez la connexion de terminal dans la démonstration [Play organization demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
+  **J'ai un terminal à connecter** | [Connectez votre terminal à {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Regardez la connexion de terminal dans la démonstration [Play organization demo ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
   **Je n'ai aucun terminal à connecter** | [Créez et connectez un simulateur de terminal Node-RED](nodereddevice_sample.html){:new_window}. | Commencez à utiliser [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html).
-Pour plus d'informations sur la connexion de types de terminaux spécifiques à {{site.data.keyword.iot_short_notm}}, voir les [recettes developerWorks ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
+Pour plus d'informations sur la connexion de types de terminal spécifiques à {{site.data.keyword.iot_short_notm}}, voir les [recettes developerWorks ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Pour la documentation du développeur de connexion de terminal, voir :
 - [Connectivité MQTT pour les terminaux](devices/mqtt.html)
@@ -57,7 +57,7 @@ Commencez par explorer les données en temps réel envoyées par les terminaux �
 - [Tableaux et cartes](data_visualization.html) pour visualiser vos données de terminal en temps réel
 - [Règles et actions](analytics.html) déclenchées par les données de terminal en temps réel
 
-Pour un exemple montrant comment démarrer rapidement, voir la recette developerWorks [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window}.
+Pour un exemple montrant comment démarrer rapidement, voir la recette developerWorks [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window}.
 
 ## Etape 3 : Créer des applications destinées à consommer vos données de terminal
 {: #develop_applications}

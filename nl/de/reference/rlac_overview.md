@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-13"
+  years: 2017, 2018
+lastupdated: "2018-01-18"
 
 ---
 
@@ -13,12 +13,10 @@ lastupdated: "2017-10-13"
 {:pre: .pre}
 
 
-# Übersicht zur Zugriffssteuerung auf Ressourcenebene (Beta)
+# Übersicht zur Zugriffssteuerung auf Ressourcenebene
 {: #RLAC_overview}
 
 Die Zugriffssteuerung auf Ressourcenebene ermöglicht Ihnen die Steuerung des Zugriffs von Benutzern und API-Schlüsseln zur Verwaltung von Geräten. Sie können Ressourcengruppen verwenden, um die Geräte in einer Organisation anzugeben, die von den einzelnen Benutzern oder API-Schlüsseln verwaltet werden können. Weitere Informationen zur Vorgehensweise bei der Konfiguration der Zugriffssteuerung auf Ressourcenebene finden Sie in [Zugriffssteuerung auf Ressourcenebene konfigurieren](rlac.html#configure_RLAC).
-
-**Wichtig:** Die {{site.data.keyword.iot_full}}-Funktion für die Zugriffssteuerung auf Ressourcenebene steht nur als Bestandteil eines eingeschränkten Betaprogramms zur Verfügung. Zukünftige Aktualisierungen enthalten möglicherweise Änderungen, die mit der aktuellen Version dieser Funktion nicht kompatibel sind. Starten Sie einen Versuch und [senden Sie uns Ihren Erfahrungsbericht ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Konzepte der Zugriffssteuerung auf Ressourcenebene 
 {: #RLAC_concepts}
@@ -58,7 +56,7 @@ Bei einem Subjekt handelt es sich um eine authentifizierte Entität, die Zugriff
 ### Ressourcen
 {: #resources}
 
-Eine Ressource ist eine Entität, für die ein Subjekt eine bestimmte Aktion ausführt. Das Subjekt fordert den berechtigten Plattformzugriff für die Ressource an. Geräte sind die einzigen Ressourcen, die in der Betaversion der Zugriffssteuerung auf Ressourcenebene unterstützt werden.
+Eine Ressource ist eine Entität, für die ein Subjekt eine bestimmte Aktion ausführt. Das Subjekt fordert den berechtigten Plattformzugriff für die Ressource an. 
 
 ### Aktionen
 {: #actions}
@@ -277,3 +275,9 @@ Das System gibt einen Fehler vom Typ '404' zurück, wenn der Aufrufende nicht au
     GET /api/v0002/device/types/${typeId}/devices/${deviceId}/events/${eventId}
 
 Das System gibt einen Fehler vom Typ '404' zurück, wenn der Aufrufende nicht auf das Gerät zugreifen kann.
+
+**Logische Schnittstelle für das Gerät abrufen**
+
+    GET /api/v0002/device/types/{typeId}/devices/{deviceId}/state/{logicalInterfaceId}
+
+Das System gibt einen Fehler vom Typ '404' zurück, wenn sich das Gerät nicht in der Gruppe des Anrufenden befindet.

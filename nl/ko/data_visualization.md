@@ -17,11 +17,11 @@ lastupdated: "2018-03-13"
 {: #boards_and_cards}
 
 
-**중요:** {{site.data.keyword.iot_full}}이 규칙과 조치를 제공하는 방식을 향상하기 위해 폭넓은 프로그램 개선의 일부로 사용자의 IoT 디바이스에서 규칙을 정의하는 새로운 방식에 관한 베타를 출시합니다. 
+**중요:** {{site.data.keyword.iot_full}}이 규칙과 조치를 제공하는 방식을 향상하기 위해 폭넓은 프로그램 개선의 일부로 사용자의 IoT 디바이스에서 규칙을 정의하는 새로운 방식에 관한 베타를 출시합니다.
 
-더 자세히 알아보려면 [IoT 데이터에서 규칙 정의를 위한 다른 접근 방법 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window} 블로그 게시물을 확인하십시오. 
+더 자세히 알아보려면 [IoT 데이터에서 규칙 정의를 위한 다른 접근 방법 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window} 블로그 게시물을 확인하십시오.
 
-자체 규칙 정의를 시작하려면 [임베디드 규칙 작성(베타)](information_management/im_rules.html) 문서를 참조하십시오. 
+자체 규칙 정의를 시작하려면 [임베디드 규칙 작성(베타)](information_management/im_rules.html) 문서를 참조하십시오.
 
 ## 보드 및 카드 정보
 

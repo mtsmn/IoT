@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-09-18"
 ---
 
@@ -24,7 +24,7 @@ Vous pouvez utiliser {{site.data.keyword.iot_full}} avec Watson Analytics (WA) �
 
 Ce guide présente les étapes détaillées du processus de visualisation des données d'événement du terminal {{site.data.keyword.iot_short_notm}} à l'aide de l'outil d'analyse Watson Analytics (WA).
 
-Les données du terminal envoyées à {{site.data.keyword.iot_short_notm}} peuvent être collectées et stockées dans {{site.data.keyword.Bluemix}} à l'aide du service {{site.data.keyword.cloudantfull}} NoSQL DB. Pour collecter les données, vous devez d'abord connecter {{site.data.keyword.iot_short_notm}} au service {{site.data.keyword.cloudant_short_notm}}. Une fois les données collectées, exportez-les dans un fichier CSV. Téléchargez ce fichier dans WA pour voir et analyser les données de terminal. Les données de terminal sont stockées dans des bases de données {{site.data.keyword.cloudant_short_notm}} quotidiennes, hebdomadaires ou mensuelles en fonction de l'intervalle configuré.
+Les données du terminal envoyées à {{site.data.keyword.iot_short_notm}} peuvent être collectées et stockées dans {{site.data.keyword.Bluemix}} à l'aide du service {{site.data.keyword.cloudantfull}}. Pour collecter les données, vous devez d'abord connecter {{site.data.keyword.iot_short_notm}} au service {{site.data.keyword.cloudant_short_notm}}. Une fois les données collectées, exportez-les dans un fichier CSV. Téléchargez ce fichier dans WA pour voir et analyser les données de terminal. Les données de terminal sont stockées dans des bases de données {{site.data.keyword.cloudant_short_notm}} quotidiennes, hebdomadaires ou mensuelles en fonction de l'intervalle configuré.
 
 ![Présentation de l'utilisation de WA à des fins d'analyse de données](images/WA_overview.png)
 
@@ -37,8 +37,8 @@ Dans le cadre de ce guide, vous allez apprendre :
 
 ## Prérequis
 
-Pour exécuter les étapes ci-dessous, vous devez avoir accès à [{{site.data.keyword.iot_short_notm}} ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window} avec [Cloudant NoSQL DB ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/cloudant-nosql-db
-){: new_window}, ainsi qu'à [Watson Analytics ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson-analytics){: new_window}.
+Pour exécuter les étapes ci-dessous, vous devez avoir accès à [{{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window} avec [Cloudant NoSQL DB ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/catalog/services/cloudant-nosql-db
+){: new_window}, ainsi qu'à [Watson Analytics ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/watson-analytics){: new_window}.
 
 
 ## Etape 1. Installation du simulateur
@@ -56,10 +56,10 @@ Pour effectuer une analyse sérieuse, vous devez disposer de données pertinente
 
 Pour simuler des données de détection réelles avec des données de votre organisation à l'aide de Weather Sensors, vous devez d'abord installer le simulateur. Ces étapes impliquent que vous disposez déjà d'une instance de {{site.data.keyword.iot_short_notm}} en cours d'exécution.
 
-1. [Générez la clé d'API et le jeton requis pour exécuter le simulateur.![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#api-key){: new_window}
-2. [Déployez l'application Web du simulateur Weather Sensors ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window} et suivez la procédure détaillée.
+1. [Générez la clé d'API et le jeton requis pour exécuter le simulateur.![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#api-key){: new_window}
+2. [Déployez l'application Web du simulateur Weather Sensors ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window} et suivez la procédure détaillée.
 
-   Pour en savoir plus sur Weather Sensors, voir le [guide du simulateur Weather Sensors ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
+   Pour en savoir plus sur Weather Sensors, voir le [guide du simulateur Weather Sensors ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
 3. Passez à l'[Etape 2. Configuration du connecteur de base de données](#WA_config_db).
 
 
@@ -68,10 +68,10 @@ Pour simuler des données de détection réelles avec des données de votre orga
 
 Pour simuler des données de détection réelles avec des données de votre organisation à l'aide de Weather Sensors, vous devez d'abord installer le simulateur. Ces étapes incluent les instructions de création d'une instance {{site.data.keyword.iot_short_notm}} avec le simulateur.
 
-1. [Déployez l'application Web du simulateur Weather Sensors avec une instance de {{site.data.keyword.iot_short_notm}} ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window} et suivez la procédure détaillée.
+1. [Déployez l'application Web du simulateur Weather Sensors avec une instance de {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window} et suivez la procédure détaillée.
 
-   Pour en savoir plus sur Weather Sensors, voir le [guide du simulateur Weather Sensors ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
-2. Attendez que le déploiement soit terminé et accédez au tableau de bord Bluemix.
+   Pour en savoir plus sur Weather Sensors, voir le [guide du simulateur Weather Sensors ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
+2. Attendez que le déploiement soit terminé puis accédez au tableau de bord IBM Cloud.
 3. Lancez le service {{site.data.keyword.iot_short_notm}} "wiotp-for-weather-sensors-simulator" qui a été créé par le processus de déploiement.
 4. Passez à l'[Etape 2. Configuration du connecteur de base de données](#WA_config_db).
 
@@ -81,7 +81,7 @@ Pour simuler des données de détection réelles avec des données de votre orga
 
 Pour simuler les événements de données de capteur en temps réel sur vos organisations à l'aide d'un fichier CSV prédéfini :
 
-1. [Téléchargez le fichier CSV Cloudant ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator/releases/download/v1.0/cloudant.csv){: new_window}.
+1. [Téléchargez le fichier CSV Cloudant ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator/releases/download/v1.0/cloudant.csv){: new_window}.
 2. Passez à l'[Etape 5. Configuration de WA et visualisation des données](#WA_import_data).
 
 
@@ -91,12 +91,12 @@ Pour simuler les événements de données de capteur en temps réel sur vos orga
 Pour utiliser {{site.data.keyword.cloudant_short_notm}} avec Watson Analytics, vous devez configurer le stockage de données de la plateforme de manière à utiliser la base de données Cloudant NoSQL en tant que service d'historique.
 
 1. Sur le tableau de bord {{site.data.keyword.cloudant_short_notm}}, cliquez sur **Extensions** dans la barre de navigation.
-2. Sous **Stockage des données d'historique**, cliquez sur **Configurer**. La section **Configuration du stockage des données d'historique** affiche la liste de tous les services Cloudant NoSQL DB qui sont disponibles au sein du même espace Bluemix que celui de {{site.data.keyword.cloudant_short_notm}}.
+2. Sous **Stockage des données d'historique**, cliquez sur **Configurer**. La section **Configuration du stockage des données d'historique** affiche la liste de tous les services Cloudant NoSQL DB qui sont disponibles au sein du même espace IBM Cloud que celui de {{site.data.keyword.cloudant_short_notm}}.
 3. Sélectionnez le service Cloudant NoSQL DB que vous souhaitez connecter.
 4. Spécifiez les options de configuration Cloudant NoSQL DB suivantes :
   - Intervalle = Jour
   - Fuseau horaire = Temps universel coordonné
-  - Nom de la base de données = Valeur par défaut 
+  - Nom de la base de données = Valeur par défaut
 5. Cliquez sur **Terminé** et confirmez l'autorisation de connexion au service Cloudant. Assurez-vous que les fenêtres en incrustation sont activées dans votre navigateur pour pouvoir accéder à la fenêtre de confirmation. Une fois que vous avez correctement configuré la base de données Cloudant NoSQL, le statut du stockage de données d'historique devient Configuré et les données du terminal sont stockées dans la base de données {{site.data.keyword.cloudant_short_notm}} NoSQL.
 6. Passez à l'[Etape 3. Exécution du simulateur](#run_simulator).
 
@@ -159,6 +159,7 @@ Pour exporter la base de données Cloudant au format CSV :
    https://{cloudant service id}-bluemix.cloudant.com/{dbName}/_design/iotp/_list/csv/by-date?include_docs=true
 ```
    L'ID de service Cloudant et le nom de base de données doivent être modifiés selon vos propres valeurs. L'ID de service Cloudant peut être copié à partir de l'URL du tableau de bord de gestion Cloudant.
+
    **Exemple :**
    ```
    https://ccf73725-b617-4f3e-8a7e-f5fb09569af4-bluemix.cloudant.com/iotp_115ccv_default_2017-08-23/_design/iotp/_list/csv/by-date?include_docs=true
@@ -206,11 +207,11 @@ Dans cette section, vous pourrez en savoir plus sur la population des terminaux 
 1. Combien de terminaux ont été signalés ?
 2. Quelle est la répartition des terminaux par type de terminal ?
 3. Combien un terminal possède-t-il de rapports ?
-4. Combien de rapports ont été envoyés par chaque terminal ?
+4. Combien de rapports ont été envoyés par terminal ?
 
 **Combien de terminaux ont été signalés ?**
 
-Dans cet exemple, nous allons comptabiliser le nombre de terminaux ayant été fait l'objet d'un rapport au cours de l'intervalle donné, afin de savoir si les terminaux ont bien été signalés comme prévu. Pour effectuer cette analyse, copiez-collez ou saisissez la question suivante dans WA :
+Dans cet exemple, nous allons comptabiliser le nombre de terminaux ayant fait l'objet d'un rapport au cours de l'intervalle donné, afin de savoir si les terminaux ont bien été signalés comme prévu. Pour effectuer cette analyse, copiez-collez ou saisissez la question suivante dans WA :
 
 *"Combien existe-t-il d'ID de terminaux ?"*
 
@@ -235,7 +236,7 @@ Pour visualiser ces données sous forme de graphique circulaire, cliquez sur l'i
 
 **Combien un terminal possède-t-il de rapports ?**
 
-Dans cet exemple, nous allons calculer le nombre de rapports ayant été générés par un terminal pour détecter les conditions réseaux et autres anomalies liées aux terminaux. Pour effectuer cette analyse, copiez-collez ou saisissez la question suivante dans WA :
+Dans cet exemple, nous allons calculer le nombre de rapports ayant été générés par un même terminal pour détecter les conditions réseaux et autres anomalies liées aux terminaux. Pour effectuer cette analyse, copiez-collez ou saisissez la question suivante dans WA :
 
 *"Combien y-a-t-il de lignes ? Avec application du filtre deviceId : Ahuza"*
 
@@ -248,7 +249,7 @@ Le résultat ci-dessous indique qu'il y a 25 lignes ou que 25 rapports ont été
 
 **Combien de rapports ont été générés par chacun des différents terminaux ?**
 
-Dans cet exemple, nous allons comparer le niveau d'activité des terminaux en fonction du nombre de rapports ayant été envoyés par chaque terminal au cours de l'intervalle spécifié. Pour effectuer cette analyse, copiez-collez ou saisissez la question suivante dans WA :
+Dans cet exemple, nous allons comparer le niveau d'activité des terminaux en fonction du nombre de rapports ayant été envoyés par chacun des terminaux au cours de l'intervalle spécifié. Pour effectuer cette analyse, copiez-collez ou saisissez la question suivante dans WA :
 
 *"Quelle est la répartition des lignes par ID de terminal ?"*
 
@@ -268,7 +269,7 @@ Dans cette section, nous allons en savoir plus sur les données de capteur réca
 
 **Quelles sont les valeurs Moyenne/Min/Max de toutes les valeurs de capteur rapportées ?**
 
-Dans cet exemple, nous allons résumer les paramètres numériques rapportés par tous les terminaux d'un certain type sous forme de tableau. A partir de ce tableau, nous pourrons ensuite en savaoir davantage sur la plage des valeurs relevées dans l'environnement afin d'avoir une perspective plus large des données analysées.
+Dans cet exemple, nous allons résumer les paramètres numériques rapportés par tous les terminaux d'un certain type sous forme de tableau. A partir de ce tableau, nous pourrons ensuite en savoir davantage sur la plage des valeurs relevées dans l'environnement afin d'avoir une perspective plus large des données analysées.
 
 Cette visualisation peut être générée manuellement en suivant les étapes ci-dessous :
 
@@ -289,7 +290,7 @@ Le résultat ci-dessous illustre la plage de valeurs :
 
 **Puis-je afficher un histogramme de la sortie d'un capteur de terminal ?**
 
-Dans cet exemple, nous allons évaluer le comportement d'un capteur sur tous les terminaux d'un certain type, en identifiant la distribution des avaleurs qui sont analysées dans l'environnement. Nous pourrons nous servir de cette visualisation pour en savoir plus sur l'environnement qui est analysé par les capteurs, ainsi que sur les limites liées aux capteurs. Pour effectuer cette analyse, copiez-collez ou saisissez la question suivante dans WA :
+Dans cet exemple, nous allons évaluer le comportement d'un capteur sur tous les terminaux d'un certain type, en identifiant la distribution des valeurs qui sont analysées dans l'environnement. Nous pourrons nous servir de cette visualisation pour en savoir plus sur l'environnement qui est analysé par les capteurs, ainsi que sur les limites liées aux capteurs. Pour effectuer cette analyse, copiez-collez ou saisissez la question suivante dans WA :
 
 *"Quelle est la répartition des lignes par température ?"*
 
@@ -394,7 +395,7 @@ Vous pouvez utiliser la case **Multiplier** en dessous du graphique et choisir l
 
 Dans cet exemple, nous allons afficher la tendance de deux capteurs de terminaux afin de mieux appréhender les changements d'environnement dans le temps. Pour effectuer cette analyse, copiez-collez ou saisissez la question suivante dans WA :
 
-*"Quelle est la tendance de NO2 et NOX dans le temps par ID de terminal ? Avec application du filtre deviceId : Ahuza"*
+*"Quelle est la tendance de NO2 et NOX dans le temps par ID de terminal ?  Avec application du filtre deviceId : Ahuza"*
 
 Le résultat ci-dessous illustre la tendance des deux capteurs de terminal au fil du temps :
 
@@ -415,6 +416,6 @@ Le résultat ci-dessous affiche la relation entre les deux capteurs d'un termina
 ## Etape suivante ?
 
 Pour plus d'informations sur WA, voir les ressources suivantes :
-- [Watson Analytics Developer Center ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/watson-analytics/){: new_window}
-- [Watson Analytics community ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/communities/analytics/watson-analytics/){: new_window}
-- [Watson Analytics forum ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://community.watsonanalytics.com/discussions/spaces/15/view.html){: new_window}
+- [Watson Analytics Developer Center ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/watson-analytics/){: new_window}
+- [Watson Analytics community ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/communities/analytics/watson-analytics/){: new_window}
+- [Watson Analytics forum ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://community.watsonanalytics.com/discussions/spaces/15/view.html){: new_window}

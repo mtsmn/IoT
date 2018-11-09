@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-16"
+  years: 2016, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -23,7 +23,7 @@ Las tablas muestran niveles de acceso para:
 <!-- [Historian Operations](#app-historian) -->
 - [Operaciones de organización](#app-org-ops)
 - [Operaciones de control de acceso](#app-access-ops)
-- [Operaciones analíticas](#app-analytics-ops)
+<!-- - [Analytics Operations](#app-analytics-ops) -->
 - [Operaciones de terceros](#app-third-party)  
 <!-- - [Risk Management Operations](#app-risk-mgt) -->
 
@@ -34,7 +34,7 @@ Las tablas muestran niveles de acceso para:
 
 Operaciones de dispositivo ||| Roles de aplicación||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo**| **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
+           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo** | **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
 Crear, actualizar o suprimir dispositivos|X|X|X|-|-|-
 Ver dispositivos|X|X|X|X|X|-
 Activar dispositivo|X|X|X|-|-|-
@@ -55,22 +55,22 @@ Ver los registros de diagnóstico|X|X|X|-|-|-
 
 Operaciones de registro ||| Roles de aplicación||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo**| **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
-Ver registros de servidor|X|X|X|-|-|-
+           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo** | **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
+Ver los registros del servidor|X|X|X|-|-|-
 
 ### Operaciones de memoria caché {: #app-cache-ops}
 
 Operaciones de memoria caché ||| Roles de aplicación||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo**| **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
-Ver datos activos (memoria caché de sucesos)|X|X|X|X|X|X
+           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo** | **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
+Ver datos en tiempo real (memoria caché de sucesos)|X|X|X|X|X|X
 Gestionar datos en tiempo real (memoria caché de sucesos)|X|X|X|X|X|X
 
 ### Operaciones de organización {: #app-org-ops}
 
 Operaciones de organización ||| Roles de aplicación||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo**| **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
+           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo** | **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
 Configurar parámetros de almacenamiento|-|-|-|-|-|-
 Configurar proveedor de autenticación|-|-|-|-|-|-
 Crear, ver, actualizar o suprimir la configuración del correo|-|-|-|-|-|-
@@ -89,8 +89,8 @@ Ver información de uso de la organización|X|X|-|-|-|-
 
 Operaciones de control de acceso ||| Roles de aplicación||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo**| **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
-Ver propiedades de usuarios, incluidos los derechos de acceso|X|X|-|-|-|-
+           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo** | **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
+Ver propiedades de los usuarios, incluidos los derechos de acceso|X|X|-|-|-|-
 Ver propiedades de los propios usuarios, incluidos los derechos de acceso|-|-|-|-|-|-
 Gestionar usuarios, incluidos los derechos de acceso|-|X|-|-|-|-
 Ver las propiedades de claves de API, incluidos los derechos de acceso|X|X|-|-|-|-
@@ -103,25 +103,23 @@ Ver roles|X|X|-|-|-|-
 Crear, actualizar, suprimir roles personalizados|-|X|-|-|-|-
 Ver operaciones *|X|X|-|-|-|-
 
-### Operaciones analíticas {: #app-analytics-ops}
-
-Operaciones analíticas ||| Roles de aplicación||||
-:--------: | -------------|-------------|---------------|-----|---
-           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo**| **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
-Ver reglas analíticas|X|X|-|X|X|-
-Gestionar reglas analíticas|X|X|-|X|-|-
-Ver acciones analíticas|X|X|-|X|X|-
-Gestionar acciones analíticas|X|X|-|X|X|-
-Ver alertas analíticas|X|X|-|X|X|X
-Ver esquemas de mensajes analíticos|X|X|-|X|X|-
-Gestionar esquemas de mensaje analítico|X|X|-|X|-|-
+<!-- ### Analytics Operations {: #app-analytics-ops}
+Analytics Operations ||| Application Roles||||
+           | **Standard Application** | **Operations Application** | **Backend Trusted Application** | **Data Processor Application** | **Visualization Application** | **Device Application**
+View analytics rules|X|X|-|X|X|-
+Manage analytics rules|X|X|-|X|-|-
+View analytics actions|X|X|-|X|X|-
+Manage analytics actions|X|X|-|X|X|-
+View analytics alerts|X|X|-|X|X|X
+View analytics message schemas|X|X|-|X|X|-
+Manage analytics message schemas|X|X|-|X|-|- -->
 
 ### Operaciones de servicios de terceros {: #app-third-party}
 
 Operaciones de servicios de terceros ||| Roles de aplicación||||
 :--------: | -------------|-------------|---------------|-----|---
-           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo**| **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
-Procesar notificaciones por lotes desde la plataforma externa|X|X|-|-|-|-
+           | **Aplicación estándar** | **Aplicación de operaciones** | **Aplicación de confianza de fondo** | **Aplicación de procesador de datos** | **Aplicación de visualización** | **Aplicación de dispositivo**
+Procesar notificaciones por lotes desde una plataforma externa|X|X|-|-|-|-
 Procesar notificaciones por lotes y enviarlas a una plataforma externa|X|X|-|-|-|-
 Publicar un suceso para un dispositivo|X|X|-|-|-|-
 Suscribirse a sucesos desde un dispositivo|X|X|-|-|-|-

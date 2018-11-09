@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-04"
+  years: 2016, 2018
+lastupdated: "2018-02-27"
 
 ---
 
@@ -29,7 +29,7 @@ O documento a seguir responde a algumas perguntas comuns sobre como os dados de 
 ## {{site.data.keyword.iot_short_notm}} e {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-O {{site.data.keyword.iot_short_notm}} é executado na plataforma do {{site.data.keyword.Bluemix_notm}} e, por isso, depende do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_full}} para acesso e conectividade. A reliance do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_notm}} torna a segurança e a confiabilidade do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_notm}} importantes para os usuários do {{site.data.keyword.iot_short_notm}}
+O {{site.data.keyword.iot_short_notm}} é executado na plataforma {{site.data.keyword.Bluemix_notm}} e, portanto, conta com a Infraestrutura do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_notm}} para acesso e conectividade. O reliance da Infraestrutura do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_notm}} torna a segurança e a confiabilidade da Infraestrutura do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_notm}} importantes para usuários do {{site.data.keyword.iot_short_notm}}
 
 Para obter mais detalhes sobre a segurança do {{site.data.keyword.Bluemix_notm}}, veja [Segurança da plataforma do {{site.data.keyword.Bluemix_notm}}](index.html#platform-security). 
 
@@ -50,7 +50,7 @@ O {{site.data.keyword.iot_short_notm}} é auditado por uma empresa de segurança
 ## Como protegemos o gerenciamento de informações de IoT dentro de sua organização?
 {: #secure-org}
 
-A GUI (interface gráfica com o usuário) baseada em navegador e as APIs (interfaces de programação de aplicativos) REST têm à sua frente HTTPS (Protocolo de Transporte de Hipertexto Seguro), com um certificado assinado pela DigiCert, portanto, é possível confiar que você está conectando ao {{site.data.keyword.iot_short_notm}} genuíno. O acesso à GUI (interface gráfica com o usuário) baseado na web é autenticado por seu IBMid ou pelo {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. O uso da API (interface de programação de aplicativos) REST requer uma chave API gerada pela GUI (interface gráfica com o usuário). É possível usar isso para fazer chamadas da API (interface de programação de aplicativos) REST autenticadas com relação à sua organização.
+A GUI (interface gráfica com o usuário) baseada em navegador e as APIs (interfaces de programação de aplicativos) REST têm à sua frente HTTPS (Protocolo de Transporte de Hipertexto Seguro), com um certificado assinado pela DigiCert, portanto, é possível confiar que você está conectando ao {{site.data.keyword.iot_short_notm}} genuíno. O acesso à GUI baseada na web é autenticado por seu IBMid. O uso da API (interface de programação de aplicativos) REST requer uma chave API gerada pela GUI (interface gráfica com o usuário). É possível usar isso para fazer chamadas da API (interface de programação de aplicativos) REST autenticadas com relação à sua organização.
 
 ![imagem](management_platform.svg)
 
@@ -76,7 +76,8 @@ Para obter mais informações sobre como configurar a segurança de conexão, co
 ![imagem](connectivity_platform.svg)
 
 
-Para obter mais informações sobre os requisitos de TLS e do conjunto de criptografia, consulte a seção [Requisitos de TLS Requisitos](connect_devices_apps_gw.html#tls_requirements) na documentação `Application, device, and gateway connections to Watson IoT Platform `.
+Para obter mais informações sobre os requisitos de TLS e do conjunto de criptografia, consulte a seção [Requisitos
+de TLS Requisitos](connect_devices_apps_gw.html#tls_requirements) na documentação Application, device, and gateway connections to Watson IoT Platform .
 
 É possível usar certificados e políticas de segurança para aprimorar a segurança de conexão de dispositivo. As políticas de segurança podem ser configuradas para permitir conexões não criptografadas, para impingir somente conexões de segurança da camada de transporte (TLS) e para permitir que os dispositivos sejam autenticados com certificados do lado do cliente e nenhum token. As listas de bloqueio podem ser usadas para especificar dispositivos que não têm permissão para se conectar ou as listas de desbloqueio podem ser usadas para permitir que dispositivos específicos se conectem. Para obter mais informações sobre segurança aprimorada, veja [Gerenciamento de risco e segurança](RM_security.html).
 

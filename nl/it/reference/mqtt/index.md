@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -92,7 +92,7 @@ La seguente tabella illustra le restrizioni del payload del messaggio per divers
 
 Formato payload  | Linee guida per casi di utilizzo specifici
 --------- | ----------  
-JSON | JSON è il formato standard per {{site.data.keyword.iot_short_notm}}. Se prevedi di utilizzare le analisi, le tabelle, le schede e i dashboard {{site.data.keyword.iot_short_notm}} integrati, assicurati che il formato del payload del messaggio sia conforme al testo JSON con formato corretto.
+JSON | JSON è il formato standard per {{site.data.keyword.iot_short_notm}}. Se prevedi di utilizzare i dashboard {{site.data.keyword.iot_short_notm}} integrati, assicurati che il formato del payload del messaggio sia conforme al testo JSON con formato corretto.
 Testo | Utilizza una codifica del carattere UTF-8 valida.
 Binario | Nessuna restrizione.
 

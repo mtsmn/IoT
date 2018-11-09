@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-09-18"
+  years: 2017, 2018
+lastupdated: "2018-05-01"
 ---
 
 ---
@@ -41,7 +41,8 @@ DSX 提供了一种基于云的交互协作环境，您可以在此环境中使�
 
 ## 先决条件
 
-要完成这些步骤，您必须能够访问安装了 [Cloudant NoSQL DB ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/cloudant-nosql-db){: new_window} 的 [{{site.data.keyword.iot_short_notm}} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window}，并且能够访问 [DSX 帐户 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://datascience.ibm.com/docs/content/getting-started/get-started.html){: new_window}。
+要完成这些步骤，您必须具有对安装了 [Cloudant NoSQL DB ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/cloudant-nosql-db
+){: new_window} 的 [{{site.data.keyword.iot_short_notm}} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window} 的访问权，对 [Apache Spark ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/apache-spark){:new_window} 服务的访问权，以及对 [DSX Account ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://datascience.ibm.com/docs/content/getting-started/get-started-wdp.html){: new_window} 的访问权。
 
 
 ## 步骤 1. 设置模拟器
@@ -72,7 +73,7 @@ DSX 提供了一种基于云的交互协作环境，您可以在此环境中使�
 1. [使用 {{site.data.keyword.iot_short_notm}} 的实例部署天气传感器模拟器 Web 应用程序 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window}，并执行详细步骤。
 
    有关天气传感器的更多信息，请参阅[天气传感器模拟器指南 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}。
-2. 等待部署完成，然后浏览到 Bluemix 仪表板。
+2. 等待部署完成，然后浏览到 IBM Cloud“仪表板”。
 3. 启动由部署过程创建的 {{site.data.keyword.iot_short_notm}} 服务“wiotp-for-weather-sensors-simulator”。
 4. 继续执行[步骤 2. 配置数据库连接器](#DSX_config_db)。
 
@@ -87,7 +88,7 @@ DSX 提供了一种基于云的交互协作环境，您可以在此环境中使�
 要将 {{site.data.keyword.cloudant_short_notm}} 与 DSX 一起使用，必须配置平台数据存储，以便将 Cloudant NoSQL DB 用作历史服务。
 
 1. 在 {{site.data.keyword.cloudant_short_notm}} 仪表板上，单击导航栏中的**扩展**。
-2. 在**历史数据存储**下，单击**设置**。**配置历史数据存储**部分列出了与 {{site.data.keyword.cloudant_short_notm}} 相同的 Bluemix 空间中可用的所有 Cloudant NoSQL DB 服务。
+2. 在**历史数据存储**下，单击**设置**。**配置历史数据存储**部分列出了 {{site.data.keyword.cloudant_short_notm}} 所在的 IBM Cloud 空间中可用的所有 Cloudant NoSQL DB 服务。
 3. 选择要连接的 Cloudant NoSQL DB 服务。
 4. 指定以下 Cloudant NoSQL 数据库配置选项：
   - 存储区时间间隔 = 天
@@ -120,44 +121,39 @@ DSX 提供了一种基于云的交互协作环境，您可以在此环境中使�
 
 1. [设置预配置的 Jupyter 配置页](#setup_jupyter_notebook)，以获取对数据的洞察并检测异常情况。
 2. [运行分析。](#run_analysis)
-3. [配置传感器异常的警报](#config_alerts)。
+<!--3. [Configure alerts on sensor anomalies](#config_alerts).-->
 
 
 ### 1. 设置预配置的 Jupyter 配置页
 {: #setup_jupyter_notebook}
 
-Jupyter 配置页是一个 Web 应用程序，它允许用户创建和共享包含可执行代码、数学公式、图形/可视化 (matplotlib) 和解释性文本的文档。
+Jupyter 配置页是一个 Web 应用程序，它允许用户创建和共享包含可执行代码、数学公式、图形/可视化项 (matplotlib) 和解释性文本的文档。
 
 要设置预配置的 Jupyter 配置页以获取数据的洞察并检测异常：
-1. 通过受支持的浏览器，使用 Bluemix 标识登录到 [DSX ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://datascience.ibm.com/){: new_window}。
-2. 单击“+”并选择**创建项目**以创建新项目。项目为您创建一个空间，供您收集和共享配置页、连接至数据源、创建管道以及添加数据集。
-3. 指定项目名称并单击**创建**。在 DSX 帐户设置期间，会自动创建 Spark 服务和 Object Storage 实例。或者，您可以使用 Bluemix 界面进行创建，然后在稍后的阶段，将它们与 DSX 项目进行关联。
-4. 通过在 **DSX** 菜单中选择项目并单击 ![“查找并添加数据”图标](images/find_add_data_icon.png) 来导入 Cloudant 凭证。
-5. 单击**连接**选项卡。
-6. 单击**创建连接**以导入 Cloudant 凭证，以使这些凭证在项目的任何配置页中都可用。
-7. 通过输入以下信息来填写**新建连接**屏幕：
-   - 连接名称
-   - 将**服务类别**设置为`数据服务`。
-   - 从**目标服务实例**下拉菜单中选择 Cloudant 服务。
-   - 选择与当前日期相对应的 Cloudant 数据库。
-8. 单击**创建**。
-9. 单击**添加配置页**以创建新的 Jupyter 配置页。
-10. 选择**从 URL** 以装入现有配置页，然后指定该配置页的描述性名称，并输入以下 URL 以打开样本配置页：
+1. 通过受支持的浏览器，使用 IBM Cloud 标识登录到 [DSX ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://datascience.ibm.com/){: new_window}。
+2. 单击 **+ 新建项目**以创建新项目，然后选择 **Jupyter 配置页**磁贴。项目为您创建一个空间，供您收集和共享配置页、连接至数据源、创建管道以及添加数据集。
+3. 单击 **+ 添加到项目**下拉列表，并选择**连接**。从服务列表中，选择 **Cloudant**，接着输入在 {{site.data.keyword.cloudant_short_notm}} 服务页面的“服务凭证”选项卡中找到的 Cloudant URL、用户名和密码，然后在显示的字段中输入这些项。指定连接的名称，然后单击**创建**。
+4. 检查该连接是否已在仪表板的“数据资产”部分下变为可用。
+5. 单击 **+ 新建配置页**以创建新的 Jupyter 配置页。
+6. 从“服务”下的“选择运行时”下拉列表中，选择 **spark-iw**。如果此项不存在，表示尚未正确供应 Apache Spark 服务。请在 IBM Cloud“仪表板”上检查 Apache Spark 服务是否存在，如果不存在，请访问服务页面以供应此服务。
+7. 将“语言”设置为 **Python 2**，将 Spark 版本设置为 **2.1**。
+8. 选择**从 URL** 以装入现有配置页，然后指定该配置页的描述性名称，并输入以下 URL 以打开样本配置页：
 ```
 https://github.com/ibm-watson-iot/analytics-integration-samples/blob/master/dsx/notebooks/witop_dsx_weather_sensors_sim_notebook.ipynb
 ```
-11. 单击**创建配置页**。检查配置页是否是使用元数据和代码创建的。
-12. 选择以“!pip install --upgrade pixiedust”开头的单元，然后单击**播放**以运行代码。
-13. 完成安装时，通过单击**重新启动内核**图标，重新启动 Spark 内核。
-14. 等待大约 10 秒钟让内核重新启动，然后单击带有注释的单元以将其选中。
-15. 通过完成以下步骤，将 Cloudant 凭证导入到该单元：
 
-    1. 单击 ![“查找并添加数据”图标](images/find_add_data_icon.png)。
+9. 单击**创建配置页**。检查配置页是否是使用元数据和代码创建的。
+10. 选择以“!pip install --upgrade pixiedust”开头的单元，然后单击**运行**以运行代码。
+11. 完成安装时，通过单击**重新启动内核**图标或从“内核”菜单中选择**重新启动**，重新启动 Spark 内核。
+12. 等待大约 10 秒钟让内核重新启动，然后单击带有注释的空代码单元以将其选中。
+13. 通过完成以下步骤，将 Cloudant 凭证导入到该单元：
+
+    1. 单击 ![查找并添加数据](images/find_add_data_icon.png)。
     2. 选择**连接**选项卡。
     3. 单击**插入到代码**。
 此时，将使用您的 Cloudant 凭证创建名为“credentials_1”的字典。如果名称未指定为“credentials_1”，请将该字典重命名为“credentials_1”，因为这是要运行的配置页代码所需的名称。
-16. 在具有数据库名称 (dbname) 的单元中，输入作为数据源的 Cloudant 数据库的名称，例如 `iotp_yourWIoTPorgId_default_Year-month-day`。
-17. 保存配置页。配置页已准备就绪，可以执行。
+14. 在具有数据库名称 (dbname) 的单元中，输入作为数据源的 Cloudant 数据库的名称，例如 `iotp_yourWIoTPorgId_default_Year-month-day`。
+15. 保存配置页。配置页已准备就绪，可以执行。
 
 
 ### 2. 运行分析
@@ -172,56 +168,56 @@ https://github.com/ibm-watson-iot/analytics-integration-samples/blob/master/dsx/
 **注：**某些单元运行后台 Spark 作业，可能需要更长时间才能完成。当单元中的代码执行完成时，星号 `*` 将变成一个数字，例如，In `[*]` 变为 In `[1]`。完成这些步骤后，您可以在 {{site.data.keyword.iot_short_notm}} 中创建云规则，以在检测到异常时自动生成警报。
 
 
-### 3. 配置传感器异常的警报
+<!-- ### 3. Configure alerts on sensor anomalies
 {: #config_alerts}
 
 
-您可以在 {{site.data.keyword.iot_short_notm}} 中创建云规则。如果在已发布的事件跨过您在配置页中派生的阈值时检测到异常，那么这些规则可生成警报。
+You can create cloud rules in the {{site.data.keyword.iot_short_notm}}. These rules can generate alerts if anomalies are detected when published events cross the threshold values that you derived in the notebook.
 
-在此示例中，我们使用 Nitrogen Dioxide (NO2) 和一个特定设备的阈值上限/下限。我们是在创建电子邮件操作，因此每当 NO2 值跨过我们设置的阈值时，就会向指定电子邮件地址发送电子邮件。
+In this example, we use Nitrogen Dioxide (NO2) and the upper/lower thresholds for one specific device. We are creating an email action, so that an email is sent to a specified email address whenever the NO2 value crosses the threshold values that we set.
 
-要创建云规则，请执行以下操作：
+To create cloud rules:
 
-1. 创建模式：
-    1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的**设备**选项卡中，选择**管理模式**选项卡。
-    2. 单击**添加模式**。
-    3. 选择要为其创建模式的 DeviceType WS，然后单击**下一步**。
-    4. 单击**添加属性**以添加来自已连接设备的数据点。
-    5. 在**手动**选项卡中，将数据类型字段设置为 `Float`，并将属性字段设置为 `NO2`。
-    6. 单击**确定**。
-    7. 单击**完成**。
+1. Create a schema:
+    1. In the **Devices** tab of your {{site.data.keyword.iot_short_notm}} dashboard, select the **Manage Schemas** tab.
+    2. Click **Add Schema**.
+    3. Select the DeviceType WS for which the schema is created and click **Next**.
+    4. Click **Add a property** to add the data point from the connected devices.
+    5. From the **Manual** tab, set the data type field to `Float` and the property field to `NO2`.
+    6. Click **OK**.
+    7. Click **Finish**.
 
-2. 创建操作：
-    1. 选择 {{site.data.keyword.iot_short_notm}} 仪表板中的**规则**选项卡。
-    2. 选择**操作**选项卡。 
-    3. 单击**+创建操作**。
-    4. 在**创建新操作**屏幕中，输入名称，然后选择“发送电子邮件”作为操作类型。
-    5. 单击**下一步**。
-    6. 在**编辑操作**屏幕中，打开**包含数据**切换。
-    7. 单击**完成**。
-    8. 从**规则**选项卡中，选择**浏览**选项卡。
-    9. 单击**+创建云规则**。
-    10. 在**添加新云规则**屏幕中，输入规则的名称，并在**应用于**字段中选择模式名称。在此示例中，模式名称为“WS”。
-    11. 单击**下一步**。
+2. Create an action:
+    1. Select the **Rules** tab in the {{site.data.keyword.iot_short_notm}} dashboard.
+    2. Select the **Actions** tab.
+    3. Click **+Create an Action**.
+    4. In the **Create New Action** screen, enter a name and select "Send email" as the action type.
+    5. Click **Next**.
+    6. In the **Edit Action** screen, turn on the **Include Data** toggle.
+    7. Click **Finish**.
+    8. From the **Rules** tab, select the **Browse** tab.
+    9. Click **+Create Cloud Rule**.
+    10. In the **Add New Cloud Rule** screen, enter a name for your rule and select your schema name in the **Applies to** field. In this example, the schema name is "WS".
+    11. Click **Next**.
 
-3. 设置条件 - 您在这些步骤中使用的阈值可在配置页中执行的最后一个代码块中找到，在 NO2 图表旁边：
-    1. 单击“新建条件”并设置第一个条件：
-    - 在**属性**字段中，输入 `Nitrogen Dioxide`。
-    - 在**运算符**字段中，选择大于图标`>`。
-    - 在**值**字段中，输入阈值上限。
-    - 单击**确定**。
-    2. 选择 OR，然后添加第二个条件：
-    - 在**属性**字段中，输入 `Nitrogen Dioxide`。
-    - 在**运算符**字段中选择小于图标`<`.
-    - 在**值**字段中，输入较低的阈值。
-    - 单击**确定**。现在，已设置触发规则的条件。
-4. 将操作设置为“发送电子邮件”，然后单击**确定**以激活规则。每当设备发布的 Nitrogen Dioxing 读数值跨过任一阈值时，都会生成电子邮件警报。您可以运行模拟器来查看警报电子邮件。
+3. Set the condition - The threshold values that you use in these steps are found in the last code chunk that is executed in the notebook, next to the NO2 chart:
+    1. Click New Condition and set the first condition:
+    - In the **Property** field enter `Nitrogen Dioxide`.
+    - In the **Operator** field select greater than icon `>`.
+    - In the **Value** field enter the upper threshold value.
+    - Click **OK**.
+    2. Select OR and then add the second condition:
+    - In the **Property** field enter `Nitrogen Dioxide`.
+    - In the **Operator** field select less than icon `<`.
+    - In the **Value** field enter the lower threshold value.
+    - Click **OK**. The conditions to trigger the rule are now set.
+4. Set the action to "Send email" and click **OK** to activate the rule. An email alert is generated whenever the value of the Nitrogen Dioxide reading that is published by a device crosses either of the threshold values. You can run the simulator to see the alert emails. -->
 
 
 ## 后续步骤
 
 有关 DSX 的更多信息，请参阅以下资源：
 
- - [WIoTP 云规则 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/IoT/cloud_analytics.html#cloud_analytics){: new_window}
+<!-- - [WIoTP Cloud Rules ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/IoT/cloud_analytics.html#cloud_analytics){: new_window} -->
  - [DSX社区配置页和教程 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://idaas.iam.ibm.com/idaas/mtfim/sps/authsvc?PolicyId=urn:ibm:security:authentication:asf:basicldapuser){: new_window}，请遵循链接来了解更多有关 Jupyter 配置页的信息。
  - [Watson IoT Platform手册中的分析诀窍 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/resources/watson-iot-analytics-cookbook/)

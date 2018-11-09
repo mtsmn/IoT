@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-11-29"
+  years: 2016, 2018
+lastupdated: "2018-03-11"
 
 ---
 
@@ -14,6 +14,14 @@ lastupdated: "2016-11-29"
 
 # Protección del servidor de tarjetas personalizadas
 {: #securing_custom_cards}
+
+**Importante:** estamos lanzando una versión Beta con una nueva forma de definir reglas en los datos del dispositivo IoT como parte de un programa más ambicioso de cambios para mejorar la forma en que {{site.data.keyword.iot_full}} distribuye reglas y acciones.
+
+Para ver más información, consulte la publicación del blog sobre [Un enfoque alternativo a la definición de reglas en datos de IoT ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Para empezar a definir sus propias reglas, consulte la documentación sobre [Creación de reglas incorporadas (Beta)](../../information_management/im_rules.html).
+
+## Acerca de los servidores de tarjetas personalizadas
 
 Los servidores de tarjetas personalizadas son servidores web estándares que alojan el código javascript de las tarjetas personalizadas. Para garantizar la integridad del entorno de {{site.data.keyword.iot_short_notm}}, debe proteger el servidor de tarjetas personalizadas realizando los pasos necesarios para proteger el origen de las tarjetas como se describe en este tema.
 {:shortdesc}

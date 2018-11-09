@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-04"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -33,8 +33,7 @@ lastupdated: "2017-04-04"
 
 使用选项字典可创建用于与 {{site.data.keyword.iot_short_notm}} 模块进行交互的定义。构造方法用于构建客户机实例，并接受包含以下定义的选项字典：
 
-|定义|描述
-|
+|定义|描述|
 |:-----|:-----|
 |`orgId`|组织标识。|
 |`appId`|组织中应用程序的唯一标识。|
@@ -78,6 +77,8 @@ except ibmiotf.ConnectionException as e:
 ...
 ```
 应用程序配置文件必须为以下格式：
+
+
 
 ```python
 
@@ -629,8 +630,7 @@ response = apiClient.retrieveDevices("iotsample-arduino", parameters);
 
 要向 {{site.data.keyword.iot_short_notm}} 组织添加设备，请使用 ``registerDevice()`` 方法。``registerDevice()`` 方法可向 {{site.data.keyword.iot_short_notm}} 组织添加单个设备。添加设备时，可以指定以下参数：
 
-|参数|要求|描述
-|:---|:---|
+|参数|要求|描述|:---|:---|
 |``deviceTypeId``|可选|为设备指定设备类型。如果设备类型定义的变量与 ``deviceInfo`` 变量定义的变量之间存在冲突，那么特定于设备的变量优先。|
 |``deviceId``|必需||
 |``authToken``|可选|如果未提供，将生成认证令牌并包含在响应中。|

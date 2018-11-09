@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-13"
+  years: 2016, 2018
+lastupdated: "2018-03-11"
 
 ---
 
@@ -12,146 +12,153 @@ lastupdated: "2016-10-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Schede personalizzate
+# Custom cards
 {: #custom_cards}
 
-Utilizza le schede personalizzate per visualizzare il tuoi dati di Internet delle cose oltre alle schede generiche fornite con {{site.data.keyword.iot_full}}.
-{:shortdesc}
+**Important:** We are launching a Beta for a new way to define rules on your IoT device data as part of a wider 
+program of changes to improve the way {{site.data.keyword.iot_full}} delivers rules and actions.
 
-## Architettura
+To find out more, check out the blog post [An alternative approach to defining Rules on IoT data ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+To start defining your own rules, see the [Creating embedded rules (Beta)](../information_management/im_rules.html) documentation.
+
+
+## Architecture
 {: #architecture}  
 
-Le schede personalizzate sono sviluppate da te e distribuite utilizzando il tuo proprio repository server HTTP delle schede personalizzate.  È possibile accedere a questo server da un browser dell'utente che visualizza ed elabora i dashboard {{site.data.keyword.iot_short_notm}}. {{site.data.keyword.iot_short_notm}} gestisce la connessione al browser tramite l'estensione delle schede personalizzate ma non si collega al server delle schede personalizzate.
+Use custom cards to visualize your Internet of Things data beyond the generic cards that are provided with {{site.data.keyword.iot_short_notm}}.
 
-Il browser su cui sono in esecuzione i dashboard {{site.data.keyword.iot_short_notm}} richiama tutte le risorse necessarie direttamente dal server delle schede personalizzate. Le schede personalizzate sono offerte nella finestra di dialogo “Aggiungi scheda” e visualizzate nelle tabelle create dall'utente che hanno configurato i tuoi utenti.
+Custom cards are developed by you and deployed using your own custom cards HTTP server repository.  This server is accessed by a user's browser as it displays and processes {{site.data.keyword.iot_short_notm}} dashboards. {{site.data.keyword.iot_short_notm}} manages the browser connection through the custom cards extension but does not itself connect to the custom cards server.
 
-Per abilitare il controllo della versione centralizzato utilizzando il server delle schede, il codice della scheda personalizzata non viene memorizzato nel lato client. Se una scheda personalizzata non è più disponibile o se il server delle schede non può essere raggiunto, viene utilizzato un segnaposto per mantenere un layout del dashboard congruente.
+The browser that is running {{site.data.keyword.iot_short_notm}} dashboards retrieves all necessary resources directly from the custom cards server. The custom cards are offered in the “Add card” dialog and displayed in the user-created boards that your users have configured.
 
-**Suggerimento:** per verificare la funzione delle schede personalizzate senza configurare il tuo proprio ambiente di sviluppo, puoi collegare il server delle schede personalizzate di esempio fornito da IBM all'indirizzo: `https://customcards.mybluemix.net`
+To enable centralized version control by using the card server, the custom card code is not cached on the client side. If a custom card is no longer available or if the card server cannot be reached, a placeholder is used to keep a consistent dashboard layout.
 
-Per creare le tue schede, devi configurare un ambiente di sviluppo locale basato su node.js e importare le schede personalizzate di esempio dal repository GitHub delle schede personalizzate fornito da IBM. Dopo aver creato le tue schede, distribuisci il pacchetto delle schede a un server web (HTTPS) sicuro a cui puoi successivamente collegare l'estensione delle schede personalizzate {{site.data.keyword.iot_short_notm}}.   
+**Tip:** To test the custom cards feature without setting up your own development environment, you can connect to the IBM-provided sample custom cards server at: `https://customcards.mybluemix.net`
 
-**Suggerimento:** puoi utilizzare il server web node.js integrato per la verifica iniziale e la risoluzione dei problemi delle tue schede, ma dovresti utilizzare un server web ben gestito e sicuro per la distribuzione della produzione delle tue schede.
+To build your cards, you must set up a node.js-based local development environment and import sample cards from the IBM-provided custom cards GitHub repository. After you create your cards, you deploy the cards package to a secure (HTTPS) web server that you then link the {{site.data.keyword.iot_short_notm}} custom cards extension to.   
 
- ![Architettura schede personalizzate.](architecture_custom_cards.svg "Architettura schede personalizzate.")
+**Tip:** You can use the built-in node.js web server for initial testing and troubleshooting of your cards, but you should use a secure and well-administered web server for any production deployment of your cards.
 
-## Sicurezza
+ ![Custom cards architecture.](architecture_custom_cards.svg "Custom cards architecture.")
+
+## Security
 {: #security}
 
-Non esistono restrizioni nel codice JavaScript che scegli di distribuire nelle tue schede nel tuo server delle schede personalizzate. Il codice Javascript nelle schede personalizzate ha accesso a tutte le informazioni detenute dal browser, così come a qualsiasi scheda in esecuzione nel dashboard.  Assicurati che il server delle schede personalizzato corretto stia fornendo il codice al browser per visualizzare ed elaborare le schede personalizzate.
+There are no restrictions placed on the JavaScript code that you choose to deploy in your cards on your custom cards server. Javascript code in custom cards has access to all information held in the browser, just as any other cards running in the dashboard.  Make sure that the correct custom card server is supplying the code to the browser to display and process the custom cards.
 
-Le schede eseguono il loro codice nella tua sessione del browser {{site.data.keyword.iot_short_notm}} esattamente come è scritto. Inoltre, la connessione al server delle schede personalizzate viene creata senza credenziali fornite al server delle schede personalizzate. Un browser dell'utente può collegarsi a un qualsiasi server delle schede personalizzate configurato.
+The cards execute their code in your {{site.data.keyword.iot_short_notm}} browser session exactly as written. Furthermore, the custom cards server connection is created with no credentials supplied to the custom card server. A users's browser can connect to any configured custom cards server.
 
-È importante che configuri solo i server delle schede personalizzate sicuri e conosciuti per fornire le schede personalizzate ai dashboard dei tuoi utenti.   
+It is important that you only configure known and secured custom cards servers to supply custom cards to your users’ dashboards.   
 
-Per ulteriori informazioni su come proteggere il tuo server delle schede personalizzate, consulta [Sicurezza delle schede personalizzate](../reference/security/custom_cards_server.html).
+For more information on how to secure your custom cards server, see [Custom cards security](../reference/security/custom_cards_server.html).
 
-La seguente procedura ti mostra il processo di collegamento a un server delle schede di test, la distribuzione delle schede di esempio al tuo proprio server delle schede e infine la creazione delle tue proprie schede e la loro distribuzione al tuo server.
+The following steps walk you through the process of connecting to a test card server, deploying sample cards on your own card server, and finally creating your own cards and deploying them on your server.
 
-## Passo 1: Collega {{site.data.keyword.iot_short_notm}} al server delle schede di esempio.
+## Step 1: Connect {{site.data.keyword.iot_short_notm}} to the sample card server.
 {: #connect-to-sample}  
 
-Per verificare la funzione delle schede personalizzate con il tuo {{site.data.keyword.iot_short_notm}}, puoi collegarti al server delle schede personalizzate di esempio. Il server di esempio contiene una serie di schede generiche che sono inoltre disponibili come modelli per la creazione delle tue proprie schede.
+To test the custom cards feature with your {{site.data.keyword.iot_short_notm}}, you can connect to the sample custom cards server. The sample server contains a set of generic cards that are also available as templates for creation of your own cards.
 
-Per collegarti al server delle schede personalizzate di esempio:
-1. Accedi al dashboard {{site.data.keyword.iot_short_notm}} come un utente amministratore.
-2. Abilita le funzioni sperimentali.  
-Le schede personalizzate vengono al momento offerte come una funzione sperimentale.  
-**Importante:** l'estensione delle schede personalizzate di esempio deve essere abilitata per la sessione del browser. Le connessioni delle schede personalizzate e i pacchetti della scheda non sono condivisi globalmente nella tua organizzazione {{site.data.keyword.iot_short_notm}}.
- 1. Vai a **Settings**.
- 2. Nella sezione delle funzioni sperimentali, verifica che **Activate Experimental Features** sia abilitato.
-2. Collegati al server di esempio.
- 2. Vai a **Extensions**.
- 3. Fai clic su **Add extension** e seleziona l'estensione **Custom Cards**.
- 4. Nel tile **Custom Card**, fai clic su **Setup**.
- 5. Nella sezione di configurazione delle schede personalizzate, fai clic su **Add** e immetti l'URL (HTTPS) sicuro per il server delle schede di esempio nel campo server.  
-Se ti stai collegando al tuo proprio server, immetti l'URL di tale server.    
-**Suggerimento:** l'URL del server delle schede di esempio IBM è: `https://customcards.mybluemix.net`  
- 6. Fai clic su **Retrieve Certificate** per collegarti al server delle schede personalizzate e richiamare le informazioni del certificato di sicurezza per il server.  
- **Importante:** utilizza le informazioni del certificato per verificare che ti stai collegando a un server delle schede personalizzate sicuro, conosciuto e previsto.
- 4. Fai clic su **Done** per aggiungere la connessione al server.
-5. Crea una nuova scheda che si basa sulle schede di esempio.
- 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Boards**.
- 2. Fai clic su **Create New Board**.  
- Completa la nuova finestra di dialogo di creazione della tabella. Per informazioni, consulta [Creazione di tabelle e schede](../data_visualization.html#visualizing_data).
- 3. Apri la nuova tabella.
- 4. Fai clic su **Add New Card**.  
- 5. Scorri fino a **Custom cards** e seleziona una delle schede di esempio.  
- Completa il processo di creazione della scheda. Per informazioni, consulta [Creazione di tabelle e schede](../data_visualization.html#visualizing_data).  
+To connect to the sample custom cards server:
+1. Log in to the {{site.data.keyword.iot_short_notm}} dashboard as an administrative user.
+2. Enable experimental features.  
+Custom cards are currently offered as an experimental feature.  
+**Important:** The experimental custom cards extension must be enabled per browser session. Custom cards connections and card packages are not shared globally in your {{site.data.keyword.iot_short_notm}} organization.
+ 1. Go to **Settings**.
+ 2. In the Experimental features section, verify that **Activate Experimental Features** is enabled.
+2. Connect to the sample server.
+ 2. Go to **Extensions**.
+ 3. Click **Add extension** and select the **Custom Cards** extension.
+ 4. In the **Custom Card** tile, click **Setup**.
+ 5. In the Configure Custom Cards section, click **Add** and enter the secure (HTTPS) URL for the sample card server in the server field.  
+If you are connecting to your own server, enter the URL of that server.    
+**Tip:** The URL of the IBM sample cards server is: `https://customcards.mybluemix.net`  
+ 6. Click **Retrieve Certificate** to connect to the custom cards server and retrieve the security certificate information for the server.  
+ **Important:** Use the certificate information to verify that you are connecting to the intended known and secured custom cards server.
+ 4. Click **Done** to add the server connection.
+5. Create a new card that is based on the sample cards.
+ 1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Boards**.
+ 2. Click **Create New Board**.  
+ Complete the Create new board dialog box. For information, see [Creating boards and cards](../data_visualization.html#visualizing_data).
+ 3. Open the new board.
+ 4. Click **Add New Card**.  
+ 5. Scroll down to **Custom cards** and select one of the sample cards.  
+ Complete the card creation process. For information, see [Creating boards and cards](../data_visualization.html#visualizing_data).  
 
- La tua nuova scheda personalizzata è ora nella tua nuova tabella.  
- ![Scheda personalizzata di esempio.](sample_custom_card.png "Scheda personalizzata di esempio.")
+ Your new custom card is now in your new board.  
+ ![Sample custom card.](sample_custom_card.png "Sample custom card.")
 
-Congratulazioni, ti sei collegato al server delle schede personalizzate e hai aggiunto una scheda personalizzata a una delle tue tabelle. Il prossimo passo è di configurare il tuo proprio server delle schede e creare la tua prima scheda utilizzando la scheda di esempio HelloWorld.
+Congratulations, you have connected to a custom card server and added a custom card to one of your boards. The next step is to set up your own card server and create your first card by using the HelloWorld sample card.
 
 
-## Passo 2: Configura un server delle schede e distribuisci la scheda di esempio HelloWorld.
+## Step 2: Set up a card server and deploy the HelloWorld sample card.
 {: #create-hello-world}
 
-Per preparare lo sviluppo delle schede personalizzate, puoi configurare il tuo ambiente di sviluppo delle schede personalizzate locale e verificare la distribuzione della scheda di esempio HelloWorld.
+To prepare for custom cards development, you can set up your local custom card development environment and test deploy the HelloWorld sample card.
 
-Per creare un server delle schede personalizzate e distribuire le schede di esempio IBM, segui le istruzioni dettagliate nel readme [custom-cards repository](https://github.com/ibm-watson-iot/custom-cards/blob/master/README.md).
+To create a custom card server and deploy the IBM sample cards, follow the detailed instructions in the [custom-cards repository](https://github.com/ibm-watson-iot/custom-cards/blob/master/README.md) readme.
 
-I seguenti passi avanzati sono coinvolti nel processo:
-1. Assicurati che il tuo ambiente di sviluppo locale disponga di Node.js con il gestore del pacchetto del nodo npm.  
-Per informazioni sull'installazione di Node.js, inclusi i link di download, vai all'indirizzo: https://nodejs.org
-2. Configura un server HTTP per ospitare il tuo pacchetto delle schede personalizzate.    
-  - La directory che utilizza il contenuto della scheda personalizzata sul server non deve richiedere credenziali di accesso.
-  - Il server deve utilizzare il protocollo HTTPS.
-  - Il server deve supportare le connessioni CORS (Cross-Origin Resource Sharing).  
-**Suggerimento:** per una verifica e una prova di utilizzo, puoi utilizzare il server node.js di esempio integrato, che è configurato per rispettare questi requisiti.
-3. Crea il tuo proprio repository.
-Dividi e clona il repository delle schede personalizzate di esempio all'indirizzo: https://github.com/ibm-watson-iot/custom-cards
-4. Crea i tuoi propri modulo e framework della scheda.
-Le schede personalizzate sono organizzate in moduli. Configura il modulo della scheda HelloWorld.
-5. Fai riferimento alla nuova scheda.
-Il tuo pacchetto delle schede personalizzate può contenere più moduli. Devi fare riferimento al tuo nuovo modulo nel file del pacchetto principale.
-6. Registra il tuo modulo.
-Per rendere la tua scheda disponibile nelle tabelle della tua organizzazione {{site.data.keyword.iot_short_notm}}, devi aggiungere i dettagli di configurazione della scheda nel file `DashboardConfig.json`.
-7. Crea il tuo pacchetto delle schede.
-Utilizza Gulp per configurare un motore di build automatizzato.
-8. Distribuisci il tuo pacchetto delle schede al tuo server delle schede.  
-Prima di poter utilizzare le tue schede in {{site.data.keyword.iot_short_notm}}, devi distribuire il pacchetto delle schede al tuo server HTTP delle schede personalizzate.  
-**Suggerimento:** puoi aggiungere nuove schede o rimuoverne di obsolete in tempo reale ridistribuendo il pacchetto delle schede al server delle schede.
-9. Collega il tuo server delle schede a {{site.data.keyword.iot_short_notm}}.
-Collega il tuo server delle schede personalizzate appena distribuito a {{site.data.keyword.iot_short_notm}}.  
-**Suggerimento:** se il tuo server delle schede personalizzate è una replica completa del server delle schede di esempio, potresti visualizzare schede duplicate nel tuo ambiente. Rimuovi la connessione al server delle schede personalizzate per visualizzare solo le schede dal tuo server delle schede personalizzate.
- 1. Vai a **Extensions**.
- 2. Nel tile **Custom Card**, fai clic sull'icona ingranaggio per aggiornare la configurazione.
- 4. Nella sezione di configurazione delle schede personalizzate, fai clic su **Add** e immetti l'URL (HTTPS) sicuro per il tuo server delle schede personalizzate nel campo server.  
-**Importante:** verifica che ti stai collegando a un server delle schede personalizzate sicuro, conosciuto e previsto.
-4. Fai clic su **Done** per aggiungere la connessione al server.
-10. La scheda personalizzata HelloWorld è ora disponibile per l'utilizzo con le tue tabelle.
+The following high-level steps are involved in the process:
+1. Make sure that your local development environment has Node.js with the npm node package manager.  
+For information about installing Node.js, including the download links, go here: https://nodejs.org
+2. Set up an HTTP server to host your custom cards package.    
+  - The directory that serves the custom card content on the server must not require credentials to access.
+  - The server must use the HTTPS protocol.
+  - The server must support Cross-Origin Resource Sharing (CORS) connections.  
+**Tip:** For test and proof of concept work, you can use the built-in sample node.js server, which is configured to meet these requirements.
+3. Create your own repository.
+Fork and clone the example custom card repository at: https://github.com/ibm-watson-iot/custom-cards
+4. Create your own module and card framework.
+Custom cards are organized in modules. Set up a new HelloWorld card module.
+5. Reference the new card.
+Your custom card package might contain multiple modules. You must reference your new module in the main package file.
+6. Register your module.
+To make your card available in the boards of your {{site.data.keyword.iot_short_notm}} organization, you must add the card configuration details in the `DashboardConfig.json` file.
+7. Build your card package.
+Use Gulp to set up an automated build engine.
+8. Deploy your card package to your cards server.  
+Before you can use your cards in {{site.data.keyword.iot_short_notm}}, you must deploy the card package to your custom cards HTTP server.  
+**Tip:** You can add new cards or remove obsolete cards on-the-fly by redeploying the card package to the card server.
+9. Link your cards server to {{site.data.keyword.iot_short_notm}}.
+Link your newly deployed custom cards server to {{site.data.keyword.iot_short_notm}}.  
+**Tip:** As your custom card server might be a full replica of the sample cards server, you might see duplicate cards in your environment. Remove the sample cards server connection to only see the cards from your custom cards server.
+ 1. Go to **Extensions**.
+ 2. In the **Custom Card** tile, click the gear icon to update the configuration.
+ 4. In the Configure Custom Cards section, click **Add** and enter the secure (HTTPS) URL for your custom card server in the server field.  
+**Important:** Verify that you are connecting to the intended known and secured custom cards server.
+4. Click **Done** to add the server connection.
+10. The HelloWorld custom card is now available to use with your boards.
 
-Ok! Hai correttamente configurato un server delle schede e distribuito la tua prima scheda di esempio. Congratulazioni! Tuttavia, le schede personalizzate ti permettono di configurare schede e tabelle esattamente come le desideri. È ora di iniziare a modificare gli esempi per creare le tue proprie schede.
+All right! You successfully set up a card server and deployed your first sample card. Congratulations! However, the whole idea of custom cards is to let you set up cards and boards exactly as you want them. It is time to start modifying samples to create your own cards.
 
-## Passo 3: Crea e distribuisci le tue proprie schede personalizzate.
+## Step 3: Create and deploy your own custom cards.
 {: #create-your-own-cards}
-Dopo aver configurato e verificato la scheda HelloWorld, puoi ampliare le schede personalizzate e crearne di tue.
+After you configure and verify the HelloWorld card, you can expand on the custom cards and create your own.
 
-Il repository delle schede personalizzate di esempio include le seguenti schede di esempio:
+The example custom card repository includes the following sample cards:
 - HelloWorld  
-Una scheda semplice che fornisce un esempio Hello World di base.
-- Vuota  
-Una scheda vuota che contiene l'infrastruttura di una scheda. Utilizza questa scheda quando crei una scheda da zero.
+A simple card that provides a basic Hello World example.
+- Empty  
+An empty card that contains the infrastructure for a card. Use this card as a template when you build a card from scratch.
 - Webcam  
-Una scheda webcam semplice. Configura la scheda con un URL webcam e imposta la frequenza di aggiornamento.
+A simple web camera card. Configure the card with a webcam URL and set the refresh rate.
 - iFrame  
-Una scheda iFrame di base che puoi utilizzare per integrare qualsiasi pagina web (HTTPS) sicura nella tua tabella.
+A basic iFrame card that you can use to embed any secure (HTTPS) web page in your board.
 
-I seguenti passi avanzati creano una nuova scheda:
+The following high-level steps create a new card:
 
-**Suggerimento:** per i passi dettagliati, consulta [Creating custom cards Readme](https://github.com/ibm-watson-iot/custom-cards/blob/master/README.md) nel repository delle schede personalizzate di esempio.
-1. Crea il tuo proprio modulo della scheda.
- 1. Utilizza uno dei moduli della scheda di esempio come template per il tuo modulo.
- 2. Aggiorna tutte le istanze del nome del modulo nei tuoi nuovi nomi del file modulo e contenuto dei file.  
- Ad esempio, sostituisci `HelloWorld` con il tuo nome del modulo in tutti i nomi del file e le istanze del contenuto dei file.
-2. Fai riferimento al nuovo modulo nel file Modules.jsx.
-3. Registra il nuovo modulo nel file DashboardConfig.json.
-4. Aggiorna il codice della scheda personalizzato per soddisfare i bisogni della tua scheda.
-4. Crea il pacchetto delle schede.  
-A seconda della tua configurazione, il processo di build potrebbe utilizzare gulp in automatico o potresti dover attivare manualmente una build.
-3. Distribuisci la nuova scheda.  
-Se stai utilizzando un server delle schede personalizzate esterno, devi ora distribuire il pacchetto al server.  
+**Tip:** For detailed steps, see [Creating custom cards Readme](https://github.com/ibm-watson-iot/custom-cards/blob/master/README.md) in the example custom cards repository.
+1. Create your own card module.
+ 1. Use one of the sample card modules as a template for your module.
+ 2. Update all instances of the module name in your new module file names and files content.  
+ For example, replace `HelloWorld` with your module name in all file names and file content instances.
+2. Reference the new module in the Modules.jsx file.
+3. Register the new module in the DashboardConfig.json file.
+4. Update the custom card code to meet your card needs.
+4. Build the card package.  
+Depending on your setup, the build process might be automatic using gulp, or you might have to manually trigger a build.
+3. Deploy the new card.  
+If you are using an external custom cards server, you must now deploy the package to the server.  
 
-Hai creato la tua prima scheda personalizzata e l'hai distribuita al tuo server delle schede personalizzate. La scheda è ora disponibile per l'utilizzo nella tua organizzazione {{site.data.keyword.iot_short_notm}}.
+You created you first custom card and deployed it to your custom cards server. The card is now available for use in your {{site.data.keyword.iot_short_notm}} organization.

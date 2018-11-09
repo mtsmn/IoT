@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-05-31"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -24,11 +24,11 @@ lastupdated: "2018-05-31"
 ------------- | -------------
 向下钻取报告|[向下钻取报告 (Beta)](reference/security/RM_security.html#drill_down)
 IoT 网关软件包|[IoT 网关软件包 (Beta)](gateways/iotgw.html#gw_package)
-模拟设备数据|[模拟设备数据 (Beta)](devices/device_sim.html)
-复原已删除的设备|[复原已删除的设备 (Beta)](iotplatform_task.html#restore_device)
+复原删除的设备|[复原删除的设备 (Beta)](iotplatform_task.html#restore_device)
 嵌入式规则|[创建嵌入式规则 (Beta)](information_management/im_rules.html)
-物体|[数据管理简介](GA_information_management/ga_im_device_twin.html#device_twins)
+事物|[数据管理简介](GA_information_management/ga_im_device_twin.html#device_twins)
 {{site.data.keyword.iot_short_notm}} Edge（预览）|[{{site.data.keyword.iot_short_notm}} Edge 概述（预览）](edge/WIoTP_edge.html)
 Cloud IAM 认证和授权|[{{site.data.keyword.iot_short_notm}} 的 Cloud IAM 认证和授权 (Beta)](reference/security/cloud_iam.html)
 App ID 认证和授权|[{{site.data.keyword.iot_short_notm}} 的 App ID 认证和授权 (Beta)](reference/security/app_id.html)
-组用户界面| [管理组 (Beta)](manage_groups.html#groups_overview)
+组用户界面|[管理组 (Beta)](manage_groups.html#groups_overview)
+监视客户机连接|[监视客户机连接 (Beta)](reference/security/client_connect.html)

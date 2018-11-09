@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2015, 2017
-lastupdated: "2017-10-04"
+ years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -28,17 +28,18 @@ Per accedere alla documentazione dell'API di messaggistica HTTP {{site.data.keyw
 
 Per informazioni sulla sicurezza client e su come connettere i client ai dispositivi in {{site.data.keyword.iot_short_notm}}, consulta [Connessione di applicazioni, dispositivi e gateway a {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
 
-## Pubblicazione eventi
+## Pubblicazione eventi 
 {: #event_publication}
 
 In aggiunta all'utilizzo del protocollo di messaggistica MQTT, puoi anche configurare i tuoi dispositivi a pubblicare eventi {{site.data.keyword.iot_short_notm}} in HTTP utilizzando i comandi API REST HTTP.
 
 Utilizza uno dei seguenti URL per inviare una richiesta ``POST`` da un dispositivo collegato a {{site.data.keyword.iot_short_notm}}:
 
-### Richiesta POST non sicura
+### Richiesta POST non sicura per la pubblicazione di eventi
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-### Richiesta POST sicura
+### Richiesta POST sicura per la pubblicazione di eventi
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
@@ -69,14 +70,15 @@ Deve essere fornita un'intestazione della richiesta `Content-Type` con la richie
 ## Ricezione di comandi
 {: #receive_commands}
 
-Oltre a utilizzare il protocollo di messaggistica MQTT, puoi anche configurare i tuoi dispositivi per ricevere comandi da {{site.data.keyword.iot_short_notm}} su HTTP utilizzando i comandi della API di messaggistica HTTP. Un dispositivo può ricevere i comandi a esso indirizzati.
+Oltre a utilizzare il protocollo di messaggistica MQTT, puoi anche configurare i tuoi dispositivi per ricevere comandi da {{site.data.keyword.iot_short_notm}} tramite HTTP utilizzando i comandi dell'API di messaggistica HTTP. Un dispositivo può ricevere i comandi a esso indirizzati.
 
 Utilizza uno dei seguenti URL per inviare una richiesta ``POST`` da un dispositivo collegato a {{site.data.keyword.iot_short_notm}}:
 
-### Richiesta POST non sicura
+### Richiesta POST non sicura per la ricezione di comandi
+
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
-### Richiesta POST sicura
+### Richiesta POST sicura per la ricezione di comandi
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="iot-platform" audience="service" href="/docs/services/IoT/index.html"}
+{: .toc subcollection="iot-platform" audience="service" arm="328" href="/docs/services/IoT/index.html"}
 Plataforma Internet de las cosas
 
     {: .navgroup id="learn"}
@@ -67,11 +67,12 @@ Plataforma Internet de las cosas
         getting_started/getting-started-iot-large-scale-simulation.md
 
     {: .topicgroup}
-    Conexión con Watson IoT Platform
+    Conexión a Watson IoT Platform
         iotplatform_task.md
         gateways/dashboard.md
         platform_authorization.md
         reference/security/connect_devices_apps_gw.md
+        reference/security/client_connect.md
         reference/security/cloud_iam.md
         reference/security/app_id.md
 
@@ -172,6 +173,7 @@ Plataforma Internet de las cosas
     Watson IoT Platform Edge
         edge/WIoTP_edge.md
         edge/WIoTP_edge_config.md
+        edge/WIoTP_edge_rules.md
         edge/WIoTP_edge_install.md
         edge/WIoTP_edge_dev.md
 

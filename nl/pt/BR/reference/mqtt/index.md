@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -92,7 +92,7 @@ A tabela a seguir esboça as restrições de carga útil da mensagem para difere
 
 Formato da carga útil  | Diretrizes para casos de uso específicos
 --------- | ----------  
-JSON | JSON é o formato padrão para o {{site.data.keyword.iot_short_notm}}. Se planeja usar os painéis, placas e cartões integrados do {{site.data.keyword.iot_short_notm}}, além da análise de dados, assegure que o formato da carga útil da mensagem se adeque a texto JSON bem formado.
+JSON | JSON é o formato padrão para o {{site.data.keyword.iot_short_notm}}. Se você planeja usar os painéis integrados do {{site.data.keyword.iot_short_notm}}, assegure-se de que o formato de carga útil da mensagem se adeque ao texto JSON bem formado.
 Texto (Text) | Use codificação de caracteres UTF-8 válida.
 Binary | Sem restrições.
 

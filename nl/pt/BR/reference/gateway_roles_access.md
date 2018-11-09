@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2016-10-16"
+  years: 2016, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -23,7 +23,7 @@ As tabelas mostram níveis de acesso para:
 <!-- [Historian Operations](#gateway-historian) -->
 - [Operações de organização](#gateway-org-ops)
 - [Operações de controle de acesso](#gateway-access-ops)
-- [Operações de análise de dados](#gateway-analytics-ops)
+<!-- - [Analytics Operations](#gateway-analytics-ops) -->
 - [Operações de terceiros](#gateway-third-party)  
 <!-- - [Risk Management Operations](#gateway-risk-mgt) -->
 
@@ -104,18 +104,16 @@ Visualizar Funções|-|-
 Criar, atualizar, excluir funções customizadas|-|-
 Visualizar Operações|-|-
 
-### Operações de análise de dados {: #gateway-analytics-ops}
-
-Operações de análise de dados || Funções de gateway|
-:--------: | ---------------------|------------------------|
-           | **Gateway Padrão** | **Gateway privilegiado** |
-Visualizar regras de análise de dados|-|-
-Gerenciar regras de analítica|-|-
-Visualizar ações de analítica|-|-
-Gerenciar ações de analítica|-|-
-Visualizar alertas de analítica|-|-
-Visualizar esquemas de mensagens de analítica|-|-
-Gerenciar esquemas de mensagens de analítica|-|-
+<!-- ### Analytics Operations {: #gateway-analytics-ops}
+Analytics Operations || Gateway Roles|
+           | **Standard Gateway** | **Privileged Gateway** |
+View analytics rules|-|-
+Manage analytics rules|-|-
+View analytics actions|-|-
+Manage analytics actions|-|-
+View analytics alerts|-|-
+View analytics message schemas|-|-
+Manage analytics message schemas|-|- -->
 
 ### Operações de serviço de terceiro {: #gateway-third-party}
 

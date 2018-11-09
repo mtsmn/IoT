@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-05-08"
+  years: 2016, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-05-08"
 # {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
 
-{{site.data.keyword.iot_full}} è un servizio disponibile in {{site.data.keyword.Bluemix}}. Puoi accedere al dashboard della tua organizzazione {{site.data.keyword.iot_short_notm}} utilizzando il tuo dashboard {{site.data.keyword.Bluemix_notm}}. Come un servizio {{site.data.keyword.Bluemix_notm}}, {{site.data.keyword.iot_short_notm}} può essere integrato con altri servizi ospitati su {{site.data.keyword.Bluemix_notm}}. I dettagli per le integrazioni di servizi di terze parti possono essere trovate nell'argomento [Integrazioni del servizio esterno](extensions/index.html).
+{{site.data.keyword.iot_full}} è un servizio disponibile in {{site.data.keyword.Bluemix_notm}}. Puoi accedere al dashboard della tua organizzazione {{site.data.keyword.iot_short_notm}} utilizzando il tuo dashboard {{site.data.keyword.Bluemix_notm}}. Come un servizio {{site.data.keyword.Bluemix_notm}}, {{site.data.keyword.iot_short_notm}} può essere integrato con altri servizi ospitati su {{site.data.keyword.Bluemix_notm}}. I dettagli per le integrazioni di servizi di terze parti possono essere trovate nell'argomento [Integrazioni del servizio esterno](extensions/index.html).
 {:shortdesc}
 
 ## Come utilizzare {{site.data.keyword.iot_short_notm}} con {{site.data.keyword.Bluemix_notm}}
@@ -30,7 +30,7 @@ Le istanze di {{site.data.keyword.iot_short_notm}} possono essere create nel das
 
 ## SLA (Service Level Agreement) {{site.data.keyword.Bluemix_notm}}
 
-{{site.data.keyword.Bluemix_notm}} pubblica i termini di utilizzo che sono diversi a seconda se viene applicato all'utente [IBM Cloud Services Agreement ![icona link esterno](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} o [IBM International Passport Advantage Agreement ![icona link esterno](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window}. Per ulteriori informazioni su SLA (Service Level Agreement) {{site.data.keyword.Bluemix_notm}}, consulta [{{site.data.keyword.Bluemix_notm}} Terms ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://console.{DomainName}/docs/navigation/notices.html#terms){:new_window}.
+{{site.data.keyword.Bluemix_notm}} pubblica i termini di utilizzo che sono diversi a seconda se viene applicato all'utente [IBM Cloud Services Agreement ![icona link esterno](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} o [IBM International Passport Advantage Agreement ![icona link esterno](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window}. 
 
 ## Determinazione dei prezzi {{site.data.keyword.iot_short_notm}}
 {: #iot-pricing}

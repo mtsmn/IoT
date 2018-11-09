@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-05"
+  years: 2015, 2018
+lastupdated: "2018-07-19"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-04-05"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Anwendungen, Geräte und Gateways mithilfe der API verbinden
+# Anwendungen, Geräte und Gateways verbinden
 {: #connect_devices_apps_gw}
 
 Anwendungen, Geräte und Gateways können über das MQTT-Protokoll eine Verbindung zu {{site.data.keyword.iot_full}} herstellen. Sie können auch die HTTP-REST-API verwenden, um Geräte mit {{site.data.keyword.iot_short_notm}} zu verbinden.
@@ -41,7 +41,9 @@ Zum Herstellen von Verbindungen zwischen Geräte-, Anwendungs- und Gateway-Clien
 ## Portsicherheit
 {: #client_port_security}
 
-Stellen Sie sicher, dass die erforderlichen Ports offen und für die Kommunikation aktiviert sind. Die Ports 8883 und 443 unterstützen sichere Verbindungen über TLS mit dem MQTT- und dem HTTP-Protokoll. Der Port 1883 unterstützt nicht gesicherte Verbindungen mit dem MQTT- und dem HTTP-Protokoll. Informationen zum Verbindungstyp und zu den zugehörigen Portnummern sind in der folgenden Tabelle zusammengefasst:   
+Stellen Sie sicher, dass die erforderlichen Ports offen und für die Kommunikation aktiviert sind. Die Ports 8883 und 443 unterstützen sichere Verbindungen über TLS mit dem MQTT- und dem HTTP-Protokoll. Der Port 1883 unterstützt nicht gesicherte Verbindungen mit dem MQTT- und dem HTTP-Protokoll. Der HTTP-Port 1883 ist standardmäßig inaktiviert. Informationen zum Ändern der Standardeinstellung finden Sie unter [Sicherheitsrichtlinien konfigurieren](set_up_policies.html#set_up_policies.html).
+
+Informationen zum Verbindungstyp und zu den zugehörigen Portnummern sind in der folgenden Tabelle zusammengefasst:   
 
 |Verbindungstyp |Portnummer|
 |:---|:---|
@@ -63,40 +65,32 @@ Ihre TLS-Anforderungen sind davon abhängig, ob Sie eine Verbindung zu {{site.da
 
 ### TLS-Anforderungen für MQTT-Verbindungen
 
-{{site.data.keyword.iot_short_notm}} erfordert TLS Version 1.2 und die folgenden Cipher-Suites:
+{{site.data.keyword.iot_short_notm}}  erfordert TLS Version 1.2. Stellen Sie sicher, dass mindestens eine der folgenden Cipher-Suites zulässig ist: 
 
-
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
-- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
-- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
 - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
 
 ### TLS-Anforderungen für HTTP-Verbindungen
 
-Wenn Sie das Standardserverzertifikat verwenden, sind für {{site.data.keyword.iot_short_notm}} TLS Version 1.1, TLS Version 1.2 und die folgenden Cipher-Suites erforderlich:
+Wenn Sie das Standardserverzertifikat verwenden, ist für {{site.data.keyword.iot_short_notm}} TLS Version 1.2 erforderlich. Stellen Sie sicher, dass mindestens eine der folgenden Cipher-Suites zulässig ist: 
 
 
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_RSA_WITH_AES_128_CBC_SHA256
-- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
 - TLS_RSA_WITH_AES_256_CBC_SHA
-- TLS_RSA_WITH_AES_256_CBC_SHA256
-- TLS_RSA_WITH_AES_256_GCM_SHA384
+- TLS_RSA_WITH_AES_128_CBC_SHA
 
+Erhöhen Sie die Stärke Ihrer Verschlüsselung, indem Sie die Verschlüsselungen ECDHE oder DHE in Ihrer Verschlüsselungsliste verwenden. 
 
 ## MQTT-Clientauthentifizierung
 {: #mqtt_authentication}
@@ -132,6 +126,8 @@ Die Werte für *Anwendungs-ID*, *Typ-ID*, *Gerätetyp* und *Geräte-ID* dürfen 
 **Hinweise:**
 - Wenn Sie eine Verbindung zum Quickstart-Service herstellen, ist eine Authentifizierung nicht erforderlich.
 - Sie müssen eine Anwendung nicht registrieren, bevor Sie eine Verbindung für diese Anwendung herstellen.
+
+Informationen zum Format der gemeinsam genutzten Subskriptionen finden Sie unter [MQTT-Konnektivität für Anwendungen](../../applications/mqtt.html).
 
 
 ### Verbindungen für Anwendungen mithilfe von MQTT herstellen

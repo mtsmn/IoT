@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-04-19"
 
 ---
 
@@ -13,32 +13,32 @@ lastupdated: "2017-03-14"
 {:pre: .pre}
 
 
-# mBed C++ para desenvolvedores de dispositivos
+# Mbed C++ para desenvolvedores de dispositivos
 {: #mbedcpp}
 
-Use a [biblioteca do cliente mBed C++ ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window} para conectar facilmente [dispositivos mBed ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://www.mbed.com/en/){: new_window}, como [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) ou [FRDM-K64F ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.mbed.org/platforms/FRDM-K64F/){: new_window} ao serviço {{site.data.keyword.iot_full}}.
+Use a [biblioteca do cliente Mbed C++ ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){: new_window} para conectar facilmente [dispositivos Mbed ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://www.mbed.com/en/){: new_window}, como [LPC1768](https://os.mbed.com/platforms/mbed-LPC1768/) ou [FRDM-K64F ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://os.mbed.com/platforms/FRDM-K64F/){: new_window}, ao serviço {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
-Para obter mais informações, veja [ibmiotf ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window} no [developer.mbed.org ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.mbed.org/){: new_window}.
+Para obter mais informações, veja [ibmiotf ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTF/){: new_window} em [os.mbed.com ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://os.mbed.com/){: new_window}.
 
-Embora a biblioteca use C++, ainda evita alocações de memória dinâmica e o uso de funções STL, pois os dispositivos mBed às vezes têm modelos de memória idiossincráticos que tornam a portabilidade difícil. De qualquer forma, a biblioteca permite que você torne o uso de memória tão previsível quanto possível.
+Embora a biblioteca use C++, ela ainda evita alocações de memória dinâmica e o uso de funções STL, porque os dispositivos Mbed algumas vezes têm modelos de memória idiossincráticos que dificultam a portabilidade. De qualquer forma, a biblioteca permite que você torne o uso de memória tão previsível quanto possível.
 
 ## Dependências
 {: #dependencies}
 
 |Dependência |Descrição|
 |:---|:---|
-|[Biblioteca Eclipse Paho MQTT ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.mbed.org/teams/mqtt/code/MQTT/){: new_window}|Fornece uma biblioteca do cliente MQTT para dispositivos mBed. Para obter mais informações, veja [Bibliotecas do cliente Embedded MQTT C/C++ ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}|
-|[Biblioteca EthernetInterface ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/){: new_window}|Uma biblioteca de IP mBed por Ethernet.|
+|[Biblioteca Eclipse Paho MQTT ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://os.mbed.com/teams/mqtt/code/MQTT/){: new_window}|Fornece uma biblioteca do cliente MQTT para dispositivos Mbed. Para obter mais informações, veja [Bibliotecas do cliente Embedded MQTT C/C++ ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}|
+|[Biblioteca EthernetInterface ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://os.mbed.com/users/mbed_official/code/EthernetInterface/){: new_window}|Uma biblioteca de IP Mbed sobre Ethernet.|
 
 ## Como usar a biblioteca
 {: #library_use}
 
-Use o [compilador mBed ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.mbed.org/compiler/){: new_window} para criar seus aplicativos ao usar a biblioteca do cliente mBed C++ IBMIoTF. O compilador mBed fornece um IDE (ambiente de desenvolvimento integrado) C/C++ leve on-line configurado para gravar, compilar e fazer download de programas para execução em seu microcontrolador mBed.
+Use o [compilador Mbed ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://os.mbed.com/compiler/){: new_window} para criar seus aplicativos quando você usa a biblioteca do cliente IBMIoTF do Mbed C++. O compilador Mbed fornece um IDE C/C++ on-line leve que está configurado para gravar, compilar e fazer download de programas para execução no microcontrolador Mbed.
 
-**Nota:** você não precisa instalar ou configurar nada para iniciar a execução de mBed.
+**Nota:** você não precisa instalar ou configurar nada para fazer o Mbed funcionar.
 
-Para obter informações sobre como conectar um microcontrolador ARM mBed NXP LPC 1768 ao {{site.data.keyword.iot_short_notm}}, veja a orientação [Biblioteca do cliente mBed C++ para o IBM Watson IoT Platform ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/){: new_window}.
+Para obter informações sobre como conectar um microcontrolador Arm Mbed NXP LPC 1768 ao {{site.data.keyword.iot_short_notm}}, veja a receita da [biblioteca do cliente Mbed C++ para IBM Watson IoT Platform ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/){: new_window}.
 
 ## Construtor
 {: #constructor}
@@ -153,16 +153,12 @@ A amostra abaixo demonstra como publicar os pontos de dados a seguir no {{site.d
 	// Create buffer to hold the event
 	char buf[250];
 
-	// Construct an event message with desired datapoints in JSON format
-	sprintf(buf,
-            "{\"d\":{\"myName\":\"IoT mbed\",\"accelX\":%0.4f,\"accelY\":%0.4f,\"accelZ\":%0.4f,
-            \"temp\":%0.4f,\"joystick\":\"%s\",\"potentiometer1\":%0.4f,\"potentiometer2\":%0.4f}}",
-            MMA.x(), MMA.y(), MMA.z(), sensor.temp(), joystickPos, ain1.read(), ain2.read());
+	// Construct an event message with desired datapoints in JSON format 	sprintf(buf, "{\"d\":{\"myName\":\"IoT Mbed\",\"accelX\":%0.4f,\"accelY\":%0.4f,\"accelZ\":%0.4f, \"temp\":%0.4f,\"joystick\":\"%s\",\"potentiometer1\":%0.4f,\"potentiometer2\":%0.4f}}", MMA.x(), MMA.y(), MMA.z(), sensor.temp(), joystickPos, ain1.read(), ain2.read());
 
         status = client.publishEvent("blink", buf);
 	....
 ```
-Para obter a amostra completa, veja [ IBMIoTClientLibrarySample ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}.
+Para obter a amostra completa, veja [ IBMIoTClientLibrarySample ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}.
 
 ### Aumentando o nível de QoS (qualidade de serviço) para um evento
 
@@ -178,11 +174,7 @@ Para obter a amostra completa, veja [ IBMIoTClientLibrarySample ![Ícone de link
 	// Create buffer to hold the event
 	char buf[250];
 
-	// Construct an event message with desired datapoints in JSON format
-	sprintf(buf,
-            "{\"d\":{\"myName\":\"IoT mbed\",\"accelX\":%0.4f,\"accelY\":%0.4f,\"accelZ\":%0.4f,
-            \"temp\":%0.4f,\"joystick\":\"%s\",\"potentiometer1\":%0.4f,\"potentiometer2\":%0.4f}}",
-            MMA.x(), MMA.y(), MMA.z(), sensor.temp(), joystickPos, ain1.read(), ain2.read());
+	// Construct an event message with desired datapoints in JSON format 	sprintf(buf, "{\"d\":{\"myName\":\"IoT Mbed\",\"accelX\":%0.4f,\"accelY\":%0.4f,\"accelZ\":%0.4f, \"temp\":%0.4f,\"joystick\":\"%s\",\"potentiometer1\":%0.4f,\"potentiometer2\":%0.4f}}", MMA.x(), MMA.y(), MMA.z(), sensor.temp(), joystickPos, ain1.read(), ain2.read());
 
         status = client.publishEvent("blink", buf, MQTT::QOS2);
 	....
@@ -258,7 +250,7 @@ O código a seguir define uma função de retorno de chamada de comando de amost
     client.yield(1000);  // allow the MQTT client to receive messages
     ....
 ```
-Para obter a amostra completa, veja [ IBMIoTClientLibrarySample ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}.
+Para obter a amostra completa, veja [ IBMIoTClientLibrarySample ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}.
 
 **Nota:** a função `client.yield()` deve ser chamada periodicamente para receber comandos.
 A função `client.yield()` permite que o dispositivo receba comandos do Watson IoT Platform e mantenha a conexão ativa. Se a função `client.yield()` não for chamada dentro do prazo especificado pelo intervalo keepAlive, quaisquer comandos que forem enviados da plataforma não serão recebidos pelo dispositivo. O valor designado à função `client.yield()` especifica a duração (em milissegundos) para leitura de dados do soquete antes que o controle seja retornado ao aplicativo.
@@ -276,4 +268,4 @@ Para desconectar o cliente e liberar as conexões, execute o fragmento de códig
 ## Amostras
 {: #samples}
 
-[IBMIoTClientLibrarySample ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){: new_window} é uma amostra de código que demonstra como usar a biblioteca do cliente do {{site.data.keyword.iot_short_notm}} para conectar os dispositivos mbed LPC1768 ou FRDM-K64F à instância de serviço.
+[IBMIoTClientLibrarySample ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://os.mbed.com/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){: new_window} é uma amostra de código que mostra como usar a biblioteca do cliente {{site.data.keyword.iot_short_notm}} para conectar os dispositivos Mbed LPC1768 ou FRDM-K64F à instância de serviço.

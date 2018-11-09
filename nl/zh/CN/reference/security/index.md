@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-04"
+  years: 2016, 2018
+lastupdated: "2018-02-27"
 
 ---
 
@@ -29,7 +29,7 @@ lastupdated: "2017-10-04"
 ## {{site.data.keyword.iot_short_notm}} 和 {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}} 在 {{site.data.keyword.Bluemix_notm}} 平台内运行，因此依赖于 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer_full}} 来进行访问和连接。对 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer_notm}} 的依赖性使得 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer_notm}} 安全性和可靠性对于 {{site.data.keyword.iot_short_notm}} 的用户至关重要
+{{site.data.keyword.iot_short_notm}} 在 {{site.data.keyword.Bluemix_notm}} 平台内运行，因此依赖于 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer_notm}} 基础架构来进行访问和连接。对 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer_notm}} 基础架构的依赖性使得 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer_notm}} 基础架构安全性和可靠性对于 {{site.data.keyword.iot_short_notm}} 的用户至关重要
 
 有关 {{site.data.keyword.Bluemix_notm}} 的安全性的更多详细信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 平台安全性](index.html#platform-security)。 
 
@@ -50,7 +50,7 @@ lastupdated: "2017-10-04"
 ## 如何保护您组织中 IoT 信息管理的安全？
 {: #secure-org}
 
-基于浏览器的 GUI 和 REST API 受 HTTPS 保护且具有 DigiCert 签署的证书，因此您可放心，自己是连接到真实的 {{site.data.keyword.iot_short_notm}}。对基于 Web GUI 的访问权通过 IBM 标识或 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}} 进行认证。使用 REST API 需要通过 GUI 生成的 API 密钥，您可将其用于对组织执行认证的 REST API 调用。
+基于浏览器的 GUI 和 REST API 受 HTTPS 保护且具有 DigiCert 签署的证书，因此您可放心，自己是连接到真实的 {{site.data.keyword.iot_short_notm}}。对基于 Web 的 GUI 的访问权通过 IBM 标识进行认证。使用 REST API 需要通过 GUI 生成的 API 密钥，您可将其用于对组织执行认证的 REST API 调用。
 
 ![图像](management_platform.svg)
 

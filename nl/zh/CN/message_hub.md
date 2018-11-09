@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -17,7 +17,9 @@ lastupdated: "2018-05-22"
 
 将 {{site.data.keyword.messagehub_full}} 连接到 {{site.data.keyword.iot_full}} 为历史数据存储提供了可扩展的高吞吐量消息传递总线。{{site.data.keyword.messagehub}} 基于 Apache Kafka 构建，这是一种高吞吐量的开放式源代码消息传递系统，提供了等待时间短的平台，用于处理实时数据订阅源。
 
-MessageHub 使用分区键来转发分区事件。该键的构成方式是将 {{site.data.keyword.iot_short}} 的 6 字符组织标识与设备类型和设备标识连接在一起。有效内容字段（包括时间戳记和事件标识）不用于构成分区键。此配置确保来自特定设备的所有事件都发送到同一个分区，以便按事件的发送顺序来处理事件。 
+MessageHub 使用分区键来转发分区事件。该键的构成方式是将 {{site.data.keyword.iot_short}} 的 6 字符组织标识与设备类型和设备标识连接在一起。有效内容字段（包括时间戳记和事件标识）不用于构成分区键。此配置可确保将来自特定设备的所有事件发送到同一分区，以便事件可按其发送的顺序进行处理。 
+
+消息从 {{site.data.keyword.iot_short_notm}} 发送到 {{site.data.keyword.messagehub}} 时，MQTT 设备用于将消息发送到 {{site.data.keyword.iot_short_notm}} 的服务质量 (QoS) 不适用。通常，消息会发送到 {{site.data.keyword.messagehub}} 一次。在很罕见的情况下，可能某条消息会发送多次或者根本不发送。
 
 ## 开始之前  
 {: #byb}

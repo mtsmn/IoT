@@ -14,7 +14,7 @@
    viewBox="0 0 609.69452 298.33244"
    id="svg5645"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="architecture_platform_edge.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
@@ -776,16 +776,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3155765"
-     inkscape:cx="416.39175"
+     inkscape:cx="429.6939"
      inkscape:cy="111.03025"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1440"
-     inkscape:window-height="848"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1680"
+     inkscape:window-height="971"
+     inkscape:window-x="-9"
+     inkscape:window-y="51"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -901,7 +901,7 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot7250"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(0,287.3622)"><flowRegion
          id="flowRegion7252"><rect
            id="rect7254"
@@ -909,10 +909,10 @@
            height="181.5571"
            x="701.39276"
            y="252.01556" /></flowRegion><flowPara
-         id="flowPara7256" /></flowRoot>    <flowRoot
+         id="flowPara7256"> </flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot7455"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(0,287.3622)"><flowRegion
          id="flowRegion7457"><rect
            id="rect7459"
@@ -920,10 +920,10 @@
            height="131.02942"
            x="26.548443"
            y="637.39618" /></flowRegion><flowPara
-         id="flowPara7461" /></flowRoot>    <flowRoot
+         id="flowPara7461"> </flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot6413"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(16.120655,362.60083)"><flowRegion
          id="flowRegion6415"><rect
            id="rect6417"
@@ -931,10 +931,10 @@
            height="118.18339"
            x="360.54498"
            y="137.15674" /></flowRegion><flowPara
-         id="flowPara6419" /></flowRoot>    <flowRoot
+         id="flowPara6419"> </flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot6453"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(16.120655,362.60083)"><flowRegion
          id="flowRegion6455"><rect
            id="rect6457"
@@ -942,10 +942,10 @@
            height="357.11935"
            x="388.80621"
            y="143.15155" /></flowRegion><flowPara
-         id="flowPara6459" /></flowRoot>    <flowRoot
+         id="flowPara6459"> </flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot6802"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(15.573944,367.73921)"><flowRegion
          id="flowRegion6804"><rect
            id="rect6806"
@@ -953,7 +953,7 @@
            height="108.76297"
            x="638.87543"
            y="193.67924" /></flowRegion><flowPara
-         id="flowPara6808" /></flowRoot>    <rect
+         id="flowPara6808"> </flowPara></flowRoot>    <rect
        ry="0"
        rx="0"
        y="389.08173"
@@ -963,12 +963,11 @@
        id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
        id="text44191"
        font-size="11"
        x="253.81931"
-       y="416.98788"
-       sodipodi:linespacing="125%">Watson IoT Platform</text>
+       y="416.98788">Watson IoT Platform</text>
     <rect
        ry="0"
        rx="0"
@@ -980,29 +979,28 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="-146.30577"
-       y="449.51898"
-       id="text18189-1"
-       sodipodi:linespacing="125%"><tspan
+       y="462.64398"
+       id="text18189-1"><tspan
          sodipodi:role="line"
          id="tspan18191-0"
          x="-146.30577"
-         y="449.51898" /><tspan
+         y="462.64398"> </tspan><tspan
          sodipodi:role="line"
          x="-146.30577"
-         y="463.26898"
+         y="462.64398"
          id="tspan8202">Terminaux IoT</tspan><tspan
          sodipodi:role="line"
          x="-146.30577"
-         y="477.01898"
+         y="462.64398"
          id="tspan6878-8"
-         style="font-size:7.5px;stroke:none" /><tspan
+         style="font-size:7.5px;stroke:none"> </tspan><tspan
          sodipodi:role="line"
          x="-146.30577"
-         y="490.76898"
+         y="463.88489"
          id="tspan18193-4"
-         style="font-size:7.5px;stroke:none" /></text>
+         style="font-size:7.5px;stroke:none"> </tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -1013,24 +1011,26 @@
        id="rect79371-1-6-6-9-8-7-3-5-2-2"
        style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
-       sodipodi:linespacing="125%"
        id="text44235-7"
        y="462.93506"
        x="270.40372"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          id="tspan44239-7"
          y="462.93506"
          x="270.40372"
-         sodipodi:role="line">API REST &amp; </tspan><tspan
-         y="476.68506"
+         sodipodi:role="line"
+         style="line-height:100%">API REST &amp; </tspan><tspan
+         y="474.93506"
          x="270.40372"
          sodipodi:role="line"
-         id="tspan7973">en temps réel</tspan><tspan
-         y="490.43506"
+         id="tspan7973"
+         style="line-height:100%">en temps réel</tspan><tspan
+         y="486.93506"
          x="270.40372"
          sodipodi:role="line"
-         id="tspan6445-3" /></text>
+         id="tspan6445-3"
+         style="line-height:100%"> </tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -1042,45 +1042,45 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="42.015415"
-       y="469.8609"
-       id="text18189-1-0"
-       sodipodi:linespacing="125%"><tspan
+       y="479.2359"
+       id="text18189-1-0"><tspan
          sodipodi:role="line"
          id="tspan18191-0-3"
          x="42.015415"
-         y="469.8609" /><tspan
+         y="479.2359"> </tspan><tspan
          sodipodi:role="line"
          x="42.015415"
-         y="483.6109"
-         id="tspan8202-7">Passerelles IoT</tspan><tspan
+         y="485.2359"
+         id="tspan8202-7"
+         style="line-height:100%">Passerelles IoT</tspan><tspan
          sodipodi:role="line"
          x="42.015415"
-         y="497.3609"
-         id="tspan5517">+ EAA</tspan><tspan
+         y="497.2359"
+         id="tspan5517"
+         style="line-height:100%">+ EAA</tspan><tspan
          sodipodi:role="line"
          x="42.015415"
-         y="511.1109"
+         y="503.2359"
          id="tspan6808-9"
-         style="font-size:7.5px" /><tspan
+         style="font-size:7.5px"> </tspan><tspan
          sodipodi:role="line"
          x="42.015415"
-         y="524.8609"
+         y="504.47681"
          id="tspan6878-8-3"
-         style="font-size:7.5px" /><tspan
+         style="font-size:7.5px"> </tspan><tspan
          sodipodi:role="line"
          x="42.015415"
-         y="538.6109"
+         y="505.71768"
          id="tspan18193-4-9"
-         style="font-size:7.5px" /></text>
+         style="font-size:7.5px"> </tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="208.63893"
        y="382.87268"
-       id="text266398"
-       sodipodi:linespacing="125%"><tspan
+       id="text266398"><tspan
          sodipodi:role="line"
          id="tspan266400"
          x="208.63893"
@@ -1088,14 +1088,13 @@
          sodipodi:role="line"
          x="208.63893"
          y="397.87268"
-         id="tspan266402" /></text>
+         id="tspan266402"> </tspan></text>
     <text
-       sodipodi:linespacing="125%"
-       y="360.52588"
+       y="362.40088"
        x="188.43343"
        font-size="13"
        id="text56812"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Bluemix</text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:0%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Bluemix</text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4"
@@ -1109,16 +1108,15 @@
        id="rect56941-0-3-9-6"
        style="opacity:1;fill:#ffffff" />
     <text
-       sodipodi:linespacing="125%"
        y="495.39691"
        x="152.27927"
        font-size="11"
        id="text56834-0-4-80"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">MQTT</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">MQTT</text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot7059"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(-13.005022,369.03027)"><flowRegion
          id="flowRegion7061"><rect
            id="rect7063"
@@ -1126,13 +1124,12 @@
            height="185.48387"
            x="358.06451"
            y="-39.357193" /></flowRegion><flowPara
-         id="flowPara7065" /></flowRoot>    <text
-       sodipodi:linespacing="125%"
-       y="649.23334"
+         id="flowPara7065"> </flowPara></flowRoot>    <text
+       y="645.48334"
        x="141.24741"
        font-size="11"
        id="text66184"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Internet</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Internet</text>
     <path
        inkscape:connector-curvature="0"
        id="path13593"
@@ -1149,23 +1146,25 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="52.029083"
        y="578.73309"
-       id="text44241"
-       sodipodi:linespacing="125%"><tspan
+       id="text44241"><tspan
          sodipodi:role="line"
          x="52.029083"
          y="578.73309"
-         id="tspan44245">Tableau de bord </tspan><tspan
+         id="tspan44245"
+         style="line-height:100%">Tableau de bord </tspan><tspan
          sodipodi:role="line"
          x="52.029083"
-         y="592.48309"
-         id="tspan5792">Watson IoT</tspan><tspan
+         y="590.73309"
+         id="tspan5792"
+         style="line-height:100%">Watson IoT</tspan><tspan
          sodipodi:role="line"
          x="52.029083"
-         y="606.23309"
-         id="tspan9810">Platform</tspan></text>
+         y="602.73309"
+         id="tspan9810"
+         style="line-height:100%">Platform</tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -1195,11 +1194,10 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="43.057407"
        y="420.01312"
-       id="text18189-5-9"
-       sodipodi:linespacing="125%"><tspan
+       id="text18189-5-9"><tspan
          sodipodi:role="line"
          x="43.057407"
          y="420.01312"
@@ -1217,12 +1215,11 @@
        id="rect56941-0-3-9"
        style="opacity:1;fill:#ffffff" />
     <text
-       sodipodi:linespacing="125%"
        y="422.68356"
        x="159.2424"
        font-size="11"
        id="text56834-0-4"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">API</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">API</text>
     <g
        id="g5278"
        transform="translate(-198.85232,435.76384)">
@@ -1508,7 +1505,7 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot5802"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(-27.496986,351.02977)"><flowRegion
          id="flowRegion5804"><rect
            id="rect5806"
@@ -1516,7 +1513,7 @@
            height="286.11111"
            x="30.555555"
            y="-62.752552" /></flowRegion><flowPara
-         id="flowPara5808" /></flowRoot>    <rect
+         id="flowPara5808"> </flowPara></flowRoot>    <rect
        ry="0"
        rx="0"
        y="526.41406"
@@ -1545,29 +1542,28 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="-146.67493"
-       y="529.6012"
-       id="text18189-1-2"
-       sodipodi:linespacing="125%"><tspan
+       y="542.7262"
+       id="text18189-1-2"><tspan
          sodipodi:role="line"
          id="tspan18191-0-0"
          x="-146.67493"
-         y="529.6012" /><tspan
+         y="542.7262"> </tspan><tspan
          sodipodi:role="line"
          x="-146.67493"
-         y="543.3512"
+         y="542.7262"
          id="tspan8202-2">Terminaux IoT</tspan><tspan
          sodipodi:role="line"
          x="-146.67493"
-         y="557.1012"
+         y="542.7262"
          id="tspan6878-8-9"
-         style="font-size:7.5px;stroke:none" /><tspan
+         style="font-size:7.5px;stroke:none"> </tspan><tspan
          sodipodi:role="line"
          x="-146.67493"
-         y="570.8512"
+         y="543.9671"
          id="tspan18193-4-6"
-         style="font-size:7.5px;stroke:none" /></text>
+         style="font-size:7.5px;stroke:none"> </tspan></text>
     <g
        id="g5278-5"
        transform="translate(-199.22146,515.84599)">
@@ -1590,15 +1586,20 @@
        style="opacity:1;fill:none;stroke:#000000;stroke-width:1.50000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-0-1-6-5)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.00000119px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="-16.57482"
        y="541.54181"
-       id="text18189-1-0-1"
-       sodipodi:linespacing="125%"><tspan
+       id="text18189-1-0-1"><tspan
          sodipodi:role="line"
-         id="tspan3621">Passerelles sur lesquelles Edge Analytics est</tspan><tspan
+         x="-16.57482"
+         y="541.54181"
+         id="tspan18193-4-9-9"
+         style="font-size:10px;line-height:100%">Passerelles sur lesquelles Edge Analytics est</tspan><tspan
          sodipodi:role="line"
-         id="tspan3623">activé avec Edge Analytics Agent (EAA). </tspan></text>
+         x="-16.57482"
+         y="551.54181"
+         style="font-size:10px;line-height:100%"
+         id="tspan5587">activé avec Edge Analytics Agent (EAA). </tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -1609,20 +1610,21 @@
        id="rect79371-1-6-6-9-8-7-3-5-2-2-8"
        style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
-       sodipodi:linespacing="125%"
        id="text44235-7-1"
        y="574.03876"
        x="270.3317"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="574.03876"
          x="270.3317"
          sodipodi:role="line"
-         id="tspan6445-3-5">Intégration de</tspan><tspan
-         y="587.78876"
+         id="tspan6445-3-5"
+         style="line-height:100%">Intégration de</tspan><tspan
+         y="586.03876"
          x="270.3317"
          sodipodi:role="line"
-         id="tspan4781">chaîne de blocs</tspan></text>
+         id="tspan4781"
+         style="line-height:100%">Blockchain</tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -1633,20 +1635,21 @@
        id="rect79371-1-6-6-9-8-7-3-5-2-2-36"
        style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
-       sodipodi:linespacing="125%"
        id="text44235-7-5"
        y="518.59186"
        x="269.81924"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="518.59186"
          x="269.81924"
          sodipodi:role="line"
-         id="tspan6445-3-7">Cloud Analytics</tspan><tspan
-         y="532.34186"
+         id="tspan6445-3-7"
+         style="line-height:100%">Cloud Analytics</tspan><tspan
+         y="530.59186"
          x="269.81924"
          sodipodi:role="line"
-         id="tspan5128">Edge Analytics</tspan></text>
+         id="tspan5128"
+         style="line-height:100%">Edge Analytics</tspan></text>
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.00000012;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4785"
@@ -1719,11 +1722,10 @@
        id="rect56941-0-3-9-6-0"
        style="opacity:1;fill:#ffffff" />
     <text
-       sodipodi:linespacing="125%"
        y="589.39703"
        x="150.50929"
        font-size="11"
        id="text56834-0-4-80-4"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">HTTP</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:0%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">HTTP</text>
   </g>
 </svg>

@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-09-06"
+  years: 2016, 2018
+lastupdated: "2018-02-23"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -11,16 +11,13 @@ lastupdated: "2017-09-06"
 
 # Fatturazione
 
-I piani del servizio {{site.data.keyword.iot_full}} a pagamento (piani diversi dal 'Lite'), si basano sul concetto di megabyte scambiati e analizzati nel periodo di un mese.  Questo documento illustra come {{site.data.keyword.iot_short_notm}} misura i dati per creare le informazioni di utilizzo che determinano il costo di utilizzo del servizio.  Le informazioni di utilizzo possono essere utilizzate per approssimare il costo di utilizzo di {{site.data.keyword.iot_short_notm}} in base alla progettazione e al numero di dispositivi, applicazioni e gateway.
+I piani di servizio {{site.data.keyword.iot_full}} a pagamento (piani diversi da 'Lite') si basano sul concetto di megabyte scambiati nel periodo di un mese.  Questo documento illustra come {{site.data.keyword.iot_short_notm}} misura i dati per creare le informazioni di utilizzo che determinano il costo di utilizzo del servizio.  Le informazioni di utilizzo possono essere utilizzate per approssimare il costo di utilizzo di {{site.data.keyword.iot_short_notm}} in base alla progettazione e al numero di dispositivi, applicazioni e gateway.
 
-Per informazioni sul costo di ogni megabyte di dati scambiati o analizzati, consulta il servizio {{site.data.keyword.iot_short_notm}} nel catalogo Bluemix della regione richiesta.
+Per informazioni sul costo di ogni megabyte di dati scambiati, consulta il servizio {{site.data.keyword.iot_short_notm}} nel catalogo {{site.data.keyword.Bluemix_notm}} per la regione richiesta.
 
 Puoi utilizzare [Pricing Calculator ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](http://iot-cost-calculator.ng.bluemix.net/) per aiutarti nel calcolare il costo di un servizio {{site.data.keyword.iot_short_notm}}.
 
-I seguenti tre elementi sono misurati separatamente e fatturati in base all'utilizzo: 
-- dati scambiati
-- dati analizzati
-- dati edge analizzati
+I seguenti elementi sono misurati e fatturati in base all'utilizzo: 
 
 ## Dati scambiati
 Il calcolo dei *dati scambiati* include i dati dell'account scambiati dalle applicazioni, dai dispositivi e dai gateway utilizzando la messaggistica MQTT o HTTP, così come i dati scambiati dalle applicazioni utilizzando l'API HTTP.
@@ -28,7 +25,7 @@ Il calcolo dei *dati scambiati* include i dati dell'account scambiati dalle appl
 ### Dati MQTT scambiati
 Quando utilizzi MQTT, il contenuto del flusso TCP conta i *dati scambiati*.  Il payload di ogni messaggio MQTT viene incluso nel cumulo dei dati scambiati utilizzando il protocollo MQTT.  Il cumulo della dimensione dei dati del payload si verifica quando viene pubblicato il messaggio, così come quando li messaggio viene distribuito a un sottoscrittore.
 
-Il protocollo MQTT è progettato per essere il più leggero possibile. Sebbene {{site.data.keyword.iot_short_notm}} includa le dimensioni dei pacchetti MQTT quando si accumulano i *dati scambiati*, poiché è un protocollo leggero, questo sovraccarico è lento.  La seguente tabella fornisce un'indicazione della dimensione minima di ogni pacchetto MQTT:
+Il protocollo MQTT è progettato per essere il più leggero possibile.  Sebbene {{site.data.keyword.iot_short_notm}} includa le dimensioni dei pacchetti MQTT quando si accumulano i *dati scambiati*, poiché è un protocollo leggero, questo sovraccarico è lento.  La seguente tabella fornisce un'indicazione della dimensione minima di ogni pacchetto MQTT:
 
 |PACCHETTO MQTT                    |Byte dimensione minima  |Variabili e dimensione minima associata in byte|
 |-------------------------------|--------------------|-------------------------------------------------|
@@ -58,7 +55,7 @@ Quando utilizzi la messaggistica HTTP, il payload del messaggio viene incluso ne
 
 Come con MQTT, la sovrascrittura HTTP viene contata.  La sovrascrittura HTTP è significativamente maggiore della sovrascrittura MQTT. La sovrascrittura HTTP per richiesta è approssimativamente 300 byte. Deve inoltre essere aggiunta la dimensione del payload del messaggio.
 
-Quando utilizzi TLS, viene considerato l'handshake sicuro. L'handshake è approssimativamente 8 kilobyte. È quindi economicamente vantaggioso mantenere le connessioni HTTPS aperte il più a lungo possibile. Aprire le connessioni non comporta ulteriore sovrascrittura in termini di *dati scambiati*.  Riaprire una connessione TLS utilizzando una sessione TLS esistente diminuisce il numero di byte scambiati perché i certificati non sono inviati in entrambe le direzioni.  Molti client TLS supportano questa impostazione in modo predefinito, ma la sessione ha una durata limitata.  L'utilizzo dei certificati client aumenta la dimensione dell'handshake TLS, a seconda della dimensione del certificato client.
+Quando utilizzi TLS, viene considerato l'handshake sicuro.  L'handshake è approssimativamente 8 kilobyte.  È quindi economicamente vantaggioso mantenere le connessioni HTTPS aperte il più a lungo possibile.  Aprire le connessioni non comporta ulteriore sovrascrittura in termini di *dati scambiati*.  Riaprire una connessione TLS utilizzando una sessione TLS esistente diminuisce il numero di byte scambiati perché i certificati non sono inviati in entrambe le direzioni.  Molti client TLS supportano questa impostazione in modo predefinito, ma la sessione ha una durata limitata.  L'utilizzo dei certificati client aumenta la dimensione dell'handshake TLS, a seconda della dimensione del certificato client.
 
 I record TLS e le sovrascritture TCP e IP non sono considerati.
 
@@ -69,8 +66,7 @@ A differenza della messaggistica MQTT e HTTP, né il sovraccarico HTTP che TLS v
 
 **Nota** - Quando utilizzi il dashboard {{site.data.keyword.iot_short_notm}}, le API HTTP vengono utilizzate dal dashboard per elencare le informazioni inclusi i dispositivi, i tipi di dispositivo e i log di connessione del dispositivo.  Queste API HTTP richiamano il conteggio di *dati scambiati*.
 
-## Dati analizzati
-Il calcolo dei *dati analizzati* misura i dati dell'evento elaborati dal motore delle regole nella piattaforma.  I dati sono considerati elaborati dal motore delle regole quando gli eventi del dispositivo sono valutati da una o più regole, in base a un dispositivo e un tipo di evento specifici. 
-
-## Dati Edge analizzati 
-Il calcolo dei *dati edge analizzati* misura i dati dell'evento elaborati in un dispositivo gateway da EAA (Edge Analytics Agent) {{site.data.keyword.iot_short_notm}}.  I dati sono considerati elaborati dall'agent edge quando gli eventi del dispositivo sono valutati da una o più regole edge, in base a un dispositivo e un tipo di evento specifici. 
+<!-- ## Data Analyzed
+The *data analyzed* calculation measures event data that is processed by the rules engine within the platform.  Data is considered processed by the rules engine when device events are evaluated by one or more rules, based on a specific device and event type. 
+## Edge Data Analyzed
+The *edge data analyzed* calculation measures event data that is processed on a gateway device by the {{site.data.keyword.iot_short_notm}} Edge Analytics Agent.  Data is considered processed by the edge agent when device events are evaluated by one or more edge rules, based on a specific device and event type.  -->

@@ -95,11 +95,11 @@ Vos données de terminal seront désormais stockées dans votre service {{site.d
 
 Les recettes suivantes expliquent comment utiliser {{site.data.keyword.cloudant_short_notm}} en tant que stockage d'historique pour {{site.data.keyword.iot_short}} :
 
-- La recette [Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} explique de quelle façon les données de terminal sont stockées sur {{site.data.keyword.cloudant_short_notm}} montre comment configurer et stocker des données de terminal sur {{site.data.keyword.cloudant_short_notm}} en tant que stockage des données d'historique.
+- La recette [Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} explique de quelle façon les données de terminal sont stockées sur {{site.data.keyword.cloudant_short_notm}} montre comment configurer et stocker des données de terminal sur {{site.data.keyword.cloudant_short_notm}} en tant que stockage des données d'historique.
 
-- La recette [Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} montre comment analyser et effectuer des opérations de traitement de données sur les données de terminal stockées dans {{site.data.keyword.cloudant_short_notm}}.
+- La recette [Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} montre comment analyser et effectuer des opérations de traitement de données sur les données de terminal stockées dans {{site.data.keyword.cloudant_short_notm}}.
 
-- La recette [Visualize Watson IoT Device Data stored in Cloudant NoSQL DB ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} montre comment établir un lien entre des cartes Graphique à courbes et un stockage de données d'historique pour afficher des données de terminal sur le tableau de bord Watson IoT Platform.
+- La recette [Visualize Watson IoT Device Data stored in Cloudant NoSQL DB ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} montre comment établir un lien entre des cartes Graphique à courbes et un stockage de données d'historique pour afficher des données de terminal sur le tableau de bord Watson IoT Platform.
 
 
 ## Création de nouveaux documents de conception  
@@ -110,7 +110,7 @@ De nouveaux documents de conception sont contenus dans la base de données de co
 
 Les documents de conception par défaut contenus dans {{site.data.keyword.iot_short_notm}} implémentent les requêtes disponibles dans l'historique en cours, en plus de la fonction summarize.
 
-D'autres documents de conception peuvent être ajoutés à la base de données de configuration et seront copiés dans les nouvelles bases de données d'intervalle à mesure qu'elles seront créées. Pour ajouter des documents de conception à la base de données de configuration, voir la [documentation de l'API Cloudant ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://docs.cloudant.com/document.html){: new_window}.
+D'autres documents de conception peuvent être ajoutés à la base de données de configuration et seront copiés dans les nouvelles bases de données d'intervalle à mesure qu'elles seront créées. Pour ajouter des documents de conception à la base de données de configuration, voir la [documentation de l'API Cloudant ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudant.com/document.html){: new_window}.
 
 <!--  # Related links
 {: #rellinks}

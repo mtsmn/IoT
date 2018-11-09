@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2016-11-22"---
+  years: 2015, 2018
+lastupdated: "2018-01-11"
+
+---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -17,17 +19,17 @@ lastupdated: "2016-11-22"---
 {: #introduction}
 
 {{site.data.keyword.iot_full}} において、管理対象デバイスとは、デバイス管理操作 (ファームウェア、ロケーション、診断の更新など) を行うことのできるデバイスのことです。
-{{site.data.keyword.iot_short}} Java™ クライアント・ライブラリーや提供された情報を使用することで、Java コードを作成して接続デバイスを管理対象デバイスにすることができます。Java コードを作成し、デバイスをデバイス管理サービスに接続してデバイス管理操作を実行するためのサンプルも用意されています。
+{{site.data.keyword.iot_short}} Java™ クライアント・ライブラリーや提供された情報を使用することで、Java コードを作成して接続デバイスを管理対象デバイスにすることができます。 Java コードを作成し、デバイスをデバイス管理サービスに接続してデバイス管理操作を実行するためのサンプルも用意されています。
 
 アプリケーションが Java クライアント・ライブラリーを使用してデバイスと対話する方法について詳しくは、『[アプリケーション開発者用の Java](../../applications/libraries/java.html)』を参照してください。
 
 ## デバイス管理
 {: #device_management}
 
-[デバイス管理](../reference/device_mgmt.html)機能により、デバイス管理能力が向上し、{{site.data.keyword.iot_short_notm}} サービスが強化されます。デバイス管理では、管理対象デバイスと非管理対象デバイスを次のように区別します。
+[デバイス管理](../reference/device_mgmt.html)機能により、デバイス管理能力が向上し、{{site.data.keyword.iot_short_notm}} サービスが強化されます。 デバイス管理では、管理対象デバイスと非管理対象デバイスを次のように区別します。
 
--   **管理対象デバイス**とは、管理エージェントがインストールされているデバイスとして定義されます。管理エージェントは、デバイスのメタデータを送受信し、{{site.data.keyword.iot_short_notm}} からのデバイス管理コマンドに応答します。
--   **非管理対象デバイス**とは、デバイス管理エージェントを持たないデバイスのことです。すべてのデバイスは、非管理対象デバイスとしてライフサイクルを開始します。そして、デバイス管理エージェントから {{site.data.keyword.iot_short_notm}} にメッセージを送信することで管理対象デバイスに移行できます。
+-   **管理対象デバイス**とは、管理エージェントがインストールされているデバイスとして定義されます。 管理エージェントは、デバイスのメタデータを送受信し、{{site.data.keyword.iot_short_notm}} からのデバイス管理コマンドに応答します。
+-   **非管理対象デバイス**とは、デバイス管理エージェントを持たないデバイスのことです。 すべてのデバイスは、非管理対象デバイスとしてライフサイクルを開始します。そして、デバイス管理エージェントから {{site.data.keyword.iot_short_notm}} にメッセージを送信することで管理対象デバイスに移行できます。
 
 ## {{site.data.keyword.iot_short_notm}} デバイス管理サービスへの接続
 {: #connecting_dm_service}
@@ -35,7 +37,7 @@ lastupdated: "2016-11-22"---
 ## デバイス・データの作成
 {: #creating_device_data}
 
-[デバイス・モデル](../reference/device_model.html)とは、デバイスのメタデータと管理特性を記述したものです。{{site.data.keyword.iot_short_notm}} のデバイス・データベースは、デバイス情報のマスター・ソースです。アプリケーションと管理対象デバイスは、ロケーションやファームウェア更新の進捗などの更新情報をデータベースに送信できます。{{site.data.keyword.iot_short_notm}} がそうした更新情報を受信すると、デバイス・データベースが更新され、アプリケーションでその情報を使用できるようになります。
+[デバイス・モデル](../reference/device_model.html)とは、デバイスのメタデータと管理特性を記述したものです。 {{site.data.keyword.iot_short_notm}} のデバイス・データベースは、デバイス情報のマスター・ソースです。 アプリケーションと管理対象デバイスは、ロケーションやファームウェア更新の進捗などの更新情報をデータベースに送信できます。 {{site.data.keyword.iot_short_notm}} がそうした更新情報を受信すると、デバイス・データベースが更新され、アプリケーションでその情報を使用できるようになります。
 
 `DeviceData` は、ibmiotf クライアント・ライブラリーにあるデバイス・モデルであり、そこには以下のオブジェクトがあります。
 
@@ -80,7 +82,7 @@ DeviceMetadata metadata = new DeviceMetadata(data);
 ## ManagedDevice の作成
 {: #construct_managed_device}
 
-`ManagedDevice` は、デバイスを管理対象デバイスとして {{site.data.keyword.iot_short_notm}} に接続し、1 つ以上のデバイス管理操作をデバイスが実行できるようにするデバイス・クラスです。`ManagedDevice` インスタンスを使用すると、デバイス・イベントのパブリッシュやアプリケーションからのコマンドの listen などといった、通常のデバイス操作も実行できます。
+`ManagedDevice` は、デバイスを管理対象デバイスとして {{site.data.keyword.iot_short_notm}} に接続し、1 つ以上のデバイス管理操作をデバイスが実行できるようにするデバイス・クラスです。 `ManagedDevice` インスタンスを使用すると、デバイス・イベントのパブリッシュやアプリケーションからのコマンドの listen などといった、通常のデバイス操作も実行できます。
 
 `ManagedDevice` は、さまざまなユーザー・パターンをサポートする、以下のコンストラクターを公開します。
 
@@ -88,13 +90,12 @@ DeviceMetadata metadata = new DeviceMetadata(data);
 
 コンストラクター 1 は、`DeviceData` と以下のすべての必須プロパティーを受け入れて、`ManagedDevice` インスタンスを {{site.data.keyword.iot_short_notm}} に作成します。
 
-|プロパティー|説明
-|
+|プロパティー |説明 |
 |:---|:---|
 |``Organization-ID`` |組織 ID|
-|``Device-Type`` |デバイスのタイプ。通常、deviceType は、特定のタスクを実行するデバイスのグループです (例えば "weatherballoon")。|
-|``Device-ID`` |デバイスの ID。通常、特定のデバイス・タイプにおいて、deviceId はそのデバイスの固有 ID です (シリアル番号や MAC アドレスなど)。|
-|`Authentication-Method` |使用する認証の方式。現在サポートされている値は、`token` のみです。|
+|``Device-Type`` |デバイスのタイプ。 通常、deviceType は、特定のタスクを実行するデバイスのグループです (例えば "weatherballoon")。|
+|``Device-ID`` |デバイスの ID。 通常、特定のデバイス・タイプにおいて、deviceId はそのデバイスの固有 ID です (シリアル番号や MAC アドレスなど)。|
+|`Authentication-Method` |使用する認証の方式。 現在サポートされている値は、`token` のみです。|
 |``Authentication-Token`` |デバイスを Watson IoT Platform に安全に接続するための認証トークン。|
 
 
@@ -111,7 +112,7 @@ options.setProperty("Authentication-Token", "AUTH TOKEN FOR DEVICE");
 ManagedDevice managedDevice = new ManagedDevice(options, deviceData);
 ```
 
-`DeviceClient` インスタンスを既に使用している場合には、プロパティーの名前が若干異なっており、{{site.data.keyword.iot_short_notm}} ダッシュボード内の名前を反映していることに気付くはずです。`DeviceClient` を `ManagedDevice` にマイグレーションするときにこれまでの形式を使用するには、次のサンプルに示すように `ManagedDevice` インスタンスを作成します。
+`DeviceClient` インスタンスを既に使用している場合には、プロパティーの名前が若干異なっており、{{site.data.keyword.iot_short_notm}} ダッシュボード内の名前を反映していることに気付くはずです。 `DeviceClient` を `ManagedDevice` にマイグレーションするときにこれまでの形式を使用するには、次のサンプルに示すように `ManagedDevice` インスタンスを作成します。
 
 ```
 Properties options = new Properties();
@@ -125,7 +126,7 @@ ManagedDevice managedDevice = new ManagedDevice(options, deviceData);
 
 **コンストラクター 2**
 
-`DeviceData` インスタンスと `MqttClient` インスタンスの両方を受け入れることによって、`ManagedDevice` インスタンスを作成します。このコンストラクターでは、次のサンプルに示すとおり、デバイス・タイプやデバイス ID などのデバイス属性をさらに追加して `DeviceData` を作成する必要があります。
+`DeviceData` インスタンスと `MqttClient` インスタンスの両方を受け入れることによって、`ManagedDevice` インスタンスを作成します。 このコンストラクターでは、次のサンプルに示すとおり、デバイス・タイプやデバイス ID などのデバイス属性をさらに追加して `DeviceData` を作成する必要があります。
 
 ```
 // Code that constructs the MqttClient (either Synchronous or Asynchronous MqttClient)
@@ -137,23 +138,23 @@ DeviceData deviceData = new DeviceData.Builder().
              deviceId("Device-ID").
              deviceInfo(deviceInfo).
              metadata(metadata).
-            build();
+             build();
 
 ....
 ManagedDevice managedDevice = new ManagedDevice(mqttClient, deviceData);
 ```
 
-**注:** このコンストラクターは、カスタム・デバイス・ユーザーが、既に作成および接続されている `MqttClient` インスタンスを使用する `ManagedDevice` インスタンスを作成するときに役立ち、これをデバイス管理操作に活用することができます。しかし、すべてのデバイス機能を活用する場合は、ユーザーがライブラリーを使用することをお勧めします。
+**注:** このコンストラクターは、カスタム・デバイス・ユーザーが、既に作成および接続されている `MqttClient` インスタンスを使用する `ManagedDevice` インスタンスを作成するときに役立ち、これをデバイス管理操作に活用することができます。 しかし、すべてのデバイス機能を活用する場合は、ユーザーがライブラリーを使用することをお勧めします。
 
 ## 管理
 
-`管理`デバイスは、manage() メソッドを呼び出してデバイス管理アクティビティーに参加することができます。デバイスがまだ {{site.data.keyword.iot_short_notm}} に接続されていない場合は、管理要求が出されると、接続要求が内部的に開始します。
+`管理`デバイスは、manage() メソッドを呼び出してデバイス管理アクティビティーに参加することができます。 デバイスがまだ {{site.data.keyword.iot_short_notm}} に接続されていない場合は、管理要求が出されると、接続要求が内部的に開始します。
 
 ```
 managedDevice.manage();
 ```
 
-デバイスは、多重定義された manage (lifetime) メソッドを使用して、所定の時間フレームの間にデバイスを登録することができます。この時間フレームでは、デバイスが次回の**デバイスを管理**要求を送信するまでの制限時間を指定します。これを過ぎると、デバイスは非管理対象デバイスに戻り、「休止」のマークが付けられます。
+デバイスは、多重定義された manage (lifetime) メソッドを使用して、所定の時間フレームの間にデバイスを登録することができます。 この時間フレームでは、デバイスが次回の**デバイスを管理**要求を送信するまでの制限時間を指定します。これを過ぎると、デバイスは非管理対象デバイスに戻り、「休止」のマークが付けられます。
 
 ```
 managedDevice.manage(3600);
@@ -165,7 +166,7 @@ managedDevice.manage(3600);
 
 ## 管理解除
 
-デバイスは、管理される必要がなくなったときに unmanage() メソッドを呼び出すことができます。{{site.data.keyword.iot_short_notm}} は、新しいデバイス管理要求をこのデバイスに送信しなくなり、このデバイスからのすべてのデバイス管理要求 (**デバイスを管理**要求を除く) が拒否されるようになります。
+デバイスは、管理される必要がなくなったときに unmanage() メソッドを呼び出すことができます。 {{site.data.keyword.iot_short_notm}} は、新しいデバイス管理要求をこのデバイスに送信しなくなり、このデバイスからのすべてのデバイス管理要求 (**デバイスを管理**要求を除く) が拒否されるようになります。
 
 ```
 managedDevice.unmanage();
@@ -177,7 +178,7 @@ managedDevice.unmanage();
 
 ## ロケーションの更新
 {: #construct_location_update}
-デバイス位置を判別できるデバイスは、ロケーションの変更を {{site.data.keyword.iot_short_notm}} に通知することができます。ロケーションを更新するには、デバイスで、`DeviceLocation` オブジェクトを使用する `DeviceData` インスタンスを最初に作成する必要があります。
+デバイス位置を判別できるデバイスは、ロケーションの変更を {{site.data.keyword.iot_short_notm}} に通知することができます。 ロケーションを更新するには、デバイスで、`DeviceLocation` オブジェクトを使用する `DeviceData` インスタンスを最初に作成する必要があります。
 
 ```
 // Construct the location object with latitude, longitude and elevation
@@ -188,7 +189,7 @@ DeviceData deviceData = new DeviceData.Builder().
              deviceInfo(deviceInfo).
              deviceLocation(deviceLocation).
              metadata(metadata).
-            build();
+             build();
 ```
 
 デバイスが {{site.data.keyword.iot_short_notm}} に接続されると、次のメソッドを使用してロケーションを更新できます。
@@ -222,7 +223,7 @@ update() メソッドは、{{site.data.keyword.iot_short_notm}} に新規ロケ�
 ## エラー・コードの追加と消去
 {: #appending_error_codes}
 
-デバイスは、エラー状況の変化を {{site.data.keyword.iot_short_notm}} に通知することができます。エラー・コードを送信するには、デバイスは、次のサンプルに示すように `DiagnosticErrorCode` オブジェクトを作成する必要があります。
+デバイスは、エラー状況の変化を {{site.data.keyword.iot_short_notm}} に通知することができます。 エラー・コードを送信するには、デバイスは、次のサンプルに示すように `DiagnosticErrorCode` オブジェクトを作成する必要があります。
 
 ```
 DiagnosticErrorCode errorCode = new DiagnosticErrorCode(0);
@@ -231,7 +232,7 @@ DeviceData deviceData = new DeviceData.Builder().
              deviceInfo(deviceInfo).
              deviceErrorCode(errorCode).
              metadata(metadata).
-            build();
+             build();
 ```
 
 デバイスが {{site.data.keyword.iot_short_notm}} に接続されるとすぐ、次のように send() メソッドを呼び出すことで `ErrorCode` を送信できます。
@@ -264,7 +265,7 @@ if(rc == 200) {
 
 ## ログ・メッセージの追加と消去
 
-デバイスは、新しいログ・エントリーを追加することによって、{{site.data.keyword.iot_short_notm}} に変更を通知することができます。ログ・エントリーには以下の情報が含まれます。
+デバイスは、新しいログ・エントリーを追加することによって、{{site.data.keyword.iot_short_notm}} に変更を通知することができます。 ログ・エントリーには以下の情報が含まれます。
 - ログ・メッセージ
 - タイム・スタンプ
 - 重大度
@@ -282,7 +283,7 @@ DeviceData deviceData = new DeviceData.Builder().
              deviceInfo(deviceInfo).
              deviceLog(log).
              metadata(metadata).
-            build();
+             build();
 ```
 
 デバイスが {{site.data.keyword.iot_short_notm}} に接続されるとすぐ、次のサンプルに示すように send() メソッドを呼び出すことでログ・メッセージを送信できます。
@@ -355,7 +356,7 @@ managedDevice.connect();
 
 **2. サーバーへのファームウェア・アクション・サポートの通知**
 
-サーバーがファームウェア要求を開始するには、デバイスがファームウェア・アクション・フラグを true に設定する必要があります。これは、次のメソッドにブール値を指定して呼び出すことによって行えます。
+サーバーがファームウェア要求を開始するには、デバイスがファームウェア・アクション・フラグを true に設定する必要があります。 これは、次のメソッドにブール値を指定して呼び出すことによって行えます。
 
 ```
 managedDevice.supportsFirmwareActions(true);
@@ -366,7 +367,7 @@ managedDevice.manage();
 
 **3. ファームウェア・アクション・ハンドラーの作成**
 
-デバイスは、ファームウェア・アクションをサポートするために、ハンドラーを作成し、それを `ManagedDevice` に追加する必要があります。ハンドラーは、`DeviceFirmwareHandler` クラスを拡張し、以下のメソッドを実装する必要があります。
+デバイスは、ファームウェア・アクションをサポートするために、ハンドラーを作成し、それを `ManagedDevice` に追加する必要があります。 ハンドラーは、`DeviceFirmwareHandler` クラスを拡張し、以下のメソッドを実装する必要があります。
 
 ```
 public abstract void downloadFirmware(DeviceFirmware deviceFirmware);
@@ -375,7 +376,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 **3.1 downloadFirmware のサンプル実装**
 
-この実装では、ファームウェアをダウンロードしてダウンロードの状況を報告するときに `DeviceFirmware` オブジェクトを使用するロジックを追加する必要があります。ファームウェアのダウンロード操作に成功した場合、状況が `DOWNLOADED` に設定され、`UpdateStatus` が `SUCCESS` に設定されます。
+この実装では、ファームウェアをダウンロードしてダウンロードの状況を報告するときに `DeviceFirmware` オブジェクトを使用するロジックを追加する必要があります。 ファームウェアのダウンロード操作に成功した場合、状況が `DOWNLOADED` に設定され、`UpdateStatus` が `SUCCESS` に設定されます。
 
 ファームウェアのダウンロード中にエラーが発生した場合、状態が `IDLE` に設定され、`updateStatus` が以下のいずれかのエラー状況値に設定されます。
 
@@ -442,7 +443,7 @@ public void downloadFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-デバイスでは、ダウンロードしたファームウェア・イメージの整合性をベリファイヤーを使用して検査し、その状況を {{site.data.keyword.iot_short_notm}} に報告することができます。ベリファイヤーは、デバイスの開始時 (DeviceFirmware オブジェクトの作成中) にデバイスで設定することもできますし、アプリケーションでファームウェア・ダウンロード要求の一部として設定することもできます。同一性を検証するサンプル・コードを以下に示します。
+デバイスでは、ダウンロードしたファームウェア・イメージの整合性をベリファイヤーを使用して検査し、その状況を {{site.data.keyword.iot_short_notm}} に報告することができます。 ベリファイヤーは、デバイスの開始時 (DeviceFirmware オブジェクトの作成中) にデバイスで設定することもできますし、アプリケーションでファームウェア・ダウンロード要求の一部として設定することもできます。 同一性を検証するサンプル・コードを以下に示します。
 
 ```
 private boolean verifyFirmware(File file, String verifier) throws IOException {
@@ -475,7 +476,7 @@ private boolean verifyFirmware(File file, String verifier) throws IOException {
 
 **3.2 updateFirmware のサンプル実装**
 
-この実装では、ダウンロードされたファームウェアをインストールして更新の状況を報告するときに `DeviceFirmware` オブジェクトを使用するロジックを追加する必要があります。ファームウェア更新操作に成功した場合、ファームウェアの状態が IDLE に設定され、`updateStatus` が `SUCCESS` に設定されるはずです。
+この実装では、ダウンロードされたファームウェアをインストールして更新の状況を報告するときに `DeviceFirmware` オブジェクトを使用するロジックを追加する必要があります。 ファームウェア更新操作に成功した場合、ファームウェアの状態が IDLE に設定され、`updateStatus` が `SUCCESS` に設定されるはずです。
 
 ファームウェア更新中にエラーが発生した場合、`updateStatus` が以下のエラー状況値のいずれかに設定されるはずです。
 
@@ -540,7 +541,7 @@ deviceData.addFirmwareHandler(fwHandler);
 
 **1. サーバーへのデバイス・アクション・サポートの通知**
 
-リブートや工場出荷時設定へのリセットを実行するには、まず、そのサポートについてデバイスから {{site.data.keyword.iot_short_notm}} に通知する必要があります。これは、次のメソッドにブール値を指定して呼び出すことによって行えます。
+リブートや工場出荷時設定へのリセットを実行するには、まず、そのサポートについてデバイスから {{site.data.keyword.iot_short_notm}} に通知する必要があります。 これは、次のメソッドにブール値を指定して呼び出すことによって行えます。
 
 ```
 managedDevice.supportsDeviceActions(true);
@@ -551,7 +552,7 @@ managedDevice.supportsDeviceActions(true);
 
 **2. デバイス・アクション・ハンドラーの作成**
 
-デバイスは、デバイス・アクションをサポートするために、ハンドラーを作成し、それを ManagedDevice に追加する必要があります。ハンドラーは、DeviceActionHandler クラスを拡張し、以下のメソッドを実装する必要があります。
+デバイスは、デバイス・アクションをサポートするために、ハンドラーを作成し、それを ManagedDevice に追加する必要があります。 ハンドラーは、DeviceActionHandler クラスを拡張し、以下のメソッドを実装する必要があります。
 
 ```
 public abstract void handleReboot(DeviceAction action);
@@ -560,7 +561,7 @@ public abstract void handleFactoryReset(DeviceAction action);
 
 **2.1 handleReboot のサンプル実装**
 
-この実装では、デバイスをリブートしてリブートの状況を報告するときに DeviceAction オブジェクトを使用するロジックを追加する必要があります。デバイスは、失敗した場合にのみ、状況を更新してオプションでメッセージを出す必要があります (操作が成功した場合はデバイスがリブートされるので、デバイス・コードで {{site.data.keyword.iot_short_notm}} の更新を制御することはできなくなるからです)。Raspberry Pi デバイスのリブートのサンプル実装を以下に示します。
+この実装では、デバイスをリブートしてリブートの状況を報告するときに DeviceAction オブジェクトを使用するロジックを追加する必要があります。 デバイスは、失敗した場合にのみ、状況を更新してオプションでメッセージを出す必要があります (操作が成功した場合はデバイスがリブートされるので、デバイス・コードで {{site.data.keyword.iot_short_notm}} の更新を制御することはできなくなるからです)。 Raspberry Pi デバイスのリブートのサンプル実装を以下に示します。
 
 ```
 public void handleReboot(DeviceAction action) {
@@ -589,7 +590,7 @@ public void handleReboot(DeviceAction action) {
 
 **2.2 handleFactoryReset のサンプル実装**
 
-この実装では、デバイスを工場出荷時設定にリセットして状況を報告するときに DeviceAction オブジェクトを使用するロジックを追加する必要があります。デバイスは、失敗した場合にのみ、状況を更新してオプションでメッセージを出す必要があります (このプロセスの一部としてデバイスがリブートされるので、デバイスで {{site.data.keyword.iot_short_notm}} の状況の更新を制御することはできなくなるからです)。工場出荷時設定にリセットの実装のスケルトンを以下に示します。
+この実装では、デバイスを工場出荷時設定にリセットして状況を報告するときに DeviceAction オブジェクトを使用するロジックを追加する必要があります。 デバイスは、失敗した場合にのみ、状況を更新してオプションでメッセージを出す必要があります (このプロセスの一部としてデバイスがリブートされるので、デバイスで {{site.data.keyword.iot_short_notm}} の状況の更新を制御することはできなくなるからです)。 工場出荷時設定にリセットの実装のスケルトンを以下に示します。
 
 ```
 public void handleFactoryReset(DeviceAction action) {
@@ -620,7 +621,7 @@ deviceData.addDeviceActionHandler(actionHandler);
 ## デバイス属性変更の listen
 {: #listen_device_attribute}
 
-この ibmiotf クライアント・ライブラリーは、{{site.data.keyword.iot_short_notm}} から更新要求が送られるたびに、対応するオブジェクトを更新します。このような更新要求は、アプリケーションから直接開始されるか、{{site.data.keyword.iot_short_notm}} の REST API を使用して間接的に開始されます (ファームウェア更新)。ライブラリーは、これらの属性を更新するだけでなく、デバイス属性の更新時にデバイスに通知できるようにするためのメカニズムも提供します。
+この ibmiotf クライアント・ライブラリーは、{{site.data.keyword.iot_short_notm}} から更新要求が送られるたびに、対応するオブジェクトを更新します。このような更新要求は、アプリケーションから直接開始されるか、{{site.data.keyword.iot_short_notm}} の REST API を使用して間接的に開始されます (ファームウェア更新)。 ライブラリーは、これらの属性を更新するだけでなく、デバイス属性の更新時にデバイスに通知できるようにするためのメカニズムも提供します。
 
 この操作によって更新できる属性は、`location`、`metadata`、`device information`、`firmware` です。
 
@@ -633,7 +634,7 @@ deviceInfo.addPropertyChangeListener(listener);
 metadata.addPropertyChangeListener(listener);
 ```
 
-また、デバイスは、通知を受け取るために `propertyChange()` メソッドを実装する必要もあります。次のサンプルでこの実装方法を示します。
+また、デバイスは、通知を受け取るために `propertyChange()` メソッドを実装する必要もあります。 次のサンプルでこの実装方法を示します。
 
 ```
 public void propertyChange(PropertyChangeEvent evt) {

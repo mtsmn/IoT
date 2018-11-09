@@ -2,8 +2,8 @@
 
 copyright:
 
-years: 2017
-lastupdated: "2017-07-20"
+years: 2017, 2018
+lastupdated: "2018-03-26"
 
 ---
 
@@ -41,7 +41,7 @@ https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002
 API                     | Utilizzata per ...       
 ------------- | -------------
 [Organization Administration ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | Configura un'organizzazione (incluse la creazione e l'eliminazione dei dispositivi), controlla l'utilizzo, lo stato del servizio ed esegue la diagnostica dei problemi di connessione del dispositivo.
-[Security ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Gestisce l'autenticazione egli inviti utente e l'autorizzazione degli utenti, delle chiavi API e dei dispositivi.
+[Security ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Gestisce l'autenticazione e l'autorizzazione di utenti, chiavi API e dispositivi.
 [Information Management ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Accede ai dati evento del dispositivo, così come all'ubicazione del dispositivo e ottiene le informazioni sul meteo per tale ubicazione. 
 [Data Management  ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window}   |   Organizza e integra i dati in entrata e in uscita di {{site.data.keyword.iot_short_notm}}.
 [Device Management ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | Interagisce con i dispositivi gestiti utilizzando il protocollo di gestione del dispositivo.
@@ -62,6 +62,4 @@ API                     | Utilizzata per ...
 
 API                     | Utilizzata per ...       
 ------------- | -------------
-[Gateway Security  ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html){: new_window}   | Controlla e assegna i ruoli ai dispositivi gateway.
-[Device Security  ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-devices-beta.html){: new_window} | Controlla e assegna i ruoli ai dispositivi.
-[Access Control ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window} | Limita l'accesso utente. 
+[Restore Deleted Devices ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html){: new_window}   | Se un dispositivo viene eliminato per errore, puoi ripristinarlo entro 14 giorni.

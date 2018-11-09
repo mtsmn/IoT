@@ -21,9 +21,9 @@ lastupdated: "2017-12-21"
 ## 시작하기 전에
 {: #byb}
 
-디바이스를 연결하고 데이터를 이용하기 전에 {{site.data.keyword.Bluemix_notm}} 계정을 등록하고 {{site.data.keyword.Bluemix_notm}} 조직에서 {{site.data.keyword.iot_short_notm}} 서비스의 인스턴스를 작성하십시오. [IBM Cloud 서비스 카탈로그 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}의 {{site.data.keyword.iot_short_notm}} 페이지에서 직접 {{site.data.keyword.iot_short_notm}} 인스턴스를 작성할 수 있습니다.   
+디바이스를 연결하고 데이터를 이용하기 전에 {{site.data.keyword.Bluemix_notm}} 계정을 등록하고 {{site.data.keyword.Bluemix_notm}} 조직에서 {{site.data.keyword.iot_short_notm}} 서비스의 인스턴스를 작성하십시오. [IBM Cloud 서비스 카탈로그 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}의 {{site.data.keyword.iot_short_notm}} 페이지에서 직접 {{site.data.keyword.iot_short_notm}} 인스턴스를 작성할 수 있습니다.  
 
-{{site.data.keyword.Bluemix_notm}}에서 계정을 등록하고 영역을 구성하는 방법과 기타 계정 관리 설정에 대한 세부사항은 [IBM Cloud 계정 관리](https://console.ng.bluemix.net/docs/admin/account.html#signup)를 참조하십시오. 
+{{site.data.keyword.Bluemix_notm}}에서 계정을 등록하고 영역을 구성하는 방법과 기타 계정 관리 설정에 대한 세부사항은 [IBM Cloud 계정 관리](https://console.ng.bluemix.net/docs/admin/account.html#signup)를 참조하십시오.
 
 대시보드에서 {{site.data.keyword.iot_short_notm}} 인스턴스를 설정하고 구성할 수 있습니다. 대시보드를 열려면 {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.iot_short_notm}} 서비스 인스턴스로 이동한 다음 **실행**을 클릭하십시오.
 
@@ -40,7 +40,7 @@ lastupdated: "2017-12-21"
 
    | 서비스가 배치됨 | 서비스가 배치되지 않음
   ------------- | -------------
-  **I 디바이스가 연결되도록 함** | [{{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task)에 디바이스를 연결합니다.| [조직 데모 재생(![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"))](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}에서 디바이스 연결을 탐색합니다.
+  **I 디바이스가 연결되도록 함** | [{{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task)에 디바이스를 연결합니다.| [조직 데모 재생 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}에서 디바이스 연결을 탐색합니다.
   **I 디바이스가 연결되지 않도록 함** | [Node-RED 디바이스 시뮬레이터 작성 및 연결](nodereddevice_sample.html){:new_window}을 수행합니다. | [Watson IoT Platform 스타터](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html)를 시작합니다.
 특정 디바이스 유형을 {{site.data.keyword.iot_short_notm}}에 연결하는 방법에 대한 자세한 정보는 [developerWorks 레시피 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}를 참조하십시오.  
 

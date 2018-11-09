@@ -24,6 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Caroline_Mcnamara_architecture.v2</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -36,20 +37,6 @@
        inkscape:vp_z="674 : 180 : 1"
        inkscape:persp3d-origin="337 : 120 : 1"
        id="perspective681" />
-    <inkscape:perspective
-       id="perspective3512"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <inkscape:perspective
-       id="perspective3564"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -65,8 +52,8 @@
      id="namedview675"
      showgrid="false"
      inkscape:zoom="1.3111111"
-     inkscape:cx="485.46243"
-     inkscape:cy="192.6589"
+     inkscape:cx="292.00234"
+     inkscape:cy="196.78285"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -143,10 +130,10 @@
     <text
        style="font-size:11px;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
        id="text23"
-       x="49.110001"
+       x="51.110001"
        y="69.849998">
       <tspan
-         style="letter-spacing:0.01287287000000000em;-inkscape-font-specification:SimHei;font-family:SimHei"
+         style="letter-spacing:0.01287287em;font-family:SimHei;-inkscape-font-specification:SimHei"
          id="tspan25">应用程序</tspan>
     </text>
     <g
@@ -211,24 +198,24 @@
     <text
        style="font-size:11px;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
        id="text71"
-       x="51.459999"
+       x="53.459999"
        y="143.85001">
       <tspan
          style="letter-spacing:0.00266335em"
          id="tspan73">I</tspan>
       <tspan
-         x="54.549999"
+         x="56.549999"
          y="143.85001"
          style="letter-spacing:-0.07927912em"
          id="tspan75">o</tspan>
       <tspan
-         x="60.200001"
+         x="62.200001"
          y="143.85001"
          id="tspan77">T</tspan>
       <tspan
-         x="69.779999"
+         x="71.779999"
          y="143.85001"
-         style="letter-spacing:0.00754616000000000em;-inkscape-font-specification:SimHei;font-family:SimHei"
+         style="letter-spacing:0.00754616em;font-family:SimHei;-inkscape-font-specification:SimHei"
          id="tspan79">设备</tspan>
     </text>
     <rect
@@ -242,24 +229,24 @@
     <text
        style="font-size:11px;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
        id="text93"
-       x="50.689999"
+       x="52.689999"
        y="217.85001">
       <tspan
          style="letter-spacing:0.00266335em"
          id="tspan95">I</tspan>
       <tspan
-         x="53.779999"
+         x="55.779999"
          y="217.85001"
          style="letter-spacing:-0.07927912em"
          id="tspan97">o</tspan>
       <tspan
-         x="59.43"
+         x="61.43"
          y="217.85001"
          id="tspan99">T</tspan>
       <tspan
-         x="69.009995"
+         x="71.009995"
          y="217.85001"
-         style="letter-spacing:0.01083097000000000em;-inkscape-font-specification:SimHei;font-family:SimHei"
+         style="letter-spacing:0.01083097em;font-family:SimHei;-inkscape-font-specification:SimHei"
          id="tspan101">网关</tspan>
     </text>
     <rect
@@ -272,90 +259,96 @@
     <text
        style="font-size:11px;letter-spacing:-0.04367898em;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
        id="text117"
-       x="19.17"
+       x="23.17"
        y="290.85001">W<tspan
-   x="29.07"
+   x="33.07"
    y="290.85001"
    style="letter-spacing:-0.01793324em"
    id="tspan119">a</tspan>
 <tspan
-   x="34.989998"
+   x="38.989998"
    y="290.85001"
    style="letter-spacing:-0.01305043em"
    id="tspan121">t</tspan>
 <tspan
-   x="38.509998"
+   x="42.509998"
    y="290.85001"
    style="letter-spacing:-0.01447088em"
    id="tspan123">s</tspan>
 <tspan
-   x="44.059998"
+   x="48.059998"
    y="290.85001"
    style="letter-spacing:-0.01509233em"
    id="tspan125">o</tspan>
 <tspan
-   x="50.419998"
+   x="54.419998"
    y="290.85001"
    style="letter-spacing:-0.01997514em"
    id="tspan127">n</tspan>
 <tspan
-   x="59.349998"
+   x="63.349998"
    y="290.85001"
    style="letter-spacing:-0.01740057em"
    id="tspan129">I</tspan>
 <tspan
-   x="62.219997"
+   x="66.220001"
    y="290.85001"
    style="letter-spacing:-0.09925426em"
    id="tspan131">o</tspan>
 <tspan
-   x="67.650002"
+   x="71.650002"
    y="290.85001"
    style="letter-spacing:-0.01997514em"
    id="tspan133">T</tspan>
 <tspan
-   x="76.790001"
+   x="80.790001"
    y="290.85001"
    style="letter-spacing:-0.02725497em"
    id="tspan135">P</tspan>
 <tspan
-   x="83.830002"
+   x="87.830002"
    y="290.85001"
    style="letter-spacing:-0.01615767em"
    id="tspan137">l</tspan>
 <tspan
-   x="86.299995"
+   x="90.299995"
    y="290.85001"
    style="letter-spacing:-0.01793324em"
    id="tspan139">a</tspan>
 <tspan
-   x="92.220001"
+   x="96.220001"
    y="290.85001"
    style="letter-spacing:0.00417259em"
    id="tspan141">t</tspan>
 <tspan
-   x="95.93"
+   x="99.93"
    y="290.85001"
    style="letter-spacing:-0.02441406em"
    id="tspan143">f</tspan>
 <tspan
-   x="99.119995"
+   x="103.12"
    y="290.85001"
    style="letter-spacing:-0.01500355em"
    id="tspan145">o</tspan>
 <tspan
-   x="105.48"
+   x="109.48"
    y="290.85001"
    style="letter-spacing:-0.00523793em"
    id="tspan147">r</tspan>
 <tspan
-   x="109.3"
+   x="113.3"
    y="290.85001"
    style="letter-spacing:-0.02006392em"
    id="tspan149">m</tspan>
 <tspan
    style="letter-spacing:-0.01349432em"
-   id="tspan151" />
+   id="tspan151">
+  <tspan
+     x="45.559998"
+     y="303.85001"
+     id="tspan153"
+     style="font-family:SimHei;-inkscape-font-specification:SimHei">仪表板</tspan>
+</tspan>
 </text>
     <rect
        x="213"
@@ -365,57 +358,56 @@
        style="fill: #f0f0ef"
        id="rect171" />
     <text
-       style="font-size:12px;font-weight:700;fill:#1d1d1b;font-family:'HelveticaNeue-Bold, Helvetica Neue'"
-       id="text173"
-       x="256"
-       y="20.5">
+       transform="translate(244 20.5)"
+       style="font-size: 12px;fill: #1d1d1b;font-family: HelveticaNeue-Bold, Helvetica Neue;font-weight: 700"
+       id="text173">
       <tspan
-         style="letter-spacing:0.00325521em"
+         style="letter-spacing: 0.0032552083333333335em"
          id="tspan175">I</tspan>
       <tspan
-         x="259.58002"
-         y="20.5"
-         style="letter-spacing:0.00130208em"
+         x="3.58"
+         y="0"
+         style="letter-spacing: 0.0013020833333333333em"
          id="tspan177">B</tspan>
       <tspan
-         x="268.04001"
-         y="20.5"
-         style="letter-spacing:0.009847em"
+         x="12.04"
+         y="0"
+         style="letter-spacing: 0.009847005208333334em"
          id="tspan179">M</tspan>
       <tspan
-         x="279.04001"
-         y="20.5"
-         id="tspan181">®</tspan>
+         x="23.04"
+         y="0"
+         id="tspan181">® </tspan>
       <tspan
-         x="291.98001"
-         y="20.5"
-         style="letter-spacing:0.00504557em"
-         id="tspan183">Bl</tspan>
+         x="35.98"
+         y="0"
+         style="letter-spacing: 0.005045572916666667em"
+         id="tspan183">Cl</tspan>
       <tspan
-         x="303.64999"
-         y="20.5"
-         style="letter-spacing:0.00838216em"
-         id="tspan185">u</tspan>
+         x="47.65"
+         y="0"
+         style="letter-spacing: 0.008382161458333334em"
+         id="tspan185">o</tspan>
       <tspan
-         x="310.85999"
-         y="20.5"
-         style="letter-spacing:0.00537109em"
-         id="tspan187">e</tspan>
+         x="54.86"
+         y="0"
+         style="letter-spacing: 0.00537109375em"
+         id="tspan187">u</tspan>
       <tspan
-         x="317.82001"
-         y="20.5"
-         style="letter-spacing:0.00415039em"
-         id="tspan189">m</tspan>
+         x="61.82"
+         y="0"
+         style="letter-spacing: 0.004150390625em"
+         id="tspan189">d</tspan>
       <tspan
-         x="328.73999"
-         y="20.5"
-         style="letter-spacing:0.0090332em"
-         id="tspan191">i</tspan>
+         x="72.74"
+         y="0"
+         style="letter-spacing: 0.009033203125em"
+         id="tspan191" />
       <tspan
-         x="331.94"
-         y="20.5"
-         style="letter-spacing:-0.00008138em"
-         id="tspan193">x</tspan>
+         x="75.94"
+         y="0"
+         style="letter-spacing: -0.00008138020833333333em"
+         id="tspan193" />
     </text>
     <text
        transform="translate(244 72.5)"
@@ -611,18 +603,18 @@
        style="font-size:10px;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
        id="text272"
        x="463.34"
-       y="120.57">
+       y="118.57">
       <tspan
-         style="letter-spacing:0.01162109000000000em;-inkscape-font-specification:SimHei;font-family:SimHei"
+         style="letter-spacing:0.01162109em;font-family:SimHei;-inkscape-font-specification:SimHei"
          id="tspan274">设备状态</tspan>
     </text>
     <text
        style="font-size:10px;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
        id="text294"
-       x="558.89001"
+       x="556.89001"
        y="173.28">
       <tspan
-         style="letter-spacing:0.01054688000000000em;-inkscape-font-specification:SimHei;font-family:SimHei"
+         style="letter-spacing:0.01054688em;font-family:SimHei;-inkscape-font-specification:SimHei"
          id="tspan296">数据存储</tspan>
     </text>
     <path
@@ -636,10 +628,10 @@
     <text
        style="font-size:10px;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
        id="text320"
-       x="462.64001"
+       x="460.64001"
        y="223.67999">
       <tspan
-         style="letter-spacing:0.02314453000000000em;-inkscape-font-specification:SimHei;font-family:SimHei"
+         style="letter-spacing:0.02314453em;font-family:SimHei;-inkscape-font-specification:SimHei"
          id="tspan322">上次事件</tspan>
     </text>
     <text
@@ -681,7 +673,7 @@
        id="text364">
       <tspan
          style="-inkscape-font-specification:SimHei;font-family:SimHei"
-         id="tspan3145">因特网</tspan>
+         id="tspan3491">因特网</tspan>
     </text>
     <g
        id="g380">
@@ -777,11 +769,11 @@
       <text
          style="font-size:9px;letter-spacing:-0.01378038em;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
          id="text428"
-         x="126.03"
+         x="124.03"
          y="180.31">
         <tspan
-           style="-inkscape-font-specification:SimHei;font-family:SimHei"
-           id="tspan3141">边缘规则</tspan>
+           style="font-family:SimHei;-inkscape-font-specification:SimHei"
+           id="tspan3493">边缘规则</tspan>
       </text>
     </g>
     <g
@@ -789,11 +781,11 @@
       <rect
          x="112"
          y="187.5"
-         width="62.389999"
+         width="62.39"
          height="16.5"
          rx="8.25"
          ry="8.25"
-         style="fill:#6fc9ee;stroke:#ffffff;stroke-width:1.20072794px;stroke-miterlimit:10"
+         style="fill: #6fc9ee;stroke: #fff;stroke-miterlimit: 10;stroke-width: 1.2007279559117px"
          id="rect448" />
       <text
          style="font-size:9px;letter-spacing:0.00227865em;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
@@ -801,8 +793,8 @@
          x="132.45"
          y="199.31">
         <tspan
-           style="-inkscape-font-specification:SimHei;font-family:SimHei"
-           id="tspan3143">分析</tspan>
+           style="font-family:SimHei;-inkscape-font-specification:SimHei"
+           id="tspan3495">分析</tspan>
       </text>
     </g>
     <g
@@ -907,10 +899,10 @@
     <text
        style="font-size:10px;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
        id="text512"
-       x="327.20999"
-       y="121.35">
+       x="329.20999"
+       y="119.35">
       <tspan
-         style="letter-spacing:0.00771484000000000em;-inkscape-font-specification:SimHei;font-family:SimHei"
+         style="letter-spacing:0.00771484em;font-family:SimHei;-inkscape-font-specification:SimHei"
          id="tspan514">云规则</tspan>
     </text>
     <text
@@ -924,10 +916,10 @@
     <text
        style="font-size:10px;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
        id="text560"
-       x="324.75"
-       y="229.35001">
+       x="322.75"
+       y="227.35001">
       <tspan
-         style="letter-spacing:0.01201172000000000em;-inkscape-font-specification:SimHei;font-family:SimHei"
+         style="letter-spacing:0.01201172em;font-family:SimHei;-inkscape-font-specification:SimHei"
          id="tspan562">区块链集成</tspan>
     </text>
     <polygon
@@ -1127,23 +1119,16 @@
            id="polygon673" />
       </g>
     </g>
-    <text
-       y="234.07533"
-       x="462.95374"
-       style="font-size:10px;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
-       id="text272-1">
-      <tspan
-         style="-inkscape-font-specification:SimHei;font-family:SimHei"
-         id="tspan3147">高速缓存</tspan>
-    </text>
   </g>
   <text
-     style="font-size:10px;fill:#1d1d1b;font-family:'HelveticaNeue-Medium, Helvetica Neue'"
-     id="text272-5"
-     x="52.992458"
-     y="302.9588">
-    <tspan
-       style="-inkscape-font-specification:SimHei;font-family:SimHei"
-       id="tspan3139">仪表板</tspan>
-  </text>
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;font-family:SimHei;-inkscape-font-specification:SimHei"
+     x="461.72882"
+     y="236.27118"
+     id="text3501"><tspan
+       sodipodi:role="line"
+       id="tspan3503"
+       x="461.72882"
+       y="236.27118"
+       style="font-size:10px">高速缓存</tspan></text>
 </svg>

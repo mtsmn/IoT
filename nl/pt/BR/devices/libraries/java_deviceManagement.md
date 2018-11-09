@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2016-11-22"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -162,7 +162,7 @@ managedDevice.manage(3600);
 
 Para obter mais informações sobre a operação `Manage`, consulte a [documentação].
 
-  [documentation]: ../device_mgmt/operations/manage.html
+  [documentation]:../device_mgmt/operations/manage.html
 
 ## Cancelar Gerenciamento
 
@@ -174,7 +174,7 @@ managedDevice.unmanage();
 
 Para obter mais informações sobre a operação `Unmanage`, consulte a [documentação].
 
-  [documentation]: ../device_mgmt/operations/manage.html
+  [documentation]:../device_mgmt/operations/manage.html
 
 ## Atualização de localização
 {: #construct_location_update}

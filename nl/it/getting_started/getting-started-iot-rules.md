@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -13,13 +13,21 @@ lastupdated: "2017-06-16"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guida 2: Utilizzo delle azioni e delle regole in tempo reale di base 
-Utilizza le istruzioni in questa guida per configurare una serie di azioni e di regole di base per alcune analisi in tempo reale dei tuoi dati IoT del nastro trasportatore.
-{:shortdesc}
+# Guida 2: Utilizzo delle azioni e delle regole in tempo reale di base
+
+**Importante:** stiamo facendo partire una beta per definire in un nuovo modo le regole nei tuoi dati del dispositivo IoT come parte
+di un programma di modifiche più grande per migliorare il modo in cui {{site.data.keyword.iot_full}} fornisce le regole e le azioni.
+
+Per ulteriori informazioni, controlla il post del blog [An alternative approach to defining Rules on IoT data ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/2018/03/01/alternative-approach-defining-rules-iot-data/){: new_window}.
+
+Per iniziare a definire le tue regole, consulta la documentazione [Creazione delle regole integrate (Beta)](../information_management/im_rules.html).
 
 ## Panoramica e obiettivi
 {: #overview}  
-Ora che hai correttamente configurato il tuo nastro trasportatore, lo hai collegato a {{site.data.keyword.iot_short_notm}} e inviato alcuni dati, è ora di rendere tali dati utili utilizzando le regole e le azioni.
+
+Utilizza le istruzioni in questa guida per configurare una serie di azioni e di regole di base per alcune analisi in tempo reale dei tuoi dati IoT del nastro trasportatore.
+
+Ora che hai correttamente configurato il tuo nastro trasportatore, lo hai collegato a {{site.data.keyword.iot_full}} e inviato alcuni dati, è ora di rendere tali dati utili utilizzando le regole e le azioni.
 
 ![Regola di esempio](images/slow_rule.svg "Regola di esempio")
 
@@ -30,7 +38,7 @@ Come parte di questa guida eseguirai queste azioni:
 
 ## Prerequisiti
 {: #prereqs}  
-Devi disporre di un dispositivo collegato del tipo `iot-conveyor-belt` che invia gli eventi con il nome evento `sensorData` con un payload del messaggio che include le seguenti proprietà: 
+Devi disporre di un dispositivo collegato del tipo `iot-conveyor-belt` che invia gli eventi con il nome evento `sensorData` con un payload del messaggio che include le seguenti proprietà:
 ```
 {
 	"d": {
@@ -53,7 +61,7 @@ Per utilizzare le proprietà inviate dal tuo dispositivo come trigger per le tue
 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Devices** e seleziona **Manage Schemas**.
 2. Fai clic su **Add Schema**.
 3. Seleziona il tipo di dispositivo **iot-conveyor-belt** e fai clic su **Next**.
-4. Aggiungi le proprietà allo schema. 
+4. Aggiungi le proprietà allo schema.
  1. Fai clic su **Add property**.
  2. Seleziona **From Connected**.
  3. Invia un punto di dati del nastro trasportatore modificando il valore rpm.
@@ -73,17 +81,17 @@ Quando creiamo una regola, desideriamo confrontare il valore rpm numerico con un
  1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Devices** e seleziona **Manage Schemas**.
  1. Fai clic sul nuovo schema che hai appena creato e seleziona **Properties**.
  2. Fai clic sull'icona di modifica per modificare lo schema.
- 3. Fai clic sull'icona di modifica vicino alla proprietà `rpm`.
+ 3. Fai clic sull'icona di modifica accanto alla proprietà `rpm`.
  4. Modifica il tipo di dati con `Float`.  
  5. Fai clic su **OK**.
- 6. Fai clic su **Finish** per aggiornare lo schema.   
-2. Crea la regola. 
+ 6. Fai clic su **Finish** per aggiornare lo schema.  
+2. Crea la regola.
  1. Nel dashboard, passa a **Rules**.
  2. Fai clic su **Create Cloud Rule**.
  3. Immetti `RPM rule` per il nome.
  4. Imposta la regola in modo che venga applicata allo schema **iot-conveyor-belt**.
  5. Fai clic su **Avanti**.
- 6. Aggiungi una condizione della regola. 
+ 6. Aggiungi una condizione della regola.
     6. Fai clic sul tile **New condition** per aggiungere una condizione alla regola.
     7. Seleziona la proprietà **rpm**.
     8. Seleziona l'operatore inferiore a (`<`).
@@ -100,7 +108,7 @@ Per ridurre il rpm, puoi simulare dei problemi con il nastro trasportatore che p
 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Boards**.
 3. Seleziona la tabella **Rule-Centric Analytics**.
 4. Nell'applicazione web nastro trasportatore, riduci il valore rpm al di sotto di 0,5 rpm.
-Il dispositivo invia i dati a {{site.data.keyword.iot_short_notm}} quando vengono modificate le letture del sensore. Puoi simulare questo invio di dati, arrestando, avviando o modificando la velocità del nastro trasportatore.   
+Il dispositivo invia i dati a {{site.data.keyword.iot_short_notm}} quando vengono modificate le letture del sensore. Puoi simulare questo invio di dati, arrestando, avviando o modificando la velocità del nastro trasportatore.  
 5. Verifica che venga visualizzato `RPM rule` nella scheda Rules with Alerts.
 6. Seleziona il nuovo avviso nella scheda Rule Alerts e visualizza i punti dati che hanno attivato la regola nella scheda Rule Alert Info.  
 Per visualizzare ulteriori informazioni sull'avviso, visualizza i dettagli del dispositivo nelle schede Associated Devices, Device Info e Device Properties.  
@@ -127,7 +135,7 @@ Sostituisci l'indirizzo email con il tuo.
 5. Seleziona l'azione nell'elenco e fai clic su **OK** per configurarla.
 6. Fai clic su **Save** per abilitare l'azione con la regola.
 7. Verifica la nuova azione.
- 4. Nell'applicazione web nastro trasportatore, riduci il valore rpm al di sotto di 0,5 rpm. 
+ 4. Nell'applicazione web nastro trasportatore, riduci il valore rpm al di sotto di 0,5 rpm.
  5. Verifica di aver ricevuto l'email di avviso.  
 Il corpo del messaggio potrebbe essere simile a qualcosa di simile:
 > **Regola:** RPM rule  
@@ -139,11 +147,11 @@ Il corpo del messaggio potrebbe essere simile a qualcosa di simile:
 > {"d":{"id":"belt1","ts":1494354089837,"ay":"0.00","rpm":"0.4","running":true},"ruleContent":{"jobID":"sdIyBfdu","contextSchemas":[],"ruleDescription":"","severity":4,"messageSchemas":["iot_conveyor_belt"],"disabled":false,"ruleCondition":"iot_conveyor_belt.d.rpm<0.5","transforms":[],"name":"RPM rule","actions":["pziIRovt"],"id":"ncKK4N7k","updated":"9 May 2017 18:20:25 GMT","created":"9 May 2017 17:41:38 GMT","version":7}}  
 > Questa è un'email generata automaticamente. Non rispondere. Per domande su questo avviso, contatta il tuo amministratore di sistema.
 
-## Operazioni successive 
+## Operazioni successive
 {: #whats_next}  
-Continua con la prossima guida o passa a un altro argomento di tuo interesse: 
+Continua con la prossima guida o passa a un altro argomento di tuo interesse:
 - [Guida 3: Monitoraggio dei tuoi dati del dispositivo](getting-started-iot-monitoring.html)  
-Ora che hai collegato uno o più dispositivi a iniziato a fare buon uso dei dati del dispositivo, è ora di iniziare a monitorare una raccolta di dispositivi e i dati in tempo reale che stanno inviando. 
+Ora che hai collegato uno o più dispositivi a iniziato a fare buon uso dei dati del dispositivo, è ora di iniziare a monitorare una raccolta di dispositivi e i dati in tempo reale che stanno inviando.
 - [Guida 4: Simulazione di un grande numero di dispositivi](getting-started-iot-large-scale-simulation.html)  
 L'applicazione di esempio nastro trasportatore nel percorso A ti consente di simulare manualmente uno o alcuni dispositivi nastro trasportatore. Questa guida ti permette di configurare un ambiente simulato con un gran numero di dispositivi.
 - [Collega altri dispositivi IoT a {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_task.html)

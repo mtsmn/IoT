@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-04"---
+  years: 2015, 2018
+lastupdated: "2018-01-11"
+
+---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -15,7 +17,7 @@ lastupdated: "2017-04-04"---
 {: #python}
 
 
-Python を使用して、{{site.data.keyword.iot_full}} の組織と対話するアプリケーションをビルドし、作成できます。{{site.data.keyword.iot_short_notm}} 用の Python クライアントは、MQTT や HTTP などの基礎的なプロトコルを抽象化することで、{{site.data.keyword.iot_short_notm}} 機能とのシンプルな対話を促進する API を備えています。
+Python を使用して、{{site.data.keyword.iot_full}} の組織と対話するアプリケーションをビルドし、作成できます。 {{site.data.keyword.iot_short_notm}} 用の Python クライアントは、MQTT や HTTP などの基礎的なプロトコルを抽象化することで、{{site.data.keyword.iot_short_notm}} 機能とのシンプルな対話を促進する API を備えています。
 
 {:shortdesc}
 
@@ -29,17 +31,16 @@ Python を使用したアプリケーションの開発を始められるよう�
 ## コンストラクター
 {: #constructor}
 
-options 辞書は、{{site.data.keyword.iot_short_notm}} モジュールと対話するために使用する定義を作成します。コンストラクターはクライアント・インスタンスを作成し、以下の定義を格納する options 辞書を受け入れます。
+options 辞書は、{{site.data.keyword.iot_short_notm}} モジュールと対話するために使用する定義を作成します。 コンストラクターはクライアント・インスタンスを作成し、以下の定義を格納する options 辞書を受け入れます。
 
-|定義|説明
-|
+|定義|説明 |
 |:-----|:-----|
 |`orgId`|組織 ID。|
 |`appId`|組織内のアプリケーション固有の ID。|
-|`auth-method`|認証の方式。サポートされている唯一の方式は `apikey` です。|
+|`auth-method`|認証の方式。 サポートされている唯一の方式は `apikey` です。|
 |`auth-key`|オプションの API キー。auth-method の値を `apikey` に設定する場合は、これを指定する必要があります。|
 |`auth-token`|API キー・トークン。auth-method の値を `apikey` に設定する場合は、これも指定する必要があります。|
-|`clean-session`|true または false の値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は true に設定されます。|
+|`clean-session`|true または false の値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。 デフォルトでは、`clean-session` は true に設定されます。|
 
 
 options 辞書が提供されない場合、クライアントは未登録デバイスとして {{site.data.keyword.iot_short_notm}} Quickstart サービスに接続されます。
@@ -97,22 +98,22 @@ API クライアントの各メソッドは、次のいずれかの応答を返�
 - 成功した場合には、有効な JSON またはブール値の応答
 - 成功しなかった場合には、IoTFCReSTException 例外
 
-API 呼び出しが失敗した理由についての詳細を取得したり、操作が部分的に成功したかどうかを判断したりするために、アプリケーションで例外応答のプロパティーを解析することができます。IoTFCReSTException 例外応答には、次のプロパティーが含まれています。
+API 呼び出しが失敗した理由についての詳細を取得したり、操作が部分的に成功したかどうかを判断したりするために、アプリケーションで例外応答のプロパティーを解析することができます。 IoTFCReSTException 例外応答には、次のプロパティーが含まれています。
 
 |プロパティー|説明|
 |:---|:---|
 |``httpcode``|HTTP 状況コード。|
 |``message``|失敗した理由が含まれている例外メッセージ。|
-|``response``|部分的な応答が含まれている JSON エレメント。存在しない場合、この値は Null に設定されます。|
+|``response``|部分的な応答が含まれている JSON エレメント。 存在しない場合、この値は Null に設定されます。|
 
 ## デバイス・イベントのサブスクライブ
 {: #subscribe_device_events}
 
-イベントとは、デバイスが {{site.data.keyword.iot_short_notm}} インスタンスにデータをパブリッシュするためのメカニズムのことです。デバイスはイベントの内容を制御し、送信するイベントごとに名前を割り当てます。
+イベントとは、デバイスが {{site.data.keyword.iot_short_notm}} インスタンスにデータをパブリッシュするためのメカニズムのことです。 デバイスはイベントの内容を制御し、送信するイベントごとに名前を割り当てます。
 
 {{site.data.keyword.iot_short_notm}} インスタンスがイベントを受信すると、その受信イベントの資格情報によって、送信元デバイスが識別されます。そのためデバイスが、別のデバイスになりすますことは不可能です。
 
-デフォルトでは、アプリケーションは、すべての接続デバイスのすべてのイベントをサブスクライブします。deviceType、deviceId、event、msgFormat の各パラメーターを使用して、サブスクリプションの範囲を制御できます。単一のクライアントで複数のサブスクリプションをサポートできます。次のコード・サンプルは、deviceType、deviceId、event、msgFormat の各パラメーターを使用してサブスクリプションの範囲を定義する方法を示しています。
+デフォルトでは、アプリケーションは、すべての接続デバイスのすべてのイベントをサブスクライブします。 deviceType、deviceId、event、msgFormat の各パラメーターを使用して、サブスクリプションの範囲を制御できます。 単一のクライアントで複数のサブスクリプションをサポートできます。 次のコード・サンプルは、deviceType、deviceId、event、msgFormat の各パラメーターを使用してサブスクリプションの範囲を定義する方法を示しています。
 
 
 ### すべてのデバイスのすべてのイベントをサブスクライブする
@@ -186,16 +187,16 @@ client.subscribeToDeviceEvents(deviceType=myDeviceType, deviceId=myDeviceId, msg
 ## デバイスからのイベントの処理
 {: #handling_events_devices}
 
-サブスクリプションで受信したイベントを処理するには、イベント・コールバック・メソッドを登録する必要があります。メッセージは、以下の Event クラスのインスタンスとして返されます。
+サブスクリプションで受信したイベントを処理するには、イベント・コールバック・メソッドを登録する必要があります。 メッセージは、以下の Event クラスのインスタンスとして返されます。
 
 |プロパティー|データ・タイプ|説明|
 |:---|:---|
 |``event.device``|ストリング|組織内のすべてのタイプのデバイスにおいて対象デバイスを一意に識別します。|
-|``event.deviceType``|ストリング|デバイス・タイプを識別します。通常、deviceType は、特定のタスクを実行するデバイスのグループです (例えば "weatherballoon")。|
-|``event.deviceId``|ストリング|デバイスの ID を示します。通常、特定のデバイス・タイプにおいて、deviceId はそのデバイスの固有 ID です (シリアル番号や MAC アドレスなど)。|
+|``event.deviceType``|ストリング|デバイス・タイプを識別します。 通常、deviceType は、特定のタスクを実行するデバイスのグループです (例えば "weatherballoon")。|
+|``event.deviceId``|ストリング|デバイスの ID を示します。 通常、特定のデバイス・タイプにおいて、deviceId はそのデバイスの固有 ID です (シリアル番号や MAC アドレスなど)。|
 |``event.event``|ストリング|通常、特定の複数のイベントをグループ化するために使用します (「status」、「warning」、「data」など)。
 |``event.format``|ストリング|形式は任意のストリング (JSON など) となります。
-|``event.data``|辞書|メッセージ・ペイロードのデータ。最大長は 131072 バイトです。
+|``event.data``|辞書|メッセージ・ペイロードのデータ。 最大長は 131072 バイトです。
 |``event.timestamp``|日時|イベントの日時|
 
 ```python
@@ -220,7 +221,7 @@ client.subscribeToDeviceEvents()
 {: #subscribe_device_status}
 
 
-デフォルトでは、デバイス状況をサブスクライブすると、すべての接続デバイスの状況更新を受信します。タイプと ID のパラメーターを使用して、サブスクリプションの範囲を制御できます。単一のクライアントで複数のサブスクリプションをサポートできます。
+デフォルトでは、デバイス状況をサブスクライブすると、すべての接続デバイスの状況更新を受信します。 タイプと ID のパラメーターを使用して、サブスクリプションの範囲を制御できます。 単一のクライアントで複数のサブスクリプションをサポートできます。
 
 ### すべてのデバイスの状況更新をサブスクライブする
 
@@ -270,9 +271,9 @@ client.subscribeToDeviceStatus(deviceType=myOtherDeviceType, deviceId=myOtherDev
 
 状況イベント
 
-サブスクリプションで受信した状況更新を処理するには、イベント・コールバック・メソッドを登録する必要があります。メッセージは、Status クラスのインスタンスとして返されます。
+サブスクリプションで受信した状況更新を処理するには、イベント・コールバック・メソッドを登録する必要があります。 メッセージは、Status クラスのインスタンスとして返されます。
 
-状況イベントには、``Connect`` イベントと ``Disconnect`` イベントの 2 つのタイプがあります。すべての状況イベントには、次のプロパティーが含まれています。
+状況イベントには、``Connect`` イベントと ``Disconnect`` イベントの 2 つのタイプがあります。 すべての状況イベントには、次のプロパティーが含まれています。
 
 |プロパティー|データ・タイプ|
 |:---|:---|
@@ -387,9 +388,9 @@ except IoTFCReSTException as e:
 
 ### デバイス情報の取得
 
-``getAllDevices()`` メソッドを使用すると、一括デバイス情報を取得できます。このメソッドは、組織内のすべての登録デバイスに関する情報を取得します。要求は 1 つあたり最大で 512 KB にすることができます。
+``getAllDevices()`` メソッドを使用すると、一括デバイス情報を取得できます。 このメソッドは、組織内のすべての登録デバイスに関する情報を取得します。 要求は 1 つあたり最大で 512 KB にすることができます。
 
-応答には、アプリケーションに必要なパラメーターが含まれています。応答に含まれている辞書結果を使用して、返されたデバイスの配列を取得できます。応答に含まれている他のパラメーターは、追加の呼び出しを行う場合に必要になります。例えば、``_bookmark`` 要素を使用して結果をページ送りすることができます。最初の要求はブックマークを指定せずに送信します。そして、応答で返されたブックマークを取得し、次のページを要求するときにそのブックマークを指定します。これを、結果セットの最後まで繰り返します (ブックマークが返されなくなったら、結果セットの最後です)。他のパラメーターについては、すべての要求で同じ値を使用する必要があります。そうしないと未定義の結果になります。
+応答には、アプリケーションに必要なパラメーターが含まれています。 応答に含まれている辞書結果を使用して、返されたデバイスの配列を取得できます。 応答に含まれている他のパラメーターは、追加の呼び出しを行う場合に必要になります。例えば、``_bookmark`` 要素を使用して結果をページ送りすることができます。 最初の要求はブックマークを指定せずに送信します。そして、応答で返されたブックマークを取得し、次のページを要求するときにそのブックマークを指定します。 これを、結果セットの最後まで繰り返します (ブックマークが返されなくなったら、結果セットの最後です)。 他のパラメーターについては、すべての要求で同じ値を使用する必要があります。そうしないと未定義の結果になります。
 
 
 ```python
@@ -407,7 +408,7 @@ except IoTFCReSTException as e:
 ### 複数のデバイスの追加
 
 
-``addMultipleDevices()`` メソッドを使用すると、1 つ以上のデバイスを {{site.data.keyword.iot_short_notm}} 組織に追加できます。要求は、512 KB 以下にする必要があります。応答には、デバイスごとに生成された認証トークンが含まれています。認証トークンを失って取得できなくなった場合に備えて、認証トークンのコピーを作成してください。
+``addMultipleDevices()`` メソッドを使用すると、1 つ以上のデバイスを {{site.data.keyword.iot_short_notm}} 組織に追加できます。 要求は、512 KB 以下にする必要があります。 応答には、デバイスごとに生成された認証トークンが含まれています。 認証トークンを失って取得できなくなった場合に備えて、認証トークンのコピーを作成してください。
 
 
 ```python
@@ -431,8 +432,7 @@ except IoTFCReSTException as e:
 ### 複数のデバイスの削除
 
 
-``deleteMultipleDevices()`` メソッドを使用すると、{{site.data.keyword.iot_short_notm}} 組織から複数のデバイスを削除できます。
-要求は、512 KB 以下にする必要があります。
+``deleteMultipleDevices()`` メソッドを使用すると、{{site.data.keyword.iot_short_notm}} 組織から複数のデバイスを削除できます。 要求は、512 KB 以下にする必要があります。
 
 ```python
 
@@ -456,7 +456,7 @@ except IoTFCReSTException as e:
 ## デバイス・タイプの操作
 {: #device_type_ops}
 
-組織で作成したデバイス・タイプを、デバイスを追加するためのテンプレートを作成するときに使用できます。{{site.data.keyword.iot_short_notm}} API の機能を使用して、アプリケーションで組織内のデバイス・タイプのリスト表示、作成、削除、表示、更新を行えます。
+組織で作成したデバイス・タイプを、デバイスを追加するためのテンプレートを作成するときに使用できます。 {{site.data.keyword.iot_short_notm}} API の機能を使用して、アプリケーションで組織内のデバイス・タイプのリスト表示、作成、削除、表示、更新を行えます。
 
 照会パラメーター、要求と応答のモデル、HTTP 状況コードについては、[{{site.data.keyword.iot_short_notm}} API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 資料の『Device types』セクションを参照してください。
 
@@ -464,7 +464,7 @@ except IoTFCReSTException as e:
 ### すべてのデバイス・タイプの取得
 
 ``getAllDeviceTypes()`` メソッドを使用すると、{{site.data.keyword.iot_short_notm}} 組織内に存在するすべてのデバイス・タイプを取得できます。
-応答に含まれている辞書結果を使用して、返されたデバイスの配列を取得できます。応答に含まれている他のパラメーターは、追加の呼び出しを行う場合に必要になります。例えば、``_bookmark`` 要素を使用して結果をページ送りすることができます。最初の要求はブックマークを指定せずに送信します。そして、応答で返されたブックマークを取得し、次のページを要求するときにそのブックマークを指定します。この処理を、結果セットの最後まで繰り返します (ブックマークが返されなくなったら、結果セットの最後です)。他のパラメーターについては、すべての要求で同じ値を使用する必要があります。そうしないと未定義の結果になります。
+応答に含まれている辞書結果を使用して、返されたデバイスの配列を取得できます。 応答に含まれている他のパラメーターは、追加の呼び出しを行う場合に必要になります。例えば、``_bookmark`` 要素を使用して結果をページ送りすることができます。 最初の要求はブックマークを指定せずに送信します。そして、応答で返されたブックマークを取得し、次のページを要求するときにそのブックマークを指定します。 この処理を、結果セットの最後まで繰り返します (ブックマークが返されなくなったら、結果セットの最後です)。 他のパラメーターについては、すべての要求で同じ値を使用する必要があります。そうしないと未定義の結果になります。
 
 ```python
 
@@ -488,7 +488,7 @@ except IoTFCReSTException as e:
 
 ### デバイス・タイプの追加
 
-``addDeviceType()`` メソッドを使用すると、{{site.data.keyword.iot_short_notm}} インスタンスにデバイス・タイプを登録できます。要求ごとに、まずはデバイス情報を定義し、次に、そのタイプのすべてのデバイスに適用するデバイス・メタデータ要素を定義する必要があります。デバイス情報の要素は、シリアル番号、製造元、モデル、クラス、説明、ファームウェア、ハードウェア・バージョン、ロケーションの説明など、複数の変数から構成されます。メタデータ要素は、ユーザーが定義できるカスタムの変数と値から構成されます。
+``addDeviceType()`` メソッドを使用すると、{{site.data.keyword.iot_short_notm}} インスタンスにデバイス・タイプを登録できます。 要求ごとに、まずはデバイス情報を定義し、次に、そのタイプのすべてのデバイスに適用するデバイス・メタデータ要素を定義する必要があります。 デバイス情報の要素は、シリアル番号、製造元、モデル、クラス、説明、ファームウェア、ハードウェア・バージョン、ロケーションの説明など、複数の変数から構成されます。 メタデータ要素は、ユーザーが定義できるカスタムの変数と値から構成されます。
 
 
 ```python
@@ -540,7 +540,7 @@ except IoTFCReSTException as e:
 ### 特定のデバイス・タイプの情報の取得
 
 
-``getDeviceType()`` メソッドを使用すると、特定のデバイス・タイプの情報を取得できます。取得するデバイス・タイプの ``typeId`` をパラメーターとして指定する必要があります。
+``getDeviceType()`` メソッドを使用すると、特定のデバイス・タイプの情報を取得できます。 取得するデバイス・タイプの ``typeId`` をパラメーターとして指定する必要があります。
 
 ```python
 
@@ -558,7 +558,7 @@ except IoTFCReSTException as e:
 ### デバイス・タイプの更新
 
 
-``updateDeviceType()`` メソッドを使用すると、データ・タイプのプロパティーを変更できます。``updateDeviceType()`` メソッドを使用する場合は、まず、更新するデバイス・タイプの ``typeId`` を指定し、次に、以下の要素を指定します。
+``updateDeviceType()`` メソッドを使用すると、データ・タイプのプロパティーを変更できます。 ``updateDeviceType()`` メソッドを使用する場合は、まず、更新するデバイス・タイプの ``typeId`` を指定し、次に、以下の要素を指定します。
 
 - ``description``
 - ``deviceInfo``
@@ -599,7 +599,6 @@ except IoTFCReSTException as e:
 
 API で利用できるデバイス操作には、{{site.data.keyword.iot_short_notm}} 組織内のデバイスのリスト作成、追加、削除、表示、更新、ロケーションの表示、デバイス管理情報の表示などがあります。
 
-
 照会パラメーター、要求と応答のモデル、HTTP 状況コードについては、    [{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}の『Devices』セクションを参照してください。
 
 
@@ -610,13 +609,13 @@ API で利用できるデバイス操作には、{{site.data.keyword.iot_short_n
 
 ```python
 
-print("\nRetrieving All existing devices")
+   print("\nRetrieving All existing devices")
    print("Retrieved Devices = ", apiCli.retrieveDevices(deviceTypeId))
 ```
 
-応答に含まれている辞書結果を使用して、返されたデバイスの配列を取得できます。応答に含まれている他のパラメーターは、追加の呼び出しを行う場合に必要になります。例えば、*_bookmark* 要素を使用して結果をページ送りすることができます。最初の要求はブックマークを指定せずに送信します。そして、応答で返されたブックマークを取得し、次のページを要求するときにそのブックマークを指定します。これを、結果セットの最後まで繰り返します (ブックマークが返されなくなったら、結果セットの最後です)。他のパラメーターについては、すべての要求で同じ値を使用する必要があります。そうしないと未定義の結果になります。
+応答に含まれている辞書結果を使用して、返されたデバイスの配列を取得できます。 応答に含まれている他のパラメーターは、追加の呼び出しを行う場合に必要になります。例えば、*_bookmark* 要素を使用して結果をページ送りすることができます。 最初の要求はブックマークを指定せずに送信します。そして、応答で返されたブックマークを取得し、次のページを要求するときにそのブックマークを指定します。 これを、結果セットの最後まで繰り返します (ブックマークが返されなくなったら、結果セットの最後です)。 他のパラメーターについては、すべての要求で同じ値を使用する必要があります。そうしないと未定義の結果になります。
 
-*_bookmark* または他の条件を渡すには、多重定義メソッドを使用する必要があります。多重定義メソッドは、次の例に示すように、辞書形式のパラメーターを受け取ります。
+*_bookmark* または他の条件を渡すには、多重定義メソッドを使用する必要があります。 多重定義メソッドは、次の例に示すように、辞書形式のパラメーターを受け取ります。
 
 ```python
 response = apiClient.retrieveDevices("iotsample-arduino", parameters);
@@ -627,11 +626,11 @@ response = apiClient.retrieveDevices("iotsample-arduino", parameters);
 ### デバイスの追加
 
 
-デバイスを {{site.data.keyword.iot_short_notm}} 組織に追加するには、``registerDevice()`` メソッドを使用します。``registerDevice()`` メソッドは、単一のデバイスを {{site.data.keyword.iot_short_notm}} 組織に追加します。デバイスを追加するときには、次のパラメーターを指定できます。
+デバイスを {{site.data.keyword.iot_short_notm}} 組織に追加するには、``registerDevice()`` メソッドを使用します。 ``registerDevice()`` メソッドは、単一のデバイスを {{site.data.keyword.iot_short_notm}} 組織に追加します。 デバイスを追加するときには、次のパラメーターを指定できます。
 
 |パラメーター|要件|説明
 |:---|:---|
-|``deviceTypeId``|オプション|デバイスにデバイス・タイプを割り当てます。デバイス・タイプで定義されている変数と、``deviceInfo`` 変数で定義した変数が矛盾している場合は、デバイス固有の変数が優先されます。|
+|``deviceTypeId``|オプション|デバイスにデバイス・タイプを割り当てます。 デバイス・タイプで定義されている変数と、``deviceInfo`` 変数で定義した変数が矛盾している場合は、デバイス固有の変数が優先されます。|
 |``deviceId``|必須||
 |``authToken``|オプション|指定しない場合は、認証トークンが生成されて応答に含められます。|
 |``deviceInfo``|オプション|シリアル番号、製造元、モデル、デバイス・クラス、説明、ロケーションの説明、ファームウェア、ハードウェア・バージョンなどの複数の変数が含まれます。|
@@ -645,7 +644,7 @@ response = apiClient.retrieveDevices("iotsample-arduino", parameters);
 ### デバイス・タイプを追加するためのサンプル・コード
 {: #sample_device_type}
 
-Python(.py) スクリプト・ファイルのコンストラクター・コードの後に、次のコードを挿入します。このサンプルでは、deviceId、authToken、metadata、deviceInfo、location の各パラメーターを定義してデバイス・タイプを追加する方法を示しています。
+Python(.py) スクリプト・ファイルのコンストラクター・コードの後に、次のコードを挿入します。 このサンプルでは、deviceId、authToken、metadata、deviceInfo、location の各パラメーターを定義してデバイス・タイプを追加する方法を示しています。
 
 ```python
 
@@ -659,7 +658,7 @@ apiCli.registerDevice(deviceTypeId, deviceId, metadata, deviceInfo, location)
 ```
 ### デバイスの削除
 
-``deleteDevice()`` メソッドを使用して、{{site.data.keyword.iot_short_notm}} 組織上の組織からデバイスを削除できます。``deleteDevice()`` メソッドを使用してデバイスを削除する場合は、deviceTypeId パラメーターと deviceId パラメーターを指定する必要があります。
+``deleteDevice()`` メソッドを使用して、{{site.data.keyword.iot_short_notm}} 組織上の組織からデバイスを削除できます。 ``deleteDevice()`` メソッドを使用してデバイスを削除する場合は、deviceTypeId パラメーターと deviceId パラメーターを指定する必要があります。
 
 次のコード・サンプルは、このメソッドに必要なフォーマットの概要を示しています。
 
@@ -669,7 +668,7 @@ apiCli.deleteDevice(deviceTypeId, deviceId)
 
 ### デバイスの取得
 
-``getDevice()`` メソッドを使用して、{{site.data.keyword.iot_short_notm}} 上の組織からデバイスを取得できます。``getDevice()`` メソッドを使用してデバイスの詳細を取得する場合は、deviceTypeId パラメーターと deviceId パラメーターを指定する必要があります。
+``getDevice()`` メソッドを使用して、{{site.data.keyword.iot_short_notm}} 上の組織からデバイスを取得できます。 ``getDevice()`` メソッドを使用してデバイスの詳細を取得する場合は、deviceTypeId パラメーターと deviceId パラメーターを指定する必要があります。
 
 次のコード・サンプルは、このメソッドに必要なフォーマットを大まかに示しています。
 
@@ -689,7 +688,7 @@ apiCli.getAllDevices({'typeId' : deviceTypeId})
 
 デバイスの 1 つ以上のプロパティーを変更するには、``updateDevice()`` メソッドを使用します。
 
-deviceInfo パラメーターまたは metadata パラメーターを使用して、任意のプロパティーを更新できます。デバイス・プロパティーを更新するには、``updateDevice()`` メソッドを呼び出す前に deviceInfo パラメーターを定義します。status パラメーターには、``alert``: True を含める必要があります。alert プロパティーは、デバイスのエラー・コードを {{site.data.keyword.iot_short_notm}} ユーザー・インターフェースに表示するかどうかを制御します。デフォルトでは、``enabled``: True に設定されます。次のコード・サンプルに大まかに示します。
+deviceInfo パラメーターまたは metadata パラメーターを使用して、任意のプロパティーを更新できます。 デバイス・プロパティーを更新するには、``updateDevice()`` メソッドを呼び出す前に deviceInfo パラメーターを定義します。 status パラメーターには、``alert``: True を含める必要があります。 alert プロパティーは、デバイスのエラー・コードを {{site.data.keyword.iot_short_notm}} ユーザー・インターフェースに表示するかどうかを制御します。デフォルトでは、``enabled``: True に設定されます。次のコード・サンプルに大まかに示します。
 
 ```python
 status = { "alert": { "enabled": True }  }
@@ -709,7 +708,7 @@ apiCli.updateDevice("MyDeviceType", "200020002000", deviceInfo, status)
 ### ロケーション情報の取得
 
 
-``getDeviceLocation()`` メソッドを使用して、デバイスのロケーション情報を取得できます。ロケーション・データを取得するために必要なパラメーターは、deviceTypeId と deviceId です。
+``getDeviceLocation()`` メソッドを使用して、デバイスのロケーション情報を取得できます。 ロケーション・データを取得するために必要なパラメーターは、deviceTypeId と deviceId です。
 
 ```python
 apiClient.getDeviceLocation("iotsample-arduino", "arduino01")
@@ -720,7 +719,7 @@ apiClient.getDeviceLocation("iotsample-arduino", "arduino01")
 ### ロケーション情報の更新
 
 
-``updateDeviceLocation()`` メソッドを使用して、デバイスのロケーション情報を変更できます。デバイス・プロパティーを更新する場合と同様に、適用する変更内容を、deviceLocation パラメーターに定義する必要があります。次のコード・サンプルは、特定のデバイスのロケーション・データを変更する方法を示しています。
+``updateDeviceLocation()`` メソッドを使用して、デバイスのロケーション情報を変更できます。 デバイス・プロパティーを更新する場合と同様に、適用する変更内容を、deviceLocation パラメーターに定義する必要があります。 次のコード・サンプルは、特定のデバイスのロケーション・データを変更する方法を示しています。
 
 ```python
 deviceLocation = { "longitude": 0, "latitude": 0, "elevation": 0, "accuracy": 0, "measuredDateTime": "2015-10-28T08:45:11.673Z"}
@@ -733,7 +732,7 @@ apiCli.updateDeviceLocation(deviceTypeId, deviceId, deviceLocation)
 ### 管理情報の取得
 
 
-``getDeviceManagementInformation()`` メソッドを使用して、デバイスのデバイス管理情報を取得できます。応答には、最後のアクティビティーが行われた日時、デバイスの休止状況 (True/False)、デバイスとファームウェアの操作のサポート、ファームウェア・データが含まれています。応答内容を示す包括的なリストについては、関連する API 資料を参照してください。
+``getDeviceManagementInformation()`` メソッドを使用して、デバイスのデバイス管理情報を取得できます。 応答には、最後のアクティビティーが行われた日時、デバイスの休止状況 (True/False)、デバイスとファームウェアの操作のサポート、ファームウェア・データが含まれています。 応答内容を示す包括的なリストについては、関連する API 資料を参照してください。
 
 次のコード・サンプルは、deviceId が「00aabbccde03」に、deviceTypeId が「iotsample-arduino」に設定されているデバイスのデバイス管理情報を返します。
 
@@ -758,7 +757,7 @@ apiCli.getDeviceManagementInformation("iotsample-arduino", "00aabbccde03")
 ### 診断ログの取得
 
 
-``getAllDiagnosticLogs()`` メソッドを使用して、特定のデバイスのすべての診断ログを取得できます。``getAllDiagnosticLogs()`` メソッドには、deviceTypeId パラメーターと deviceId パラメーターが必要です。
+``getAllDiagnosticLogs()`` メソッドを使用して、特定のデバイスのすべての診断ログを取得できます。 ``getAllDiagnosticLogs()`` メソッドには、deviceTypeId パラメーターと deviceId パラメーターが必要です。
 
 ```python
 apiCli.getAllDiagnosticLogs(deviceTypeId, deviceId)
@@ -769,7 +768,7 @@ apiCli.getAllDiagnosticLogs(deviceTypeId, deviceId)
 ### デバイスの診断ログの消去
 
 
-``clearAllDiagnosticLogs()`` メソッドを使用して、特定のデバイスのすべての診断ログを削除できます。必須パラメーターは、deviceTypeId と deviceId です。いったん削除したログ・ファイルはリカバリーできないため、削除操作は慎重に行ってください。
+``clearAllDiagnosticLogs()`` メソッドを使用して、特定のデバイスのすべての診断ログを削除できます。 必須パラメーターは、deviceTypeId と deviceId です。 いったん削除したログ・ファイルはリカバリーできないため、削除操作は慎重に行ってください。
 
 ```python
 apiCli.clearAllDiagnosticLogs(deviceTypeId, deviceId)
@@ -778,7 +777,7 @@ apiCli.clearAllDiagnosticLogs(deviceTypeId, deviceId)
 ### 診断ログの追加
 
 
-``addDiagnosticLog()`` メソッドを使用して、デバイスの診断ログにエントリーを追加できます。新しいエントリーを追加すると、ログのプルーニングが実行されることがあります。日付を指定しない場合は、現在の日時がエントリーに追加されます。このメソッドを使用するには、次の変数を使用して 'logs' パラメーターを定義する必要があります。
+``addDiagnosticLog()`` メソッドを使用して、デバイスの診断ログにエントリーを追加できます。 新しいエントリーを追加すると、ログのプルーニングが実行されることがあります。 日付を指定しない場合は、現在の日時がエントリーに追加されます。 このメソッドを使用するには、次の変数を使用して 'logs' パラメーターを定義する必要があります。
 
 
 |変数|要件|説明|
@@ -801,7 +800,7 @@ apiCli.addDiagnosticLog(deviceTypeId, deviceId, logs)
 ### 特定の診断ログの取得
 
 
-``getDiagnosticLog()`` メソッドを使用すると、指定したデバイスに関する特定の診断ログを、ログ ID に基づいて取得できます。このメソッドに必要なパラメーターは、deviceTypeId、deviceId、logId です。
+``getDiagnosticLog()`` メソッドを使用すると、指定したデバイスに関する特定の診断ログを、ログ ID に基づいて取得できます。 このメソッドに必要なパラメーターは、deviceTypeId、deviceId、logId です。
 
 ```python
 apiCli.getDiagnosticLog(deviceTypeId, deviceId, logId)
@@ -810,7 +809,7 @@ apiCli.getDiagnosticLog(deviceTypeId, deviceId, logId)
 ### 診断ログの削除
 
 
-``deleteDiagnosticLog()`` メソッドを使用して、特定の診断ログを削除できます。診断ログを指定するために、deviceTypeId、deviceId、logID の各パラメーターを指定する必要があります。
+``deleteDiagnosticLog()`` メソッドを使用して、特定の診断ログを削除できます。 診断ログを指定するために、deviceTypeId、deviceId、logID の各パラメーターを指定する必要があります。
 
 ```python
 apiCli.deleteDiagnosticLog(deviceTypeId, deviceId, logId)
@@ -828,7 +827,7 @@ apiCli.getAllDiagnosticErrorCodes(deviceTypeId, deviceId)
 ### 診断エラー・コードの消去
 
 
-``clearAllErrorCodes()`` メソッドを使用して、特定のデバイスに関連付けられているエラー・コードのリストを消去できます。リストは単一のエラー・コード、ゼロに置き換えられます。
+``clearAllErrorCodes()`` メソッドを使用して、特定のデバイスに関連付けられているエラー・コードのリストを消去できます。 リストは単一のエラー・コード、ゼロに置き換えられます。
 
 ```python
 apiCli.clearAllErrorCodes(deviceTypeId, deviceId)
@@ -837,10 +836,10 @@ apiCli.clearAllErrorCodes(deviceTypeId, deviceId)
 ### 単一の診断エラー・コードの追加
 
 
-``addErrorCode()`` メソッドを使用して、特定のデバイスに関連付けられているエラー・コードのリストにエラー・コードを 1 つ追加できます。新しいエントリーを追加すると、リストのプルーニングが実行されることがあります。このメソッドに必要なパラメーターは、deviceTypeId、deviceId、errorCode です。errorCode パラメーターには、次の変数が含まれます。
+``addErrorCode()`` メソッドを使用して、特定のデバイスに関連付けられているエラー・コードのリストにエラー・コードを 1 つ追加できます。 新しいエントリーを追加すると、リストのプルーニングが実行されることがあります。 このメソッドに必要なパラメーターは、deviceTypeId、deviceId、errorCode です。 errorCode パラメーターには、次の変数が含まれます。
 
-- errorCode: この変数は必須で、整数として設定する必要があります。この変数は、作成するエラー・コードの番号を設定します。
-- timestamp: この変数はオプションであり、ログのエントリーの日付と時刻を ISO8601 形式で含めます。この変数を含めない場合は、自動的に現在の日付と時刻を使用して追加されます。
+- errorCode: この変数は必須で、整数として設定する必要があります。 この変数は、作成するエラー・コードの番号を設定します。
+- timestamp: この変数はオプションであり、ログのエントリーの日付と時刻を ISO8601 形式で含めます。 この変数を含めない場合は、自動的に現在の日付と時刻を使用して追加されます。
 
 ```python
 errorCode = { "errorCode": 1234, "timestamp": "2015-10-29T05:43:57.112Z" }
@@ -850,7 +849,7 @@ apiCli.addErrorCode(deviceTypeId, deviceId, errorCode)
 ## 接続の問題判別
 {: #connection_problem_determination}
 
-``getDeviceConnectionLogs()`` メソッドを使用して、特定のデバイスの接続ログ・イベントをリストできます。接続ログ・イベントを使用すると、デバイスと {{site.data.keyword.iot_short_notm}} サービスの間の接続の問題を診断するのに役立ちます。これらのエントリーには、成功した接続、失敗した接続試行、意図的な切断、サーバーから開始された切断イベントが記録されています。
+``getDeviceConnectionLogs()`` メソッドを使用して、特定のデバイスの接続ログ・イベントをリストできます。 接続ログ・イベントを使用すると、デバイスと {{site.data.keyword.iot_short_notm}} サービスの間の接続の問題を診断するのに役立ちます。 これらのエントリーには、成功した接続、失敗した接続試行、意図的な切断、サーバーから開始された切断イベントが記録されています。
 
 ```
 apiCli.getDeviceConnectionLogs(deviceTypeId, deviceId)

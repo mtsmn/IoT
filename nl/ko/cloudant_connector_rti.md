@@ -60,9 +60,9 @@ lastupdated: "2017-10-18"
 
 {{site.data.keyword.cloudant_short_notm}}를 {{site.data.keyword.iot_short}} 서비스에 연결하기 전에 다음 태스크를 완료하십시오.
 
-- {{site.data.keyword.Bluemix_notm}} 카탈로그를 사용하여 {{site.data.keyword.iot_short_notm}}과 동일한 {{site.data.keyword.Bluemix_notm}} 영역에서 {{site.data.keyword.cloudant_short_notm}}를 설정하십시오. 
+- {{site.data.keyword.Bluemix_notm}} 카탈로그를 사용하여 {{site.data.keyword.iot_short_notm}}과 동일한 {{site.data.keyword.Bluemix_notm}} 영역에서 {{site.data.keyword.cloudant_short_notm}}를 설정하십시오.
 
-{{site.data.keyword.Bluemix_notm}} 조직에서 개발자 권한이 있는지와 {{site.data.keyword.Bluemix_notm}}를 통해 로그인했는지 확인하십시오. {{site.data.keyword.Bluemix_notm}}를 통해 로그인하지 않았거나 이 {{site.data.keyword.Bluemix_notm}} 조직에서 개발자 권한이 없는 경우에는 {{site.data.keyword.cloudant_short_notm}} 및 {{site.data.keyword.iot_short_notm}}의 바인딩에 대해 권한 부여할 수 없습니다. 
+{{site.data.keyword.Bluemix_notm}} 조직에서 개발자 권한이 있는지와 {{site.data.keyword.Bluemix_notm}}를 통해 로그인했는지 확인하십시오. {{site.data.keyword.Bluemix_notm}}를 통해 로그인하지 않았거나 이 {{site.data.keyword.Bluemix_notm}} 조직에서 개발자 권한이 없는 경우에는 {{site.data.keyword.cloudant_short_notm}} 및 {{site.data.keyword.iot_short_notm}}의 바인딩에 대해 권한 부여할 수 없습니다.
 
 다음 단계를 완료하여 {{site.data.keyword.cloudant_short_notm}}에 연결하십시오.
 
@@ -95,9 +95,9 @@ lastupdated: "2017-10-18"
 
 다음 레시피는 {{site.data.keyword.iot_short}}의 히스토리언 스토리지로서 {{site.data.keyword.cloudant_short_notm}}를 사용하는 방법을 설명합니다.
 
-- [{{site.data.keyword.iot_short}}에 대한 히스토리언 데이터 스토리지로 {{site.data.keyword.cloudant_short_notm}} 구성(![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} 레시피는 디바이스 데이터를 {{site.data.keyword.cloudant_short_notm}}에 저장하는 방법을 설명하고 히스토리언 데이터 스토리지로 {{site.data.keyword.cloudant_short_notm}}를 구성하고 여기에 디바이스 데이터를 구성하고 저장하는 방법을 보여줍니다.
+- [{{site.data.keyword.iot_short}}에 대한 히스토리언 데이터 스토리지로 {{site.data.keyword.cloudant_short_notm}} 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} 레시피는 디바이스 데이터를 {{site.data.keyword.cloudant_short_notm}}에 저장하는 방법을 설명하고 히스토리언 데이터 스토리지로 {{site.data.keyword.cloudant_short_notm}}를 구성하고 여기에 디바이스 데이터를 구성하고 저장하는 방법을 보여줍니다.
 
-- [{{site.data.keyword.cloudant_short_notm}}에서 {{site.data.keyword.iot_short}} 디바이스 데이터 조회 및 처리(![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} 레시피는 {{site.data.keyword.cloudant_short_notm}}에 저장되는 디바이스 데이터를 조회하고 이에 대한 데이터 처리 오퍼레이션을 수행하는 방법을 표시합니다.
+- [{{site.data.keyword.cloudant_short_notm}}에서 {{site.data.keyword.iot_short}} 디바이스 데이터 조회 및 처리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} 레시피는 {{site.data.keyword.cloudant_short_notm}}에 저장되는 디바이스 데이터를 조회하고 이에 대한 데이터 처리 오퍼레이션을 수행하는 방법을 표시합니다.
 
 - [Cloudant NoSQL DB에 저장된 Watson IoT 디바이스 데이터 시각화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} 레시피는 Watson IoT Platform 대시보드에 디바이스 데이터를 표시하기 위해 선형 차트 카드와 히스토리언 데이터 스토리지 간의 연결 방법을 보여줍니다.
 

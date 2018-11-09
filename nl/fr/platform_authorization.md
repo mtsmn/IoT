@@ -21,12 +21,12 @@ Pour connecter votre application à {{site.data.keyword.iot_full}}, vous devez u
 {: #api-key}
 Les clés d'API vous permettent de connecter des applications à votre organisation {{site.data.keyword.iot_short_notm}}. Les applications requièrent une clé d'API pour se connecter à une organisation, ainsi qu'un jeton d'authentification unique qui doit être utilisé avec cette clé d'API.  
 
-Pour plus d'informations sur les connexions d'application, voir [MQTT Connectivity for Applications ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} dans la documentation du développeur.
+Pour plus d'informations sur les connexions d'application, voir [Connectivité MQTT pour les applications ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} dans la documentation du développeur.
 
 Pour créer une paire clé d'API/jeton d'authentification :  
 1.	Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, accédez à **Applications > Clés d'API**.  
 2.	Cliquez sur **Générer une clé d'API**.  
-**Important :** Prenez note de la paire clé d'API/jeton d'authentification. Les jetons d'authentification ne peuvent pas être récupérés. Si vous perdez ou oubliez ce jeton, vous devrez réenregistrer la clé d'API afin de générer un nouveau jeton d'authentification.
+**Important :** prenez note de la paire clé d'API/jeton d'authentification. Les jetons d'authentification ne peuvent pas être récupérés. Si vous perdez ou oubliez ce jeton, vous devrez réenregistrer la clé d'API afin de générer un nouveau jeton d'authentification.
  - `a-organization_id-a84ps90Ajs` est un exemple de clé d'API  
  - `MP$08VKz!8rXwnR-Q*` est un exemple de jeton  
 3.	Ajoutez un commentaire permettant d'identifier la clé d'API dans le tableau de bord, par exemple, Clé utilisée pour connecter mon application.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-08-25"
+  years: 2016, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -12,20 +12,28 @@ lastupdated: "2017-08-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Gateway-Zugriffssteuerung (Beta)
+# Gateway-Zugriffssteuerung
 {: #gateway-access-control}
 
-Gateway-Geräte stellen eine spezialisierte Klasse von Geräten dar, die im Namen anderer Geräte handeln können. Gateway-Ressourcengruppen definieren, im Namen welcher Geräte innerhalb einer Organisation jedes Gateway handeln kann. Gateways kann die Rolle *Standardgateway* zugeordnet werden. Standardgateways können nur im Namen der Geräte aus der zugehörigen Ressourcengruppe Nachrichten publizieren oder subskribieren.
+Gateway-Geräte stellen eine spezialisierte Klasse von Geräten dar, die im Namen anderer Geräte handeln können. Gateway-Ressourcengruppen definieren, im Namen welcher Geräte innerhalb einer Organisation jedes Gateway handeln kann. Gateway-Rollen bestimmen die Fähigkeit des Gateways, Geräte für die Watson IoT Platform zu registrieren.
 {: #shortdesc}
 
-**Wichtig:** Die {{site.data.keyword.iot_full}}-Funktion 'Gateway-Zugriffssteuerung' steht nur als Bestandteil des eingeschränkten Beta-Programms zur Verfügung. Zukünftige Aktualisierungen enthalten möglicherweise Änderungen, die mit der aktuellen Version dieser Funktion nicht kompatibel sind. Starten Sie einen Versuch und [senden Sie uns Ihren Erfahrungsbericht ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
+Sie verwenden Ressourcengruppen, um Gateways zu aktivieren, die im Namen einer Untergruppe der Geräte einer Organisation handeln. Gateways können nur Nachrichten für sich selbst und im Namen der Geräte, die sich in ihrer Ressourcengruppe befinden, publizieren oder subskribieren. 
 
-Informationen zum Publizieren von Ereignissen von Gateway-Geräten mithilfe von APIs finden Sie in [HTTP-Messaging-APIs für Gateway-Geräte](../gateways/gw_intro_api.html).
+Wenn ein neues Gateway erstellt wird, wird auch eine Standardressourcengruppe erstellt, die dem Gateway zugeordnet wird. Die Standardressourcengruppe kann nicht aus dem Gateway entfernt werden. Vorhandene Gateways ohne Ressourcengruppen können weiterhin im Namen aller Geräte in der Organisation handeln.
+
+Informationen zum Publizieren von Ereignissen von Gateway-Geräten mithilfe von APIs finden Sie in [HTTP-APIs für Gateway-Geräte](gw_api.html).
 
 ## Rolle einem Gateway zuordnen
 {: #gw_roles}
 
-Einem Gateway muss eine Rolle zugeordnet werden, damit das Gateway über eine Ressourcengruppe verfügen kann. Gateways ohne Ressourcengruppe können im Namen aller Geräte in der Organisation handeln. Beim Zuordnen der Rolle *Standardgateway* wird automatisch eine neue Ressourcengruppe für das Gateway erstellt. Ein Gateway, dem eine Ressourcengruppe zugeordnet wurde, kann nur im Namen der Geräte in dieser Ressourcengruppe und im eigenen Namen handeln, selbst wenn die Rolle des Gateways geändert wird.
+Um ein Gateway einer Ressourcengruppe zuordnen zu können, müssen Sie das Gateway zuerst einer Rolle zuweisen. Neu erstellten Gateways wird standardmäßig die Rolle *Privilegiertes Gateway* zugewiesen und sie werden der Standardressourcengruppe zugeordnet. Gateways mit der privilegierten Rolle können Geräte automatisch registrieren, die zur Standardressourcengruppe hinzugefügt werden.
+
+Gateways mit der Rolle *Standard-Gateway* können Geräte nicht automatisch registrieren. 
+
+Ein Gateway, dem eine Ressourcengruppe zugeordnet wurde, kann nur im Namen der Geräte in dieser Ressourcengruppe und im eigenen Namen handeln, selbst wenn die Rolle des Gateways geändert wird.
+
+Weitere Informationen zu Gateway-Rollen finden Sie unter [Gateway-Rollen](../roles_index.html#gateway_roles).
 
 Um einem Gateway eine Rolle zuzuordnen, verwenden Sie die folgende API. Hierbei steht *${clientID}* für die URL-codierte Client-ID im Format *d:${orgId}:${typeId}:${deviceId}* für Geräte oder *g:${orgId}:${typeId}:${deviceId}* für Gateways:
 

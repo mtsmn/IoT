@@ -37,7 +37,7 @@ lastupdated: "2018-05-08"
 
 ### 拡張とサービス統合
 
-拡張とサービス統合によって、外部サービスと、コア・サービスのユーザー定義拡張との両方を {{site.data.keyword.iot_short_notm}} のインスタンスに追加できます。 {{site.data.keyword.iot_short_notm}} に統合できる外部サービスとしては、The Weather Company の気象および位置のサービスがあります。統合すると、デバイスの場所の現在の気象情報と Jasper SIM データを取得できます。サード・パーティーのサービスの統合や拡張の詳細については、[外部サービスの統合](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)を参照してください。
+拡張とサービス統合によって、外部サービスと、コア・サービスのユーザー定義拡張との両方を {{site.data.keyword.iot_short_notm}} のインスタンスに追加できます。 {{site.data.keyword.iot_short_notm}} に統合できる外部サービスとしては、The Weather Company の気象および位置のサービスがあります。統合すると、デバイスの場所の現在の気象情報と Jasper SIM データを取得できます。 サード・パーティーのサービスの統合や拡張の詳細については、[外部サービスの統合](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)を参照してください。
 
 ---
 

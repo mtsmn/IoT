@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-11-09"
+  years: 2016, 2018
+lastupdated: "2018-03-26"
 
 ---
 
@@ -15,35 +15,45 @@ lastupdated: "2017-11-09"
 # Entendendo a linguagem de expressão de mapeamento
 {: #mapping_expression}
 
-É possível usar a linguagem de expressão de mapeamento para manipular e combinar dados e para formatar os resultados de quaisquer consultas que você possa executar em seus dados processados. A linguagem de expressão de mapeamento é um subconjunto de [JSONata ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.jsonata.org/index.html){:new_window} e pode ser usada ao definir [mapeamentos](ga_im_definitions.html#definitions_resources). JSONata é uma linguagem leve de consulta e transformação para dados JSON.
+É possível usar a linguagem de expressão de mapeamento para manipular e combinar dados e para formatar os resultados de quaisquer consultas que você possa executar em seus dados processados. A linguagem de expressão de mapeamento é um subconjunto de [JSONata ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.jsonata.org/index.html){:new_window} e pode ser usada ao definir [mapeamentos](ga_im_definitions.html#resources) ou criar [regras](../information_management/im_rules.html). 
+
+JSONata é uma linguagem leve de consulta e transformação para dados JSON. Uma ferramenta [JSONata Exerciser ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://try.jsonata.org/){:new_window} também está disponível, fornecendo uma maneira rápida e conveniente de experimentar o JSONata.
 
 As informações a seguir mostram os operadores-chaves e as funções que são
 atualmente suportadas, com alguns exemplos de como você poderá usá-los. 
 
-## Operadores JSONata suportados
+## Operadores JSONata
 {: #operators}
 
-O seguinte subconjunto de operadores JSONata é suportado: 
+Todos os [Operadores do JSONata ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.jsonata.org/operators.html){:new_window} são suportados, exceto os operadores a seguir:
 
-Tipo de operador                   | operadores suportados     | Notas   
-------------- | ------------- | -------------
-Aritmético | *+* - / * % | O operador% retorna o resto.
-Comparação | < <= > >= != = | O operador de igualdade é =, como é em JSONata.
-Booleano | *em*, *e* | As constantes booleanas são *true* ou *false*.
-Ternário condicional | ? | O operador ? avalia uma das duas expressões alternativas com base no resultado de uma condição de teste. 
-O operador usa o seguinte formato *expression* ? *value_if_true* : *value_if_false*
-Seqüência de caracteres | & | O operador & associa os valores de sequência dos operandos a uma única sequência resultante.
-Gerador de sequência | .. | Cria uma matriz de números inteiros crescentes, começando com
-o número no LHS e terminando com o número no RHS, por exemplo, [1..4] ->
-[1,2,3,4]. Os operandos devem ser avaliados como número inteiro. O gerador de sequência só pode ser usado dentro de um construtor de matriz [ ].
-Outro | . | O operador ponto é usado para acesso do objeto com uma chave literal, por exemplo, $event.object.hh. *
-e:* A expressão do lado esquerdo é restrita a uma propriedade específica, no evento ($event), no estado ($state) ou nos metadados ($instance).
+- ~ > (encadeamento de função)
+- ^ (...) (order-by)
+- : = (ligação de variável)
 
-**Notas:** 
+** Nota: ** 
 - Use parênteses () para agrupar expressões e para alterar a precedência do operador
-- Use aspas simples para delimitar os nomes das propriedades que contêm espaços, por exemplo, $event.object.'a b' 
+- Use aspas simples ou duplas para circundar sequências e nomes de propriedades, por exemplo, $event.object.'ab' 
+- Use crases para circundar nomes de propriedades que contêm caracteres especiais, incluindo espaços, por exemplo 
+```
+{2}{2}.` s y `
+```
+- Use crases para circundar nomes de propriedade que iniciam com um número, por exemplo
+```
+"7emperatura"
+```
 
-## Estendendo a linguagem de expressão de mapeamento
+## Funções do JSONata
+{: #functions}
+As funções do JSONata a seguir são suportadas: 
+
+ - Todas as funções de [Sequência ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.jsonata.org/string-functions.html){:new_window}
+ - Todas as funções [Numéricas ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.jsonata.org/numeric-functions.html){:new_window} 	
+ - Todas as funções de [Agregação numérica ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.jsonata.org/aggregation-functions.html){:new_window} 
+ - Todas as funções [Booleanas ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.jsonata.org/boolean-functions.html){:new_window}  
+ - Funções de [Matriz $count e $append ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.jsonata.org/array-functions.html){:new_window} 	
+
+## Estendendo a Linguagem de Expressão
 
 A linguagem de expressão de mapeamento foi estendida para uso com o recurso de
 gerenciamento de dados por meio da introdução das variáveis $event, $state e $instance. O
@@ -54,9 +64,55 @@ Variável                   | Exemplo de JSON de entrada     | Exemplo como uma 
 ------------- | ------------- | -------------
 $event | *{"t": 34.5}*  | $event.t | Selecione uma propriedade de um evento de entrada para usar em uma expressão. 
 $state | *{"temperature": 34.5,"humidity": 78 }*  | $state.temperature | Selecione uma propriedade no estado do dispositivo para usar em uma expressão.
-$instance | *{"deviceId": "TemperatureSensor1","typeId": "EnvSensor1","metadata": {"temp_adjustment": 50}}*  | $instance.metadata.temp_adjustment | Selecione o atributo de dispositivo ou tipo de dispositivo para uso em uma expressão. 
+$instance | *{"deviceId": "tSensor","typeId": "humiditySensor","metadata": {"temp_adjustment": 50}}*  | $instance.metadata.temp_adjustment | Selecione o atributo de dispositivo ou tipo de dispositivo para uso em uma expressão. 
 
-É possível também definir uma expressão que combine o uso dessas variáveis. No exemplo a seguir, uma propriedade *temp_adjustment* é definida nos metadados do dispositivo e usada para calibrar a leitura de eventos. A propriedade é definida em um mapeamento, mas pode ser aplicada a muitos dispositivos. 
+O exemplo a seguir usa o objeto a seguir como a entrada para um evento:  
+```
+ {
+    "temperature": 35,
+    "humidity": 72,
+    "pressure": 1024
+  }
+
+```
+O objeto é convertido em uma matriz usando a expressão a seguir:
+
+```
+  [ $event.temperature, $event.humidade, $event.pressionar ]
+```  
+A expressão resulta na geração da saída a seguir:
+```
+ [
+    35,
+    72,
+    1024
+  ]
+```
+
+É possível inverter esse exemplo e converter uma matriz da entrada para um objeto. O exemplo a seguir usa a matriz a seguir como a entrada para um evento:
+```
+{
+    "leituras": [
+      35,
+      72,
+      1024
+    ]
+  }
+```
+A matriz é convertida para um objeto usando a expressão a seguir:
+```
+ {0}], "humidade": $event.leituras [ 1 ], "pressão": $event.leituras [ 2 ] }
+```
+ A expressão resulta na geração da saída a seguir:
+  ```
+  {
+    "temperature": 35,
+    "humidity": 72,
+    "pressure": 1024
+  }
+  
+ ```
+É possível também definir uma expressão que combine o uso dessas variáveis. No exemplo a seguir, uma propriedade *temp_adjustment* é definida nos metadados do dispositivo e é usada para calibrar a leitura do evento. A propriedade é definida em um mapeamento, mas pode ser aplicada a muitos dispositivos. 
 
 ```
 "propertyMappings" : {
@@ -67,61 +123,32 @@ $instance | *{"deviceId": "TemperatureSensor1","typeId": "EnvSensor1","metadata"
      
 ```
 
-## Funções JSONata suportadas
-{: #functions}
-O seguinte subconjunto de funções JSONata é suportado: 
 
-Tipo de função                   |Função                   | Descrição | Exemplo
-------------- | ------------- | ------------- 
-Seqüência de caracteres | $substring(string, start_index[, length]) | Subsequência de sequência, por exemplo, *$substring("Hello World", 3, 5) => "lo Wo"*. 
-Seqüência de caracteres | $string(arg) | Converte o argumento em um valor de sequência, por exemplo, *$string(2) => "2"*.
-Numérico | $number(arg) | Converte o argumento em um valor numérico se possível, por exemplo, *$number(2) => 2*.
-Numérico | $sum(array) | Retorna a soma aritmética de uma matriz de números, por exemplo, *([1,2,3]) = 6*.
-Numérico | $average(array) | Retorna o valor médio de uma matriz de números, por exemplo, *([1,2,3]) = 2.0*.
-Booleano | $exists(expression) | Retorna *true* se a propriedade na expressão existir; *false*, caso contrário.
-Array | $count(array) | Retorna o número de itens no parâmetro de matriz, por exemplo, *([1,2,3,4]) = 4*. Se o parâmetro de matriz não for uma matriz, mas sim um valor de outro tipo JSON, o parâmetro será tratado como uma matriz singleton contendo esse valor e essa função retornará *1*.
-Array | $append(array1, array2) | Retorna uma matriz contendo os valores em *array1*, seguido pelos valores em *array2*, Por exemplo, *([1,2], [3,4]) = [1,2,3,4]*. Se um dos parâmetros não for uma matriz, ele será tratado como matriz singleton que contém esse valor, por exemplo, *$append("Hello", "World") => ["Hello", "World"]*.
+O operador dot "." é usado para acesso ao objeto com uma chave literal, por exemplo, $event.object.hh. A expressão no lado esquerdo é restringida a uma propriedade específica, no evento ($event) ou no estado ($state) ou nos metadados ($instance). A expressão no lado direito contém as informações que você pode desejar acessar.
 
-## Matrizes
-Use matrizes JSON para colocar uma coleção de valores em uma ordem especificada. As
-matrizes associam cada valor na matriz a um índice ou posição. Para resolver valores
-individuais em uma matriz, deve-se especificar o índice usando colchetes após o nome do
-campo da matriz. Se os colchetes contiverem um número ou uma expressão avaliada como
-número, o número representará o índice do valor a ser selecionado. Uma matriz de números
-também pode ser usada como um índice, por exemplo, *["a","b","c"][[1,2]] ->
-["b", "c"]*. A matriz *[1,2]* é usada como índice que identifica
-quais valores selecionar da matriz *["a","b","c"]*. 
+Para obter mais informações sobre o operador dot, veja a seção [Operadores ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.jsonata.org/operators.html){:new_window} da documentação do JSONata.
 
-Os índices têm deslocamento zero, de modo que o primeiro valor em uma matriz
-*arr* é *arr[0]*, por exemplo,
-*[1,2,3][0] -> 1*. Caso não seja um número inteiro, ele será
-arredondado para um número inteiro, por exemplo, *[1,2,3][0.9] -> [1]*.
 
-Use índices negativos a serem contados do final da matriz, por exemplo, *[1,2,3][-1] -> 3*. 
+## Guia do idioma
 
-Se o índice especificado exceder o tamanho da matriz, nada será selecionado.
+- Toda [Seleção básica![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.jsonata.org/basic.html){:new_window} é suportada.
+- Toda [Seleção complexa![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.jsonata.org/complex.html){:new_window} é suportada, exceto para curingas.
+- Expressões condicionais e entre parênteses são suportadas como parte de [Construções de programação![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.jsonata.org/programming.html){:new_window}. As variáveis são suportadas por meio do uso das variáveis $instance, $state e $event como parte da linguagem de mapeamento estendido, que é específica para o gerenciamento de dados do Watson IoT Platform. As variáveis "$" e "$$" que são usadas no JSONata não são suportadas atualmente.
 
 ## Construindo saída
-É possível especificar como os dados processados são apresentados na saída usando
-construtores de matriz ou construtores de objeto.
+É possível especificar como os dados processados são apresentados na saída usando construtores de matriz ou construtores de objeto.
 
 ### Construtores de matriz suportados
-As matrizes podem ser construídas colocando uma lista separada por vírgula de
-literais ou expressões em um par de colchetes [ ]. São usadas vírgulas para separar múltiplas expressões dentro do construtor de matriz, por exemplo, *[1, 3-1] = [1,2]*.
+As matrizes podem ser construídas anexando uma lista separada por vírgula de literais ou expressões em um par de colchetes []. As vírgulas são usadas para separar múltiplas expressões dentro do construtor de matriz, incluindo geração de sequência, por exemplo, *[1, 3-1] = [1,2]*, *[1..3] -> [1,2,3]* e *[1..3, 7..9] -> [1,2,3,7,8,9]*.
 
-### Construtores de objeto suportados
+### Construtores de objetos suportados
 {: #constructors}
-É possível construir objetos JSON em sua saída usando um par de chaves {} que contém
-valores ou pares de chaves separados por vírgulas, com cada chave e valor separados por
-dois-pontos, por exemplo, *{key1 : value1, key2:value2}* ou *{"hello"
-: "world"}*. A chave do objeto deve ser uma sequência.  
+É possível construir objetos JSON em sua saída usando um par de chaves {} que contêm valores de chave ou pares separados
+por vírgulas, com cada chave e valor separados por dois-pontos, por exemplo, *{key1 : value1, key2:value2}* ou *{"hello" : "world"}*. A chave do objeto deve ser uma sequência.  
 
 
 ## Exemplo: usando matrizes para processar e relatar dados de temperatura
-As seções a seguir se baseiam no exemplo em
-[Introdução ao gerenciamento de dados](ga_im_example.html) para mostrar
-como você pode usar matrizes para manter uma janela deslizante de leituras de
-temperatura e calcular a soma ou média atual da leitura contida nessa janela. 
+As seções a seguir constroem o exemplo em [Introdução ao gerenciamento de dados usando APIs de REST](ga_im_example.html) para mostrar como você pode usar matrizes para manter uma janela deslizante de leituras de temperatura e calcular a soma ou média atual da leitura contida nessa janela.
 
 Uma janela deslizante armazena dados na ordem de chegada. Em vez de manter todos os
 dados já inseridos, janelas deslizantes podem ser configuradas para despejar dados de
@@ -134,16 +161,10 @@ desocupação baseada em contagem de tamanho 5:
 () -> (1) -> (2, 1) -> (3, 2, 1) -> (4, 3, 2, 1) -> (5, 4, 3, 2, 1) -> (6, 5, 4, 3, 2) -> (7, 6, 5, 4, 3) -> ...
 ```
 
-O exemplo a seguir mostra como a configuração do arquivo de esquema de interface
-lógica que é mostrada na etapa 7 do [Guia
-passo a passo](ga_im_index_scenario.html#step4) pode ser modificado incluindo uma matriz chamada
-*tempReadings*. A matriz é usada para manter uma janela dos últimos 5
-valores que são enviados dos dispositivos com relação aos últimos 5 eventos. Se não
-houver valores armazenados em *tempReadings*, a matriz será configurada como
-[0] e a próxima leitura recebida será anexada à matriz que cresce até 5 leituras serem
-recebidas. Após o recebimento de 5 leituras, uma nova leitura resulta na remoção da leitura mais antiga da janela. 
+O exemplo a seguir mostra como a configuração do arquivo de esquema de interface lógica que é mostrada na etapa 7 do [Guia passo a passo 1](ga_im_index_scenario.html#step4) pode ser modificada incluindo uma matriz chamada *tempReadings*. A matriz é usada para manter uma janela dos últimos 5
+valores que são enviados dos dispositivos com relação aos últimos 5 eventos. Se não houver valores armazenados em *tempReadings*, a matriz será configurada como [0] e a próxima leitura recebida será anexada à matriz que cresce até que 5 leituras sejam recebidas. Após o recebimento de 5 leituras, uma nova leitura resulta na remoção da leitura mais antiga da janela. 
 
-**Notas importantes:** deve-se configurar *tempReadings* como "necessário" e como uma matriz por padrão. 
+**Notas Importantes:** deve-se configurar *tempReadings* como "obrigatório" e como uma matriz por padrão.
 
 ```
 {
@@ -179,6 +200,8 @@ recebidas. Após o recebimento de 5 leituras, uma nova leitura resulta na remoç
 A seção a seguir mostra um exemplo de como você pode configurar o recurso de mapeamentos
 para calcular a leitura de temperatura média e a soma de todas as leituras de
 temperatura com base nas leituras que estão contidas na janela deslizante atual:
+
+
 ```
 [
    {
@@ -199,11 +222,8 @@ temperatura com base nas leituras que estão contidas na janela deslizante atual
    }
 ]
 ```
-**Nota:** a matriz *$state.tempReadings* é recalculada
-antes de ser usada nas funções $average e $sum. O recálculo da matriz é necessário para
-assegurar que a matriz contenha os valores atuais quando a expressão
-*tempAverage* ou *tempSum* é avaliada, porque a ordem das
-expressões de mapeamento não pode ser controlada.
+**Note:** a matriz *$state.tempReadings* é recalculada antes de ser usada nas funções $average e $sum. O recálculo da matriz será necessário para assegurar que a matriz contenha os valores atuais quando a expressão *tempAverage* ou *tempSum* for avaliada, porque a ordem das expressões de mapeamento não pode ser controlada.
+
 O exemplo a seguir mostra a temperatura média e a temperatura somada com base em uma janela deslizante de 5 leituras de temperatura:
 ```
 {
@@ -223,3 +243,32 @@ O exemplo a seguir mostra a temperatura média e a temperatura somada com base e
 }
 ```
 
+## Manipulando incompatibilidades entre a expressão de mapeamento e os dados de entrada
+
+Uma atualização de estado pode falhar quando uma das expressões de mapeamento contém uma referência aos dados de entrada que não está especificada no evento publicado.
+
+Por exemplo, você pode configurar as expressões a seguir:
+```
+temperature = $event.t 
+humidity = $event.hum
+```
+em que *t* é uma propriedade opcional para o evento.
+
+Se um evento que contém somente dados de umidade for recebido, por exemplo, `{"humidity":22}`, a expressão `temperature = $event.t` falhará ao ser avaliada, porque a propriedade *t* opcional não está especificada no evento de dispositivo publicado.
+
+A atualização de estado falha. A propriedade de estado de umidade não é atualizada, e uma mensagem de erro é publicada no tópico de erro do MQTT para o dispositivo:
+```
+iot-2/type/ ${ /id/ ${ /err/data
+```
+Para evitar falhas de atualização de estado por causa de dados opcionais não especificados, é possível usar a função $exists em combinação com um condicional ternária para especificar um valor padrão para propriedades opcionais. O exemplo a seguir define um valor padrão de *0* para a propriedade *t*:
+
+```
+" tempEvent: {
+      "temperature": "$exists($event.t)?$event.t:0",
+      "humidity": "$event.hum"
+    }
+```
+
+Definindo um valor padrão para a propriedade opcional dessa maneira, a expressão é avaliada com êxito, mesmo quando a propriedade *t* não é especificada no evento de dispositivo publicado.
+
+Portanto, se o evento `{"humidity":22}` for recebido, a atualização de estado será concluída com êxito e o estado do dispositivo será configurado como `{"humidity":22, "temperature":0}`.

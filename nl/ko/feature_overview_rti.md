@@ -25,7 +25,7 @@ lastupdated: "2018-01-17"
 ## 연결
 {: #connect}
 
-{{site.data.keyword.iot_short_notm}} 연결은 {{site.data.keyword.iot_short_notm}} 서비스의 시작점입니다. 디바이스 연결, 애플리케이션 작성, 디바이스 제어 및 써드파티 서비스와 통합은 모두 {{site.data.keyword.iot_short_notm}} 연결에서 사용 가능합니다.
+{{site.data.keyword.iot_short_notm}} 연결은 {{site.data.keyword.iot_short_notm}} 서비스의 시작점입니다. 디바이스 연결, 애플리케이션 작성, 디바이스 제어 및 서드파티 서비스와 통합은 모두 {{site.data.keyword.iot_short_notm}} 연결에서 사용 가능합니다.
 
 ### 게이트웨이 디바이스
 
@@ -37,7 +37,7 @@ lastupdated: "2018-01-17"
 
 ### 확장기능 및 서비스 통합
 
-확장기능 및 서비스 통합을 통해 외부 서비스와 코어 서비스의 사용자 정의 확장기능을 모두 {{site.data.keyword.iot_short_notm}}의 인스턴스에 추가할 수 있습니다. {{site.data.keyword.iot_short_notm}}과 통합할 수 있는 외부 서비스에는 디바이스 위치에서 현재 날씨를 찾을 수 있는 The Weather Company 날씨 위치 서비스, Jasper SIM 데이터 및 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}이 포함됩니다. 써드파티 서비스 통합 및 확장기능에 대한 자세한 정보는 [외부 서비스 통합](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)을 참조하십시오.
+확장기능 및 서비스 통합을 통해 외부 서비스와 코어 서비스의 사용자 정의 확장기능을 모두 {{site.data.keyword.iot_short_notm}}의 인스턴스에 추가할 수 있습니다. {{site.data.keyword.iot_short_notm}}과 통합할 수 있는 외부 서비스에는 디바이스 위치에서 현재 날씨를 찾을 수 있는 The Weather Company 날씨 위치 서비스, Jasper SIM 데이터 및 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}이 포함됩니다. 서드파티 서비스 통합 및 확장기능에 대한 자세한 정보는 [외부 서비스 통합](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)을 참조하십시오.
 
 
 ---
@@ -82,8 +82,8 @@ lastupdated: "2018-01-17"
 
 ### 보안 연결 및 아키텍처
 
-{{site.data.keyword.iot_short_notm}}의 아키텍처는 디바이스가 다른 디바이스로 위장하지 못하게 하므로 디바이스 데이터의 무결성을 유지보수합니다. 디바이스에서 사용자만 아는 클라이언트 ID와 인증 토큰의 조합을 사용하여 {{site.data.keyword.iot_short_notm}}에 연결합니다. 디바이스를 등록하거나 API 키가 생성되고 나면 신임 정보의 보안을 유지보수하기 위해 인증 토큰이 솔트(salt)되고 해시됩니다.
+{{site.data.keyword.iot_short_notm}}의 아키텍처는 디바이스가 다른 디바이스로 위장하지 못하게 하므로 디바이스 데이터의 무결성을 유지보수합니다. 디바이스에서 사용자만 아는 클라이언트 ID와 인증 토큰의 조합을 사용하여 {{site.data.keyword.iot_short_notm}}에 연결합니다. 디바이스를 등록하거나 API 키가 생성되고 나면 인증 정보의 보안을 유지보수하기 위해 인증 토큰이 솔트(salt)되고 해시됩니다.
 
-위험 및 보안 관리 추가 기능을 사용하면 서버와 디바이스 간의 모든 연결점이 증명된 신임 정보로 인증되도록 {{site.data.keyword.iot_short_notm}} 보안을 향상시킬 수 있습니다. 이 추가 기능을 사용하는 경우에는 {{site.data.keyword.iot_short_notm}}에서 사용되는 사용자 ID 및 토큰 이외에 인증서 및 TLS(Transport Layer Security) 인증이 사용됩니다. 디바이스와 서버 간의 통신 중 서버 액세스 권한이 포함된 유효한 인증서가 없는 디바이스는 유효한 사용자 ID 및 비밀번호를 사용하더라도 위험 및 보안 관리 추가 기능에 구성된 대로 액세스가 거부됩니다.
+위험 및 보안 관리 추가 기능을 사용하면 서버와 디바이스 간의 모든 연결점이 증명된 인증 정보로 인증되도록 {{site.data.keyword.iot_short_notm}} 보안을 향상시킬 수 있습니다. 이 추가 기능을 사용하는 경우에는 {{site.data.keyword.iot_short_notm}}에서 사용되는 사용자 ID 및 토큰 이외에 인증서 및 TLS(Transport Layer Security) 인증이 사용됩니다. 디바이스와 서버 간의 통신 중 서버 액세스 권한이 포함된 유효한 인증서가 없는 디바이스는 유효한 사용자 ID 및 비밀번호를 사용하더라도 위험 및 보안 관리 추가 기능에 구성된 대로 액세스가 거부됩니다.
 
 ---

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-06-16"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -13,14 +13,14 @@ lastupdated: "2017-06-16"
 {:screen: .screen}
 {:tip: .tip}
 
-# Guia 3: Monitorando seus dados do dispositivo
+# Guia 2: Monitorando os Dados do Dispositivo
 Agora que você tem um ou mais dispositivos conectados, é hora de começar a monitorar dados do dispositivo em tempo real.
 {:shortdesc}
 
 ## Visão geral e objetivo
 {: #overview}  
 
-Neste guia, você implementará um aplicativo de monitoramento no {{site.data.keyword.Bluemix_notm}} para visualizar dados de seus dispositivos.
+Neste guia, você implementará um aplicativo de monitoramento no {{site.data.keyword.Bluemix}} para visualizar dados de seus dispositivos.
 
 Como no guia 1, é possível seguir um ou ambos os seguintes caminhos:
 - Caminho A: [Etapa 1A - Implementar e conectar o aplicativo da web de monitoramento](#deploy_app)  
@@ -56,7 +56,7 @@ Se você concluiu o [Guia 1: introdução à {{site.data.keyword.iot_short_notm}
 ## Etapa 1A - Implementar e conectar o aplicativo da web de monitoramento
 {: #deploy_app}
 
-O aplicativo de amostra Plant Floor Monitoring lista todos os tipos de dispositivo iot-conveyor-belt que estão conectados à sua organização do {{site.data.keyword.iot_short_notm}} com um subconjunto dos dados do evento, como RPM, última atualização e o ID do dispositivo.
+O aplicativo de amostra Plant Floor Monitoring lista todos os tipos de dispositivo iot-conveyor-belt que estão conectados à sua organização do {{site.data.keyword.iot_full}} com um subconjunto dos dados do evento, como RPM, última atualização e o ID do dispositivo.
 
 O aplicativo de amostra é construído usando as bibliotecas do cliente Node.js em: [https://github.com/ibm-watson-iot/iot-nodejs ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 
@@ -67,7 +67,7 @@ Como parte desta etapa, você:
 - Configure o aplicativo de amostra para se conectar com {{site.data.keyword.iot_short_notm}} usando uma chave API e um token de autenticação.
 - Use o aplicativo da web para monitorar seus dispositivos de esteira transportadora conectados.  
 
-### Etapas detalhadas
+### Etapas detalhadas para implementar e conectar o aplicativo da web de monitoramento
 As etapas a seguir conduzem você pela criação e implementação do app no {{site.data.keyword.Bluemix_notm}}. Para obter informações sobre como executar o app localmente, veja o arquivo LEIA-ME no GitHub.
 1. Clone o repositório GitHub do aplicativo de amostra *Plant Floor
 Monitoring* do Node.js.  
@@ -183,7 +183,7 @@ Como parte desta etapa, você:
 - Configure três widgets da interface com o usuário para exibir dados do dispositivo como medidores e gráficos.
 - Use o aplicativo da web para monitorar seu dispositivo de esteira transportadora conectado.  
 
-### Etapas detalhadas
+### Etapas detalhadas para criar uma interface com o usuário de monitoramento usando a biblioteca de widgets
 As etapas a seguir conduzem você pela criação e implementação do app no {{site.data.keyword.Bluemix_notm}}. Para obter informações sobre como executar o app localmente, veja o arquivo LEIA-ME no GitHub.
 1. Clone o repositório GitHub do aplicativo de amostra *Widget Library Monitoring*.  
 Use sua ferramenta git favorita para clonar o repositório a seguir:  
@@ -359,7 +359,7 @@ Para obter detalhes técnicos, veja:
 - Caminho B: Modifique o aplicativo de biblioteca de widget conforme suas necessidades.  
 Para obter detalhes técnicos, veja:
  - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
-- [Guia 4: simulando um grande número de dispositivos](getting-started-iot-large-scale-simulation.html)  
-Expanda a simulação básica, incluindo grandes números de simuladores de auto-execução em seu ambiente. Essa expansão permitirá testar a análise básica e o monitoramento dos guias anteriores em um ambiente mais realista, com vários dispositivos.
+- [Guia 3: Simulando um grande número de dispositivos](getting-started-iot-large-scale-simulation.html)  
+Expanda a simulação básica, incluindo grandes números de simuladores de auto-execução em seu ambiente.
 - [Saiba mais sobre a {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
 - [Saiba mais sobre APIs de {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/reference/api.html){:new_window}

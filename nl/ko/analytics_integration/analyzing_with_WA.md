@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-09-18"
 ---
 
@@ -37,8 +37,8 @@ lastupdated: "2017-09-18"
 
 ## 전제조건
 
-다음 단계를 완료하려면 [{{site.data.keyword.iot_short_notm}}(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window} 및 [Cloudant NoSQL DB ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/cloudant-nosql-db
-){: new_window}에 대한 액세스 권한 및 [Watson Analytics(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://www.ibm.com/watson-analytics){: new_window}에 대한 액세스 권한이 있어야 합니다.
+다음 단계를 완료하려면 [{{site.data.keyword.iot_short_notm}} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window} 및 [Cloudant NoSQL DB ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/cloudant-nosql-db
+){: new_window}에 대한 액세스 권한 및 [Watson Analytics ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/watson-analytics){: new_window}에 대한 액세스 권한이 있어야 합니다.
 
 
 ## 1단계. 시뮬레이터 설정
@@ -57,9 +57,9 @@ lastupdated: "2017-09-18"
 날씨 센서 시뮬레이터를 사용하여 조직에 대해 실제 센서 데이터 이벤트를 시뮬레이션하려면 먼저 시뮬레이터를 설정해야 합니다. 이러한 단계에서는 {{site.data.keyword.iot_short_notm}}의 인스턴스를 이미 시작하고 실행한다고 가정합니다.
 
 1. [시뮬레이터를 실행하는 데 필요한 apikey 및 토큰을 생성하십시오. ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/IoT/platform_authorization.html#api-key){: new_window}
-2. [날씨 센서 시뮬레이터 웹 앱 배치(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}를 수행하고 자세한 지시사항을 따르십시오.
+2. [날씨 센서 시뮬레이터 웹 앱 배치 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}를 수행하고 자세한 지시사항을 따르십시오.
 
-   날씨 센서에 대한 자세한 정보는 [날씨 센서 시뮬레이터 안내서(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}를 참조하십시오.
+   날씨 센서에 대한 자세한 정보는 [날씨 센서 시뮬레이터 안내서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}를 참조하십시오.
 3. [2단계. 데이터베이스 커넥터 구성](#WA_config_db)을 진행하십시오.
 
 
@@ -68,10 +68,10 @@ lastupdated: "2017-09-18"
 
 날씨 센서 시뮬레이터를 사용하여 조직에 대해 실제 센서 데이터 이벤트를 시뮬레이션하려면 먼저 시뮬레이터를 설정해야 합니다. 이러한 단계에는 시뮬레이터와 함께 {{site.data.keyword.iot_short_notm}} 인스턴스를 작성하는 데 대한 지시사항이 포함됩니다.
 
-1. [{{site.data.keyword.iot_short_notm}}의 인스턴스로 날씨 센서 시뮬레이터 웹 앱 배치(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window}를 수행하고 세부 단계를 수행하십시오.
+1. [{{site.data.keyword.iot_short_notm}}의 인스턴스로 날씨 센서 시뮬레이터 웹 앱 배치 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window}를 수행하고 세부 단계를 수행하십시오.
 
-   날씨 센서에 대한 자세한 정보는 [날씨 센서 시뮬레이터 안내서(![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘"))](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}를 참조하십시오.
-2. 배치가 완료되기를 기다린 다음 Bluemix 대시보드로 이동하십시오.
+   날씨 센서에 대한 자세한 정보는 [날씨 센서 시뮬레이터 안내서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}를 참조하십시오.
+2. 배치가 완료되기를 기다린 후에 IBM Cloud 대시보드로 이동하십시오.
 3. 배치 프로세스를 통해 작성된 {{site.data.keyword.iot_short_notm}} 서비스 "wiotp-for-weather-sensors-simulator"를 실행하십시오.
 4. [2단계. 데이터베이스 커넥터 구성](#WA_config_db)을 진행하십시오.
 
@@ -81,7 +81,7 @@ lastupdated: "2017-09-18"
 
 미리 작성된 CSV 파일을 사용하여 조직에 대해 실제 센서 데이터 이벤트를 시뮬레이션하려면 다음을 수행하십시오.
 
-1. [Cloudant CSV 파일 다운로드 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator/releases/download/v1.0/cloudant.csv){: new_window}.
+1. [Cloudant CSV 파일을 다운로드하십시오. ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator/releases/download/v1.0/cloudant.csv){: new_window}
 2. [5단계. WA 설정 및 데이터 시각화](#WA_import_data)를 진행하십시오.
 
 
@@ -91,7 +91,7 @@ lastupdated: "2017-09-18"
 Watson Analytics와 함께 {{site.data.keyword.cloudant_short_notm}}를 사용하려면 Cloudant NoSQL DB가 히스토리언 서비스로 사용되도록 플랫폼 데이터 스토리지를 구성해야 합니다.
 
 1. {{site.data.keyword.cloudant_short_notm}} 대시보드의 탐색줄에서 **확장**을 클릭하십시오.
-2. **히스토리 데이터 스토리지**에서 **설정**을 클릭하십시오. **히스토리 데이터 스토리지 구성** 섹션에는 {{site.data.keyword.cloudant_short_notm}}와 동일한 Bluemix 영역 내에서 사용 가능한 Cloudant NoSQL DB 서비스가 모두 나열됩니다.
+2. **히스토리 데이터 스토리지**에서 **설정**을 클릭하십시오. **히스토리 데이터 스토리지 구성** 섹션에는 {{site.data.keyword.cloudant_short_notm}}와 동일한 IBM Cloud 영역 내에서 사용 가능한 Cloudant NoSQL DB 서비스가 모두 나열됩니다. 
 3. 연결할 Cloudant NoSQL DB 서비스를 선택하십시오.
 4. 다음 Cloudant NoSQL DB 구성 옵션을 지정하십시오.
   - 버킷 간격 = 일
@@ -122,7 +122,7 @@ Watson Analytics와 함께 {{site.data.keyword.cloudant_short_notm}}를 사용�
 
 디바이스 데이터를 저장하도록 {{site.data.keyword.cloudant_short_notm}} NoSQL DB를 구성한 경우 세 개의 데이터베이스가 커넥터를 통해 자동으로 작성됩니다. 현재 버킷 간격에 대해 하나의 데이터베이스가 작성되고, 향후 간격에 대해 하나, 구성 데이터베이스에 대해 하나가 작성됩니다. 간격의 끝에 도달한 경우, 디바이스 데이터는 새 간격의 버킷 데이터베이스에 저장되며 후속 버킷에 대해 새 데이터베이스가 작성됩니다.
 
-{{site.data.keyword.cloudant_short_notm}}의 히스토리 데이터 스토리지 확장 기능은 Cloudant “iotp”에 디자인 문서를 작성합니다. 이 문서에는 Cloudant에 문서로 저장된 디바이스 이벤트를 CSV 형식으로 내보내는 데 사용할 수 있는 “csv”라고 하는  “list” 함수가 있습니다. JSON 형식의 이벤트만 CSV 파일로 전송됩니다. 이 디자인 문서는 향후 버킷 간격에서 모든 새 데이터베이스에 자동으로 전파됩니다.
+{{site.data.keyword.cloudant_short_notm}}의 히스토리 데이터 스토리지 확장 기능은 Cloudant “iotp”에 디자인 문서를 작성합니다. 이 문서에는 Cloudant에 문서로 저장된 디바이스 이벤트를 CSV 형식으로 내보내는 데 사용할 수 있는 “csv”라고 하는 “list” 함수가 있습니다. JSON 형식의 이벤트만 CSV 파일로 전송됩니다. 이 디자인 문서는 향후 버킷 간격에서 모든 새 데이터베이스에 자동으로 전파됩니다.
 
 CSV 파일에는 디바이스 이벤트 메타데이터 및 해당 페이로드에 대한 정보가 포함됩니다. 다음 목록은 이벤트 메타데이터의 예를 표시합니다.
  -	DeviceId
@@ -175,7 +175,7 @@ CSV 형식으로 Cloudant 데이터베이스를 내보내려면 다음을 수행
    ```
    https://{cloudant service id}-bluemix.cloudant.com/{dbName}/_design/iotp/_list/csv/by-date?statkey="2017-08-29T12:25:50.995Z"&endkey="2017-08-29T12:25:51.514Z"
    ```
-5. 필요한 경우 Cloudant 신임 정보를 제공하고 CSV 파일을 다운로드하십시오. 파일 이름은 URL에 정의된 보기에 따라 생성됩니다. 예를 들어, 파일 이름은 by-date.csv 또는 by-deviceType.csv일 수 있습니다.
+5. 필요한 경우 Cloudant 인증 정보를 제공하고 CSV 파일을 다운로드하십시오. 파일 이름은 URL에 정의된 보기에 따라 생성됩니다. 예를 들어, 파일 이름은 by-date.csv 또는 by-deviceType.csv일 수 있습니다.
 6. [5단계. WA 설정 및 데이터 시각화](#WA_import_data)를 진행하십시오.
 
 
@@ -184,7 +184,7 @@ CSV 형식으로 Cloudant 데이터베이스를 내보내려면 다음을 수행
 
 WA를 설정하고 데이터 시각화를 시작하려면 다음을 수행하십시오.
 
-1. WA(https://watson.analytics.ibmcloud.com)에 로그인하십시오.
+1. WA에 로그인하십시오. https://watson.analytics.ibmcloud.com
 2. WA 홈 페이지에서 **데이터**를 선택하십시오.
 3. **로컬 파일**을 클릭하고 로컬 CSV 파일을 가져오십시오. CSV 파일 이름은 데이터를 내보내는 데 사용한 보기에 따라 다릅니다(예: by-deviceType 또는 by-date).
 4. 업로드한 CSV 데이터 자산을 선택하십시오.

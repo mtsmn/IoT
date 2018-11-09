@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-04-24"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
+
 ---
 
 {:new_window: target="\_blank"}
@@ -15,7 +16,7 @@ lastupdated: "2017-04-24"
 {: #gettingstartedtemplate}
 <!-- Provide an appropriate ID above -->
 
-Introduzione a {{site.data.keyword.iot_full}} utilizzando il progetto il progetto GitHub di {{site.data.keyword.iot_short_notm}}. Mediante lo Starter, puoi facilmente simulare un dispositivo, creare schede, generare dati e iniziare ad analizzare e visualizzare i dati nel dashboard {{site.data.keyword.iot_short_notm}}.  
+Introduzione a {{site.data.keyword.iot_full}} utilizzando il progetto il progetto GitHub di {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
 ## Panoramica
@@ -24,10 +25,10 @@ Introduzione a {{site.data.keyword.iot_full}} utilizzando il progetto il progett
 Lo starter viene distribuito e connesso automaticamente ai seguenti servizi:
 <dl>
 <dt>**{{site.data.keyword.iot_short_notm}}**</dt>
-<dd>Un servizio IoT web che include la gestione di gateway, la gestione dei dispositivi e l'accesso alle applicazioni. Utilizzando {{site.data.keyword.iot_short_notm}}, puoi raccogliere i dati dei dispositivi connessi ed eseguire l'analisi dei dati in tempo reale per la tua organizzazione.</dd>
+<dd>Un servizio IoT web che include la gestione di gateway, la gestione dei dispositivi e l'accesso alle applicazioni. Utilizzando {{site.data.keyword.iot_short_notm}}, puoi raccogliere i dati dei dispositivi collegati o i dati in tempo reale dalla tua organizzazione.</dd>
 <dt>**{{site.data.keyword.sdk4nodefull}}**</dt>
 <dd>L'ambiente di runtime in cui è in esecuzione Node-RED. </br>Per ulteriori informazioni, vedi la [documentazione di {{site.data.keyword.sdk4nodefull}}](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html).</dd>
-<dd>Node-RED è uno strumento per la connessione di dispositivi hardware, API e servizi in linea con nuove e interessanti modalità.  Puoi utilizzare Node-RED per creare un termostato simulato che invia dati simulati al tuo servizio {{site.data.keyword.iot_short_notm}}. Puoi creare schede per visualizzare i dati in tempo reale nel dashboard {{site.data.keyword.iot_short_notm}}. </br>Per ulteriori informazioni, vedi la [documentazione Node-RED](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).</dd>
+<dd>Node-RED è uno strumento per la connessione di dispositivi hardware, API e servizi in linea con nuove e interessanti modalità.  Puoi utilizzare Node-RED per creare un termostato simulato che invia dati simulati al tuo servizio {{site.data.keyword.iot_short_notm}}. </br>Per ulteriori informazioni, vedi la [documentazione Node-RED](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).</dd>
 <dt>**{{site.data.keyword.cloudantfull}}**</dt><dd>Il database in cui Node-RED memorizza i metadati.</dd>
 </dl>
 
@@ -43,7 +44,7 @@ Per facilitare lo spostamento tra le attività nel processo che segue, apri il d
 <dt>*Dashboard {{site.data.keyword.Bluemix_notm}}*</dt>
 <dd>Vedi lo stato della tua distribuzione, leggi la documentazione e avvia i dashboard.</dd>
 <dt>*Dashboard {{site.data.keyword.iot_short_notm}}*</dt>
-<dd>Definisci i tipi di dispositivi, registra i dispositivi, monitora i dati del sensore in entrata, crea le schede di visualizzazione dei dati e vedi le visualizzazioni dei dati live.</dd>
+<dd>Definisci i tipi di dispositivo e registra i dispositivi.</dd>
 <dt>*Node-RED*</dt>
 <dd>Configura ed esegui il flusso del simulatore del dispositivo e gestisci gli altri flussi per elaborare i dati provenienti da {{site.data.keyword.iot_short_notm}}.</dd>
 </dl>
@@ -54,7 +55,7 @@ Per facilitare lo spostamento tra le attività nel processo che segue, apri il d
 Completa la seguente procedura per distribuire l'applicazione di esempio starter:
 
 1. Distribuisci l'applicazione starter.
- 1. Fai clic su <a href="https://bluemix.net/devops/setup/deploy?repository=https://github.com/ibm-watson-iot/iot-platform-bluemix-starter"><img src="https://bluemix.net/devops/graphics/create_toolchain_button.png" height=25></a> per creare una nuova Toolchain di fornitura continua in Bluemix:  (tramite Continuous Delivery)  
+ 1. Fai clic su **Create Toolchain** per creare una nuova Toolchain di fornitura continua in Bluemix:  (tramite Continuous Delivery)  
  **Suggerimento:** se preferisci distribuire dalla riga di comando, puoi [trovare lo {{site.data.keyword.iot_short_notm}} starter](https://github.com/ibm-watson-iot/iot-platform-bluemix-starter) nell'organizzazione IBM Watson IoT in GitHub.
  2. Quando richiesto, accedi a IBM Bluemix.
  3. Se necessario, seleziona l'organizzazione Bluemix in cui vuoi distribuire l'applicazione starter.
@@ -141,52 +142,6 @@ Il payload contiene i punti dati, come quelli mostrati nel seguente esempio:
     3. Fai clic sulla scheda Debug per vedere i messaggi.
   8. Nella pagina {{site.data.keyword.iot_short_notm}} Device Information, verifica di visualizzare i punti dati del dispositivo nella sezione Sensor Information.
 
-
-## Passo 4: crea le schede in {{site.data.keyword.iot_short_notm}} per visualizzare i dati live  
-{: #createcards}  
-Crea una tabella e le schede per visualizzare i dati del dispositivo nel dashboard {{site.data.keyword.iot_short_notm}}. Per ulteriori informazioni su tabelle e schede, vedi [Visualizzazione dei dati in tempo reale utilizzando le tabelle e le schede](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
-
-1. Crea una tabella
-  1. Apri il dashboard {{site.data.keyword.iot_short_notm}}.  
-  **Suggerimento:** se il dashboard {{site.data.keyword.iot_short_notm}} non è già aperto in un'altra scheda, torna al dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul nome della tua istanza {{site.data.keyword.iot_short_notm}} e fai clic su **Launch Dashboard**.  
-  2. Crea una tabella per contenere le schede per i tuoi dispositivi simulati.
-    1. Se la pagina All Boards non è già visualizzata, seleziona **Boards** dal menu principale del dashboard {{site.data.keyword.iot_short_notm}} e fai quindi clic su **Create New Board**.
-    2. Immetti un nome per la tabella (ad esempio `Home Environment`) e fai clic su **Next**.
-    3. Nella pagina successiva, fai clic su **Submit**.  
-  3. Fai clic sulla tabella appena creata per aprirla.
-2. Crea una scheda per visualizzare la temperatura
-  1. Fai clic su **Add New Card**, quindi seleziona il tipo di scheda **Line chart** dalla sezione Devices.
-  2. Seleziona il tuo dispositivo dall'elenco e fai clic su **Next**.
-  3. Fai clic su **Connect new data set**.
-  4. Nella pagina Create Value Card, seleziona o immetti i seguenti valori e fai clic su **Next**.
-    - Evento: update
-    - Proprietà: temp
-    - Nome: Temperature
-    - Tipo: Float
-    - Unità: °C
-    - Precisione: 2
-    - Min: 0
-    - Max: 50
-  5. Nella pagina Card Preview, seleziona **L** per la dimensione del grafico a linee e fai clic su **Next**.
-  6. Nella pagina Card Information, modifica il nome della scheda in **Temperature** e fai clic su **Submit**.   
-La scheda della temperatura viene visualizzata nel dashboard e include un grafico a linee dei dati sulla temperatura dal vivo.
-3. Crea una scheda per visualizzare l'umidità
-  1. Fai clic su **Add New Card**, quindi seleziona il tipo di scheda **Gauge** dalla sezione Devices.
-  2. Seleziona il tuo dispositivo dall'elenco e fai clic su **Next**.
-  3. Fai clic su **Connect new data set**.
-  4. Nella pagina Create Value Card, seleziona o immetti i seguenti valori e fai clic su **Next**.
-  Evento: update
-     - Proprietà: humidity
-     - Nome: Humidity
-     - Tipo: Float
-     - Unità: %
-     - Precisione: 1
-     - Min: 10
-     - Max: 95
-  5. Nella pagina Card Preview, seleziona **M** per la dimensione del misuratore e fai clic su **Next**.
-  6. Nella pagina Card Information, modifica il nome della scheda in **Humidity** e fai clic su **Submit**.   
-La scheda dell'umidità viene visualizzata nel dashboard e include un misuratore che mostra i dati sull'umidità dal vivo.  
-
 <!-- 4. Create a card to display location
   1. Click **Add New Card**, and then select the **Value** card type, which is located in the Devices section.
   2. Select your device from the list, then click **Next**.
@@ -217,7 +172,6 @@ The location card appears on the dashboard and shows the live latitude and longi
 ## Operazioni successive  
 {: #whats-next}  
 Ora che il tuo dispositivo simulato invia dati a {{site.data.keyword.iot_short_notm}}, puoi continuare a eseguire l'iterazione sul tuo progetto IoT.
- - Guarda le tue schede che visualizzano i dati generati dal flusso node-RED.  
 Node-Red continua a inviare dati finché non li interrompi. Per interrompere i dati simulati, completa la seguente procedura:
     1.	Nell'editor del flusso Node-RED, fai doppio clic sul nodo grigio **Send Data**, imposta il valore Repeat su **Interval** e imposta la frequenza su ogni **3** secondi.
     2. Fai clic su **Done**.
@@ -226,8 +180,6 @@ Node-Red continua a inviare dati finché non li interrompi. Per interrompere i d
  - Connetti un dispositivo fisico.  
 [Cerca le ricette IoT](https://developer.ibm.com/recipes/?post_type=tutorials&s=watson+iot) per connettere un dispositivo fisico come Raspberry Pi e inviare i dati a {{site.data.keyword.iot_short_notm}}.
 
- - Esplora le opzioni di visualizzazione.  
-[Distribuisci un'applicazione node.js di esempio per visualizzare i dati del dispositivo.](https://www.bluemix.net/docs/services/IoT/visualizingdata_sample.html)
 
  -	Proteggi con password l'editor del flusso Node-RED.   
 Per impostazione predefinita, l'editor è aperto a tutti per accedere e modificare i flussi. Per proteggere con password l'editor, completa le seguenti attività:

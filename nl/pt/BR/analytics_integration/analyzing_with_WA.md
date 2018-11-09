@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-09-18"
 ---
 
@@ -38,7 +38,7 @@ Como parte deste guia, você aprenderá:
 ## Pré-requisito
 
 Para concluir estas etapas deve-se ter acesso ao [{{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/catalog/services/internet-of-things-platform){: new_window} com [Cloudant NoSQL DB ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")] (https://console.bluemix.net/catalog/services/cloudant-nosql-db
-){: new_window} e acesso ao [Watson Analytics ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/watson-analytics){: new_window}.
+){: new_window}e acesso ao [Watson Analytics ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/watson-analytics){: new_window}.
 
 
 ## Etapa 1. Configurar o simulador
@@ -74,7 +74,7 @@ Para simular eventos reais de dados do sensor com relação às suas organizaç�
 1. [Implemente o app da web de simulador Weather Sensors com uma instância de {{site.data.keyword.iot_short_notm}} ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://bluemix.net/deploy?repository=https://github.com/ibm-watson-iot/guide-weathersensors-simulator&branch=bindwiotp){: new_window} e siga as etapas detalhadas.
 
    Para obter mais informações sobre o Weather Sensors, veja [o guia do simulador Weather Sensors ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-weathersensors-simulator){: new_window}.
-2. Aguarde a implementação ser concluída e, em seguida, navegue para o painel do Bluemix.
+2. Aguarde até que a implementação seja concluída e, em seguida, navegue para o painel do IBM Cloud.
 3. Ative o serviço "wiotp-for-weather-sensors-simulator" de {{site.data.keyword.iot_short_notm}} que foi criado pelo processo de implementação.
 4. Continue com a [Etapa 2. Configurar o conector do banco de dados](#WA_config_db).
 
@@ -97,7 +97,7 @@ configurar o armazenamento de dados da plataforma para que o Cloudant NoSQL DB s
 como serviço historiador.
 
 1. No painel do {{site.data.keyword.cloudant_short_notm}}, clique em **Extensões** na barra de navegação.
-2. Em **Armazenamento de dados históricos**, clique em **Configuração**. A seção **Configurar armazenamento de dados históricos** lista todos os serviços Cloudant NoSQL DB que estão disponíveis no mesmo espaço do Bluemix que o {{site.data.keyword.cloudant_short_notm}}.
+2. Em **Armazenamento de dados históricos**, clique em **Configuração**. A seção **Configurar armazenamento de dados históricos** lista todos os serviços do Cloudant NoSQL DB que estão disponíveis no mesmo espaço do IBM Cloud que o {{site.data.keyword.cloudant_short_notm}}.
 3. Selecione o serviço Cloudant NoSQL DB que você deseja conectar.
 4. Especifique as opções de configuração do Cloudant NoSQL DB a seguir:
   - Intervalo de depósito = dia
@@ -181,6 +181,7 @@ Para exportar o banco de dados do Cloudant em formato CSV:
    https://{cloudant service id}-bluemix.cloudant.com/{dbName}/_design/iotp/_list/csv/by-date?include_docs=true
 ```
    O ID de serviço do Cloudant e dbName devem ser mudados de acordo com seu ID de serviço do Cloudant e o nome do banco de dados selecionado. O ID de serviço cloudant pode ser copiado da URL do painel de gerenciamento do Cloudant.
+
    **Exemplo:**
    ```
    https://ccf73725-b617-4f3e-8a7e-f5fb09569af4-bluemix.cloudant.com/iotp_115ccv_default_2017-08-23/_design/iotp/_list/csv/by-date?include_docs=true
@@ -190,6 +191,7 @@ Para exportar o banco de dados do Cloudant em formato CSV:
 visualização por data é utilizada para chamar a função lista. É possível também filtrar
 os dados usando o recurso de filtro nativo de visualizações do Cloudant, mudando a
 visualização que é usada na URL e aplicando os atributos startkey e endkey.
+
    **Exemplo:**
    ```
    https://{cloudant service id}-bluemix.cloudant.com/{dbName}/_design/iotp/_list/csv/by-deviceType?include_docs=true&startkey='WS'&endkey='WS'
@@ -454,7 +456,7 @@ dispositivos, identificando relacionamentos entre os dispositivos para detectar
 anomalias, mau funcionamento de dispositivo e assim por diante. Para concluir esta análise, copie e cole ou digite uma das perguntas no WA:
 
 *"Qual é a tendência de TEMP ao longo do tempo por deviceId?"* ou
-*"Qual é a tendência de TEMP ao longo do tempo por deviceId? filtrado por deviceId: Ahuza, Igud "*
+*"Qual é a tendência de TEMP ao longo do tempo por deviceId?  filtrado por deviceId: Ahuza, Igud "*
 
 Este é o resultado mostrando a comparação de valor do sensor ao longo do tempo:
 
@@ -478,7 +480,7 @@ do tempo?**
 Neste exemplo, nós mutuamente visualizamos a tendência de dois sensores de
 dispositivo para obter mais insight das mudanças no ambiente ao longo do tempo. Para concluir esta análise, copie e cole ou digite a pergunta a seguir no WA:
 
-*"Qual é a tendência de NO2 e NOX ao longo do tempo por deviceId? filtrado por deviceId: Ahuza"*
+*"Qual é a tendência de NO2 e NOX ao longo do tempo por deviceId?  filtrado por deviceId: Ahuza"*
 
 Este é o resultado mostrando a tendência de dois sensores de dispositivo ao longo do tempo.
 

@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-05-31"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -24,7 +24,6 @@ lastupdated: "2018-05-31"
 ------------- | -------------
 드릴 다운 보고 | [드릴 다운 보고(베타)](reference/security/RM_security.html#drill_down)
 IoT 게이트웨이 패키지 |[IoT 게이트웨이 패키지(베타)](gateways/iotgw.html#gw_package)
-디바이스 데이터 시뮬레이션 |[디바이스 데이터 시뮬레이션(베타)](devices/device_sim.html)
 삭제된 디바이스 복원 | [삭제된 디바이스 복원(베타)](iotplatform_task.html#restore_device)
 임베디드 규칙 | [임베디드 규칙 작성(베타)](information_management/im_rules.html)
 항목 | [데이터 관리 소개](GA_information_management/ga_im_device_twin.html#device_twins)
@@ -32,3 +31,4 @@ IoT 게이트웨이 패키지 |[IoT 게이트웨이 패키지(베타)](gateways/
 Cloud IAM Authentication and Authorization | [Cloud IAM Authentication and Authorization for {{site.data.keyword.iot_short_notm}}(베타)](reference/security/cloud_iam.html)
 App ID Authentication and Authorization | [App ID Authentication and Authorization for {{site.data.keyword.iot_short_notm}}(베타)](reference/security/app_id.html)
 그룹 사용자 인터페이스 | [그룹 관리(베타)](manage_groups.html#groups_overview)
+클라이언트 연결 모니터링| [클라이언트 연결 모니터링(베타)](reference/security/client_connect.html)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2016-11-22"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -535,7 +535,7 @@ Fai riferimento a [questa pagina](../device_mgmt/operations/firmware_actions.htm
 {{site.data.keyword.iot_short_notm}} supporta le seguenti azioni del dispositivo:
 
 * Riavvio
-* Ripristino impostazioni predefinite
+* Ripristino delle impostazioni di fabbrica
 
 Il dispositivo deve completare le seguenti attività per supportare le azioni dispositivo:
 

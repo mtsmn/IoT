@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-14"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -24,13 +24,13 @@ Utilisez les informations et les exemples fournis pour commencer à développer 
 ## Téléchargement du client et des ressources Node.js
 {: #node.js_client_downloads}
 
-Pour accéder aux bibliothèques client Node.js pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-nodejs ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window} dans GitHub et exécutez les instructions d'installation.
+Pour accéder aux bibliothèques client Node.js pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-nodejs ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window} dans GitHub et exécutez les instructions d'installation.
 
 
 Pour plus d'informations, voir les ressources suivantes :
 
-- [Exemples de terminaux ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples){: new_window} dans Github
-- Le référentiel [ibmiotf ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/ibmiotf){: new_window} sur NPM
+- [Exemples de terminaux ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples){: new_window} dans Github
+- Le référentiel [ibmiotf ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.npmjs.com/package/ibmiotf){: new_window} sur NPM
 
 ## Constructeur
 {: #constructor}
@@ -153,7 +153,7 @@ Les événements peuvent être publiés à l'aide des propriétés suivantes :
 
 |Propriété |Description|
 |:---|:---|
-|`eventType`  | Type d'événement à publier, par exemple, statut ou GPS. |  
+|`eventType`  | Type d'événement à publier, par exemple, status ou GPS. |  
 |`eventFormat`  |Format de l'événement, par exemple, JSON. |
 |`data`  | Contenu de l'événement, qui doit correspondre à une chaîne de mémoire tampon. |
 |`QoS`  | Qualité de service MQTT de l'événement publié. Les valeurs prises en charge sont 0, 1 et 2.|

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-07-19"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -12,12 +12,10 @@ lastupdated: "2017-07-19"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Configuración del control de acceso a nivel de recurso (Beta)
+# Configuración del control de acceso a nivel de recursos
 {: #configure_RLAC}
 
-**Importante:** La característica de control de acceso a nivel de recurso de {{site.data.keyword.iot_full}} solo está disponible como parte de un programa beta limitado. Las actualizaciones futuras pueden incluir cambios que no son compatibles con la versión actual de esta característica. Pruébela y [denos su opinión ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
-
-El control de acceso a nivel de recurso le permite controlar el acceso de usuario y de clave de API para gestionar dispositivos. Puede utilizar grupos de recursos para definir qué dispositivos en una organización puede gestionar cada usuario o clave de API. Los usuarios y claves de API pueden asignarse a un par "rol para grupos", que define que solo pueden realizar operaciones cubiertas por el rol especificado en los dispositivos de los grupos especificados. Para obtener más información acerca del control de acceso a nivel de recurso, consulte [Visión general del control de acceso a nivel de recurso](rlac_overview.md) y [Documentación de la API de control de acceso de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}.
+El control de acceso a nivel de recurso le permite controlar el acceso de usuario y de clave de API para gestionar dispositivos. Puede utilizar grupos de recursos para definir qué dispositivos en una organización puede gestionar cada usuario o clave de API. Los usuarios y claves de API pueden asignarse a un par "rol para grupos", que define que solo pueden realizar operaciones cubiertas por el rol especificado en los dispositivos de los grupos especificados. Para obtener más información sobre el control de acceso a nivel de recursos, consulte [Visión general del control de acceso a nivel de recurso](rlac_overview.html) y [Documentación de la API de control de acceso de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window}.
 
 ## Configuración del control de acceso a nivel de recurso: Flujo de proceso
 {: #RLAC_process}
@@ -26,7 +24,7 @@ El siguiente flujo de proceso se utiliza normalmente para habilitar y utilizar e
 1. [Crear una organización](../iotplatform_overview.html#organizations).
 2. [Crear usuarios](../add_users.html#adding-new-users) y [claves de API](../platform_authorization.html#api-key).
 3. [Crear grupos de recursos](rlac.html#create_delete_group).
-4. [Asignar correlaciones rol para grupos para los usuarios y claves de API](rlac.html#assign_roletoegroup).
+4. [Asignar correlaciones rol para grupos para los usuarios y claves de API](rlac.html#assign_roletogroup).
 5. [Añadir dispositivos a los grupos de recursos](rlac.html#add_device).
 6. [Habilitar el control de acceso a nivel de recurso](rlac.html#RLAC_enable).
 
@@ -70,7 +68,7 @@ Para asignar un par "rol para grupos" a un usuario, utilice la siguiente API:
 
 
 
-Para asignar un par "rol para grupos" an una clave de API, utilice la siguiente API:
+Para asignar un par "rol para grupos" a una clave de API, utilice la siguiente API:
 
     PUT /api/v0002/authorization/apikeys/{apikeyUid}/role
 

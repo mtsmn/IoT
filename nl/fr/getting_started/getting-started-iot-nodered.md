@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-04-24"
+  years: 2017, 2018
+lastupdated: "2018-05-17"
+
 ---
 
 {:new_window: target="\_blank"}
@@ -16,9 +17,7 @@ lastupdated: "2017-04-24"
 <!-- Provide an appropriate ID above -->
 
 Commencez à utiliser {{site.data.keyword.iot_full}} en vous faisant la main avec
-le projet GitHub d'application {{site.data.keyword.iot_short_notm}} Starter. Avec le projet d'application Starter (ou application de démarrage), vous pouvez rapidement simuler
-un terminal, créer des cartes, générer des données et commencer à analyser et afficher des données dans le
-tableau de bord {{site.data.keyword.iot_short_notm}}.  
+le projet GitHub d'application {{site.data.keyword.iot_short_notm}} Starter.
 {:shortdesc}
 
 ## Présentation
@@ -27,14 +26,12 @@ tableau de bord {{site.data.keyword.iot_short_notm}}.
 L'application Starter déploie et connecte automatiquement ces services :
 <dl>
 <dt>**{{site.data.keyword.iot_short_notm}}**</dt>
-<dd>Service web IoT qui inclut la gestion des passerelle, la gestion des terminaux et l'accès aux applications. {{site.data.keyword.iot_short_notm}} vous permet de collecter des données
-de terminaux connectés et d'exécuter des analyses sur les données temps
-réel de votre organisation.</dd>
+<dd>Service web IoT qui inclut la gestion des passerelle, la gestion des terminaux et l'accès aux applications. {{site.data.keyword.iot_short_notm}} vous permet de collecter des données relatives à des terminaux connectés sur les données en tant réel de votre organisation.</dd>
 <dt>**{{site.data.keyword.sdk4nodefull}}**</dt>
 <dd>Environnement d'exécution dans lequel fonctionne Node-RED. </br>Pour plus d'informations, consultez
 la
 [documentation de {{site.data.keyword.sdk4nodefull}}](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html) Starter.</dd>
-<dd>Node-RED est un outil qui permet de relier des terminaux matériels, des API et des services en ligne de façon inédite et intéressante.  Vous pouvez utiliser Node-RED pour créer un thermostat simulé qui envoie des données simulées à votre service {{site.data.keyword.iot_short_notm}}. Vous pouvez créer des cartes pour afficher des données temps réel dans le tableau de bord de {{site.data.keyword.iot_short_notm}}. </br>Pour plus d'informations, consultez la [documentation Node-RED](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).</dd>
+<dd>Node-RED est un outil qui permet de relier des terminaux matériels, des API et des services en ligne de façon inédite et intéressante.  Vous pouvez utiliser Node-RED pour créer un thermostat simulé qui envoie des données simulées à votre service {{site.data.keyword.iot_short_notm}}. </br>Pour plus d'informations, consultez la [documentation Node-RED](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).</dd>
 <dt>**{{site.data.keyword.cloudantfull}}**</dt><dd>Base de données dans laquelle Node-RED stocke les métadonnées.</dd>
 </dl>
 
@@ -52,8 +49,7 @@ le tableau de bord {{site.data.keyword.iot_short_notm}} et l'application Node-RE
 <dt>*Tableau de bord {{site.data.keyword.Bluemix_notm}}*</dt>
 <dd>Permet de consulter l'état de votre déploiement, de lire la documentation et de lancer les tableaux de bord.</dd>
 <dt>*Tableau de bord {{site.data.keyword.iot_short_notm}}*</dt>
-<dd>Permet de définir des types de terminaux, d'enregistrer des terminaux, de surveiller les données en provenance
-de capteurs, de créer des cartes de visualisation de données et de voir des visualisations de données temps réel ("live").</dd>
+<dd>Définissez des types de terminal et enregistrez des terminaux.</dd>
 <dt>*Node-RED*</dt>
 <dd>Permet de configurer et d'exécuter le flux du simulateur de terminaux et de travailler avec d'autres flux pour traiter les données
 de {{site.data.keyword.iot_short_notm}}.</dd>
@@ -65,9 +61,7 @@ de {{site.data.keyword.iot_short_notm}}.</dd>
 Effectuez les étapes suivantes pour déployer l'application exemple Starter :
 
 1. Déployez l'application Starter.
- 1. Cliquez sur
-<a href="https://bluemix.net/devops/setup/deploy?repository=https://github.com/ibm-watson-iot/iot-platform-bluemix-starter"><img src="https://bluemix.net/devops/graphics/create_toolchain_button.png" height=25></a> pour
-créer une nouvelle chaîne d'outils de distribution continue dans Bluemix (via le service Continuous Delivery)  
+ 1. Cliquez sur **Créer une chaîne d'outils** pour créer une nouvelle chaîne d'outils de distribution continue dans Bluemix :  (via le service Continuous Delivery)  
  **Astuce :** Si vous préférez déployer à partir de la ligne de commande,
 [procurez-vous l'application {{site.data.keyword.iot_short_notm}} Starter](https://github.com/ibm-watson-iot/iot-platform-bluemix-starter) (vous la trouverez dans
 l'organisation IBM Watson IoT du site GitHub).
@@ -111,7 +105,7 @@ le bouton **Suivant** de chaque page.
   6.	Cliquez sur **Créer** pour ajouter le type de terminal.
 3.	Ajoutez un terminal qui utilise le type de terminal que vous venez de créer.
   1. Sur la page Ajouter un terminal, le type de terminal que vous venez de créer figure dans la
-liste des types de terminaux. Cliquez sur **Suivant** pour ajouter un terminal qui utilise ce type de terminal.
+liste des types de terminal. Cliquez sur **Suivant** pour ajouter un terminal qui utilise ce type de terminal.
   2. Entrez un ID de terminal unique (par exemple, `LivingRoomThermo1`).
   3. Optionnel : la fourniture de données descriptives sur la page Ajouter un terminal ainsi que l'entrée de métadonnées de terminal sur la page suivante
 sont des étapes optionnelles. Vous pouvez les omettre en cliquant sur le bouton **Suivant** de chaque page.
@@ -174,62 +168,6 @@ La charge utile contient des points de données tels que ceux de l'exemple suiva
   8. Dans la page d'informations sur le terminal {{site.data.keyword.iot_short_notm}}, vérifiez que
 des points de données émis par le terminal apparaissent bien dans la section Informations du capteur.
 
-
-## Etape 4 : Créez des cartes dans {{site.data.keyword.iot_short_notm}} pour afficher les données temps réel  
-{: #createcards}  
-Créez un tableau et des cartes pour afficher les données de terminaux dans le tableau de bord de {{site.data.keyword.iot_short_notm}}. Pour plus d'informations sur les tableaux et les cartes,
-consultez [Visualisation des données en temps réel à l'aide de tableaux et de cartes](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
-
-1. Créez un tableau
-  1. Ouvrez le tableau de bord {{site.data.keyword.iot_short_notm}}.  
-  **Astuce :** Si le tableau de bord {{site.data.keyword.iot_short_notm}} n'est pas déjà ouvert
-dans un autre onglet, retournez à votre tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur le nom
-de votre instance {{site.data.keyword.iot_short_notm}}, puis sur **Lancer le tableau de bord**.  
-  2. Créez un tableau pour y placer les cartes de vos terminaux simulés.
-    1. Si la page Tous les tableaux n'est pas déjà affichée,
-sélectionnez **Tableaux** dans le menu principal du
-tableau de bord {{site.data.keyword.iot_short_notm}}, puis cliquez sur **Créer un nouveau tableau**.
-    2. Entrez un nom pour le tableau (par exemple, `Environnement habitation`) et cliquez sur **Suivant**.
-    3. Sur la page suivante, cliquez sur **Soumettre**.  
-  3. Cliquez sur le tableau que vous venez de créer pour l'ouvrir.
-2. Créez une carte pour y afficher la température.
-  1. Cliquez sur **Ajouter une nouvelle carte** et, dans la section Terminaux,
-sélectionnez le type de carte **Graphique à courbes**.
-  2. Sélectionnez votre terminal dans la liste des terminaux, puis cliquez sur **Suivant**.
-  3. Cliquez sur **Connecter un nouveau jeu de données**.
-  4. Dans la page Créer une carte Valeur, sélectionnez ou entrez les valeurs suivantes,
-puis cliquez sur **Suivant**.
-    - Événement : Mise à jour
-    - Propriété : temp
-    - Nom : Température
-    - Type : Variable flottante
-    - Unité : °C
-    - Précision : 2
-    - Min : 0
-    - Max : 50
-  5. Dans la page Aperçu de la carte, sélectionnez **L** pour la taille du graphique à courbes,
-puis cliquez sur **Suivant**.
-  6. Dans la page Informations sur la carte, changez le nom de la carte pour **Température** et cliquez sur **Soumettre**.   
-La carte Température apparaît sur le tableau de bord. Elle inclut une courbe indiquant la température en temps réel.
-3. Créez une carte pour y afficher l'humidité.
-  1. Cliquez sur **Ajouter une nouvelle carte** et, dans la section Terminaux,
-sélectionnez le type de carte **Jauge**.
-  2. Sélectionnez votre terminal dans la liste, puis cliquez sur **Suivant**.
-  3. Cliquez sur **Connecter un nouveau jeu de données**.
-  4. Dans la page Créer une carte Valeur, sélectionnez ou entrez les valeurs suivantes, puis cliquez sur **Suivant**.
-  Événement : Mise à jour
-     - Propriété : humidity
-     - Nom : Humidité
-     - Type : Variable flottante
-     - Unité : %
-     - Précision : 1
-     - Min : 10
-     - Max : 95
-  5. Dans la page Aperçu de la carte, sélectionnez **M** pour la taille de la jauge,
-puis cliquez sur **Suivant**.
-  6. Dans la page Informations sur la carte, changez le nom de la carte pour **Humidité** et cliquez sur **Soumettre**.   
-La carte Humidité apparaît sur le tableau de bord. Elle inclut un cadran (jauge) indiquant le taux d'humidité en temps réel.  
-
 <!-- 4. Create a card to display location
   1. Click **Add New Card**, and then select the **Value** card type, which is located in the Devices section.
   2. Select your device from the list, then click **Next**.
@@ -260,7 +198,6 @@ The location card appears on the dashboard and shows the live latitude and longi
 ## Etapes suivantes  
 {: #whats-next}  
 A présent que votre terminal simulé envoie des données à {{site.data.keyword.iot_short_notm}}, vous pouvez continuer d'effectuer des itérations sur votre projet IoT.
- - Observez vos cartes afficher les données générées par le flux Node-RED.  
 Node-Red continue à envoyer des données jusqu'à ce que vous l'arrêtiez. Pour mettre fin au flux de données simulées, effectuez les étapes suivantes :
     1.	Dans votre éditeur de flux Node-RED, double-cliquez sur le noeud gris d'**envoi de données**,
 réglez la valeur de répétition sur **Intervalle** et fixez l'intervalle de répétition à **3** secondes.
@@ -271,8 +208,6 @@ réglez la valeur de répétition sur **Intervalle** et fixez l'intervalle de r�
 [Faites des recherches dans nos recettes IoT](https://developer.ibm.com/recipes/?post_type=tutorials&s=watson+iot) pour
 découvrir comment connecter un terminal physique tel qu'un Raspberry Pi et lui faire envoyer des données à {{site.data.keyword.iot_short_notm}}.
 
- - Explorez les options de visualisation.  
-[Déployez une application exemple Node.js pour visualiser les données d'un terminal](https://www.bluemix.net/docs/services/IoT/visualizingdata_sample.html).
 
  -	Protégez l'éditeur de flux Node-RED par un mot de passe.   
 Par défaut, l'éditeur est ouvert et tout utilisateur peut accéder aux flux et les modifier. Pour le protéger par un mot de passe, procédez comme suit :

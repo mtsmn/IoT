@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-19"
+  years: 2015, 2018
+lastupdated: "2018-05-17"
 
 ---
 
@@ -54,8 +54,8 @@ MQTT 인증을 사용하려면 MQTT 연결 시 사용자 이름과 비밀번호�
 
 |    |'typeID'|'deviceID'|
 |:---|:---|:---|
-|게이트웨이 1|mygateway|gateway1|
-|디바이스 1|mydevice|device1|
+|게이트웨이 1 |mygateway |gateway1 |
+|디바이스 1 |mydevice |device1 |
 
 -   게이트웨이 1은 고유 상태 이벤트를 공개할 수 있습니다.  
     ``iot-2/type/mygateway/id/gateway1/evt/status/fmt/json``
@@ -65,7 +65,7 @@ MQTT 인증을 사용하려면 MQTT 연결 시 사용자 이름과 비밀번호�
 **중요:** 메시지 페이로드는 최대 131072바이트로 제한됩니다. 이 한계보다 큰 메시지는 거부됩니다.
 
 ### 보유 메시지
-{{site.data.keyword.iot_short_notm}} 조직은 보유 MQTT 메시지를 공개할 권한이 없습니다. 게이트웨이가 보유 메시지를 전송하는 경우, 보유 메시지 플래그가 true로 설정되어 있으면 {{site.data.keyword.iot_short_notm}} 서비스에서 이를 대체하며 보유 메시지 플래그가 false로 설정된 것처럼 메시지를 처리합니다. 
+{{site.data.keyword.iot_short_notm}} 조직은 보유 MQTT 메시지를 공개할 권한이 없습니다. 게이트웨이가 보유 메시지를 전송하는 경우, 보유 메시지 플래그가 true로 설정되어 있으면 {{site.data.keyword.iot_short_notm}} 서비스에서 이를 대체하며 보유 메시지 플래그가 false로 설정된 것처럼 메시지를 처리합니다.
 
 ## 명령 구독
 {: #subscribing_cmds}
@@ -79,10 +79,10 @@ MQTT `+` 와일드카드는 여러 명령 소스를 구독하기 위해 `typeId`
 
 **예:**
 
-|디바이스|`typeId`|`deviceId`|
+|디바이스 |`typeId`|`deviceId`|
 |:---|:---|
-|게이트웨이 1| mygateway| gateway1|
-|디바이스 1| mydevice| device1|
+|게이트웨이 1|mygateway   |gateway1   |
+|디바이스 1 |mydevice    |device1    |
 
 
 -   게이트웨이 1은 게이트웨이에서 지시하는 명령을 구독할 수 있습니다.  
@@ -108,11 +108,8 @@ MQTT `+` 와일드카드는 여러 명령 소스를 구독하기 위해 `typeId`
 ## 게이트웨이 알림
 {: #notification}
 
-주제 구독 또는 공개 유효성 검증 중이나 자동 등록 중에 오류가 발생하면 게이트웨이 디바이스에 알림을 보냅니다. 게이트웨이에서 다음 주제를 구독하여 이러한 알림을 받으므로 `typeId` 및 `deviceId` 값을 대체할 수 있습니다.
+주제 구독 또는 공개 유효성 검증 중이나 자동 등록 중에 오류가 발생하면 게이트웨이 디바이스에 알림을 보냅니다. 게이트웨이에서는 다음 주제를 구독하여 이러한 알림을 받을 수 있습니다(게이트웨이 `typeId` 및 `deviceId` 값을 대체함). 
 
-```
-iot-2/type/**typeId**/id/**deviceId**/notify
-```
 <pre class="pre">iot-2/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/notify</pre>
 {: codeblock}
 
@@ -149,6 +146,8 @@ iot-2/type/**typeId**/id/**deviceId**/notify
 -   조직당 디바이스의 최대수에 도달했습니다.
 -   내부 오류로 인해 디바이스를 작성하지 못했습니다.
 
+디바이스가 유효하지 않은 주제 문자열에서 공개하는 경우, *Device_Type* 및 *Device_Id* 값은 알려져 있지 않으며 이러한 매개변수는 알림 주제에서 수신된 메시지에서 리턴되지 않습니다. 
+
 ## 관리 게이트웨이
 {: #managed_gateways}
 
@@ -157,7 +156,7 @@ iot-2/type/**typeId**/id/**deviceId**/notify
 ### 서비스 품질(QoS) 레벨 및 정리 세션
 {: #quality_service}
 
-관리 게이트웨이는 서비스 품질(QoS) 레벨이 0 또는 1인 메시지를 공개할 수 있습니다. 
+관리 게이트웨이는 서비스 품질(QoS) 레벨이 0 또는 1인 메시지를 공개할 수 있습니다.
 
 QoS=0인 메시지는 버릴 수 있으며 메시징 서버가 다시 시작된 후 유지되지 않습니다. QoS=1인 메시지는 큐에 넣을 수 있으며 메시징 서버가 다시 시작된 후 유지됩니다. 구독 지속성에 따라 요청을 큐에 넣을지가 판별됩니다. 구독한 연결의 ``cleansession`` 매개변수에 따라 구독 지속성이 판별됩니다.  
 
@@ -184,7 +183,7 @@ QoS=0인 메시지는 버릴 수 있으며 메시징 서버가 다시 시작된 
 <pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/#</pre>
 {: codeblock}
 
-게이트웨이는 자체적으로뿐 아니라 관련 **typeId** 및 **deviceId**를 사용하여 연결된 다른 디바이스 대신 디바이스 관리 프로토콜 메시지를 처리할 수 있습니다. MQTT 와일드카드 **+**를 **typeId** 및 **deviceId** 대신 사용할 수도 있습니다.
+게이트웨이는 자체적으로뿐 아니라 관련 **typeId** 및 **deviceId**를 사용하여 연결된 다른 디바이스 대신 디바이스 관리 프로토콜 메시지를 처리할 수 있습니다.  MQTT 와일드카드 **+**를 **typeId** 및 **deviceId** 대신 사용할 수도 있습니다.
 
 관리 게이트웨이는 수행 중인 관리 요청 유형에 고유한 주제에 공개됩니다.
 
@@ -192,7 +191,7 @@ QoS=0인 메시지는 버릴 수 있으며 메시징 서버가 다시 시작된 
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response</pre>
 {: codeblock}
 
-관리 디바이스가 공개할 수 있는 다른 주제는 [디바이스 관리 프로토콜](device_mgmt/index.html) 및 [디바이스 관리 요청](../devices/device_mgmt/requests.html)을 참조하십시오. 
+관리 디바이스가 공개할 수 있는 다른 주제는 [디바이스 관리 프로토콜](../devices/device_mgmt/index.html) 및 [디바이스 관리 요청](../devices/device_mgmt/requests.html)을 참조하십시오. 
 - **iotdevice-1/**으로 시작되는 주제가 다음으로 시작될 경우를 제외하고, 게이트웨이에 대해 프로토콜이 동일하게 유지됩니다.
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}

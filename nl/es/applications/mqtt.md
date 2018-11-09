@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-10"
+  years: 2015, 2018
+lastupdated: "2018-01-11"
 
 ---
 
@@ -125,7 +125,7 @@ Si tiene pensado crear un código de aplicación para su uso con el servicio de 
 
 - Publicación de mandatos
 - Suscripción a mandatos
-- Utilización del carácter comodín "any" de MQTT (+) en los componentes **deviceType** o **appId**
+- Utilización del carácter comodín "any" de MQTT (+) en los componentes **device_id** o **appId**
 - Conexión de MQTT a través de Transport Layer Security (TLS)
 - Aplicaciones escalables
 

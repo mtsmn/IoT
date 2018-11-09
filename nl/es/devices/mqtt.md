@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-21"
+  years: 2015, 2018
+lastupdated: "2018-01-22"
 
 ---
 
@@ -94,9 +94,9 @@ El soporte para la gestión del ciclo de vida de dispositivos es opcional. El Pr
 
 ### Niveles de calidad de servicio y sesión limpia
 
-Los dispositivos gestionados pueden publicar mensajes que tienen un nivel de calidad de servicio (QoS) de 0 o 1.
+Los dispositivos gestionados pueden publicar mensajes que tienen un nivel de calidad de servicio (QoS) de 0, 1 o 2.
 
-Los mensajes con QoS=0 pueden descartarse y no persisten una vez que se reinicia el servidor de mensajería. Los mensajes con QoS=1 se pueden poner en cola y persisten una vez que se reinicia el servidor de mensajería. La duración de la suscripción determina si se pone en cola una solicitud. El parámetro ``cleansession`` de la conexión que ha realizado la suscripción determina la duración de la suscripción.  
+Los mensajes con QoS=0 pueden descartarse y no persisten una vez que se reinicia el servidor de mensajería. Los mensajes con QoS=1 se pueden poner en cola y persisten una vez que se reinicia el servidor de mensajería. La duración de la suscripción determina si se pone en cola una solicitud. El parámetro ``cleansession`` de la conexión que ha realizado la suscripción determina la duración de la suscripción. Los dispositivos pueden publicar mensajes en QoS2, pero el servidor de gestión de dispositivos publica y se suscribe en QoS1, de modo que los mensajes de respuesta solo son QoS1.
 
 {{site.data.keyword.iot_short_notm}} publica solicitudes que tienen un nivel de QoS de 1 para dar soporte a la puesta en cola de mensajes. Para poner en cola mensajes que se envían mientras que un dispositivo gestionado no está conectado, configure el dispositivo para que no utilice sesiones limpias estableciendo el parámetro ``cleansession`` en false.
 
@@ -139,8 +139,8 @@ Las respuestas se formatean tal como se muestra en el ejemplo de código siguien
 ```
         {
             "rc": 0,
-            "message": "success",
-            "d": {...},
+        "message": "success",
+        "d": {...},
             "reqId": "b53eb43e-401c-453c-b8f5-94b73290c056"
         }
 ```

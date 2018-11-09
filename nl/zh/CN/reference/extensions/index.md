@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-03-15"
+  years: 2015, 2018
+lastupdated: "2018-04-26"
 
 ---
 
@@ -39,7 +39,7 @@ Jasper 是一款用于 SIM 设备的管理平台。Jasper 集成到 {{site.data.
 完成以下配置步骤后，可在连接了 Jasper 的设备的设备向下钻取中访问受支持的操作。
 
 ### 用于 Jasper 的 REST API
-要访问用于 Jasper 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} 文档的“Jasper 扩展”部分。
+要访问用于 Jasper 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} 文档的“Jasper 扩展”部分。
 
 ### Jasper 的配置
 
@@ -91,7 +91,7 @@ AT&T 扩展支持以下 AT&T 操作：
 - 更改套餐
 
 ### 用于 AT&T 的 REST API
-要访问用于 AT&T 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} 文档中的“AT&T 扩展”部分。
+要访问用于 AT&T 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window} 文档中的“AT&T 扩展”部分。
 
 ### AT&T 的配置
 
@@ -129,31 +129,31 @@ AT&T 扩展支持以下 AT&T 操作：
 
 成功配置组织后，会在*设备向下钻取*视图中*扩展配置*部分下显示*扩展*部分。
 
-## ARM mbed 连接器
+## Arm Mbed 网桥
 {: #arm}
 
-通过 ARM mbed 连接器，可将 ARM mbed 设备连接到 {{site.data.keyword.iot_short_notm}}。ARM mbed 扩展允许 {{site.data.keyword.iot_short_notm}} 将数据发送到 ARM mbed 门户网站，以及从 ARM mbed 门户网站接收数据。
+该网桥使 Arm Mbed 设备能够与 IBM Watson IoT Platform 集成，并双向交换消息。要启用此集成，首先需要注册 Arm Mbed 云帐户，然后为 Watson IoT 配置提供请求的连接信息。
 
 ### 安装配置
 
 
-1. 启用 ARM mbed 连接器扩展。要启用 ARM mbed 连接器扩展，请完成以下步骤：
-  1. 从 {{site.data.keyword.iot_short_notm}} 仪表板，选择**设置**并浏览到**扩展**。
-  2. 在**扩展**菜单中，单击**添加扩展**。
-  3. 单击 ARM mbed 连接器扩展旁的**添加**。
-  4. 输入 ARM mbed 访问键和域标识。可以使用 ARM mbed 门户网站 (https://connector.mbed.com) 来找到这些值。
+1. 启用 Arm Mbed 网桥扩展。要启用该扩展，请完成以下步骤：
+  1. 从 {{site.data.keyword.iot_short_notm}} 仪表板选择**扩展**。
+  2. 在**扩展**页面上，单击 **+添加扩展**。
+  3. 单击“Arm Mbed 网桥”扩展旁的**添加**。
+  4. 输入 Arm Mbed 访问密钥。可以使用 Arm Mbed 门户网站 (https://portal.mbedcloud.com) 来创建此密钥。
   5. 通过单击**检查连接**按钮来检查凭证。
   6. 单击**完成**。
 
 ### 有效内容格式
 
-来自 ARM mbed 平台的入局消息有两种类型：通知和异步响应。{{site.data.keyword.iot_short_notm}} 可以向已连接到 ARM mbed 平台的设备发送命令。
+来自 Arm Mbed 平台的入局消息有两种类型：通知和异步响应。{{site.data.keyword.iot_short_notm}} 可以向已连接到 Arm Mbed 平台的设备发送命令。
 
 #### 通知
 
-通知根据设备或传感器数据的更改而生成。{{site.data.keyword.iot_short_notm}} 处理消息后，会按照与直接连接到 {{site.data.keyword.iot_short_notm}} 的设备相同的方式将该消息发送到设备事件主题。对于在连接到 ARM mbed 平台的设备上发起的通知，使用的事件类型为 `notify`。
+通知根据设备或传感器数据的更改而生成。{{site.data.keyword.iot_short_notm}} 处理消息后，会按照与直接连接到 {{site.data.keyword.iot_short_notm}} 的设备相同的方式将该消息发送到设备事件主题。对于在连接到 Arm Mbed 平台的设备上发起的通知，使用的事件类型为 `notify`。
 
-以下代码样本显示了 ARM mbed 平台 API 发送的通知的有效内容格式：
+以下代码样本显示了 Arm Mbed 平台 API 发送的通知的有效内容格式：
 
 ```
 {
@@ -167,9 +167,9 @@ AT&T 扩展支持以下 AT&T 操作：
 
 #### 异步响应
 
-{{site.data.keyword.iot_short_notm}} 向连接到 ARM mbed 平台的设备发送命令时，设备会将确认消息发回 {{site.data.keyword.iot_short_notm}}。此确认消息称为_异步响应_，并使用事件类型 `asyncResponse`。
+{{site.data.keyword.iot_short_notm}} 向连接到 Arm Mbed 平台的设备发送命令时，设备会将确认消息发回 {{site.data.keyword.iot_short_notm}}。此确认消息称为_异步响应_，并使用事件类型 `asyncResponse`。
 
-以下代码样本显示了 ARM mbed 云服务发送的异步响应的有效内容格式：
+以下代码样本显示了 Arm Mbed 云服务发送的异步响应的有效内容格式：
 
 ```
 {
@@ -183,9 +183,9 @@ AT&T 扩展支持以下 AT&T 操作：
 }
 ```
 
-#### 向 ARM mbed 平台发送命令
+#### 向 Arm Mbed 平台发送命令
 
-{{site.data.keyword.iot_short_notm}} 可以向已连接到 ARM mbed 平台的设备发送命令。向 ARM mbed 平台发送的命令必须使用以下 JSON 格式。
+{{site.data.keyword.iot_short_notm}} 可以向已连接到 Arm Mbed 平台的设备发送命令。向 Arm Mbed 平台发送的命令必须使用以下 JSON 格式。
 
 ```
 {
@@ -198,7 +198,10 @@ AT&T 扩展支持以下 AT&T 操作：
 所选择的方法是区分大小写的。必须跳过资源路径的第一个“/”。
 
 
-有效内容应该发布到以下主题：
+
+
+
+有效内容必须发布到以下主题：
 
 ```
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
@@ -223,7 +226,7 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 - 位置状态
 
 ### 用于 Orange 的 REST API
-要访问用于 Orange 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} 文档的“Orange 扩展”部分。
+要访问用于 Orange 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} 文档的“Orange 扩展”部分。
 
 ### Orange 的配置
 
@@ -251,7 +254,6 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 ```
 成功配置组织后，会在*设备向下钻取*视图中*扩展配置*部分下显示*扩展*部分。
 
-
 ## 历史数据存储
 {: #historical_data}
 
@@ -275,29 +277,7 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 3. 单击**添加软件包**按钮。
 4. 选择软件包文件，然后单击**打开**。
 
-要使用 API 来添加定制设备管理软件包，请参阅 [{{site.data.keyword.iot_short_notm}} API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
-
-## 区块链
-{: #blockchain}
-
-通过具有 Blockchain 的 {{site.data.keyword.iot_short_notm}}，IoT 设备可为 Blockchain 事务提供数据，这会将数据存储在 Blockchain 的不可变分类帐中，并在智能合同业务规则中使用这些数据。{{site.data.keyword.iot_short_notm}} 将设备数据映射为 Blockchain 的智能合同所需的数据格式，并将其传递到 Blockchain 光纤网以存储在 Blockchain 分类帐中。
-
-### Blockchain 的受支持操作
-- 通过设备事件触发智能合同更新。
-- 运行智能合同业务逻辑以使用设备事件数据更新分类帐状态。
-- 使用监视 UI 来监视 Blockchain、事务和分类帐状态。
-
-### Blockchain 的配置
-
-{{site.data.keyword.iot_short_notm}} Blockchain 集成是一款服务产品，缺省情况下在 {{site.data.keyword.iot_short_notm}} 中未激活。要在您的组织中激活此功能，请完成以下步骤：
- 1. 从 {{site.data.keyword.iot_short_notm}} 仪表板选择**扩展**。
- 2. 在**扩展**页面上，单击**添加扩展**。
- 3. 单击“区块链”扩展旁的**添加**。
- 4. 在“区块链”磁贴中，单击**设置**。
- 3. 在**激活区块链**部分中，单击**了解更多**链接以转至 [IoT Blockchain 服务产品页面 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}。
- 4. 单击**开始使用区块链项目**以填充并提交*探索 IoT 和区块链的潜力*表单。  
- 5. 请求得到批准后，IBM 将联系您来为您的组织启用区块链集成。
- 6. 通过执行 [{{site.data.keyword.iot_short_notm}} 区块链集成](../../bl_blockchain_integration.html)中的步骤，返回到组织的 {{site.data.keyword.iot_short_notm}} 仪表板以完成此设置。
+要使用 API 来添加定制设备管理软件包，请参阅 [{{site.data.keyword.iot_short_notm}} API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}。
 
 <!-- ## The Weather Company
 {: #weathercompany}

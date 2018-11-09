@@ -2,8 +2,8 @@
 
 copyright:
 
-years: 2017
-lastupdated: "2017-07-20"
+years: 2017, 2018
+lastupdated: "2018-03-26"
 
 ---
 
@@ -41,7 +41,7 @@ https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002
 API do                     | Use para...       
 ------------- | -------------
 [Administração da organização ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | Configurar uma organização (incluindo a criação e exclusão de dispositivos), verificar o uso, o status de serviço e diagnosticar problemas de conexão de dispositivo.
-[Segurança ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Gerenciar convites do usuário e autenticação, além de autorização de usuários, chaves API e dispositivos.
+[Segurança ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Gerencie a autenticação e a autorização de usuários, chaves API e dispositivos.
 [Gerenciamento de informações ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Acessar dados do evento de dispositivo, bem como obter e atualizar a localização do dispositivo e obter informações do clima para esse local. 
 [Gerenciamento de dados ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window}   |   Organizar e integrar dados entrando e saindo do {{site.data.keyword.iot_short_notm}}.
 [Gerenciamento de dispositivo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | Interagir com dispositivos gerenciados usando o protocolo de gerenciamento de dispositivo.
@@ -62,6 +62,4 @@ API do                     | Use para...
 
 API do                     | Use para...       
 ------------- | -------------
-[Segurança de gateway  ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html){: new_window}   | Verificar e designar funções para dispositivos de gateway.
-[Segurança de dispositivo  ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-devices-beta.html){: new_window} | Verificar e designar funções para dispositivos.
-[Controle de acesso ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-subjects-beta.html){: new_window} | Limitar acesso do usuário.
+[ Restaurar dispositivos excluídos ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html){: new_window} | Se um dispositivo é excluído por engano, é possível restaurá-lo dentro de 14 dias.

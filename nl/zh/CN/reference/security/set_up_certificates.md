@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-06-13"
+  years: 2016, 2018
+lastupdated: "2018-01-11"
 ---
 
 {:new_window: target="\_blank"}
@@ -53,12 +53,10 @@ lastupdated: "2017-06-13"
 
 有关消息传递服务器证书的更多信息，请参阅[使用自签名服务器证书将 Raspberry Pi 连接到 IBM Watson IoT Platform 诀窍 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-to-ibm-watson-iot-platform-using-selfsigned-server-certificate/){: new_window}
 
-### 定制域 (Beta)
-{: #custom_domains}
+### 定制域
+{: #custom-domains}
 
-**重要信息**：用于消息传递服务器证书的定制域功能只作为受限 Beta 程序的一部分提供。要启用定制域，请在**设置**页面上开启**试验性功能**。
-
-作为 Beta 功能的一部分，消息传递服务器证书接受定制域。证书 CN 或 SubjectAltName 必须遵循以下格式：
+消息传递服务器证书接受定制域。证书 CN 或 SubjectAltName 必须遵循以下格式：
 
 - `orgId.messaging.<custom domain>`
 
