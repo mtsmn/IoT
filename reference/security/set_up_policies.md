@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-11-27"
 
 ---
 
@@ -11,9 +11,15 @@ lastupdated: "2018-01-11"
 {:screen:.screen}
 {:codeblock:.codeblock}
 {:pre: .pre}
+{:important: .important}
 
 # Configuring security policies
 {: #set_up_policies.md}
+
+<p>The {{site.data.keyword.iot_short_notm}} pricing plans were updated on November 27, 2018.   
+For more information, including upgrade information, see [{{site.data.keyword.iot_short_notm}} service plans](plans_overview.html). The contents of this [IBM Cloud documentation collection](https://console.bluemix.net/docs/services/IoT/) pertain to the {{site.data.keyword.iot_short_notm}} Lite plan, and to the previous Standard and Advanced Security plans. For documentation about the {{site.data.keyword.iot_short_notm}} Connection and Analytics Service plans, with their extended feature set, see the [{{site.data.keyword.iot_short_notm}} knowledge center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html).
+</p>
+{: important}
 
 When an advanced security plan (ASP) is used for an organization, a security analyst can configure connection security policies and blacklists or whitelists. When a standard plan is used, the analyst can configure settings that have fewer options and cannot configure blacklists or whitelists.
 
