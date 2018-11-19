@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -11,9 +11,15 @@ lastupdated: "2018-05-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
 
 # {{site.data.keyword.iot_short_notm}} Feature Overview
 {: #feature_overview}
+
+<p>The {{site.data.keyword.iot_short_notm}} pricing plans were updated on November 27, 2018.   
+For more information, including upgrade information, see [{{site.data.keyword.iot_short_notm}} service plans](plans_overview.html). The contents of this [IBM Cloud documentation collection](https://console.bluemix.net/docs/services/IoT/) pertain to the {{site.data.keyword.iot_short_notm}} Lite plan, and to the previous Standard and Advanced Security plans. For documentation about the {{site.data.keyword.iot_short_notm}} Connection and Analytics Service plans, with their extended feature set, see the [{{site.data.keyword.iot_short_notm}} knowledge center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html).
+</p>
+{: important}
 
 The {{site.data.keyword.iot_full}} is built on the following key areas:
 

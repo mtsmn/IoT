@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-03-22"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -11,17 +11,18 @@ lastupdated: "2018-03-22"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
 
 # Understanding data management
 {: #definitions_resources}
-You might have a number of different devices or Things that you want to connect to {{site.data.keyword.iot_full}}, and these devices or Things might publish data in different formats. By using the device twin and asset twin features of the data management component, you can normalize and transform the data output from your devices and Things into a single logical view that can be easily consumed by your applications. By using a single logical view, you remove the need to configure your applications to understand the different data formats that are output by each device or Thing. You can then aggregate multiple devices or Things together to define a new Thing in {{site.data.keyword.iot_short_notm}}. Use the Thing to help you to organize and analyze data that is coming into {{site.data.keyword.iot_short_notm}} from a range of inputs. 
+You might have a number of different devices or Things that you want to connect to {{site.data.keyword.iot_full}}, and these devices or Things might publish data in different formats. By using the device twin and asset twin features of the data management component, you can normalize and transform the data output from your devices and Things into a single logical view that can be easily consumed by your applications. By using a single logical view, you remove the need to configure your applications to understand the different data formats that are output by each device or Thing. You can then aggregate multiple devices or Things together to define a new Thing in {{site.data.keyword.iot_short_notm}}. Use the Thing to help you to organize and analyze data that is coming into {{site.data.keyword.iot_short_notm}} from a range of inputs.
 
 {: shortdesc}
 
 ## Overview
 {: #overview}
 
-Use the device twin feature to create a logical model of a device, and then use the asset twin feature to aggregate these logical models to define new Things. These logical models help you to improve reuse and maintenance of code and to manage the complexities of an IoT ecosystem by keeping your applications insulated from data change. 
+Use the device twin feature to create a logical model of a device, and then use the asset twin feature to aggregate these logical models to define new Things. These logical models help you to improve reuse and maintenance of code and to manage the complexities of an IoT ecosystem by keeping your applications insulated from data change.
 
 Applications can access the current state of a device or Thing on request by using an HTTP API, or by subscribing to an IoT topic string. The state consists of a set of state properties that are defined by a logical interface. If the state of a device or Thing changes as a result of an event being published to {{site.data.keyword.iot_short_notm}}, the values of these properties are updated and stored in {{site.data.keyword.iot_short_notm}}.
 
@@ -40,7 +41,7 @@ Some common use cases for implementing the device and asset twin features includ
 
 ## Examples
 {: #examples}
-The following examples illustrate two possible solutions. Example 1 illustrates how you can use the device twin feature and Example 2 illustrates how you can use the asset twin feature. 
+The following examples illustrate two possible solutions. Example 1 illustrates how you can use the device twin feature and Example 2 illustrates how you can use the asset twin feature.
 
 ### Example 1: Mapping heterogeneous temperature sensors to a logical interface
 {: #device-type-example}
@@ -73,7 +74,7 @@ The end-user application can now request the state of a specific room Thing ID a
 
 The following diagrams illustrate the logical mapping between devices and applications on {{site.data.keyword.iot_short_notm}} when using logical interfaces.
 
-![The logical mapping between a device and an application on {{site.data.keyword.iot_short_notm}}.](../information_management/images/im_resources_things.svg "The mapping between devices, Things, and applications on {{site.data.keyword.iot_short_notm}}")
+![The logical mapping between a device and an application on {{site.data.keyword.iot_short_notm}}.](images/im_resources.svg "The mapping between devices, Things, and applications on {{site.data.keyword.iot_short_notm}}")
 
 ### Concepts
 
@@ -85,7 +86,7 @@ State | The latest representation of the state of the physical device, which can
 Composition                         | A logical construct that defines the logical interfaces that are associated with a Thing type. The composition is specified by a Thing type schema.   
 
 ### Data management resources
-You can manage the resources by using REST APIs. For information about the REST APIs, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html) documentation. 
+You can manage the resources by using REST APIs. For information about the REST APIs, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html) documentation.
 
 Type Resources                        | Description       
 ------------- | ------------- | -------------  
@@ -112,15 +113,15 @@ Mappings       |Use mappings to define how properties that are associated with i
 ## Naming restrictions for resources
 {: #naming_restrictions}
 Schemas, event types, logical and physical interfaces have the following naming restrictions:
-- The name must be between 1 - 128 characters 
-- The name must consist of unicode characters 
+- The name must be between 1 - 128 characters
+- The name must consist of unicode characters
 - Valid special characters are space, hyphen ( - ), underscore ( _ ), period ( . )
 - The name cannot consist only of spaces
 
 ## Creating, updating, activating, and deactivating your resources
 {: #draft_active_resources}
 
-There can be two versions of a resource; a draft version and an active version. When you create a resource, that resource is created as a draft version. 
+There can be two versions of a resource; a draft version and an active version. When you create a resource, that resource is created as a draft version.
 {: shortdesc}
 
 The draft version is a working copy of your resource that you can query, update and delete directly by using APIs. Create an active version of a draft resource by activating either a draft device type, draft Thing type or draft logical interface. To activate other resources, for example schemas, you must activate a draft device type, draft Thing type or draft logical interface that references the resource that you want to activate.
@@ -190,27 +191,27 @@ where the payload of the PATCH body contains the following content:
     "operation": "deactivate-configuration"
   }
 ```
-To deactivate a Thing type, use the following PATCH method: 
+To deactivate a Thing type, use the following PATCH method:
 ```
 PATCH /api/v0002/thing/types/RoomType
 ```
 
 *Notes:*
 - An active resource is read only. You can filter and sort draft and active resources by using query parameters.
-- You cannot delete a device type if there are device instances associated with that device type. The state of the device is cleared when the device instance is deleted. 
-- You cannot delete a Thing type if there are device or Thing instances associated with that Thing type. The state of the Thing is cleared when the device or thing instances are deleted. 
+- You cannot delete a device type if there are device instances associated with that device type. The state of the device is cleared when the device instance is deleted.
+- You cannot delete a Thing type if there are device or Thing instances associated with that Thing type. The state of the Thing is cleared when the device or thing instances are deleted.
 - You can activate only logical interfaces, device types and Thing types directly by using APIs. Other resources, for example schemas, physical interfaces, Thing type interfaces and event types are activated if they are referenced by a logical interface, device type or Thing type that is made active.  
 - The **activate-configuration** operation must be performed on a draft version of a logical interface that is associated with a device or Thing type, or on the device or Thing type itself. The **activate-configuration** operation checks that the resource configuration is valid before activating the resource. Once activation is successfully completed, state is generated for each device or Thing instance of the device or Thing type.
 
 ## Troubleshooting your configuration
 {: #troubleshooting}
-If your activation fails, check that all the required configuration for a given device or Thing type is provided. 
+If your activation fails, check that all the required configuration for a given device or Thing type is provided.
 
 The following configuration must be provided and associated with a device type:
   - A physical interface that is associated with at least one event
   - At least one logical interface
   - Mappings for at least one of the associated logical interfaces
-  
+
 The following configuration must be provided and associated with a Thing type:
   - A Thing interface that is associated with at least one device or Thing type
   - At least one logical interface
@@ -284,14 +285,18 @@ iot-2/type/${typeId}/id/${thingId}/err/data
 
 ### Resource limits
 
-The following table shows the maximum number of resources that can be configured based on plan type. 
+<p>The {{site.data.keyword.iot_short_notm}} pricing plans were updated on November 27, 2018.   
+For more information, including upgrade information, see [{{site.data.keyword.iot_short_notm}} service plans](plans_overview.html). The contents of this [IBM Cloud documentation collection](https://console.bluemix.net/docs/services/IoT/) pertain to the {{site.data.keyword.iot_short_notm}} Lite plan, and to the previous Standard and Advanced Security plans. For documentation about the {{site.data.keyword.iot_short_notm}} Connection and Analytics Service plans, with their extended feature set, see the [{{site.data.keyword.iot_short_notm}} knowledge center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html).
+</p>
+{: important}
 
-Resource                   |Standard plan                  | Lite plan 
-------------- | ------------- | ------------- 
+The following table shows the maximum number of resources that can be configured based on plan type.
+
+Resource                   |Standard plan                  | Lite plan
+------------- | ------------- | -------------
 Logical Interfaces | 1000 | 10
 Physical Interfaces           | 1000 | 5
 Event Types | 1000 | 10
 Schemas |2000 | 20
 Logical Interface references (Number of logical interfaces that a device type can map to)  |20 | 5
 Event Type references (Number of event ID to event type associations that a physical interface can have)| 40 | 10
-

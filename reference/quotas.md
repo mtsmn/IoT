@@ -2,8 +2,8 @@
 
 copyright:
 
-years: 2017, 2018
-lastupdated: "2018-02-22"
+years: 2018
+lastupdated: "2018-11-19"
 
 ---
 
@@ -12,10 +12,16 @@ lastupdated: "2018-02-22"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-
+{:important: .important}
 
 # Quotas
-This section provides information about the limits that are set for {{site.data.keyword.iot_full}} services by plan type. The limits are there as part of our fair use policy to help to ensure that performance is not adversely impacted by misuse for all users of the multitenant system. The limits also help to prevent real user workload being inadvertently identified as a Denial of Service attack.
+
+<p>The {{site.data.keyword.iot_short_notm}} pricing plans were updated on November 27, 2018.   
+For more information, including upgrade information, see [{{site.data.keyword.iot_short_notm}} service plans](plans_overview.html). The contents of this [IBM Cloud documentation collection](https://console.bluemix.net/docs/services/IoT/) pertain to the {{site.data.keyword.iot_short_notm}} Lite plan, and to the previous Standard and Advanced Security plans. For documentation about the {{site.data.keyword.iot_short_notm}} Connection and Analytics Service plans, with their extended feature set, see the [{{site.data.keyword.iot_short_notm}} knowledge center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html).
+</p>
+{: important}
+
+This section provides information about the limits and thresholds that are set for {{site.data.keyword.iot_full}} services by plan type. The limits are there as part of our fair use policy to help to ensure that performance is not adversely impacted by misuse for all users of the multitenant system. The limits also help to prevent real user workload being inadvertently identified as a Denial of Service attack.
 
 ## Introduction
 {: #metrics_about}
@@ -24,10 +30,11 @@ Quotas specify the upper limits that are set for a resource. When usage exceeds 
 
 The following tables list the limits for {{site.data.keyword.iot_short_notm}}. Most of the limits that are specified are per {{site.data.keyword.iot_short_notm}} organization, unless explicitly listed as per device. Some of the limits have an enforced maximum, while other limits can be increased upon request. If you need limits that are higher than those specified, please raise a [ticket ![External link icon](../../../icons/launch-glyph.svg)](https://support.ng.bluemix.net/gethelp/){: new_window}.
 
+
 ## Messaging
 {: #messaging_metrics}
 
-Metric        | Lite plan      | Standard & Advanced Security plans     | Dedicated plan
+Metric        | Lite plan      | Standard & Advanced Security plans      | Dedicated plan
 ------------- | -------------|------------- |
 Maximum number of device types |50 |1000 |1000
 Maximum number of concurrently connected devices | 500| 500K. If you want to connect more than 50,000 devices, please get in touch to discuss your plans. | 500K
@@ -99,7 +106,7 @@ Metric        | Lite plan      | Standard & Advanced Security plans       | Dedi
 ------------- | -------------|------------- |
 Maximum number of event IDs per device |5|5|5
 Maximum number of formats |2|3|3
-Expiry from last event cache |7 days |45 days | 45 days
+Expiry from last event cache |7 days | 45 days | 45 days
 
 ## Extensions
 {: #extensions_metrics}
@@ -130,5 +137,6 @@ Maximum number of resource groups to which a device can belong |10|10|10
 <!--## User Interface
 {: #UI_metrics}
 Metric        | Lite plan      | Standard & Advanced Security plans       | Dedicated
+------------- | -------------|------------- |
 Maximum number of dashboards |50|50|50
-Maximum number of cards on board |30|30|30 -->
+Maximum number of cards on board |30|30|30-->

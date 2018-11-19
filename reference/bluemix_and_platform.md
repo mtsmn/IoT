@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-09-18"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -11,9 +11,15 @@ lastupdated: "2018-09-18"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
 
 # {{site.data.keyword.Bluemix_notm}} and the {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
+
+<p>The {{site.data.keyword.iot_short_notm}} pricing plans were updated on November 27, 2018.   
+For more information, including upgrade information, see [{{site.data.keyword.iot_short_notm}} service plans](plans_overview.html). The contents of this [IBM Cloud documentation collection](https://console.bluemix.net/docs/services/IoT/) pertain to the {{site.data.keyword.iot_short_notm}} Lite plan, and to the previous Standard and Advanced Security plans. For documentation about the {{site.data.keyword.iot_short_notm}} Connection and Analytics Service plans, with their extended feature set, see the [{{site.data.keyword.iot_short_notm}} knowledge center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html).
+</p>
+{: important}
 
 The {{site.data.keyword.iot_full}} is a service that is available in {{site.data.keyword.Bluemix_notm}}. You can access your {{site.data.keyword.iot_short_notm}} organization dashboard by using your {{site.data.keyword.Bluemix_notm}} dashboard. As an {{site.data.keyword.Bluemix_notm}} service, {{site.data.keyword.iot_short_notm}} can be integrated with other services that are hosted on {{site.data.keyword.Bluemix_notm}}. Details of specific third-party service integrations can be found in the [External Service Integrations](extensions/index.html) topic.
 {:shortdesc}
@@ -30,12 +36,10 @@ The {{site.data.keyword.iot_short_notm}} has provisions for a specified level of
 
 ## {{site.data.keyword.Bluemix_notm}} Service Level Agreement
 
-{{site.data.keyword.Bluemix_notm}} publishes terms of use which differ depending on whether the [IBM Cloud Services Agreement ![External link icon](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} or the [IBM International Passport Advantage Agreement ![External link icon](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} apply to the user. 
+{{site.data.keyword.Bluemix_notm}} publishes terms of use which differ depending on whether the [IBM Cloud Services Agreement ![External link icon](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} or the [IBM International Passport Advantage Agreement ![External link icon](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} apply to the user.
 
 ## {{site.data.keyword.iot_short_notm}} Pricing
 {: #iot-pricing}
-
-The {{site.data.keyword.iot_short_notm}} offers two pricing models: Free and Standard.
 
 ### IoT Pricing calculator
 For more information on the available {{site.data.keyword.iot_short_notm}} plans and pricing models:

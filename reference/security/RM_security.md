@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -11,17 +11,18 @@ lastupdated: "2018-07-03"
 {:screen:.screen}
 {:codeblock:.codeblock}
 {:pre: .pre}
+{:important: .important}
 
 # Risk and security management
 {: #RM_security}
 
 You can enhance security to enable creating, enforcing, and reporting on device connection security. With this enhanced security, certificates and transport layer security (TLS) authentication are used in addition to the user IDs and tokens that are used by {{site.data.keyword.iot_short_notm}} to determine how and where devices connect with the platform.
 
+
 ## Certificate Revocation Lists and client certificates
 {: #CRLs}
 
-Certificate Revocation Lists (CRLs) are supported for configurations that use client certificates to authenticate devices. The location that is specified as the CRL distribution point must support either HTTP or HTTPS access, and the site must be reachable. The client connection is rejected if the distribution point of the CRL cannot be reached, or if the CRL is not valid or is not found at the distribution point. 
- 
+Certificate Revocation Lists (CRLs) are supported for configurations that use client certificates to authenticate devices. The location that is specified as the CRL distribution point must support either HTTP or HTTPS access, and the site must be reachable. The client connection is rejected if the distribution point of the CRL cannot be reached, or if the CRL is not valid or is not found at the distribution point.
 
 Client certificates must be signed by certificate authority (CA) certificates that have "Certificate Sign" specified in the "X509v3 Key Usage" section in "X509v3 extensions". To use CRLs to revoke client certificates, the CA certificate that signs a client certificate must also include "CRL Sign" in the "X509v3 Key Usage" section in "X509v3 extensions". This configuration allows the CA certificate to issue and sign CRL updates when required. Only the CRL that is specified in the client certificate distribution point is used to determine whether a certificate has been revoked.
 
@@ -31,12 +32,12 @@ Ensure that you test your certificates and CRLs, particularly if you generate yo
 ## Configuring certificates
 {: #certificates}
 
-When certificates are enabled, during communication between devices and the server, any devices that do not have valid certificates  configured in the security settings are denied access, even if they use valid user IDs and passwords
+When certificates are enabled during communication between devices and the server, any devices that do not have valid certificates  configured in the security settings are denied access, even if they use valid user IDs and passwords
 
-To configure certificates and server access for devices, the system operator registers the associated certificate authority (CA) certiﬁcates and optionally registers message server certificates into the Watson IoT Platform platform.
 To configure client certificates and server access for devices, the system operator imports the associated certificate authority (CA) certiﬁcates and messaging server certificates into {{site.data.keyword.iot_short_notm}}. The security analyst then configures the default security policies for connections between devices and the platform. The analyst can add different policies for different device types.
 
 For information about how to configure certificates, see [Configuring certificates](set_up_certificates.html).
+
 
 ## Security settings
 {: #connect_policy}
@@ -50,6 +51,12 @@ Blacklist and whitelist policies provide the ability to control the locations fr
 For information about how to configure blacklist and whitelist policies, see [Configuring blacklists and whitelists](set_up_policies.html#config_black_white).
 
 ## Organization plans and security policies
+
+<p>The {{site.data.keyword.iot_short_notm}} pricing plans were updated on November 27, 2018.   
+For more information, including upgrade information, see [{{site.data.keyword.iot_short_notm}} service plans](plans_overview.html). The contents of this [IBM Cloud documentation collection](https://console.bluemix.net/docs/services/IoT/) pertain to the {{site.data.keyword.iot_short_notm}} Lite plan, and to the previous Standard and Advanced Security plans. For documentation about the {{site.data.keyword.iot_short_notm}} Connection and Analytics Service plans, with their extended feature set, see the [{{site.data.keyword.iot_short_notm}} knowledge center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html).
+</p>
+{: important}
+
 The enhanced security policies enable organizations to determine how they want devices to connect and be authenticated to the platform, by using connection policies and blacklist and whitelist policies. The security policy options that are available to an organization depend on the organization's plan type:
 
 **Standard Plan:**
@@ -81,7 +88,7 @@ The following dashboard cards are available for analyzing risk and compliance:
 **Important**: The **Overall Policy Compliance** and **Policy Violations** cards are available only as part of a limited Beta program. To enable these dashboard cards, turn on the **Experimental Features** on the **Settings** page.
 
 ### Drill-down policy reporting (Beta)
-{: #drill_down}
+{: #drill-down}
 
 **Important**: The drill-down reporting feature for Risk Management policies is available only as part of a limited Beta program. To enable drill-down reporting, turn on the **Experimental Features** on the **Settings** page.
 

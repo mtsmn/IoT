@@ -1,23 +1,29 @@
 ---
 copyright:
   years: 2016, 2018
-lastupdated: "2018-02-23"
+lastupdated: "2018-11-19"
 ---
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
 
 # Billing
 
-Paid {{site.data.keyword.iot_full}} service plans (plans other than 'Lite'), are based on the concept of megabytes exchanged over the period of a month.  This document details how {{site.data.keyword.iot_short_notm}} meters the data to create usage information that determines the cost of using the service.  Usage information can be used to approximate the cost of using {{site.data.keyword.iot_short_notm}} based on the design and number of devices, applications and gateways.
+<p>The {{site.data.keyword.iot_short_notm}} pricing plans were updated on November 27, 2018.   
+For more information, including upgrade information, see [{{site.data.keyword.iot_short_notm}} service plans](plans_overview.html). The contents of this [IBM Cloud documentation collection](https://console.bluemix.net/docs/services/IoT/) pertain to the {{site.data.keyword.iot_short_notm}} Lite plan, and to the previous Standard and Advanced Security plans. For documentation about the {{site.data.keyword.iot_short_notm}} Connection and Analytics Service plans, with their extended feature set, see the [{{site.data.keyword.iot_short_notm}} knowledge center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html).
+</p>
+{: important}
+
+Paid {{site.data.keyword.iot_full}} service plans, are based on the concept of megabytes exchanged over the period of a month.  This document details how {{site.data.keyword.iot_short_notm}} meters the data to create usage information that determines the cost of using the service.  Usage information can be used to approximate the cost of using {{site.data.keyword.iot_short_notm}} based on the design and number of devices, applications and gateways.
 
 For information about the cost of each megabyte of data exchanged, see the {{site.data.keyword.iot_short_notm}} service in the {{site.data.keyword.Bluemix_notm}} catalog for the region required.
 
 You can use the [Pricing Calculator ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/pricing/configure/service/iotf-service-id) to help you to calculate the cost of an {{site.data.keyword.iot_short_notm}} service.
 
-The following items are metered and billed according to usage: 
+The following items are metered and billed according to usage:
 
 ## Data Exchanged
 The *data exchanged* calculation includes account data that is exchanged by applications, devices and gateways by using MQTT or HTTP messaging, as well as data that is exchanged by applications by using the HTTP API.
@@ -44,7 +50,7 @@ The MQTT protocol is designed to be as light-weight as possible.  Although {{sit
 |PINGRESP                       |2                   |Nothing|
 |DISCONNECT                     |2                   |Nothing|
 
-When using TLS, the secure handshake is also considered. The handshake is approximately 8 kilobytes. It is therefore more cost effective to keep MQTT connections open as long as possible. Open connections incur only the PINGREQ and PINGRESP overhead (4 bytes) per keep alive interval which is client specific and depends on the keep alive period that is specified.  Reopening a TLS connection by using an existing TLS session decreases the number of bytes that are exchanged because the certificates are not sent in either direction.  Many TLS clients support this by default, but the session has a limited lifetime.  Using client certificates increases the size of the TLS handshake, depending on the size of the client certificate. 
+When using TLS, the secure handshake is also considered. The handshake is approximately 8 kilobytes. It is therefore more cost effective to keep MQTT connections open as long as possible. Open connections incur only the PINGREQ and PINGRESP overhead (4 bytes) per keep alive interval which is client specific and depends on the keep alive period that is specified.  Reopening a TLS connection by using an existing TLS session decreases the number of bytes that are exchanged because the certificates are not sent in either direction.  Many TLS clients support this by default, but the session has a limited lifetime.  Using client certificates increases the size of the TLS handshake, depending on the size of the client certificate.
 
 TLS records, and TCP and IP overheads are not considered.
 
@@ -67,6 +73,6 @@ Unlike MQTT and HTTP messaging, neither the HTTP overhead nor the TLS overhead a
 **Note** - When using the {{site.data.keyword.iot_short_notm}} dashboard, the HTTP APIs are used by the dashboard to list information inlcuding devices, device types, and device connection logs.  These HTTP API calls count towards *data exchanged*.
 
 <!-- ## Data Analyzed
-The *data analyzed* calculation measures event data that is processed by the rules engine within the platform.  Data is considered processed by the rules engine when device events are evaluated by one or more rules, based on a specific device and event type. 
+The *data analyzed* calculation measures event data that is processed by the rules engine within the platform.  Data is considered processed by the rules engine when device events are evaluated by one or more rules, based on a specific device and event type.
 ## Edge Data Analyzed
-The *edge data analyzed* calculation measures event data that is processed on a gateway device by the {{site.data.keyword.iot_short_notm}} Edge Analytics Agent.  Data is considered processed by the edge agent when device events are evaluated by one or more edge rules, based on a specific device and event type.  -->
+The *edge data analyzed* calculation measures event data that is processed on a gateway device by the {{site.data.keyword.iot_short_notm}} Edge Analytics Agent.  Data is considered processed by the edge agent when device events are evaluated by one or more edge rules, based on a specific device and event type. -->
