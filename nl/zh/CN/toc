@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="iot-platform" audience="service" arm="328" href="/docs/services/IoT/index.html"}
+{: .toc subcollection="iot-platform" audience="service" arm="328" href="/docs/services/IoT/index.html" path="services/IoT"}
 物联网平台
 
     {: .navgroup id="learn"}
@@ -58,7 +58,7 @@
 
     {: .navgroup id="howto"}
     index.md
-    
+
     {: .topicgroup}
     入门指南
         getting_started/getting-started-iot-overview.md
@@ -91,8 +91,8 @@
         information_management/im_hygrometer.md
         information_management/im_id_reference.md
         information_management/im_rules.md
-        information_management/im_reference.md 
-        
+        information_management/im_reference.md
+
     {: .topicgroup}
     管理 Watson IoT Platform
         reference/extensions/index.md
@@ -112,7 +112,7 @@
         manage_groups.md
         gateways/gateway-access-control.md
         reference/rlac_overview.md
-        reference/rlac.md     
+        reference/rlac.md
 
     {: .topicgroup}
     分析历史 IoT 数据
