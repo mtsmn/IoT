@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="iot-platform" audience="service" arm="328" href="/docs/services/IoT/index.html"}
+{: .toc subcollection="iot-platform" audience="service" arm="328" href="/docs/services/IoT/index.html" path="services/IoT"}
 Piattaforma Internet delle cose
 
     {: .navgroup id="learn"}
@@ -58,7 +58,7 @@ Piattaforma Internet delle cose
 
     {: .navgroup id="howto"}
     index.md
-    
+
     {: .topicgroup}
     Guide introduttive
         getting_started/getting-started-iot-overview.md
@@ -91,8 +91,8 @@ Piattaforma Internet delle cose
         information_management/im_hygrometer.md
         information_management/im_id_reference.md
         information_management/im_rules.md
-        information_management/im_reference.md 
-        
+        information_management/im_reference.md
+
     {: .topicgroup}
     Gestione di Watson IoT Platform
         reference/extensions/index.md
@@ -112,7 +112,7 @@ Piattaforma Internet delle cose
         manage_groups.md
         gateways/gateway-access-control.md
         reference/rlac_overview.md
-        reference/rlac.md     
+        reference/rlac.md
 
     {: .topicgroup}
     Analisi dati IoT storici
