@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-25"
+lastupdated: "2018-10-26"
 
 ---
 
@@ -28,7 +28,7 @@ For information about client security and how to connect MQTT clients to devices
 ## Connecting devices to the Quickstart service
 {: #connecting_devices}
 
-The Quickstart service is the fastest level of service. It offers no confirmation of receipt and does not support MQTT quality of service (QoS) levels greater than zero. When you connect to the Quickstart service, authentication or registration is not required, and the ``orgId`` must be set to ``quickstart``.
+The Quickstart service is an open sandbox that you can use to quickly connect your devices to the {{site.data.keyword.iot_short_notm}}. If your devices support the MQTT messaging protocol, they can be easily connected to Quickstart. Quickstart can help you get started quickly and ensure that the basic {{site.data.keyword.iot_short_notm}} features are working before you move to your own {{site.data.keyword.iot_short_notm}} instance. When you connect to the Quickstart service, authentication or registration is not required, and the ``orgId`` must be set to ``quickstart``.
 
 If you are writing device code for use with Quickstart, be aware that the following {{site.data.keyword.iot_short_notm}} service features are not supported in Quickstart mode:
 
@@ -38,6 +38,7 @@ If you are writing device code for use with Quickstart, be aware that the follow
 
 **Important:** Messages that are sent from devices at a rate greater than one per second might be discarded.
 
+For more information, see [Quickstart](../getting_started/quickstart/index.md).
 
 ## MQTT authentication
 {: #mqtt_authentication}
