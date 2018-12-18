@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2018
-lastupdated: "2018-09-14"
+lastupdated: "2018-12-18"
 
 ---
 
@@ -25,7 +25,6 @@ Feature       | Documentation
 Drill-down reporting | [Drill-down reporting (Beta)](reference/security/RM_security.html#drill_down)
 IoT gateway package | [IoT gateway package (Beta)](gateways/iotgw.html#gw_package)
 Restoring deleted devices | [Restoring deleted devices (Beta)](iotplatform_task.html#restore_device)
-Embedded rules | [Creating embedded rules (Beta)](information_management/im_rules.html)
 Things | [Introduction to data mangement](GA_information_management/ga_im_device_twin.html#device_twins)
 {{site.data.keyword.iot_short_notm}} Edge (Preview) | [{{site.data.keyword.iot_short_notm}} Edge overview (Preview)](edge/WIoTP_edge.html)
 Cloud IAM Authentication and Authorization | [Cloud IAM Authentication and Authorization for {{site.data.keyword.iot_short_notm}} (Beta)](reference/security/cloud_iam.html)
