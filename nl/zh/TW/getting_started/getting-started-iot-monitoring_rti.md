@@ -74,10 +74,10 @@ Plant Floor Monitoring 範例應用程式列出所有已連接至 {{site.data.ke
 下列步驟引導您在 {{site.data.keyword.Bluemix_notm}} 上建立及部署應用程式。如需在本端執行應用程式的相關資訊，請參閱 GitHub 中的 README 檔。
 1. 複製 Node.js *Plant Floor Monitoring* 範例應用程式 GitHub 儲存庫。  
 使用您慣用的 Git 工具來複製下列儲存庫：  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
 在 Git Shell 中，使用下列指令：
   ```bash
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
   ```
 2. 建立應用程式的 API 金鑰及鑑別記號組合。  
 在配置應用程式以連接至組織時，您需要這些項目。如需登錄裝置的相關資訊，請參閱[連接應用程式](/docs/services/IoT/platform_authorization.html)。  
@@ -182,10 +182,10 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack
 下列步驟引導您在 {{site.data.keyword.Bluemix_notm}} 上建立及部署應用程式。如需在本端執行應用程式的相關資訊，請參閱 GitHub 中的 README 檔。
 1. 複製 *Widget Library Monitoring* 範例應用程式 GitHub 儲存庫。  
 使用您慣用的 Git 工具來複製下列儲存庫：  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 在 Git Shell 中，使用下列指令：
 ```
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 ```
 2. 安裝應用程式相依關係。  
 導覽至 *guide-conveyor-ui-html* 儲存庫的根目錄，並執行下列指令：
@@ -348,11 +348,11 @@ Web 主控台已開始運行，所以您可以檢視已連接的輸送帶裝置�
 繼續進行下一個手冊，或跳至其他感興趣的主題：
 - 路徑 A：修改監視應用程式，以符合您的需求。  
 如需技術詳細資料，請參閱：
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md){: new_window}
  - [Node.js 用戶端程式庫 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - 路徑 B：修改小組件程式庫應用程式，以符合您的需求。  
 如需技術詳細資料，請參閱：
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md){: new_window}
 - [手冊 4：模擬大量裝置](getting-started-iot-large-scale-simulation.html)  
 藉由將大量自我執行模擬器新增至環境中來擴充基本模擬。此擴充可讓您在更真實的多裝置環境中，試用先前手冊中的基本分析及監視。
 - [進一步瞭解 {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}

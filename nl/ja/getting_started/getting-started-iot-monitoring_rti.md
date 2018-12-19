@@ -75,10 +75,10 @@ Plant Floor Monitoring サンプル・アプリケーションは、{{site.data.
 以下のステップでは、{{site.data.keyword.Bluemix_notm}} でのアプリの作成とデプロイを通してガイドします。 アプリケーションのローカル実行については、GitHub の README ファイルを参照してください。
 1. Node.js の *Plant Floor Monitoring* サンプル・アプリケーションの GitHub リポジトリーを複製します。  
 好みの git ツールを使用して以下のリポジトリーを複製します。  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
 Git シェルで、以下のコマンドを使用します。
   ```bash
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
   ```
 2. アプリケーションの API キーと認証トークンの組み合わせを作成します。  
 組織に接続するための構成をアプリケーションで行う時に、その情報が必要になります。 デバイスの登録の詳細については、[アプリケーションの接続](/docs/services/IoT/platform_authorization.html)を参照してください。  
@@ -183,10 +183,10 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack
 以下のステップでは、{{site.data.keyword.Bluemix_notm}} でのアプリの作成とデプロイを通してガイドします。 アプリケーションのローカル実行については、GitHub の README ファイルを参照してください。
 1. *Widget Library Monitoring* サンプル・アプリケーションの GitHub リポジトリーを複製します。  
 好みの git ツールを使用して以下のリポジトリーを複製します。  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 Git シェルでは、次のコマンドを使用します。
 ```
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 ```
 2. アプリケーションの従属関係をインストールします。  
 *guide-conveyor-ui-html* リポジトリーのルートに移動して、以下のコマンドを実行します。
@@ -349,11 +349,11 @@ Web コンソールが稼働中の状態になっているので、接続した�
 次のガイドに進むか、興味のある別のトピックにジャンプします。
 - パス A: ニーズに合わせてモニター・アプリケーションを変更します。  
 技術的な詳細については、以下を参照してください。
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md){: new_window}
  - [Node.js クライアント・ライブラリー ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - パス B: ニーズに合わせてウィジェット・ライブラリー・アプリケーションを変更します。  
 技術的な詳細については、以下を参照してください。
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md){: new_window}
 - [ガイド 4: 多数のデバイスのシミュレート](getting-started-iot-large-scale-simulation.html)  
 基本的なシミュレーションを拡張するために、多数の自己実行型のシミュレーターを環境に追加します。 そのような拡張作業によって、前のガイドで作成した基本的な分析機能とモニター機能を、現実に近いマルチデバイス環境でテストできるようになります。
 - [{{site.data.keyword.iot_short_notm}} の詳細を確認してください。](/docs/services/IoT/iotplatform_overview.html){:new_window}

@@ -75,10 +75,10 @@ Git을 사용하여 코드 샘플을 다운로드하도록 선택하는 경우 [
 다음 단계를 통해 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성하고 배치할 수 있습니다. 앱을 로컬로 실행하는 데 대한 정보는 GitHub에서 README 파일을 참조하십시오.
 1. Node.js *공장 모니터링* 샘플 앱 GitHub 저장소를 복제하십시오.  
 원하는 git 도구를 사용하여 다음 저장소를 복제하십시오.  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
 Git 쉘에서 다음 명령을 사용하십시오.
   ```bash
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
   ```
 2. 앱의 API 키 및 인증 토큰 조합을 작성하십시오.  
 조직에 연결할 앱을 구성할 때 다음 단계가 필요합니다. 디바이스 등록에 대한 자세한 정보는 [애플리케이션 연결](/docs/services/IoT/platform_authorization.html)을 참조하십시오.  
@@ -183,10 +183,10 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack
 다음 단계를 통해 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성하고 배치할 수 있습니다. 앱을 로컬로 실행하는 데 대한 정보는 GitHub에서 README 파일을 참조하십시오.
 1. *위젯 라이브러리 모니터링* 샘플 앱 GitHub 저장소를 복제하십시오.  
 원하는 git 도구를 사용하여 다음 저장소를 복제하십시오.  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 Git 쉘에서 다음 명령을 사용하십시오.
 ```
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 ```
 2. 애플리케이션 종속 항목을 설치하십시오.  
 *guide-conveyor-ui-html* 저장소의 루트로 이동하고 다음 명령을 실행하십시오.
@@ -349,11 +349,11 @@ cf push YOUR_APP_NAME
 다음 안내서를 계속하거나 관심 있는 다른 주제로 건너뛰십시오.
 - 경로 A: 요구에 맞게 모니터링 앱을 수정하십시오.  
 기술적 세부사항은 다음을 참조하십시오.
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md){: new_window}
  - [Node.js 클라이언트 라이브러리 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - 경로 B: 요구에 맞도록 위젯 라이브러리 앱을 수정하십시오.  
 기술적 세부사항은 다음을 참조하십시오.
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md){: new_window}
 - [안내서 4: 많은 디바이스 시뮬레이션](getting-started-iot-large-scale-simulation.html)  
 많은 수의 자체 실행 시뮬레이터를 환경에 추가하여 기본 시뮬레이션을 확장하십시오. 이 확장을 통해 좀 더 현실적인 다중 디바이스 환경에서 이전 안내서의 기본 분석 및 모니터링을 테스트 드라이브할 수 있습니다.
 - [{{site.data.keyword.iot_short_notm}}에 대해 자세히 보기](/docs/services/IoT/iotplatform_overview.html){:new_window}

@@ -75,10 +75,10 @@ As part of this step, you will:
 The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the README file in GitHub.
 1. Clone the Node.js *Plant Floor Monitoring* sample app GitHub repository.  
 Use your favorite git tool to clone the following repository:  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
 In Git shell, use the following command:
   ```bash
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
   ```
 2. Create an API key and authentication token combination for your app.  
 You will need these when you configure the app to connect to your organization. For more information about registering devices, see [Connecting applications](/docs/services/IoT/platform_authorization.html).  
@@ -183,10 +183,10 @@ As part of this step, you will:
 The following steps guide you through creating and deploying the app on {{site.data.keyword.Bluemix_notm}}. For information about running the app locally, see the README file in GitHub.
 1. Clone the *Widget Library Monitoring* sample app GitHub repository.  
 Use your favorite git tool to clone the following repository:  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 In Git Shell, use the following command:
 ```
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 ```
 2. Install the application dependencies.  
 Navigate to the root of the *guide-conveyor-ui-html* repository and run the following command:
@@ -349,11 +349,11 @@ Now that the web console is up and running, you can view your connected conveyor
 Continue with the next guide or jump to another topic that interests you:
 - Path A: Modify the monitoring app to suit your needs.  
 For technical details, see:
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md){: new_window}
  - [Node.js client libraries ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - Path B: Modify the widget library app to suit your needs.  
 For technical details, see:
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md){: new_window}
 - [Guide 4: Simulating a large number of devices](getting-started-iot-large-scale-simulation.html)  
 Expand on the basic simulation by adding large numbers of self-running simulators to your environment. This expansion will let you test drive the basic analytics and monitoring from the previous guides in a more realistic, multi-device environment.
 - [Learn more about {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}

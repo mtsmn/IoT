@@ -75,10 +75,10 @@ Come parte di questo passo eseguirai queste azioni:
 La seguente procedura ti guiderà attraverso la creazione e la distribuzione dell'applicazione in {{site.data.keyword.Bluemix_notm}}. Per informazioni sull'esecuzione della applicazione localmente, vedere il file README in GitHub.
 1. Clona il repository GitHub dell'applicazione di esempio *Plant Floor Monitoring*Node.js.  
 Utilizza il tuo strumento git preferito per clonare il seguente repository:  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
 Nella shell Git, utilizza il seguente comando:
   ```bash
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
   ```
 2. Crea una combinazione chiave API e token di autenticazione per la tua applicazione.  
 Ne avrai bisogno quando configuri l'applicazione per collegarsi alla tua organizzazione. Per ulteriori informazioni sulla registrazione dei dispositivi, consulta [Connessione alle applicazioni](/docs/services/IoT/platform_authorization.html).  
@@ -183,10 +183,10 @@ Come parte di questo passo eseguirai queste azioni:
 La seguente procedura ti guiderà attraverso la creazione e la distribuzione dell'applicazione in {{site.data.keyword.Bluemix_notm}}. Per informazioni sull'esecuzione della applicazione localmente, vedere il file README in GitHub.
 1. Clona il repository GitHub dell'applicazione di esempio *Widget Library Monitoring*.  
 Utilizza il tuo strumento git preferito per clonare il seguente repository:  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 Nella shell Git, utilizza il seguente comando:
 ```
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 ```
 2. Installa le dipendenze dell'applicazione.  
 Passa alla root del repository *guide-conveyor-ui-html* ed immetti il seguente comando:
@@ -349,11 +349,11 @@ Ora che la console web è attiva e in esecuzione, puoi visualizzare i tuoi dispo
 Continua con la prossima guida o passa a un altro argomento di tuo interesse:
 - Percorso A: Modifica l'applicazione di monitoraggio per soddisfare i tuoi bisogni.  
 Per dettagli tecnici, consulta:
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md){: new_window}
  - [Librerie client Node.js ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - Percorso B: Modifica l'applicazione della libreria widget per soddisfare i tuoi bisogni.  
 Per dettagli tecnici, consulta:
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md){: new_window}
 - [Guida 3: Simulazione di un grande numero di dispositivi](getting-started-iot-large-scale-simulation.html)  
 Espandi la simulazione di base aggiungendo un grande numero di simulatori in esecuzione automatica al tuo ambiente.
 - [Ulteriori informazioni su {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
