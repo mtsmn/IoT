@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-11"
+lastupdated: "2018-12-18"
 
 ---
 
@@ -32,22 +32,47 @@ The {{site.data.keyword.iot_short_notm}} HTTP REST API supports the following ca
 - Last event cache (view the last event for a specific device)
 - Device management request operations (list device management requests, initiate requests, clear request status, get details of a request, list all request statuses by device, and get the request status for a specific device)
 - Usage management operations (retrieve the total amount of data used)
-- Device event publishing (beta)
+- Device event publishing (HTTP messaging APIs)
 - Service status querying (retrieve service statuses by organization)
+
+## TLS requirements for HTTP connections
+{: #tls_requirements}
+
+Some Transport Layer Security (TLS) client libraries do not support domains that include a wildcard. If you cannot successfully change libraries, disable certificate checking.
+
+The following cipher suites are supported:
+
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_128_CBC_SHA
+
+Increase the strength of your encryption by using the forward secrecy ciphers ECDHE or DHE in your cipher list.
 
 ## Accessing the HTTP REST API documentation
 {: #api_link}
 
-To access the {{site.data.keyword.iot_short_notm}} HTTP REST API documentation and obtain more information about how to build and customize your applications, see [APIs](../reference/api.html).
+For more information about the {{site.data.keyword.iot_short_notm}} HTTP REST API and how to build and customize your applications, see [APIs](../reference/api.html).
 
 The only version of the {{site.data.keyword.iot_short_notm}} HTTP REST API that is supported is version 2. Ensure that your {{site.data.keyword.iot_short_notm}} solutions are using version 2.
 
-# HTTP Messaging APIs for applications
+## HTTP Messaging APIs for applications
 {: #rest_messaging_api}
 
-To access the {{site.data.keyword.iot_short_notm}} HTTP Messaging API documentation and find more information about publishing events and sending commands by using HTTP, see [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
+For more information about the HTTP Messaging API and publishing events and sending commands by using HTTP, see [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
-## Publishing events and commands
+### Authentication
+
+All requests must include an authorization header. Basic authentication is the only method that is supported. Applications are authenticated by using API keys. When an application makes any request through the  {{site.data.keyword.iot_short_notm}} HTTP REST API, the following credentials are required:
+
+```
+username = API key (for example, a/orgId/a84ps90Ajs)
+password = Authentication token
+```
+
+### Publishing events and commands
 {: #event_command_publication}
 
 In addition to using the MQTT messaging protocol, you can also configure your applications to publish events and commands to the {{site.data.keyword.iot_short_notm}} over HTTP by using one of the following HTTP REST API commands:
@@ -73,15 +98,6 @@ If you are connecting a device or application to the Quickstart service, replace
 **Notes:**
 - While applications can reuse an HTTP connection to post events or commands to different devices, the authorization HTTP header cannot be changed.
 - Port 443, the default SSL port, can also be specified for secure HTTP API calls.
-
-### Authentication
-
-All requests must include an authorization header. Basic authentication is the only method that is supported. Applications are authenticated by using API keys. When an application makes any request through the  {{site.data.keyword.iot_short_notm}} HTTP REST API, the following credentials are required:
-
-```
-username = API key (for example, a/orgId/a84ps90Ajs)
-password = Authentication token
-```
 
 ### Content-Type request headers
 

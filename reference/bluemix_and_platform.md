@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-11-27"
+lastupdated: "2018-12-19"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-11-27"
 {: #iot-bluemix-index}
 
 <p>The {{site.data.keyword.iot_short_notm}} pricing plans were updated on November 27, 2018.   
-For more information, including upgrade information, see [{{site.data.keyword.iot_short_notm}} service plans](plans_overview.html). The contents of this [IBM Cloud documentation collection](https://console.bluemix.net/docs/services/IoT/) pertain to the {{site.data.keyword.iot_short_notm}} Lite plan, and to the previous Standard and Advanced Security plans. For documentation about the {{site.data.keyword.iot_short_notm}} Connection and Analytics Service plans, with their extended feature set, see the [{{site.data.keyword.iot_short_notm}} knowledge center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html).
+For more information, including upgrade information, see [{{site.data.keyword.iot_short_notm}} service plans](plans_overview.html). The contents of this [IBM Cloud documentation collection](https://console.bluemix.net/docs/services/IoT/) pertain to the {{site.data.keyword.iot_short_notm}} Lite plan, and to the previous Standard and Advanced Security plans. For documentation about the {{site.data.keyword.iot_short_notm}} Connection and Analytics Service plans, with their extended feature set, see the [{{site.data.keyword.iot_short_notm}} knowledge center ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html).
 </p>
 {: important}
 
@@ -32,11 +32,11 @@ Instances of the {{site.data.keyword.iot_short_notm}} can be created in the {{si
 ## {{site.data.keyword.iot_short_notm}} Service Level Agreement
 {: #iot-sla}
 
-The {{site.data.keyword.iot_short_notm}} has provisions for a specified level of service. For details of the service level agreement, see [{{site.data.keyword.iot_short_notm}} service level agreement ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/62a7eae9288fddcc862581d0007c2583/$FILE/i126-6738-05_12-2017_en_US.pdf){: new_window}.
+The {{site.data.keyword.iot_short_notm}} has provisions for a specified level of service. For details of the service level agreement, see [{{site.data.keyword.iot_short_notm}} service level agreement ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/overview/zero_downtime.html#SLAs){: new_window}.
 
 ## {{site.data.keyword.Bluemix_notm}} Service Level Agreement
 
-{{site.data.keyword.Bluemix_notm}} publishes terms of use which differ depending on whether the [IBM Cloud Services Agreement ![External link icon](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} or the [IBM International Passport Advantage Agreement ![External link icon](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} apply to the user.
+{{site.data.keyword.Bluemix_notm}} publishes terms of use which differ depending on whether the [IBM Cloud Services Agreement ![External link icon](../../../icons/launch-glyph.svg)](https://console.bluemix.net/docs/overview/zero_downtime.html#SLAs){: new_window} or the [IBM International Passport Advantage Agreement ![External link icon](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} apply to the user.
 
 ## {{site.data.keyword.iot_short_notm}} Pricing
 {: #iot-pricing}
