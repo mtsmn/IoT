@@ -75,10 +75,10 @@ Plant Floor Monitoring 样本应用程序列出所有 iot-conveyor-belt 类型�
 以下步骤将指导您在 {{site.data.keyword.Bluemix_notm}} 上创建和部署应用程序。有关在本地运行应用程序的信息，请参阅 GitHub 中的自述文件。
 1. 克隆 Node.js *Plant Floor Monitoring* 样本应用程序 GitHub 存储库。  
 使用您最喜欢的工具来克隆以下存储库：  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
 在 Git shell 中，使用以下命令：
 ```bash
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
   ```
 2. 为应用程序创建 API 密钥和认证令牌组合。  
 配置应用程序以连接到组织时，您将需要这些信息。有关注册设备的更多信息，请参阅[连接应用程序](/docs/services/IoT/platform_authorization.html)。  
@@ -182,10 +182,10 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack
 以下步骤将指导您在 {{site.data.keyword.Bluemix_notm}} 上创建和部署应用程序。有关在本地运行应用程序的信息，请参阅 GitHub 中的自述文件。
 1. 克隆 *Widget Library Monitoring* 样本应用程序 GitHub 存储库。  
 使用您最喜欢的工具来克隆以下存储库：  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 在 Git Shell 中，使用以下命令：
 ```
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 ```
 2. 安装应用程序依赖关系。  
 浏览至 *guide-conveyor-ui-html* 存储库的根目录，然后运行以下命令：
@@ -348,11 +348,11 @@ cf push YOUR_APP_NAME
 继续执行下一个指南，或跳至您感兴趣的其他主题：
 - 路径 A：修改监视应用程序以满足您的需要。  
 有关技术详细信息，请参阅：
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md){: new_window}
  - [Node.js 客户机库 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - 路径 B：修改窗口小部件库应用程序以满足您的需求。  
 有关技术详细信息，请参阅：
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md){: new_window}
 - [指南 4：模拟大量设备](getting-started-iot-large-scale-simulation.html)  
 通过向环境中添加大量自运行模拟器来扩展基本模拟。此扩展将使您在更现实的多设备环境中，测试通过之前指南所进行的基本分析和监视。
 - [了解有关 {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window} 的更多信息

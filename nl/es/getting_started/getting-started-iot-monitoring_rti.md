@@ -75,10 +75,10 @@ Como parte de este paso aprenderá a:
 Los siguientes pasos le guían a través de la creación y el despliegue de la app en {{site.data.keyword.Bluemix_notm}}. Para obtener información acerca de la ejecución de la app de forma local, consulte el archivo README en GitHub.
 1. Clone el repositorio de GitHub de la app de muestra *Plant Floor Monitoring* de Node.js.  
 Utilice su herramienta Git favorita para clonar el siguiente repositorio:  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
 En Git shell, utilice el siguiente mandato:
   ```bash
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
   ```
 2. Cree una combinación de clave de API y señal de autenticación para su app.  
 La necesitará cuando configure la app para conectarla con su organización. Para obtener más información acerca del registro de dispositivos, consulte [Conexión de aplicaciones](/docs/services/IoT/platform_authorization.html).  
@@ -183,10 +183,10 @@ Como parte de este paso aprenderá a:
 Los siguientes pasos le guían a través de la creación y el despliegue de la app en {{site.data.keyword.Bluemix_notm}}. Para obtener información acerca de la ejecución de la app de forma local, consulte el archivo README en GitHub.
 1. Clone el repositorio de GitHub de la app de muestra *Widget Library Monitoring*.  
 Utilice su herramienta Git favorita para clonar el siguiente repositorio:  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 En Git Shell, utilice el siguiente mandato:
 ```
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 ```
 2. Instale las dependencias de aplicación.  
 Navegue a la raíz del repositorio *guide-conveyor-ui-html* y ejecute el siguiente mandato:
@@ -349,11 +349,11 @@ Ahora que la consola está activa y en ejecución, puede ver sus dispositivos de
 Continúe con la guía siguiente o salte a otro tema que le interese:
 - Vía de acceso A: Modificar la app de supervisión para que se ajuste a sus necesidades.  
 Para obtener los detalles técnicos, consulte:
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md){: new_window}
  - [Bibliotecas de cliente Node.js ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - Vía de acceso B: Modificar la app de biblioteca de widgets para que se ajuste a sus necesidades.  
 Para obtener los detalles técnicos, consulte:
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md){: new_window}
 - [Guía 4: Simulación de un gran número de dispositivos](getting-started-iot-large-scale-simulation.html)  
 Expanda la simulación básica añadiendo una mayor cantidad de simuladores automáticos en su entorno. Esta expansión le permitirá realizar pruebas con las analíticas básicas y la supervisión de las guías anteriores en un entorno más realista y multi-dispositivo.
 - [Obtenga más información acerca de {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}

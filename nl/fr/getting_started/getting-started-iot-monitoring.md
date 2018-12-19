@@ -75,10 +75,10 @@ Dans le cadre de cette étape, vous allez :
 Les étapes ci-dessous vont vous guider tout au long de la procédure de création et de déploiement de l'application sur {{site.data.keyword.Bluemix_notm}}. Pour en savoir plus sur l'exécution de l'application en local, consultez le fichier README de GitHub.
 1. Clonez le référentiel GitHub du modèle d'application *Plant Floor Monitoring* Node.js.  
 Servez-vous de votre outil Git favori pour cloner le référentiel ci-dessous :  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
 Dans l'interpréteur de commande Git, exécutez la commande suivante :
   ```bash
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
   ```
 2. Créez une combinaison "clé d'API-jeton d'authentification" pour votre application.  
 Vous aurez besoin de ces éléments lorsque vous configurerez l'application pour qu'elle se connecte à votre organisation. Pour plus d'informations sur l'enregistrement des terminaux, voir [Connexion d'applications](/docs/services/IoT/platform_authorization.html).  
@@ -183,10 +183,10 @@ Dans le cadre de cette étape, vous allez :
 Les étapes ci-dessous vont vous guider tout au long de la procédure de création et de déploiement de l'application sur {{site.data.keyword.Bluemix_notm}}. Pour en savoir plus sur l'exécution de l'application en local, consultez le fichier README de GitHub.
 1. Clonez le référentiel GitHub du modèle d'application *Widget Library Monitoring*.  
 Servez-vous de votre outil Git favori pour cloner le référentiel ci-dessous :  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 Dans l'interpréteur de commande Git, exécutez la commande suivante :
 ```
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 ```
 2. Installez les dépendances d'application.  
 Placez-vous à la racine du référentiel *guide-conveyor-ui-html* et exécutez la commande suivante :
@@ -349,11 +349,11 @@ Maintenant que la console Web est en cours d'exécution, vous pouvez voir vos te
 Passez au guide suivant ou à une autre rubrique qui vous intéresse :
 - Chemin A : Modification de l'application de surveillance selon vos besoins.  
 Pour plus de détails techniques, voir :
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md){: new_window}
  - [Bibliothèques client Node.js ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - Chemin B : Modification de l'application bibliothèque de widgets selon vos besoins.  
 Pour plus de détails techniques, voir :
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md){: new_window}
 - [Guide 3 : Simulation d'un grand nombre de terminaux](getting-started-iot-large-scale-simulation.html)  
 Etendez la simulation de base en ajoutant à votre environnement un très grand nombre de simulateurs à exécution automatique.
 - [En savoir plus sur {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}

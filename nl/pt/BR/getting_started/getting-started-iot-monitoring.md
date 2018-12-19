@@ -72,10 +72,10 @@ As etapas a seguir conduzem você pela criação e implementação do app no {{s
 1. Clone o repositório GitHub do aplicativo de amostra *Plant Floor
 Monitoring* do Node.js.  
 Use sua ferramenta git favorita para clonar o repositório a seguir:  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
 No shell do Git, use o comando a seguir:
   ```bash
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
   ```
 2. Crie uma combinação de chave API e token de autenticação para seu aplicativo.  
 Você precisará deles quando configurar o aplicativo para se conectar à sua organização. Para
@@ -187,10 +187,10 @@ Como parte desta etapa, você:
 As etapas a seguir conduzem você pela criação e implementação do app no {{site.data.keyword.Bluemix_notm}}. Para obter informações sobre como executar o app localmente, veja o arquivo LEIA-ME no GitHub.
 1. Clone o repositório GitHub do aplicativo de amostra *Widget Library Monitoring*.  
 Use sua ferramenta git favorita para clonar o repositório a seguir:  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 Em Shell do Git, use o comando a seguir:
 ```
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 ```
 2. Instale as dependências do aplicativo.  
 Navegue para a raiz do repositório *guide-conveyor-ui-html* e execute o comando a seguir:
@@ -354,11 +354,11 @@ Agora que o console da web está funcionamento, é possível visualizar seus dis
 Continue com o próximo guia ou vá para outro tópico de seu interesse:
 - Caminho A: Modifique o aplicativo de monitoramento conforme suas necessidades.  
 Para obter detalhes técnicos, veja:
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md){: new_window}
  - [Bibliotecas do cliente Node.js ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - Caminho B: Modifique o aplicativo de biblioteca de widget conforme suas necessidades.  
 Para obter detalhes técnicos, veja:
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md){: new_window}
 - [Guia 3: Simulando um grande número de dispositivos](getting-started-iot-large-scale-simulation.html)  
 Expanda a simulação básica, incluindo grandes números de simuladores de auto-execução em seu ambiente.
 - [Saiba mais sobre a {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}

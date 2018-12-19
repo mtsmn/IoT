@@ -75,10 +75,10 @@ Im Rahmen dieser Anleitung werden Sie die folgenden Arbeitsschritte ausführen:
 Die folgenden Schritte führen Sie durch die Erstellung und Bereitstellung der App unter {{site.data.keyword.Bluemix_notm}}. Informationen zur lokalen Ausführung der App finden Sie in der Readme-Datei von GitHub.
 1. Klonen Sie das GitHub-Repository der Node.js-Beispielapp für die *Anlagenüberwachung*.  
 Verwenden Sie das bevorzugte Git-Tool, um das folgende Repository zu klonen:  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
 Verwenden Sie in der Git-Shell den folgenden Befehl:
   ```bash
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-angular
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular
   ```
 2. Erstellen Sie eine Kombination aus API-Schlüssel und Authentifizierungstoken für Ihre App.  
 Sie benötigen diese Komponenten beim Konfigurieren der App für die Verbindung zu Ihrer Organisation. Weitere Informationen zur Registrierung von Geräten finden Sie in [Anwendungen verbinden](/docs/services/IoT/platform_authorization.html).  
@@ -183,10 +183,10 @@ Im Rahmen dieser Anleitung werden Sie die folgenden Arbeitsschritte ausführen:
 Die folgenden Schritte führen Sie durch die Erstellung und Bereitstellung der App unter {{site.data.keyword.Bluemix_notm}}. Informationen zur lokalen Ausführung der App finden Sie in der Readme-Datei von GitHub.
 1. Klonen Sie das GitHub-Repository der Beispielapp für die *Widgetbibliotheksüberwachung*.  
 Verwenden Sie das bevorzugte Git-Tool, um das folgende Repository zu klonen:  
-https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 Verwenden Sie in der Git-Shell den folgenden Befehl:
 ```
-git clone https://github.com/ibm-watson-iot/guide-conveyor-ui-html
+git clone https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui
 ```
 2. Installieren Sie die Anwendungsabhängigkeiten.  
 Navigieren Sie zum Stammelement des Repositorys *guide-conveyor-ui-html* und führen Sie den folgenden Befehl aus:
@@ -349,11 +349,11 @@ Nachdem die Webkonsole nun betriebsbereit ist, können Sie die verbundenen Laufb
 Fahren Sie mit der nächsten Anleitung fort oder springen Sie zu einem anderen Thema, das für Sie von Interesse ist:
 - Pfad A: Überwachungsapp Ihren Anforderungen anpassen.  
 Technische Details finden Sie unter:
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/guide-conveyor-ui-angular/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui-angular/blob/master/README.md){: new_window}
  - [Node.js-Clientbibliotheken ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
 - Pfad B: Widgetbibliotheksapp Ihren Anforderungen anpassen.  
 Technische Details finden Sie unter:
- - [https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/guide-conveyor-ui-html/blob/master/README.md){: new_window}
+ - [https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/guide-conveyor/tree/master/ui/blob/master/README.md){: new_window}
 - [Anleitung 3: Große Anzahl von Geräten simulieren](getting-started-iot-large-scale-simulation.html)  
 Erweitern Sie die Basissimulation, indem Sie eine große Anzahl selbstausführender Simulatoren zu Ihrer Umgebung hinzufügen.
 - [Weitere Informationen zu {{site.data.keyword.iot_short_notm}}](/docs/services/IoT/iotplatform_overview.html){:new_window}
