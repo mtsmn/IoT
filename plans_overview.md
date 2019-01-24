@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-27"
+  years: 2016, 2019
+lastupdated: "2010-01-24"
 
 ---
 
@@ -29,7 +29,7 @@ Plan       | Description
 {{site.data.keyword.iot_short_notm}} Advanced Security | The Advanced Security service plan includes the free data-transfer limit offered in the Lite plan, and then usage-based billing above the free quote for data exchanged, data analyzed, and edge data analyzed. This plan also provides advanced Risk and Security Management features. **Note:** The Advanced Security plan is available only for existing customers of that plan. If you are a new customer, you must use the Lite plan, or purchase one of the {{site.data.keyword.iot_short_notm}} Connection and Analytics Service plans.
 {{site.data.keyword.iot_short_notm}} Connection and Analytics Service - Capacity 1 and Capacity 2 | The Connection and Analytics Service plans offer a ready-to-run, pre-integrated and fully-managed SaaS IoT platform with extended connectivity, data management, and advanced analytics features. For detailed information about the features offered with these service plans, see [the {{site.data.keyword.iot_short_notm}} Knowledge Center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html){:new_window}
 
-For information about purchasing these plans, see [Internet of Things Platform in the IBM Cloud catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.test.cloud.ibm.com/catalog/services/internet-of-things-platform ){:new_window}.
+For information about purchasing these plans, see [Internet of Things Platform in the IBM Cloud catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/services/internet-of-things-platform){:new_window}.
 
 ## Upgrading service plans
 
