@@ -53,7 +53,7 @@ Information about connection type and associated port numbers is summarized in t
 
 MQTT is supported over TCP and WebSockets. MQTT clients connect by using appropriate credentials, such as device authentication tokens for devices and API keys and tokens for applications. Because MQTT messaging to the insecure port 1883 sends these credentials in plain text, always use the secure alternatives 8883 or 443 instead. The TLS credentials are always encypted when sent over secure ports. Be aware that you must enable TLS in the application by using the tls_set() method that is in the Python MQTT library. Otherwise, the data might be sent insecurely.
 
-When you use secure MQTT messaging on ports 8883 or 443, newer client libraries automatically trust the certificate that is presented by {{site.data.keyword.iot_short_notm}}. If this is not the case for your client environment, you can download and use the full certificate chain from [messaging.pem](https://github.com/ibm-messaging/iot-python/blob/master/src/ibmiotf/messaging.pem).
+When you use secure MQTT messaging on ports 8883 or 443, newer client libraries automatically trust the certificate that is presented by {{site.data.keyword.iot_short_notm}}. If this is not the case for your client environment, you can download and use the full certificate chain from [messaging.pem](https://github.com/ibm-watson-iot/iot-python/blob/master/src/wiotp/sdk/messaging.pem).
 
 
 ## TLS requirements
