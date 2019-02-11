@@ -120,7 +120,7 @@ Replace the `API-ENDPOINT` value with the API endpoint for your region.
   ```
 cf api API-ENDPOINT
   ```
-Example: `cf api https://api.ng.bluemix.net`
+Example: `cf api https://api.us-south.cf.cloud.ibm.com`
 <table>
 <tr>
 <th>Region</th>
@@ -128,11 +128,11 @@ Example: `cf api https://api.ng.bluemix.net`
 </tr>
 <tr>
 <td>US South</td>
-<td>https://api.ng.bluemix.net</td>
+<td>https://api.us-south.cf.cloud.ibm.com</td>
 </tr>
 <tr>
 <td>United Kingdom</td>
-<td>https://api.eu-gb.bluemix.net</td>
+<td>https://api.eu-gb.cf.cloud.ibm.com</td>
 </tr>
 <!--<tr>
 <td>Germany</td>
@@ -302,7 +302,7 @@ applications:  </br>
    ```
  cf api API-ENDPOINT
    ```
- Example: `cf api https://api.ng.bluemix.net`
+ Example: `cf api https://api.us-south.cf.cloud.ibm.com`
  <table>
  <tr>
  <th>Region</th>
@@ -310,11 +310,11 @@ applications:  </br>
  </tr>
  <tr>
  <td>US South</td>
- <td>https://api.ng.bluemix.net</td>
+ <td>https://api.us-south.cf.cloud.ibm.com</td>
  </tr>
  <tr>
  <td>United Kingdom</td>
- <td>https://api.eu-gb.bluemix.net</td>
+ <td>https://api.eu-gb.cf.cloud.ibm.com</td>
  </tr>
  <!--<tr>
  <td>Germany</td>
