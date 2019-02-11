@@ -73,7 +73,7 @@ Example: `cf api https://api.us-south.cf.cloud.ibm.com`
 </tr>
  <!--<tr>
  <td>Germany</td>
- <td>https://api.eu-de.bluemix.net</td>
+ <td>https://api.eu-de.cf.cloud.ibm.com</td>
  </tr>-->
 </table>
 2. Log into your {{site.data.keyword.Bluemix_notm}} account.

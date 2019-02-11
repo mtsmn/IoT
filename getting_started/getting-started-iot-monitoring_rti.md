@@ -136,7 +136,7 @@ Example: `cf api https://api.us-south.cf.cloud.ibm.com`
 </tr>
 <!--<tr>
 <td>Germany</td>
-<td>https://api.eu-de.bluemix.net</td>
+<td>https://api.eu-de.cf.cloud.ibm.com</td>
 </tr>-->
 </table>
 6. Change the directory to the directory in which the sample app is located.  
@@ -318,7 +318,7 @@ applications:  </br>
  </tr>
  <!--<tr>
  <td>Germany</td>
- <td>https://api.eu-de.bluemix.net</td>
+ <td>https://api.eu-de.cf.cloud.ibm.com</td>
  </tr>-->
  </table>
  6. Change the directory to the directory in which the sample app is located.  
